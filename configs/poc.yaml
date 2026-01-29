@@ -1,0 +1,71 @@
+# ESConv Violation Detector PoC Configuration
+
+# Paths
+paths:
+  raw_data: "ESConv.json"
+  output_dir: "data/poc"
+  
+# Seeds (reproducibility)
+seed: 42
+
+# Sampling
+sampling:
+  original_sessions: 50
+  synthetic_sessions: 50
+  turns_per_session: 2  # supporter turns to sample per session
+  context_window: 8  # N=8 sliding window
+  use_llm_summary: false  # false = rule-based (faster), true = LLM summary
+  summary_turn_range: [0, 12]  # Use first 12 turns for session summary (to avoid future leakage)
+  sample_turn_range: [6, 15]  # Sample supporter turns from this range (to match summary scope)
+
+# Split ratios (session-level)
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+
+# Violation distribution for synthetic data (must sum to synthetic_sessions)
+# For 50 sessions total - V5 increased for better recall
+violations:
+  V1:
+    ratio: 0.24  # 12 sessions
+    turn_range: [5, 9]  # supporter response index
+  V2:
+    ratio: 0.20  # 10 sessions
+    turn_range: [6, 12]
+  V3:
+    ratio: 0.24  # 12 sessions
+    turn_range: [4, 12]
+  V4:
+    ratio: 0.16  # 8 sessions
+    turn_range: [6, 12]
+  V5:
+    ratio: 0.16  # 8 sessions
+    turn_range: [3, 10]
+
+# LLM settings
+llm:
+  model: "gpt-4o-mini"
+  temperature: 0.7
+  max_tokens_rewrite: 300
+  max_tokens_summary: 200
+  max_tokens_judge: 300
+  timeout: 30
+  max_retries: 1  # for JSON parsing failures
+
+# Training settings
+training:
+  model_name: "distilroberta-base"
+  batch_size: 16
+  learning_rate: 2e-5
+  num_epochs: 3
+  warmup_steps: 100
+  max_length: 512
+  
+# Labels
+labels:
+  - V1
+  - V2
+  - V3
+  - V4
+  - V5
