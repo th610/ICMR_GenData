@@ -1,0 +1,137 @@
+# Pilot Configuration - Session-level Design
+# 각 클래스 5개씩, 총 30개 세션으로 파이프라인 검증
+
+# 기본 설정
+seed: 42
+
+# 파일럿 규모
+pilot:
+  sessions_per_class: 5
+  total_sessions: 30  # Normal(5) + V1(5) + V2(5) + V3(5) + V4(5) + V5(5)
+
+# Normal 세션 준비 (ESConv 기반)
+normal:
+  source: "ESConv.json"
+  num_sessions: 5
+  target_length: [12, 22]  # 12~22턴으로 랜덤 cut
+  cut_method: "random"  # 자연스러운 종료 지점 찾기
+
+# V1~V3 세션 생성 (ESConv 기반 + 마지막 턴 재작성)
+v1_v3:
+  num_per_class: 5  # V1: 5, V2: 5, V3: 5
+  base_strategy: "use_esconv"  # ESConv 세션 사용
+  target_length: [12, 22]  # 베이스 세션 길이
+  violation_position: "last_supporter_turn"  # 마지막 Supporter 턴만 재작성
+  
+  # 베이스 세션 선택
+  v1:
+    num_sessions: 5
+  v2:
+    num_sessions: 5
+  v3:
+    num_sessions: 5
+
+# V4/V5 세션 생성 (완전 신규 멀티턴)
+v4_v5:
+  num_per_class: 5  # V4: 5, V5: 5
+  generation_method: "full_multiturn"  # Seeker + Supporter 모두 생성
+  session_length: [10, 15]  # 10~15턴
+  violation_position: "last_supporter_turn"
+  
+  v4:
+    num_sessions: 5
+    focus: "unrealistic_belief_reinforcement"
+  v5:
+    num_sessions: 5
+    focus: "crisis_safety_failure"
+
+# Summary 설정 (동적 생성)
+summary:
+  enabled: true
+  method: "dynamic"  # 타겟 턴 이전까지만 요약
+  use_llm: true  # LLM 기반 요약
+  max_bullets: 6
+  max_tokens: 150
+  scope: "all_before_target"  # 타겟 이전 모든 턴
+  fallback_to_rule: true  # LLM 실패시 rule-based
+
+# 입력 구조
+input:
+  max_length: 512
+  structure:
+    prefix_summary: true  # [Summary] 부분
+    last_n_turns: 4       # [Last 4 turns] 부분
+    target_response: true  # 평가 대상 응답
+
+# Session-level Split
+split:
+  method: "session_level"  # 세션 단위 분할 (turn 쪼개기 X)
+  train: 0.8   # 24 sessions
+  val: 0.1     # 3 sessions
+  test: 0.1    # 3 sessions
+  stratified: true  # 가능하면 클래스별 균등 분배
+  allow_manual_adjust: true  # 30개라 작으니 수동 조정 허용
+
+# LLM 설정
+llm:
+  model: "gpt-4o-mini"
+  temperature: 0.7
+  timeout: 30
+  max_retries: 2
+  
+  # 태스크별 토큰 제한
+  max_tokens_rewrite: 300      # V1~V3 재작성
+  max_tokens_multiturn: 1500   # V4/V5 멀티턴 생성
+  max_tokens_summary: 200      # Summary 생성
+  max_tokens_judge: 300        # Judge (선택)
+
+# Judge QA (선택적)
+judge:
+  enabled: false  # 파일럿에서는 수동 검증으로 충분
+  sample_ratio: 0.5  # 활성화시 50% 샘플링
+  agreement_threshold: 0.8
+
+# 학습 설정
+training:
+  model_name: "distilroberta-base"
+  num_classes: 6  # Normal, V1, V2, V3, V4, V5
+  task_type: "single_label"  # Multi-label 아님
+  
+  # 하이퍼파라미터
+  batch_size: 4  # 작은 데이터셋
+  learning_rate: 2.0e-5
+  num_epochs: 10  # 작은 데이터라 epoch 많이
+  warmup_steps: 10
+  weight_decay: 0.01
+  max_length: 512
+  
+  # Class weight (V4/V5 희귀 클래스 boost)
+  class_weights:
+    Normal: 1.0
+    V1: 1.0
+    V2: 1.0
+    V3: 1.0
+    V4: 2.0
+    V5: 2.0
+
+# 라벨 정의
+labels:
+  - Normal
+  - V1
+  - V2
+  - V3
+  - V4
+  - V5
+
+# 출력 경로
+paths:
+  raw_data: "ESConv.json"
+  pilot_data: "data/pilot"
+  normal: "data/pilot/normal.json"
+  v1: "data/pilot/v1.json"
+  v2: "data/pilot/v2.json"
+  v3: "data/pilot/v3.json"
+  v4: "data/pilot/v4.json"
+  v5: "data/pilot/v5.json"
+  processed: "data/pilot/processed"
+  models: "models/pilot"

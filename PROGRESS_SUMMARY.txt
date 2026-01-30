@@ -1,0 +1,505 @@
+===============================================================================
+ESConv Violation Detector - 진행 상황 요약 및 다음 단계
+===============================================================================
+
+■ 프로젝트 개요
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목표: 감정 지원 상담 대화에서 상담자의 5가지 위반 유형을 탐지하는 세션 레벨 분류기 개발
+
+데이터셋: ESConv (1,300개 정상 상담 세션)
+
+모델: DistilRoBERTa-base (6-class classification)
+
+클래스 구조:
+  - Normal: 정상적인 상담 (위반 없음)
+  - V1 (Missing Context): 맥락 파악 및 정보 수집 실패
+  - V2 (Agency Violation): 사용자 주체성 침해 및 과도한 지시
+  - V3 (Low-Quality Empathy): 표면적 공감, 대화 품질 저하
+  - V4 (Reality Distortion): 비현실적 신념 강화
+  - V5 (Crisis Safety Failure): 자살/자해 위험 신호 무시
+
+
+===============================================================================
+■ 현재까지 완료된 작업
+===============================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 1: 프로젝트 설계 및 설정 ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+파일 구조 확립:
+  - 각 클래스별 단일 JSON 파일 (확장성)
+  - data/pilot/: normal.json, v1.json, v2.json, v3.json, v4.json, v5.json
+
+설정 파일 (configs/pilot.yaml):
+  num_sessions_per_class: 5  # 총 30 sessions (파일럿)
+  target_length:
+    normal: [12, 22]   # 턴 수 범위
+    v1_v3: [12, 22]    # V1-V3 (ESConv 기반)
+    v4_v5: [12, 16]    # V4-V5 (LLM 완전 생성, 비용 절감)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 2: 프롬프트 설계 및 최적화 ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+파일: src/llm/prompts_v2.py
+
+V1-V3 방식 (ESConv 재사용 + 마지막 턴 재작성):
+  - ESConv에서 12-22턴으로 자름
+  - 마지막 supporter 턴만 LLM으로 재작성
+  - 출력 형식: Plain text (JSON 아님) - 6배 속도 향상
+  - max_tokens: 300
+  - Temperature: 0.7
+
+V4-V5 방식 (완전 멀티턴 생성):
+  - LLM이 처음부터 전체 대화 생성
+  - 12-16턴 (비용 절감)
+  - 출력 형식: JSON (violation_reason 포함)
+  - max_tokens: 2000
+  - Temperature: 0.7
+
+주요 최적화:
+  - V3 JSON 출력 문제 해결: "CRITICAL INSTRUCTION: Return ONLY plain text"
+  - V4-V5 violation_reason을 구체적 영어 설명으로 요청 (템플릿 X)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 3: 데이터 생성 코드 구현 ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Normal 세션 (src/generation/normal_cutter.py):
+  - ESConv에서 랜덤 샘플링
+  - 12-22턴으로 자름
+  - 마지막 턴은 반드시 supporter
+
+V1-V3 세션 (src/generation/v1_v3_rewriter.py):
+  - ESConv 기반, 마지막 턴만 LLM 재작성
+  - JSON 파싱 fallback 로직 (V3 대비)
+  - violation_turn_index, violation_reason 메타데이터 추가
+
+V4-V5 세션 (src/generation/v4_v5_generator.py):
+  - 완전 신규 멀티턴 생성
+  - LLM timeout: 120초
+  - 디버깅 메시지 포함
+  - violation_turn_index, violation_reason 자동 추출
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 4: 파일럿 데이터 생성 완료 ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+실행 스크립트:
+  1. scripts/pilot/step1_prepare_normal.py → normal.json (5 sessions)
+  2. scripts/pilot/step2_generate_v1_v3.py → v1.json, v2.json, v3.json (각 5)
+  3. scripts/pilot/step3_generate_v4_v5.py → v4.json, v5.json (각 5)
+
+생성 결과 (총 30 sessions):
+  - Normal: 5 sessions, 평균 14.8턴 (11-21턴 범위)
+  - V1: 5 sessions, 평균 15.8턴 (12-21턴)
+  - V2: 5 sessions, 평균 15.8턴 (12-21턴)
+  - V3: 5 sessions, 평균 15.8턴 (12-21턴)
+  - V4: 5 sessions, 평균 13.2턴 (12-14턴) - 비용 절감 완료
+  - V5: 5 sessions, 평균 14.8턴 (13-16턴)
+
+검증 완료:
+  ✅ 모든 세션의 마지막 턴 = supporter
+  ✅ V4-V5 violation_reason이 구체적 영어 설명으로 생성됨
+  ✅ V1-V3에 violation_turn_index, violation_reason 템플릿 추가됨
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 5: 데이터 구조 통일 ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+공통 필수 필드 (모든 세션):
+{
+  "situation": "...",
+  "dialog": [...],
+  "primary_label": "Normal | V1 | V2 | V3 | V4 | V5",
+  "session_id": "normal_0000 | v1_0000 | ...",
+  "generation_method": "esconv_cut | esconv_last_turn_rewrite | full_multiturn",
+  "violation_turn_index": <int or null>,
+  "violation_reason": "<string or null>"
+}
+
+추가 필드:
+  - Normal/V1-V3: ESConv 원본 메타데이터 (experience_type, emotion_type 등)
+    → 학습 시 무시
+  - V4-V5: source: "llm_generated"
+
+violation_reason 내용:
+  - Normal: null
+  - V1: "Missing context gathering and clarification despite ambiguous situation"
+  - V2: "Directive advice without respecting user agency or offering choices"
+  - V3: "Generic empathy without addressing specific context or advancing dialog"
+  - V4: LLM 생성 구체적 설명
+    예: "The last supporter turn reinforced the seeker's belief..."
+  - V5: LLM 생성 구체적 설명
+    예: "The supporter failed to assess the risk or ensure safety..."
+
+
+===============================================================================
+■ 현재 파일럿 데이터 상태
+===============================================================================
+
+위치: data/pilot/
+
+파일:
+  - normal.json: 5 sessions (ESConv cut)
+  - v1.json: 5 sessions (ESConv + V1 violation in last turn)
+  - v2.json: 5 sessions (ESConv + V2 violation in last turn)
+  - v3.json: 5 sessions (ESConv + V3 violation in last turn)
+  - v4.json: 5 sessions (Full LLM generation with reality distortion)
+  - v5.json: 5 sessions (Full LLM generation with crisis safety failure)
+
+총계: 30 sessions (5 per class)
+
+품질 확인 완료:
+  ✅ 모든 세션 구조 일관성
+  ✅ violation_turn_index 정확성
+  ✅ violation_reason 존재 (Normal 제외)
+  ✅ 대화 자연스러움 (육안 검사)
+
+
+===============================================================================
+■ 앞으로 해야 할 단계 (순서대로)
+===============================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 6: 데이터 검증 및 품질 체크 (다음 단계)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 생성된 30개 세션이 요구사항을 충족하는지 확인
+
+작업 내역:
+  1. 구조 검증:
+     - 모든 JSON 파일 로드 가능 확인
+     - 필수 필드 존재 여부 (situation, dialog, primary_label, session_id)
+     - dialog 길이 범위 확인 (12-22턴 for V1-V3, 12-16턴 for V4-V5)
+     - 마지막 턴이 supporter인지 확인
+
+  2. 내용 검증 (샘플링):
+     - 각 클래스별 1-2개 세션 수동 검토
+     - V1: 맥락 파악 실패가 명확한가?
+     - V2: 주체성 침해가 명확한가?
+     - V3: 표면적 공감이 명확한가?
+     - V4: 비현실적 신념 강화가 명확한가?
+     - V5: 위기 안전 절차 누락이 명확한가?
+
+  3. 클래스 간 구분성 확인:
+     - 위반 유형이 섞이지 않았는가?
+     - Normal과 각 V1-V5가 명확히 구분되는가?
+
+  4. 스크립트 작성: scripts/pilot/validate_data.py
+     - 자동 검증 로직
+     - 통계 출력 (턴 수 분포, 클래스별 개수 등)
+
+예상 시간: 30분
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 7: Train/Val/Test Split
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 30개 세션을 학습/검증/테스트로 분할
+
+분할 비율 (configs/pilot.yaml 기준):
+  - Train: 24 sessions (80%) - 각 클래스별 4개
+  - Val: 3 sessions (10%) - 각 클래스별 0.5개 → stratified random으로 3개
+  - Test: 3 sessions (10%) - 각 클래스별 0.5개 → stratified random으로 3개
+
+주의사항:
+  - Stratified split 필수 (각 클래스 비율 유지)
+  - 파일럿이므로 test set이 매우 작음 (각 클래스별 0-1개)
+  - Random seed 고정 (재현성)
+
+출력 파일:
+  - data/pilot/splits/train.json (24 sessions)
+  - data/pilot/splits/val.json (3 sessions)
+  - data/pilot/splits/test.json (3 sessions)
+
+스크립트: scripts/pilot/split_data.py
+
+예상 시간: 20분
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 8: 전처리 및 토크나이저 준비
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 모델 입력 형식으로 변환
+
+작업 내역:
+
+1. 대화 텍스트 직렬화:
+   # Option 1: Simple concatenation
+   text = " ".join([f"{turn['speaker']}: {turn['content']}" 
+                    for turn in dialog])
+   
+   # Option 2: Special tokens
+   text = "[SEP]".join([f"[{turn['speaker'].upper()}] {turn['content']}" 
+                        for turn in dialog])
+
+2. 토크나이저 설정 (DistilRoBERTa-base):
+   from transformers import AutoTokenizer
+   tokenizer = AutoTokenizer.from_pretrained("distilroberta-base")
+   max_length = 512  # or 768 depending on dialog length distribution
+
+3. 레이블 인코딩:
+   label_map = {
+       "Normal": 0,
+       "V1": 1,
+       "V2": 2,
+       "V3": 3,
+       "V4": 4,
+       "V5": 5
+   }
+
+4. 데이터셋 클래스 작성:
+   - HuggingFace Dataset 또는 PyTorch Dataset
+   - __getitem__ 구현 (text → input_ids, attention_mask, label)
+
+5. 길이 분석:
+   - 토큰화 후 길이 분포 확인
+   - max_length 결정 (truncation 최소화)
+
+출력:
+  - src/data/preprocessing.py (전처리 로직)
+  - src/data/dataset.py (Dataset 클래스)
+  - 길이 분석 결과 (평균, 중앙값, 최대값)
+
+예상 시간: 1시간
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 9: 모델 학습 (파일럿)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 30개 세션으로 학습 가능성 검증
+
+모델 설정:
+  from transformers import AutoModelForSequenceClassification
+  
+  model = AutoModelForSequenceClassification.from_pretrained(
+      "distilroberta-base",
+      num_labels=6,
+      problem_type="single_label_classification"
+  )
+
+학습 하이퍼파라미터 (파일럿):
+  training_args = TrainingArguments(
+      output_dir="models/pilot",
+      num_train_epochs=10,  # 작은 데이터셋이므로 많은 epoch
+      per_device_train_batch_size=4,  # 작은 배치
+      per_device_eval_batch_size=4,
+      learning_rate=2e-5,
+      warmup_steps=10,
+      weight_decay=0.01,
+      logging_steps=5,
+      eval_strategy="epoch",
+      save_strategy="epoch",
+      load_best_model_at_end=True,
+      metric_for_best_model="f1_macro",
+      save_total_limit=2
+  )
+
+주의사항:
+  - 파일럿은 과적합 예상 (train 24, val 3, test 3)
+  - 학습 가능성 확인이 목표
+  - 성능보다는 파이프라인 검증에 초점
+
+평가 지표:
+  - Accuracy
+  - F1-score (macro, weighted)
+  - Confusion Matrix
+  - Per-class precision/recall
+
+스크립트: scripts/pilot/train.py
+
+예상 시간: 30분 (학습) + 30분 (코드 작성)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 10: 평가 및 분석
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 파일럿 결과 분석 및 스케일업 결정
+
+작업 내역:
+
+1. Test set 평가:
+   - 3개 세션에 대한 예측 수행
+   - Confusion matrix 생성
+   - Per-class 성능 분석
+
+2. 오류 분석:
+   - 잘못 분류된 세션 확인
+   - 원인 분석 (데이터 품질? 모델 한계? 클래스 불균형?)
+
+3. 학습 곡선 분석:
+   - Train/val loss 추이
+   - Overfitting 정도 확인
+
+4. 질적 분석:
+   - Attention weights 확인 (가능하다면)
+   - 모델이 주목하는 패턴 파악
+
+5. 스케일업 계획 수립:
+   - 300 sessions vs 600 sessions 결정
+   - 클래스별 세션 수 조정 필요 여부
+   - 추가 데이터 생성 전략
+
+출력:
+  - models/pilot/evaluation_report.md
+  - Confusion matrix 이미지
+  - 학습 곡선 그래프
+  - 다음 단계 제안서
+
+스크립트: scripts/pilot/evaluate.py
+
+예상 시간: 1시간
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 11: 스케일업 준비 (파일럿 결과 기반)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 파일럿 결과를 바탕으로 본격 데이터 생성 준비
+
+결정 사항:
+
+1. 데이터 규모:
+   - 300 sessions (50 per class) vs 600 sessions (100 per class)
+   - 파일럿 결과 기반 결정
+
+2. 설정 조정:
+   - configs/main.yaml 생성
+   - 턴 수 범위 조정 (필요시)
+   - 프롬프트 개선 (필요시)
+
+3. 데이터 생성 전략:
+   - 배치 생성 (한번에 모두 vs 점진적)
+   - LLM API 비용 산정
+   - Rate limit 고려
+
+4. 품질 관리 계획:
+   - 자동 검증 강화
+   - 샘플링 검토 주기
+   - 이상치 탐지
+
+출력:
+  - configs/main.yaml
+  - 데이터 생성 계획서
+  - 비용 추정서
+
+예상 시간: 1-2시간
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 12: 본격 데이터 생성 (300 or 600 sessions)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 실제 모델 학습용 데이터셋 생성
+
+작업 순서:
+  1. Normal 세션 생성 (50 or 100)
+  2. V1-V3 세션 생성 (각 50 or 100)
+  3. V4-V5 세션 생성 (각 50 or 100)
+  4. 검증 및 필터링
+  5. Train/Val/Test split (80/10/10)
+
+예상 시간:
+  - 300 sessions: 3-4시간 (LLM API 호출)
+  - 600 sessions: 6-8시간
+
+예상 비용 (gpt-4o-mini 기준):
+  - V1-V3: ~300 tokens/session × 150 sessions × $0.15/1M tokens = $6.75
+  - V4-V5: ~2000 tokens/session × 100 sessions × $0.15/1M tokens = $30
+  - 총 ~$40-50 (600 sessions 기준)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 13: 본격 모델 학습
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 최종 모델 학습 및 최적화
+
+하이퍼파라미터 튜닝:
+  - Learning rate: [1e-5, 2e-5, 5e-5]
+  - Batch size: [8, 16, 32]
+  - Epochs: [3, 5, 10]
+  - Warmup ratio: [0.1, 0.2]
+
+실험 관리:
+  - Weights & Biases 또는 TensorBoard
+  - 여러 설정으로 실험
+  - Best model 선택
+
+예상 시간: 4-6시간 (실험 포함)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 14: 최종 평가 및 문서화
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+목적: 최종 성능 평가 및 프로젝트 완료
+
+작업 내역:
+  1. Test set 최종 평가
+  2. Per-class 성능 분석
+  3. 오류 사례 분석
+  4. 모델 저장 (HuggingFace Hub?)
+  5. README 작성
+  6. 코드 정리 및 문서화
+
+출력:
+  - 최종 평가 보고서
+  - 모델 카드
+  - 사용 가이드
+  - 논문/발표 자료 (필요시)
+
+예상 시간: 2-3시간
+
+
+===============================================================================
+■ 즉시 다음 작업
+===============================================================================
+
+우선순위 1: Phase 6 - 데이터 검증
+  - scripts/pilot/validate_data.py 작성
+  - 30개 세션 자동 검증
+  - 통계 및 샘플 출력
+
+예상 소요 시간: 30분
+
+다음 대화 시작 시 요청사항:
+  "Phase 6 (데이터 검증) 시작해줘. 
+   scripts/pilot/validate_data.py 만들어서 
+   30개 파일럿 세션 검증하고 통계 출력해줘."
+
+
+===============================================================================
+■ 기술 스택 요약
+===============================================================================
+
+- 언어: Python 3.x
+- LLM: gpt-4o-mini (OpenAI)
+- 모델: distilroberta-base (HuggingFace)
+- 프레임워크: transformers, torch
+- 데이터: ESConv dataset
+- 설정: YAML (configs/)
+- 구조: 모듈화 (src/, scripts/)
+
+
+===============================================================================
+■ 중요 참고사항
+===============================================================================
+
+1. 확장성: 모든 코드가 300/600 sessions 생성 대응 가능
+2. 재현성: Random seed 고정됨
+3. 비용: V4-V5가 비용의 80% 차지 (12-16턴으로 최적화 완료)
+4. 품질: 프롬프트 최적화로 V3 JSON 문제 해결, 
+         V4-V5 구체적 violation_reason 생성
+5. 데이터 구조: 통일되어 전처리 간편함
