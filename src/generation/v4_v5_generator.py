@@ -7,7 +7,7 @@ import json
 import random
 from typing import List, Dict, Tuple
 from openai import OpenAI
-from src.llm.prompts_v2 import V4_SYSTEM, V4_USER_TEMPLATE, V5_SYSTEM, V5_USER_TEMPLATE
+from src.llm.prompts import V4_SYSTEM, V4_USER_TEMPLATE, V5_SYSTEM, V5_USER_TEMPLATE
 
 
 def generate_v4_v5_session(

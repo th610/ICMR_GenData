@@ -4,7 +4,7 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from src.llm.prompts_v2 import *
+from src.llm.prompts import *
 
 # Phase 2 검증
 print('✅ prompts_v2.py import 성공\n')

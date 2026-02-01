@@ -1,16 +1,19 @@
 """
-STEP 2: Generate V1-V3 Sessions (Pilot)
-ESConv 세션의 마지막 turn을 LLM으로 rewrite
+STEP 2 (Revised): Generate V1-V3 with Insertion Strategy
+ESConv prefix (12-20 turns) + 4-6 turn insertion
 """
 import yaml
 from pathlib import Path
 from src.utils import load_json, save_json
-from src.generation.v1_v3_rewriter import prepare_v1_v3_sessions, validate_v1_v3_session
+from src.generation.insertion_generator import (
+    generate_v1_v3_with_insertion,
+    validate_insertion_session
+)
 
 
 def main():
     print("=" * 60)
-    print("STEP 2: Generate V1-V3 Sessions (Pilot)")
+    print("STEP 2: Generate V1-V3 with Insertion Strategy")
     print("=" * 60)
     
     # Load config
@@ -19,7 +22,6 @@ def main():
     
     # Parameters
     num_per_class = config['v1_v3']['num_per_class']
-    length_range = tuple(config['v1_v3']['target_length'])
     seed = config['seed']
     model = config['llm']['model']
     temperature = config['llm']['temperature']
@@ -31,17 +33,18 @@ def main():
     # Generate V1, V2, V3
     for violation_type in ['V1', 'V2', 'V3']:
         print(f"\n{'-'*60}")
-        print(f"Generating {violation_type} sessions...")
-        print(f"  Target length: {length_range[0]}-{length_range[1]} turns")
-        print(f"  Last turn: Rewrite with LLM ({model})")
+        print(f"Generating {violation_type} sessions (Insertion Strategy)...")
+        print(f"  ESConv prefix: 12-20 turns (random)")
+        print(f"  Insertion: 4-6 turns")
+        print(f"  Violation: Last Supporter turn only")
+        print(f"  Model: {model}, Temperature: {temperature}")
         print(f"{'-'*60}")
         
-        sessions = prepare_v1_v3_sessions(
+        sessions = generate_v1_v3_with_insertion(
             esconv_sessions,
             violation_type,
             num_per_class,
-            length_range,
-            seed,
+            seed + ord(violation_type[1]),  # 각 클래스 다른 시드
             model,
             temperature
         )
@@ -51,10 +54,11 @@ def main():
         for session in sessions:
             session_id = session['session_id']
             num_turns = len(session['dialog'])
+            prefix_len = session.get('prefix_length', 'N/A')
             last_speaker = session['dialog'][-1]['speaker']
-            is_valid = validate_v1_v3_session(session, violation_type)
+            is_valid = validate_insertion_session(session, violation_type)
             status = "✅" if is_valid else "❌"
-            print(f"  {status} {session_id}: {num_turns} turns, last={last_speaker}")
+            print(f"  {status} {session_id}: prefix={prefix_len}, total={num_turns}, last={last_speaker}")
         
         # Save
         output_path = Path(config['paths'][violation_type.lower()])
@@ -65,8 +69,12 @@ def main():
         print(f"  Saved: {output_path}")
         
         # Summary
-        avg_length = sum(len(s['dialog']) for s in sessions) / len(sessions)
-        print(f"  Avg length: {avg_length:.1f} turns")
+        avg_length = sum(len(s['dialog']) for s in sessions) / len(sessions) if sessions else 0
+        avg_prefix = sum(s.get('prefix_length', 0) for s in sessions) / len(sessions) if sessions else 0
+        avg_insertion = avg_length - avg_prefix
+        print(f"  Avg prefix: {avg_prefix:.1f} turns")
+        print(f"  Avg insertion: {avg_insertion:.1f} turns")
+        print(f"  Avg total: {avg_length:.1f} turns")
     
     # Final summary
     print(f"\n{'='*60}")
@@ -76,9 +84,10 @@ def main():
     print(f"  V2 sessions: {num_per_class} (saved to {config['paths']['v2']})")
     print(f"  V3 sessions: {num_per_class} (saved to {config['paths']['v3']})")
     print(f"  Model: {model}, Temperature: {temperature}")
-    print(f"  Sampling: Random (seed={seed})")
+    print(f"  Strategy: ESConv prefix + Insertion")
+    print(f"  Note: V1/V2/V3 use different ESConv source sessions")
     print(f"\n✅ Step 2 완료!")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
