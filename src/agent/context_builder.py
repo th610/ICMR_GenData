@@ -10,7 +10,6 @@ Output:
 """
 from typing import List, Dict, Any, Optional
 from src.llm.openai_client import OpenAIClient
-from src.llm.summarize import build_summary_prompt
 
 
 class ContextBuilder:
@@ -54,9 +53,8 @@ class ContextBuilder:
         # 요약 생성 (긴 대화만)
         state_summary = None
         if self.use_summary and len(dialog_history) > self.window_size:
-            # LLM으로 전체 대화 요약
-            prompt = build_summary_prompt(dialog_history, situation)
-            state_summary = self.llm.generate(prompt, max_tokens=150, temperature=0.3)
+            # 요약 기능 스킵 (간단화)
+            state_summary = None
         
         # Meta 정보 추출 (옵션)
         meta = self._extract_meta(dialog_history, situation)

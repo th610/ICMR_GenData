@@ -15,7 +15,7 @@ Components:
 from .context_builder import ContextBuilder
 from .candidate_generator import CandidateGenerator
 from .violation_detector import ViolationDetector
-from .controller import Controller, InterventionPolicy
+from .controller import ControllerV2
 from .agent import DialogueAgent
 from .logger import AgentLogger
 
@@ -23,8 +23,7 @@ __all__ = [
     'ContextBuilder',
     'CandidateGenerator',
     'ViolationDetector',
-    'Controller',
-    'InterventionPolicy',
+    'ControllerV2',
     'DialogueAgent',
     'AgentLogger',
 ]

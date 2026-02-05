@@ -2,13 +2,22 @@
 Dialogue Agent - 전체 파이프라인 통합
 
 Architecture:
-    Context Builder → Candidate Generator → Violation Detector → Controller → Final Response
+    1. Context Builder: WINDOW + TARGET 구성 (512 token reverse truncation)
+    2. Generator: 후보 응답 1개 생성
+    3. Violation Detector (BERT): label ∈ {Normal, V1..V5}
+    4. Policy Layer (Controller): 위반 타입별 행동 결정
+    5. Rewriter/Regenerator: 위반 수정
+    6. Re-check: 수정된 응답 재검사
+    7. Fail-safe: 반복 실패 시 안전 응답
+    
+Priority: V5 > V4 > V2 > V1 > V3 > Normal
+Max retry: 1-2회
 """
 from typing import List, Dict, Any, Optional
 from .context_builder import ContextBuilder
 from .candidate_generator import CandidateGenerator
 from .violation_detector import ViolationDetector
-from .controller import Controller
+from .controller import ControllerV2
 from .logger import AgentLogger
 
 
@@ -19,21 +28,24 @@ class DialogueAgent:
                  context_builder: ContextBuilder,
                  candidate_generator: CandidateGenerator,
                  violation_detector: ViolationDetector,
-                 controller: Controller,
-                 logger: Optional[AgentLogger] = None):
+                 controller: ControllerV2,
+                 logger: Optional[AgentLogger] = None,
+                 max_retries: int = 2):
         """
         Args:
-            context_builder: 컨텍스트 압축 모듈
-            candidate_generator: 후보 생성 모듈
-            violation_detector: 위반 감지 모듈
-            controller: 제어 정책 모듈
+            context_builder: 컨텍스트 압축 모듈 (WINDOW + TARGET)
+            candidate_generator: 후보 생성 모듈 (LLM/규칙 기반)
+            violation_detector: 위반 감지 모듈 (BERT Judge)
+            controller: 제어 정책 모듈 (Policy Layer)
             logger: 로깅 모듈 (옵션)
+            max_retries: 최대 재시도 횟수 (default: 2)
         """
         self.context_builder = context_builder
         self.candidate_generator = candidate_generator
         self.violation_detector = violation_detector
         self.controller = controller
         self.logger = logger or AgentLogger(enable_file_log=False)
+        self.max_retries = max_retries
         
         # Session state
         self.dialog_history = []
@@ -50,131 +62,124 @@ class DialogueAgent:
         self.dialog_history = []
         self.turn_count = 0
         self.situation = situation
-        
-        print(f"{'='*60}")
-        print("Violation-aware Dialogue Agent Started")
-        print(f"{'='*60}")
-        if situation:
-            print(f"\n[Initial Situation]\n{situation}\n")
+        self.logger.log_session_start(situation)
     
-    def process_turn(self, user_input: str) -> str:
+    def generate_response(self, user_input: str) -> Dict[str, Any]:
         """
-        1턴 처리 파이프라인
+        메인 파이프라인: 사용자 입력 → 안전한 응답 생성
+        
+        Pipeline:
+            1. Context Builder: WINDOW 구성
+            2. Generator: 초기 후보 생성
+            3. Loop (max_retries):
+                a. Detector: 위반 검사
+                b. Controller: 정책 결정
+                c. Rewriter: 필요시 수정
+                d. Re-check: 수정 후 재검사
+            4. Fail-safe: 최종 안전장치
         
         Args:
-            user_input: 사용자 입력 (seeker 발화)
-        
+            user_input: Seeker 입력
+            
         Returns:
-            최종 응답 (supporter 발화)
+            {
+                'response': str,
+                'label': str,
+                'confidence': float,
+                'retry_count': int,
+                'violation_history': List[str]
+            }
         """
-        # 사용자 입력 추가
-        self.dialog_history.append({
-            "speaker": "seeker",
-            "text": user_input
-        })
-        
-        # [1] Context Builder
-        context = self.context_builder.build_context(
-            self.dialog_history,
-            self.situation
-        )
-        
-        # [2] Candidate Generator
-        candidates = self.candidate_generator.generate_candidates(context)
-        
-        # [3] Violation Detector
-        detections = self.violation_detector.detect_batch(context, candidates)
-        
-        # [4] Controller
-        result = self.controller.select_response(candidates, detections, context)
-        
-        final_response = result["final_response"]
-        
-        # 응답 히스토리에 추가
-        self.dialog_history.append({
-            "speaker": "supporter",
-            "text": final_response
-        })
-        
-        # [5] Logger
-        self.logger.log_turn(
-            turn_id=self.turn_count,
-            context=context,
-            candidates=candidates,
-            detections=detections,
-            controller_result=result,
-            user_input=user_input
-        )
-        
         self.turn_count += 1
+        self.logger.log_turn_start(self.turn_count, user_input)
         
-        return final_response
+        # Step 1: Context Building
+        context = self.context_builder.build(
+            history=self.dialog_history,
+            current_input=user_input,
+            situation=self.situation
+        )
+        self.logger.log_context(context)
+        
+        # Step 2: Initial Generation
+        candidate = self.candidate_generator.generate(context)
+        self.logger.log_candidate(candidate, attempt=0)
+        
+        # Step 3: Violation Loop
+        violation_history = []
+        retry_count = 0
+        
+        for attempt in range(self.max_retries + 1):
+            # Step 3a: Detect Violation
+            detection = self.violation_detector.detect(
+                window=context['window'],
+                candidate=candidate
+            )
+            self.logger.log_detection(detection, attempt=attempt)
+            
+            # Step 3b: Policy Decision
+            action = self.controller.decide(detection)
+            self.logger.log_action(action, attempt=attempt)
+            
+            # Normal이면 통과
+            if action['type'] == 'accept':
+                self._update_history(user_input, candidate)
+                return {
+                    'response': candidate,
+                    'label': detection['label'],
+                    'confidence': detection['confidence'],
+                    'retry_count': retry_count,
+                    'violation_history': violation_history
+                }
+            
+            # 위반 발견
+            violation_history.append(detection['label'])
+            
+            # 최대 재시도 도달
+            if attempt >= self.max_retries:
+                break
+            
+            # Step 3c: Rewrite
+            retry_count += 1
+            candidate = self.controller.rewrite(
+                original=candidate,
+                violation_type=detection['label'],
+                context=context
+            )
+            self.logger.log_rewrite(candidate, attempt=attempt + 1)
+        
+        # Step 4: Fail-safe
+        safe_response = self.controller.failsafe(
+            violation_type=violation_history[-1] if violation_history else 'Unknown',
+            context=context
+        )
+        self.logger.log_failsafe(safe_response)
+        
+        self._update_history(user_input, safe_response)
+        
+        return {
+            'response': safe_response,
+            'label': 'FAILSAFE',
+            'confidence': 1.0,
+            'retry_count': retry_count,
+            'violation_history': violation_history
+        }
+    
+    def _update_history(self, user_input: str, response: str) -> None:
+        """대화 히스토리 업데이트"""
+        self.dialog_history.append({'speaker': 'seeker', 'text': user_input})
+        self.dialog_history.append({'speaker': 'supporter', 'text': response})
     
     def get_history(self) -> List[Dict[str, str]]:
-        """대화 히스토리 반환"""
+        """현재 대화 히스토리 반환"""
         return self.dialog_history.copy()
     
-    def end_session(self, session_id: Optional[str] = None) -> str:
-        """
-        세션 종료 및 로그 저장
-        
-        Args:
-            session_id: 세션 ID
-        
-        Returns:
-            저장된 로그 파일 경로
-        """
-        if session_id is None:
-            from datetime import datetime
-            session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
-        log_path = self.logger.save_session_summary(session_id)
-        
-        print(f"\n{'='*60}")
-        print("Session Ended")
-        print(f"Total turns: {self.turn_count}")
-        if log_path:
-            print(f"Log saved: {log_path}")
-        print(f"{'='*60}\n")
-        
-        return log_path
-    
-    def interactive_chat(self) -> None:
-        """대화형 인터페이스"""
-        print("\nInteractive Chat Mode")
-        print("Type 'quit' to exit, 'history' to see conversation\n")
-        
-        while True:
-            try:
-                user_input = input("Seeker: ").strip()
-                
-                if not user_input:
-                    continue
-                
-                if user_input.lower() == 'quit':
-                    break
-                
-                if user_input.lower() == 'history':
-                    self._print_history()
-                    continue
-                
-                response = self.process_turn(user_input)
-                print(f"Supporter: {response}\n")
-                
-            except KeyboardInterrupt:
-                print("\n\nExiting...")
-                break
-        
-        self.end_session()
-    
-    def _print_history(self) -> None:
-        """히스토리 출력"""
-        print(f"\n{'='*60}")
-        print("Conversation History")
-        print(f"{'='*60}\n")
-        
-        for i, turn in enumerate(self.dialog_history, 1):
-            speaker = turn["speaker"].capitalize()
-            print(f"{i}. {speaker}: {turn['text']}")
-        
-        print(f"\n{'='*60}\n")
+    def end_session(self) -> Dict[str, Any]:
+        """세션 종료 및 요약 반환"""
+        summary = {
+            'total_turns': self.turn_count,
+            'situation': self.situation,
+            'dialog_length': len(self.dialog_history)
+        }
+        self.logger.log_session_end(summary)
+        return summary

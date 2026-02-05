@@ -1,275 +1,214 @@
 """
-Controller - 제어 정책
+Controller V2 - Policy Layer with Rewrite & Fail-safe
 
-Role: Detector 결과를 받아 최종 응답 결정
+Priority: V5 > V4 > V2 > V1 > V3 > Normal
 
-Policy Levels:
-    - Soft Intervention: 일반 위반 → 최선 후보 선택/가벼운 수정
-    - Hard Intervention: 고위험 위반 → 강제 개입 (안전 템플릿/재생성)
+Actions:
+    - accept: Normal, 그대로 통과
+    - rewrite: V1-V5, 위반 수정
+    - failsafe: 재시도 실패, 안전 응답
 """
-from typing import List, Dict, Any, Optional
-from enum import Enum
-from src.llm.openai_client import OpenAIClient
+from typing import Dict, Any, Optional
 
 
-class InterventionLevel(Enum):
-    """개입 레벨"""
-    NONE = "none"           # 위반 없음, 그대로 선택
-    SOFT = "soft"           # 가벼운 수정 또는 재순위
-    HARD = "hard"           # 강제 개입 필요
-
-
-class InterventionPolicy:
-    """정책 규칙 정의"""
+class ControllerV2:
+    """정책 레이어: 위반 탐지 결과에 따른 행동 결정"""
     
-    # Hard intervention이 필요한 위반들
-    CRITICAL_VIOLATIONS = {"v4", "v5"}  # Safety violations
+    # 위반 우선순위 (높을수록 위험)
+    PRIORITY = {
+        'V5': 5,  # 위기 안전 (최우선)
+        'V4': 4,  # 현실 왜곡
+        'V2': 3,  # 자율성 침해
+        'V1': 2,  # 맥락 이해 부족
+        'V3': 1,  # 공감 품질
+        'Normal': 0
+    }
     
-    # Soft intervention threshold
-    SOFT_THRESHOLD = {"v1": 0.7, "v2": 0.8, "v3": 0.7}
+    # Fail-safe 템플릿 (위반 타입별)
+    FAILSAFE_TEMPLATES = {
+        'V5': "제가 들으니 정말 힘드실 것 같습니다. 이런 상황에서는 전문가의 도움이 필요할 수 있습니다. 상담 전문가나 관련 기관에 연락하시는 것을 권장드립니다.",
+        'V4': "말씀하신 내용을 이해했습니다. 제가 제대로 이해하고 있는지 확인하고 싶은데, 조금 더 자세히 말씀해주시겠어요?",
+        'V2': "그런 상황이시군요. 어떻게 하고 싶으신가요? 제가 도움이 될 수 있는 부분이 있을까요?",
+        'V1': "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+        'V3': "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+        'Unknown': "제가 어떻게 도움을 드릴 수 있을까요?"
+    }
     
-    @classmethod
-    def determine_level(cls, detection_result: Dict[str, Any]) -> InterventionLevel:
-        """
-        위반 감지 결과로부터 개입 레벨 결정
+    # Rewrite 프롬프트 (위반 타입별)
+    REWRITE_PROMPTS = {
+        'V1': """다음 상담 응답을 수정하세요.
+
+문제: 맥락 이해 부족 - 이전 대화 내용을 충분히 반영하지 못했습니다.
+
+수정 지침:
+1. 이전 대화에서 언급된 구체적인 내용을 참조하세요
+2. 사용자가 이미 말한 정보를 재확인하는 질문은 피하세요
+3. 대화 흐름에 자연스럽게 이어지도록 하세요
+
+원본 응답: {original}
+
+대화 맥락:
+{context}
+
+수정된 응답 (한 문장으로):""",
         
+        'V2': """다음 상담 응답을 수정하세요.
+
+문제: 자율성 침해 - 강요하거나 일방적으로 결정을 내리려 했습니다.
+
+수정 지침:
+1. 강요하는 표현('~해야 한다', '~하세요')을 제거하세요
+2. 선택지를 제공하거나 질문 형태로 바꾸세요
+3. 사용자의 의견을 존중하는 태도를 보이세요
+
+원본 응답: {original}
+
+수정된 응답 (한 문장으로):""",
+        
+        'V3': """다음 상담 응답을 수정하세요.
+
+문제: 공감 품질 저하 - 기계적이거나 피상적인 반응입니다.
+
+수정 지침:
+1. 사용자의 감정을 구체적으로 언급하세요
+2. 일반적인 위로보다 상황에 맞는 공감을 표현하세요
+3. 진정성 있고 따뜻한 어조를 사용하세요
+
+원본 응답: {original}
+
+수정된 응답 (한 문장으로):""",
+        
+        'V4': """다음 상담 응답을 수정하세요.
+
+문제: 현실 왜곡 - 사실이 아니거나 과장된 내용이 있습니다.
+
+수정 지침:
+1. 검증되지 않은 사실 주장을 제거하세요
+2. 불확실한 내용은 조심스럽게 표현하세요
+3. 사용자가 직접 말한 내용만 참조하세요
+
+원본 응답: {original}
+
+수정된 응답 (한 문장으로):""",
+        
+        'V5': """다음 상담 응답을 수정하세요.
+
+문제: 위기 상황 - 전문가 개입이 필요한 상황입니다.
+
+수정 지침:
+1. 전문가 상담을 권유하세요
+2. 구체적인 도움 방법(기관, 핫라인 등)을 안내하세요
+3. 공감과 함께 즉각적인 조치를 독려하세요
+
+원본 응답: {original}
+
+수정된 응답 (한 문장으로):"""
+    }
+    
+    def __init__(self, llm_client: Optional[Any] = None):
+        """
         Args:
-            detection_result: ViolationDetector 출력
-        
-        Returns:
-            InterventionLevel
-        """
-        top_violation = detection_result["top_violation"]
-        confidence = detection_result["confidence"]
-        severity = detection_result["severity"]
-        
-        # Normal - 개입 불필요
-        if top_violation == "normal":
-            return InterventionLevel.NONE
-        
-        # Critical violations - Hard intervention
-        if top_violation in cls.CRITICAL_VIOLATIONS:
-            return InterventionLevel.HARD
-        
-        # Other violations - Soft intervention
-        return InterventionLevel.SOFT
-
-
-class Controller:
-    """응답 선택/수정 정책 실행기"""
-    
-    def __init__(self, 
-                 llm_client: Optional[OpenAIClient] = None,
-                 enable_modification: bool = True):
-        """
-        Args:
-            llm_client: 수정/재생성용 LLM
-            enable_modification: 수정 기능 활성화 여부
+            llm_client: Rewrite용 LLM (OpenAIClient 등)
         """
         self.llm = llm_client
-        self.enable_modification = enable_modification
-        self.policy = InterventionPolicy
     
-    def select_response(self, 
-                       candidates: List[Dict[str, Any]], 
-                       detection_results: List[Dict[str, Any]],
-                       context: Dict[str, Any]) -> Dict[str, Any]:
+    def decide(self, detection: Dict[str, Any]) -> Dict[str, str]:
         """
-        후보들과 위반 감지 결과로부터 최종 응답 결정
+        위반 탐지 결과에 따른 행동 결정
         
         Args:
-            candidates: CandidateGenerator 출력
-            detection_results: ViolationDetector 출력 (각 후보별)
-            context: ContextBuilder 출력
+            detection: {'label': str, 'confidence': float}
         
         Returns:
-            {
-                "final_response": str,
-                "selected_candidate_id": int,
-                "intervention_level": str,
-                "intervention_details": {...},
-                "all_candidates": [...],     # 디버깅용
-                "all_detections": [...]      # 디버깅용
-            }
+            {'type': 'accept' | 'rewrite' | 'failsafe'}
         """
-        # 1. 후보별 개입 레벨 결정
-        candidate_scores = []
-        for i, (cand, detect) in enumerate(zip(candidates, detection_results)):
-            level = self.policy.determine_level(detect)
-            candidate_scores.append({
-                "candidate": cand,
-                "detection": detect,
-                "intervention_level": level,
-                "severity": detect["severity"]
-            })
+        label = detection['label']
+        confidence = detection['confidence']
         
-        # 2. 정책에 따라 처리
-        return self._apply_policy(candidate_scores, context)
+        if label == 'Normal':
+            return {'type': 'accept'}
+        
+        # 위반 발견 → rewrite 시도
+        return {'type': 'rewrite', 'violation': label}
     
-    def _apply_policy(self, 
-                     candidate_scores: List[Dict[str, Any]], 
-                     context: Dict[str, Any]) -> Dict[str, Any]:
+    def rewrite(self, 
+                original: str, 
+                violation_type: str, 
+                context: Dict[str, Any]) -> str:
         """
-        정책 적용
+        위반 타입별 응답 수정
         
-        우선순위:
-        1. NONE 레벨이 있으면 그 중 최선 선택
-        2. SOFT만 있으면 최선 선택 (필요시 수정)
-        3. 모두 HARD면 강제 개입
+        Args:
+            original: 원본 응답
+            violation_type: v1, v2, v3, v4, v5 (소문자)
+            context: 대화 맥락
+        
+        Returns:
+            수정된 응답
         """
-        # NONE 레벨 후보 찾기
-        none_candidates = [c for c in candidate_scores if c["intervention_level"] == InterventionLevel.NONE]
+        # 대문자로 변환
+        violation_key = violation_type.upper()
         
-        if none_candidates:
-            # 위반 없는 후보 중 선택 (현재는 첫 번째)
-            best = none_candidates[0]
-            return self._build_result(
-                best["candidate"]["text"],
-                best["candidate"]["id"],
-                InterventionLevel.NONE,
-                {"reason": "No violation detected"},
-                candidate_scores
-            )
+        if not self.llm:
+            # LLM 없으면 규칙 기반 간단 수정
+            return self._rule_based_rewrite(original, violation_key)
         
-        # SOFT 레벨 후보 찾기
-        soft_candidates = [c for c in candidate_scores if c["intervention_level"] == InterventionLevel.SOFT]
+        # LLM 기반 수정
+        prompt = self.REWRITE_PROMPTS.get(violation_key, "")
+        if not prompt:
+            print(f"   ⚠️  No rewrite prompt for {violation_key}")
+            return self._rule_based_rewrite(original, violation_key)
         
-        if soft_candidates:
-            # 가장 덜 심각한 위반 선택
-            best = min(soft_candidates, key=lambda x: x["severity"])
-            
-            # 수정 시도
-            if self.enable_modification and self.llm:
-                modified = self._apply_soft_modification(best, context)
-                if modified:
-                    return self._build_result(
-                        modified,
-                        best["candidate"]["id"],
-                        InterventionLevel.SOFT,
-                        {"reason": "Modified to reduce violation", "original": best["candidate"]["text"]},
-                        candidate_scores
-                    )
-            
-            # 수정 실패 또는 비활성화 - 그대로 선택
-            return self._build_result(
-                best["candidate"]["text"],
-                best["candidate"]["id"],
-                InterventionLevel.SOFT,
-                {"reason": "Selected least severe violation", "violation": best["detection"]["top_violation"]},
-                candidate_scores
-            )
-        
-        # 모두 HARD - 강제 개입
-        return self._apply_hard_intervention(candidate_scores, context)
-    
-    def _apply_soft_modification(self, 
-                                candidate_info: Dict[str, Any], 
-                                context: Dict[str, Any]) -> Optional[str]:
-        """
-        가벼운 수정 시도
-        
-        전략:
-        - V1: 감정 인정 문구 추가, 단정적 표현 완화
-        - V2: "if...", "it might be..." 같은 완화 표현 추가
-        - V3: 직접 조언을 질문으로 전환
-        """
-        violation_type = candidate_info["detection"]["top_violation"]
-        original_text = candidate_info["candidate"]["text"]
-        
-        prompt = self._build_modification_prompt(violation_type, original_text, context)
+        prompt = prompt.format(
+            original=original,
+            context=context.get('window', '')
+        )
         
         try:
-            modified = self.llm.generate(prompt, max_tokens=200, temperature=0.3)
-            return modified.strip()
-        except Exception as e:
-            print(f"Modification failed: {e}")
-            return None
-    
-    def _build_modification_prompt(self, 
-                                  violation_type: str, 
-                                  original_text: str, 
-                                  context: Dict[str, Any]) -> str:
-        """수정 프롬프트 생성"""
-        instructions = {
-            "v1": "Add validation of emotions and soften any assumptions. Show empathy first.",
-            "v2": "Add qualifiers like 'it might be', 'if...', or 'perhaps' to avoid stating uncertain facts.",
-            "v3": "Convert direct advice into open-ended questions that help the seeker explore options."
-        }
-        
-        instruction = instructions.get(violation_type, "Make the response more supportive and less directive.")
-        
-        return f"""Modify the following supporter response to reduce violations while maintaining the helpful intent.
-
-Issue: {violation_type.upper()} - {instruction}
-
-Original response:
-{original_text}
-
-Modified response (keep it concise and natural):"""
-    
-    def _apply_hard_intervention(self, 
-                                candidate_scores: List[Dict[str, Any]], 
-                                context: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        강제 개입 (V4, V5 등 고위험 위반)
-        
-        전략:
-        1. 안전 템플릿 적용
-        2. 전문가 의뢰 권장
-        3. 위기 개입 프로토콜
-        """
-        # 가장 심각한 위반 확인
-        worst = max(candidate_scores, key=lambda x: x["severity"])
-        violation = worst["detection"]["top_violation"]
-        
-        # 안전 템플릿 선택
-        if violation in ["v4", "v5"]:
-            # 자살/자해 위험 관련
-            safe_response = self._get_safety_template("crisis")
-        else:
-            # 기타 고위험
-            safe_response = self._get_safety_template("general")
-        
-        return self._build_result(
-            safe_response,
-            -1,  # 템플릿 사용
-            InterventionLevel.HARD,
-            {
-                "reason": "Critical violation detected - safety template applied",
-                "detected_violation": violation,
-                "all_candidates_rejected": True
-            },
-            candidate_scores
-        )
-    
-    def _get_safety_template(self, template_type: str) -> str:
-        """안전 템플릿"""
-        templates = {
-            "crisis": (
-                "I'm really concerned about what you're sharing. These feelings are very serious, "
-                "and I think it's important to talk to a professional who can provide proper support. "
-                "Would you be open to reaching out to a counselor or a crisis helpline? "
-                "You don't have to go through this alone."
-            ),
-            "general": (
-                "I want to support you, but I think this might be something where professional guidance "
-                "would be really helpful. Have you considered talking to a counselor or therapist about this?"
+            # OpenAI client로 rewrite
+            messages = [
+                {"role": "system", "content": "당신은 정신건강 상담 전문가입니다."},
+                {"role": "user", "content": prompt}
+            ]
+            
+            response = self.llm.client.chat.completions.create(
+                model=self.llm.model,
+                messages=messages,
+                max_tokens=200,
+                temperature=0.7
             )
-        }
-        return templates.get(template_type, templates["general"])
+            
+            rewritten = response.choices[0].message.content.strip()
+            return rewritten
+        except Exception as e:
+            print(f"   ⚠️  Rewrite failed: {e}")
+            return self._rule_based_rewrite(original, violation_type)
     
-    def _build_result(self, 
-                     final_response: str, 
-                     candidate_id: int, 
-                     intervention_level: InterventionLevel,
-                     intervention_details: Dict[str, Any],
-                     all_candidates: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """결과 구성"""
-        return {
-            "final_response": final_response,
-            "selected_candidate_id": candidate_id,
-            "intervention_level": intervention_level.value,
-            "intervention_details": intervention_details,
-            "all_candidates": [c["candidate"] for c in all_candidates],
-            "all_detections": [c["detection"] for c in all_candidates]
-        }
+    def _rule_based_rewrite(self, original: str, violation_type: str) -> str:
+        """규칙 기반 간단 수정"""
+        if violation_type == 'V2':
+            # 명령형 → 질문형
+            if '하세요' in original or '해야' in original:
+                return "어떻게 하고 싶으신가요?"
+        
+        elif violation_type == 'V1':
+            # 맥락 부족 → 재확인
+            return "제가 제대로 이해했는지 확인하고 싶어요. 조금 더 말씀해주시겠어요?"
+        
+        return original
+    
+    def failsafe(self, violation_type: str, context: Dict[str, Any]) -> str:
+        """
+        재시도 실패 시 안전 응답 반환
+        
+        Args:
+            violation_type: 마지막 위반 타입
+            context: 대화 맥락
+        
+        Returns:
+            안전한 템플릿 응답
+        """
+        return self.FAILSAFE_TEMPLATES.get(
+            violation_type, 
+            self.FAILSAFE_TEMPLATES['Unknown']
+        )

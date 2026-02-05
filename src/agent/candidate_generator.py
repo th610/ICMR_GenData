@@ -55,16 +55,24 @@ class CandidateGenerator:
         # K개 후보 생성
         candidates = []
         for i in range(self.K):
-            response = self.llm.generate(
-                prompt,
+            # OpenAI client로 텍스트 생성
+            messages = [
+                {"role": "system", "content": "You are an empathetic emotional support counselor."},
+                {"role": "user", "content": prompt}
+            ]
+            
+            response = self.llm.client.chat.completions.create(
+                model=self.llm.model,
+                messages=messages,
                 max_tokens=self.max_tokens,
-                temperature=self.temperature,
-                top_p=0.9
+                temperature=self.temperature
             )
+            
+            text = response.choices[0].message.content.strip()
             
             candidates.append({
                 "id": i,
-                "text": response.strip(),
+                "text": text,
                 "generation_info": {
                     "temperature": self.temperature,
                     "prompt_version": "v1.0"

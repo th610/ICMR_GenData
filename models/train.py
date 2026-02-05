@@ -52,7 +52,7 @@ class TrainConfig:
     SPLIT_DATA_DIR = "models/data"  # Split 결과 저장 위치
     OUTPUT_DIR = "models/outputs"  # 모델 출력 위치
     
-    VALID_RATIO = 0.2  # train에서 valid로 분할할 비율 (20% = 200개)
+    VALID_RATIO = 0.3  # train에서 valid로 분할할 비율 (30% = 300개)
     
     # Model
     MODEL_NAME = "roberta-base"
