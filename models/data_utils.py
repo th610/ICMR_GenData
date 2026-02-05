@@ -22,7 +22,7 @@ from torch.utils.data import Dataset
 class DataConfig:
     """데이터 전처리 설정"""
     # Window
-    WINDOW_SIZE = 8  # prefix에서 최근 몇 턴까지 포함할지
+    WINDOW_SIZE = None  # None = 모든 prefix 포함 (512 토큰 한도 내에서)
     
     # Class labels
     LABELS = ["Normal", "V1", "V2", "V3", "V4", "V5"]
@@ -44,6 +44,98 @@ def load_json_data(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         data = json.load(f)
     return data
+
+
+def split_train_valid(train_data, valid_ratio=0.2, seed=42):
+    """
+    train.json을 train/valid로 split
+    
+    Args:
+        train_data (dict): 원본 train.json 데이터 (metadata + samples)
+        valid_ratio (float): validation 비율 (0.2 = 20%)
+        seed (int): random seed
+    
+    Returns:
+        train_split (dict): train 데이터
+        valid_split (dict): validation 데이터
+    """
+    import random
+    from collections import defaultdict
+    
+    random.seed(seed)
+    samples = train_data['samples']
+    
+    # 레이블 키 통일 (primary_label 또는 label)
+    normalized_samples = []
+    for sample in samples:
+        if 'primary_label' in sample:
+            normalized_samples.append(sample)
+        elif 'label' in sample:
+            # label → primary_label로 복사
+            sample['primary_label'] = sample['label']
+            normalized_samples.append(sample)
+        else:
+            print(f"⚠️  Skipping sample without label: session_id={sample.get('esconv_session_id', 'unknown')}")
+    
+    print(f"Total samples: {len(samples)} → Normalized: {len(normalized_samples)}")
+    
+    # 클래스별로 그룹화
+    by_label = defaultdict(list)
+    for sample in normalized_samples:
+        label = sample['primary_label']
+        by_label[label].append(sample)
+    
+    train_samples = []
+    valid_samples = []
+    train_dist = defaultdict(int)
+    valid_dist = defaultdict(int)
+    
+    print(f"\n{'='*60}")
+    print("Splitting Train/Valid (stratified)")
+    print(f"{'='*60}")
+    print(f"Valid ratio: {valid_ratio*100:.0f}%\n")
+    
+    # 클래스별로 stratified split
+    for label, items in by_label.items():
+        random.shuffle(items)
+        valid_count = max(1, int(len(items) * valid_ratio))
+        train_count = len(items) - valid_count
+        
+        valid_samples.extend(items[:valid_count])
+        train_samples.extend(items[valid_count:])
+        
+        train_dist[label] = train_count
+        valid_dist[label] = valid_count
+        
+        print(f"  {label:8s}: total={len(items):3d} -> train={train_count:3d}, valid={valid_count:3d}")
+    
+    # Shuffle
+    random.shuffle(train_samples)
+    random.shuffle(valid_samples)
+    
+    print(f"\nTotal: train={len(train_samples)}, valid={len(valid_samples)}")
+    print(f"{'='*60}\n")
+    
+    # Create new data dicts
+    train_split = {
+        'metadata': {
+            'split': 'train',
+            'total_samples': len(train_samples),
+            'distribution': dict(train_dist)
+        },
+        'samples': train_samples
+    }
+    
+    valid_split = {
+        'metadata': {
+            'split': 'valid',
+            'total_samples': len(valid_samples),
+            'distribution': dict(valid_dist)
+        },
+        'samples': valid_samples
+    }
+    
+    return train_split, valid_split
 
 
 def print_data_statistics(data, split_name):
@@ -116,10 +208,15 @@ def format_conversation_with_truncation(prefix_dialog, generated_dialog, tokeniz
     turn2_text = format_turn(turn2, is_target=False)
     turn1_text = format_turn(turn1, is_target=False)
     
-    # Step 3: prefix에서 최근 WINDOW_SIZE 턴만 가져오기
+    # Step 3: prefix 모든 턴 가져오기 (512 토큰 한도 내에서 역방향으로 채움)
     prefix_turns = []
     if prefix_dialog:
-        recent_prefix = prefix_dialog[-DataConfig.WINDOW_SIZE:] if len(prefix_dialog) > DataConfig.WINDOW_SIZE else prefix_dialog
+        # WINDOW_SIZE가 None이면 모든 prefix 사용
+        if DataConfig.WINDOW_SIZE is None:
+            recent_prefix = prefix_dialog
+        else:
+            recent_prefix = prefix_dialog[-DataConfig.WINDOW_SIZE:] if len(prefix_dialog) > DataConfig.WINDOW_SIZE else prefix_dialog
+        
         for turn in recent_prefix:
             prefix_turns.append(format_turn(turn, is_target=False))
     
@@ -208,10 +305,20 @@ class ViolationDataset(Dataset):
     def __getitem__(self, idx):
         sample = self.samples[idx]
         
-        # 1. 텍스트 포맷팅 (512 토큰 역방향 truncation)
-        prefix_dialog = sample.get('prefix_dialog', [])
-        generated_dialog = sample['generated_dialog']
+        # 0. 두 가지 구조 처리 (V5는 다른 구조)
+        if 'generated_turn' in sample:
+            # V5 구조: generated_turn(JSON 문자열) → generated_dialog로 파싱
+            import json
+            generated_str = sample['generated_turn']
+            generated_parsed = json.loads(generated_str)
+            generated_dialog = generated_parsed['dialog']
+            prefix_dialog = sample.get('prefix_conversation', [])
+        else:
+            # 정상 구조: generated_dialog 직접 사용
+            prefix_dialog = sample.get('prefix_dialog', [])
+            generated_dialog = sample['generated_dialog']
         
+        # 1. 텍스트 포맷팅 (512 토큰 역방향 truncation)
         text = format_conversation_with_truncation(
             prefix_dialog, 
             generated_dialog, 

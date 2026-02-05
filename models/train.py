@@ -13,7 +13,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
-from transformers import RobertaTokenizer, AdamW, get_linear_schedule_with_warmup
+from torch.optim import AdamW
+from transformers import RobertaTokenizer, get_linear_schedule_with_warmup
 from sklearn.metrics import (
     accuracy_score,
     precision_recall_fscore_support,
@@ -28,6 +29,7 @@ warnings.filterwarnings('ignore')
 from data_utils import (
     load_json_data,
     print_data_statistics,
+    split_train_valid,
     ViolationDataset,
     calculate_class_weights,
     setup_tokenizer,
@@ -43,10 +45,14 @@ from model import ViolationClassifier
 class TrainConfig:
     """학습 설정"""
     # Paths
-    DATA_DIR = "data/final"
-    TRAIN_FILE = "train.json"
-    TEST_FILE = "test_gold.json"
-    OUTPUT_DIR = "models/outputs"
+    SOURCE_DATA_DIR = "models/data"  # 학습 데이터 위치
+    SOURCE_TRAIN_FILE = "train_1000.json"  # 1000개 (split 대상)
+    SOURCE_TEST_FILE = "test_gold_300.json"  # 300개 (고정, 복사 필요)
+    
+    SPLIT_DATA_DIR = "models/data"  # Split 결과 저장 위치
+    OUTPUT_DIR = "models/outputs"  # 모델 출력 위치
+    
+    VALID_RATIO = 0.2  # train에서 valid로 분할할 비율 (20% = 200개)
     
     # Model
     MODEL_NAME = "roberta-base"
@@ -229,7 +235,16 @@ def main():
     print("="*80 + "\n")
     
     set_seed(TrainConfig.SEED)
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
+    # GPU 설정 (비어있는 GPU 1 사용)
+    if torch.cuda.is_available():
+        gpu_id = 1  # GPU 1번 사용 (다른 사람이 안 쓰는 GPU)
+        torch.cuda.set_device(gpu_id)
+        device = torch.device(f'cuda:{gpu_id}')
+        print(f"Using GPU {gpu_id}: {torch.cuda.get_device_name(gpu_id)}")
+    else:
+        device = torch.device('cpu')
+    
     print(f"Device: {device}")
     print(f"Model: {TrainConfig.MODEL_NAME}")
     print(f"Max Length: {TrainConfig.MAX_LENGTH}")
@@ -240,15 +255,54 @@ def main():
     print(f"Seed: {TrainConfig.SEED}\n")
     
     # ========================================================================
-    # 1. Load Data
+    # 1. Load Original Data & Split
     # ========================================================================
     print("="*80)
-    print("Step 1: Loading Data")
+    print("Step 1: Loading Original Data & Splitting Train/Valid")
     print("="*80)
-    train_data = load_json_data(os.path.join(TrainConfig.DATA_DIR, TrainConfig.TRAIN_FILE))
-    test_data = load_json_data(os.path.join(TrainConfig.DATA_DIR, TrainConfig.TEST_FILE))
+    
+    # 원본 데이터 로드
+    source_train_path = os.path.join(TrainConfig.SOURCE_DATA_DIR, TrainConfig.SOURCE_TRAIN_FILE)
+    source_test_path = os.path.join(TrainConfig.SOURCE_DATA_DIR, TrainConfig.SOURCE_TEST_FILE)
+    
+    print(f"\nLoading source data from:")
+    print(f"  Train: {source_train_path}")
+    print(f"  Test:  {source_test_path}")
+    
+    original_train_data = load_json_data(source_train_path)
+    test_data = load_json_data(source_test_path)
+    
+    print(f"\nOriginal train samples: {len(original_train_data['samples'])}")
+    print(f"Test samples: {len(test_data['samples'])}")
+    
+    # Train/Valid split 수행
+    train_data, valid_data = split_train_valid(
+        original_train_data, 
+        valid_ratio=TrainConfig.VALID_RATIO,
+        seed=TrainConfig.SEED
+    )
+    
+    # Split 결과 저장
+    os.makedirs(TrainConfig.SPLIT_DATA_DIR, exist_ok=True)
+    
+    train_save_path = os.path.join(TrainConfig.SPLIT_DATA_DIR, "train_split.json")
+    valid_save_path = os.path.join(TrainConfig.SPLIT_DATA_DIR, "valid_split.json")
+    test_save_path = os.path.join(TrainConfig.SPLIT_DATA_DIR, "test_split.json")
+    
+    with open(train_save_path, 'w', encoding='utf-8') as f:
+        json.dump(train_data, f, indent=2, ensure_ascii=False)
+    with open(valid_save_path, 'w', encoding='utf-8') as f:
+        json.dump(valid_data, f, indent=2, ensure_ascii=False)
+    with open(test_save_path, 'w', encoding='utf-8') as f:
+        json.dump(test_data, f, indent=2, ensure_ascii=False)
+    
+    print(f"\nSplit results saved to {TrainConfig.SPLIT_DATA_DIR}/:")
+    print(f"  ✓ train_split.json ({len(train_data['samples'])} samples)")
+    print(f"  ✓ valid_split.json ({len(valid_data['samples'])} samples)")
+    print(f"  ✓ test_split.json ({len(test_data['samples'])} samples)")
     
     print_data_statistics(train_data, "Train")
+    print_data_statistics(valid_data, "Valid")
     print_data_statistics(test_data, "Test Gold")
     
     # ========================================================================
@@ -271,9 +325,11 @@ def main():
     print("Step 3: Creating Datasets")
     print("="*80)
     train_dataset = ViolationDataset(train_data, tokenizer, TrainConfig.MAX_LENGTH)
+    valid_dataset = ViolationDataset(valid_data, tokenizer, TrainConfig.MAX_LENGTH)
     test_dataset = ViolationDataset(test_data, tokenizer, TrainConfig.MAX_LENGTH, is_test=True)
     
     print(f"Train samples: {len(train_dataset)}")
+    print(f"Valid samples: {len(valid_dataset)}")
     print(f"Test samples: {len(test_dataset)}\n")
     
     # ========================================================================
@@ -286,6 +342,13 @@ def main():
         train_dataset,
         batch_size=TrainConfig.BATCH_SIZE,
         shuffle=True,
+        num_workers=0,
+        pin_memory=True if torch.cuda.is_available() else False
+    )
+    valid_loader = DataLoader(
+        valid_dataset,
+        batch_size=TrainConfig.BATCH_SIZE,
+        shuffle=False,
         num_workers=0,
         pin_memory=True if torch.cuda.is_available() else False
     )
@@ -379,11 +442,11 @@ def main():
         )
         print(f"\nTrain Loss: {train_loss:.4f}, Train Acc: {train_acc:.4f}")
         
-        # Evaluate on test set
-        test_metrics = evaluate(model, test_loader, criterion, device, split_name="Test Gold")
+        # Evaluate on validation set (for early stopping)
+        valid_metrics = evaluate(model, valid_loader, criterion, device, split_name="Valid")
         
         # Check for best model
-        current_metric = test_metrics[TrainConfig.METRIC_FOR_BEST]
+        current_metric = valid_metrics[TrainConfig.METRIC_FOR_BEST]
         
         if current_metric > best_metric:
             best_metric = current_metric
@@ -397,8 +460,14 @@ def main():
                 'model_state_dict': model.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
                 'best_metric': best_metric,
-                'train_config': vars(TrainConfig),
-                'data_config': vars(DataConfig)
+                'train_config': {
+                    'model_name': TrainConfig.MODEL_NAME,
+                    'max_length': TrainConfig.MAX_LENGTH,
+                    'pooling': TrainConfig.POOLING,
+                    'batch_size': TrainConfig.BATCH_SIZE,
+                    'learning_rate': TrainConfig.LEARNING_RATE,
+                    'num_epochs': TrainConfig.NUM_EPOCHS
+                }
             }, save_path)
             print(f"✅ Best model saved! ({TrainConfig.METRIC_FOR_BEST}: {best_metric:.4f})")
         else:
@@ -433,8 +502,12 @@ def main():
             'best_epoch': best_epoch,
             'best_metric': best_metric,
             'final_metrics': final_metrics,
-            'train_config': vars(TrainConfig),
-            'data_config': vars(DataConfig)
+            'train_config': {
+                'model_name': TrainConfig.MODEL_NAME,
+                'max_length': TrainConfig.MAX_LENGTH,
+                'batch_size': TrainConfig.BATCH_SIZE,
+                'learning_rate': TrainConfig.LEARNING_RATE
+            }
         }, f, indent=2)
     
     print(f"\n✅ Training completed!")
