@@ -1,0 +1,4117 @@
+{
+  "total_candidates": 36,
+  "description": "ESConv 대화 중 V4(비현실적 믿음) 트리거가 있는 세션들",
+  "candidates": [
+    {
+      "sample_idx": 1,
+      "esconv_session_id": 1,
+      "situation": "I have complete unsupportive friends its to the point where i dont even feel like i have friends any more .",
+      "trigger_quotes": [
+        "nobody answers phone calls txt messages etc",
+        "I believe its because I am the friend that has financial trouble and normally needs to borrow money"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that their friends are ignoring them entirely due to their financial troubles, which suggests a belief that their worth as a friend is solely tied to their financial situation. This reflects a form of all-or-nothing thinking, where the Seeker feels that their financial issues have completely alienated them from their friends.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "merry christmas to you also \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "How can I help you today?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "im having some issues with friends not actually being friends\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "I hear you are having trouble figuring out which friends are really your friends and which ones aren't. Is that about right?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "yes\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I understand that... Did something happen that makes you feel like that?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yes their is no communication or interaction between me and them nobody answers phone calls txt messages etc\n "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Is this a significant other?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "no friends\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Are they ignoring you?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "when we where younger we all hung out all the time now that we are older its like they talk with each other im not sure if i did anything or not "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Are you sure they are okay? Or not away with family for the holidays?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "it doesnt matter they still keep open communication with each other  "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "That's no good what do you think the problem is?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I believe its because I am the friend that has financial trouble and normally needs to borrow money "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Do you owe someone already?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 2,
+      "esconv_session_id": 2,
+      "situation": "I have been out of work for five weeks in quarantine due to testing positive for COVID-19.  I fear that my employer will not take me back to work even once I test negative.",
+      "trigger_quotes": [
+        "Calling the customer service line is futile.",
+        "The computer just plays a recording that the agents are on other calls and then it disconnects the call."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that calling the customer service line is 'futile,' which suggests a sense of hopelessness and an all-or-nothing perspective on the situation. This indicates a belief that no effort will yield any results, which aligns with the definition of reality distortion.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Hi there, how are you feeling today? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hello"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Hi :) Is there anything you'd like to talk about? Something on your mind? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "I'm concerned about my job. I have been out of work for the past 5 weeks because I tested positive for COVID-19."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Oh I am so sorry to hear that! Are you at least getting sick pay? If not, are you getting advice about help you might be able to access? "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Oh I am so sorry to hear that! Are you at least getting sick pay? If not, are you getting advice about help you might be able to access? "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "(sorry for duplication, not sure what happened there!)"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "It just keeps getting better...  I applied for the Pandemic Unemployment Assistance and was approved.  The next day, I got an email asking me to verify my identity (I am fine with that.  It actually makes good sense.)...\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "So you have been getting some assistance? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "So I did as instructed and got the message on the website thanking me for verification.  The following week I got a physical letter saying I was approved and the award amount per week.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I have gone online once a week and qualified, as one is supposed to do, and still I have not received a cent.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I see, so you are really financially struggling at the moment? Is there anywhere else you could apply for assistance? What about a foodbank? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Calling the customer service line is futile.  The computer just plays a recording that the agents are on other calls and then it disconnects the call."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I hear you there - I spent a long time on hold for an official matter the other day. I guess that everyone is really desperate for help and advice right now. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I have been very fortunate.  People in my church have been bringing me food.  I plan on trying to go to the food bank Monday, if they are open.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I hope that they can help you. My partner and I have used one before and they were very helpful. I felt a bit ashamed but there was no judgement at all. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I actually got so tired of redialing the Department of Labor and Training that I sent an email to the Lieutenant Governor of the state asking for his assistance in getting the matter resolved."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "That sounds like a very positive thing to have done. I really hope that they pay some attention to you. This situation is not your fault! "
+        }
+      ]
+    },
+    {
+      "sample_idx": 4,
+      "esconv_session_id": 4,
+      "situation": "I found out that my boyfriend had been lying to me about his entire life, and so the future that he had said we were building towards was all but impossible. I'm trying to figure out if I should stay with him.",
+      "trigger_quotes": [
+        "Should I give him time to prove himself now that he's backed into a corner.",
+        "It's one of my fears."
+      ],
+      "explanation": "The Seeker expresses uncertainty and fear about the relationship, suggesting an unrealistic belief that the partner must prove himself under pressure, which implies a lack of trust in the relationship's stability. This can lead to all-or-nothing thinking about the relationship's future.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "LOL\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "And he's still married? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "And he brought his kids to my house so they could meet my kids. He had a conversation with them about why he and their mother had been living the way they had. (in seperate floors of the house)\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "That was two weeks ago.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "So, yes, he is.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Too soon to tell.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I can tell that you feel that you are being cheated here. I can't tell you what to do but don't you think you deserve better? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I guess that's what I'm trying to figure out. Should I give him time to prove himself now that he's backed into a corner.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It's not for me to say but I wonder if he's really going to change as he has not already. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "That's not an easy question to answer. He treats me very well. Always has. And he is frantically trying to accomodate me, now htat I know."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I agree with you. It's one of my fears.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "How do your children feel about this? And his? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "MY children (6 and 9) have been living with him in their lives as a male figure who is growing into a father figure. He and I have been together for fifteen months, and part-time living together for six.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "This isn't a new relationship. That's part of the complication, too.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "His kids actually asked if they could come live with me while he and his (ex?) figured their shit out.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Yes, I can imagine that it is. It is always really difficult when children are involved. I know you would not want your children to be hurt "
+        }
+      ]
+    },
+    {
+      "sample_idx": 5,
+      "esconv_session_id": 5,
+      "situation": "the uncertainty surrounding the corona virus pandemic. the unavailability of jobs. lack of success get jobs applied for. No ease or comfort of end being in sight",
+      "trigger_quotes": [
+        "it's almost depleted, been out of work now for nearly 9 months but still can't get unemployment support because of the property that I cannot get rid off else I will declared bankrupt by the mortgage lender",
+        "seems i am being penalised for working hard, saving and investing? I should have been on more holidays and lived all the way above my means!"
+      ],
+      "explanation": "The Seeker expresses a belief that they are being unfairly punished for their hard work and responsible financial behavior, which reflects an all-or-nothing thinking pattern. They also imply that their situation is hopeless, as they feel they cannot access support due to their circumstances, which can be seen as a form of catastrophizing.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I am sorry to hear that. Would you like to talk about anything specific? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "thank you, I just don't know what else to do to get a job?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "So you're unemployed? I am sorry to hear that. Are you prepared to take jobs that are below your usual level just to get by for a while? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "have tried that but don't even get an interview\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "It's a very difficult time to be out of work, I know. I hope that there is something out there for you. Have you tried employment agencies? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "yes, I do not qualify for unemployment because I have savings above the min threshold and I also have rental property, which is currently loss making and I can't sell it because it's 30% below market value"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Well, on the plus side at least you do have savings .. hopefully this can give you some security for a while "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Are your family being supportive of your situation? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "it's almost depleted, been out of work now for nearly 9 months but still can't get unemployment support because of the property that I cannot get rid off else I will declared bankrupt by the mortgage lender"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Perhaps bankruptcy might not be a bad option? You would be eligible for some help then at least. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "family is not being fully supported compared to when I had full time job. had to get rid of one car and other things just to get by"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "but the cost is 7 years of my future???"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "So you feel as though you have been working hard all your life and now you need help and support and are not getting it "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "very well put. seems i am being penalised for working hard, saving and investing? I should have been on more holidays and lived all the way above my means!\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I know how you feel .. I sometimes feel I would have been better off if I'd just not bothered working! "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Anyway thank you for talking and I really hope things go better for you in the future :) "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "thank you for your help."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "You're welcome :) You need to press quit first and take the survey before I can :) "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "hello? :) "
+        }
+      ]
+    },
+    {
+      "sample_idx": 6,
+      "esconv_session_id": 6,
+      "situation": "I am looking for more online jobs. but it is hard to find.",
+      "trigger_quotes": [
+        "If i lose my main job I will use it"
+      ],
+      "explanation": "The Seeker expresses an extreme belief that losing their main job would lead them to rely on food banks, implying a catastrophic outcome if they were to lose their job. This reflects an all-or-nothing thinking pattern regarding their financial situation.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I hear you! I do gig work online too but it can be very difficult to find any. I think a lot more people are working online due to the pandemic. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "totally\n1"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "Are you struggling financially at the moment, then? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "Have you heard of Appen? They are similar to Mturk but they pay more"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I still have a main job but due to big increase of my house expense, I need to work more, way more "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "I have not but I appreciate the recommendation! I think that we all need to come together and help each other at this time. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "anytime, true true\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "i have applied to Appen a few times, and they always say there is no position available now\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Are you aware that there are organisations that can offer a little help at this time? Food banks for instance, though I know some people feel awkward about accepting such help. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "ah yes, food banks, yeah I never thought about it but free food always helps. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I have had to use foodbanks once or twice this year and I did feel a bit bad about it but everyone there was very kind and no-one judged us. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "If i lose my main job I will use it\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "There is nothing to be ashamed of in doing so and when you get to a better position you can give back to them. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "sorry about that, but that's good, people help each other\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Absolutely! Volunteering is a great spirit. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Do you feel you will be getting the vaccine when it is rolled out where you are? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yes\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "how about you\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "That is a good idea - yes, I will get it. I think and hope it will help 2021 to be a better year than 2020 has been! "
+        }
+      ]
+    },
+    {
+      "sample_idx": 7,
+      "esconv_session_id": 7,
+      "situation": "General depression made worse by the severity of the pandemic.",
+      "trigger_quotes": [
+        "I am having a hard time being motivated to do anything.",
+        "It started with the pandemic."
+      ],
+      "explanation": "The Seeker expresses a sense of hopelessness and a lack of motivation, which can indicate an all-or-nothing thinking pattern. The belief that they are unable to do anything due to the pandemic suggests a distorted view of their capabilities and the situation, which aligns with unrealistic beliefs.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I AM FINE \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "HOW IS YOUR SIDE ?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I am ok, I'm having a hard time dealing with the pandemic though.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Please how may i be of help\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am having a hard time being motivated to do anything.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "okay"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "1"
+          },
+          "content": "Do you have any suggestions that might help me feel better?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "I could see how bad you feel because of that"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "What do you like to do for yourself when you feel bad?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It happens anyway, but not all the time "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "when did it start and what do you think that can cause that "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "2"
+          },
+          "content": "It started with the pandemic.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I think it is because we have to stay home to be safe but other people don't listen and more people are dying because of it\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "I am like that sometime,  I switch to what I love doing most "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "it good to be safe, pandemic has caused my hoodlums "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "2"
+          },
+          "content": "What do you love doing most?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "do you have anything?, that you love doing most"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I like to read\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I love playing soccer game, anytime I am not motivated to work or do anything in office or home, I pick my phone play soccer game. I will laugh, enjoy myself, within 5 minutes , I do gain my morale "
+        }
+      ]
+    },
+    {
+      "sample_idx": 9,
+      "esconv_session_id": 9,
+      "situation": "I really blew it with my girlfriend, so she left me right before Christmas.",
+      "trigger_quotes": [
+        "I feel like you are mocking me now."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that the Supporter is mocking them, which indicates a tendency towards catastrophizing and all-or-nothing thinking. This belief may stem from their fragile emotional state and could distort their perception of the Supporter's intentions.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "That was along time. 6 years. WAs the breakup sudden or had it gradually happened over time"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What may I ask is pegging"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "It was probably gradual, but it seemed like all of a sudden at the end."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "had there been any disagreements "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Pegging is when she puts on a strap on and pleasures me from behind.  It is definitely a niche fetish."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "R u a female"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "1"
+          },
+          "content": "The biggest disagreement was that she wanted to start pegging other guys, and I told her no way, we did not agree to that arrangement."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "No I am a male.  But please don't judge me, I am very fragile right now."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "i am not judging you in anyway. Helps me better understand"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "WAs there another person involved with the relationship or just you both"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "I really miss her a lot, I would let her peg those other guys if she wanted to, I just need to get her back in my life.  I told her I would give her as many rimjobs that she requested."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "There were other women and men that she would bring home for us to have threesomes with.  It made me feel like she was in power."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "sounds like you both had a solid relationship"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Very solid like a rock.  I feel like you are mocking me now.  Are you a man or woman?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Was she domineering in the relationship she felt she needed control"
+        }
+      ]
+    },
+    {
+      "sample_idx": 11,
+      "esconv_session_id": 11,
+      "situation": "Trying to find a job",
+      "trigger_quotes": [
+        "never happened with me before",
+        "getting bit demotivated"
+      ],
+      "explanation": "The Seeker expresses a belief that their current feelings of depression and demotivation are unprecedented, which can imply an all-or-nothing thinking pattern. This suggests a belief that they will always feel this way or that they cannot overcome these feelings, indicating a distorted view of their situation.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am stressed \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Well, how do you adapt to the work issue? Do you like dogs? There are opportunities for dog walkers."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I made good money in the past walking my neighbors and friends dogs."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I don't have any pet so no experience with it"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "When I get stressed, I try to do vigorous exercises with pushups, chin ups, sit ups or walking fast."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Do you have a place that you can walk briskly in your area of town?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I am not worried financially . I am feeling depressed by trying again and agian, never happened with me before"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "Losing a job? It never happened for you before?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "There are recreational parks, and trails near by"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I would join a support group for those people who need support and want to change careers."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "There are support groups online to help with job loss who can advise you on where to use your interests and skills  to have a more fulfilling life."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I love my career just getting bit demotivated"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Well, what other questions or concerns do you have for me?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Thanks for letting  me know. I would definitely do search "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "That was all! Thanks for all your support"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I feel that you have really expressed the important things in your life that you need to. I am proud of you."
+        }
+      ]
+    },
+    {
+      "sample_idx": 12,
+      "esconv_session_id": 12,
+      "situation": "Not sure how to explain that I want out of marriage",
+      "trigger_quotes": [
+        "I doubt he will talk he tells me he has no problems I have them, and all it does is I doubt myself",
+        "I turned this situation in every direction and I just am not able to find a solution"
+      ],
+      "explanation": "The Seeker expresses a belief that their partner's refusal to acknowledge problems is solely their fault, leading to self-doubt. Additionally, the belief that they have explored every possible solution and found none reflects a sense of hopelessness and all-or-nothing thinking.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes he tells me it’s just in my head and I could just go out with him, but he drinks then to much so I do not like going out with him"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I am sure that is frustrating! Does he drink at home as well or just when you go out?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Just when he goes out I do not go with him I do not drink and drive "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "And he hangs with some obnoxious people"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Would a date night at home with take-out and a movie just the two of you be an option?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "He would go to sleep , and then he thinks I am crazy he says we are no kids anymore that need to go on a date we are married "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Do you think you both might be open to talking to a marriage counselor?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I want that but I doubt he will talk he tells me he has no problems I have them, and all it does is I doubt myself"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I turned this situation in every direction and I just am not able to find a solution"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Well, what about you finding a counselor for yourself who could help you with your own self-care? Perhaps it could be a start and then he/she could help you end your marriage if you still want to."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "It took me awhile to learn my own value and how important self-care is."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "You know what I like that idea "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Maybe you are right  I might get then some self esteem as well again"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I know from experience that our self esteem suffers when we're in an unhappy marriage. It takes a lot of courage to seek help so I applaud you!"
+        }
+      ]
+    },
+    {
+      "sample_idx": 14,
+      "esconv_session_id": 14,
+      "situation": "friends trying to let me down",
+      "trigger_quotes": [
+        "I feel like they are not my true friends."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that their friends are not true friends based on a single conflict, which reflects all-or-nothing thinking. This belief overlooks the complexity of friendships and the possibility of resolution after disagreements.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hi\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "hello"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hope you are doing well\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "i'm good, what is troubling you this afternoon?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I am not happy with my friends. They were trying to let me down\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "if i get you clearly, you mean your friend disappointed you. how?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes. There were a argument between two of my friend while trying to resolve the issue they all started targeting me. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "i have a hard time with my friends too sometimes"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Then what you do at that time\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "i used to give them time to cool off, when they are back to their senses, they will contact me and apologize "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "what causes the argument in the first place ?\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I was trying to stop the fight, I just said bit loud , \"Stop  all this  nonsense at my place.\" Then they all started backfiring me. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "oh,jst give them time to reflect on what happen, they will definitely reach out to you, but you also have to make an effort to forgo the situation because they see you raising your voice on them as a sign of command of seniority."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I feel like not talking to them. Without any reason they made such a big mess"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I feel like they are not my true friends. you are right I should give them time to realize their mistakes"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "exactly, that will also gives you the necessary time to know how to react to their forthcoming apologies "
+        }
+      ]
+    },
+    {
+      "sample_idx": 16,
+      "esconv_session_id": 16,
+      "situation": "Fear of layoff from job",
+      "trigger_quotes": [
+        "I don't even dream about this at all I don't believed it can happen to me"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that they never thought a layoff could happen to them, which indicates a form of catastrophizing and an all-or-nothing mindset regarding their job security.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Good afternoon"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am not good at all"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "I seems like you are not feeling well. Am I correct?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Not about feeling well, it is about layoff from my job"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Sorry to hear about it. Due to COVID most of us are trap with certain problem"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "It very serious here in my company firstly it was cut off and now it is layoff"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It's really hard time but we should keep hopes. It will end soon"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Seriously! What I am scare of now is how to secure now job"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I can understand it could be a hard time for you. You try to keep working on your skill. For sure you will find a way"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I pray it works for me, I don't even dream about this at all I don't believed it can happen to me "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I felt the same way when 50% people were laid off from my previous company.  Situation was really stressful all around. I was trying to stay positive and kept working. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "I know sometime its hard to believe what happen with us suddenly, At that time we should keep moving and try to find a way. "
+        }
+      ]
+    },
+    {
+      "sample_idx": 17,
+      "esconv_session_id": 17,
+      "situation": "Fear of layoff from job",
+      "trigger_quotes": [
+        "I don't even dream about this at all I don't believed it is happening",
+        "how to secure another job"
+      ],
+      "explanation": "The Seeker expresses a sense of disbelief and fear regarding their job situation, which can indicate an unrealistic belief about their ability to find new employment. The phrase 'I don't even dream about this at all' suggests a catastrophic mindset, implying that they cannot envision a positive outcome or future, which aligns with all-or-nothing thinking.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hello"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "how are doing you today, what is troubling you? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I am not good at all"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "you are not good, why"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am scaring about layoff from job"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "oh, if i get you clearly, you mean covid-19 impact on your job might soon affect you job\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "You are very correct"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Pandemic is giving us problems"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "yeah, covid-19 is a real bummer but i am sure we will soon get over it and the economy will bounce back "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I pray its over soon, firstly it was paying cut off and now it is layoff"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "i was furloughed my self and now i am working part-time, its not s lot but it is better than nothing "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Seriously! What I  am scare of now is how to secure another job"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "i can feel your pain just by chatting with you"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "i was scared at first too before but now that i gat something i am doing it feels better a bit "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "It is not easy my friend! I don't even dream about this at all I don't believed it is happening "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "yea, it soo surreal, but even though there is a lot lost jobs, there is still a lot of job you can get to keep things balance  "
+        }
+      ]
+    },
+    {
+      "sample_idx": 19,
+      "esconv_session_id": 19,
+      "situation": "Just can't shake my sadness",
+      "trigger_quotes": [
+        "I just have such a hopeless feeling.",
+        "I just feel sad during the day and can't make it go away."
+      ],
+      "explanation": "The Seeker expresses a sense of hopelessness and an inability to overcome sadness, which can reflect unrealistic beliefs about their emotional state and the permanence of their feelings.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am hoping I will. I just have such a hopeless feeling."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "have you been sleeping enough?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Yes, probably too much."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Do you like morning or night?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Probably morning."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Me too. I like morning too. Air feels fresh, although it is little contaminated here. At night time, I feel a little bit anxiety more. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "So I sleep really early. Sleeping feels good anyway? Do you feel ok while you're sleeping?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "Yes. I just feel sad during the day and can't make it go away."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I suggest listening to sad yet beautiful music. It sometimes helps me. Do you like classical music?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I haven't really tried it."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "When you are sad, listening to upbeat music may disturb you. Listening to instrumental music maybe good for you. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Ok, I will give that a try."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I just checked YouTube and searched for some music. Good, I hope it will soothe your mind. "
+        }
+      ]
+    },
+    {
+      "sample_idx": 20,
+      "esconv_session_id": 20,
+      "situation": "I had a huge fight with my girlfriend and she left me.  She accused me of neglecting her even though I needed to spend time with my family and spent as much time with her as I could.",
+      "trigger_quotes": [
+        "I want to drink till I forget about her."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that drinking alcohol will help them forget about their ex-girlfriend, which reflects a form of catastrophizing and an all-or-nothing mindset regarding their emotional pain.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hi I am feeling blue, things aren't going well at all"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Hello, hello. I am so sorry to hear. Can I ask you more about it?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "my girlfriend and I split after 4 years!"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Oh no\n!!!"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I am sorry, how do you feel? sad? joyful?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Ver sad and lonely.  I loved her"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Very*\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "What should I do?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "oh no. I can totally understand that feeling. 4 years is a long time."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Thanks it is.  She said I was neglecting her and we had a big fight.  haven't talked to her in a month"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I would recommend doing your own thing, for example, devote into your hobby or do some other jobs. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "Do you think drinking alcohol will help?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Ohhhh. well. I never ditch my partner, always my partner ditch me, so I do not know why they do that. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I think it will worsen. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "You had a similar experience?\n\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I want to drink till I forget about her."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "yes, I quit alcohol 3 years ago. it took me 20 years\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "How did you do it?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "It took me 1 whole year to forget about my ex"
+        }
+      ]
+    },
+    {
+      "sample_idx": 21,
+      "esconv_session_id": 21,
+      "situation": "Not being able to see family and friends due to Covid.",
+      "trigger_quotes": [
+        "we tend to feel guilty if we feel happy since there is so much sadness in the world right now"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that feeling happy is inappropriate or wrong due to the sadness in the world, which reflects all-or-nothing thinking and a tendency to catastrophize emotions.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am not feeling the best. I have been having some depression, because of not being able to see friends and family during this pandemic."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Oh, boy, do I know that feeling! How are you dealing with it? (if I may ask)"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I try to message them as much as possible and call them on the phone but it is just not the same as actually getting to give the a hug and see them in person."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I know that. I use Zoom, just to see them...do you have a computer?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes. That works for some of my family but I have family in the nursing home that does not have access to computers. I haven't seen them in several months. It just breaks my heart."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Oh. I can feel it. I have someone who's sick as well. Do you have any one friend with whom you can share your feelings, your depression. I understand you're having issues with depression, right? It sometimes helps me to feel that we're all in this together. And, at the other end of this, we will be able to give the biggest hugs ever!"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Yes. I have some very dear friends that have helped me a lot. I guess the depression is just worse because it is the holidays and this is the first year that I haven't got to spend it with my extended family members."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Oh....That's so tough...it being the first year!!!! Sometimes, I cry (I cry with my cat), and just to say the feelings out loud makes me feel a bit better. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yeah. I have a little dog that has been my cuddle buddy. I have had him for 13 years so he has seen me ugly cry many times. What are some things you do to deal with depression?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I try to read, watch programs or podcasts that take away my negativity. Anything that will give me a lift, so that my own depression won't get so bad that I can't remember what it felt like to be a bit happy. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "That sounds like some good advice. I think I will try to find a good podcast or a good comedy series that I like and spend time doing that. It's hard to be sad when you are watching something funny or listening to something funny. Thank you for the good advice and the listening ear.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I wish that I could listen to more....this thing is so slow. Remember, we\n're all in this together, and we will come out the other end. Isn't it OK to be happy a bit, even though this takes such a toll on so many people? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "That is so true. I guess we tend to feel guilty if we feel happy since there is so much sadness in the world right now. But you are so right about the fact that we will come out on the other side. It helps to remember that bad things don't last forever."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Yes, and are you somewhere where you can walk or exercise a bit? I always feel better if I can move around...dance...something active. What I find helps me the most is to remember that we need to stay safe and be OK, so that we will be here to celebrate when this is over. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Yes. I live in the country so I can go for nice walks when the weather is nice. Staying safe is definitely important right now."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Oh...it's fortunate that you live in the country. Can you take some deep breathes and watch the trees, the animals, and nature....they are all here for us???"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes that is exactly what I do. Thank you so much for your help today. You have made me feel better just having someone to vent to."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Keep venting, if it makes you feel better. I know I do when I can talk to someone I don't know. Is it nice where you are today, so that you can look at something bigger than the indoors?? That often helps me feel better."
+        }
+      ]
+    },
+    {
+      "sample_idx": 23,
+      "esconv_session_id": 23,
+      "situation": "I am very scared about next college semester it is frightening",
+      "trigger_quotes": [
+        "I will not do well",
+        "I have to take it for my degree goal"
+      ],
+      "explanation": "The Seeker expresses a belief that they will not do well in the honors calculus class, which reflects a form of catastrophizing. Additionally, the phrase 'I have to take it for my degree goal' implies an all-or-nothing thinking, suggesting that failure in this class would jeopardize their entire academic path.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "OK, sure. Can you tell me what the problem is? I'll do my best to help."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Well I am going into my next college semester next month, and I am very frightened about a calculus class I have to take. It's an honors course and I am very worried that I will not do well\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I can understand that. It must be an important exam for you. Do you enjoy calculus?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I'm terrible at anything with numbers, myself!"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I don't remember, I took an easy calculus course in high school but that was a couple years ago. I only got a B there, so I'm worried about taking an honors one. I have to take it for my degree goal\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "A B is a great result!"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Are there any revision courses that you can access to help refresh your skills?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I don't think so, the campus is closed due to the pandemic. There are a few online tutors but they are almost always busy\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "This pandemic has really made it difficult to get anything done hasn't it."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Do you know of anyone else who is looking to take the course that you got revise together with?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I always find it easier to work through things like this with someone else."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Yes the pandemic has affected many of my friends and their families, very difficult these times are.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "No, none of my friends are taking the class/ none of them have ever taken calculus\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "There seem to be some really good online courses out there. It might be worth sending out enquiries to a number of tutors, asking them to get in touch as soon as they are free, and in the meantime working through something online to help build up your confidence?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "That sounds like some good advice to me\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Maybe I'll try working on it for my confidence like you said\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I bet once you get into it again it will all come back to you. Sometimes getting started is the hardest part."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I think you're right!\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Do you believe in me? That I will pass well?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I think that if you got a B once, you can do it again, and if you really want it, which you clearly do, you can do anything! Aim for an A, you can do it!"
+        }
+      ]
+    },
+    {
+      "sample_idx": 24,
+      "esconv_session_id": 24,
+      "situation": "I lost my job Due to COVID-19 , I really work hard for the company for past five years but they just through out from the company.",
+      "trigger_quotes": [
+        "I lost my hope.",
+        "all the doors were closed",
+        "I was corner and helpless."
+      ],
+      "explanation": "The Seeker expresses feelings of hopelessness and helplessness, which reflect unrealistic beliefs about their situation. Phrases like 'I lost my hope' and 'all the doors were closed' suggest an all-or-nothing mindset, indicating a belief that there are no possible solutions or opportunities available, which is a form of catastrophizing.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I know you can handle this tough time situation. These tough time teach us so many lessons and give the solutions too."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I can't able to pay rent and hospital fees."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "By chatting with you I can totally understand how you are feeling at this movement. Such situations put so much burden on us"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Sorry , I can't come over the situation . I lost my hope."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I feel the same when there is some financial or emotional problems in my life. Then I realize why I am not that  strong to face it or why I was not prepare for it?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "If there is any opportunity we will put forward , but all the doors were closed , I was corner and helpless."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "From my past experience I have leant at tough time like this, we should not give up. We should keep trying and some solution will come definitely. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes I accept your thought and gives me support , thanks you for your concern."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "What I have seen If we keep trying and stay motivated towards our goal, we for sure get that"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Please refer me if you have any friend ."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Sure! I would suggest you to keep trying, try to stay positive in this tough time where we all are struggling "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Thanks a lot Bro."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Wishing you best wishes and stay healthy"
+        }
+      ]
+    },
+    {
+      "sample_idx": 26,
+      "esconv_session_id": 26,
+      "situation": "breakup with partner",
+      "trigger_quotes": [
+        "but the fate plays a great game upon me",
+        "i cannot able to concentrate on what i am doing",
+        "i can't tell this to them because they also become sad when they know about this",
+        "i don't know how to overcome from this kind of sadness"
+      ],
+      "explanation": "The Seeker expresses unrealistic beliefs about their situation, suggesting that fate is playing a cruel game, indicating a sense of helplessness. They also believe they cannot concentrate on activities, which may reflect an all-or-nothing mindset. Additionally, the belief that sharing their feelings will only cause sadness in others suggests a catastrophic view of the consequences of their emotional state. Lastly, the statement about not knowing how to overcome sadness implies a sense of hopelessness.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I taught that she was my everything hereafter.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "but the fate plays a great game upon me\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "During a time like this, some people find it helpful to keep busy doing some kind of activity to take their mind off of their pain. Is there something you can do to take your mind off of it until you're ready to manage your feelings?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I have some activities to do so, but i cannot able to concentrate on what i am doing\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Okay, that's very understandable. I'm sure there's another strategy we can come up with."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Do you have a friend or family member you can talk about your feelings with?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "yeah! i have few friends"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "That's great. You've already taken a huge step by reaching out for help and that's a big deal! A good next step might be letting the people around you know that you need some support at this time. Sometimes people don't know something until you tell them, even if it seems obvious. Is that something you can do?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "But i can't tell this to them because they also become sad when they know about this"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Okay, I understand. Do you feel embarrassed because this is happening to you?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "yes i am\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "and i don't know how to overcome from this kind of sadness\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I understand that your feelings of sadness run very deep. Do you have people in your life who you can safely spend time with without necessarily talking about your feelings? Feeling connected to people can help quite a lot."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yes i have someone\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "who is my well wisher\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It's great that you have someone who can give you positivity and support. Do you feel comfortable with trying that or would you like to explore other options?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 27,
+      "esconv_session_id": 27,
+      "situation": "Work at restaurant as assistant manager. Manager got fired and company asked me to take over position without a pay raise then skipped the promotion and hired a new manager.",
+      "trigger_quotes": [
+        "I can't quit because I have bills to pay and it will be hard to find other job right now.",
+        "the new manager is useless! He does not appreciate my efforts at all and I know more than him."
+      ],
+      "explanation": "The Seeker expresses a sense of hopelessness about their job situation, suggesting that quitting is not an option due to financial constraints, which reflects an all-or-nothing thinking pattern. Additionally, the belief that the new manager is 'useless' and does not appreciate their efforts indicates a tendency to catastrophize the situation and devalue the manager's role, which can be seen as an unrealistic belief about their work environment.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hello?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Hello, how can I help you today?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I don't know what to do. I want to quit and punch the new manager in the face.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "So if I understand correctly, you are upset with your job and your manager?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "The company mostly and myself for having to work there."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I can't quit because I have bills to pay and it will be hard to find other job right now.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I am sorry to hear that. I can imagine it is challenging to work at a place where you are unhappy. And I understand it is a tough time right now."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes, it is. And the new manager is useless! He does not appreciate my efforts at all and I know more than him.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Yes, I can totally relate! I have been there. I was in a very similar situation at a previous job when departments were reorganized and I ended up working for someone who wasn't familiar with my work. It was a challenge and frustrating."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "While I know jobs are scarce right now, do you think you might consider at least taking a look at some job sites, doing some searches just to see if there are some other jobs you might be interested in?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Yes, that's really frustrating. I find myself biting my tongue more than once every day when I hear his opinions about the work.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "Oh yes, I totally get that! I remember having to do the exact same thing, very frustrating!"
+        }
+      ]
+    },
+    {
+      "sample_idx": 29,
+      "esconv_session_id": 29,
+      "situation": "My boy friend left me for nothing, I tried to ask for explanation but i won't get any thing , make me depressed and felt alone.",
+      "trigger_quotes": [
+        "I don't want to leave him behind.",
+        "I miss him"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that they cannot move on from the relationship and that leaving the memories behind is not an option. This reflects an all-or-nothing thinking pattern, suggesting that they feel they must hold onto the past completely, which can hinder their emotional healing process.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "It sounds like you are thinking about a specific person a lot of the time."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Ugh. That's the worst."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Is there anything you can think of that would help you to feel better?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Yeah. I hate the way it ended. I really cared about him and feel like the part is still there."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "It sounds like things ended in an unresolved way. That can make it feel like there is no real conclusion."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Hey! are you there? "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "yes, there is a lag in the system. it takes a while for the response to upload"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Ok fine , it's so hard to get over someone after a breakup like this."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Yes, I agree. Sometimes it just takes time to process all the emotions."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I mean logically , I know it's not. If we were gonna break up, then we were gonna break up"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Yes, that's a good point. It sounds like you are thinking this through in a good way, but the emotions are hard to process. Letting yourself feel the emotions is an important part of getting through a difficult situation."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "But I want to keep his photos. And how would I even distract myself that much that I'd stop thinking about him completely."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "It is understandable to want to keep photos. Distracting yourself might not be the solution; that could stop you from processing the emotions. There is a stage of grieving for a lost relationship that happens when a relationship ends. There will be grieving for the person, and for the relationship with that person. That is what has to be processed in order to move on."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Ok, I mean , I can try, But it's just, I don't want to leave him behind. I miss him"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "That makes sense; you care about him so you miss him. This is one of those things that will take time. Accepting and acknowledging the emotions, even when they are painful, will let the emotions evolve and over time they will become less painful. "
+        }
+      ]
+    },
+    {
+      "sample_idx": 31,
+      "esconv_session_id": 31,
+      "situation": "I miss my girlfriend so much and she left me for my best friend.",
+      "trigger_quotes": [
+        "now I have no one in my life",
+        "I have no family",
+        "I do not have insurance, I am between jobs and have nothing currently",
+        "the holidays are an especially lonely time"
+      ],
+      "explanation": "The Seeker expresses unrealistic beliefs about their social support and worth, suggesting they have no one in their life and implying a sense of total isolation. Phrases like 'I have no family' and 'I have nothing currently' reflect an all-or-nothing thinking pattern, which can distort their perception of their situation and support network.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "My girlfriend left me for my best friend, now I have no one in my life."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I see, this sounds really difficult. How long were you dating your girlfriend? Do you have any friends, family or a support system by chance?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "We were together for 7 years.  I have no family.  My friend and girlfriend were my only family, we were like the Gatsbys."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "That is a very long time, I had a girlfriend and I was very vested in her and her family. She broke up with me around Christmas time as well. It has been awhile, but I remember getting her gift and it was over sometime afterwards. Do you have any co-workers or involvement with any local groups/organizations/church?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "My co-workers don't know about my personal life, I don't go to church.  Maybe I should go see a therapist?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I think a therapist would be a great way to process this situation since our time is limited. From what you shared, it sounds like you have some past hurts that you may want to share with someone you trust. Do you have insurance or are you uninsured? There are great therapist for the insured and uninsured. :) "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I do not have insurance, I am between jobs and have nothing currently.  The holidays are an especially lonely time."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I see, that is very difficult. This season bring many feeling like this myself. If you had a magic wand and could change anything about your situation, what would you change assuming that we cannot fix this situation per se.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I would treat my girlfriend better I think.  She was pushing for a threesome with my best friend, but I told her no way.  That is why she left me."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "From what I am hearing, it sounds like you have a boundary and your girlfriend did not respect that. I think you deserve someone that respects you and your boundaries. If you do not feel comfortable, then you do not feel comfortable and should not be shamed for it."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I agree.  She made me watch them have sex once, it was sick."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Can a therapist help me with that?\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Are you still there sir?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Sorry i was having wifi issues "
+        }
+      ]
+    },
+    {
+      "sample_idx": 32,
+      "esconv_session_id": 32,
+      "situation": "My ex-partner told me yesterday that after being engaged for almost a year, he no longer wants to marry me and he moved out.",
+      "trigger_quotes": [
+        "the last year has been a lie",
+        "They're making things worse for me"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that the entire year of their relationship was a lie, which suggests an all-or-nothing thinking pattern. Additionally, the belief that their family and friends are making things worse implies a sense of helplessness and a lack of support, which can be seen as an extreme view of their situation.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "Sorry to hear that, would you like to talk about it?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Yes, I think that might make me feel better.  I really have no one to talk to because my family and friends didn't like him so they think this is for the best.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Ok. I am happy to listen. \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I just don't understand why someone would pretend to be happy for a year and then decide they were lying and leave\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "Seems like you feel your partner betrayed you, does that sound right?\n "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Yes, I feel very betrayed.  \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "That is understandable. I know how you feel,  may I suggest taking a few minutes to clear your head, and making a plan to talk with your friends and parents about how you feel?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "They think I should just get over it because they didn't like him so they think I shouldn't like him either.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "They're making things worse for me.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Oh I'm so sorry, sometimes family and friends don't think about your feelings.  When did this happen?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "He left yesterday.  I had no warning.  He just packed up all his stuff and said he didn't want to marry me and the last year has been a lie.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Dang. he seems very selfish. But I understand how up setting it must have felt. My first husband left me without warning. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I'm sorry to hear that.  How long did it take you to feel better?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Awhile. it started to feel a little bit better after I kept telling myself it was about him and not about me, then I started feeling a bit better. But it will take time, the old say is correct, good days and bad days. \n"
+        }
+      ]
+    },
+    {
+      "sample_idx": 33,
+      "esconv_session_id": 33,
+      "situation": "I have a friend who is mad at me because I told her to pull up her mask while she was talking to me. She became very offended and actually started yelling at me as to how I am healthy and will live through Corona if I caught it. I reminded her about my family and other people but she is stubborn. She is just now starting to believe Corona is real.",
+      "trigger_quotes": [
+        "I don't think our friendship will survive this because I am willing to part ways for all of our safety.",
+        "I hate that but will do it."
+      ],
+      "explanation": "The Seeker expresses an extreme belief that their friendship cannot survive the current situation, indicating an all-or-nothing mindset. This suggests a catastrophic view of the relationship's future based on the current conflict, which is an unrealistic belief.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "We have been friends for 13 years\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am hurt and confused that she still thinks this is a game.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "She thought Corona was fake until someone we know caught it. \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "It is like she is mad she was wrong and is taking it out and lashing out at those who have been trying to persuade her the whole time...\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "what do you think?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It sounds like you care a lot about your friend and others. How old is your friend? \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It sounds like you care a lot about your friend and others. How old is your friend? \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "She is 44!\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Too old for all this nonsense.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "She has a short temper.......I think I am going to have to separate myself from her for the duration of the virus and the cure. I cannot talk to her again unless she agrees to get vaccinated.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "She is all to careless.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I see, it does sound like she is being negligent with her behavior and not respecting of you and your concern on this virus. When you say your friend does not believe in the virus, what is her stance on it?\n\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "She thought it was faked for political reasons at first. Then when she found out it was real when it struck close to home, she is saying it is apart of population control. Honestly she is all over the place. I find her very dangerous to others right now.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I don't think our friendship will survive this because I am willing to part ways for all of our safety.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I hate that but will do it.\n\\"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I can relate with your friend, at the beginning I had similar thoughts. As my friends started working on those units and my members being hospitalized for it, I surrendered my political stance and dawned my mask. I have a friend who is just like your friend, they have politicized it and had first degree exposure and blew up when we had her sit out of our teen support group/youth group and church services for two weeks. She is in her 50's.\n"
+        }
+      ]
+    },
+    {
+      "sample_idx": 34,
+      "esconv_session_id": 34,
+      "situation": "Ilost my home when my partner died. He had changed the will and I didn't know.",
+      "trigger_quotes": [
+        "I feel like a failure.",
+        "useless person."
+      ],
+      "explanation": "The Seeker expresses feelings of being a failure and describes themselves as a 'useless person,' which reflects unrealistic beliefs about their self-worth and capabilities. These statements indicate all-or-nothing thinking and a negative self-assessment that can contribute to their emotional distress.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Are you there?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What is your most concern at this point? I understand you are  having a depression, that must be a great suffering. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "It is. I want t feel like a good person again."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "You can become whoever you want to be"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I am not sure of that. I feel like a failure."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Are you getting enough sleep lately?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes. Maybe too much."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "There is no failure. People were born in certain way. Each person was programmed differently. It is your uniqueness , not failure.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "maybe your body needs to rejuvenate "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "maybe your body needs to rejuvenate "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "That makes sense. If I could look at it that way I might make it through this."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "useless person. I want to feel hopeful again.I feel like a "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Wrong typing there"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Somebody told me that confidence is the most important. I hope you will feel a great confidence in you and feel great soon."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Thank you for caring about me. I needed that very much."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Great, I am so glad I was able to chat with you today"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Is there anything I can do for you today?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 35,
+      "esconv_session_id": 35,
+      "situation": "Its not even a break up, my girlfriend wants space after 5 years, she wants to rent a room on her own without me, and it feels over.",
+      "trigger_quotes": [
+        "i feel like no one can just pick and choose when they want someone around.",
+        "it seems like our future is in flux and it seems like it could go either way."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that no one should have the ability to choose when they want someone around, which reflects an all-or-nothing thinking pattern. Additionally, the statement about their future being in flux and could go either way suggests a sense of hopelessness and catastrophizing about the relationship's outcome.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "Sounds like your support is not appreciated."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Usually coping is either eating a ton of food or smoking marijuana, but with the holiday money is tight. I am listening to emo pop music from the 2000's now to help."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Music definitely helps!"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I have a list of songs that I like to sing to. I can't really sing, like, at all. But I love to do it. And it makes me forget about whatever is going on.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Honestly, in the past I have been a lot lower than I am now. I really just hope I am able to stay strong for as long as i can right now\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Honestly i do the same thing a lot. Songs with a lot of emotion that i can belt out\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "You are certainly self-aware. Better off than most people!"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "i will have to find somewhere i can properly exercise my awful vocals lol\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Ah! I like pop songs from the 60's :-) "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Ha! The car is always good! \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "honestly its because i have been hospitalized due to my mental state. i try to be as self aware as possible now. i just hate the feeling of being blindsided.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "Have you tried The Smiths? Band from the 80's. They are my go to for when I am feeling low.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "i will give the throwbacks a try today. I do get down with a few of the older bands thats for sure\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "To be blindsided is a violation of trust. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Have you spoken to her about it at all, or is that not your jam?"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "It's ok. A lot of people are non-confrontational. Society tells us we should be able to express our boundaries. Not everyone is comfortable with that and that is ok."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "we literally just talked about it an hour ago. she says she doesnt know what she wants and she doesnt know how long but she doesnt want to be away from me right now. which i feel just isnt fair. i feel like no one can just pick and choose when they want someone around."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "But that puts more responsibility on you for your feelings. Sounds like you have coping skills for that."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "i know. with COVID this is so much harder. i may just take a long walk and try to focus on myself, because it seems like our future is in flux and it seems like it could go either way.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "You're right. That is not fair. You are feeling conflict and abandoned/not-abandoned.\n"
+        }
+      ]
+    },
+    {
+      "sample_idx": 36,
+      "esconv_session_id": 36,
+      "situation": "When one partner feels that the other isn't fulfilling a requirement, Wadley says, it's important to communicate that. If that person's partner isn't willing to try harder to fulfill that need, it's probably time to move on, she says\nTell your BF or GF that you want to talk about something important.\nStart by mentioning something you like or value about the other person. ...\nSay what's not working (your reason for the break-up). ...\nSay you want to break up",
+      "trigger_quotes": [
+        "never go back to an old love, it's like reading a book over and over again when you already know how it ends."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that returning to a past relationship is futile and inherently negative, suggesting an all-or-nothing perspective on love and relationships. This reflects a form of catastrophizing, as it implies that revisiting old feelings or relationships is always a bad choice without considering any potential for growth or change.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "i had a lot of reasons to give up on you\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "but i still chose to stay\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "hello\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "how are you?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "I am glad you stayed. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What are some of the reasons you wanted to give up on me?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "hmm\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "she don't miss him, you miss the person he used to be.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Missing people can feel devastating, Is that what I am hearing you say?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "what about you?\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "ofcourse \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "never go back to an old love, it's like  reading a book over and over again when you already know how it ends.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "You sound like you have a lot of wisdom"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "How are you trying to move on?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 37,
+      "esconv_session_id": 37,
+      "situation": "i had a break up with my partner.in this suitation i was very depressed and i faced lot of stress.",
+      "trigger_quotes": [
+        "there is only thing for my depression is my break up i want to over come but i couldnot",
+        "but i cannot face them in this situation"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that their depression is solely caused by the breakup and that they cannot face their friends, indicating a sense of helplessness and an all-or-nothing mindset regarding their emotional state and social interactions.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "In what way are you not happy? Can you elaborate?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "i am not happy because of my current breakup with mypartner."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Problems often arise in relationships over misunderstanding each others point of view. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yeah i accept it there will be misunderstanding we want to get adjust \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "but it must be both side adjusted  ,if not it will result in breakup only."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I completely agree with you. One sided relationships do not work. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "yes it wont work at all \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "What else besides unhappy do you feel about this breakup? Often there are a mix of emotions and looking at all of them is important to see the whole picture. People often report feeling relieved, regretful or other emotions with the feeling of unhappy. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "there is only thing for my depression is my break up i want to over come but i couldnot ."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What are some things that you enjoyed doing before this relationship? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "i was going out for night pub ,enjoying with  friends "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Reaching out to old friends is a great idea to be able to regain some joy in life."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "but i cannot face them in this sutiation\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Many books have suggested that we are allowed to disclose what we want in relationships with friends. So if it is not something you wish to talk about with your friends tell them that and they should be willing to accept it. However I do understand if you do not want to reconnect with friends."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "they will accept me but i am not willing to share my negative mood with them."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I understand. What have you tried to overcome your depression?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 39,
+      "esconv_session_id": 39,
+      "situation": "I have been recently laid out because of COVID-19 and not solved yet.",
+      "trigger_quotes": [
+        "I will find it difficult to sustain if this continues like this for other 3 months.",
+        "Only GOD should have forced me this way, I believe."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief about their ability to sustain themselves financially, suggesting a sense of impending doom if the job search continues without success. Additionally, the belief that a higher power is forcing their situation indicates a lack of agency and an extreme perspective on their circumstances.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I am looking for another job preferably in my locality and not getting yet, since last 2 months. I will find it difficult to sustain if this continues like this for other 3 months.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "So it sounds like you've been struggling with finding a new job. It's never easy looking for a new job during these times. Why do you think you're having trouble?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "Getting a job is not that difficult. But I try to find a job in my locality to avoid distant from family and having food issues.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "It sounds like you're motivated and dealing with a lot. Is there a specific job that you had in mind or are you applying to different kinds of jobs?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Any kind of job, probably managerial. But to be in my locality since to look after my aged mom also.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "It sounds like you really care to want to be close to home. Have you talked with someone locally about jobs that would allow you to stay close to home?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "I have been talking to some people who my friends knows also. They show interest but cannot help me on the issue.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Surely they will refer to some people. But it will take some time.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Stay motivated. If one opportunity doesn't get your desired response you may be even closer to finding the right job for you. Keep pushing on and know that if one opportunity doesn't work out a positive attitude will make all the difference. Just because you haven't found one yet doesn't mean you won't. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Thanks for making confidence. I feel relaxed. I believe this will surely be a chance to find myself and get a better opportunity to be relieved from my previous difficulties. Only GOD should have forced me this way, I believe.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Your faith is healthy and gives you purpose. Similarly you have to believe that the dots will connect in your favor. Maybe you can't connect them looking forward, but looking backwards you have to trust that the dots will somehow connect in your future."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "I felt anger over my previous employer since he was not giving any time for me to switch over, at least 2 months.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Even then he was satisfied till then. \n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "It can be frustrating to focus on your last job, especially if you haven't found a new one yet. Perhaps once you find a new job your disappointment with the last one won't be so disappointing anymore. If the new job is better you wouldn't have found it working the last job. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Anyhow my loyalty was not encouraged to perform more. I have to move from some back again.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Any I am preparing myself better, using the break time to gain my knowledge further and sharpen my skills, reading and viewing many articles in the net and youtube. I helps me a lot.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "It's great that you're staying productive and improving yourself. If your desire to improve yourself is as strong as your desire to find a new job I'm confident you will."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "It helps me to forget the past and concentrate on the future.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Don't let your past define you, let your present choices pave a new path into the future."
+        }
+      ]
+    },
+    {
+      "sample_idx": 40,
+      "esconv_session_id": 40,
+      "situation": "I had been dating my college boyfriend for almost a year and we had begun to fight increasingly over the last few months.  He ended up breaking up with me on our anniversary.",
+      "trigger_quotes": [
+        "We were fighting over the smallest things these last few months.",
+        "he said he couldn't take fighting with me anymore and just wanted to end it."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that the relationship is doomed due to minor conflicts, suggesting an all-or-nothing thinking pattern. This indicates a belief that if there are fights, the relationship must end, which is an extreme perspective.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Most types of incense are too strongly scented and make me sneeze or feel sick."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Candles are much better for me."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "There  are websites like Decompress dot org that can help with relationships that are in turmoil."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "I haven't heard of that website before.  I'll have to check it out.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I used to visit sites that help people who need to find ways to decompress after issues and fights have occurred in relationships."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Well, I haven't been in a long-term relationship like this before.  \n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "My past relationships were all in high school, and they only lasted a few weeks or months at a time.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I really cared for this one, and we were together for so long.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I feel obligated to help during Christmas because I had a nasty fight with my partner one year over gifts.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "You had a fight with your partner?  I'm sorry, it's the worst when people fight over what's supposed to be something nice.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What was the fight over? Food? Money? Sex? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I forget what started it, it was something stupid.  He didn't like the way I said something and it kind of blew up from there.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "We were fighting over the smallest things these last few months.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "It just kind of built up to the point where he said he couldn't take fighting with me anymore and just wanted to end it.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I would let things decompress for a long while."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "End the relationship, I mean."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "You think maybe if we just take some time apart, he might want to talk about it?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I suggest thinking through ending the relationship if he has a hot temper.  "
+        }
+      ]
+    },
+    {
+      "sample_idx": 42,
+      "esconv_session_id": 42,
+      "situation": "i am breaked with my lover",
+      "trigger_quotes": [
+        "he say that him future is more important more than me"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that their partner's future is more important than their relationship, which can reflect an all-or-nothing thinking pattern. This belief may lead the Seeker to feel worthless or as if they are not valued in the relationship.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "How long have you been together?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "atmost 2 years"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "That has to be hard after 2 years. Does your partner know yet?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "he only angry with me but i am still loving him"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "If you still love him, what is the reason for the break up?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "he is going to abroad , so he is leaving me"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "So then he is leaving the country. Why don't you want to go along?\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "my  working platform does not allow me to outside the contry"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Oh I see. That is a hard situation to be in. I would feel sad and angry. Is that what you are feeling?\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "yes , absolutly correct"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "You have every right to feel that way. You have invested two years with him. Have you had a talk with him to tell him how you feel about it?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "i already talk to him , but he say that him future is more important more than me"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "That had to hurt. So then there is no convincing him to stay. Is that right?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 43,
+      "esconv_session_id": 43,
+      "situation": "my team lead give me a assignment during holiday but i can't do that",
+      "trigger_quotes": [
+        "i can't done by project , my team lead will definetly scold me"
+      ],
+      "explanation": "The Seeker expresses a belief that their team lead will definitely scold them for not completing the project, which reflects an extreme expectation and a sense of impending failure. This indicates a form of catastrophizing, as they are assuming the worst possible outcome without considering other possibilities.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Hello! How are you feeling today?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "i am feel worsen"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "That's never good. I know how it can be to feel down. What's got you feeling that way?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "i can't done by project , my team lead will definetly scold me"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "It seems like you're worried about your abilities as well as your team leader potentially being disappointed with your performance. Am I understanding that correctly?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yes , you prediction was so good"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "That's lovely to hear. Have you tried discussing your doubts with your supervisor? There are times where I've felt overwhelmed, but maybe they could provide some additional guidance or someone to help assist you with the project."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "yaa, but this is holiday the supervisor does not take my calls"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Is there an impending deadline for the project you're worried about meeting? Maybe you could contact them through email or another form of outreach."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yes, after the holiday i most submitmy project"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "I can understand how stressful that must be, with the business of the holiday season on top of a looming deadline. Is there anyone else you can potentially contact to discuss changing the deadline? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "maybe my team mate will help me , i can communicate them to overcome this"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "That sounds like a wonderful idea! That's what a teammate is there for after all."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yaa , you are right"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I'm sure they'd love to help. Is there anything else on your mind today?"
+        }
+      ]
+    },
+    {
+      "sample_idx": 44,
+      "esconv_session_id": 44,
+      "situation": "My significant other has started to become distant and I fear our relationship is over.",
+      "trigger_quotes": [
+        "I feel like I just need to give up."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief of hopelessness by stating they feel like they need to give up, which suggests an all-or-nothing mindset and a sense of defeat in the face of their relationship struggles.",
+      "dialog": [
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Oh ok then it's not the first time this has happened. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I think you might be right, if you notice a pattern then it might continue to happen"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "2"
+          },
+          "content": "So you think this will continue to happen?\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "Most likely, she seems to need space to live for herself and is less willing to make sacrifices for you like you do for her"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "But even it won't happen again, you shouldn't have to live worrying that it will"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Have you spoken to her about how you feel?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "I dont even know how to start the conversation."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I feel betrayed and that I have wasted the last 3 years."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Wow I can only imagine. But I think it wasn't a waste if there were good times and you had room to grow. In relationships you have to prioritize your own happiness and I'm sure if you mentioned that you're frustrated and hurt maybe you can understand how she feels and why she made the decisions she made"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Its frustrating. I am sorry to complain. It seems silly with everything going on in the world."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Absolutely not! Individual frustrations are the best things to focus on before everything that happens in the world. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "What should I do? I feel like I just need to give up. I feel even worse because it is Christmas."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "I think it's important that you talk to her and get the answers you need. She might not even have been aware you feel this way and assumed you were happy to move for her. "
+        }
+      ]
+    },
+    {
+      "sample_idx": 45,
+      "esconv_session_id": 45,
+      "situation": "My best friend finally stopped showing up and stopped replying to my message.",
+      "trigger_quotes": [
+        "some people just don't want to do anything in their lives"
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief that implies a generalization about people, suggesting that 'some people' universally lack ambition or desire to improve their lives. This reflects an all-or-nothing thinking pattern, as it overlooks the complexities of individual circumstances and motivations.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "My friend stopped showing up when he said he would and I slowly stopped answering his calls and texts.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Life is a journey, and as we walk toward goals in our life, people either join us or bring us down.  Sometimes they only walk on the path we are on for a short time, sometimes longer. I have very few friends from High School, 2 to be exact. And only on FB, that was back in 1979 too. lol I'm old, but I have had to move on from destructive relationships, as you are doing now. It can be hard.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "This is so strange and wonderful connecting with a stranger about this! Wow. That's true. I kept trying to get my friends clean and to work on a hobby with me but drugs destroyed my two best friends and killed one of them.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Reflection of feelings"
+          },
+          "content": "Ouch! That sounds hard. I had friends like that too. I had to walk away. Has your friend asked you why you are ignoring him? The reason I ask this is because it's good to get some closure and let them know their behavior is destructive and you need space from that.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "No, he seemed to respond with pride. He deleted his facebook and never talked to me again after that.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I have learned in life that unhealthy people run from problems, healthy people stick in the mud with you and try to work out issues. "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Have you other friends?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "True. It's hard to connect with people after high school. The mindset of high school is make friends and the mindset of adulthood is survival.\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "No, not now. I am married though.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Yes, and as you grow and mature, your life goals change, not everyone will travel with you. Right now you are starting out, I'm in the retired stage, lol Now I'm interested in helping younger people. It's amazing how our priorities change. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yeah some people just don't want to do anything in their lives...\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I've basically figured out life only makes sense with God, and I don't worry about a thing now, very little upsets or angers me, it truly isn't worth it.  A LOT of people have no goals. I think this is actually a good time to examine the year, what you did right, what you didn't do so right, and where you want to go next year.  I think self reflection is good for us. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "This year has been a great test for us all and a call to faith.\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "A young neighbor just stopped by today, and he just moved out of his home, he is consumed with HOW do I pay the electric, HOW do I budget? How do I cook?  lol Like it is so interesting to see the journey in life. And my faith in Jesus Christ is really the most important thing. "
+        }
+      ]
+    },
+    {
+      "sample_idx": 47,
+      "esconv_session_id": 47,
+      "situation": "I let the best lady in the world get away from me.",
+      "trigger_quotes": [
+        "I guess I don't have good luck with women.",
+        "Maybe I need to go back to call girls, they are easier to deal with."
+      ],
+      "explanation": "The Seeker expresses an unrealistic belief about their luck with women, suggesting a pattern of failure in relationships ('I don't have good luck with women'), which can indicate a sense of hopelessness. Additionally, the thought that returning to call girls is a solution reflects an all-or-nothing mindset about relationships, implying that they believe they cannot have healthy connections with women outside of transactional encounters.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes, she left me for her supervisor at work."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Was this a recent event?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "Yes, five days ago."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Wow, that's really a hard thing to deal with isn't it?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "It sure is.  She told me this guy was sexually harassing her at work, then I find out she is leaving me for this guy."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Hmm, it sounds like she isn't being completely honest with you."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I've been left before too. It was one of the most painful experiences of my life."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I think she liked all of the attention he was giving her, and then she got turned on by it.  It is sick."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I can't believe anyone would ever leave you, you seem like such a nice person."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Maybe she did like the attention, but that is her own issue. It really doesn't have anything to do with you."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "Sometimes low self worth makes a person seek that kind of exterior validation from someone else. "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I should have followed and stalked her like this guy did, it seems to turn her on, she said she likes being watched.  I told her to see a therapist and she told me to leave our apartmnent."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "That doesn't sound healthy to you, does it?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes, I think she has low self esteem, but she let me do things with her, we would experiment sexually together, it was wild."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "But now I think she is not healthy and has mental issues."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "so, do you think that was the only way she could connect with you, through sex?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "I think so, she also liked to peg me.  It was very intense, I have never submitted like that to anyone."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "Is this your first serious relationship?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Yes, I guess I don't have good luck with women.  Maybe I need to go back to call girls, they are easier to deal with."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "It sounds like you enjoyed the sex a lot, but you also want an emotional connection to a woman."
+        }
+      ]
+    },
+    {
+      "sample_idx": 48,
+      "esconv_session_id": 48,
+      "situation": "not communicative all of a sudden, not wanting to speak over phone too",
+      "trigger_quotes": [
+        "I feel that I am not considered close enough to discuss problems or personal issues",
+        "I was trusted before, but not now",
+        "I feel lonely when friend says I am having issues"
+      ],
+      "explanation": "The Seeker expresses feelings of inadequacy and loneliness, suggesting an all-or-nothing belief about their worth in friendships and trust. They imply that their current situation reflects a permanent state of being untrusted or unvalued, which aligns with unrealistic beliefs about their relationships.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "good, feels better now"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "I am glad to hear it. Is there anything you'd like to talk about? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "about my experience with a friend who stopped communicating"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "Yes I hear you on that, that happens to me rather a lot of the time. Can you tell me more? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "usually we discuss issues or good news, anything day to day, suddenly i felt i am kept in the dark, while other friends in the group were aware of the problems faced by the friend"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "That does not sound good. Do you feel that it is someone specifically who is blocking you out? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "not blocking me out,but i felt that I am not considered close enough to discuss problems or personal issues"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Others"
+          },
+          "content": "Well, trust has to come with time... it cannot happen instantly. Perhaps you are being too hard on yourself? "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I was trusted before, but not now"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "Sometimes you just run up against people who are not trustworthy themselves. It's best to just ignore these toxic people! "
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "Please know that it is NOT your problem, it it's their's! "
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "5"
+          },
+          "content": "i understand that. but i feel lonely when friend says i am having issues, i dont want to discuss with anyone, but other friends get to know of the issue and tell me about it in a casual conversation. i feel when some other had got to know of it, why it could not have been discussed with me"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I do understand how it feels to be gossiped about - that has happened to me more than once and it is really painful. "
+        }
+      ]
+    },
+    {
+      "sample_idx": 49,
+      "esconv_session_id": 49,
+      "situation": "Looking for an online job. hard to find one. too competitive",
+      "trigger_quotes": [
+        "I don't think they will hire me as an English writer",
+        "I am from USA but I don't speak English perfectly"
+      ],
+      "explanation": "The Seeker expresses a belief that their English skills are inadequate for employment opportunities, which reflects an all-or-nothing thinking pattern. They assume that because they don't speak English perfectly, they will not be hired, which is an unrealistic belief.",
+      "dialog": [
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "amazon\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Providing Suggestions"
+          },
+          "content": "There are plenty of jobs for freelance writers. Consider freelance content writing."
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What do you want to do as a Work From Home, Option?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "2"
+          },
+          "content": "sure, I will. It has to be my native language though, i dont think they will hire me as an English writer\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Question"
+          },
+          "content": "What is your native language?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "anything but something really stressful\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "You are not originally from the USA?"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "3"
+          },
+          "content": "I am from USA but I don't speak English perfectly\n\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I wish I did but certainly writing is something I like\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Restatement or Paraphrasing"
+          },
+          "content": "Ok, you could be a tutor in your language for those who are native Engrish speakers."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "I could write a book and self publish\n"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "yes! I thought about it, I should do it\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I believe that it could be a new career option."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "yes\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Affirmation and Reassurance"
+          },
+          "content": "I believe that you can succeed for sure."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "thanks, I will try to find some providers\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Information"
+          },
+          "content": "The key to success is having a positive attitude and believing in yourself."
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {
+            "feedback": "4"
+          },
+          "content": "or I could start doing that on my own"
+        },
+        {
+          "speaker": "seeker",
+          "annotation": {},
+          "content": "Awesome. I will keep in mind and I agree with you\n"
+        },
+        {
+          "speaker": "supporter",
+          "annotation": {
+            "strategy": "Self-disclosure"
+          },
+          "content": "I did the self-publishing route a long time ago. I gave me conifdence to succeed."
+        }
+      ]
+    }
+  ]
+}

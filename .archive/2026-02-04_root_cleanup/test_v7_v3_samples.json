@@ -1,0 +1,82 @@
+[
+  {
+    "session_id": "v3_0164",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on a decision they need to make, but the Supporter's response only provided general empathy without addressing the specific dilemma.",
+    "evidence": "That sounds tough. I can see why you feel conflicted."
+  },
+  {
+    "session_id": "v3_0028",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on a decision they need to make, but the last Supporter response only provided general empathy without addressing the specific decision-making request.",
+    "evidence": "That sounds heartbreaking. I can see why you feel so overwhelmed."
+  },
+  {
+    "session_id": "v3_0006",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested help in making a decision about prioritizing their project or studying for exams, but the last Supporter response only provided general empathy without addressing the decision-making request.",
+    "evidence": "I can see why you feel stressed about making the right choice."
+  },
+  {
+    "session_id": "v3_0190",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on whether to set up a virtual game night or wait to see friends in person, but the Supporter's response only provided general empathy without addressing the decision-making request.",
+    "evidence": "That sounds overwhelming. I can see why you feel stressed."
+  },
+  {
+    "session_id": "v3_0070",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The last Supporter response only provided general empathy without addressing the Seeker's explicit request for guidance on a decision-making situation regarding their living situation and job search.",
+    "evidence": "That sounds overwhelming. I can see why you feel stressed."
+  },
+  {
+    "session_id": "v3_0062",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on a decision they need to make, but the last Supporter response only provided generic empathy without addressing the specific dilemma.",
+    "evidence": "That sounds really tough. I can see why you feel conflicted."
+  },
+  {
+    "session_id": "v3_0057",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on how to study effectively before the exams, but the last Supporter response only provided generic empathy without addressing the specific decision-making request.",
+    "evidence": "That sounds overwhelming. I can see why you feel anxious."
+  },
+  {
+    "session_id": "v3_0035",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on whether to send a message or meet up in person, but the last Supporter response only provided general empathy without addressing the specific decision-making request.",
+    "evidence": "That sounds frustrating. I can see why you feel stressed."
+  },
+  {
+    "session_id": "v3_0189",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on whether to talk to her friend directly or avoid her, but the Supporter's response only provided generic empathy without addressing the decision-making request.",
+    "evidence": "That sounds tough. I can see why you feel stressed."
+  },
+  {
+    "session_id": "v3_0026",
+    "ground_truth": "V3",
+    "prediction": "V3",
+    "is_correct": true,
+    "reason": "The Seeker explicitly requested guidance on a decision they need to make regarding their living situation, but the last Supporter response only provided general empathy without addressing the specific decision-making request.",
+    "evidence": "That sounds overwhelming. I can see why you feel anxious."
+  }
+]

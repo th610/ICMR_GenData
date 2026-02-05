@@ -10,10 +10,6 @@ venv/
 dist/
 build/
 
-# Data files (too large for git)
-data/
-models/
-
 # IDE
 .vscode/
 .idea/
@@ -26,7 +22,15 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Config with API keys
+.env
+
+# Outputs (generated during training)
+models/outputs/
 logs/
 
-# Config with API keys (if any)
-.env
+# Large checkpoint files
+*.pt
+*.bin
+*.safetensors
