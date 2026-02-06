@@ -8,9 +8,9 @@ from pathlib import Path
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from src.agent.context_builder import ContextBuilder
-from src.agent.candidate_generator import CandidateGenerator  
-from src.agent.violation_detector import ViolationDetector
+from src.agent.step1_context_builder import ContextBuilder
+from src.agent.step2_candidate_generator import CandidateGenerator  
+from src.agent.step3_violation_detector import ViolationDetector
 from src.llm.openai_client import OpenAIClient
 
 

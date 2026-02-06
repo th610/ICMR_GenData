@@ -15,20 +15,31 @@ with open(input_path, 'r', encoding='utf-8') as f:
 
 print(f"Loaded {len(data['samples'])} samples")
 
-# Turn 4 제거 (prefix_dialog는 Turn 3까지만, generated_dialog는 Turn 4)
+# generated_dialog를 prefix_dialog에 합친 후 마지막 턴 제거
 for sample in data['samples']:
-    # prefix_dialog에서 마지막 supporter turn (Turn 4) 제거
-    # 구조: seeker, supporter, supporter, seeker, supporter, supporter, seeker, seeker, supporter, supporter, supporter, supporter (Turn 4)
-    # Turn 3까지만 유지: 처음 7개 턴 (seeker 3개 + supporter 3개 + seeker 1개)
-    sample['prefix_dialog'] = sample['prefix_dialog'][:7]
+    # prefix_dialog + generated_dialog 합치기
+    full_dialog = sample['prefix_dialog'].copy()
+    if 'generated_dialog' in sample:
+        for turn in sample['generated_dialog']:
+            full_dialog.append({
+                'speaker': turn['speaker'],
+                'content': turn['content']
+            })
     
-    # generated_dialog도 백업 (나중에 비교용)
-    if 'generated_dialog' in sample and len(sample['generated_dialog']) > 0:
-        sample['gold_turn4'] = sample['generated_dialog'][0]['content']
+    # 마지막 턴을 gold_turn4로 백업 (에이전트가 생성해야 할 target)
+    if len(full_dialog) > 0:
+        last_turn = full_dialog[-1]
+        sample['gold_turn4'] = last_turn['content']
+        sample['gold_speaker'] = last_turn['speaker']
+        
+        # 마지막 턴 제거 (에이전트 입력용)
+        sample['prefix_dialog'] = full_dialog[:-1]
+    
+    # label 백업
     if 'label' in sample:
         sample['gold_label'] = sample['label']
 
-print(f"Processed: prefix_dialog limited to 7 turns (Turn 1-3)")
+print(f"Processed: Merged prefix + generated, removed last turn")
 
 # 저장
 with open(output_path, 'w', encoding='utf-8') as f:
@@ -37,8 +48,9 @@ with open(output_path, 'w', encoding='utf-8') as f:
 print(f"Saved to: {output_path}")
 print(f"\nSample structure:")
 sample = data['samples'][0]
-print(f"  - prefix_dialog: {len(sample['prefix_dialog'])} turns")
+print(f"  - prefix_dialog: {len(sample['prefix_dialog'])} turns (merged, last turn removed)")
+print(f"  - Last turn speaker: {sample['prefix_dialog'][-1]['speaker']}")
 if 'gold_turn4' in sample:
-    print(f"  - gold_turn4: {sample['gold_turn4'][:50]}...")
+    print(f"  - gold_turn4 ({sample['gold_speaker']}): {sample['gold_turn4'][:60]}...")
 if 'gold_label' in sample:
     print(f"  - gold_label: {sample['gold_label']}")

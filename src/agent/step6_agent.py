@@ -14,11 +14,11 @@ Priority: V5 > V4 > V2 > V1 > V3 > Normal
 Max retry: 1-2회
 """
 from typing import List, Dict, Any, Optional
-from .context_builder import ContextBuilder
-from .candidate_generator import CandidateGenerator
-from .violation_detector import ViolationDetector
-from .controller import ControllerV2
-from .logger import AgentLogger
+from .step1_context_builder import ContextBuilder
+from .step2_candidate_generator import CandidateGenerator
+from .step3_violation_detector import ViolationDetector
+from .step4_controller import ControllerV2
+from .step5_logger import AgentLogger
 
 
 class DialogueAgent:

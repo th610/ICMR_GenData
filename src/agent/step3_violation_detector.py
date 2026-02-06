@@ -86,7 +86,7 @@ class ViolationDetector:
         if model_file.exists():
             checkpoint = torch.load(model_file, map_location='cpu')
             self.model.load_state_dict(checkpoint['model_state_dict'], strict=False)
-            print(f"✅ Model loaded from {model_file}")
+            print(f"[OK] Model loaded from {model_file}")
         else:
             raise FileNotFoundError(f"Model file not found: {model_file}")
         
@@ -130,8 +130,41 @@ class ViolationDetector:
                           context: Dict[str, Any], 
                           candidate: Dict[str, Any]) -> Dict[str, Any]:
         """학습된 모델로 위반 감지"""
-        # 입력 텍스트 구성 (전처리 형식과 동일)
-        input_text = self._format_input(context, candidate["text"])
+        # 학습 시와 동일: RESPONSE를 무조건 포함하고, CONTEXT를 역순 truncate
+        response_text = f"\n[RESPONSE]\n{candidate['text']}"
+        
+        # RESPONSE 토큰화 (특수 토큰 제외하고 길이 측정)
+        response_tokens = self.tokenizer.encode(response_text, add_special_tokens=False)
+        response_length = len(response_tokens)
+        
+        # 남은 토큰 공간 (CLS, SEP 등 특수 토큰 고려)
+        remaining_tokens = 512 - response_length - 3  # 3 for [CLS], [SEP], safety margin
+        
+        # CONTEXT를 역순으로 truncate
+        context_parts = []
+        if context.get("state_summary"):
+            context_parts.append(f"[SUMMARY]\n{context['state_summary']}")
+        
+        context_parts.append("\n[CONTEXT]")
+        
+        # 턴을 역순으로 추가하면서 토큰 수 체크
+        turns = list(reversed(context["recent_turns"]))
+        selected_turns = []
+        current_tokens = 0
+        
+        for turn in turns:
+            turn_text = f"\n{turn['speaker']}: {turn['text']}"
+            turn_tokens = len(self.tokenizer.encode(turn_text, add_special_tokens=False))
+            
+            if current_tokens + turn_tokens <= remaining_tokens:
+                selected_turns.insert(0, turn_text)  # 앞에 삽입 (원래 순서 유지)
+                current_tokens += turn_tokens
+            else:
+                break
+        
+        # 최종 입력 구성
+        context_text = "".join(context_parts) + "".join(selected_turns)
+        input_text = context_text + response_text
         
         # 토큰화
         inputs = self.tokenizer(
@@ -149,6 +182,12 @@ class ViolationDetector:
             probs = torch.softmax(logits, dim=-1)[0]
             pred_id = torch.argmax(probs).item()
             confidence = probs[pred_id].item()
+            
+            # 전체 확률 분포
+            all_probs = {
+                self.id2label[i]: probs[i].item()
+                for i in range(len(self.id2label))
+            }
         
         # 결과 구성
         predicted_label = self.id2label[pred_id]
@@ -163,6 +202,7 @@ class ViolationDetector:
             "violations": violations,
             "top_violation": predicted_label,
             "confidence": confidence,
+            "all_probabilities": all_probs,  # 추가: 전체 확률 분포
             "evidence": f"Model prediction (confidence: {confidence:.2%})",
             "severity": self.SEVERITY_RANK[predicted_label]
         }

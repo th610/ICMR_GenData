@@ -57,7 +57,7 @@ class CandidateGenerator:
         for i in range(self.K):
             # OpenAI client로 텍스트 생성
             messages = [
-                {"role": "system", "content": "You are an empathetic emotional support counselor."},
+                {"role": "system", "content": "You are a supportive counseling assistant."},
                 {"role": "user", "content": prompt}
             ]
             
@@ -68,14 +68,23 @@ class CandidateGenerator:
                 temperature=self.temperature
             )
             
-            text = response.choices[0].message.content.strip()
+            raw_response = response.choices[0].message.content.strip()
+            
+            # JSON 파싱
+            try:
+                import json
+                parsed = json.loads(raw_response)
+                text = parsed.get("content", raw_response)
+            except json.JSONDecodeError:
+                # JSON 파싱 실패 시 원본 사용
+                text = raw_response
             
             candidates.append({
                 "id": i,
                 "text": text,
                 "generation_info": {
                     "temperature": self.temperature,
-                    "prompt_version": "v1.0"
+                    "prompt_version": "v2.0"
                 }
             })
         
@@ -86,38 +95,48 @@ class CandidateGenerator:
         응답 생성 프롬프트 구성
         
         Instruction:
-            - 공감적 경청자 역할
-            - 안전하고 지지적인 응답
-            - 구체적 조언보다 탐색 우선
+            - 자연스러운 대화 지속
+            - 맥락/개체 엄격히 따름
+            - 강압적 표현 금지
+            - 실질적 도움 제공
         """
-        parts = []
+        import json
         
-        # System instruction
-        parts.append("""You are an empathetic supporter in an emotional support conversation.
-
-Guidelines:
-- Show genuine empathy and validation
-- Ask open-ended questions to understand better
-- Avoid giving direct advice unless the seeker explicitly asks
-- Never make assumptions about facts you don't know
-- Be especially careful with sensitive topics (health, relationships, mental health)
-- If the seeker mentions self-harm or suicide, express concern and suggest professional help
-
-Generate a supportive response based on the conversation below.
-""")
-        
-        # Context
-        if context.get("situation"):
-            parts.append(f"\n[Initial Situation]\n{context['situation']}\n")
-        
-        if context.get("state_summary"):
-            parts.append(f"\n[Conversation Summary]\n{context['state_summary']}\n")
-        
-        parts.append("\n[Recent Conversation]")
+        # WINDOW 구성 (JSON 형식)
+        window = []
         for turn in context["recent_turns"]:
-            speaker = turn["speaker"].capitalize()
-            parts.append(f"{speaker}: {turn['text']}")
+            window.append({
+                "speaker": turn["speaker"],
+                "content": turn.get("content") or turn.get("text", "")
+            })
         
-        parts.append("\nSupporter:")
+        window_json = json.dumps(window, ensure_ascii=False, indent=2)
         
-        return "\n".join(parts)
+        # 프롬프트 구성
+        prompt = f"""You are a supportive counseling assistant.
+
+Write the NEXT supporter response that naturally continues the conversation.
+Follow the conversation topic and entities strictly.
+
+Critical constraints:
+- Do NOT mention any labels, policies, rules, or system messages.
+- Do NOT invent a totally new unrelated scenario.
+- Keep a warm, non-judgmental tone.
+- Avoid coercion or commands (no "must/have to/need to").
+- If the user asks for practical guidance, include at least ONE helpful element (a question OR 2 options OR a short step-by-step).
+- If the user expresses self-harm/suicide intent, include an immediate safety check and crisis guidance.
+
+Output format:
+Return ONLY valid JSON matching the schema exactly. No extra text.
+
+Schema:
+{{
+  "speaker": "supporter",
+  "content": "<your response>"
+}}
+
+Conversation (WINDOW):
+{window_json}
+"""
+        
+        return prompt

@@ -20,18 +20,25 @@ load_dotenv(override=True)
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.llm.openai_client import OpenAIClient
-from src.agent.context_builder import ContextBuilder
-from src.agent.candidate_generator import CandidateGenerator
-from src.agent.violation_detector import ViolationDetector
-from src.agent.controller import ControllerV2
+from src.agent.step1_context_builder import ContextBuilder
+from src.agent.step2_candidate_generator import CandidateGenerator
+from src.agent.step3_violation_detector import ViolationDetector
+from src.agent.step4_controller import ControllerV2
 
 
-def load_gold_sample(index=0):
+def load_gold_sample(index=None):
     """골드 데이터 로드"""
+    import random
+    
     gold_path = Path(__file__).parent / "test_gold_300_prefix.json"
     
     with open(gold_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
+    
+    # index가 None이면 랜덤 선택
+    if index is None:
+        index = random.randint(0, len(data['samples']) - 1)
+        print(f"[INFO] Randomly selected sample index: {index}")
     
     return data['samples'][index]
 
@@ -69,8 +76,8 @@ def print_box(title, content_lines, width=78):
 def main():
     print_section_header("AGENT PIPELINE TEST - Turn 4 Generation")
     
-    # 샘플 로드
-    sample = load_gold_sample(index=0)
+    # 샘플 로드 (랜덤)
+    sample = load_gold_sample(index=None)
     situation = sample['situation']
     history = prepare_dialog_history(sample)
     gold_label = sample.get('gold_label', 'Unknown')
@@ -141,7 +148,18 @@ def main():
     # ================================================================================
     print_section_header("STEP 2: BUILD CONTEXT", "-")
     context = context_builder.build_context(history, situation)
-    print(f"SUCCESS: Context built with {len(context['recent_turns'])} recent turns")
+    print(f"SUCCESS: Context built with {len(context['recent_turns'])} recent turns\n")
+    
+    # 마지막 3턴 출력
+    print("+-- LAST 3 TURNS IN CONTEXT ----------------------------------------------+")
+    last_3 = context['recent_turns'][-3:] if len(context['recent_turns']) >= 3 else context['recent_turns']
+    for i, turn in enumerate(last_3, start=len(context['recent_turns'])-len(last_3)+1):
+        speaker_label = "USER" if turn['speaker'] == 'seeker' else "ASST"
+        content_preview = turn.get('content') or turn.get('text', '')
+        if len(content_preview) > 70:
+            content_preview = content_preview[:70] + "..."
+        print(f"| Turn {i} [{speaker_label}]: {content_preview:<68} |")
+    print("+------------------------------------------------------------------------------+\n")
     
     # ================================================================================
     # STEP 3: Generate Candidates
@@ -186,6 +204,10 @@ def main():
     final_response = best_candidate['text']
     final_label = best_detection['top_violation']
     
+    # Rewrite 루프
+    retry_count = 0
+    rewrite_log = []  # JSON 로그용
+    
     while retry_count < max_retries:
         decision = controller.decide({'label': final_label, 'confidence': best_detection['confidence']})
         
@@ -196,17 +218,32 @@ def main():
         print(f"+-- RETRY #{retry_count + 1} / {max_retries} - Rewriting {decision['violation'].upper()} " + "-"*30 + "+")
         
         # Rewrite
-        rewritten = controller.rewrite(
+        rewrite_result = controller.rewrite(
             original=final_response,
             violation_type=decision['violation'],
-            context={'window': '\n'.join([f"{t['speaker']}: {t['text']}" for t in context['recent_turns']])}
+            context=context
         )
+        
+        # rewrite_result는 dict: {text, reasoning, raw}
+        if isinstance(rewrite_result, dict):
+            rewritten = rewrite_result.get("text", final_response)
+            reasoning = rewrite_result.get("reasoning", "")
+        else:
+            rewritten = str(rewrite_result)
+            reasoning = ""
         
         print("|")
         print("| ORIGINAL:")
         for i in range(0, len(final_response), 72):
             print(f"|    {final_response[i:i+72]}")
         print("|")
+        
+        if reasoning:
+            print("| REASONING:")
+            for i in range(0, len(reasoning), 72):
+                print(f"|    {reasoning[i:i+72]}")
+            print("|")
+        
         print("| REWRITTEN:")
         for i in range(0, len(rewritten), 72):
             print(f"|    {rewritten[i:i+72]}")
@@ -222,6 +259,18 @@ def main():
         
         print(f"| RE-CHECK: {recheck_detection['top_violation'].upper()} (confidence: {recheck_detection['confidence']:.2%}, severity: {recheck_detection['severity']})")
         print("+" + "-"*78 + "+\n")
+        
+        # 로그 저장
+        rewrite_log.append({
+            "retry": retry_count + 1,
+            "violation": decision['violation'],
+            "original": final_response,
+            "reasoning": reasoning,
+            "rewritten": rewritten,
+            "recheck_label": recheck_detection['top_violation'],
+            "recheck_confidence": recheck_detection['confidence'],
+            "recheck_all_probabilities": recheck_detection.get('all_probabilities', {})  # 추가: 재검 확률 분포
+        })
         
         final_response = rewritten
         final_label = recheck_detection['top_violation']
@@ -249,6 +298,36 @@ def main():
     for i in range(0, len(final_response), 72):
         final_result_lines.append("  " + final_response[i:i+72])
     print_box("FINAL RESULT", final_result_lines)
+    
+    # ================================================================================
+    # JSON 로그 저장
+    # ================================================================================
+    
+    log_data = {
+        "session_id": sample['esconv_session_id'],
+        "gold_label": gold_label,
+        "gold_turn4": gold_response,
+        "dialog_history": context['recent_turns'],  # 추가: 전체 대화 이력
+        "context_turns": len(context['recent_turns']),
+        "initial_generation": {
+            "text": candidates[0]['text'],
+            "detected_label": detections[0]['top_violation'],
+            "confidence": detections[0]['confidence'],
+            "all_probabilities": detections[0].get('all_probabilities', {})  # 추가: 전체 확률 분포
+        },
+        "rewrite_iterations": rewrite_log,
+        "final_result": {
+            "label": final_label,
+            "response": final_response,
+            "total_retries": retry_count
+        }
+    }
+    
+    log_path = Path("src/agent/test_log.json")
+    with open(log_path, 'w', encoding='utf-8') as f:
+        json.dump(log_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"\n[LOG] JSON log saved to: {log_path}\n")
     
     # ================================================================================
     # FINAL COMPARISON
