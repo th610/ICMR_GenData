@@ -12,19 +12,18 @@ Components:
     - DialogueAgent: 전체 파이프라인 통합
 """
 
-from .context_builder import ContextBuilder
-from .candidate_generator import CandidateGenerator
-from .violation_detector import ViolationDetector
-from .controller import Controller, InterventionPolicy
-from .agent import DialogueAgent
-from .logger import AgentLogger
+from .step1_context_builder import ContextBuilder
+from .step2_candidate_generator import CandidateGenerator
+from .step3_violation_detector import ViolationDetector
+from .step4_controller import ControllerV2
+from .step5_logger import AgentLogger
+from .step6_agent import DialogueAgent
 
 __all__ = [
     'ContextBuilder',
     'CandidateGenerator',
     'ViolationDetector',
-    'Controller',
-    'InterventionPolicy',
+    'ControllerV2',
     'DialogueAgent',
     'AgentLogger',
 ]

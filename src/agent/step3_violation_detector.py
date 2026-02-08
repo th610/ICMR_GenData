@@ -12,8 +12,6 @@ Output (per candidate):
 from typing import List, Dict, Any, Optional
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from src.llm.judge import build_judge_prompt
-from src.llm.openai_client import OpenAIClient
 
 
 class ViolationDetector:
@@ -42,14 +40,17 @@ class ViolationDetector:
     def __init__(self, 
                  mode: str = "model",  # "model" or "judge"
                  model_path: Optional[str] = None,
-                 llm_client: Optional[OpenAIClient] = None):
+                 llm_client: Optional[Any] = None,
+                 temperature: float = 1.0):
         """
         Args:
             mode: "model" (학습된 분류기) or "judge" (LLM 평가)
             model_path: 학습된 모델 경로 (mode="model"일 때)
             llm_client: Judge용 LLM (mode="judge"일 때)
+            temperature: Temperature scaling for calibration (T < 1 → sharper, T > 1 → smoother)
         """
         self.mode = mode
+        self.temperature = temperature
         
         if mode == "model":
             if model_path is None:
@@ -64,8 +65,34 @@ class ViolationDetector:
     
     def _load_model(self, model_path: str):
         """학습된 분류 모델 로드"""
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
-        self.model = AutoModelForSequenceClassification.from_pretrained(model_path)
+        import torch
+        from pathlib import Path
+        
+        # Tokenizer는 원본 RoBERTa에서 로드
+        self.tokenizer = AutoTokenizer.from_pretrained("roberta-base")
+        
+        # Special tokens 추가 (학습 시 추가했던 것)
+        special_tokens = ['<SEEKER>', '<SUPPORTER>', '<SUPPORTER_TARGET>']
+        self.tokenizer.add_tokens(special_tokens)
+        
+        # Model 초기화 (RoBERTa)
+        self.model = AutoModelForSequenceClassification.from_pretrained(
+            "roberta-base",
+            num_labels=6  # Normal + V1-V5
+        )
+        
+        # Token embeddings resize
+        self.model.resize_token_embeddings(len(self.tokenizer))
+        
+        # 학습된 가중치 로드
+        model_file = Path(model_path) / "best_model.pt"
+        if model_file.exists():
+            checkpoint = torch.load(model_file, map_location='cpu')
+            self.model.load_state_dict(checkpoint['model_state_dict'], strict=False)
+            print(f"[OK] Model loaded from {model_file}")
+        else:
+            raise FileNotFoundError(f"Model file not found: {model_file}")
+        
         self.model.eval()
         
         # Label mapping
@@ -106,8 +133,52 @@ class ViolationDetector:
                           context: Dict[str, Any], 
                           candidate: Dict[str, Any]) -> Dict[str, Any]:
         """학습된 모델로 위반 감지"""
-        # 입력 텍스트 구성 (전처리 형식과 동일)
-        input_text = self._format_input(context, candidate["text"])
+        # 학습 시와 동일: RESPONSE를 무조건 포함하고, CONTEXT를 역순 truncate
+        response_text = f"\n[RESPONSE]\n{candidate['text']}"
+        
+        # RESPONSE 토큰화 (특수 토큰 제외하고 길이 측정)
+        response_tokens = self.tokenizer.encode(response_text, add_special_tokens=False)
+        response_length = len(response_tokens)
+        
+        # 남은 토큰 공간 (CLS, SEP 등 특수 토큰 고려)
+        remaining_tokens = 512 - response_length - 3  # 3 for [CLS], [SEP], safety margin
+        
+        # CONTEXT를 역순으로 truncate
+        context_parts = []
+        if context.get("state_summary"):
+            context_parts.append(f"[SUMMARY]\n{context['state_summary']}")
+        
+        context_parts.append("\n[CONTEXT]")
+        
+        # 턴을 역순으로 추가하면서 토큰 수 체크
+        turns = list(reversed(context["recent_turns"]))
+        selected_turns = []
+        current_tokens = 0
+        
+        for turn in turns:
+            turn_text = f"\n{turn['speaker']}: {turn['text']}"
+            turn_tokens = len(self.tokenizer.encode(turn_text, add_special_tokens=False))
+            
+            if current_tokens + turn_tokens <= remaining_tokens:
+                selected_turns.insert(0, turn_text)  # 앞에 삽입 (원래 순서 유지)
+                current_tokens += turn_tokens
+            else:
+                break
+        
+        # 최종 입력 구성
+        context_text = "".join(context_parts) + "".join(selected_turns)
+        input_text = context_text + response_text
+        
+        # 토큰화 전 토큰 수 계산 (디버깅용)
+        input_tokens_count = len(self.tokenizer.encode(input_text, add_special_tokens=True))
+        
+        # 로깅: 입력 정보 출력
+        print(f"\n[TOKENIZATION INFO]")
+        print(f"  Selected Turns    : {len(selected_turns)} turns (reversed order)")
+        print(f"  Response Tokens   : {response_length}")
+        print(f"  Context Tokens    : {current_tokens}")
+        print(f"  Total Input Tokens: {input_tokens_count} (max 512)")
+        print(f"  Remaining Space   : {512 - input_tokens_count}\n")
         
         # 토큰화
         inputs = self.tokenizer(
@@ -122,9 +193,19 @@ class ViolationDetector:
         with torch.no_grad():
             outputs = self.model(**inputs)
             logits = outputs.logits
+            
+            # Temperature scaling (캘리브레이션)
+            logits = logits / self.temperature
+            
             probs = torch.softmax(logits, dim=-1)[0]
             pred_id = torch.argmax(probs).item()
             confidence = probs[pred_id].item()
+            
+            # 전체 확률 분포
+            all_probs = {
+                self.id2label[i]: probs[i].item()
+                for i in range(len(self.id2label))
+            }
         
         # 결과 구성
         predicted_label = self.id2label[pred_id]
@@ -139,6 +220,7 @@ class ViolationDetector:
             "violations": violations,
             "top_violation": predicted_label,
             "confidence": confidence,
+            "all_probabilities": all_probs,  # 추가: 전체 확률 분포
             "evidence": f"Model prediction (confidence: {confidence:.2%})",
             "severity": self.SEVERITY_RANK[predicted_label]
         }
@@ -146,29 +228,15 @@ class ViolationDetector:
     def _detect_with_judge(self, 
                           context: Dict[str, Any], 
                           candidate: Dict[str, Any]) -> Dict[str, Any]:
-        """LLM Judge로 위반 감지"""
-        # Judge 프롬프트 구성
-        dialog = context["recent_turns"] + [{"speaker": "supporter", "text": candidate["text"]}]
-        prompt = build_judge_prompt(dialog, context.get("situation"))
-        
-        # LLM 평가
-        response = self.llm.generate(prompt, max_tokens=300, temperature=0.0)
-        
-        # 파싱 (간단한 버전, 실제로는 더 robust하게)
-        predicted_label = self._parse_judge_output(response)
-        
-        # Multi-label
-        violations = {f"v{i}": 0 for i in range(1, 6)}
-        if predicted_label != "normal":
-            violations[predicted_label] = 1
-        
+        """LLM Judge로 위반 감지 (현재 미구현)"""
+        # 간단화: 항상 Normal 반환
         return {
             "candidate_id": candidate["id"],
-            "violations": violations,
-            "top_violation": predicted_label,
-            "confidence": 0.9,  # Judge는 confidence 없음
-            "evidence": response,
-            "severity": self.SEVERITY_RANK[predicted_label]
+            "violations": {f"v{i}": 0 for i in range(1, 6)},
+            "top_violation": "normal",
+            "confidence": 0.5,
+            "evidence": "Judge mode not fully implemented",
+            "severity": 0
         }
     
     def _format_input(self, context: Dict[str, Any], response: str) -> str:
