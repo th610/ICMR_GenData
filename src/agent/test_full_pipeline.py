@@ -73,11 +73,20 @@ def print_box(title, content_lines, width=78):
     print("+" + "-"*width + "+")
 
 
-def main():
-    print_section_header("AGENT PIPELINE TEST - Turn 4 Generation")
+def test_single_session(session_index=0):
+    """
+    단일 세션 테스트 (확장 가능)
     
-    # 샘플 로드 (랜덤)
-    sample = load_gold_sample(index=None)
+    Args:
+        session_index: 테스트할 샘플 인덱스 (0부터 시작)
+        
+    Returns:
+        dict: 테스트 결과 로그 데이터
+    """
+    print_section_header(f"AGENT PIPELINE TEST - Session #{session_index}")
+    
+    # 샘플 로드
+    sample = load_gold_sample(index=session_index)
     situation = sample['situation']
     history = prepare_dialog_history(sample)
     gold_label = sample.get('gold_label', 'Unknown')
@@ -133,7 +142,8 @@ def main():
     
     detector = ViolationDetector(
         mode="model",
-        model_path=str(model_path)
+        model_path=str(model_path),
+        temperature=1.0  # TODO: Fit 후 최적 T로 변경
     )
     
     controller = ControllerV2(llm_client=client)
@@ -192,11 +202,15 @@ def main():
     print_section_header("STEP 5: CONTROLLER & REWRITE LOOP", "-")
     
     # 가장 안전한 후보 선택
+    # NOTE: 현재는 num_candidates=1이라 의미 없음
+    # 여러 후보 생성 시(예: temperature sampling으로 3개 생성)
+    # severity가 낮은(=안전한) 후보를 우선 선택하기 위한 로직
     best_idx = min(range(len(detections)), key=lambda i: detections[i]['severity'])
     best_candidate = candidates[best_idx]
     best_detection = detections[best_idx]
     
-    print(f"\nInitial Selection: Candidate #{best_idx+1} -> {best_detection['top_violation'].upper()}\n")
+    print(f"\nInitial Selection: Candidate #{best_idx+1} -> {best_detection['top_violation'].upper()}")
+    print(f"(Note: Currently only 1 candidate, severity check is for multi-candidate mode)\n")
     
     # Rewrite loop
     max_retries = 2
@@ -211,10 +225,12 @@ def main():
     while retry_count < max_retries:
         decision = controller.decide({'label': final_label, 'confidence': best_detection['confidence']})
         
+        # Accept이면 rewrite 없이 종료 (로그에 추가하지 않음)
         if decision['type'] == 'accept':
             print(f"DECISION: ACCEPT (Response is NORMAL)\n")
             break
         
+        # Rewrite가 필요한 경우만 아래 진행
         print(f"+-- RETRY #{retry_count + 1} / {max_retries} - Rewriting {decision['violation'].upper()} " + "-"*30 + "+")
         
         # Rewrite
@@ -354,7 +370,207 @@ def main():
     print("\n" + "="*80)
     print("Test Complete!")
     print("="*80)
+    
+    return log_data
+
+
+def main():
+    """단일 세션 테스트 (인덱스 0)"""
+    test_single_session(session_index=0)
+
+
+def batch_test(num_samples=5, random_seed=42):
+    """여러 샘플 배치 테스트"""
+    import random
+    random.seed(random_seed)
+    
+    # Load all samples
+    test_path = Path("src/agent/test_gold_300_prefix.json")
+    with open(test_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        all_samples = data['samples']  # Extract samples array
+    
+    total_samples = len(all_samples)
+    print(f"\n{'='*80}")
+    print(f"BATCH TEST: {num_samples} random samples from {total_samples} total")
+    print(f"{'='*80}\n")
+    
+    # Select random indices
+    indices = random.sample(range(total_samples), min(num_samples, total_samples))
+    
+    results_summary = []
+    log_dir = Path("src/agent/batch_logs")
+    log_dir.mkdir(exist_ok=True)
+    
+    for i, idx in enumerate(indices, 1):
+        print(f"\n{'#'*80}")
+        print(f"# TEST {i}/{num_samples}: Sample Index {idx}")
+        print(f"{'#'*80}\n")
+        
+        # Run test
+        sample = all_samples[idx]
+        session_id = sample['esconv_session_id']  # Updated key
+        gold_label = sample['primary_label']  # Updated key
+        
+        # Initialize components (same as main())
+        llm_client = OpenAIClient(model="gpt-4o-mini")
+        context_builder = ContextBuilder(llm_client=llm_client, max_tokens=512)
+        candidate_generator = CandidateGenerator(llm_client)
+        violation_detector = ViolationDetector(model_name="th610/empathetic-roberta-base-6class")
+        controller = ControllerV2(
+            candidate_generator=candidate_generator,
+            violation_detector=violation_detector
+        )
+        
+        # Build context
+        history = sample['prefix_dialog']  # Updated key
+        context = context_builder.build(history)
+        
+        # Initial generation
+        print_section_header("INITIAL GENERATION")
+        candidate = candidate_generator.generate(context, num_candidates=1)[0]
+        detection = violation_detector.detect(context, candidate)
+        
+        initial_label = detection['label']
+        initial_conf = detection['confidence']
+        
+        print(f"\n[CANDIDATE] {candidate['text'][:100]}...")
+        print(f"\n[DETECTION] Label: {initial_label} | Confidence: {initial_conf:.2%}")
+        print(f"[ALL PROBS] {format_probabilities(detection['all_probabilities'])}")
+        
+        # Decision & retries
+        decision = controller.decide(detection)
+        retry_count = 0
+        rewrite_iterations = []
+        
+        if decision['type'] == 'rewrite':
+            print(f"\n[DECISION] REWRITE needed for {decision['violation']}")
+            
+            for retry_num in range(1, 3):
+                print(f"\n{'─'*80}")
+                print(f"RETRY {retry_num}")
+                print(f"{'─'*80}")
+                
+                rewrite_result = controller.rewrite(
+                    context=context,
+                    original_response=candidate['text'],
+                    violation_type=decision['violation']
+                )
+                
+                print(f"\n[REASONING] {rewrite_result['reasoning'][:150]}...")
+                print(f"\n[REWRITTEN] {rewrite_result['response'][:100]}...")
+                
+                recheck = violation_detector.detect(context, {'text': rewrite_result['response']})
+                print(f"\n[RE-CHECK] Label: {recheck['label']} | Confidence: {recheck['confidence']:.2%}")
+                print(f"[ALL PROBS] {format_probabilities(recheck['all_probabilities'])}")
+                
+                rewrite_iterations.append({
+                    'retry': retry_num,
+                    'violation': decision['violation'],
+                    'original': candidate['text'],
+                    'reasoning': rewrite_result['reasoning'],
+                    'rewritten': rewrite_result['response'],
+                    'recheck_label': recheck['label'],
+                    'recheck_confidence': float(recheck['confidence']),
+                    'recheck_all_probabilities': {k: float(v) for k, v in recheck['all_probabilities'].items()}
+                })
+                
+                retry_count += 1
+                candidate['text'] = rewrite_result['response']
+                
+                new_decision = controller.decide(recheck)
+                if new_decision['type'] == 'accept':
+                    detection = recheck
+                    print(f"\n[SUCCESS] Violation resolved after {retry_num} retry(s)")
+                    break
+                elif retry_num == 2:
+                    print(f"\n[FAIL-SAFE] Max retries reached")
+                    detection = recheck
+                    break
+                else:
+                    decision = new_decision
+        else:
+            print(f"\n[DECISION] ACCEPT (confidence: {initial_conf:.2%})")
+        
+        final_label = detection['label']
+        final_response = candidate['text']
+        
+        # Save individual log
+        log_data = {
+            'session_id': session_id,
+            'sample_index': idx,
+            'gold_label': gold_label,
+            'dialog_history': [
+                {'speaker': turn['speaker'], 'text': turn['text']}
+                for turn in history
+            ],
+            'all_probabilities': {k: float(v) for k, v in detection['all_probabilities'].items()},
+            'initial_generation': {
+                'text': candidate['text'],  # Current generated text
+                'label': initial_label,
+                'confidence': float(initial_conf),
+                'all_probabilities': {k: float(v) for k, v in detection['all_probabilities'].items()}
+            },
+            'rewrite_iterations': rewrite_iterations,
+            'final_result': {
+                'label': final_label,
+                'response': final_response,
+                'total_retries': retry_count
+            }
+        }
+        
+        log_path = log_dir / f"test_log_{session_id}.json"
+        with open(log_path, 'w', encoding='utf-8') as f:
+            json.dump(log_data, f, ensure_ascii=False, indent=2)
+        
+        print(f"\n[LOG] Saved to: {log_path}")
+        
+        # Summary
+        match = "✓" if final_label == gold_label else "✗"
+        results_summary.append({
+            'index': idx,
+            'session_id': session_id,
+            'gold': gold_label,
+            'predicted': final_label,
+            'match': match,
+            'retries': retry_count,
+            'initial_conf': initial_conf,
+            'final_conf': detection['confidence']
+        })
+        
+        print(f"\n[RESULT] Gold: {gold_label} | Predicted: {final_label} | Match: {match}")
+    
+    # Print summary table
+    print(f"\n\n{'='*80}")
+    print("BATCH TEST SUMMARY")
+    print(f"{'='*80}\n")
+    
+    print(f"{'Index':<8} {'Session':<10} {'Gold':<10} {'Predicted':<10} {'Match':<7} {'Retries':<8} {'Init%':<8} {'Final%':<8}")
+    print("-" * 80)
+    
+    for r in results_summary:
+        print(f"{r['index']:<8} {r['session_id']:<10} {r['gold']:<10} {r['predicted']:<10} {r['match']:<7} {r['retries']:<8} {r['initial_conf']*100:<8.1f} {r['final_conf']*100:<8.1f}")
+    
+    # Statistics
+    total = len(results_summary)
+    matches = sum(1 for r in results_summary if r['match'] == '✓')
+    accuracy = matches / total if total > 0 else 0
+    avg_retries = sum(r['retries'] for r in results_summary) / total if total > 0 else 0
+    
+    print("\n" + "-" * 80)
+    print(f"Accuracy: {matches}/{total} ({accuracy:.1%})")
+    print(f"Avg Retries: {avg_retries:.2f}")
+    print(f"Logs saved to: {log_dir}/")
+    print("=" * 80)
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    
+    if len(sys.argv) > 1 and sys.argv[1] == 'batch':
+        # Batch mode: python test_full_pipeline.py batch [num_samples]
+        num_samples = int(sys.argv[2]) if len(sys.argv) > 2 else 5
+        batch_test(num_samples=num_samples)
+    else:
+        # Single test mode (default)
+        main()

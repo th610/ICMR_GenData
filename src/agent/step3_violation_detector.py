@@ -40,14 +40,17 @@ class ViolationDetector:
     def __init__(self, 
                  mode: str = "model",  # "model" or "judge"
                  model_path: Optional[str] = None,
-                 llm_client: Optional[Any] = None):
+                 llm_client: Optional[Any] = None,
+                 temperature: float = 1.0):
         """
         Args:
             mode: "model" (학습된 분류기) or "judge" (LLM 평가)
             model_path: 학습된 모델 경로 (mode="model"일 때)
             llm_client: Judge용 LLM (mode="judge"일 때)
+            temperature: Temperature scaling for calibration (T < 1 → sharper, T > 1 → smoother)
         """
         self.mode = mode
+        self.temperature = temperature
         
         if mode == "model":
             if model_path is None:
@@ -166,6 +169,17 @@ class ViolationDetector:
         context_text = "".join(context_parts) + "".join(selected_turns)
         input_text = context_text + response_text
         
+        # 토큰화 전 토큰 수 계산 (디버깅용)
+        input_tokens_count = len(self.tokenizer.encode(input_text, add_special_tokens=True))
+        
+        # 로깅: 입력 정보 출력
+        print(f"\n[TOKENIZATION INFO]")
+        print(f"  Selected Turns    : {len(selected_turns)} turns (reversed order)")
+        print(f"  Response Tokens   : {response_length}")
+        print(f"  Context Tokens    : {current_tokens}")
+        print(f"  Total Input Tokens: {input_tokens_count} (max 512)")
+        print(f"  Remaining Space   : {512 - input_tokens_count}\n")
+        
         # 토큰화
         inputs = self.tokenizer(
             input_text,
@@ -179,6 +193,10 @@ class ViolationDetector:
         with torch.no_grad():
             outputs = self.model(**inputs)
             logits = outputs.logits
+            
+            # Temperature scaling (캘리브레이션)
+            logits = logits / self.temperature
+            
             probs = torch.softmax(logits, dim=-1)[0]
             pred_id = torch.argmax(probs).item()
             confidence = probs[pred_id].item()

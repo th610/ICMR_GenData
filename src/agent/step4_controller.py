@@ -162,13 +162,14 @@ Output format (JSON):
         label = detection['label']
         confidence = detection['confidence']
         
-        if label == 'Normal':
+        # 대소문자 구분 없이 Normal 체크
+        if label.lower() == 'normal':
             return {'type': 'accept'}
         
         # Confidence가 너무 낮으면 (borderline case) accept
         # 예: 25% 미만이면 모델이 확신하지 못하는 것
-        if confidence < 0.25:
-            return {'type': 'accept'}
+        # if confidence < 0.25:
+        #     return {'type': 'accept'}
         
         # 위반 발견 → rewrite 시도
         return {'type': 'rewrite', 'violation': label}
