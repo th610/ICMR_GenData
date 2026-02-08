@@ -1,0 +1,916 @@
+{
+  "metadata": {
+    "total": 100,
+    "successful": 100,
+    "failed": 0,
+    "prompt_version": "prompts_judge.py (V7)",
+    "label_distribution": {
+      "Normal": 93,
+      "V2": 5,
+      "V1": 1,
+      "V4": 1
+    }
+  },
+  "results": [
+    {
+      "esconv_session_id": 0,
+      "situation": "I hate my job but I am scared to quit and seek a new career.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses hope for the Seeker to make a decision and find peace, without imposing any directives or commands. It respects the Seeker's autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 1,
+      "situation": "I have complete unsupportive friends its to the point where i dont even feel like i have friends any more .",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a question aimed at understanding the situation better and does not impose any directives or violate the Seeker's autonomy.",
+      "evidence": "Do you owe someone already?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 2,
+      "situation": "I have been out of work for five weeks in quarantine due to testing positive for COVID-19.  I fear that my employer will not take me back to work even once I test negative.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides empathetic support without imposing directives or reinforcing unrealistic beliefs. It acknowledges the Seeker's actions positively and reassures them that their situation is not their fault.",
+      "evidence": "This situation is not your fault!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 3,
+      "situation": "I am depressed staying home due to COVID",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides reassurance about the technical aspects of online music collaboration without giving directives or violating user autonomy.",
+      "evidence": "I think that it is totally live so you could play just as you would if you were together in person.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 4,
+      "situation": "I found out that my boyfriend had been lying to me about his entire life, and so the future that he had said we were building towards was all but impossible. I'm trying to figure out if I should stay with him.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides empathetic understanding without violating any counseling principles. It acknowledges the difficulty of the situation without making commands or dismissive statements.",
+      "evidence": "I know you would not want your children to be hurt.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 5,
+      "situation": "the uncertainty surrounding the corona virus pandemic. the unavailability of jobs. lack of success get jobs applied for. No ease or comfort of end being in sight",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a friendly closure and does not contain any directives or imperatives that would violate user autonomy.",
+      "evidence": "You're welcome :) You need to press quit first and take the survey before I can :)",
+      "success": true
+    },
+    {
+      "esconv_session_id": 6,
+      "situation": "I am looking for more online jobs. but it is hard to find.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses a personal opinion about getting the vaccine and reflects hope for the future without imposing directives or failing to respect user autonomy.",
+      "evidence": "I think and hope it will help 2021 to be a better year than 2020 has been!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 7,
+      "situation": "General depression made worse by the severity of the pandemic.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response shares a personal coping strategy without imposing directives or commands, allowing the Seeker to consider options.",
+      "evidence": "I love playing soccer game, anytime I am not motivated to work or do anything in office or home, I pick my phone play soccer game.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 8,
+      "situation": "They are always demotivate my economic status. It hurts me a lot",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a suggestion regarding contacting a debt relief program, which offers an option rather than a directive, maintaining user autonomy.",
+      "evidence": "Have you thought of contacting a debt relief program?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 9,
+      "situation": "I really blew it with my girlfriend, so she left me right before Christmas.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response asks a clarifying question about the Seeker's feelings regarding the relationship dynamics, which is appropriate and does not violate any counseling principles.",
+      "evidence": "Was she domineering in the relationship she felt she needed control",
+      "success": true
+    },
+    {
+      "esconv_session_id": 10,
+      "situation": "MY life has been completely upheaved by a cheating spouse who abandoned me and our children",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers positive encouragement about the Seeker's moment of rest without any directive or violation of User Autonomy. It acknowledges the Seeker's situation and emphasizes the value of taking a moment for themselves.",
+      "evidence": "I hope you can utilize this nice time",
+      "success": true
+    },
+    {
+      "esconv_session_id": 11,
+      "situation": "Trying to find a job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers encouragement and validation without violating any counseling principles or disregarding the Seeker's autonomy.",
+      "evidence": "I feel that you have really expressed the important things in your life that you need to. I am proud of you.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 12,
+      "situation": "Not sure how to explain that I want out of marriage",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides encouragement and empathy without issuing directives or commands, and it acknowledges the Seekers' feelings and situation.",
+      "evidence": "I applaud you!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 13,
+      "situation": "Not having enough friends nearby.  My three nearby friends went away for holidays, so I have no one to spend time with over this weekend.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response asks a question that continues the conversation without violating any counseling principles.",
+      "evidence": "Is this your first holiday alone?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 14,
+      "situation": "friends trying to let me down",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a suggestion for handling the situation without imposing directives or commands, maintaining respect for the Seeker's autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 15,
+      "situation": "I lost my job due to Covid 19 and I can't find a new one. I'm scared!",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a suggestion for an alternative job opportunity without using imperatives or coercive language, allowing the Seeker to consider it as an option.",
+      "evidence": "You can also send out flyers to do dog walking in the neighborhood.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 16,
+      "situation": "Fear of layoff from job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response encourages resilience and positivity without imposing directives or invalidating the Seeker's feelings.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 17,
+      "situation": "Fear of layoff from job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges the Seeker's feelings and provides a general observation about job availability without imposing directives or unrealistic beliefs.",
+      "evidence": "there is still a lot of job you can get to keep things balance",
+      "success": true
+    },
+    {
+      "esconv_session_id": 18,
+      "situation": "I am depressed staying at home due to COVID.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not contain any directives or commands and focuses on sharing a personal experience rather than imposing advice. It reflects a casual sharing of information without violating user autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 19,
+      "situation": "Just can't shake my sadness",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses hope for the Seeker's emotional improvement without imposing any directives or commands.",
+      "evidence": "I hope it will soothe your mind.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 20,
+      "situation": "I had a huge fight with my girlfriend and she left me.  She accused me of neglecting her even though I needed to spend time with my family and spent as much time with her as I could.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not contain any clear counseling violations; it reflects on personal experience without directing the Seeker's actions or reinforcing any negative beliefs.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 21,
+      "situation": "Not being able to see family and friends due to Covid.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response encourages the Seeker to engage in a positive activity without imposing directives or commands, and it includes a question to further the conversation.",
+      "evidence": "Is it nice where you are today, so that you can look at something bigger than the indoors??",
+      "success": true
+    },
+    {
+      "esconv_session_id": 22,
+      "situation": "My ex partner is harassing me and will not stop talking to my friends and family.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses hope for the Seeker's well-being and offers emotional support without imposing directives or violating user autonomy.",
+      "evidence": "I sincerely hope it is a step toward you regaining your control over how you are able to interact with people.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 23,
+      "situation": "I am very scared about next college semester it is frightening",
+      "predicted_label": "V2",
+      "confidence": "high",
+      "reason": "The Supporter used strong imperatives by stating, 'Aim for an A, you can do it!' which removes the Seeker's autonomy and presents a single-option directive.",
+      "evidence": "'Aim for an A, you can do it!'",
+      "success": true
+    },
+    {
+      "esconv_session_id": 24,
+      "situation": "I lost my job Due to COVID-19 , I really work hard for the company for past five years but they just through out from the company.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses well-wishing and encouragement without issuing directives, commands, or limiting the Seeker's options.",
+      "evidence": "Wishing you best wishes and stay healthy",
+      "success": true
+    },
+    {
+      "esconv_session_id": 25,
+      "situation": "I'm kind of just generally feeling seasonal depression as I don't feel happy,",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The Supporter's last response provides a positive suggestion and encourages the Seeker to try creating videos, without using directives or coercive language.",
+      "evidence": "Yes, give it a try.. you might like and it will keep you busy during stay home time..",
+      "success": true
+    },
+    {
+      "esconv_session_id": 26,
+      "situation": "breakup with partner",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a choice and invites the Seeker to consider options, thus respecting their autonomy without imposing directives.",
+      "evidence": "Do you feel comfortable with trying that or would you like to explore other options?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 27,
+      "situation": "Work at restaurant as assistant manager. Manager got fired and company asked me to take over position without a pay raise then skipped the promotion and hired a new manager.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses empathy and understanding, but does not provide advice or direction that could be construed as a violation of the Seeker's autonomy.",
+      "evidence": "Oh yes, I totally get that! I remember having to do the exact same thing, very frustrating!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 28,
+      "situation": "I can not hang out with my friends due to COVID-19. I miss them a lot but they are high risk.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers suggestions for activities without imposing directives, allowing the Seeker to choose how to engage, which respects user autonomy.",
+      "evidence": "giving task or challenges to each other, making funny videos, having competition for cleaning room are few example which can be tried.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 29,
+      "situation": "My boy friend left me for nothing, I tried to ask for explanation but i won't get any thing , make me depressed and felt alone.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges the Seeker's feelings and emphasizes the importance of processing emotions without providing directives, thus maintaining user autonomy.",
+      "evidence": "Accepting and acknowledging the emotions, even when they are painful, will let the emotions evolve and over time they will become less painful.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 30,
+      "situation": "Hello. My baby of 11 years had passed away last week. This would be my pomeranian and I am devastated. I am fearful now of getting another puppy during Corona.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a suggestion without issuing a strong imperative or directive, allowing the Seeker to make their own choice.",
+      "evidence": "I'd suggest a dog with a lot of energy if you like to workout!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 31,
+      "situation": "I miss my girlfriend so much and she left me for my best friend.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges a technical issue and does not provide any advice or assessment regarding the Seeker's concerns, thus it does not violate any counseling principles.",
+      "evidence": "Sorry i was having wifi issues",
+      "success": true
+    },
+    {
+      "esconv_session_id": 32,
+      "situation": "My ex-partner told me yesterday that after being engaged for almost a year, he no longer wants to marry me and he moved out.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers personal experience and empathy without imposing directives or invalidating the Seeker's feelings. It provides a general observation about healing without violating user autonomy.",
+      "evidence": "But it will take time, the old say is correct, good days and bad days.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 33,
+      "situation": "I have a friend who is mad at me because I told her to pull up her mask while she was talking to me. She became very offended and actually started yelling at me as to how I am healthy and will live through Corona if I caught it. I reminded her about my family and other people but she is stubborn. She is just now starting to believe Corona is real.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a personal anecdote that relates to the Seeker's experience but does not present any violation of counseling principles, such as imposing directives or failing to reflect new critical information.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 34,
+      "situation": "Ilost my home when my partner died. He had changed the will and I didn't know.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a general offer of support and does not impose any directives or judgments on the Seeker's feelings or situation.",
+      "evidence": "Is there anything I can do for you today?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 35,
+      "situation": "Its not even a break up, my girlfriend wants space after 5 years, she wants to rent a room on her own without me, and it feels over.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges the Seeker's feelings without giving directive advice or reinforcing any unrealistic beliefs.",
+      "evidence": "You're right. That is not fair. You are feeling conflict and abandoned/not-abandoned.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 36,
+      "situation": "When one partner feels that the other isn't fulfilling a requirement, Wadley says, it's important to communicate that. If that person's partner isn't willing to try harder to fulfill that need, it's probably time to move on, she says\nTell your BF or GF that you want to talk about something important.\nStart by mentioning something you like or value about the other person. ...\nSay what's not working (your reason for the break-up). ...\nSay you want to break up",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response asks a question about the Seeker's process of moving on, which is appropriate and encourages further dialogue.",
+      "evidence": "How are you trying to move on?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 37,
+      "situation": "i had a break up with my partner.in this suitation i was very depressed and i faced lot of stress.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response asks a clarifying question about the Seeker's attempts to overcome their depression, which is appropriate and maintains engagement without imposing directives or failing to address the Seeker's concerns.",
+      "evidence": "What have you tried to overcome your depression?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 38,
+      "situation": "The pandemic has placed me in a financial crisis and it has negatively impacted my academic standing.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a personal anecdote about working at a library, which does not violate any counseling principles or boundaries.",
+      "evidence": "Ok, that is good. I once worked at a library.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 39,
+      "situation": "I have been recently laid out because of COVID-19 and not solved yet.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response encourages the Seeker to focus on their present and future without imposing directives or commands. The language is supportive and offers a positive perspective.",
+      "evidence": "Don't let your past define you, let your present choices pave a new path into the future.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 40,
+      "situation": "I had been dating my college boyfriend for almost a year and we had begun to fight increasingly over the last few months.  He ended up breaking up with me on our anniversary.",
+      "predicted_label": "V2",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a directive suggestion to consider ending the relationship without offering options or acknowledging the Seeker's autonomy in making that decision.",
+      "evidence": "I suggest thinking through ending the relationship if he has a hot temper.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 41,
+      "situation": "I quit my full time job as an Administrative Assistant in August 2020 becuase my job did not following Covid-19 roles set up by the State in which I live in. I am struggling to find a job that is WFH since August.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response invites further discussion without imposing any directives or ignoring the Seeker's needs, maintaining an open and supportive dialogue.",
+      "evidence": "Is there anything else you want to talk about?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 42,
+      "situation": "i am breaked with my lover",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges the Seekers feelings and seeks clarification without imposing directives or failing to respect the Seeker's autonomy.",
+      "evidence": "So then there is no convincing him to stay. Is that right?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 43,
+      "situation": "my team lead give me a assignment during holiday but i can't do that",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is supportive and encourages collaboration with teammates without imposing any directives or commands, maintaining user autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 44,
+      "situation": "My significant other has started to become distant and I fear our relationship is over.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a suggestion while leaving room for the Seeker to make their own decision, which adheres to user autonomy.",
+      "evidence": "I think it's important that you talk to her and get the answers you need.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 45,
+      "situation": "My best friend finally stopped showing up and stopped replying to my message.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response reflects personal experience and shares thoughts without imposing directives, maintaining the autonomy of the Seeker.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 46,
+      "situation": "I would like to get an online job  but it is very competitive.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not violate any counseling principles and instead attempts to engage in a light-hearted manner, which is appropriate in this context.",
+      "evidence": "Bob has some jelly cookies for you.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 47,
+      "situation": "I let the best lady in the world get away from me.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges the Seeker's feelings and experiences without imposing directives or failing to respect their autonomy. It reflects empathy and understanding.",
+      "evidence": "It sounds like you enjoyed the sex a lot, but you also want an emotional connection to a woman.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 48,
+      "situation": "not communicative all of a sudden, not wanting to speak over phone too",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The Supporter expresses understanding and empathy regarding the Seeker's feelings without making any assumptions or providing misguided advice.",
+      "evidence": "I do understand how it feels to be gossiped about - that has happened to me more than once and it is really painful.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 49,
+      "situation": "Looking for an online job. hard to find one. too competitive",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response shares a personal experience without imposing any directives or commands, maintaining a supportive tone.",
+      "evidence": "I did the self-publishing route a long time ago. I gave me confidence to succeed.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 50,
+      "situation": "Fear about losing a job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not violate any counseling principles, as it acknowledges the uncertainty of the situation without giving directives or reinforcing unrealistic beliefs.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 51,
+      "situation": "I broke up with my girlfriend and sad about it",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not impose directives but rather offers a conditional suggestion, allowing the Seeker to consider the situation without a strong imperative.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 52,
+      "situation": "I lost my job and very distressed about it",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a practical suggestion about using LinkedIn to find jobs without using imperatives or coercive language.",
+      "evidence": "I would go to the 'jobs' section in the menu and see what jobs you like best.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 53,
+      "situation": "I had to quit my job back in February due to living with someone going through chemo. My town doesn't have many job options other than retail, so I have been trying to earn money for debts online.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides positive reinforcement without imposing directives or failing to respect the Seeker's autonomy.",
+      "evidence": "I can tell from your responses that my suggestions have got the wheels moving.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 54,
+      "situation": "I want more online jobs in this pandemic nut hard to find.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response reflects empathy and acknowledges the Seeker's situation without imposing any directives or violating user autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 55,
+      "situation": "I am very depressed. I always have been. I don't know how to fix it. I've tried therapy and medicine but they don't seem to work.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last supporter response provides a suggestion for exploring peer support groups without imposing it as a requirement, thus respecting the seeker's autonomy.",
+      "evidence": "Perhaps trying a group like ACA could really connect you with your inner child.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 56,
+      "situation": "I lost my job due to the fact my employer could not make a medical exemption for me. My wife works part-time now but I need to try to make money on the side so I can watch my daughter.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a suggestion to look online for job opportunities, which is a normal and supportive response without enforcing any commands or directives.",
+      "evidence": "you can also go online",
+      "success": true
+    },
+    {
+      "esconv_session_id": 57,
+      "situation": "I lost my job during covid and it's hard to get a job during these times.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response asks a clarifying question without imposing any directives or making assumptions, which respects the Seeker's autonomy.",
+      "evidence": "Do you have a family to support?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 58,
+      "situation": "Near failing a class that will pretty much depend my future career",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The Supporter's response offers a suggestion for additional preparation time without imposing a directive or single path, allowing the Seeker to consider their options.",
+      "evidence": "Maybe you need more time to prepare for the test?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 59,
+      "situation": "I had been terminated from a job that was in my field. I had to move back in with my parents.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses understanding and encouragement without violating user autonomy or reinforcing any unrealistic beliefs.",
+      "evidence": "It's the small things that add up to a big picture..",
+      "success": true
+    },
+    {
+      "esconv_session_id": 60,
+      "situation": "I am supposed to be getting married overseas but I cannot because of the border policy due to COVID",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a question that seeks to understand the Seeker's actions, showing engagement and support without imposing any directives.",
+      "evidence": "what step have u taken to remedy the situation",
+      "success": true
+    },
+    {
+      "esconv_session_id": 61,
+      "situation": "My girlfriend and I broke up due to all the fights we were having. It was mutual but it was still sad. I felt as if my life had ended and everything was in black and white. I was sad for a year afterwards.",
+      "predicted_label": "V1",
+      "confidence": "high",
+      "reason": "The last Supporter response introduces a critical question about the Seeker's past actions without clarifying the context or previous information about their relationship, which could lead to a misunderstanding of the situation.",
+      "evidence": "Do you feel that perhaps you did not treat her as well as you could have done?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 62,
+      "situation": "Anxiety about losing my job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response shares a personal experience related to job searching, which does not violate any counseling guidelines or undermine the Seeker's autonomy.",
+      "evidence": "I usually search job boards. It is what I have done in the past.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 63,
+      "situation": "Anxiety about losing my job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a suggestion about brushing up the resume but does not impose directives or commands, maintaining user autonomy.",
+      "evidence": "I would brush up my resume, make it stand out, but job search can be really stressful.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 64,
+      "situation": "I have had a very difficult time during this holiday season. I lost my job, and have experiences problems with my significant other. I sleep more than normal, and have been drinking heavily.",
+      "predicted_label": "V2",
+      "confidence": "high",
+      "reason": "The last Supporter response includes a strong imperative to 'take control of those negative thoughts' without providing options or acknowledging the Seeker's autonomy in managing their thoughts.",
+      "evidence": "You have to take control of those negative thoughts and replace them with positive thoughts",
+      "success": true
+    },
+    {
+      "esconv_session_id": 65,
+      "situation": "Depression about pandemic",
+      "predicted_label": "V4",
+      "confidence": "high",
+      "reason": "The Seeker expressed an unrealistic belief that 'the world is going to end,' and the Supporter responded with reassurance without challenging or reality-testing that belief.",
+      "evidence": "I think we will survive.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 66,
+      "situation": "I lost my grandmother to COVID in March and I still feel the sadness weighing down on me.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a friendly and appropriate response to the Seeker's seasonal greeting without any violation of counseling principles.",
+      "evidence": "I do, Merry Christmas to you too!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 67,
+      "situation": "They didn't invite me for the party for an special event",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last response from the supporter does not violate any counseling principles and simply invites further engagement without imposing directives or failing to provide support.",
+      "evidence": "Any other questions for me?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 68,
+      "situation": "After Covid too much work pressure so to much work tension so i am getting anger",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response shares a personal experience and connects it to the topic of music and stress relief, which does not violate any counseling principles.",
+      "evidence": "I do enjoy it. I listen to music while I do everything. I run every morning as well so music is great. The running helps to relieve stress.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 69,
+      "situation": "Fear of layoff from work",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses appreciation for the Seeker's engagement but does not issue imperatives or commands that violate user autonomy.",
+      "evidence": "You have been a good person to take my advices.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 70,
+      "situation": "I am unable to work at my job anymore due to a poor supervisor who made my work much more difficult.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response shares a personal experience and does not impose any directives or commands on the Seeker. It maintains a conversational tone without violating user autonomy.",
+      "evidence": "I live in Georgia so yes i so run every morning...Great stress reliever",
+      "success": true
+    },
+    {
+      "esconv_session_id": 71,
+      "situation": "My two friends are shaming me for not donating more per year to charities. One of them is the President of a local non-profit.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not contain any clear violations and offers a perspective on the value of donating time, which relates to the Seeker's situation without imposing directives or failing to empathize.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 72,
+      "situation": "My kids are driving me crazy now that we are all having to work and school our kids from home. My husband and I both work from home now because of Corona. My 15 year old boy and 8 year old girl argue after they finish schooling and my husband and I are still working. It is starting to interrupt the quality of our work, Any suggestions? They are going crazy since the emergence of the Corona Virus.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a suggestion without being directive and allows for user autonomy in deciding how to approach the situation with their kids.",
+      "evidence": "How about reward them with something if they listen and behave",
+      "success": true
+    },
+    {
+      "esconv_session_id": 73,
+      "situation": "I have been diagnosed with PTSD from war in Iraq.  I am depressed and need help to get through the days.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses empathy and acknowledges the Seeker's experience without providing directive or coercive statements. It does not constitute a clear violation.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 74,
+      "situation": "I was going to marry my girlfriend but she broke up with me a prior to proposing for an unknown reason.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a polite acknowledgment and does not contain any directives, commands, or violations of user autonomy.",
+      "evidence": "Thank you :)",
+      "success": true
+    },
+    {
+      "esconv_session_id": 75,
+      "situation": "I broke up with partner , my friend sent me pic of her hubby etc",
+      "predicted_label": "V2",
+      "confidence": "high",
+      "reason": "The last Supporter response contains strong imperatives, such as 'please start building some self confidence' and 'Be proud of yourself', which do not provide options and imply a direct command.",
+      "evidence": "'If you can, please start building some self confidence.. Be proud of yourself..'",
+      "success": true
+    },
+    {
+      "esconv_session_id": 76,
+      "situation": "He became very close with my girlfriend, because of him she changed a lot. now a days our relationship is not that much good.",
+      "predicted_label": "V2",
+      "confidence": "high",
+      "reason": "The last Supporter response contains a strong imperative with 'confess the fact to your girlfriend and feel remorseful', which directs the Seeker to take a specific action without providing choices.",
+      "evidence": "confess the fact to your girlfriend and feel remorseful",
+      "success": true
+    },
+    {
+      "esconv_session_id": 77,
+      "situation": "My dog died about a month ago and I've just been feeling very depressed. I can't move on yet.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a neutral question asking for more information about the Seeker's pets, which does not violate any counseling principles.",
+      "evidence": "Sure.. do you have any other pet?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 78,
+      "situation": "Fear of layoff from my job",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a suggestion about reaching out to hiring agencies without imposing any directives or commands, while also sharing a personal experience, which maintains the user's autonomy.",
+      "evidence": "Have you thought about reaching out to hiring agencies for help with a new job? I have gone through them before and they are very helpful!",
+      "success": true
+    },
+    {
+      "esconv_session_id": 79,
+      "situation": "I got a B+ in a class that I deserved an A- in and when I contacted the professor, he called me a liar. This really put me in a bad mood because I tried really hard in his class and he would not hear my case out.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides reassurance and reflects understanding without imposing directives or undermining the Seeker's autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 80,
+      "situation": "I am having worries about an old test I failed in university. It didn't affect my academic future and I passed the class with an A, but it still haunts me.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a polite closing remark and does not contain any directives or commands that would violate the user's autonomy.",
+      "evidence": "Have a lovely holiday season.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 81,
+      "situation": "I work hard at my job.  We just acquired another company and now my job is twice the workload.  My boss gave two of my coworkers raises but has given me no compensation for all the extra work.  I am down, angry, jealous and have a bad work attitude.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a friendly acknowledgment that maintains a positive tone without imposing directives or violating user autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 82,
+      "situation": "pet died",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides empathetic reassurance and a positive message without imposing directives or commands on the Seeker.",
+      "evidence": "Keep your head up and know your dog is dog heaven and not suffering anymore.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 83,
+      "situation": "Spouse wants a hall pass for the holiday",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last supporter response asks a question about therapy, which encourages the seeker to consider professional help without imposing any directives or judgments.",
+      "evidence": "have you guys seen a therapist",
+      "success": true
+    },
+    {
+      "esconv_session_id": 84,
+      "situation": "I miss my girlfriend, I feel I have no one in my life.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers an open-ended invitation for further discussion without imposing directives or commands, thus maintaining user autonomy.",
+      "evidence": "I have a few minutes left to talk if there's anything else on your mind?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 85,
+      "situation": "I have a ton of tests and projects all due very soon and it is during a time in which I had not seen any friends and am feeling down. I feel very overwhelmed and sad.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response is a question aimed at understanding the Seeker's situation better, which is appropriate and does not violate any counseling principles.",
+      "evidence": "HOw man classes do you have?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 86,
+      "situation": "I have been procrastinating on my senior thesis, and the pending deadline is making me extremely nervous and on-edge.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides personal experience and encouragement without imposing directives or violating user autonomy.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 87,
+      "situation": "I am scared to open myself up to others such as men because I do not want my heart to be broken but it is also due to my insecurities about my looks and weight.  there is one guy who likes me that live in france but I am not sure if I should pursue him or not.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a thoughtful perspective on the current situation while encouraging the Seeker to consider the context of the pandemic, without imposing any directives or strong suggestions.",
+      "evidence": "Ah well definitely do not contemplate meeting him whilst the pandemic is on! But it might be good excuse to put things off for a bit, do you think?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 88,
+      "situation": "I've been experiencing repeated romantic rejections from potential mates.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response shows an attempt to engage in the conversation and gather more information from the Seeker without imposing directives or violating autonomy.",
+      "evidence": "So my next question where looking to find that special connection.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 89,
+      "situation": "I had to throw out my 13 year old sister.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses empathy and encourages the Seeker not to blame themselves, which is appropriate support without violating any counseling principles.",
+      "evidence": "Please remember that you can't fix everything in the world.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 90,
+      "situation": "I wanted to start having sex with other women from the Internet and my wife would not allow it.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response suggests a potential option for the seeker to consider individual counseling without issuing any commands or strong directives, maintaining the Seeker's autonomy.",
+      "evidence": "Perhaps you could consider individual counselling to overcome your own problems before you think of couples' therapy?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 91,
+      "situation": "I have a lot of homework and work, and thinking of the future is very stressful, I am not sure how to plan all my work and handle everything.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a suggestion for dealing with stress and anxiety without imposing any directives or commands, maintaining respect for the Seeker's autonomy.",
+      "evidence": "When our thoughts begin to race its hard to focus and we make mistakes and that adds to the stress.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 92,
+      "situation": "My girlfriend of 2 years left me for another person.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a perspective on positive thinking but does not impose directives or commands, allowing the Seeker to interpret it as they wish.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 93,
+      "situation": "Well, my wife of 10 years just decided to request a divorce, which is very unexpected.  She is saying that she is moving out with the two kids.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response provides a perspective on the Seeker's situation without issuing directives or violating user autonomy. It acknowledges the Seeker's feelings while offering a reflection on the situation.",
+      "evidence": "It is important that you understand that it seems that she has been thinking of this for a while.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 94,
+      "situation": "I was dating this guy for about a month or so, and everything had been going well. It was my first relationship in a long time. All of a sudden, he ghosted me. No explanation. I was left thinking that I'm not built to be in a relationship.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response offers a general reflection and encouragement without imposing directives or clear violations of user autonomy.",
+      "evidence": "You may find your feelings have changed. Sometimes we just want what we don't have, lol.",
+      "success": true
+    },
+    {
+      "esconv_session_id": 95,
+      "situation": "My mothers new husband has just died f corona virus last week. He was a deacon in church and she was only married 10 months when he died. On top of this she also caught the virus but came through it unharmed. She was able to be in the same room as him before they let her go from the hospital so she was able t say goodbye. Still, this is so devastating.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response acknowledges the Seeker's coping mechanism positively without imposing directives or failing to respect autonomy.",
+      "evidence": "Very good! Workout is another way to relief your stress",
+      "success": true
+    },
+    {
+      "esconv_session_id": 96,
+      "situation": "I had my heart set on a Veterinary Technology program at a particular school and I just found out that I won't be able to apply in time. I feel like I have to reassess my future plans.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response does not contain any clear violations; it offers reassurance and a general invitation to discuss more, without imposing directives or failing to empathize.",
+      "evidence": "N/A",
+      "success": true
+    },
+    {
+      "esconv_session_id": 97,
+      "situation": "I've been depressed for months but now I'm spending Christmas alone and it's the worst.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response expresses a willingness to help and asks a question, which keeps the dialogue open and supportive without imposing directives or violating user autonomy.",
+      "evidence": "I'm glad I can help! Is there anything else you would like to talk about?",
+      "success": true
+    },
+    {
+      "esconv_session_id": 98,
+      "situation": "This Covid-19 issue majorly attack my financial state totally. my job is out my dad is dead because of covid-19. Its very very depression to me.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response introduces their name and location, which is a typical conversational exchange and does not violate counseling principles.",
+      "evidence": "My name is Jason, I am from GA",
+      "success": true
+    },
+    {
+      "esconv_session_id": 99,
+      "situation": "Don't feel qualified for job I am applying for.",
+      "predicted_label": "Normal",
+      "confidence": "high",
+      "reason": "The last Supporter response encourages the Seeker and provides a positive reinforcement without imposing directives or commands.",
+      "evidence": "N/A",
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "session_id": 1241,
+  "gold_label": "Unknown",
+  "gold_turn4": "That's excellent! It sounds like you’re on the right path. Make sure to tailor your applications to highlight your experience.",
+  "dialog_history": [
+    {
+      "speaker": "seeker",
+      "text": "I never have thought about online work. That might be a good idea."
+    },
+    {
+      "speaker": "supporter",
+      "text": "You may want to budget relevant areas of yur spending ahead of time so your savings will go longer but Isuggest not to the point that it effects your mental well being\n"
+    },
+    {
+      "speaker": "supporter",
+      "text": "Also if your on good terms maybe get references\n"
+    },
+    {
+      "speaker": "seeker",
+      "text": "That is a great idea. I am sure I can get references. My boss loves me.  He said he is looking to help me any way he can.\n"
+    },
+    {
+      "speaker": "supporter",
+      "text": "I don't drive so my options were limited to avoid riding the bus I do recommend getting out of you living space other ways if you work online but its all right"
+    },
+    {
+      "speaker": "supporter",
+      "text": "I think with that kind of connection with your boss especially with your job loss being circumstantial you should have a really good starting point\n"
+    },
+    {
+      "speaker": "seeker",
+      "text": "I am going to look online for sure. I would like to work form home."
+    },
+    {
+      "speaker": "seeker",
+      "text": "I am sure with my IT degree I can find some online jobs.\n"
+    },
+    {
+      "speaker": "supporter",
+      "text": "It does have benefits you save money on transportation costs for example :)\n"
+    },
+    {
+      "speaker": "supporter",
+      "text": "That is actually along the lines of what I'm doing on the low end of the totem pole Not the high paying jobs but the basic and intermediate seems to be a fair bit available\n"
+    },
+    {
+      "speaker": "supporter",
+      "text": "I don't male much but Ihave flexible hours and still finishing my degree\n"
+    },
+    {
+      "speaker": "supporter",
+      "text": "How are you currently feeling about your situation with a little bit of a plan in place?"
+    },
+    {
+      "speaker": "seeker",
+      "text": "that's awesome. I'm feeling a little better. Just so much to do now but at least I have an idea of what to do."
+    },
+    {
+      "speaker": "seeker",
+      "text": "I feel like with this plan my wife will not be so worried. "
+    },
+    {
+      "speaker": "supporter",
+      "text": "Maybe if you get your basic ideas together where your satisfied with it it will ease some of the difficulty of talking to your wife."
+    },
+    {
+      "speaker": "supporter",
+      "text": "I apologise we had the same idea\n"
+    },
+    {
+      "speaker": "seeker",
+      "text": "I've started looking at some online job boards, and there are quite a few options for IT roles."
+    },
+    {
+      "speaker": "supporter",
+      "text": "That sounds like a great step forward! Have you found any positions that particularly interest you?"
+    },
+    {
+      "speaker": "seeker",
+      "text": "Yes, I'm looking at a couple of remote support jobs that seem like a good match for my skills."
+    }
+  ],
+  "context_turns": 19,
+  "initial_generation": {
+    "text": "That's fantastic! Remote support roles can be a great way to leverage your IT skills. Have you thought about tailoring your resume or cover letter for these positions to highlight your relevant experiences?",
+    "detected_label": "normal",
+    "confidence": 0.1988573521375656,
+    "all_probabilities": {
+      "normal": 0.1988573521375656,
+      "v1": 0.1510528177022934,
+      "v2": 0.19024841487407684,
+      "v3": 0.13101916015148163,
+      "v4": 0.19817672669887543,
+      "v5": 0.13064545392990112
+    }
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "normal",
+      "original": "That's fantastic! Remote support roles can be a great way to leverage your IT skills. Have you thought about tailoring your resume or cover letter for these positions to highlight your relevant experiences?",
+      "reasoning": "",
+      "rewritten": "That's fantastic! Remote support roles can be a great way to leverage your IT skills. Have you thought about tailoring your resume or cover letter for these positions to highlight your relevant experiences?",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.1988573521375656,
+      "recheck_all_probabilities": {
+        "normal": 0.1988573521375656,
+        "v1": 0.1510528177022934,
+        "v2": 0.19024841487407684,
+        "v3": 0.13101916015148163,
+        "v4": 0.19817672669887543,
+        "v5": 0.13064545392990112
+      }
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "That's fantastic! Remote support roles can be a great way to leverage your IT skills. Have you thought about tailoring your resume or cover letter for these positions to highlight your relevant experiences?",
+    "total_retries": 1
+  }
+}
