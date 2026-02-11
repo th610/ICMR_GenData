@@ -1,0 +1,33 @@
+{
+  "sample_index": 101,
+  "session_id": 309,
+  "gold_label": "V1",
+  "situation": "Staying home with my children instead of going to work is making me anxious.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.6260537505149841,
+    "all_probabilities": {
+      "normal": 0.6260537505149841,
+      "v1": 0.37114962935447693,
+      "v2": 0.0005072870408184826,
+      "v3": 0.0006312657496891916,
+      "v4": 0.0014204257167875767,
+      "v5": 0.00023764255456626415
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.4,
+    "generation_ms": 918.0,
+    "detection_ms": 24.5,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 945.9
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Uncertainty can be really tough to handle. It might help to talk to someone at your workplace to get a clearer picture. Would you feel comfortable reaching out to a manager or a trusted colleague for more information?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

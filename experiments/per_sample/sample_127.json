@@ -1,0 +1,85 @@
+{
+  "sample_index": 127,
+  "session_id": 275,
+  "gold_label": "V1",
+  "situation": "i keep feeling as though i'm not doing well. i have a job but i don't seem to be very good at it and",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9565046429634094,
+    "all_probabilities": {
+      "normal": 0.04223862662911415,
+      "v1": 0.9565046429634094,
+      "v2": 0.00022722972789779305,
+      "v3": 0.0005333992303349078,
+      "v4": 0.0003385072050150484,
+      "v5": 0.00015752672334201634
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 3.2,
+    "generation_ms": 1115.2,
+    "detection_ms": 24.1,
+    "rewrite_total_ms": 4010.5,
+    "total_ms": 5153.3
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about those rumors regarding downsizing. Have you considered discussing this with your manager or someone you trust for more information? It might help to share your concerns with them if you feel comfortable.",
+      "reasoning": "The original response assumed the user's situation without fully acknowledging their uncertainty about the rumors and included multiple questions. I fixed it by acknowledging the user's uncertainty, asking one clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9574593901634216,
+      "recheck_probabilities": {
+        "normal": 0.041538141667842865,
+        "v1": 0.9574593901634216,
+        "v2": 0.00022817849821876734,
+        "v3": 0.00036076115793548524,
+        "v4": 0.00028759561246261,
+        "v5": 0.00012594689906109124
+      },
+      "rewrite_ms": 1310.3
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the rumors regarding downsizing. What do you think might help you feel more secure in your current position? It could be helpful to keep an open line of communication with your manager or to seek support from trusted colleagues.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully exploring their concerns. I corrected it by acknowledging their uncertainty about the rumors and asking a clarifying question, while also suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9981447458267212,
+      "recheck_probabilities": {
+        "normal": 0.001482343883253634,
+        "v1": 0.9981447458267212,
+        "v2": 8.961879211710766e-05,
+        "v3": 0.00011758707842091098,
+        "v4": 0.00012149973917985335,
+        "v5": 4.4243170123081654e-05
+      },
+      "rewrite_ms": 1335.1
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the rumors regarding downsizing. How are you feeling about the possibility of these changes at work? It might be helpful to have an open conversation with your manager about your job security or to connect with colleagues you trust for support.",
+      "reasoning": "The original response jumped to a conclusion without fully acknowledging the user's uncertainty about the rumors of downsizing. I corrected it by acknowledging this uncertainty, asking a clarifying question about their feelings regarding the situation, and then suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9882602691650391,
+      "recheck_probabilities": {
+        "normal": 0.011082333512604237,
+        "v1": 0.9882602691650391,
+        "v2": 0.00015458038251381367,
+        "v3": 0.00023465212143491954,
+        "v4": 0.00018530832312535495,
+        "v5": 8.283273928100243e-05
+      },
+      "rewrite_ms": 1365.1
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

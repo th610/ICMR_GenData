@@ -1,0 +1,85 @@
+{
+  "sample_index": 119,
+  "session_id": 182,
+  "gold_label": "V1",
+  "situation": "I work very hard, physically hard and I am not a young man anymore\nMy boss seems to not notice anoth",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9994138479232788,
+    "all_probabilities": {
+      "normal": 0.0002710063708946109,
+      "v1": 0.9994138479232788,
+      "v2": 5.985058669466525e-05,
+      "v3": 0.00010421506158309057,
+      "v4": 0.00010621509863995016,
+      "v5": 4.4766722567146644e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.8,
+    "generation_ms": 710.4,
+    "detection_ms": 26.8,
+    "rewrite_total_ms": 4482.7,
+    "total_ms": 5224.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like there’s a lot of uncertainty surrounding the promotion situation. How do you feel about the possibility of him getting a promotion under these circumstances? It might be helpful to gather more information about the promotion criteria or to express your concerns to someone you trust at work.",
+      "reasoning": "The original response jumped to a conclusion about the user's feelings without fully acknowledging the new information regarding the promotion and did not ask a clarifying question. I corrected it by acknowledging the uncertainty and asking how the seeker feels about the promotion possibility while suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9977405071258545,
+      "recheck_probabilities": {
+        "normal": 0.0018560297321528196,
+        "v1": 0.9977405071258545,
+        "v2": 8.418667130172253e-05,
+        "v3": 0.0001550801971461624,
+        "v4": 0.00011425390403019264,
+        "v5": 4.9992297135759145e-05
+      },
+      "rewrite_ms": 1614.5
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like there's a lot of uncertainty surrounding the promotion situation. How do you feel about DE potentially getting a promotion? It might be helpful to talk to someone you trust at work about your concerns or to look into the promotion criteria if possible.",
+      "reasoning": "The original response jumped to conclusions about the promotion situation without seeking clarification on the seeker's feelings or understanding of the situation. I fixed it by acknowledging the seeker's uncertainty and asking a single clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9975726008415222,
+      "recheck_probabilities": {
+        "normal": 0.002038308186456561,
+        "v1": 0.9975726008415222,
+        "v2": 8.476442599203438e-05,
+        "v3": 0.00013905242667533457,
+        "v4": 0.00011875604832312092,
+        "v5": 4.6493652916979045e-05
+      },
+      "rewrite_ms": 1336.6
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like there's a lot of uncertainty surrounding the promotion situation. How do you feel about DE potentially getting a promotion? It might be helpful to gather more information about the promotion criteria or discuss your concerns with a trusted colleague.",
+      "reasoning": "The original response jumped to conclusions without fully clarifying the seeker's feelings about the situation. I corrected it by acknowledging the uncertainty regarding DE's potential promotion, asking a single clarifying question, and gently suggesting next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9978973865509033,
+      "recheck_probabilities": {
+        "normal": 0.0017102060373872519,
+        "v1": 0.9978973865509033,
+        "v2": 8.385166438529268e-05,
+        "v3": 0.00014928329619579017,
+        "v4": 0.00011349598207743838,
+        "v5": 4.577319850795902e-05
+      },
+      "rewrite_ms": 1531.5
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

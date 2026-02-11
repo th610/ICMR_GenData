@@ -1,0 +1,33 @@
+{
+  "sample_index": 67,
+  "session_id": 879,
+  "gold_label": "Normal",
+  "situation": "I lost my job 8 months ago and I haven't been able to find anything. So as a result I have felt very",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997139573097229,
+    "all_probabilities": {
+      "normal": 0.9997139573097229,
+      "v1": 5.853320544702001e-05,
+      "v2": 4.7768033255124465e-05,
+      "v3": 6.637788465013728e-05,
+      "v4": 3.780785118578933e-05,
+      "v5": 7.554847979918122e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.8,
+    "generation_ms": 897.6,
+    "detection_ms": 25.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 927.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Reading and walking are great ways to spend time! When you feel stuck, it might help to mix in something new, like trying a hobby or learning something online. Have you thought about exploring any new interests or perhaps joining a virtual group related to something you enjoy?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

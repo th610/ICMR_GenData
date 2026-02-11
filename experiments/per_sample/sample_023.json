@@ -1,0 +1,33 @@
+{
+  "sample_index": 23,
+  "session_id": 774,
+  "gold_label": "Normal",
+  "situation": "Ive been trying to get with some of friends to hang out maybe just for a couple hours just to catch ",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997137188911438,
+    "all_probabilities": {
+      "normal": 0.9997137188911438,
+      "v1": 6.511889660032466e-05,
+      "v2": 4.041169449919835e-05,
+      "v3": 9.44739585975185e-05,
+      "v4": 3.653041130746715e-05,
+      "v5": 4.966022970620543e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 1.4,
+    "generation_ms": 833.8,
+    "detection_ms": 22.5,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 857.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's completely normal to have those concerns. You could approach it casually, maybe by asking if they’d like to grab lunch sometime soon. How do you feel about that approach? Or would you prefer to send a text just to check in first?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

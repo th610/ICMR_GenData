@@ -1,0 +1,85 @@
+{
+  "sample_index": 106,
+  "session_id": 1120,
+  "gold_label": "V1",
+  "situation": "i caught my boyfriend cheating with a friend",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.867511510848999,
+    "all_probabilities": {
+      "normal": 0.1304684430360794,
+      "v1": 0.867511510848999,
+      "v2": 0.0004411199188325554,
+      "v3": 0.0009775442304089665,
+      "v4": 0.0003938261652365327,
+      "v5": 0.00020750862313434482
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 5.3,
+    "generation_ms": 1045.2,
+    "detection_ms": 28.1,
+    "rewrite_total_ms": 4951.2,
+    "total_ms": 6029.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. How do you feel about discussing what you heard with him? It might also be helpful to take some time to reflect on your feelings before deciding how to proceed.",
+      "reasoning": "The original response made a hasty conclusion without adequately acknowledging the seeker's new key information about overhearing her boyfriend, and it included multiple questions and directives that could create confusion. I fixed it by acknowledging the seeker's uncertainty, asking a single clarifying question, and suggesting gentle next steps without assuming any missing facts.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9912103414535522,
+      "recheck_probabilities": {
+        "normal": 0.007989809848368168,
+        "v1": 0.9912103414535522,
+        "v2": 0.00012681991211138666,
+        "v3": 0.00035100270179100335,
+        "v4": 0.00022228930902201682,
+        "v5": 9.97154857032001e-05
+      },
+      "rewrite_ms": 1438.1
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to say to him if you decide to bring it up? Taking some time to reflect on your feelings might also help you find clarity.",
+      "reasoning": "The original response included a hasty conclusion about the seeker's feelings without fully acknowledging the new information about overhearing their boyfriend and did not include a single clarifying question. I fixed it by acknowledging their uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9530505537986755,
+      "recheck_probabilities": {
+        "normal": 0.045604169368743896,
+        "v1": 0.9530505537986755,
+        "v2": 0.00021223824296612293,
+        "v3": 0.000593479722738266,
+        "v4": 0.00035707454662770033,
+        "v5": 0.0001824497594498098
+      },
+      "rewrite_ms": 2018.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to ask him if you decide to talk about it? It might also be helpful to take some time to process your thoughts and feelings before bringing it up.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying their situation. I fixed it by first acknowledging the seeker's uncertainty and then asking a single clarifying question while offering gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.974789559841156,
+      "recheck_probabilities": {
+        "normal": 0.024140851572155952,
+        "v1": 0.974789559841156,
+        "v2": 0.0001525659899925813,
+        "v3": 0.0004914544988423586,
+        "v4": 0.0002946774766314775,
+        "v5": 0.00013094890164211392
+      },
+      "rewrite_ms": 1494.2
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

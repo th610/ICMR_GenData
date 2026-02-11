@@ -1,0 +1,33 @@
+{
+  "sample_index": 68,
+  "session_id": 577,
+  "gold_label": "Normal",
+  "situation": "My friend is using drugs",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996935129165649,
+    "all_probabilities": {
+      "normal": 0.9996935129165649,
+      "v1": 3.908140934072435e-05,
+      "v2": 4.058560080011375e-05,
+      "v3": 9.676894114818424e-05,
+      "v4": 4.29575884481892e-05,
+      "v5": 8.715814328752458e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 6.0,
+    "generation_ms": 1128.9,
+    "detection_ms": 29.2,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1164.2
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Balancing your desire to help with the reality of the situation can be really challenging. It’s great that you want to be there for her. Maybe you could think about what kind of support you feel comfortable offering while also setting boundaries for yourself. What do you think would feel right for you in that situation?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

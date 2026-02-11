@@ -1,0 +1,33 @@
+{
+  "sample_index": 46,
+  "session_id": 873,
+  "gold_label": "Normal",
+  "situation": "I had an argument with my parents over my girlfriend.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9992241859436035,
+    "all_probabilities": {
+      "normal": 0.9992241859436035,
+      "v1": 4.59549919469282e-05,
+      "v2": 0.0001172945776488632,
+      "v3": 0.000294955272693187,
+      "v4": 5.5588152463315055e-05,
+      "v5": 0.0002619511797092855
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.9,
+    "generation_ms": 904.3,
+    "detection_ms": 24.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 933.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's thoughtful of you to consider her feelings. It can be really challenging to navigate those dynamics. Have you two talked about how you might support each other through this situation?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

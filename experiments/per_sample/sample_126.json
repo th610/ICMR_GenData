@@ -1,0 +1,51 @@
+{
+  "sample_index": 126,
+  "session_id": 615,
+  "gold_label": "V1",
+  "situation": "I broke up with a guy. I still talk to him. He might want me back-not sure. There is another guy who",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9671593308448792,
+    "all_probabilities": {
+      "normal": 0.031505364924669266,
+      "v1": 0.9671593308448792,
+      "v2": 0.0002542107831686735,
+      "v3": 0.0006417526747100055,
+      "v4": 0.00032234337413683534,
+      "v5": 0.0001169939132523723
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.3,
+    "generation_ms": 933.0,
+    "detection_ms": 25.6,
+    "rewrite_total_ms": 1488.8,
+    "total_ms": 2451.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your ex's situation. Would it feel more comfortable for you to reach out to him directly to discuss this, or would you prefer to wait and see if you hear more from your friend? Perhaps taking some time to reflect on what you want to ask him could be helpful.",
+      "reasoning": "The original response made a hasty conclusion without adequately acknowledging the seeker's uncertainty about the situation with their ex. I fixed it by recognizing the seeker's uncertainty and asking a single clarifying question while also offering gentle next steps.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.963565468788147,
+      "recheck_probabilities": {
+        "normal": 0.963565468788147,
+        "v1": 0.03523634746670723,
+        "v2": 0.00018876312242355198,
+        "v3": 0.0006534321582876146,
+        "v4": 0.0002167457714676857,
+        "v5": 0.00013935388415120542
+      },
+      "rewrite_ms": 1488.8
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're feeling uncertain about your ex's situation. Would it feel more comfortable for you to reach out to him directly to discuss this, or would you prefer to wait and see if you hear more from your friend? Perhaps taking some time to reflect on what you want to ask him could be helpful.",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

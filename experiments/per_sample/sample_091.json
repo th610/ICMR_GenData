@@ -1,0 +1,51 @@
+{
+  "sample_index": 91,
+  "session_id": 364,
+  "gold_label": "V1",
+  "situation": "My husband and I are having a hard time communicating.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9238694310188293,
+    "all_probabilities": {
+      "normal": 0.07417713850736618,
+      "v1": 0.9238694310188293,
+      "v2": 0.000777381588704884,
+      "v3": 0.0005887266015633941,
+      "v4": 0.0004028998373541981,
+      "v5": 0.0001843276113504544
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.1,
+    "generation_ms": 796.5,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 1550.9,
+    "total_ms": 2377.4
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your husband's financial discussions, which can definitely impact trust in a relationship. Could you share what specific expenses you overheard that concerned you? It might be helpful to consider how you could approach the topic together when you feel ready.",
+      "reasoning": "The original response made a hasty conclusion by assuming the seeker was ready to confront their husband without fully exploring their feelings or concerns. I addressed the seeker's new information about financial uncertainty and included a clarifying question to better understand their situation, along with gentle next steps without assuming any facts.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.6803273558616638,
+      "recheck_probabilities": {
+        "normal": 0.6803273558616638,
+        "v1": 0.3165719211101532,
+        "v2": 0.0012174313887953758,
+        "v3": 0.0010028413962572813,
+        "v4": 0.0006024414906278253,
+        "v5": 0.00027801288524642587
+      },
+      "rewrite_ms": 1550.9
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're feeling uncertain about your husband's financial discussions, which can definitely impact trust in a relationship. Could you share what specific expenses you overheard that concerned you? It might be helpful to consider how you could approach the topic together when you feel ready.",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

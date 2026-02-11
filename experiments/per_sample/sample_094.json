@@ -1,0 +1,51 @@
+{
+  "sample_index": 94,
+  "session_id": 166,
+  "gold_label": "V1",
+  "situation": "AFTER BRAEKING UP WITH THE PARTNER I HAD LOT OF STRESS AND DEPRESSION IN MY LIFE .I WAS FACING REALL",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9200246334075928,
+    "all_probabilities": {
+      "normal": 0.07680976390838623,
+      "v1": 0.9200246334075928,
+      "v2": 0.0017743537900969386,
+      "v3": 0.0005814650794491172,
+      "v4": 0.0005593986134044826,
+      "v5": 0.0002503682626411319
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 3.2,
+    "generation_ms": 875.6,
+    "detection_ms": 28.5,
+    "rewrite_total_ms": 1526.6,
+    "total_ms": 2434.0
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to do about this situation? It could be helpful to explore your feelings further or consider how you can approach the situation with your partner.",
+      "reasoning": "The original response made a hasty conclusion without addressing the seeker's uncertainty about the overheard conversation. I revised the response to acknowledge the new information, posed a single clarifying question, and offered gentle next steps without making assumptions.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.6759412288665771,
+      "recheck_probabilities": {
+        "normal": 0.6759412288665771,
+        "v1": 0.3203418552875519,
+        "v2": 0.00154073943849653,
+        "v3": 0.000886234047356993,
+        "v4": 0.0008589744102209806,
+        "v5": 0.0004308970528654754
+      },
+      "rewrite_ms": 1526.6
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to do about this situation? It could be helpful to explore your feelings further or consider how you can approach the situation with your partner.",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

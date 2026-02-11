@@ -1,0 +1,68 @@
+{
+  "sample_index": 83,
+  "session_id": 744,
+  "gold_label": "V1",
+  "situation": "I am depressed because my girlfriend is thinking about leaving me.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9609369039535522,
+    "all_probabilities": {
+      "normal": 0.037341080605983734,
+      "v1": 0.9609369039535522,
+      "v2": 0.0005178491701371968,
+      "v3": 0.0008034108905121684,
+      "v4": 0.00024100074369926006,
+      "v5": 0.00015978014562278986
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 3.4,
+    "generation_ms": 753.3,
+    "detection_ms": 24.1,
+    "rewrite_total_ms": 2819.8,
+    "total_ms": 3600.8
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you overheard something that has left you feeling uncertain. How are you feeling about this new information? If you'd like, we can explore your feelings further or focus on your positive experiences with your new job.",
+      "reasoning": "The original response made a hasty conclusion without adequately addressing the seeker's uncertainty about the overheard information. I acknowledged the new key information about the seeker overhearing their ex potentially seeing someone else, asked a clarifying question about their feelings, and offered gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9781343340873718,
+      "recheck_probabilities": {
+        "normal": 0.020683661103248596,
+        "v1": 0.9781343340873718,
+        "v2": 0.0006316622602753341,
+        "v3": 0.0002607959904707968,
+        "v4": 0.00015926243213471025,
+        "v5": 0.00013027623936068267
+      },
+      "rewrite_ms": 1283.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you overheard something that has left you feeling uncertain. What specific snippets did you catch that made you feel this way? If you're comfortable, we can talk about how this might be affecting you, or we can focus on the positive aspects of your new job.",
+      "reasoning": "The original response jumped to addressing the user's feelings without directly acknowledging the new key information about the overheard conversation, which could lead to misunderstandings. I corrected it by first acknowledging the uncertainty expressed by the seeker and then asking a clarifying question while suggesting gentle next steps for exploration.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.6954268217086792,
+      "recheck_probabilities": {
+        "normal": 0.6954268217086792,
+        "v1": 0.3011741042137146,
+        "v2": 0.0019067871617153287,
+        "v3": 0.0006674120086245239,
+        "v4": 0.000472047773655504,
+        "v5": 0.0003528500092215836
+      },
+      "rewrite_ms": 1536.0
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you overheard something that has left you feeling uncertain. What specific snippets did you catch that made you feel this way? If you're comfortable, we can talk about how this might be affecting you, or we can focus on the positive aspects of your new job.",
+    "total_retries": 2,
+    "used_failsafe": false
+  }
+}

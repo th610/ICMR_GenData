@@ -1,0 +1,33 @@
+{
+  "sample_index": 44,
+  "session_id": 1202,
+  "gold_label": "Normal",
+  "situation": "My ex-boyfriend broke up with me because I was too jealous and I didn't trust him",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996925592422485,
+    "all_probabilities": {
+      "normal": 0.9996925592422485,
+      "v1": 6.5882399212569e-05,
+      "v2": 3.8585745642194524e-05,
+      "v3": 8.549370977561921e-05,
+      "v4": 3.917398498742841e-05,
+      "v5": 7.826960063539445e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.9,
+    "generation_ms": 831.5,
+    "detection_ms": 24.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 860.2
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "That sounds really challenging. It's great that you're trying to distract yourself. Would you like to talk about some specific activities you enjoy, or maybe explore new hobbies that could help keep your mind occupied?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

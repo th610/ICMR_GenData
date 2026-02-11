@@ -1,0 +1,33 @@
+{
+  "sample_index": 184,
+  "session_id": 962,
+  "gold_label": "V2",
+  "situation": "It the COVID that i lost my hope on building up my carrier in time.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9794031977653503,
+    "all_probabilities": {
+      "normal": 0.9794031977653503,
+      "v1": 0.0002567719202488661,
+      "v2": 0.0192567165941,
+      "v3": 0.0007046230020932853,
+      "v4": 0.00022652801999356598,
+      "v5": 0.0001522079255664721
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.5,
+    "generation_ms": 1122.2,
+    "detection_ms": 28.3,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1154.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "I can see how wanting clarity is important right now. Maybe it could help to weigh the pros and cons of each option? For instance, what benefits do you see in taking a temporary job versus starting your own business? Or, you could consider trying a combination of both, if that feels manageable for you.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

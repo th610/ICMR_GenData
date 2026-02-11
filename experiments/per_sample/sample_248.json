@@ -1,0 +1,33 @@
+{
+  "sample_index": 248,
+  "session_id": 59,
+  "gold_label": "V4",
+  "situation": "I had been terminated from a job that was in my field. I had to move back in with my parents.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.7591568231582642,
+    "all_probabilities": {
+      "normal": 0.7591568231582642,
+      "v1": 0.0005534559604711831,
+      "v2": 0.0007468730327673256,
+      "v3": 0.0008199463482014835,
+      "v4": 0.21898402273654938,
+      "v5": 0.01973884552717209
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.4,
+    "generation_ms": 790.8,
+    "detection_ms": 24.3,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 818.5
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's really hard to feel that way, and it's important to remember that everyone has imperfections. What are some things you've accomplished or enjoyed recently that make you feel good about yourself?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

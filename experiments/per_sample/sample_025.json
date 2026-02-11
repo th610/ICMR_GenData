@@ -1,0 +1,33 @@
+{
+  "sample_index": 25,
+  "session_id": 819,
+  "gold_label": "Normal",
+  "situation": "My current position will be eliminated within 6 months. I am very anxious and concerned that I will ",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996585845947266,
+    "all_probabilities": {
+      "normal": 0.9996585845947266,
+      "v1": 0.00011294530122540891,
+      "v2": 3.6464040022110566e-05,
+      "v3": 0.00010684008157113567,
+      "v4": 3.997129533672705e-05,
+      "v5": 4.525869735516608e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.9,
+    "generation_ms": 839.2,
+    "detection_ms": 27.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 870.7
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's great to hear you're exploring project management and freelance opportunities! Those can be exciting paths. What do you think might be the first step you could take towards applying for one of these roles? Maybe updating your resume or reaching out to someone in the field for advice?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

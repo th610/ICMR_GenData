@@ -1,0 +1,33 @@
+{
+  "sample_index": 87,
+  "session_id": 756,
+  "gold_label": "V1",
+  "situation": "I have to give an important presentation for my academic career and I am stressed about public speak",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8529461622238159,
+    "all_probabilities": {
+      "normal": 0.8529461622238159,
+      "v1": 0.14551402628421783,
+      "v2": 0.00042240144102834165,
+      "v3": 0.0004678189870901406,
+      "v4": 0.0005152291851118207,
+      "v5": 0.000134359608637169
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.2,
+    "generation_ms": 1349.6,
+    "detection_ms": 27.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1382.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It makes sense to feel uncertain about that. Maybe you could reach out to your instructor or check the course syllabus for more details? Understanding the grading criteria might help ease some of your stress. How do you feel about approaching them for clarification?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

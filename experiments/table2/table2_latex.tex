@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\caption{Model vs LLM-Judge Classification Comparison}
+\label{tab:model-judge}
+\begin{tabular}{lcc}
+\toprule
+Metric & Detection Model & LLM-Judge \\
+\midrule
+Accuracy & 1.0000 & 0.6033 \\
+Macro F1 & 1.0000 & 0.4941 \\
+Latency (ms) & 27.7 & 459.8 \\
+\midrule
+F1 (NORMAL) & 1.0000 & 0.6491 \\
+F1 (V1) & 1.0000 & 0.0392 \\
+F1 (V2) & 1.0000 & 0.8276 \\
+F1 (V3) & 1.0000 & 0.0000 \\
+F1 (V4) & 1.0000 & 0.6038 \\
+F1 (V5) & 1.0000 & 0.8451 \\
+\midrule
+Agreement Rate & \multicolumn{2}{c}{0.6033} \\
+Cohen's $\kappa$ & \multicolumn{2}{c}{0.4971} \\
+\bottomrule
+\end{tabular}
+\end{table}

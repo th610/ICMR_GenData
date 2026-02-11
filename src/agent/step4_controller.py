@@ -167,8 +167,8 @@ Output format (JSON):
             return {'type': 'accept'}
         
         # Confidence가 너무 낮으면 (borderline case) accept
-        # 예: 25% 미만이면 모델이 확신하지 못하는 것
-        # if confidence < 0.25:
+        # 캘리브레이션 후 threshold 설정 예정
+        # if confidence < 0.30:
         #     return {'type': 'accept'}
         
         # 위반 발견 → rewrite 시도

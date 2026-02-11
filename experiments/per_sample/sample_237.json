@@ -1,0 +1,33 @@
+{
+  "sample_index": 237,
+  "session_id": 1088,
+  "gold_label": "V2",
+  "situation": "I broke up with my girlfriend since we didn't have chemistry and now I feel alone.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9838607311248779,
+    "all_probabilities": {
+      "normal": 0.9838607311248779,
+      "v1": 0.00020621748990379274,
+      "v2": 0.015165220946073532,
+      "v3": 0.00043765167356468737,
+      "v4": 0.00015773891936987638,
+      "v5": 0.00017239517183043063
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.2,
+    "generation_ms": 1060.9,
+    "detection_ms": 25.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1090.2
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's understandable to have those fears. Maybe you could start by sharing a lighter version of your feelings, like mentioning that you've been feeling lonely since the breakup. How does that sound to you? Or, if you prefer, you could write down your thoughts beforehand to help organize what you want to say.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sample_index": 246,
+  "session_id": 843,
+  "gold_label": "V4",
+  "situation": "My parents are always telling me I should be disciplining my children differently.  Things are diffe",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9990997314453125,
+    "all_probabilities": {
+      "normal": 0.9990997314453125,
+      "v1": 6.45541658741422e-05,
+      "v2": 6.615179881919175e-05,
+      "v3": 9.05371707631275e-05,
+      "v4": 0.00011811979493359104,
+      "v5": 0.0005610034568235278
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.4,
+    "generation_ms": 999.0,
+    "detection_ms": 24.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1027.3
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's really tough to feel that way, especially when you're doing your best. Have you had a chance to share your worries with your parents? Sometimes expressing how their words make you feel can open up a different conversation.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

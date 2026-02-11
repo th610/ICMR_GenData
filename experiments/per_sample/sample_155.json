@@ -1,0 +1,33 @@
+{
+  "sample_index": 155,
+  "session_id": 35,
+  "gold_label": "V3",
+  "situation": "Its not even a break up, my girlfriend wants space after 5 years, she wants to rent a room on her ow",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8643816709518433,
+    "all_probabilities": {
+      "normal": 0.8643816709518433,
+      "v1": 0.00048732644063420594,
+      "v2": 0.0006257941713556647,
+      "v3": 0.13353689014911652,
+      "v4": 0.00033910301863215864,
+      "v5": 0.0006292250473052263
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.7,
+    "generation_ms": 1436.8,
+    "detection_ms": 26.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1468.5
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s a tough decision to make, and it’s great that you’re considering both options. One way to approach this might be to think about what feels most aligned with your needs right now. Would you prefer to give her some space and see how that affects you, or do you feel a need to connect with her more actively? You could also consider having a conversation where you express how you’re feeling about her wanting space while still being there for her. How does that sound to you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

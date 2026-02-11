@@ -1,0 +1,33 @@
+{
+  "sample_index": 226,
+  "session_id": 39,
+  "gold_label": "V2",
+  "situation": "I have been recently laid out because of COVID-19 and not solved yet.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.6708966493606567,
+    "all_probabilities": {
+      "normal": 0.6708966493606567,
+      "v1": 0.0017939277458935976,
+      "v2": 0.18213653564453125,
+      "v3": 0.1424039751291275,
+      "v4": 0.0016914540901780128,
+      "v5": 0.0010774590773507953
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.9,
+    "generation_ms": 1245.5,
+    "detection_ms": 30.1,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1280.5
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're at a crossroads, which can be tough. One option is to focus on local jobs where you can quickly apply and potentially interview, which might relieve some of the immediate pressure. Another option could be to explore remote opportunities that might widen your search. How do you feel about either of these paths? Would you like to brainstorm some specific job types or companies to target?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

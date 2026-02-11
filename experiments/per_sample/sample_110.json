@@ -1,0 +1,51 @@
+{
+  "sample_index": 110,
+  "session_id": 1150,
+  "gold_label": "V1",
+  "situation": "My friends and family do not really pay attention to me unless they need me to solve a problem. I am",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.8787412643432617,
+    "all_probabilities": {
+      "normal": 0.11936784535646439,
+      "v1": 0.8787412643432617,
+      "v2": 0.0010530287399888039,
+      "v3": 0.00030750641599297523,
+      "v4": 0.0003610925341490656,
+      "v5": 0.00016931879508774728
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.3,
+    "generation_ms": 2640.9,
+    "detection_ms": 26.1,
+    "rewrite_total_ms": 1207.3,
+    "total_ms": 3878.6
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about how your grandchild is doing. What specific concerns do you have about their feelings at school? Gently letting them know you're there to listen could help, and perhaps you might consider sharing a bit about your own experiences to encourage them to open up.",
+      "reasoning": "The original response jumped to conclusions without fully understanding the seeker's situation regarding their grandchild's feelings. I acknowledged the uncertainty and asked a clarifying question to gather more information before suggesting next steps.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.6249524354934692,
+      "recheck_probabilities": {
+        "normal": 0.6249524354934692,
+        "v1": 0.37297600507736206,
+        "v2": 0.0006147384410724044,
+        "v3": 0.0006611517164856195,
+        "v4": 0.0005007458967156708,
+        "v5": 0.00029487701249308884
+      },
+      "rewrite_ms": 1207.3
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're feeling uncertain about how your grandchild is doing. What specific concerns do you have about their feelings at school? Gently letting them know you're there to listen could help, and perhaps you might consider sharing a bit about your own experiences to encourage them to open up.",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

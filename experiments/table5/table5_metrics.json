@@ -1,0 +1,60 @@
+{
+  "counsel_chat": {
+    "n_total": 2749,
+    "n_errors": 0,
+    "n_correct": 2145,
+    "n_false_positive": 604,
+    "false_positive_rate": 0.2197,
+    "specificity": 0.7803,
+    "fp_type_distribution": {
+      "v4": 112,
+      "v2": 430,
+      "v1": 35,
+      "v5": 18,
+      "v3": 9
+    },
+    "normal_confidence_mean": 0.92,
+    "normal_confidence_min": 0.3441,
+    "fp_confidence_mean": 0.7315,
+    "fp_confidence_max": 0.9989,
+    "latency_mean_ms": 7.8,
+    "latency_p95_ms": 8.9
+  },
+  "empathetic": {
+    "n_total": 4,
+    "n_errors": 0,
+    "n_correct": 3,
+    "n_false_positive": 1,
+    "false_positive_rate": 0.25,
+    "specificity": 0.75,
+    "fp_type_distribution": {
+      "v4": 1
+    },
+    "normal_confidence_mean": 0.7586,
+    "normal_confidence_min": 0.559,
+    "fp_confidence_mean": 0.7106,
+    "fp_confidence_max": 0.7106,
+    "latency_mean_ms": 7.0,
+    "latency_p95_ms": 8.0
+  },
+  "esconv": {
+    "n_total": 1300,
+    "n_errors": 0,
+    "n_correct": 1090,
+    "n_false_positive": 210,
+    "false_positive_rate": 0.1615,
+    "specificity": 0.8385,
+    "fp_type_distribution": {
+      "v2": 154,
+      "v4": 53,
+      "v1": 2,
+      "v5": 1
+    },
+    "normal_confidence_mean": 0.9511,
+    "normal_confidence_min": 0.3913,
+    "fp_confidence_mean": 0.7967,
+    "fp_confidence_max": 0.9991,
+    "latency_mean_ms": 8.4,
+    "latency_p95_ms": 8.8
+  }
+}

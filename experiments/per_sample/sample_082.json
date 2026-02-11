@@ -1,0 +1,51 @@
+{
+  "sample_index": 82,
+  "session_id": 757,
+  "gold_label": "V1",
+  "situation": "My partner was seeing someone else on the side",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9781589508056641,
+    "all_probabilities": {
+      "normal": 0.015512045472860336,
+      "v1": 0.9781589508056641,
+      "v2": 0.0055802930146455765,
+      "v3": 0.0002644053311087191,
+      "v4": 0.00036329770227894187,
+      "v5": 0.00012093263649148867
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 970.5,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 1197.6,
+    "total_ms": 2198.1
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain after overhearing that conversation. What specific part of it left you feeling confused? Talking about your feelings can sometimes help, or we can explore what you might want to do next.",
+      "reasoning": "The original response made a hasty conclusion by assuming the seeker was confused without fully acknowledging their uncertainty about the overheard conversation. I revised it to recognize their confusion while also asking a single clarifying question and offering gentle next steps without making assumptions.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.5300420522689819,
+      "recheck_probabilities": {
+        "normal": 0.5300420522689819,
+        "v1": 0.46579065918922424,
+        "v2": 0.0024361920077353716,
+        "v3": 0.0007754419930279255,
+        "v4": 0.0005957521498203278,
+        "v5": 0.00035988891613669693
+      },
+      "rewrite_ms": 1197.6
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're feeling uncertain after overhearing that conversation. What specific part of it left you feeling confused? Talking about your feelings can sometimes help, or we can explore what you might want to do next.",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

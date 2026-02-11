@@ -1,0 +1,85 @@
+{
+  "sample_index": 176,
+  "session_id": 96,
+  "gold_label": "V3",
+  "situation": "I had my heart set on a Veterinary Technology program at a particular school and I just found out th",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.905861496925354,
+    "all_probabilities": {
+      "normal": 0.0924757719039917,
+      "v1": 0.00043969962280243635,
+      "v2": 0.0003183521330356598,
+      "v3": 0.905861496925354,
+      "v4": 0.00023400077770929784,
+      "v5": 0.0006707768188789487
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 3.8,
+    "generation_ms": 1187.7,
+    "detection_ms": 26.2,
+    "rewrite_total_ms": 4238.2,
+    "total_ms": 5456.0
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure, and that's completely understandable. To help you decide, you might try the following steps: 1) Write down the pros and cons of applying to a different school and looking for a job with animals. 2) Reflect on which option aligns better with your long-term goals. 3) Consider talking to someone who has experience in either path for more insight.",
+      "reasoning": "The original response violated the counseling guidelines by focusing solely on empathy and validation without providing any practical help. I retained a brief empathic statement and added a concrete help element in the form of a short 2–3 step guide to assist the seeker in making their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9925534129142761,
+      "recheck_probabilities": {
+        "normal": 0.006628223229199648,
+        "v1": 0.0001433853030903265,
+        "v2": 0.00023922666150610894,
+        "v3": 0.9925534129142761,
+        "v4": 9.028134809341282e-05,
+        "v5": 0.00034538874751888216
+      },
+      "rewrite_ms": 1614.8
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure, and that's completely understandable. To help you decide, you might write down the pros and cons of each option and see which one resonates more with your long-term goals.",
+      "reasoning": "The original response included excessive empathy without providing practical help, which led to a violation. I retained one empathic sentence and added a concrete step to guide the seeker in their decision-making process.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9964510202407837,
+      "recheck_probabilities": {
+        "normal": 0.003031395375728607,
+        "v1": 0.0001002754142973572,
+        "v2": 0.00012368762691039592,
+        "v3": 0.9964510202407837,
+        "v4": 7.04347767168656e-05,
+        "v5": 0.00022317749971989542
+      },
+      "rewrite_ms": 1208.5
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure, and that's completely understandable. To help you decide, you could write down the pros and cons of each option, talk to someone who has experience in both areas, and then choose the path that feels right for you.",
+      "reasoning": "The original response was mainly empathetic without providing practical help as requested by the seeker. I maintained one brief empathy sentence and added a concrete help element by offering a short guide to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9915950894355774,
+      "recheck_probabilities": {
+        "normal": 0.007593844551593065,
+        "v1": 0.00015036386321298778,
+        "v2": 0.0002646362117957324,
+        "v3": 0.9915950894355774,
+        "v4": 0.00010549194848863408,
+        "v5": 0.000290524068986997
+      },
+      "rewrite_ms": 1414.9
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sample_index": 9,
+  "session_id": 826,
+  "gold_label": "Normal",
+  "situation": "my boss does not care about my and there is no guidance complete ignorance due to the fact that I am",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997057318687439,
+    "all_probabilities": {
+      "normal": 0.9997057318687439,
+      "v1": 9.841475548455492e-05,
+      "v2": 4.288807394914329e-05,
+      "v3": 7.734842802165076e-05,
+      "v4": 3.4482112823752686e-05,
+      "v5": 4.111200905754231e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.4,
+    "generation_ms": 874.5,
+    "detection_ms": 27.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 906.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "That's a great starting point. You could try framing it by expressing your commitment to the team and then sharing how your current workload is affecting your motivation and well-being. Would you like to practice phrasing it together, or maybe outline some specific examples of your contributions that you feel are being overlooked?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

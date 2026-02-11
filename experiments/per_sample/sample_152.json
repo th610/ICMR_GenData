@@ -1,0 +1,33 @@
+{
+  "sample_index": 152,
+  "session_id": 94,
+  "gold_label": "V3",
+  "situation": "I was dating this guy for about a month or so, and everything had been going well. It was my first r",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9379940032958984,
+    "all_probabilities": {
+      "normal": 0.9379940032958984,
+      "v1": 0.0004652047355193645,
+      "v2": 0.00032332856790162623,
+      "v3": 0.06039945036172867,
+      "v4": 0.000259840686339885,
+      "v5": 0.0005580674041993916
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.7,
+    "generation_ms": 1014.9,
+    "detection_ms": 28.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1048.5
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Taking a day to think it over can be really helpful. It gives you time to reflect on your feelings and how you want to respond. You might even consider jotting down your thoughts about the conversation you’d like to have, or how you feel about him now. How does that sound to you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

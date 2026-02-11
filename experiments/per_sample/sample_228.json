@@ -1,0 +1,33 @@
+{
+  "sample_index": 228,
+  "session_id": 925,
+  "gold_label": "V2",
+  "situation": "I breakup with my girlfriend because she cheated me",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8702448606491089,
+    "all_probabilities": {
+      "normal": 0.8702448606491089,
+      "v1": 0.00056001654593274,
+      "v2": 0.12706640362739563,
+      "v3": 0.001215464319102466,
+      "v4": 0.0005501603591255844,
+      "v5": 0.00036318792263045907
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.7,
+    "generation_ms": 973.5,
+    "detection_ms": 25.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1002.3
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Let's break it down into smaller steps to make it feel more manageable. First, how about starting with updating your resume? You could also consider reaching out to your network or any contacts you have for potential job leads. Would you prefer to focus on updating your resume first, or would you like help brainstorming where to look for job listings?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

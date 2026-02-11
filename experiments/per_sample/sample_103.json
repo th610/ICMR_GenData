@@ -1,0 +1,33 @@
+{
+  "sample_index": 103,
+  "session_id": 419,
+  "gold_label": "V1",
+  "situation": "Constantly arguing with my best friend, we never see eye to eye on important things on my life.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.978532075881958,
+    "all_probabilities": {
+      "normal": 0.978532075881958,
+      "v1": 0.0207531675696373,
+      "v2": 0.00010859111353056505,
+      "v3": 0.00019799980509560555,
+      "v4": 0.00026309327222406864,
+      "v5": 0.0001451552816433832
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.6,
+    "generation_ms": 787.3,
+    "detection_ms": 26.7,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 819.7
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like there might be a lot on both of your minds. Have you thought about talking to her about how you're feeling? Sometimes having an open conversation can really help clear the air and strengthen your friendship.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

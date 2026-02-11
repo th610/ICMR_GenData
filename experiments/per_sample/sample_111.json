@@ -1,0 +1,85 @@
+{
+  "sample_index": 111,
+  "session_id": 487,
+  "gold_label": "V1",
+  "situation": "I can not seem to find a job no matter how hard I try. My last job was cut short because of all the ",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9912207722663879,
+    "all_probabilities": {
+      "normal": 0.008268030360341072,
+      "v1": 0.9912207722663879,
+      "v2": 9.704083640826866e-05,
+      "v3": 0.00017738174938131124,
+      "v4": 0.00017671579553280026,
+      "v5": 6.0185739130247384e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 5.8,
+    "generation_ms": 1176.3,
+    "detection_ms": 27.8,
+    "rewrite_total_ms": 4317.6,
+    "total_ms": 5527.7
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about those rumors, especially when you're actively seeking work. Have you thought about reaching out to any specific managers or coworkers to gather more information about their hiring status? It might also be useful to keep an eye on job postings to see if anything changes.",
+      "reasoning": "The original response made a hasty conclusion without fully acknowledging the seeker's uncertainty about whether the rumor is true or not. I rephrased the response to recognize the seeker's new information and asked a clarifying question to better understand their perspective.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9965925812721252,
+      "recheck_probabilities": {
+        "normal": 0.003027619095519185,
+        "v1": 0.9965925812721252,
+        "v2": 9.11025344976224e-05,
+        "v3": 0.0001282150624319911,
+        "v4": 0.00011652390821836889,
+        "v5": 4.3940890464000404e-05
+      },
+      "rewrite_ms": 1464.9
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about those rumors regarding hiring status. Have you thought about sharing this concern with others who might have insights? Keeping an eye on job postings could also help you stay informed about any changes.",
+      "reasoning": "The original response made assumptions about the seeker's understanding of the situation without acknowledging their uncertainty and included multiple questions and suggestions. I fixed this by acknowledging their concern, asking one clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.997683048248291,
+      "recheck_probabilities": {
+        "normal": 0.001988567877560854,
+        "v1": 0.997683048248291,
+        "v2": 8.725238149054348e-05,
+        "v3": 0.00010430529800942168,
+        "v4": 9.924304322339594e-05,
+        "v5": 3.759942774195224e-05
+      },
+      "rewrite_ms": 1383.0
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about those rumors regarding hiring status. Have you been able to discuss this with anyone else who might have insights? It might be helpful to keep an eye on job postings and reach out to your network for any updates.",
+      "reasoning": "The original response jumped to conclusions without fully acknowledging the user's uncertainty about the hiring situation and lacked a clarifying question. I revised it to explicitly recognize the user's concern and included a single clarifying question to invite further dialogue.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9987047910690308,
+      "recheck_probabilities": {
+        "normal": 0.0010086107067763805,
+        "v1": 0.9987047910690308,
+        "v2": 7.67179299145937e-05,
+        "v3": 9.500198211753741e-05,
+        "v4": 7.97134853200987e-05,
+        "v5": 3.5126104194205254e-05
+      },
+      "rewrite_ms": 1469.7
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

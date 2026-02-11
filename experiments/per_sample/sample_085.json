@@ -1,0 +1,85 @@
+{
+  "sample_index": 85,
+  "session_id": 493,
+  "gold_label": "V1",
+  "situation": "I will be losing my job in January.  I am very worried about looking for another one at this time.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9230712056159973,
+    "all_probabilities": {
+      "normal": 0.07552983611822128,
+      "v1": 0.9230712056159973,
+      "v2": 0.0006447686464525759,
+      "v3": 0.0002813016762956977,
+      "v4": 0.00034613601746968925,
+      "v5": 0.00012675474863499403
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 6.1,
+    "generation_ms": 812.9,
+    "detection_ms": 28.1,
+    "rewrite_total_ms": 3717.4,
+    "total_ms": 4564.7
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel anxious with uncertainty about potential layoffs. How are you currently feeling about the rumors you've heard? It might be helpful to talk through your thoughts or consider reaching out to someone you trust at work for more information.",
+      "reasoning": "The original response was too broad and did not directly acknowledge the seeker's new information regarding the layoffs rumor. I fixed it by specifically recognizing their uncertainty and asking a single clarifying question, while also offering gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9534708857536316,
+      "recheck_probabilities": {
+        "normal": 0.04532846808433533,
+        "v1": 0.9534708857536316,
+        "v2": 0.0004700247081927955,
+        "v3": 0.00024856042000465095,
+        "v4": 0.0003278786316514015,
+        "v5": 0.0001542565441923216
+      },
+      "rewrite_ms": 1291.4
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It's concerning to hear about the rumors of potential layoffs. How are you feeling about the uncertainty? It might be helpful to talk through your thoughts, and perhaps consider discussing this with someone you trust at work if you feel comfortable.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully acknowledging the uncertainty they expressed regarding the layoffs. I fixed it by acknowledging their concern and asking a clarifying question to invite further exploration of their thoughts, followed by gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9734385013580322,
+      "recheck_probabilities": {
+        "normal": 0.025738755241036415,
+        "v1": 0.9734385013580322,
+        "v2": 0.00026841426733881235,
+        "v3": 0.00019963869999628514,
+        "v4": 0.00024868574109859765,
+        "v5": 0.00010609831952024251
+      },
+      "rewrite_ms": 1243.3
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It's concerning to hear about the rumors of potential layoffs. How does this uncertainty make you feel? It might help to talk through your thoughts with someone you trust, or you could consider keeping an eye on any official communications from your workplace.",
+      "reasoning": "The original response jumped to conclusions about the user's feelings without fully exploring their uncertainty regarding the layoffs. I corrected it by acknowledging the user's new information, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9899049401283264,
+      "recheck_probabilities": {
+        "normal": 0.009542286396026611,
+        "v1": 0.9899049401283264,
+        "v2": 0.00021934954565949738,
+        "v3": 0.00012837226677220315,
+        "v4": 0.000145262703881599,
+        "v5": 5.9753550885943696e-05
+      },
+      "rewrite_ms": 1182.7
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

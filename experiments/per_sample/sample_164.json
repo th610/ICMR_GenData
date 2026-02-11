@@ -1,0 +1,85 @@
+{
+  "sample_index": 164,
+  "session_id": 170,
+  "gold_label": "V3",
+  "situation": "I'm failing my classes and I'm on scholarship",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.8225551247596741,
+    "all_probabilities": {
+      "normal": 0.17506182193756104,
+      "v1": 0.0008111153147183359,
+      "v2": 0.0004968103021383286,
+      "v3": 0.8225551247596741,
+      "v4": 0.0005628417711704969,
+      "v5": 0.0005122997681610286
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 3.8,
+    "generation_ms": 1137.6,
+    "detection_ms": 26.0,
+    "rewrite_total_ms": 4259.5,
+    "total_ms": 5427.2
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure with the upcoming gathering. One option could be to share a little about your struggles without going into too much detail, or you could wait until you feel more comfortable with your situation before discussing it. Which option feels more manageable for you?",
+      "reasoning": "The original response violated the counseling guidelines by providing empathy only and not addressing the seeker's explicit request for practical help regarding their situation with their family. I added a concrete help element by providing two options, which gives the seeker a clear choice and practical direction.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9892104864120483,
+      "recheck_probabilities": {
+        "normal": 0.009990113787353039,
+        "v1": 0.0002654461422935128,
+        "v2": 0.00016883874195627868,
+        "v3": 0.9892104864120483,
+        "v4": 0.00018668474513106048,
+        "v5": 0.00017837823543231934
+      },
+      "rewrite_ms": 1434.8
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure with the upcoming gathering. You might consider sharing a little about your struggles without going into too much detail, or you could wait until you feel more comfortable with your situation before discussing it. Which option feels more manageable for you?",
+      "reasoning": "The original response provided only empathy and did not offer practical help as requested by the seeker. I added a concrete option for the seeker to consider regarding how to approach the conversation with their family, while still including a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.8951704502105713,
+      "recheck_probabilities": {
+        "normal": 0.10256452113389969,
+        "v1": 0.0007602038676850498,
+        "v2": 0.000525760930031538,
+        "v3": 0.8951704502105713,
+        "v4": 0.00047783914487808943,
+        "v5": 0.0005012687761336565
+      },
+      "rewrite_ms": 1297.2
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure with the upcoming gathering. You could either share a little about your struggles without going into too much detail, or wait until you feel more comfortable with your situation before discussing it. Which option feels more manageable for you?",
+      "reasoning": "The original supporter response was primarily empathetic and did not provide practical help as explicitly requested by the seeker. I maintained a brief validation sentence while incorporating a concrete help element by providing two options for the seeker to consider regarding their discussion with their family.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9964872598648071,
+      "recheck_probabilities": {
+        "normal": 0.002977837808430195,
+        "v1": 0.0001725977344904095,
+        "v2": 0.00013898129691369832,
+        "v3": 0.9964872598648071,
+        "v4": 0.00010683499567676336,
+        "v5": 0.00011650958913378417
+      },
+      "rewrite_ms": 1527.5
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

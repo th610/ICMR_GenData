@@ -1,0 +1,85 @@
+{
+  "sample_index": 209,
+  "session_id": 491,
+  "gold_label": "V2",
+  "situation": "I am 50 and returning to school because I am out of work.  I am, having a very tough time.",
+  "initial_detection": {
+    "predicted_label": "v2",
+    "confidence": 0.5225483775138855,
+    "all_probabilities": {
+      "normal": 0.4712069034576416,
+      "v1": 0.0010824856581166387,
+      "v2": 0.5225483775138855,
+      "v3": 0.003926272504031658,
+      "v4": 0.0007584164850413799,
+      "v5": 0.0004775560519192368
+    },
+    "severity": 2
+  },
+  "timing": {
+    "context_build_ms": 3.6,
+    "generation_ms": 1036.6,
+    "detection_ms": 25.2,
+    "rewrite_total_ms": 4483.2,
+    "total_ms": 5548.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v2",
+      "rewritten_text": "It sounds like you're in a tough spot trying to balance both your studies and supporting your kids. You might consider either dedicating certain times to focus on your studies or perhaps helping your kids with their work first and then studying afterward. Which option do you feel could work better for you?",
+      "reasoning": "The original response contained commanding language that removed the user's autonomy by suggesting they 'set specific times' and implying they should create a schedule. I fixed it by offering two supportive options and asking a single preference question to allow the seeker to choose how they want to approach their situation.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.9033660292625427,
+      "recheck_probabilities": {
+        "normal": 0.09099290519952774,
+        "v1": 0.0007020515040494502,
+        "v2": 0.9033660292625427,
+        "v3": 0.003970343619585037,
+        "v4": 0.0006794063374400139,
+        "v5": 0.00028927921084687114
+      },
+      "rewrite_ms": 1414.3
+    },
+    {
+      "retry": 2,
+      "violation": "v2",
+      "rewritten_text": "It sounds like you're in a tough spot trying to balance both your studies and supporting your kids. You could try setting aside specific times dedicated to your studies, or you might focus on helping your kids with their work first and study afterward. Which of these approaches resonates more with you?",
+      "reasoning": "The original response contained language that could be interpreted as commanding or directive, suggesting the seeker must choose one of the options presented. I corrected it by reframing the options in a more supportive and autonomy-respecting manner, offering two realistic alternatives while inviting the seeker to express their preference.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.72663813829422,
+      "recheck_probabilities": {
+        "normal": 0.26808133721351624,
+        "v1": 0.0009205152746289968,
+        "v2": 0.72663813829422,
+        "v3": 0.003096112050116062,
+        "v4": 0.0008885919232852757,
+        "v5": 0.00037531598354689777
+      },
+      "rewrite_ms": 1562.4
+    },
+    {
+      "retry": 3,
+      "violation": "v2",
+      "rewritten_text": "It sounds like you’re navigating a challenging balance between your studies and supporting your kids. One option could be to dedicate specific times for your studies, while another might be to assist your kids with their work first and then focus on your studies afterward. Which of these options feels more manageable for you?",
+      "reasoning": "The original response contained commanding language by implying that the seeker should follow one of the suggested approaches, which could undermine their autonomy. I rephrased the response to present two options in a supportive manner and included a single preference question to encourage the seeker to reflect on their own needs.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.7937448024749756,
+      "recheck_probabilities": {
+        "normal": 0.20074082911014557,
+        "v1": 0.0008782966760918498,
+        "v2": 0.7937448024749756,
+        "v3": 0.0034573543816804886,
+        "v4": 0.0007637690869159997,
+        "v5": 0.0004149503947701305
+      },
+      "rewrite_ms": 1506.4
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 상황이시군요. 어떻게 하고 싶으신가요? 제가 도움이 될 수 있는 부분이 있을까요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

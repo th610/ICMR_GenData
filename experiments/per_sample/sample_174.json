@@ -1,0 +1,85 @@
+{
+  "sample_index": 174,
+  "session_id": 520,
+  "gold_label": "V3",
+  "situation": "My pet died last week and I also failed my exam",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.8209689259529114,
+    "all_probabilities": {
+      "normal": 0.17627644538879395,
+      "v1": 0.00047169573372229934,
+      "v2": 0.001072708168067038,
+      "v3": 0.8209689259529114,
+      "v4": 0.0006445487379096448,
+      "v5": 0.0005656679277308285
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.6,
+    "generation_ms": 989.9,
+    "detection_ms": 23.7,
+    "rewrite_total_ms": 5588.3,
+    "total_ms": 6606.7
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between these important aspects of your life right now. One approach could be to: 1) Set aside 15-30 minutes each day to remember your dog and process your feelings, 2) Dedicate specific blocks of time for focused study, and 3) Check in with yourself at the end of each day to see how you’re feeling about both. How does that sound?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, which created a violation. I retained a brief empathetic statement and added a short 2–3 step guide to help the seeker manage their time between grieving and studying.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9568787813186646,
+      "recheck_probabilities": {
+        "normal": 0.04113217815756798,
+        "v1": 0.00029856085893698037,
+        "v2": 0.0008945992449298501,
+        "v3": 0.9568787813186646,
+        "v4": 0.0004885403322987258,
+        "v5": 0.0003073867119383067
+      },
+      "rewrite_ms": 2224.4
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between these important aspects of your life right now. One way to approach this could be to: 1) Set aside a specific time to remember your dog and process your feelings, and 2) Create a study schedule that allows you to focus on your exam preparation. How does that sound?",
+      "reasoning": "The original response primarily focused on empathy without providing practical help, violating the guideline. I retained a brief empathy statement and added a short 2–3 step guide to help the seeker manage their time between grieving and studying.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9455313682556152,
+      "recheck_probabilities": {
+        "normal": 0.05205877125263214,
+        "v1": 0.0003872607776429504,
+        "v2": 0.0010055797174572945,
+        "v3": 0.9455313682556152,
+        "v4": 0.000666350475512445,
+        "v5": 0.00035068352008238435
+      },
+      "rewrite_ms": 1780.3
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between these important aspects of your life right now. One way to approach this could be to: 1) Set aside a specific time to remember your dog and process your feelings, and 2) Create a study schedule that allows you to focus on your exam preparation. Would that help you balance both?",
+      "reasoning": "The original response focused solely on empathy and validation without providing practical help, which is a violation of the counseling guidelines. I added a concrete help element by providing a short 2-3 step guide while keeping a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.7623130083084106,
+      "recheck_probabilities": {
+        "normal": 0.23422782123088837,
+        "v1": 0.0005781879299320281,
+        "v2": 0.0014797910116612911,
+        "v3": 0.7623130083084106,
+        "v4": 0.0007238378748297691,
+        "v5": 0.0006774576613679528
+      },
+      "rewrite_ms": 1583.6
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

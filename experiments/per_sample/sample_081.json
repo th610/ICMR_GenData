@@ -1,0 +1,85 @@
+{
+  "sample_index": 81,
+  "session_id": 964,
+  "gold_label": "V1",
+  "situation": "I have to get a new job soon but it has been a year since I worked like that.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.6780511140823364,
+    "all_probabilities": {
+      "normal": 0.31995725631713867,
+      "v1": 0.6780511140823364,
+      "v2": 0.000690700369887054,
+      "v3": 0.0006320878164842725,
+      "v4": 0.00047316745622083545,
+      "v5": 0.00019569377764128149
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.8,
+    "generation_ms": 945.0,
+    "detection_ms": 26.2,
+    "rewrite_total_ms": 4078.7,
+    "total_ms": 5055.0
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like there's some uncertainty that might be weighing on you. What do you think her main concerns might be? Having an open conversation about these feelings could help clarify things, and sharing your own feelings and commitment might also be beneficial.",
+      "reasoning": "The original response made a hasty conclusion by not fully acknowledging the seeker's uncertainty about their partner's feelings. I fixed it by first recognizing the seeker's new information and then asking a single clarifying question before suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9617881178855896,
+      "recheck_probabilities": {
+        "normal": 0.037275463342666626,
+        "v1": 0.9617881178855896,
+        "v2": 0.0001821280748117715,
+        "v3": 0.00031937655876390636,
+        "v4": 0.0003132222918793559,
+        "v5": 0.00012163205974502489
+      },
+      "rewrite_ms": 1272.3
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like there are some uncertainties that might be weighing on you. What do you think her main concerns are regarding your future together? Having an open conversation about these feelings could help clarify things, and sharing your own feelings and commitment might also be helpful.",
+      "reasoning": "The original response made a hasty conclusion about the situation without fully acknowledging the new information provided by the seeker. I have revised it to acknowledge the uncertainty and ask a specific clarifying question while suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9415378570556641,
+      "recheck_probabilities": {
+        "normal": 0.05736882612109184,
+        "v1": 0.9415378570556641,
+        "v2": 0.00021944624313618988,
+        "v3": 0.00038451445288956165,
+        "v4": 0.0003429305797908455,
+        "v5": 0.00014637871936429292
+      },
+      "rewrite_ms": 1267.5
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like there are some uncertainties that might be weighing on you regarding her doubts about your future together. What do you think would help both of you feel more secure in your relationship? Having an open conversation about these feelings could be a gentle way to start addressing any concerns.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully understanding the context of their relationship concerns. I fixed it by acknowledging the new information about the seeker's partner's doubts, asking a specific clarifying question, and suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9359691739082336,
+      "recheck_probabilities": {
+        "normal": 0.06297296285629272,
+        "v1": 0.9359691739082336,
+        "v2": 0.00023317107115872204,
+        "v3": 0.00036306033143773675,
+        "v4": 0.00033860004623420537,
+        "v5": 0.00012297555804252625
+      },
+      "rewrite_ms": 1538.8
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

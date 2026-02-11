@@ -1,0 +1,33 @@
+{
+  "sample_index": 244,
+  "session_id": 1135,
+  "gold_label": "V4",
+  "situation": "Life in general has been hard for me and my husband has been really sick for weeks now.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9943898320198059,
+    "all_probabilities": {
+      "normal": 0.9943898320198059,
+      "v1": 7.703462324570864e-05,
+      "v2": 7.947527046781033e-05,
+      "v3": 0.0002441752585582435,
+      "v4": 0.00025243632262572646,
+      "v5": 0.0049570114351809025
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.4,
+    "generation_ms": 1124.2,
+    "detection_ms": 27.4,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1156.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you are carrying a lot of emotional weight right now. It's okay to feel that way, especially in such a difficult situation. Have you considered talking to someone about how you're feeling, whether it’s a friend, family member, or a professional? Sometimes sharing these feelings can bring a sense of relief.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

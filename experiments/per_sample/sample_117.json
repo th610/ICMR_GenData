@@ -1,0 +1,51 @@
+{
+  "sample_index": 117,
+  "session_id": 244,
+  "gold_label": "V1",
+  "situation": "Since I have to practice social distancing and isolate with the pandemic, I have been feeling more d",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.8580960631370544,
+    "all_probabilities": {
+      "normal": 0.13816222548484802,
+      "v1": 0.8580960631370544,
+      "v2": 0.0015190087724477053,
+      "v3": 0.00038770647370256484,
+      "v4": 0.001435847720131278,
+      "v5": 0.0003991323756054044
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.1,
+    "generation_ms": 910.7,
+    "detection_ms": 28.8,
+    "rewrite_total_ms": 1422.0,
+    "total_ms": 2365.7
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your friends and that can be really difficult. How do you think it would feel to talk to them about what you overheard? If that feels too overwhelming, it might help to discuss your feelings with someone you trust first.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings and situation without fully exploring the new information they provided regarding feeling excluded. I corrected this by acknowledging the user's feelings of potential exclusion, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.9582300186157227,
+      "recheck_probabilities": {
+        "normal": 0.9582300186157227,
+        "v1": 0.04053132236003876,
+        "v2": 0.00031331655918620527,
+        "v3": 0.00027304250397719443,
+        "v4": 0.00042086010216735303,
+        "v5": 0.0002315231686225161
+      },
+      "rewrite_ms": 1422.0
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're feeling uncertain about your friends and that can be really difficult. How do you think it would feel to talk to them about what you overheard? If that feels too overwhelming, it might help to discuss your feelings with someone you trust first.",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

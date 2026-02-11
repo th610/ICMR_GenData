@@ -1,0 +1,33 @@
+{
+  "sample_index": 165,
+  "session_id": 324,
+  "gold_label": "V3",
+  "situation": "I am worried I do not play the politics game well enough for the growth I want.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9759597182273865,
+    "all_probabilities": {
+      "normal": 0.9759597182273865,
+      "v1": 0.0003386580792721361,
+      "v2": 0.0003006907063536346,
+      "v3": 0.023039832711219788,
+      "v4": 0.0002095137460855767,
+      "v5": 0.0001515306648798287
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.1,
+    "generation_ms": 1467.8,
+    "detection_ms": 26.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1499.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s great that you’re thinking about how to balance your time. One option could be to involve your kids in your workouts, making it a fun family activity. Another idea is to set aside specific times for yourself, even if it’s just a short workout. How do you feel about trying to combine both your needs and your kids’ needs in this way?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

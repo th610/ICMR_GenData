@@ -1,0 +1,33 @@
+{
+  "sample_index": 269,
+  "session_id": 966,
+  "gold_label": "V4",
+  "situation": "My youngest son has such a hard time sharing",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9995362758636475,
+    "all_probabilities": {
+      "normal": 0.9995362758636475,
+      "v1": 6.504614430014044e-05,
+      "v2": 0.0001119801017921418,
+      "v3": 0.00010116974590346217,
+      "v4": 0.00013091726577840745,
+      "v5": 5.453697303892113e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 2.8,
+    "generation_ms": 872.7,
+    "detection_ms": 23.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 899.4
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's natural to worry about your child's social skills. Maybe you could encourage small sharing activities at home, like taking turns with a toy or sharing a snack. How do you think he might react to that?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

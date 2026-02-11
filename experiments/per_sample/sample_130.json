@@ -1,0 +1,33 @@
+{
+  "sample_index": 130,
+  "session_id": 430,
+  "gold_label": "V3",
+  "situation": "I married a divorcee. She was not honest with me. I felt sympathy about her previous marriage. She w",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.5006352066993713,
+    "all_probabilities": {
+      "normal": 0.5006352066993713,
+      "v1": 0.0005611145752482116,
+      "v2": 0.0005331828724592924,
+      "v3": 0.4969099760055542,
+      "v4": 0.0004939944483339787,
+      "v5": 0.0008665742934681475
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 6.0,
+    "generation_ms": 1607.7,
+    "detection_ms": 27.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1641.4
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like a really challenging decision, and it's important to honor both your need to support your child and your emotional well-being. One option could be to consider how you might feel during and after the gathering. Do you think you would find comfort in being there for your child, or do you feel that the emotional toll would outweigh that support? Another idea might be to set a time limit for yourself—perhaps attending for a short while and seeing how you feel before deciding to stay longer. What resonates with you more right now?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

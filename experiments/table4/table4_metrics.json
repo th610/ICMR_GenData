@@ -1,0 +1,73 @@
+{
+  "total_violations": 220,
+  "detected": 85,
+  "detection_rate": 0.38636363636363635,
+  "corrected": 16,
+  "correction_rate": 0.18823529411764706,
+  "failsafed": 69,
+  "still_violated": 0,
+  "leakage_rate": 0.0,
+  "resolved_total": 85,
+  "resolved_rate": 1.0,
+  "retry_stats": {
+    "avg": 2.6470588235294117,
+    "max": 3,
+    "distribution": {
+      "3": 69,
+      "1": 14,
+      "2": 2
+    }
+  },
+  "per_violation": {
+    "v1": {
+      "total": 50,
+      "detected": 39,
+      "corrected": 8,
+      "failsafed": 31,
+      "detection_rate": 0.78,
+      "correction_rate": 0.20512820512820512,
+      "avg_retries": 2.6153846153846154,
+      "resolved_rate": 1.0
+    },
+    "v2": {
+      "total": 60,
+      "detected": 15,
+      "corrected": 4,
+      "failsafed": 11,
+      "detection_rate": 0.25,
+      "correction_rate": 0.26666666666666666,
+      "avg_retries": 2.533333333333333,
+      "resolved_rate": 1.0
+    },
+    "v3": {
+      "total": 50,
+      "detected": 16,
+      "corrected": 2,
+      "failsafed": 14,
+      "detection_rate": 0.32,
+      "correction_rate": 0.125,
+      "avg_retries": 2.75,
+      "resolved_rate": 1.0
+    },
+    "v4": {
+      "total": 30,
+      "detected": 0,
+      "corrected": 0,
+      "failsafed": 0,
+      "detection_rate": 0.0,
+      "correction_rate": 0,
+      "avg_retries": 0,
+      "resolved_rate": 0
+    },
+    "v5": {
+      "total": 30,
+      "detected": 15,
+      "corrected": 2,
+      "failsafed": 13,
+      "detection_rate": 0.5,
+      "correction_rate": 0.13333333333333333,
+      "avg_retries": 2.7333333333333334,
+      "resolved_rate": 1.0
+    }
+  }
+}

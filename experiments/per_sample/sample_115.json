@@ -1,0 +1,85 @@
+{
+  "sample_index": 115,
+  "session_id": 1141,
+  "gold_label": "V1",
+  "situation": "My best friend flirted with my wife and asked if she wants to have sex with her.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.8588610291481018,
+    "all_probabilities": {
+      "normal": 0.13896381855010986,
+      "v1": 0.8588610291481018,
+      "v2": 0.00033265879028476775,
+      "v3": 0.0006255432381294668,
+      "v4": 0.0009411832434125245,
+      "v5": 0.00027570652309805155
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.2,
+    "generation_ms": 888.7,
+    "detection_ms": 11.6,
+    "rewrite_total_ms": 4316.8,
+    "total_ms": 5221.6
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like that information could be quite unsettling for you. How do you feel about what you overheard? It might be helpful to take some time to reflect on your feelings and consider discussing this with someone you trust.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without clarifying the specifics of their emotions regarding the new information. I corrected this by acknowledging the new detail and posing a single clarifying question, while also offering gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.6760076880455017,
+      "recheck_probabilities": {
+        "normal": 0.32147037982940674,
+        "v1": 0.6760076880455017,
+        "v2": 0.0004706168547272682,
+        "v3": 0.0008976282551884651,
+        "v4": 0.0007286334875971079,
+        "v5": 0.0004250219208188355
+      },
+      "rewrite_ms": 1258.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like that information could be quite unsettling for you. How do you feel about the possibility of your friend wanting to date your wife? It might be helpful to talk to someone you trust about your feelings or consider discussing this directly with your wife when you're ready.",
+      "reasoning": "The original response made a hasty conclusion without adequately addressing the seeker's new concern about their friend and wife. I acknowledged the seeker's new information, asked a clarifying question about their feelings, and suggested gentle next steps without assuming any additional context.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9622339010238647,
+      "recheck_probabilities": {
+        "normal": 0.03674982860684395,
+        "v1": 0.9622339010238647,
+        "v2": 0.00018619406910147518,
+        "v3": 0.0003250107984058559,
+        "v4": 0.00037243624683469534,
+        "v5": 0.00013274229422677308
+      },
+      "rewrite_ms": 1551.6
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like that information is really troubling for you. How do you feel about discussing this with your wife when you're ready? It might also help to talk to someone you trust about your feelings.",
+      "reasoning": "The original response jumped to conclusions without adequately acknowledging the seeker's uncertainty and did not include a clear clarifying question. I rephrased it to recognize the seeker's feelings about the new information and included a single clarifying question while offering gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.953166663646698,
+      "recheck_probabilities": {
+        "normal": 0.04574160277843475,
+        "v1": 0.953166663646698,
+        "v2": 0.00018449652998242527,
+        "v3": 0.0003427166084293276,
+        "v4": 0.0004254957311786711,
+        "v5": 0.00013905770902056247
+      },
+      "rewrite_ms": 1506.3
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

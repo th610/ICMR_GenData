@@ -1,0 +1,33 @@
+{
+  "sample_index": 206,
+  "session_id": 796,
+  "gold_label": "V2",
+  "situation": "I got a bad grade on a paper",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9495446681976318,
+    "all_probabilities": {
+      "normal": 0.9495446681976318,
+      "v1": 0.0005371909937821329,
+      "v2": 0.0488315187394619,
+      "v3": 0.0003792260540649295,
+      "v4": 0.000500786816701293,
+      "v5": 0.00020655673870351166
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.7,
+    "generation_ms": 1442.4,
+    "detection_ms": 25.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1472.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "You could start by expressing that you want to understand the feedback on your paper better. Maybe you could say something like, 'I noticed I didn't do as well as I hoped on my paper, and I would really appreciate your guidance on how I can improve in the future.' How does that sound to you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

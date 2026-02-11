@@ -1,0 +1,33 @@
+{
+  "sample_index": 108,
+  "session_id": 1232,
+  "gold_label": "V1",
+  "situation": "Have been mostly unemployed since release from prison. This has effected my self impression.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9982740879058838,
+    "all_probabilities": {
+      "normal": 0.9982740879058838,
+      "v1": 0.001416630344465375,
+      "v2": 5.8003453887067735e-05,
+      "v3": 0.0001085866242647171,
+      "v4": 9.222386870533228e-05,
+      "v5": 5.049635728937574e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 1014.1,
+    "detection_ms": 25.5,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1043.7
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's understandable to feel unsettled when you're unsure about the choices of people from your past. How do you feel about the possibility of them being involved in those activities? Would it help to talk about how you want to navigate these feelings?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sample_index": 139,
+  "session_id": 855,
+  "gold_label": "V3",
+  "situation": "I asked my friend if she would go to the store with me because I was feeling down and overwhelmed wi",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9983837604522705,
+    "all_probabilities": {
+      "normal": 0.9983837604522705,
+      "v1": 0.00014434120384976268,
+      "v2": 9.088531078305095e-05,
+      "v3": 0.0012273601023480296,
+      "v4": 7.856202137190849e-05,
+      "v5": 7.509463466703892e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.7,
+    "generation_ms": 1273.2,
+    "detection_ms": 26.4,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1303.5
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It might be helpful to consider both options. If you feel like there's a good moment when she's more relaxed, that could be a great chance to open up. On the other hand, if you feel a strong urge to express yourself directly, it could be beneficial to share your feelings honestly. How do you think she might react in either situation?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

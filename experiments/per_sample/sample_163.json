@@ -1,0 +1,33 @@
+{
+  "sample_index": 163,
+  "session_id": 911,
+  "gold_label": "V3",
+  "situation": "My mother recently passed, a month ago due to being an alcoholic for many years.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9938638210296631,
+    "all_probabilities": {
+      "normal": 0.9938638210296631,
+      "v1": 0.0001619354879949242,
+      "v2": 0.00010848882084246725,
+      "v3": 0.005598214454948902,
+      "v4": 0.0001071403530659154,
+      "v5": 0.00016039557522162795
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.9,
+    "generation_ms": 1974.8,
+    "detection_ms": 29.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 2008.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're in a tough spot, and both options have their own challenges. You might consider how each choice aligns with what you need emotionally at the gathering. Would you feel more at ease being open about your feelings, or do you think you would prefer to protect yourself by keeping things light? It could also help to prepare a few responses in advance, just in case the topic comes up. How do you feel about that?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

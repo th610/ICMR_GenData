@@ -1,0 +1,33 @@
+{
+  "sample_index": 196,
+  "session_id": 993,
+  "gold_label": "V2",
+  "situation": "My mother told me that she hurt her knee and can not work.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.989626407623291,
+    "all_probabilities": {
+      "normal": 0.989626407623291,
+      "v1": 0.0002114529488608241,
+      "v2": 0.009400920942425728,
+      "v3": 0.0004774814296979457,
+      "v4": 0.00016883805801626295,
+      "v5": 0.00011497241939650849
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.1,
+    "generation_ms": 1131.1,
+    "detection_ms": 25.7,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1162.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "I can see that you're feeling really torn about this. One approach could be to gently bring up the topic of her recovery and see how she’s feeling about things. You might say something like, 'I want you to know I’m here to support you in any way you need.' This way, you create an opening for her to share her thoughts, and if she seems open, you can then offer your help. How does that sound to you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

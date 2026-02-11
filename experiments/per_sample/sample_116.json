@@ -1,0 +1,85 @@
+{
+  "sample_index": 116,
+  "session_id": 5,
+  "gold_label": "V1",
+  "situation": "the uncertainty surrounding the corona virus pandemic. the unavailability of jobs. lack of success g",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9882712960243225,
+    "all_probabilities": {
+      "normal": 0.011007501743733883,
+      "v1": 0.9882712960243225,
+      "v2": 0.00013815323472954333,
+      "v3": 0.00023537037486676127,
+      "v4": 0.00026627423358149827,
+      "v5": 8.141998841892928e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 5.5,
+    "generation_ms": 1148.1,
+    "detection_ms": 24.3,
+    "rewrite_total_ms": 4089.5,
+    "total_ms": 5267.7
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the potential impact of declining property values. Have you had a chance to discuss this with any professionals in real estate? It might be helpful to gather more information to see what options might be available to you.",
+      "reasoning": "The original response jumped to assumptions about the seeker's situation without fully acknowledging their uncertainty regarding the impact of declining property values. I fixed it by recognizing the seeker's concern, asking one clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.980792224407196,
+      "recheck_probabilities": {
+        "normal": 0.01837901771068573,
+        "v1": 0.980792224407196,
+        "v2": 0.0001447256945539266,
+        "v3": 0.0003019249124918133,
+        "v4": 0.00025755524984560907,
+        "v5": 0.00012462958693504333
+      },
+      "rewrite_ms": 1323.9
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the potential impact of declining property values. Have you considered reaching out to a real estate agent to get more insights? Gathering more information could help you feel more prepared to make decisions.",
+      "reasoning": "The original response jumped to a conclusion without fully acknowledging the seeker’s uncertainty about declining property values and did not include a clear clarifying question. I revised it to recognize their concern, ask a single clarifying question, and suggest gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9525997042655945,
+      "recheck_probabilities": {
+        "normal": 0.04622552543878555,
+        "v1": 0.9525997042655945,
+        "v2": 0.000210809608688578,
+        "v3": 0.0004161371325608343,
+        "v4": 0.000369335466530174,
+        "v5": 0.00017854361794888973
+      },
+      "rewrite_ms": 1296.7
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about how declining property values might affect your situation. Have you thought about what steps you might take if you do need to sell your property? It could be helpful to gather more information, perhaps by discussing your situation with a financial advisor or a real estate agent.",
+      "reasoning": "The original response made a hasty conclusion by not adequately acknowledging the seeker's uncertainty about the impact of declining property values and included multiple suggestions. I modified it to acknowledge the seeker's feelings, ask a single clarifying question, and suggest gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.8803551197052002,
+      "recheck_probabilities": {
+        "normal": 0.11803627759218216,
+        "v1": 0.8803551197052002,
+        "v2": 0.00035194106749258935,
+        "v3": 0.0005888119922019541,
+        "v4": 0.0004748459323309362,
+        "v5": 0.00019297280232422054
+      },
+      "rewrite_ms": 1468.9
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

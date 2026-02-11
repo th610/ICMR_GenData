@@ -1,0 +1,85 @@
+{
+  "sample_index": 98,
+  "session_id": 1190,
+  "gold_label": "V1",
+  "situation": "My manager does not respect COVID guidelines or protect my safety.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.998112678527832,
+    "all_probabilities": {
+      "normal": 0.001398804015479982,
+      "v1": 0.998112678527832,
+      "v2": 0.0002524616720620543,
+      "v3": 0.00012571550905704498,
+      "v4": 7.469046977348626e-05,
+      "v5": 3.556667797965929e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 3.8,
+    "generation_ms": 1028.2,
+    "detection_ms": 27.7,
+    "rewrite_total_ms": 3747.7,
+    "total_ms": 4807.6
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about potential layoffs. Have you considered discussing your concerns with your manager or perhaps seeking advice from a trusted colleague who might have more insight into the situation?",
+      "reasoning": "The original response made a hasty conclusion without fully understanding the seeker’s uncertainty about the rumor of layoffs. I acknowledged their uncertainty, asked a clarifying question, and offered gentle next steps without assuming any missing facts.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9991699457168579,
+      "recheck_probabilities": {
+        "normal": 0.00047517172060906887,
+        "v1": 0.9991699457168579,
+        "v2": 0.00011640186858130619,
+        "v3": 0.00012665186659432948,
+        "v4": 7.273636583704501e-05,
+        "v5": 3.924532575183548e-05
+      },
+      "rewrite_ms": 1187.2
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the rumors of layoffs. Have you thought about reaching out to your manager for clarification, or perhaps talking to a colleague who might have more information on the situation? It could be helpful to gather more details before making any decisions.",
+      "reasoning": "The original response made a hasty conclusion by suggesting specific actions without fully exploring the seeker's concerns about the layoffs and their uncertainty. The corrected response acknowledges the seeker's feelings and uncertainty, asks a clarifying question, and offers gentle next steps that respect their situation without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9946881532669067,
+      "recheck_probabilities": {
+        "normal": 0.004726523067802191,
+        "v1": 0.9946881532669067,
+        "v2": 0.00011123395233880728,
+        "v3": 0.00028302022838033736,
+        "v4": 0.00012588780373334885,
+        "v5": 6.522837793454528e-05
+      },
+      "rewrite_ms": 1339.0
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the rumors of layoffs. Have you considered how you might approach your manager or a trusted colleague to discuss this further? It could be reassuring to gather more information and see how others perceive the situation.",
+      "reasoning": "The original response made a hasty conclusion by suggesting specific actions without fully understanding the seeker's uncertainty about the rumors of layoffs. I corrected it by acknowledging the seeker's uncertainty, asking a clarifying question, and offering gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.991102933883667,
+      "recheck_probabilities": {
+        "normal": 0.008296966552734375,
+        "v1": 0.991102933883667,
+        "v2": 0.00011622803140198812,
+        "v3": 0.00026668672217056155,
+        "v4": 0.0001494637836003676,
+        "v5": 6.770881736883894e-05
+      },
+      "rewrite_ms": 1221.5
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

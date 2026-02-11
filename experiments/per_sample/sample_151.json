@@ -1,0 +1,85 @@
+{
+  "sample_index": 151,
+  "session_id": 463,
+  "gold_label": "V3",
+  "situation": "my boss cut my pay to save his bonus this year",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.9627290964126587,
+    "all_probabilities": {
+      "normal": 0.03609868511557579,
+      "v1": 0.0003002198354806751,
+      "v2": 0.00032220775028690696,
+      "v3": 0.9627290964126587,
+      "v4": 0.00020795936870854348,
+      "v5": 0.00034186564153060317
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.2,
+    "generation_ms": 1030.5,
+    "detection_ms": 26.6,
+    "rewrite_total_ms": 3744.3,
+    "total_ms": 4805.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It’s understandable to feel pressure to make a decision quickly. You might consider either confronting your boss about the pay cut to express your concerns or continuing to search for a new job while keeping the current situation in mind. Which option feels more appealing to you?",
+      "reasoning": "The original response only expressed empathy without providing any practical help, which violated the counseling guideline. I added a concrete help element by offering two options for the seeker to consider regarding their next steps.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.998917818069458,
+      "recheck_probabilities": {
+        "normal": 0.0007431099656969309,
+        "v1": 0.00010968704737024382,
+        "v2": 8.478537347400561e-05,
+        "v3": 0.998917818069458,
+        "v4": 6.804637814639136e-05,
+        "v5": 7.654353248653933e-05
+      },
+      "rewrite_ms": 1166.3
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It’s understandable to feel pressure to make a decision quickly. You could either confront your boss about the pay cut to voice your concerns or continue searching for a new job while weighing your options. Which option feels more appealing to you?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help the seeker requested. I included one empathy sentence and added two options to help the seeker consider their next steps more clearly.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995835423469543,
+      "recheck_probabilities": {
+        "normal": 0.00013127164856996387,
+        "v1": 7.91721759014763e-05,
+        "v2": 8.758882904658094e-05,
+        "v3": 0.9995835423469543,
+        "v4": 5.390029036789201e-05,
+        "v5": 6.449248758144677e-05
+      },
+      "rewrite_ms": 1367.5
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It’s understandable to feel pressure to make a decision quickly. You could either confront your boss about the pay cut to voice your concerns or continue searching for a new job while weighing your options. Which feels more appealing to you?",
+      "reasoning": "The original response only provided empathy and did not offer practical help, which is a violation of the guidelines. I added a concrete help element in the form of two options while keeping a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995694756507874,
+      "recheck_probabilities": {
+        "normal": 0.00015202922804746777,
+        "v1": 7.883217767812312e-05,
+        "v2": 8.731021080166101e-05,
+        "v3": 0.9995694756507874,
+        "v4": 5.592267189058475e-05,
+        "v5": 5.644212433253415e-05
+      },
+      "rewrite_ms": 1210.6
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

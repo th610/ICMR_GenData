@@ -1,0 +1,51 @@
+{
+  "sample_index": 162,
+  "session_id": 518,
+  "gold_label": "V3",
+  "situation": "Just lost my job. Don't know how to continue with my lifestyle.",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.7932983636856079,
+    "all_probabilities": {
+      "normal": 0.20440910756587982,
+      "v1": 0.0007098605274222791,
+      "v2": 0.0006895295809954405,
+      "v3": 0.7932983636856079,
+      "v4": 0.0005999811110086739,
+      "v5": 0.00029322548652999103
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.5,
+    "generation_ms": 1188.9,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 1692.3,
+    "total_ms": 2911.5
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you have a lot on your plate and a big decision to make. One approach could be to list out the pros and cons of each option. Then, you could try reaching out to friends or online communities for support or advice on starting your catering service while also applying for jobs in other fields. What do you think would be the most appealing aspect of each option for you?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I included one brief empathy sentence and added a short guide with two steps to assist the seeker in making their decision.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.6492794752120972,
+      "recheck_probabilities": {
+        "normal": 0.6492794752120972,
+        "v1": 0.0010345004266127944,
+        "v2": 0.0006337784579955041,
+        "v3": 0.3479425013065338,
+        "v4": 0.0006823153235018253,
+        "v5": 0.0004274644306860864
+      },
+      "rewrite_ms": 1692.3
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you have a lot on your plate and a big decision to make. One approach could be to list out the pros and cons of each option. Then, you could try reaching out to friends or online communities for support or advice on starting your catering service while also applying for jobs in other fields. What do you think would be the most appealing aspect of each option for you?",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

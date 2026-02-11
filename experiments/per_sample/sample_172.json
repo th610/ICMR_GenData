@@ -1,0 +1,33 @@
+{
+  "sample_index": 172,
+  "session_id": 702,
+  "gold_label": "V3",
+  "situation": "I can't figure out why my friends don't understand why I want to keep a bit distant during COVID",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9991934895515442,
+    "all_probabilities": {
+      "normal": 0.9991934895515442,
+      "v1": 7.423915667459369e-05,
+      "v2": 0.00014307160745374858,
+      "v3": 0.000486804055981338,
+      "v4": 5.193569086259231e-05,
+      "v5": 5.047100057709031e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 2.9,
+    "generation_ms": 1156.9,
+    "detection_ms": 26.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1186.6
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Both options sound great and could serve different purposes. You might consider asking your friends what they would prefer. Would they enjoy a fun game night together, or do they need some one-on-one time to catch up? Finding out their feelings could help you create a balance that works for everyone.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

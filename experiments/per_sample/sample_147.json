@@ -1,0 +1,85 @@
+{
+  "sample_index": 147,
+  "session_id": 573,
+  "gold_label": "V3",
+  "situation": "covid",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.9504268169403076,
+    "all_probabilities": {
+      "normal": 0.047909509390592575,
+      "v1": 0.0005631516105495393,
+      "v2": 0.0006877098930999637,
+      "v3": 0.9504268169403076,
+      "v4": 0.0002780221402645111,
+      "v5": 0.00013472457067109644
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 3.2,
+    "generation_ms": 887.2,
+    "detection_ms": 24.5,
+    "rewrite_total_ms": 4214.0,
+    "total_ms": 5129.1
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "I understand that making this decision can be tough. You could consider organizing a game with a new group for some social fun, or opt for solo practice to focus on your skills. Which option feels more appealing to you right now?",
+      "reasoning": "The original response was empathy-only, failing to provide the practical help requested by the seeker. I added a concrete option to help the seeker make a decision while maintaining a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9965394735336304,
+      "recheck_probabilities": {
+        "normal": 0.002987479092553258,
+        "v1": 0.00012195437011541799,
+        "v2": 0.0001823091006372124,
+        "v3": 0.9965394735336304,
+        "v4": 7.968635327415541e-05,
+        "v5": 8.915940998122096e-05
+      },
+      "rewrite_ms": 1438.1
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "I understand that making this decision can be tough. You could either try to organize a game with a new group for some social fun or go for a solo practice to improve your skills. Which option feels more appealing to you right now?",
+      "reasoning": "The original response only provided empathy and failed to offer practical help despite the seeker's explicit request for guidance on organizing a volleyball game. I included a brief empathetic sentence and added two clear options to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9987986087799072,
+      "recheck_probabilities": {
+        "normal": 0.00081910181324929,
+        "v1": 9.274193143937737e-05,
+        "v2": 0.00016981612134259194,
+        "v3": 0.9987986087799072,
+        "v4": 5.89021437917836e-05,
+        "v5": 6.088670124881901e-05
+      },
+      "rewrite_ms": 1441.4
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "I understand that making this decision can be tough. You could either try to organize a game with a new group for some social fun or go for a solo practice to improve your skills. Which option feels more appealing to you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I included a brief validation sentence and provided two options to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9987986087799072,
+      "recheck_probabilities": {
+        "normal": 0.00081910181324929,
+        "v1": 9.274193143937737e-05,
+        "v2": 0.00016981612134259194,
+        "v3": 0.9987986087799072,
+        "v4": 5.89021437917836e-05,
+        "v5": 6.088670124881901e-05
+      },
+      "rewrite_ms": 1334.6
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

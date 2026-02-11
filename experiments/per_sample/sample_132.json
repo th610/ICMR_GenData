@@ -1,0 +1,33 @@
+{
+  "sample_index": 132,
+  "session_id": 706,
+  "gold_label": "V3",
+  "situation": "I have to pass my test to pass the course.  I'm am crazy nervous and can't sleep.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8609862327575684,
+    "all_probabilities": {
+      "normal": 0.8609862327575684,
+      "v1": 0.0006375528173521161,
+      "v2": 0.0007400091853924096,
+      "v3": 0.1368916779756546,
+      "v4": 0.00043421241571195424,
+      "v5": 0.00031019881134852767
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.1,
+    "generation_ms": 1006.2,
+    "detection_ms": 26.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1037.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It seems like you have a tough decision to make. One option could be to assess how many hours you need for work versus study time. Would it help to create a simple schedule for both this week? You might consider setting specific time blocks for studying and working, so you can see if you can fit in both.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

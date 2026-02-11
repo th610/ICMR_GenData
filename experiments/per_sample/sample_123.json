@@ -1,0 +1,33 @@
+{
+  "sample_index": 123,
+  "session_id": 1094,
+  "gold_label": "V1",
+  "situation": "having to stay in my apartment all the time due to  covid.  i have a pre-existing condition that put",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8574308753013611,
+    "all_probabilities": {
+      "normal": 0.8574308753013611,
+      "v1": 0.14082954823970795,
+      "v2": 0.0007549810688942671,
+      "v3": 0.00043236929923295975,
+      "v4": 0.0003606037062127143,
+      "v5": 0.00019170119776390493
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 768.3,
+    "detection_ms": 28.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 801.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s understandable to feel uneasy about that. It might help to focus on what you can control. Would it be comforting to check in with your neighbors directly, or perhaps look for reliable news sources about the situation? How do you feel about that?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

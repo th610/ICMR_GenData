@@ -1,0 +1,85 @@
+{
+  "sample_index": 104,
+  "session_id": 891,
+  "gold_label": "V1",
+  "situation": "The COVID-19 pandemic has caused me to be depressed.  I am sad because there is nowhere we can go.  ",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.99946528673172,
+    "all_probabilities": {
+      "normal": 0.00021850841585546732,
+      "v1": 0.99946528673172,
+      "v2": 0.00017816135368775576,
+      "v3": 4.6604745875811204e-05,
+      "v4": 6.162149657029659e-05,
+      "v5": 2.990151369886007e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 5.8,
+    "generation_ms": 1137.6,
+    "detection_ms": 29.5,
+    "rewrite_total_ms": 4409.8,
+    "total_ms": 5583.0
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uneasy about what you overheard. How do you think your husband would respond if you brought this up with him? It might be helpful to find a good time to talk about your feelings and concerns when you both can focus on the conversation.",
+      "reasoning": "The original response made a hasty conclusion about the situation without fully understanding the user's feelings and circumstances. I added an acknowledgment of the user's uncertainty, included a single clarifying question, and offered gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9985479712486267,
+      "recheck_probabilities": {
+        "normal": 0.001143626170232892,
+        "v1": 0.9985479712486267,
+        "v2": 0.00011161075963173062,
+        "v3": 7.731471851002425e-05,
+        "v4": 8.157413685694337e-05,
+        "v5": 3.783350621233694e-05
+      },
+      "rewrite_ms": 1630.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uneasy about what you overheard. What specifically made you feel like he was hiding something? It might be helpful to take some time to sort through your feelings, and when you're ready, consider discussing your concerns with him in a calm manner.",
+      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without fully acknowledging the new information they provided about overhearing their husband. I corrected it by acknowledging the seeker's feelings of unease and replacing the hasty assumption with a single clarifying question about their feelings.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9954633116722107,
+      "recheck_probabilities": {
+        "normal": 0.004081172868609428,
+        "v1": 0.9954633116722107,
+        "v2": 0.00017531090998090804,
+        "v3": 0.00011387730774004012,
+        "v4": 0.00011365445971023291,
+        "v5": 5.2735209465026855e-05
+      },
+      "rewrite_ms": 1386.2
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It seems you're feeling uneasy about what you overheard regarding your husband. What specifically made you feel like he might be hiding something? It could be helpful to reflect on your feelings, and when you feel ready, perhaps you can consider discussing your concerns with him.",
+      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without fully clarifying their concerns, which could lead to misunderstandings. The corrected response acknowledges the seeker's unease, asks a single clarifying question, and gently suggests next steps without assuming details.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9961321353912354,
+      "recheck_probabilities": {
+        "normal": 0.0034766735043376684,
+        "v1": 0.9961321353912354,
+        "v2": 0.00015281928062904626,
+        "v3": 9.284395491704345e-05,
+        "v4": 0.0001005451922537759,
+        "v5": 4.5062883145874366e-05
+      },
+      "rewrite_ms": 1392.8
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

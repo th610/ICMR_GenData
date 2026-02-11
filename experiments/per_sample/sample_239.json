@@ -1,0 +1,85 @@
+{
+  "sample_index": 239,
+  "session_id": 1277,
+  "gold_label": "V2",
+  "situation": "I'm finding the COVID online learning experience to be too much for me at this time. I want to stop ",
+  "initial_detection": {
+    "predicted_label": "v2",
+    "confidence": 0.5589316487312317,
+    "all_probabilities": {
+      "normal": 0.4313923716545105,
+      "v1": 0.0011948455357924104,
+      "v2": 0.5589316487312317,
+      "v3": 0.007033529691398144,
+      "v4": 0.0007253524381667376,
+      "v5": 0.0007222775602713227
+    },
+    "severity": 2
+  },
+  "timing": {
+    "context_build_ms": 1.9,
+    "generation_ms": 1043.0,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 4136.2,
+    "total_ms": 5207.1
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v2",
+      "rewritten_text": "I can see how tough this decision is for you. You might consider two options: continuing with school while finding ways to manage your stress, or taking a break to recharge and reassess. What do you feel would help you feel more balanced at this time?",
+      "reasoning": "The original response contained an implied directive by suggesting the seeker must weigh pros and cons, which could limit their autonomy. I rephrased the response to present two realistic options while maintaining a warm tone and asking for the seeker's preference.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.9778619408607483,
+      "recheck_probabilities": {
+        "normal": 0.016298474743962288,
+        "v1": 0.0003106592339463532,
+        "v2": 0.9778619408607483,
+        "v3": 0.005053114611655474,
+        "v4": 0.00016941323701757938,
+        "v5": 0.00030640492332167923
+      },
+      "rewrite_ms": 1355.7
+    },
+    {
+      "retry": 2,
+      "violation": "v2",
+      "rewritten_text": "I can see how tough this decision is for you. You could either continue with school while exploring ways to manage your stress, or take a break to recharge and reassess your situation. Which option resonates with you more at this time?",
+      "reasoning": "The original response contained a suggestion that implied a directive nature by using 'consider two options' without fully supporting the seeker's autonomy. I revised it to present two options in a more supportive and open-ended manner, allowing the seeker to feel empowered in their decision-making.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.9815968871116638,
+      "recheck_probabilities": {
+        "normal": 0.013919183053076267,
+        "v1": 0.00031889352248981595,
+        "v2": 0.9815968871116638,
+        "v3": 0.0037488345988094807,
+        "v4": 0.00018224514496978372,
+        "v5": 0.00023404177045449615
+      },
+      "rewrite_ms": 1333.7
+    },
+    {
+      "retry": 3,
+      "violation": "v2",
+      "rewritten_text": "I understand how challenging this decision can be. You might consider continuing with school while finding ways to manage your stress, or perhaps taking a break to recharge and reassess your situation. Which option feels more comfortable for you right now?",
+      "reasoning": "The original response contained phrasing that could be interpreted as directing the seeker toward a particular choice, which undermines their autonomy. I revised it to present two supportive options while inviting the seeker to express their preferences without feeling pressured.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.9085462093353271,
+      "recheck_probabilities": {
+        "normal": 0.08355524390935898,
+        "v1": 0.0005908592138439417,
+        "v2": 0.9085462093353271,
+        "v3": 0.00652470625936985,
+        "v4": 0.0002585488255135715,
+        "v5": 0.0005244548665359616
+      },
+      "rewrite_ms": 1446.8
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 상황이시군요. 어떻게 하고 싶으신가요? 제가 도움이 될 수 있는 부분이 있을까요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

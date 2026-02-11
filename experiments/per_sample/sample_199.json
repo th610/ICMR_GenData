@@ -1,0 +1,33 @@
+{
+  "sample_index": 199,
+  "session_id": 1271,
+  "gold_label": "V2",
+  "situation": "A co-worker continues to usurp my authority and interfere with my duties / responsibilities.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8800603151321411,
+    "all_probabilities": {
+      "normal": 0.8800603151321411,
+      "v1": 0.0005777200567536056,
+      "v2": 0.11750258505344391,
+      "v3": 0.0009544876520521939,
+      "v4": 0.0004986299318261445,
+      "v5": 0.0004062191874254495
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 2.3,
+    "generation_ms": 1752.5,
+    "detection_ms": 22.5,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1777.4
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "I can see how that would be really helpful. Would you feel comfortable trying to have a direct conversation with your coworker about how their actions affect your work? Or perhaps discussing it further with your supervisor for more support could be an option?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sample_index": 179,
+  "session_id": 296,
+  "gold_label": "V3",
+  "situation": "Not being able to find a job after graduating from university",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8851874470710754,
+    "all_probabilities": {
+      "normal": 0.8851874470710754,
+      "v1": 0.0007938806083984673,
+      "v2": 0.0003621685318648815,
+      "v3": 0.11219308525323868,
+      "v4": 0.000747660466004163,
+      "v5": 0.0007157846703194082
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 1066.3,
+    "detection_ms": 25.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1096.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's great that you're considering your options. Applying for a part-time job could provide some immediate relief and help ease the financial pressure while you continue your search for a full-time position in your field. How do you feel about that? Would you be open to exploring part-time opportunities, or do you feel strongly about waiting for something full-time?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

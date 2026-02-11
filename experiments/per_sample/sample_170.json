@@ -1,0 +1,85 @@
+{
+  "sample_index": 170,
+  "session_id": 759,
+  "gold_label": "V3",
+  "situation": "my fiance and I broke up last week",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.951328694820404,
+    "all_probabilities": {
+      "normal": 0.04710567370057106,
+      "v1": 0.0003830097266472876,
+      "v2": 0.0004807877412531525,
+      "v3": 0.951328694820404,
+      "v4": 0.00036341045051813126,
+      "v5": 0.0003384679730515927
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.5,
+    "generation_ms": 1236.5,
+    "detection_ms": 25.9,
+    "rewrite_total_ms": 4202.1,
+    "total_ms": 5469.3
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel lost during this time. To help you decide, consider making a list of pros and cons for each option. This way, you can evaluate how each choice aligns with your current needs and feelings.",
+      "reasoning": "The original response lacked practical help and was primarily empathetic, violating the counseling guideline. I added a 2–3 step guide to help the seeker navigate their decision-making process while retaining a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.6301668882369995,
+      "recheck_probabilities": {
+        "normal": 0.36562874913215637,
+        "v1": 0.000763895339332521,
+        "v2": 0.0015227642143145204,
+        "v3": 0.6301668882369995,
+        "v4": 0.0007436415180563927,
+        "v5": 0.0011741261696442962
+      },
+      "rewrite_ms": 1439.1
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel lost during this time. Have you thought about which option excites you more, applying for new jobs (A) or taking a short trip to clear your head (B)?",
+      "reasoning": "The original response exhibited a violation by providing empathy only without addressing the seeker's explicit request for practical help in making a decision. The corrected response maintains a brief empathetic statement while also providing a clear option for the seeker to consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9855700135231018,
+      "recheck_probabilities": {
+        "normal": 0.013374662958085537,
+        "v1": 0.000268657342530787,
+        "v2": 0.0003349434118717909,
+        "v3": 0.9855700135231018,
+        "v4": 0.0002111939829774201,
+        "v5": 0.0002404882834525779
+      },
+      "rewrite_ms": 1312.7
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel lost during this time. Which option do you feel would help you the most right now: applying for new jobs (A) or taking a short trip to clear your head (B)?",
+      "reasoning": "The original response provided empathy but failed to offer practical help as requested by the seeker, who needed assistance in making a decision. I maintained a brief empathetic validation and added a clarifying question to help guide the seeker in their decision-making process.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994366765022278,
+      "recheck_probabilities": {
+        "normal": 0.0002583513269200921,
+        "v1": 5.931678970227949e-05,
+        "v2": 0.0001149900199379772,
+        "v3": 0.9994366765022278,
+        "v4": 6.0130059864604846e-05,
+        "v5": 7.054174784570932e-05
+      },
+      "rewrite_ms": 1450.2
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

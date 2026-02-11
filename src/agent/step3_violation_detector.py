@@ -67,6 +67,11 @@ class ViolationDetector:
         """학습된 분류 모델 로드"""
         import torch
         from pathlib import Path
+        import sys
+        
+        # Import ViolationClassifier from models/model.py
+        sys.path.insert(0, str(Path(__file__).parent.parent.parent / "models"))
+        from model import ViolationClassifier
         
         # Tokenizer는 원본 RoBERTa에서 로드
         self.tokenizer = AutoTokenizer.from_pretrained("roberta-base")
@@ -75,21 +80,26 @@ class ViolationDetector:
         special_tokens = ['<SEEKER>', '<SUPPORTER>', '<SUPPORTER_TARGET>']
         self.tokenizer.add_tokens(special_tokens)
         
-        # Model 초기화 (RoBERTa)
-        self.model = AutoModelForSequenceClassification.from_pretrained(
-            "roberta-base",
-            num_labels=6  # Normal + V1-V5
+        # Model 초기화 (학습 시와 동일한 ViolationClassifier 사용)
+        self.model = ViolationClassifier(
+            model_name="roberta-base",
+            num_labels=6,  # Normal + V1-V5
+            dropout=0.1,
+            pooling="cls"
         )
         
         # Token embeddings resize
-        self.model.resize_token_embeddings(len(self.tokenizer))
+        self.model.roberta.resize_token_embeddings(len(self.tokenizer))
         
         # 학습된 가중치 로드
         model_file = Path(model_path) / "best_model.pt"
         if model_file.exists():
-            checkpoint = torch.load(model_file, map_location='cpu')
-            self.model.load_state_dict(checkpoint['model_state_dict'], strict=False)
-            print(f"[OK] Model loaded from {model_file}")
+            device = 'cuda' if torch.cuda.is_available() else 'cpu'
+            checkpoint = torch.load(model_file, map_location=device)
+            self.model.load_state_dict(checkpoint['model_state_dict'], strict=True)  # strict=True로 변경
+            self.model.to(device)
+            self.device = device
+            print(f"[OK] Model loaded from {model_file} (device: {device})")
         else:
             raise FileNotFoundError(f"Model file not found: {model_file}")
         
@@ -133,8 +143,8 @@ class ViolationDetector:
                           context: Dict[str, Any], 
                           candidate: Dict[str, Any]) -> Dict[str, Any]:
         """학습된 모델로 위반 감지"""
-        # 학습 시와 동일: RESPONSE를 무조건 포함하고, CONTEXT를 역순 truncate
-        response_text = f"\n[RESPONSE]\n{candidate['text']}"
+        # 학습 시와 동일: <SUPPORTER_TARGET> 사용
+        response_text = f"<SUPPORTER_TARGET> {candidate['text']}"
         
         # RESPONSE 토큰화 (특수 토큰 제외하고 길이 측정)
         response_tokens = self.tokenizer.encode(response_text, add_special_tokens=False)
@@ -143,12 +153,8 @@ class ViolationDetector:
         # 남은 토큰 공간 (CLS, SEP 등 특수 토큰 고려)
         remaining_tokens = 512 - response_length - 3  # 3 for [CLS], [SEP], safety margin
         
-        # CONTEXT를 역순으로 truncate
-        context_parts = []
-        if context.get("state_summary"):
-            context_parts.append(f"[SUMMARY]\n{context['state_summary']}")
-        
-        context_parts.append("\n[CONTEXT]")
+        # CONTEXT를 역순으로 truncate (학습 시에는 [SUMMARY], [CONTEXT] 태그 없이 턴만 나열)
+        # summary는 사용하지 않음 (학습 시 사용 안 함)
         
         # 턴을 역순으로 추가하면서 토큰 수 체크
         turns = list(reversed(context["recent_turns"]))
@@ -156,7 +162,16 @@ class ViolationDetector:
         current_tokens = 0
         
         for turn in turns:
-            turn_text = f"\n{turn['speaker']}: {turn['text']}"
+            # 학습 시와 동일한 special token 포맷 사용
+            speaker = turn['speaker'].lower()
+            if speaker == 'seeker':
+                token = '<SEEKER>'
+            elif speaker == 'supporter':
+                token = '<SUPPORTER>'
+            else:
+                token = '<SUPPORTER>'
+            
+            turn_text = f"{token} {turn['text']}"  # \n 제거 (나중에 join으로 추가)
             turn_tokens = len(self.tokenizer.encode(turn_text, add_special_tokens=False))
             
             if current_tokens + turn_tokens <= remaining_tokens:
@@ -165,9 +180,8 @@ class ViolationDetector:
             else:
                 break
         
-        # 최종 입력 구성
-        context_text = "".join(context_parts) + "".join(selected_turns)
-        input_text = context_text + response_text
+        # 최종 입력 구성 (학습 시와 동일: \n으로 join)
+        input_text = "\n".join(selected_turns + [response_text])
         
         # 토큰화 전 토큰 수 계산 (디버깅용)
         input_tokens_count = len(self.tokenizer.encode(input_text, add_special_tokens=True))
@@ -180,19 +194,22 @@ class ViolationDetector:
         print(f"  Total Input Tokens: {input_tokens_count} (max 512)")
         print(f"  Remaining Space   : {512 - input_tokens_count}\n")
         
-        # 토큰화
+        # 토큰화 (학습 시와 동일: padding='max_length')
         inputs = self.tokenizer(
             input_text,
             max_length=512,
-            padding=True,
+            padding='max_length',  # 학습 시와 동일
             truncation=True,
             return_tensors="pt"
         )
         
-        # 예측
+        # GPU로 이동
+        if hasattr(self, 'device'):
+            inputs = {k: v.to(self.device) for k, v in inputs.items()}
+        
+        # 예측 (학습 시와 동일하게 input_ids, attention_mask만 전달)
         with torch.no_grad():
-            outputs = self.model(**inputs)
-            logits = outputs.logits
+            logits = self.model(inputs['input_ids'], inputs['attention_mask'])
             
             # Temperature scaling (캘리브레이션)
             logits = logits / self.temperature

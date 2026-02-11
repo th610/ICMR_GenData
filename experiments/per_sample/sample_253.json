@@ -1,0 +1,33 @@
+{
+  "sample_index": 253,
+  "session_id": 413,
+  "gold_label": "V4",
+  "situation": "I have/had a friend who now lives on the opposite coast from me. After 15 years out of touch, we rec",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.97055983543396,
+    "all_probabilities": {
+      "normal": 0.97055983543396,
+      "v1": 0.00029880349757149816,
+      "v2": 0.00017568802286405116,
+      "v3": 0.0007657245150767267,
+      "v4": 0.025660280138254166,
+      "v5": 0.0025397122371941805
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.6,
+    "generation_ms": 1171.3,
+    "detection_ms": 28.3,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1204.3
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s really hard to feel that way, especially when connections seem to be slipping away. Have you thought about ways to meet new people in your area? Maybe exploring local groups or activities could help you find new friendships while still navigating your feelings about this one.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

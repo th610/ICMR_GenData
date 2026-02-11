@@ -1,0 +1,85 @@
+{
+  "sample_index": 146,
+  "session_id": 877,
+  "gold_label": "V3",
+  "situation": "They want me to work on a project with them. I agreed to it. Wondering how it will go.",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.5288702845573425,
+    "all_probabilities": {
+      "normal": 0.46843695640563965,
+      "v1": 0.0009406186873093247,
+      "v2": 0.0008071936899796128,
+      "v3": 0.5288702845573425,
+      "v4": 0.0003878265561070293,
+      "v5": 0.0005571002257056534
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.9,
+    "generation_ms": 1058.8,
+    "detection_ms": 26.8,
+    "rewrite_total_ms": 4015.6,
+    "total_ms": 5106.3
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a bit of a time crunch. You could either ask your friend for an extension on your part of the project, or you could decide to push through and complete it quickly. Which option do you think would work best for you?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I added a concrete help element by providing two options for the seeker to consider regarding their decision about the project, while keeping a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.99952232837677,
+      "recheck_probabilities": {
+        "normal": 0.00018425608868710697,
+        "v1": 8.13619262771681e-05,
+        "v2": 0.00010953885066555813,
+        "v3": 0.99952232837677,
+        "v4": 5.6699980632402e-05,
+        "v5": 4.575133789330721e-05
+      },
+      "rewrite_ms": 1247.3
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling the pressure with your deadline. You could either ask your friend for an extension on your part of the project or push through and complete it quickly. Which option feels more manageable for you?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I added two options for the seeker to consider in making their decision, while keeping one empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996002316474915,
+      "recheck_probabilities": {
+        "normal": 9.339591633761302e-05,
+        "v1": 6.756257062079385e-05,
+        "v2": 0.00014150727656669915,
+        "v3": 0.9996002316474915,
+        "v4": 5.0848550017690286e-05,
+        "v5": 4.651960261981003e-05
+      },
+      "rewrite_ms": 1649.5
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling the pressure with your deadline. Have you considered what your friend might say if you ask for more time?",
+      "reasoning": "The original response provided empathy but failed to offer practical help, resulting in a V3 violation. I added a clarifying question to guide the seeker toward making a decision while still acknowledging their feelings.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999496579170227,
+      "recheck_probabilities": {
+        "normal": 0.00022787245688959956,
+        "v1": 7.729183562332764e-05,
+        "v2": 8.444358536507934e-05,
+        "v3": 0.999496579170227,
+        "v4": 5.9625082940328866e-05,
+        "v5": 5.418824002845213e-05
+      },
+      "rewrite_ms": 1118.8
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

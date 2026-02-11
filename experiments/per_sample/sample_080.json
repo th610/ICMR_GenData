@@ -1,0 +1,85 @@
+{
+  "sample_index": 80,
+  "session_id": 601,
+  "gold_label": "V1",
+  "situation": "I am feeling very upset and sad that I had to break up with my girlfriend. I want some help with my ",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.6090965270996094,
+    "all_probabilities": {
+      "normal": 0.3874770402908325,
+      "v1": 0.6090965270996094,
+      "v2": 0.0018130813259631395,
+      "v3": 0.0005976023967377841,
+      "v4": 0.0006185529055073857,
+      "v5": 0.0003972729900851846
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 3.0,
+    "generation_ms": 928.4,
+    "detection_ms": 23.4,
+    "rewrite_total_ms": 4273.6,
+    "total_ms": 5228.7
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your ex-girlfriend possibly seeing someone else. How does that make you feel? It might be helpful to take some time to reflect on your emotions, and perhaps you could consider talking to a friend about your feelings.",
+      "reasoning": "The original response made a hasty conclusion by not acknowledging the seeker's uncertainty about their ex-girlfriend seeing someone else. I fixed it by acknowledging the new information and asking a clarifying question while providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.962936520576477,
+      "recheck_probabilities": {
+        "normal": 0.03565318509936333,
+        "v1": 0.962936520576477,
+        "v2": 0.0005030392203480005,
+        "v3": 0.0003530127287376672,
+        "v4": 0.0003865135950036347,
+        "v5": 0.00016775821859482676
+      },
+      "rewrite_ms": 1353.9
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your ex-girlfriend possibly seeing someone else. How do you feel about the situation? It might be helpful to take some time to reflect on your thoughts, and talking to a friend could provide some support.",
+      "reasoning": "The original response contained a hasty conclusion by assuming the user's feelings without fully acknowledging the uncertainty the seeker expressed regarding their ex-girlfriend seeing someone else. I fixed it by acknowledging the uncertainty, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9839195609092712,
+      "recheck_probabilities": {
+        "normal": 0.015003667213022709,
+        "v1": 0.9839195609092712,
+        "v2": 0.0003729314194060862,
+        "v3": 0.0002863261033780873,
+        "v4": 0.00028143037343397737,
+        "v5": 0.0001360859168926254
+      },
+      "rewrite_ms": 1738.8
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uncertain about your ex-girlfriend possibly seeing someone else. How do you feel about the idea of talking to her about your concerns? Taking some time to reflect on your feelings and discussing them with a trusted friend might help you navigate this situation.",
+      "reasoning": "The original response jumped to conclusions without fully acknowledging the seeker's uncertainty about their ex-girlfriend's situation. I fixed it by acknowledging their feelings and asking a clarifying question, while also providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9898555278778076,
+      "recheck_probabilities": {
+        "normal": 0.00929979421198368,
+        "v1": 0.9898555278778076,
+        "v2": 0.0003263996331952512,
+        "v3": 0.00020733177370857447,
+        "v4": 0.0002257103769807145,
+        "v5": 8.524156146449968e-05
+      },
+      "rewrite_ms": 1180.9
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

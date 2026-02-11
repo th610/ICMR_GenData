@@ -1,0 +1,33 @@
+{
+  "sample_index": 69,
+  "session_id": 347,
+  "gold_label": "Normal",
+  "situation": "i feel so depressed because of this pandemic and job stress.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996874332427979,
+    "all_probabilities": {
+      "normal": 0.9996874332427979,
+      "v1": 6.905269401613623e-05,
+      "v2": 4.8635309212841094e-05,
+      "v3": 8.045892172958702e-05,
+      "v4": 3.9097987610148266e-05,
+      "v5": 7.539245416410267e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.8,
+    "generation_ms": 1097.5,
+    "detection_ms": 27.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1131.3
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Healthy meals like stir-fries and salads are fantastic choices! They can really boost your energy and mood. Have you thought about inviting a friend or family member to join you for a cooking session, either in person or virtually? It could be a fun way to connect while enjoying your new recipes together.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

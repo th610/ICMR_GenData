@@ -1,0 +1,85 @@
+{
+  "sample_index": 84,
+  "session_id": 1188,
+  "gold_label": "V1",
+  "situation": "My company is making people redundant and I am stressed.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9955511093139648,
+    "all_probabilities": {
+      "normal": 0.0038599513936787844,
+      "v1": 0.9955511093139648,
+      "v2": 0.00015000664279796183,
+      "v3": 0.00011620536679401994,
+      "v4": 0.00027877790853381157,
+      "v5": 4.397747034090571e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 3.9,
+    "generation_ms": 870.9,
+    "detection_ms": 25.6,
+    "rewrite_total_ms": 4249.9,
+    "total_ms": 5150.5
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "I hear that there's uncertainty about the potential layoffs, which can certainly add to your anxiety. How do you feel about discussing your concerns with someone you trust? It might also be helpful to explore ways to prepare for any changes that could come.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully acknowledging their uncertainty regarding the potential layoffs. I fixed this by first acknowledging the new information and uncertainty, then asking a clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9769079685211182,
+      "recheck_probabilities": {
+        "normal": 0.022200483828783035,
+        "v1": 0.9769079685211182,
+        "v2": 0.00016313760716002434,
+        "v3": 0.00029155350057408214,
+        "v4": 0.00034435902489349246,
+        "v5": 9.25245913094841e-05
+      },
+      "rewrite_ms": 1448.2
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I understand that there's uncertainty about the potential layoffs, which can be quite stressful. How do you feel about talking to someone you trust about your concerns? It might also be helpful to think about how you can prepare for any changes that might come.",
+      "reasoning": "The original response made assumptions about the user's feelings and next steps without fully clarifying their situation. I acknowledged the uncertainty about the potential layoffs, asked a clarifying question about the user's feelings on discussing their concerns, and offered gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.944275438785553,
+      "recheck_probabilities": {
+        "normal": 0.05442899465560913,
+        "v1": 0.944275438785553,
+        "v2": 0.0002375601907260716,
+        "v3": 0.00041672520455904305,
+        "v4": 0.0005191345699131489,
+        "v5": 0.0001221767597598955
+      },
+      "rewrite_ms": 1472.1
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "I understand that you're uncertain about the potential layoffs, and that can be quite stressful. How do you feel about discussing this with someone you trust? It might also be beneficial to reflect on your options and how you would like to approach the situation.",
+      "reasoning": "The original response made a hasty conclusion by assuming the user had a specific level of stress and did not clarify their feelings about the uncertainty regarding layoffs. I addressed this by acknowledging the user's uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.6628152132034302,
+      "recheck_probabilities": {
+        "normal": 0.3348809778690338,
+        "v1": 0.6628152132034302,
+        "v2": 0.0005856844945810735,
+        "v3": 0.0007515584002248943,
+        "v4": 0.0007278496632352471,
+        "v5": 0.00023869049618951976
+      },
+      "rewrite_ms": 1329.5
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

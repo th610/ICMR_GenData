@@ -31,6 +31,10 @@ Thumbs.db
 logs/
 
 # Large checkpoint files
-# *.pt  # Now tracked with Git LFS
+*.pt
 *.bin
 *.safetensors
+*.tar.gz
+
+# Archive (old cleanup files)
+.archive/

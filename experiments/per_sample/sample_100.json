@@ -1,0 +1,85 @@
+{
+  "sample_index": 100,
+  "session_id": 1010,
+  "gold_label": "V1",
+  "situation": "I fear my child is in bad company. Recently his behavior has changed to the worst. I don't know how ",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9751489758491516,
+    "all_probabilities": {
+      "normal": 0.02407737262547016,
+      "v1": 0.9751489758491516,
+      "v2": 0.00030833660275675356,
+      "v3": 0.0001805915671866387,
+      "v4": 0.00020076839427929372,
+      "v5": 8.397310739383101e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.5,
+    "generation_ms": 897.1,
+    "detection_ms": 29.6,
+    "rewrite_total_ms": 4666.9,
+    "total_ms": 5598.3
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uncertain about what you’ve heard, which is completely understandable. Have you had a chance to talk to your son about what he thinks of those rumors? It might help to approach it casually and see how he responds, creating an open space for him to share.",
+      "reasoning": "The original response made a hasty conclusion without fully acknowledging the seeker's uncertainty about the rumors regarding their son. I corrected it by first acknowledging the seeker's concern about the vague information and then asking a clarifying question to encourage further discussion.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9402961730957031,
+      "recheck_probabilities": {
+        "normal": 0.058712270110845566,
+        "v1": 0.9402961730957031,
+        "v2": 0.0002282520435983315,
+        "v3": 0.0003729875897988677,
+        "v4": 0.00024749417207203805,
+        "v5": 0.00014266549260355532
+      },
+      "rewrite_ms": 1513.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uncertain about what you’ve heard, which is completely understandable. What specifically did the other parent mention that made you uneasy? It might be helpful to take some time to reflect on your feelings regarding the rumors, and perhaps consider how you might express your concerns to your son in a way that feels comfortable for you.",
+      "reasoning": "The original response made a hasty conclusion by suggesting how the seeker should approach the topic with their son without first clarifying the nature of the rumors mentioned. I fixed it by acknowledging the uncertainty expressed and asking a single clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9355912208557129,
+      "recheck_probabilities": {
+        "normal": 0.0631534606218338,
+        "v1": 0.9355912208557129,
+        "v2": 0.0002960487618111074,
+        "v3": 0.0004753145622089505,
+        "v4": 0.00029019813518971205,
+        "v5": 0.0001937053893925622
+      },
+      "rewrite_ms": 1528.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uncertain about what you’ve heard, which is completely understandable. What specific risky activities were mentioned by the other parent? It might be helpful to jot down your thoughts and feelings about these concerns, and consider how you might approach a conversation with your son when you feel ready.",
+      "reasoning": "The original last supporter response included a hasty conclusion about the seeker's feelings without first clarifying the specific details of what the other parent mentioned. I fixed this by acknowledging the seeker's uncertainty, asking a single clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9714595675468445,
+      "recheck_probabilities": {
+        "normal": 0.027701517567038536,
+        "v1": 0.9714595675468445,
+        "v2": 0.00018008991901297122,
+        "v3": 0.00030675402376800776,
+        "v4": 0.000223497801925987,
+        "v5": 0.00012852931104134768
+      },
+      "rewrite_ms": 1625.0
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

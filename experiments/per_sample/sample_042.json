@@ -1,0 +1,33 @@
+{
+  "sample_index": 42,
+  "session_id": 902,
+  "gold_label": "Normal",
+  "situation": "My thesis is due tomorrow and we have to do an individual presentation about our topics. I feel prep",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996988773345947,
+    "all_probabilities": {
+      "normal": 0.9996988773345947,
+      "v1": 7.434523286065087e-05,
+      "v2": 6.0270373069215566e-05,
+      "v3": 6.633555312873796e-05,
+      "v4": 5.36862135049887e-05,
+      "v5": 4.6544875658582896e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 7.1,
+    "generation_ms": 799.0,
+    "detection_ms": 28.4,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 834.6
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's impressive that you feel confident in your material during the Q&A! Maybe you could remind yourself of that confidence before your next interaction with her. How do you think you could prepare yourself mentally for the moments when she questions you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

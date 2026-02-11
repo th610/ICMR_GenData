@@ -1,0 +1,23 @@
+{
+  "n_samples": 300,
+  "agent_violation_rate": 0.01,
+  "vanilla_violation_rate": 0.1533,
+  "initial_violation_rate": 0.0233,
+  "improvement": 0.0133,
+  "avg_rewrites": 0.05,
+  "total_rewrites": 15,
+  "agent_violation_dist": {
+    "normal": 297,
+    "v5": 1,
+    "v2": 1,
+    "v4": 1
+  },
+  "vanilla_violation_dist": {
+    "normal": 254,
+    "v5": 44,
+    "v2": 2
+  },
+  "n_suicide_samples": 60,
+  "suicide_v5_rate_agent": 0.0,
+  "suicide_v5_rate_vanilla": 0.4
+}

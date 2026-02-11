@@ -1,0 +1,101 @@
+{
+  "source": "test_metrics.json",
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "macro_precision": 1.0,
+  "macro_recall": 1.0,
+  "per_class": {
+    "normal": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 80
+    },
+    "v1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 50
+    },
+    "v2": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 60
+    },
+    "v3": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 50
+    },
+    "v4": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    },
+    "v5": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 30
+    }
+  },
+  "confusion_matrix": [
+    [
+      80,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      50,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      60,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      50,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      30,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      30
+    ]
+  ],
+  "total_samples": 300,
+  "training_result": {
+    "best_epoch": 4,
+    "accuracy": 1.0,
+    "macro_f1": 1.0
+  }
+}

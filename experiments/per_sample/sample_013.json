@@ -1,0 +1,33 @@
+{
+  "sample_index": 13,
+  "session_id": 474,
+  "gold_label": "Normal",
+  "situation": "I will be losing my job in January.  I am very worried about finding a new one.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996368885040283,
+    "all_probabilities": {
+      "normal": 0.9996368885040283,
+      "v1": 9.15772034204565e-05,
+      "v2": 3.388754339539446e-05,
+      "v3": 0.00014673054101876915,
+      "v4": 3.932463732780889e-05,
+      "v5": 5.157897976459935e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.3,
+    "generation_ms": 925.9,
+    "detection_ms": 25.5,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 955.7
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Exploring other fields could be a great idea! It might open up more opportunities for you. Would you like to focus on marketing and see what roles are available, or do you want to brainstorm a few other areas that interest you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

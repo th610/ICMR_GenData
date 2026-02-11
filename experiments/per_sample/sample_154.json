@@ -1,0 +1,33 @@
+{
+  "sample_index": 154,
+  "session_id": 1145,
+  "gold_label": "V3",
+  "situation": "I fall back on my study by playing too much online games and now I might fail my exams.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9941028952598572,
+    "all_probabilities": {
+      "normal": 0.9941028952598572,
+      "v1": 0.00019690388580784202,
+      "v2": 0.00019747235637623817,
+      "v3": 0.005165811628103256,
+      "v4": 0.00020610746287275106,
+      "v5": 0.00013092781591694802
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.5,
+    "generation_ms": 892.8,
+    "detection_ms": 24.7,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 921.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s a tough situation to be in, but getting some sleep can actually help you retain information better. Maybe you could try a short study session followed by a brief rest? For example, you could study for two hours, then take a 30-minute break to recharge. How does that sound to you?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

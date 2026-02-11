@@ -1,0 +1,33 @@
+{
+  "sample_index": 79,
+  "session_id": 553,
+  "gold_label": "Normal",
+  "situation": "finals are this week and i'm freaking out",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996927976608276,
+    "all_probabilities": {
+      "normal": 0.9996927976608276,
+      "v1": 6.767936429241672e-05,
+      "v2": 4.518270361586474e-05,
+      "v3": 9.730848978506401e-05,
+      "v4": 5.2648858400061727e-05,
+      "v5": 4.438927862793207e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.7,
+    "generation_ms": 772.4,
+    "detection_ms": 26.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 803.2
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Using a planner is a fantastic idea! It can really help you visualize your time. Are you finding that the breaks are helping you feel more refreshed when you study?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

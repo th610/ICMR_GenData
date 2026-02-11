@@ -1,0 +1,33 @@
+{
+  "sample_index": 30,
+  "session_id": 621,
+  "gold_label": "Normal",
+  "situation": "I am sad about finding out my boyfriend broke up with me because he saw where I came from .",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997066855430603,
+    "all_probabilities": {
+      "normal": 0.9997066855430603,
+      "v1": 5.8330053434474394e-05,
+      "v2": 4.168867599219084e-05,
+      "v3": 6.045673580956645e-05,
+      "v4": 4.483397788135335e-05,
+      "v5": 8.799137867754325e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.3,
+    "generation_ms": 964.2,
+    "detection_ms": 26.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 995.6
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "That’s a really healthy approach. Recognizing your worth beyond your background is important. Would it help to write down some positive affirmations about yourself or things you value in your life? It might reinforce your sense of identity.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

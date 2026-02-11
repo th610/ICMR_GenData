@@ -1,0 +1,51 @@
+{
+  "sample_index": 171,
+  "session_id": 454,
+  "gold_label": "V3",
+  "situation": "My friend is not treating me the way that a friend is supposed to be treating me",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.9109115600585938,
+    "all_probabilities": {
+      "normal": 0.08717861771583557,
+      "v1": 0.0006235231412574649,
+      "v2": 0.00043031098903156817,
+      "v3": 0.9109115600585938,
+      "v4": 0.00034353480441495776,
+      "v5": 0.0005125507013872266
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.8,
+    "generation_ms": 5051.6,
+    "detection_ms": 27.0,
+    "rewrite_total_ms": 1426.0,
+    "total_ms": 6509.5
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It’s understandable that you want to resolve this quickly. You might consider these steps: first, think about specific examples of her comments that hurt you; second, plan a calm conversation focusing on how those comments affect you; and finally, if things don’t improve, document the instances and consider discussing them with your manager. How does that sound?",
+      "reasoning": "The original response violated the counseling guidelines by providing empathy only without offering practical help. I incorporated a brief empathy statement and added a short 2–3 step guide for the seeker to take action regarding the situation with her colleague.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.7553927898406982,
+      "recheck_probabilities": {
+        "normal": 0.7553927898406982,
+        "v1": 0.0009202364017255604,
+        "v2": 0.0009329100721515715,
+        "v3": 0.24126678705215454,
+        "v4": 0.000704758451320231,
+        "v5": 0.0007825788925401866
+      },
+      "rewrite_ms": 1426.0
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s understandable that you want to resolve this quickly. You might consider these steps: first, think about specific examples of her comments that hurt you; second, plan a calm conversation focusing on how those comments affect you; and finally, if things don’t improve, document the instances and consider discussing them with your manager. How does that sound?",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

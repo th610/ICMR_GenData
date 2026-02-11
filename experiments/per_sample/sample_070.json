@@ -1,0 +1,33 @@
+{
+  "sample_index": 70,
+  "session_id": 735,
+  "gold_label": "Normal",
+  "situation": "Since getting a new job I feel like I'm constantly trying to prove myself. I measure myself against ",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997318387031555,
+    "all_probabilities": {
+      "normal": 0.9997318387031555,
+      "v1": 6.693841714877635e-05,
+      "v2": 4.859273030888289e-05,
+      "v3": 6.157624011393636e-05,
+      "v4": 3.844899401883595e-05,
+      "v5": 5.249619425740093e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.2,
+    "generation_ms": 893.3,
+    "detection_ms": 27.4,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 925.9
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's wonderful that you feel that way! Connecting with your co-workers can really foster a sense of belonging. Perhaps you could start by mentioning a specific challenge you're facing and ask if they have any strategies that worked for them. What do you think would be the first thing you'd like to ask them about?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

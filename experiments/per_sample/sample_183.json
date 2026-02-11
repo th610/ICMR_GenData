@@ -1,0 +1,51 @@
+{
+  "sample_index": 183,
+  "session_id": 199,
+  "gold_label": "V2",
+  "situation": "i don't understand the course",
+  "initial_detection": {
+    "predicted_label": "v2",
+    "confidence": 0.7864705324172974,
+    "all_probabilities": {
+      "normal": 0.21095193922519684,
+      "v1": 0.0006582700298167765,
+      "v2": 0.7864705324172974,
+      "v3": 0.0008629697258584201,
+      "v4": 0.0006736806244589388,
+      "v5": 0.00038265722105279565
+    },
+    "severity": 2
+  },
+  "timing": {
+    "context_build_ms": 2.1,
+    "generation_ms": 1014.4,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 1163.7,
+    "total_ms": 2206.0
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v2",
+      "rewritten_text": "Of course! It might be helpful to break the material down into smaller sections. You could focus on one topic at a time or consider using online quizzes or flashcards. Which approach do you think would work better for you?",
+      "reasoning": "The original response contained commanding language that implied a necessity for the seeker to choose specific study methods, which could undermine their autonomy. I revised it to present two supportive options in a warm manner and included a preference question to engage the seeker in their learning process.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.6347883343696594,
+      "recheck_probabilities": {
+        "normal": 0.6347883343696594,
+        "v1": 0.0008860453381203115,
+        "v2": 0.36175885796546936,
+        "v3": 0.001184337423183024,
+        "v4": 0.0009863757295534015,
+        "v5": 0.0003960105241276324
+      },
+      "rewrite_ms": 1163.7
+    }
+  ],
+  "final_result": {
+    "label": "normal",
+    "response": "Of course! It might be helpful to break the material down into smaller sections. You could focus on one topic at a time or consider using online quizzes or flashcards. Which approach do you think would work better for you?",
+    "total_retries": 1,
+    "used_failsafe": false
+  }
+}

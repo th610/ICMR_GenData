@@ -1,0 +1,85 @@
+{
+  "sample_index": 113,
+  "session_id": 944,
+  "gold_label": "V1",
+  "situation": "Impending assignment and exam deadlines later this month, and next month, with online education.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9153625965118408,
+    "all_probabilities": {
+      "normal": 0.08328325301408768,
+      "v1": 0.9153625965118408,
+      "v2": 0.0001823245984269306,
+      "v3": 0.0005054251523688436,
+      "v4": 0.0005148354102857411,
+      "v5": 0.00015160656766965985
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 5.4,
+    "generation_ms": 1002.1,
+    "detection_ms": 27.0,
+    "rewrite_total_ms": 4289.8,
+    "total_ms": 5324.4
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uncertain about the potential changes to the exam formats. Have you considered discussing this with your instructors to get more clarity? It might also be useful to connect with your classmates to share information and support each other.",
+      "reasoning": "The original response made a hasty conclusion about the user's situation and included multiple suggestions without fully understanding the user's concerns about the exam format changes. I acknowledged the user's uncertainty and asked a single clarifying question, followed by gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9861278533935547,
+      "recheck_probabilities": {
+        "normal": 0.013239121995866299,
+        "v1": 0.9861278533935547,
+        "v2": 0.00011529066978255287,
+        "v3": 0.0002086854074150324,
+        "v4": 0.0002283759240526706,
+        "v5": 8.06142998044379e-05
+      },
+      "rewrite_ms": 1552.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the potential changes to the exam formats. What specific concerns do you have about how these changes might affect your preparation? It may be helpful to reach out to your instructors for more information and to stay connected with your classmates for support.",
+      "reasoning": "The original response jumped to a suggestion without fully acknowledging the seeker's uncertainty about the exam format changes. I corrected it by first acknowledging their uncertainty, asking a clarifying question, and then suggesting gentle next steps without assuming any missing information.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9936589598655701,
+      "recheck_probabilities": {
+        "normal": 0.005815733224153519,
+        "v1": 0.9936589598655701,
+        "v2": 0.00010135468619409949,
+        "v3": 0.00017211344675160944,
+        "v4": 0.0001709651987766847,
+        "v5": 8.089452603599057e-05
+      },
+      "rewrite_ms": 1468.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're uncertain about the potential changes to the exam formats. What specific concerns do you have about how these changes might affect your preparation? It could be beneficial to reach out to your instructors for clarification and connect with classmates to share any insights.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without adequately acknowledging their uncertainty regarding the exam format changes. I fixed it by acknowledging their uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9955281615257263,
+      "recheck_probabilities": {
+        "normal": 0.0040433830581605434,
+        "v1": 0.9955281615257263,
+        "v2": 9.553669951856136e-05,
+        "v3": 0.00013967108679935336,
+        "v4": 0.0001305423502344638,
+        "v5": 6.26346081844531e-05
+      },
+      "rewrite_ms": 1268.1
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

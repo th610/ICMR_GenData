@@ -1,0 +1,163 @@
+"""
+Table 3: System Efficiency (Set B)
+
+FPR, FNR, Latency 통계 (Detection / Generation / Rewrite / Total).
+
+Input:
+    experiment_results/experiment_log.jsonl
+
+Output:
+    experiment_results/table3/
+        table3_report.txt
+        table3_metrics.json
+"""
+import json
+import sys
+import argparse
+from pathlib import Path
+
+RESULTS_DIR = Path(__file__).parent
+LOG_PATH = RESULTS_DIR / "experiment_log.jsonl"
+OUTPUT_DIR = RESULTS_DIR / "table3"
+
+
+def load_results():
+    results = []
+    with open(LOG_PATH, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                results.append(json.loads(line))
+    return results
+
+
+def compute_metrics(results):
+    normals = [r for r in results if r['gold_label'].lower() == 'normal']
+    false_positives = [r for r in normals
+                       if r['initial_detection']['predicted_label'] != 'normal']
+    fpr = len(false_positives) / len(normals) if normals else 0.0
+
+    violations = [r for r in results if r['gold_label'].lower() != 'normal']
+    false_negatives = [r for r in violations
+                       if r['initial_detection']['predicted_label'] == 'normal']
+    fnr = len(false_negatives) / len(violations) if violations else 0.0
+
+    detect_times = [r['timing']['detection_ms'] for r in results]
+    gen_times = [r['timing']['generation_ms'] for r in results]
+    total_times = [r['timing']['total_ms'] for r in results]
+
+    rewrite_samples = [r for r in results if r['final_result']['total_retries'] > 0]
+    rewrite_times = [r['timing']['rewrite_total_ms'] for r in rewrite_samples] if rewrite_samples else [0]
+
+    def stats(values):
+        if not values:
+            return {'mean': 0, 'median': 0, 'p95': 0, 'max': 0, 'min': 0}
+        values = sorted(values)
+        n = len(values)
+        return {
+            'mean': sum(values) / n,
+            'median': values[n // 2],
+            'p95': values[int(n * 0.95)] if n >= 20 else values[-1],
+            'max': values[-1],
+            'min': values[0]
+        }
+
+    return {
+        'fpr': fpr,
+        'fpr_count': len(false_positives),
+        'fpr_total': len(normals),
+        'fnr': fnr,
+        'fnr_count': len(false_negatives),
+        'fnr_total': len(violations),
+        'latency': {
+            'detection': stats(detect_times),
+            'generation': stats(gen_times),
+            'rewrite': stats(rewrite_times),
+            'total': stats(total_times)
+        }
+    }
+
+
+def format_report(m):
+    lat = m['latency']
+    lines = []
+    lines.append("")
+    lines.append("=" * 80)
+    lines.append("  TABLE 3: System Efficiency (Set B)")
+    lines.append("=" * 80)
+    lines.append("")
+    lines.append(f"  False Positive Rate (FPR):  {m['fpr']:.2%}  ({m['fpr_count']}/{m['fpr_total']})")
+    lines.append(f"  False Negative Rate (FNR):  {m['fnr']:.2%}  ({m['fnr_count']}/{m['fnr_total']})")
+    lines.append("")
+    lines.append(f"  {'Latency (ms)':<26} {'Mean':>8} {'Median':>8} {'P95':>8} {'Max':>8}")
+    lines.append("  " + "-" * 62)
+    for name, key in [('Detection Only', 'detection'),
+                       ('Generation (GPT)', 'generation'),
+                       ('Rewrite (per cycle)', 'rewrite'),
+                       ('Total (end-to-end)', 'total')]:
+        s = lat[key]
+        lines.append(f"  {name:<26} {s['mean']:>8.0f} {s['median']:>8.0f} {s['p95']:>8.0f} {s['max']:>8.0f}")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def format_latex(m):
+    lat = m['latency']
+    lines = []
+    lines.append(r"\begin{table}[h]")
+    lines.append(r"\centering")
+    lines.append(r"\caption{System Efficiency Metrics}")
+    lines.append(r"\begin{tabular}{lcccc}")
+    lines.append(r"\toprule")
+    lines.append(r"Component & Mean & Median & P95 & Max \\")
+    lines.append(r"\midrule")
+    for name, key in [('Detection', 'detection'), ('Generation', 'generation'),
+                       ('Rewrite', 'rewrite'), ('Total', 'total')]:
+        s = lat[key]
+        lines.append(f"{name} & {s['mean']:.0f} & {s['median']:.0f} & {s['p95']:.0f} & {s['max']:.0f} \\\\")
+    lines.append(r"\midrule")
+    lines.append(f"FPR & \\multicolumn{{4}}{{c}}{{{m['fpr']:.2%}}} \\\\")
+    lines.append(f"FNR & \\multicolumn{{4}}{{c}}{{{m['fnr']:.2%}}} \\\\")
+    lines.append(r"\bottomrule")
+    lines.append(r"\end{tabular}")
+    lines.append(r"\end{table}")
+    return "\n".join(lines)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Table 3: System Efficiency")
+    parser.add_argument('--format', choices=['text', 'latex', 'both'], default='both')
+    args = parser.parse_args()
+
+    if not LOG_PATH.exists():
+        print(f"ERROR: {LOG_PATH} not found.")
+        sys.exit(1)
+
+    results = load_results()
+    print(f"Loaded {len(results)} results from {LOG_PATH}\n")
+
+    metrics = compute_metrics(results)
+
+    report = format_report(metrics)
+    print(report)
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    with open(OUTPUT_DIR / "table3_report.txt", 'w', encoding='utf-8') as f:
+        f.write(report)
+
+    with open(OUTPUT_DIR / "table3_metrics.json", 'w', encoding='utf-8') as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False, default=str)
+
+    if args.format in ('latex', 'both'):
+        latex = format_latex(metrics)
+        print("\n[LaTeX]")
+        print(latex)
+        with open(OUTPUT_DIR / "table3_latex.tex", 'w') as f:
+            f.write(latex)
+
+    print(f"\n[SAVED] {OUTPUT_DIR}/")
+
+
+if __name__ == "__main__":
+    main()

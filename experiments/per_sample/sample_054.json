@@ -1,0 +1,33 @@
+{
+  "sample_index": 54,
+  "session_id": 712,
+  "gold_label": "Normal",
+  "situation": "The ongoing pandemic.  My husband I like to travel and planned that for our retirement years.  I fee",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996117949485779,
+    "all_probabilities": {
+      "normal": 0.9996117949485779,
+      "v1": 9.818819671636447e-05,
+      "v2": 4.9913491238839924e-05,
+      "v3": 8.955779048847035e-05,
+      "v4": 5.774146848125383e-05,
+      "v5": 9.278646757593378e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 5.0,
+    "generation_ms": 906.0,
+    "detection_ms": 26.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 937.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Italy sounds like a wonderful destination! What specific sights or experiences you were most looking forward to? Maybe we can brainstorm some ways to keep that dream alive until you can go.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

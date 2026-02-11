@@ -1,0 +1,33 @@
+{
+  "sample_index": 202,
+  "session_id": 134,
+  "gold_label": "V2",
+  "situation": "My boyfriend cheated on me and I found out 6 months later at work from a customer. I was so embarras",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.838775634765625,
+    "all_probabilities": {
+      "normal": 0.838775634765625,
+      "v1": 0.0005849577719345689,
+      "v2": 0.15502536296844482,
+      "v3": 0.0032820357009768486,
+      "v4": 0.00035570040927268565,
+      "v5": 0.0019762932788580656
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 2.1,
+    "generation_ms": 852.5,
+    "detection_ms": 23.2,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 877.9
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "I can see how overwhelming this must be for you. It might help to take a moment to reflect on what you truly want from this relationship. Would you like to talk about your feelings or perhaps consider having a conversation with your boyfriend about your concerns? Both options could lead to some clarity.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

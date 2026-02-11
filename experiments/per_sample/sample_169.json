@@ -1,0 +1,85 @@
+{
+  "sample_index": 169,
+  "session_id": 1068,
+  "gold_label": "V3",
+  "situation": "I am on short term disability and I am afraid I will lose my job if I don't go back soon.",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.6855965256690979,
+    "all_probabilities": {
+      "normal": 0.3112759590148926,
+      "v1": 0.0011557029793038964,
+      "v2": 0.0009277331409975886,
+      "v3": 0.6855965256690979,
+      "v4": 0.0004839109897147864,
+      "v5": 0.0005601599114015698
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.3,
+    "generation_ms": 1040.9,
+    "detection_ms": 27.3,
+    "rewrite_total_ms": 4899.9,
+    "total_ms": 5972.6
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling quite stuck right now. If you don't hear back by the end of the week, I recommend following these steps: 1) Send a follow-up email to your department manager expressing the urgency of your situation. 2) If you still don't get a response, reach out to HR again and explain that you need assistance. Would that be manageable for you?",
+      "reasoning": "The last supporter response primarily expressed empathy and validation without providing a concrete element of practical help, which is a violation of the counseling guideline. I added a specific short guide to address the seeker's need for actionable steps while keeping one brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9990835189819336,
+      "recheck_probabilities": {
+        "normal": 0.00032587244641035795,
+        "v1": 0.000161745585501194,
+        "v2": 0.00022508250549435616,
+        "v3": 0.9990835189819336,
+        "v4": 0.00010081732034450397,
+        "v5": 0.000102988000435289
+      },
+      "rewrite_ms": 1842.7
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling quite stuck right now. If you don't hear back by the end of the week, I recommend: 1) Sending a follow-up email to your department manager to express the urgency of your situation. 2) If there's still no response, reach out to HR again to ask for assistance. Would that be manageable for you?",
+      "reasoning": "The original last supporter response primarily focused on empathy and validation without providing the explicit practical help that the seeker requested. I retained one empathy sentence and added a short 2-3 step guide to provide the necessary practical assistance.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9988038539886475,
+      "recheck_probabilities": {
+        "normal": 0.0005691598635166883,
+        "v1": 0.00017959017714019865,
+        "v2": 0.0002181625459343195,
+        "v3": 0.9988038539886475,
+        "v4": 0.00011856744822580367,
+        "v5": 0.00011069548781961203
+      },
+      "rewrite_ms": 1452.0
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling quite stuck right now. If you don't hear back by the end of the week, I recommend: 1) Sending a follow-up email to your department manager to emphasize the urgency of your situation. 2) If there's still no response, reach out to HR again for assistance. Would that be manageable for you?",
+      "reasoning": "The original response demonstrated empathy but failed to provide practical guidance that the seeker explicitly requested. I retained a brief empathetic statement and provided a concrete step-by-step guide to help the seeker navigate their situation effectively.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9983867406845093,
+      "recheck_probabilities": {
+        "normal": 0.0009264381369575858,
+        "v1": 0.0001955825719051063,
+        "v2": 0.00020719786698464304,
+        "v3": 0.9983867406845093,
+        "v4": 0.00013898260658606887,
+        "v5": 0.00014504414866678417
+      },
+      "rewrite_ms": 1605.3
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

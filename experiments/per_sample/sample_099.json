@@ -1,0 +1,85 @@
+{
+  "sample_index": 99,
+  "session_id": 707,
+  "gold_label": "V1",
+  "situation": "I can not find a career i am stressing",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9988622665405273,
+    "all_probabilities": {
+      "normal": 0.0008217552094720304,
+      "v1": 0.9988622665405273,
+      "v2": 5.375399996410124e-05,
+      "v3": 0.00010278113768436015,
+      "v4": 0.00010872626444324851,
+      "v5": 5.0761613238137215e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 1.9,
+    "generation_ms": 761.2,
+    "detection_ms": 24.5,
+    "rewrite_total_ms": 3939.6,
+    "total_ms": 4727.4
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "I can see how hearing a rumor like that can be unsettling. What specific concerns do you have about the potential hiring cuts? Keeping updated with local news and talking to others in your area might help you feel more informed.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully acknowledging their uncertainty regarding the rumor about hiring cuts. I fixed it by directly acknowledging their uncertainty and asking a clarifying question while suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9968749284744263,
+      "recheck_probabilities": {
+        "normal": 0.002664420520886779,
+        "v1": 0.9968749284744263,
+        "v2": 6.842768198112026e-05,
+        "v3": 0.00014895918138790876,
+        "v4": 0.00018084188923239708,
+        "v5": 6.249126454349607e-05
+      },
+      "rewrite_ms": 1222.3
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I understand that hearing a rumor like that can be unsettling. What specific aspects of the hiring situation are you most worried about? It might be helpful to keep an eye on local news updates and check in with others about their experiences.",
+      "reasoning": "The original response jumped to conclusions about the user's concerns without fully clarifying them, which could lead to misunderstanding. I revised it to acknowledge the user's uncertainty about the rumor while also asking a single clarifying question and providing gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9965799450874329,
+      "recheck_probabilities": {
+        "normal": 0.0029437008779495955,
+        "v1": 0.9965799450874329,
+        "v2": 7.228663162095472e-05,
+        "v3": 0.00017969051259569824,
+        "v4": 0.00015400146367028356,
+        "v5": 7.030670531094074e-05
+      },
+      "rewrite_ms": 1268.5
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "I can see how hearing a rumor like that might leave you feeling uncertain. What specific concerns do you have about the hiring situation? It might be helpful to check in with local news updates or talk to others in your area to gather more information.",
+      "reasoning": "The original response jumped to conclusions about the user's feelings without fully acknowledging their uncertainty and did not ask a single, clear clarifying question. I revised it to acknowledge the user's uncertainty regarding the rumor and asked a focused question, while also suggesting gentle next steps without assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9982403516769409,
+      "recheck_probabilities": {
+        "normal": 0.0014355782186612487,
+        "v1": 0.9982403516769409,
+        "v2": 6.356091034831479e-05,
+        "v3": 0.000114338836283423,
+        "v4": 0.00010285104508511722,
+        "v5": 4.3285781430313364e-05
+      },
+      "rewrite_ms": 1448.8
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

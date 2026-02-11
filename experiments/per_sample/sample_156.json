@@ -1,0 +1,33 @@
+{
+  "sample_index": 156,
+  "session_id": 128,
+  "gold_label": "V3",
+  "situation": "the event that put in this mood was a big gathering of people of all sorts and kinds",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9963394403457642,
+    "all_probabilities": {
+      "normal": 0.9963394403457642,
+      "v1": 0.00014189252397045493,
+      "v2": 0.00013674904766958207,
+      "v3": 0.0031580047216266394,
+      "v4": 7.246062159538269e-05,
+      "v5": 0.00015147222438827157
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 904.1,
+    "detection_ms": 30.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 938.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s understandable to feel torn in this situation. One option could be to think about what would bring you more peace in the moment. Would it help to list out the pros and cons of each choice? Or perhaps consider how you might feel during and after each option? This could give you some clarity on what feels right for you.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

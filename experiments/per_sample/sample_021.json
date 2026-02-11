@@ -1,0 +1,33 @@
+{
+  "sample_index": 21,
+  "session_id": 95,
+  "gold_label": "Normal",
+  "situation": "My mothers new husband has just died f corona virus last week. He was a deacon in church and she was",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996823072433472,
+    "all_probabilities": {
+      "normal": 0.9996823072433472,
+      "v1": 7.12812616256997e-05,
+      "v2": 5.623340985039249e-05,
+      "v3": 8.427349530393258e-05,
+      "v4": 3.2936102797975764e-05,
+      "v5": 7.297610864043236e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.7,
+    "generation_ms": 895.1,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 924.7
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "That sounds like a thoughtful approach. It might be helpful to encourage him to express what specifically worries him. Would you feel comfortable asking him what his biggest concern is right now? Or perhaps you could suggest some activities you both enjoy that could help distract him a bit more?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

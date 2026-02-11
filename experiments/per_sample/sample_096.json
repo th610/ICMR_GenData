@@ -1,0 +1,85 @@
+{
+  "sample_index": 96,
+  "session_id": 863,
+  "gold_label": "V1",
+  "situation": "I have a presentation to give to my class and I have a phobia of speaking in public.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9992656111717224,
+    "all_probabilities": {
+      "normal": 0.0004416654701344669,
+      "v1": 0.9992656111717224,
+      "v2": 8.312335558002815e-05,
+      "v3": 8.11879726825282e-05,
+      "v4": 0.00010087706323247403,
+      "v5": 2.7502559532877058e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 6.0,
+    "generation_ms": 873.7,
+    "detection_ms": 27.0,
+    "rewrite_total_ms": 4051.2,
+    "total_ms": 4958.2
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "I can see how that uncertainty would add to your anxiety about the presentation. Have you considered reaching out to your professor or classmates to clarify the grading expectations? It might also be helpful to practice your presentation with someone to build your confidence.",
+      "reasoning": "The original response jumped to suggesting actions without fully acknowledging the seeker's new key information regarding the uncertainty about the professor's grading. I corrected this by acknowledging the user's concern, asking a clarifying question related to their uncertainty, and offering gentle next steps without assuming any missing facts.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.99882572889328,
+      "recheck_probabilities": {
+        "normal": 0.0008046236471273005,
+        "v1": 0.99882572889328,
+        "v2": 7.504080713260919e-05,
+        "v3": 0.00011285959772067145,
+        "v4": 0.00014503819693345577,
+        "v5": 3.665213444037363e-05
+      },
+      "rewrite_ms": 1389.2
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I can understand how that uncertainty about the grading could increase your anxiety. Have you thought about discussing your concerns with your professor or classmates to gain more clarity? It might also be beneficial to find a supportive friend or community member to practice your presentation with.",
+      "reasoning": "The original response made hasty conclusions about the user's situation without fully exploring the new information regarding the professor's strict grading and the user's uncertainty. I corrected it by acknowledging the user's concerns and asking a clarifying question, while also suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9993578791618347,
+      "recheck_probabilities": {
+        "normal": 0.0003481431631371379,
+        "v1": 0.9993578791618347,
+        "v2": 7.948101119836792e-05,
+        "v3": 7.714436651440337e-05,
+        "v4": 0.00010552150342846289,
+        "v5": 3.186514732078649e-05
+      },
+      "rewrite_ms": 1213.7
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "I can see how that uncertainty about the grading could be adding to your stress. Have you considered reaching out to your professor to share your worries and ask for clarification? It might also help to talk to classmates who have already presented to see how they experienced it.",
+      "reasoning": "The original response jumped to a suggestion without fully acknowledging the seeker's new concerns about the professor's grading and lacked a clarifying question to gather more context. I revised it to acknowledge the seeker's uncertainty and include a single question to encourage further discussion.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9987070560455322,
+      "recheck_probabilities": {
+        "normal": 0.0009404943557456136,
+        "v1": 0.9987070560455322,
+        "v2": 6.862389273010194e-05,
+        "v3": 0.00010670968185877427,
+        "v4": 0.00013807993673253804,
+        "v5": 3.908005965058692e-05
+      },
+      "rewrite_ms": 1448.4
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

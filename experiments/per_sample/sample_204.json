@@ -1,0 +1,33 @@
+{
+  "sample_index": 204,
+  "session_id": 548,
+  "gold_label": "V2",
+  "situation": "just everyday life",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9926097989082336,
+    "all_probabilities": {
+      "normal": 0.9926097989082336,
+      "v1": 0.00018776625802274793,
+      "v2": 0.0067525943741202354,
+      "v3": 0.00021615620062220842,
+      "v4": 0.00011822521628346294,
+      "v5": 0.00011539944534888491
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 6.8,
+    "generation_ms": 988.4,
+    "detection_ms": 27.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1023.3
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It can be really challenging to find a balance. Perhaps you could try discussing with him how his late hours affect you while also expressing your admiration for his work ethic. Would it be helpful to approach the conversation by sharing specific feelings rather than focusing on the late hours themselves? This might help him understand your perspective better.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

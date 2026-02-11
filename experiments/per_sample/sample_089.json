@@ -1,0 +1,85 @@
+{
+  "sample_index": 89,
+  "session_id": 1139,
+  "gold_label": "V1",
+  "situation": "I have a job that does not fulfill my goals for myself. I used to love my job but coronavirus has ma",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9739062190055847,
+    "all_probabilities": {
+      "normal": 0.02517123520374298,
+      "v1": 0.9739062190055847,
+      "v2": 0.00021696688781958073,
+      "v3": 0.0002994319947902113,
+      "v4": 0.00032094353809952736,
+      "v5": 8.519499533576891e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.1,
+    "generation_ms": 1128.1,
+    "detection_ms": 27.6,
+    "rewrite_total_ms": 4889.9,
+    "total_ms": 6049.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "```json\n{\n  \"reasoning\": \"The original response jumped to conclusions about the seeker's anxiety without fully acknowledging their uncertainty regarding the layoffs. I fixed it by first recognizing their key concern and then asking a clarifying question while providing gentle next steps.\",\n  \"corrected_response\": \"I can see how hearing about potential layoffs would create uncertainty for you. Have you had a chance to discuss your concerns with anyone at work? It might also be helpful to focus on your current responsibilities and what you enjoy about your job as you navigate this situation.\"\n}\n```",
+      "reasoning": "",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.998734176158905,
+      "recheck_probabilities": {
+        "normal": 0.0009491959353908896,
+        "v1": 0.998734176158905,
+        "v2": 0.0001162564949481748,
+        "v3": 8.216482819989324e-05,
+        "v4": 8.698188321432099e-05,
+        "v5": 3.12517186102923e-05
+      },
+      "rewrite_ms": 1566.3
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I can understand how worrying about potential layoffs can add to your uncertainty. Have you considered talking to your supervisor or HR about what you've heard? It might also be helpful to focus on what you enjoy about your job during this time.",
+      "reasoning": "The original response jumped to conclusions about the seeker's anxiety without fully acknowledging their uncertainty regarding the layoffs. I fixed it by recognizing their concern about the layoffs, asking a clarifying question, and offering gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9930453896522522,
+      "recheck_probabilities": {
+        "normal": 0.006405886262655258,
+        "v1": 0.9930453896522522,
+        "v2": 0.00012143930507590994,
+        "v3": 0.0001876644091680646,
+        "v4": 0.00017725685029290617,
+        "v5": 6.233442400116473e-05
+      },
+      "rewrite_ms": 1484.6
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel worried about potential layoffs, especially when you're uncertain about the situation. Have you thought about what specific information you would like to know from your supervisor or HR? It might be helpful to gather more information and also consider discussing your feelings with someone you trust at work.",
+      "reasoning": "The original response made a hasty conclusion by assuming the seeker should focus on what they enjoy about their job without fully exploring their concerns about the potential layoffs. I fixed it by acknowledging the seeker's uncertainty, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9555285573005676,
+      "recheck_probabilities": {
+        "normal": 0.04346492514014244,
+        "v1": 0.9555285573005676,
+        "v2": 0.0002361396764172241,
+        "v3": 0.0003433850361034274,
+        "v4": 0.00032013902091421187,
+        "v5": 0.00010688466863939539
+      },
+      "rewrite_ms": 1839.0
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

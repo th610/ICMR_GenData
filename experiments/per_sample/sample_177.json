@@ -1,0 +1,85 @@
+{
+  "sample_index": 177,
+  "session_id": 1213,
+  "gold_label": "V3",
+  "situation": "I became a single mother last year and am battling with postpartum depression. I thought I would enj",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.977976381778717,
+    "all_probabilities": {
+      "normal": 0.02116607129573822,
+      "v1": 0.00021778492373414338,
+      "v2": 0.00022458247258327901,
+      "v3": 0.977976381778717,
+      "v4": 0.00014434348850045353,
+      "v5": 0.00027086405316367745
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 2.8,
+    "generation_ms": 1221.5,
+    "detection_ms": 23.8,
+    "rewrite_total_ms": 4936.1,
+    "total_ms": 6184.4
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel overwhelmed with such an important decision. Have you thought about which option would provide you with the most immediate support for you and your child?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker, which led to a violation of the counseling guidelines. I added a brief empathic statement and included a specific question to guide the seeker in making their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994531273841858,
+      "recheck_probabilities": {
+        "normal": 0.000266818591626361,
+        "v1": 6.34347161394544e-05,
+        "v2": 7.493342855013907e-05,
+        "v3": 0.9994531273841858,
+        "v4": 5.016342765884474e-05,
+        "v5": 9.160342597169802e-05
+      },
+      "rewrite_ms": 1346.3
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel overwhelmed with such an important decision. Would you prefer to apply for the job now and gain immediate financial support, or focus on the course to improve your skills for better opportunities in the future?",
+      "reasoning": "The original response was purely empathetic and did not provide the practical help requested by the seeker. I included a brief empathy statement followed by a concrete help element in the form of two options to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999653697013855,
+      "recheck_probabilities": {
+        "normal": 6.622807268286124e-05,
+        "v1": 5.810083894175477e-05,
+        "v2": 8.081478881649673e-05,
+        "v3": 0.999653697013855,
+        "v4": 4.810696918866597e-05,
+        "v5": 9.297078941017389e-05
+      },
+      "rewrite_ms": 2388.7
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "I understand this is a tough decision for you. Would you prefer to apply for the job now for immediate financial support, or focus on the course for better long-term opportunities?",
+      "reasoning": "The original response was overly empathetic and did not provide practical help as explicitly requested by the seeker. I added a brief empathy sentence followed by two options for the seeker to consider regarding their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996393918991089,
+      "recheck_probabilities": {
+        "normal": 8.127142064040527e-05,
+        "v1": 6.170591950649396e-05,
+        "v2": 6.495763955172151e-05,
+        "v3": 0.9996393918991089,
+        "v4": 5.248983870842494e-05,
+        "v5": 0.00010008746176026762
+      },
+      "rewrite_ms": 1201.1
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

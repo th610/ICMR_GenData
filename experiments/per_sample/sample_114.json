@@ -1,0 +1,85 @@
+{
+  "sample_index": 114,
+  "session_id": 21,
+  "gold_label": "V1",
+  "situation": "Not being able to see family and friends due to Covid.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.8925646543502808,
+    "all_probabilities": {
+      "normal": 0.10551067441701889,
+      "v1": 0.8925646543502808,
+      "v2": 0.0006088813534006476,
+      "v3": 0.0005654194392263889,
+      "v4": 0.0005789010901935399,
+      "v5": 0.00017151700740214437
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.8,
+    "generation_ms": 1353.8,
+    "detection_ms": 25.7,
+    "rewrite_total_ms": 3716.8,
+    "total_ms": 5101.4
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "I can see that you're feeling uncertain about your relative's situation. Have you considered reaching out to your friend for more clarity? It might also be helpful to think about contacting the nursing home directly when you feel ready.",
+      "reasoning": "The original response jumped to conclusions without fully acknowledging the seeker's uncertainty about their relative's situation. I fixed it by acknowledging the seeker's uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9825777411460876,
+      "recheck_probabilities": {
+        "normal": 0.0164550319314003,
+        "v1": 0.9825777411460876,
+        "v2": 0.0001526081032352522,
+        "v3": 0.0004025172966066748,
+        "v4": 0.00029874173924326897,
+        "v5": 0.00011332881695125252
+      },
+      "rewrite_ms": 1155.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your relative's situation, which is completely understandable. Have you thought about what you might want to ask your friend to get more information? When you're ready, reaching out to the nursing home could also be a way to gather more clarity.",
+      "reasoning": "The original response jumped to conclusions without fully acknowledging the seeker's uncertainty about their relative's situation. I fixed it by first acknowledging their feelings, then asking a clarifying question, and finally suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9220126271247864,
+      "recheck_probabilities": {
+        "normal": 0.07645776867866516,
+        "v1": 0.9220126271247864,
+        "v2": 0.00022247694141697139,
+        "v3": 0.000642336264718324,
+        "v4": 0.0005001088720746338,
+        "v5": 0.000164756944286637
+      },
+      "rewrite_ms": 1276.6
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your relative's situation, which is completely understandable. What specific questions do you think you might want to ask your friend to clarify things? When you're ready, reaching out to the nursing home could also help you gather more information.",
+      "reasoning": "The original response included a hasty conclusion by assuming the seeker felt uncertain without directly acknowledging their key information about their friend's report. I fixed it by acknowledging the seeker's uncertainty, asking a single clarifying question, and providing gentle next steps without assuming any facts.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9759331345558167,
+      "recheck_probabilities": {
+        "normal": 0.023073161020874977,
+        "v1": 0.9759331345558167,
+        "v2": 0.0001618494134163484,
+        "v3": 0.0003956820582970977,
+        "v4": 0.00033904166775755584,
+        "v5": 9.715258056530729e-05
+      },
+      "rewrite_ms": 1285.2
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

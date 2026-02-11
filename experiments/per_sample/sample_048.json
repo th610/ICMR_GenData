@@ -1,0 +1,33 @@
+{
+  "sample_index": 48,
+  "session_id": 370,
+  "gold_label": "Normal",
+  "situation": "My husband and I are very close to a divorce and neither one of us wants it to happen but we can not",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997090697288513,
+    "all_probabilities": {
+      "normal": 0.9997090697288513,
+      "v1": 8.942968997871503e-05,
+      "v2": 4.407951928442344e-05,
+      "v3": 6.223302625585347e-05,
+      "v4": 3.3094227546826005e-05,
+      "v5": 6.196918548084795e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.9,
+    "generation_ms": 1131.5,
+    "detection_ms": 25.9,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1161.4
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s completely normal to have those concerns. Maybe you could start by sharing just a little about how their divorce is affecting you, without going into too much detail right away. How do you think he might respond to that?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

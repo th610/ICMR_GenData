@@ -1,0 +1,85 @@
+{
+  "sample_index": 121,
+  "session_id": 1175,
+  "gold_label": "V1",
+  "situation": "Girlfriend dumped me for someone else!",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9483097791671753,
+    "all_probabilities": {
+      "normal": 0.05052913725376129,
+      "v1": 0.9483097791671753,
+      "v2": 0.00026599023840390146,
+      "v3": 0.0003366204327903688,
+      "v4": 0.00038967333966866136,
+      "v5": 0.00016878932365216315
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 4.5,
+    "generation_ms": 843.8,
+    "detection_ms": 27.7,
+    "rewrite_total_ms": 4250.9,
+    "total_ms": 5127.1
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard. How does that make you feel about your situation with her? It might be helpful to talk through your feelings or explore what this means for you moving forward.",
+      "reasoning": "The original response jumped to assumptions about the seeker's feelings and coping mechanisms without clarifying their uncertainty about the overheard conversation. I acknowledged the seeker's new information, asked a single clarifying question, and suggested gentle next steps without assuming further details.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9764891266822815,
+      "recheck_probabilities": {
+        "normal": 0.02259860187768936,
+        "v1": 0.9764891266822815,
+        "v2": 0.0001635095977690071,
+        "v3": 0.0003168870462104678,
+        "v4": 0.0002976335817947984,
+        "v5": 0.00013420157483778894
+      },
+      "rewrite_ms": 1606.4
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It seems like you’re feeling uncertain about what you overheard regarding her possibly seeing someone new. How does that uncertainty impact your feelings about your relationship with her? It might be helpful to reflect on what you want moving forward and consider discussing these feelings with someone you trust.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without properly clarifying their emotional state. I revised it to acknowledge the seeker's uncertainty about the situation while asking a single clarifying question and suggesting gentle next steps for exploration.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9816662669181824,
+      "recheck_probabilities": {
+        "normal": 0.0175175741314888,
+        "v1": 0.9816662669181824,
+        "v2": 0.00015753154002595693,
+        "v3": 0.0002981337602250278,
+        "v4": 0.0002576820261310786,
+        "v5": 0.00010279652633471414
+      },
+      "rewrite_ms": 1213.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the possibility of her seeing someone new. How does that uncertainty affect how you view your relationship with her? It might be helpful to take some time to process these feelings or talk to someone you trust about your thoughts.",
+      "reasoning": "The original response contained a hasty conclusion by not acknowledging the seeker's uncertainty about their ex possibly seeing someone new and instead jumped to discussing broader feelings. I fixed this by acknowledging the seeker's new information and asking a clarifying question to explore their feelings further.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9832316637039185,
+      "recheck_probabilities": {
+        "normal": 0.015907637774944305,
+        "v1": 0.9832316637039185,
+        "v2": 0.00014239930897019804,
+        "v3": 0.0003051524981856346,
+        "v4": 0.0002881322579924017,
+        "v5": 0.00012505805352702737
+      },
+      "rewrite_ms": 1430.6
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

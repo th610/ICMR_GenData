@@ -1,0 +1,85 @@
+{
+  "sample_index": 109,
+  "session_id": 572,
+  "gold_label": "V1",
+  "situation": "This time is too hard for me fine a jobs which require me to search and get pay for unemployment.",
+  "initial_detection": {
+    "predicted_label": "v1",
+    "confidence": 0.9978010058403015,
+    "all_probabilities": {
+      "normal": 0.0015891649527475238,
+      "v1": 0.9978010058403015,
+      "v2": 0.00019279761181678623,
+      "v3": 0.00015501830785069615,
+      "v4": 0.00019945505482610315,
+      "v5": 6.26131150056608e-05
+    },
+    "severity": 1
+  },
+  "timing": {
+    "context_build_ms": 2.8,
+    "generation_ms": 918.9,
+    "detection_ms": 26.4,
+    "rewrite_total_ms": 4201.9,
+    "total_ms": 5150.3
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the layoffs at your previous job. What do you think might be your next steps if those layoffs do happen? You might consider reaching out to someone at your old job for more clarity or exploring other job opportunities in the meantime.",
+      "reasoning": "The original response jumped to an emotional interpretation without fully acknowledging the seeker's uncertainty regarding the layoffs. The corrected response acknowledges the new information, asks a clarifying question, and gently suggests next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9245905876159668,
+      "recheck_probabilities": {
+        "normal": 0.07370640337467194,
+        "v1": 0.9245905876159668,
+        "v2": 0.000670850567985326,
+        "v3": 0.000519151275511831,
+        "v4": 0.00036797698703594506,
+        "v5": 0.0001450222043786198
+      },
+      "rewrite_ms": 1391.5
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the layoffs at your previous job. What specific concerns do you have about this situation? You might consider reaching out to someone at your old job for more clarity or taking some time to explore other job opportunities.",
+      "reasoning": "The original response contained a hasty conclusion by assuming the user's feelings and next steps without confirming their perspective. I acknowledged the user's uncertainty, asked a clarifying question, and provided gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.8282700181007385,
+      "recheck_probabilities": {
+        "normal": 0.1693127453327179,
+        "v1": 0.8282700181007385,
+        "v2": 0.0010490408167243004,
+        "v3": 0.0007299986318685114,
+        "v4": 0.00044350523967295885,
+        "v5": 0.0001947062846738845
+      },
+      "rewrite_ms": 1481.7
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "I understand that you're feeling uncertain about the potential layoffs at your previous job. What specifically worries you about this situation? It might be helpful to talk to someone you trust about your concerns or consider looking into other job opportunities.",
+      "reasoning": "The original response assumed the seeker's feelings and provided multiple suggestions without asking a clarifying question. I acknowledged the seeker's uncertainty, asked one clarifying question, and offered gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9253911375999451,
+      "recheck_probabilities": {
+        "normal": 0.07190345227718353,
+        "v1": 0.9253911375999451,
+        "v2": 0.0016994003672152758,
+        "v3": 0.0004837368323933333,
+        "v4": 0.0003581536002457142,
+        "v5": 0.00016411030082963407
+      },
+      "rewrite_ms": 1328.8
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

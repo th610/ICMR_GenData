@@ -1,0 +1,33 @@
+{
+  "sample_index": 105,
+  "session_id": 449,
+  "gold_label": "V1",
+  "situation": "A person I was dating broke up with me in a terrible manner.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9922997951507568,
+    "all_probabilities": {
+      "normal": 0.9922997951507568,
+      "v1": 0.006125893909484148,
+      "v2": 0.0004610753385350108,
+      "v3": 0.0002040308027062565,
+      "v4": 0.0006494030822068453,
+      "v5": 0.00025968553381972015
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 1346.9,
+    "detection_ms": 28.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1379.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's completely understandable to feel that way, especially after everything you've been through. Those feelings of uncertainty can be really unsettling. How did you cope with those feelings after you noticed it? Or would you like to explore ways to handle those emotions together?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

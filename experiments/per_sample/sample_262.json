@@ -1,0 +1,33 @@
+{
+  "sample_index": 262,
+  "session_id": 328,
+  "gold_label": "V4",
+  "situation": "My boyfriend and I broke up and I cant stop crying. I am depressed about being alone.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9994043111801147,
+    "all_probabilities": {
+      "normal": 0.9994043111801147,
+      "v1": 4.3057276343461126e-05,
+      "v2": 4.7360976168420166e-05,
+      "v3": 0.00010224479774478823,
+      "v4": 5.351532672648318e-05,
+      "v5": 0.0003494439588394016
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.5,
+    "generation_ms": 977.5,
+    "detection_ms": 26.5,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1008.5
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "I hear how deeply you're feeling this loss, and it's completely valid to feel overwhelmed right now. It might help to remember that healing takes time, and it’s okay to take each day as it comes. Can you think of one small thing you enjoyed doing before the relationship, or maybe something new you'd like to try? It could be a good way to start rediscovering joy.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

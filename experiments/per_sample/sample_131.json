@@ -1,0 +1,85 @@
+{
+  "sample_index": 131,
+  "session_id": 314,
+  "gold_label": "V3",
+  "situation": "My  health is crazy and I may have to face a major surgery. I have a severe auto immune disorder and",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.6899974346160889,
+    "all_probabilities": {
+      "normal": 0.3059430420398712,
+      "v1": 0.0015169203979894519,
+      "v2": 0.00155984191223979,
+      "v3": 0.6899974346160889,
+      "v4": 0.0007005425286479294,
+      "v5": 0.00028225616551935673
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.7,
+    "generation_ms": 1462.6,
+    "detection_ms": 26.6,
+    "rewrite_total_ms": 4281.6,
+    "total_ms": 5775.8
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to want to approach this delicately. You could either share with them that you'll be having a procedure without going into too much detail, explaining that it’s something the doctors are helping you with, or wait until after the surgery when you can reassure them more fully. Which option do you think would work best for you?",
+      "reasoning": "The original response lacked practical help and focused solely on empathy, which violates the requirement for providing concrete assistance. I added two options to give the seeker clear choices for how to approach the conversation with her kids, while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9515337347984314,
+      "recheck_probabilities": {
+        "normal": 0.045855335891246796,
+        "v1": 0.0007858190219849348,
+        "v2": 0.0012534165289252996,
+        "v3": 0.9515337347984314,
+        "v4": 0.00044086965499445796,
+        "v5": 0.00013086257968097925
+      },
+      "rewrite_ms": 1364.4
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to want to approach this delicately. You could either share with them that you'll be having a procedure without going into too much detail, or wait until after the surgery when you can reassure them more fully. Which option do you think would work best for you?",
+      "reasoning": "The original response was primarily empathetic and did not provide any concrete practical help despite the seeker explicitly requesting guidance. I maintained one validating sentence and added a brief two-option choice to help the seeker decide how to approach the conversation with their children.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9669529795646667,
+      "recheck_probabilities": {
+        "normal": 0.031086986884474754,
+        "v1": 0.0006511566461995244,
+        "v2": 0.0008422957616858184,
+        "v3": 0.9669529795646667,
+        "v4": 0.0003485461638774723,
+        "v5": 0.00011809168790932745
+      },
+      "rewrite_ms": 1649.9
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to want to approach this delicately. You could either share with them that you'll be having a procedure without going into too much detail, or wait until after the surgery when you can reassure them more fully. Which option do you feel would be easier for you to manage?",
+      "reasoning": "The original response violated the guideline by providing empathy only and failing to offer practical help as explicitly requested by the seeker. I retained a brief empathetic statement and added a concrete help element in the form of two options to choose from regarding how to communicate with the kids.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9757805466651917,
+      "recheck_probabilities": {
+        "normal": 0.02274182438850403,
+        "v1": 0.00047545135021209717,
+        "v2": 0.0006161070195958018,
+        "v3": 0.9757805466651917,
+        "v4": 0.0002765087119769305,
+        "v5": 0.00010955677134916186
+      },
+      "rewrite_ms": 1267.3
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sample_index": 221,
+  "session_id": 1008,
+  "gold_label": "V2",
+  "situation": "I have been trying to get motivated to write a book to help others.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9661693572998047,
+    "all_probabilities": {
+      "normal": 0.9661693572998047,
+      "v1": 0.0005461199907585979,
+      "v2": 0.03200271725654602,
+      "v3": 0.0007328474312089384,
+      "v4": 0.0003668690042104572,
+      "v5": 0.0001821791083784774
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.3,
+    "generation_ms": 1054.5,
+    "detection_ms": 16.2,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1075.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Of course! You might consider starting with these steps: 1) Write down your main message or theme. 2) Create an outline of the chapters you envision. 3) Set aside a specific time each week to write, even if it's just for a short period. How does that sound to you? Would you like to start with outlining your main message?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

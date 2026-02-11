@@ -1,0 +1,85 @@
+{
+  "sample_index": 166,
+  "session_id": 889,
+  "gold_label": "V3",
+  "situation": "I’m feeling anxious about the pandemic and current economic conditions.",
+  "initial_detection": {
+    "predicted_label": "v3",
+    "confidence": 0.5241315364837646,
+    "all_probabilities": {
+      "normal": 0.47281646728515625,
+      "v1": 0.0007083594100549817,
+      "v2": 0.0010425454238429666,
+      "v3": 0.5241315364837646,
+      "v4": 0.0005501254345290363,
+      "v5": 0.0007510125287808478
+    },
+    "severity": 3
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 968.9,
+    "detection_ms": 26.7,
+    "rewrite_total_ms": 3783.1,
+    "total_ms": 4782.9
+  },
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. You could either plan a small virtual gathering with a fun theme or send thoughtful gifts that show you care. Both can be meaningful in their own way.",
+      "reasoning": "The original response was primarily empathetic without providing any practical help, which is a violation of the counseling guidelines. I retained a brief empathy sentence and included two options for the seeker to consider in their decision-making process.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9912118315696716,
+      "recheck_probabilities": {
+        "normal": 0.008050552569329739,
+        "v1": 0.000176865461980924,
+        "v2": 0.00029374880250543356,
+        "v3": 0.9912118315696716,
+        "v4": 0.0001494578318670392,
+        "v5": 0.00011749508848879486
+      },
+      "rewrite_ms": 1186.6
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel overwhelmed with your options. You could either plan a small virtual gathering with a fun theme or send thoughtful gifts that show you care. Which option feels more manageable for you?",
+      "reasoning": "The original response only provided empathy and validation without offering practical help, which violated the guideline for providing actionable support. I added a concrete suggestion by presenting two options for the seeker to consider regarding their holiday plans while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9928117394447327,
+      "recheck_probabilities": {
+        "normal": 0.006189768668264151,
+        "v1": 0.00018314387125428766,
+        "v2": 0.0005844378028996289,
+        "v3": 0.9928117394447327,
+        "v4": 0.00012708429130725563,
+        "v5": 0.00010384116467321292
+      },
+      "rewrite_ms": 1461.3
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel overwhelmed with your options. You could either plan a small virtual gathering to connect or send thoughtful gifts that show you care. Which option feels more manageable for you?",
+      "reasoning": "The original response lacked practical help and focused solely on empathy, which is a violation. I added two options for the seeker to choose from, thus providing practical help while maintaining a brief empathic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9916457533836365,
+      "recheck_probabilities": {
+        "normal": 0.007344938348978758,
+        "v1": 0.00019819647422991693,
+        "v2": 0.0005651579122059047,
+        "v3": 0.9916457533836365,
+        "v4": 0.00013813510304316878,
+        "v5": 0.00010781707533169538
+      },
+      "rewrite_ms": 1135.2
+    }
+  ],
+  "final_result": {
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
+  }
+}

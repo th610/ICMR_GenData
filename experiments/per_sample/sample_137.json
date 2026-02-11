@@ -1,0 +1,33 @@
+{
+  "sample_index": 137,
+  "session_id": 667,
+  "gold_label": "V3",
+  "situation": "I want to get a proper qualification know work but I can't seem to find a course that meets my needs",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9146188497543335,
+    "all_probabilities": {
+      "normal": 0.9146188497543335,
+      "v1": 0.0006612788420170546,
+      "v2": 0.0007306222105398774,
+      "v3": 0.08340165764093399,
+      "v4": 0.0003767278394661844,
+      "v5": 0.00021085329353809357
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.4,
+    "generation_ms": 1220.3,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1249.6
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're weighing the immediate benefits against longer-term goals, which can be tough. Maybe you could consider a couple of questions: What are the specific qualifications you need by the deadline? And how much time can you realistically dedicate each week to studying? This could help clarify whether the online course can meet your urgent needs or if investing in the part-time program is worth the wait.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

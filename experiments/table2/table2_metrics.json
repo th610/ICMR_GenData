@@ -1,0 +1,152 @@
+{
+  "n_samples": 300,
+  "n_errors": 0,
+  "model_accuracy": 1.0,
+  "judge_accuracy": 0.6033,
+  "agreement_rate": 0.6033,
+  "cohens_kappa": 0.4971,
+  "model_per_class_f1": {
+    "normal": 1.0,
+    "v1": 1.0,
+    "v2": 1.0,
+    "v3": 1.0,
+    "v4": 1.0,
+    "v5": 1.0
+  },
+  "judge_per_class_f1": {
+    "normal": 0.6491,
+    "v1": 0.0392,
+    "v2": 0.8276,
+    "v3": 0.0,
+    "v4": 0.6038,
+    "v5": 0.8451
+  },
+  "model_macro_f1": 1.0,
+  "judge_macro_f1": 0.4941,
+  "model_latency_mean_ms": 27.7,
+  "judge_latency_mean_ms": 459.8,
+  "n_disagreements": 119,
+  "disagreement_rate": 0.3967,
+  "disagreement_details": [
+    {
+      "idx": 3,
+      "gold": "normal",
+      "model": "normal",
+      "judge": "v2"
+    },
+    {
+      "idx": 5,
+      "gold": "normal",
+      "model": "normal",
+      "judge": "v2"
+    },
+    {
+      "idx": 19,
+      "gold": "normal",
+      "model": "normal",
+      "judge": "v5"
+    },
+    {
+      "idx": 39,
+      "gold": "normal",
+      "model": "normal",
+      "judge": "v2"
+    },
+    {
+      "idx": 61,
+      "gold": "normal",
+      "model": "normal",
+      "judge": "v2"
+    },
+    {
+      "idx": 65,
+      "gold": "normal",
+      "model": "normal",
+      "judge": "v3"
+    },
+    {
+      "idx": 80,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "v4"
+    },
+    {
+      "idx": 81,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 82,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 83,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "v2"
+    },
+    {
+      "idx": 84,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 85,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "v2"
+    },
+    {
+      "idx": 86,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 87,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 88,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 89,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "v2"
+    },
+    {
+      "idx": 90,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 91,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 92,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    },
+    {
+      "idx": 93,
+      "gold": "v1",
+      "model": "v1",
+      "judge": "normal"
+    }
+  ]
+}

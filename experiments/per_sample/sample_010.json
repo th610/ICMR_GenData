@@ -1,0 +1,33 @@
+{
+  "sample_index": 10,
+  "session_id": 115,
+  "gold_label": "Normal",
+  "situation": "I DON'T KNOW WHAT I WANT TO DO. I WANT TO ACHEIVE SOMETHING IN MY LIFE. BUT I DON'T KNOW WHAT IT IS ",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996676445007324,
+    "all_probabilities": {
+      "normal": 0.9996676445007324,
+      "v1": 8.050414908211678e-05,
+      "v2": 5.344072633306496e-05,
+      "v3": 6.267188291531056e-05,
+      "v4": 5.266616790322587e-05,
+      "v5": 8.314141450682655e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 2.9,
+    "generation_ms": 779.6,
+    "detection_ms": 23.1,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 805.7
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Feeling lost can be really challenging, especially when you feel like others aren't fully understanding your struggle. What do you think would help them better grasp what you’re experiencing? Maybe sharing specific examples or feelings could make a difference.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

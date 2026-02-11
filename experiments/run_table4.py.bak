@@ -1,0 +1,196 @@
+"""
+Table 4: Safety Guarantee (Set C)
+
+위반 샘플(gold!=Normal)에 대한 탐지→교정→Failsafe→최종 Leakage 분석.
+Per-violation breakdown (V1~V5).
+
+Input:
+    experiment_results/experiment_log.jsonl
+
+Output:
+    experiment_results/table4/
+        table4_report.txt
+        table4_metrics.json
+"""
+import json
+import sys
+import argparse
+from pathlib import Path
+from collections import Counter
+
+RESULTS_DIR = Path(__file__).parent
+LOG_PATH = RESULTS_DIR / "experiment_log.jsonl"
+OUTPUT_DIR = RESULTS_DIR / "table4"
+
+LABELS = ['normal', 'v1', 'v2', 'v3', 'v4', 'v5']
+LABEL_DISPLAY = {'normal': 'Normal', 'v1': 'V1', 'v2': 'V2',
+                 'v3': 'V3', 'v4': 'V4', 'v5': 'V5'}
+
+
+def load_results():
+    results = []
+    with open(LOG_PATH, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                results.append(json.loads(line))
+    return results
+
+
+def compute_metrics(results):
+    violations = [r for r in results if r['gold_label'].lower() != 'normal']
+
+    if not violations:
+        return {'error': 'No violation samples found'}
+
+    detected = [r for r in violations
+                if r['initial_detection']['predicted_label'] != 'normal']
+    detection_rate = len(detected) / len(violations) if violations else 0
+
+    corrected = [r for r in detected if r['final_result']['label'] == 'normal']
+    correction_rate = len(corrected) / len(detected) if detected else 0
+
+    failsafed = [r for r in detected if r['final_result']['used_failsafe']]
+
+    still_violated = [r for r in detected
+                      if r['final_result']['label'] not in ('normal', 'failsafe')]
+    leakage_rate = len(still_violated) / len(detected) if detected else 0
+
+    retry_counts = [r['final_result']['total_retries'] for r in detected]
+    avg_retries = sum(retry_counts) / len(retry_counts) if retry_counts else 0
+    max_retries = max(retry_counts) if retry_counts else 0
+
+    per_violation = {}
+    for label in ['v1', 'v2', 'v3', 'v4', 'v5']:
+        v_samples = [r for r in violations if r['gold_label'].lower() == label]
+        v_detected = [r for r in v_samples
+                      if r['initial_detection']['predicted_label'] != 'normal']
+        v_corrected = [r for r in v_detected if r['final_result']['label'] == 'normal']
+        v_failsafe = [r for r in v_detected if r['final_result']['used_failsafe']]
+        v_retries = [r['final_result']['total_retries'] for r in v_detected]
+
+        per_violation[label] = {
+            'total': len(v_samples),
+            'detected': len(v_detected),
+            'corrected': len(v_corrected),
+            'failsafed': len(v_failsafe),
+            'detection_rate': len(v_detected) / len(v_samples) if v_samples else 0,
+            'correction_rate': len(v_corrected) / len(v_detected) if v_detected else 0,
+            'avg_retries': sum(v_retries) / len(v_retries) if v_retries else 0,
+            'resolved_rate': (len(v_corrected) + len(v_failsafe)) / len(v_detected) if v_detected else 0
+        }
+
+    return {
+        'total_violations': len(violations),
+        'detected': len(detected),
+        'detection_rate': detection_rate,
+        'corrected': len(corrected),
+        'correction_rate': correction_rate,
+        'failsafed': len(failsafed),
+        'still_violated': len(still_violated),
+        'leakage_rate': leakage_rate,
+        'resolved_total': len(corrected) + len(failsafed),
+        'resolved_rate': (len(corrected) + len(failsafed)) / len(detected) if detected else 0,
+        'retry_stats': {
+            'avg': avg_retries,
+            'max': max_retries,
+            'distribution': dict(Counter(retry_counts))
+        },
+        'per_violation': per_violation
+    }
+
+
+def format_report(m):
+    lines = []
+    lines.append("")
+    lines.append("=" * 80)
+    lines.append("  TABLE 4: Safety Guarantee (Set C)")
+    lines.append("=" * 80)
+    lines.append("")
+    lines.append(f"  Total Violation Samples:    {m['total_violations']}")
+    lines.append(f"  Detected as Violation:      {m['detected']}/{m['total_violations']}  ({m['detection_rate']:.2%})")
+    lines.append(f"  Corrected → Normal:         {m['corrected']}/{m['detected']}  ({m['correction_rate']:.2%})")
+    lines.append(f"  Fail-safe Triggered:        {m['failsafed']}/{m['detected']}")
+    lines.append(f"  Total Resolved:             {m['resolved_total']}/{m['detected']}  ({m['resolved_rate']:.2%})")
+    lines.append(f"  Final Leakage (danger!):    {m['still_violated']}/{m['detected']}  ({m['leakage_rate']:.2%})")
+    lines.append("")
+
+    lines.append(f"  Retry Distribution:")
+    for k, v in sorted(m['retry_stats']['distribution'].items()):
+        bar = "█" * v
+        lines.append(f"    {k} retries: {v:>3}  {bar}")
+    lines.append(f"    Average: {m['retry_stats']['avg']:.2f}")
+    lines.append("")
+
+    pv = m['per_violation']
+    lines.append(f"  {'Type':<8} {'Total':>6} {'Detect':>8} {'Correct':>8} {'Failsafe':>9} {'Resolve%':>9} {'AvgRetry':>9}")
+    lines.append("  " + "-" * 70)
+    for label in ['v1', 'v2', 'v3', 'v4', 'v5']:
+        v = pv[label]
+        lines.append(f"  {LABEL_DISPLAY[label]:<8} {v['total']:>6} {v['detected']:>8} {v['corrected']:>8} "
+                      f"{v['failsafed']:>9} {v['resolved_rate']:>8.0%} {v['avg_retries']:>9.2f}")
+    lines.append("")
+
+    return "\n".join(lines)
+
+
+def format_latex(m):
+    pv = m['per_violation']
+    lines = []
+    lines.append(r"\begin{table}[h]")
+    lines.append(r"\centering")
+    lines.append(r"\caption{Safety Guarantee via Gold Injection (N=%d violations)}" % m['total_violations'])
+    lines.append(r"\begin{tabular}{lcccccc}")
+    lines.append(r"\toprule")
+    lines.append(r"Type & Total & Detected & Corrected & Failsafe & Resolved & Avg.Retry \\")
+    lines.append(r"\midrule")
+    for label in ['v1', 'v2', 'v3', 'v4', 'v5']:
+        v = pv[label]
+        lines.append(f"{LABEL_DISPLAY[label]} & {v['total']} & {v['detected']} & {v['corrected']} & "
+                      f"{v['failsafed']} & {v['resolved_rate']:.0%} & {v['avg_retries']:.2f} \\\\")
+    lines.append(r"\midrule")
+    lines.append(f"Total & {m['total_violations']} & {m['detected']} & {m['corrected']} & "
+                  f"{m['failsafed']} & {m['resolved_rate']:.0%} & {m['retry_stats']['avg']:.2f} \\\\")
+    lines.append(r"\bottomrule")
+    lines.append(r"\end{tabular}")
+    lines.append(r"\end{table}")
+    return "\n".join(lines)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Table 4: Safety Guarantee")
+    parser.add_argument('--format', choices=['text', 'latex', 'both'], default='both')
+    args = parser.parse_args()
+
+    if not LOG_PATH.exists():
+        print(f"ERROR: {LOG_PATH} not found.")
+        sys.exit(1)
+
+    results = load_results()
+    print(f"Loaded {len(results)} results from {LOG_PATH}\n")
+
+    metrics = compute_metrics(results)
+
+    report = format_report(metrics)
+    print(report)
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    with open(OUTPUT_DIR / "table4_report.txt", 'w', encoding='utf-8') as f:
+        f.write(report)
+
+    with open(OUTPUT_DIR / "table4_metrics.json", 'w', encoding='utf-8') as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False, default=str)
+
+    if args.format in ('latex', 'both'):
+        latex = format_latex(metrics)
+        print("\n[LaTeX]")
+        print(latex)
+        with open(OUTPUT_DIR / "table4_latex.tex", 'w') as f:
+            f.write(latex)
+
+    print(f"\n[SAVED] {OUTPUT_DIR}/")
+
+
+if __name__ == "__main__":
+    main()

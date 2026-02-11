@@ -1,0 +1,33 @@
+{
+  "sample_index": 231,
+  "session_id": 36,
+  "gold_label": "V2",
+  "situation": "When one partner feels that the other isn't fulfilling a requirement, Wadley says, it's important to",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.7882003784179688,
+    "all_probabilities": {
+      "normal": 0.7882003784179688,
+      "v1": 0.0004971107700839639,
+      "v2": 0.20830723643302917,
+      "v3": 0.0016881620977073908,
+      "v4": 0.0004365782951936126,
+      "v5": 0.0008704793872311711
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 2.6,
+    "generation_ms": 1033.3,
+    "detection_ms": 22.4,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1058.3
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "I can sense how overwhelming this can be for you. It might help to take small steps towards moving on. One option could be to write down your feelings about the past, or perhaps talk to someone you trust about it. Which one feels more comfortable for you to try?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

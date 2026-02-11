@@ -1,0 +1,33 @@
+{
+  "sample_index": 175,
+  "session_id": 927,
+  "gold_label": "V3",
+  "situation": "I broke up with my girlfriend.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9854586124420166,
+    "all_probabilities": {
+      "normal": 0.9854586124420166,
+      "v1": 0.00018778079538606107,
+      "v2": 0.0003134639991912991,
+      "v3": 0.013663305900990963,
+      "v4": 0.00013073183072265238,
+      "v5": 0.00024615618167445064
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 1129.3,
+    "detection_ms": 26.6,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1160.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're in a tough spot. Taking a moment to reflect on what you truly need could be helpful. You might ask yourself if reaching out would bring you peace or if it might stir up more emotions. Would you feel more comfortable focusing on your own healing for now, or do you think that having closure is important for you? It’s all about what feels right for you in this moment.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

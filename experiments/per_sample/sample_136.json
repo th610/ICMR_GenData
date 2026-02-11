@@ -1,0 +1,33 @@
+{
+  "sample_index": 136,
+  "session_id": 495,
+  "gold_label": "V3",
+  "situation": "Pretty down with the lack of securing a job and improving my finaces.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.5020719170570374,
+    "all_probabilities": {
+      "normal": 0.5020719170570374,
+      "v1": 0.0010128729045391083,
+      "v2": 0.0007129816222004592,
+      "v3": 0.4946209490299225,
+      "v4": 0.0007989562582224607,
+      "v5": 0.0007823614287190139
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.8,
+    "generation_ms": 1332.1,
+    "detection_ms": 27.2,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1364.2
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're in a bit of a tough spot. One way to approach this is to weigh the pros and cons of each option. For the temporary job, consider how much it would help with your immediate financial needs and if it could lead to other opportunities. On the other hand, think about how long you can realistically wait for a more suitable position that aligns with your career goals. Would it help to make a list of these factors to clarify your thoughts?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

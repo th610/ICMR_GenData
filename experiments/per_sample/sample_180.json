@@ -1,0 +1,33 @@
+{
+  "sample_index": 180,
+  "session_id": 676,
+  "gold_label": "V2",
+  "situation": "i'm doing a bad job at my job and there are rumors i'll be fired soon. i am a newscaster at a small ",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8152598142623901,
+    "all_probabilities": {
+      "normal": 0.8152598142623901,
+      "v1": 0.0009185170056298375,
+      "v2": 0.17836488783359528,
+      "v3": 0.004205821081995964,
+      "v4": 0.0007613107445649803,
+      "v5": 0.0004896193277090788
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.6,
+    "generation_ms": 1447.0,
+    "detection_ms": 26.4,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1478.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you're at a crossroads, and that's not easy. Would you feel more comfortable exploring the idea of looking for a new job, or do you think it might be helpful to focus on improving your current situation first? You could also jot down the pros and cons of each option to see which feels more manageable.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

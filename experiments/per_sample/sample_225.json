@@ -1,0 +1,33 @@
+{
+  "sample_index": 225,
+  "session_id": 929,
+  "gold_label": "V2",
+  "situation": "effects of the pandemic",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.8007252216339111,
+    "all_probabilities": {
+      "normal": 0.8007252216339111,
+      "v1": 0.0008181108278222382,
+      "v2": 0.1903732717037201,
+      "v3": 0.0033844136632978916,
+      "v4": 0.001000268035568297,
+      "v5": 0.0036986246705055237
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 1029.6,
+    "detection_ms": 26.1,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1059.8
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It sounds like you’re feeling quite overwhelmed right now. Sometimes it can help to break things down into smaller steps. Would you like to talk about one specific aspect of your work life that feels most challenging? Or perhaps we could explore some coping strategies together?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

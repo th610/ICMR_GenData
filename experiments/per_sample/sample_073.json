@@ -1,0 +1,33 @@
+{
+  "sample_index": 73,
+  "session_id": 104,
+  "gold_label": "Normal",
+  "situation": "I just was told that I ma out of a job as of January 15th.  I am going to get paid for those two wee",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997276663780212,
+    "all_probabilities": {
+      "normal": 0.9997276663780212,
+      "v1": 5.492037598742172e-05,
+      "v2": 5.7640594604890794e-05,
+      "v3": 6.5904765506275e-05,
+      "v4": 3.672163438750431e-05,
+      "v5": 5.7086592278210446e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.7,
+    "generation_ms": 828.2,
+    "detection_ms": 26.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 859.0
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's great that you're considering her feelings and how to provide reassurance. Perhaps you could prepare some ideas about budgeting or exploring new job opportunities to share with her. How do you think she would respond if you highlighted your plans for moving forward?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

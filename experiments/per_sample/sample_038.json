@@ -1,0 +1,33 @@
+{
+  "sample_index": 38,
+  "session_id": 509,
+  "gold_label": "Normal",
+  "situation": "Due to this pandemic, I fear for my job.",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9995173215866089,
+    "all_probabilities": {
+      "normal": 0.9995173215866089,
+      "v1": 6.327896699076518e-05,
+      "v2": 4.527004057308659e-05,
+      "v3": 0.00018052788800559938,
+      "v4": 6.38693745713681e-05,
+      "v5": 0.00012970215175300837
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 3.4,
+    "generation_ms": 868.6,
+    "detection_ms": 27.1,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 899.2
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It’s completely normal to feel that way during such uncertain times. Have you found any strategies that help you regain focus, or would you like to explore some options together?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

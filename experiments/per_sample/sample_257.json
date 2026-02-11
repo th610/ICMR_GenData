@@ -1,0 +1,33 @@
+{
+  "sample_index": 257,
+  "session_id": 1182,
+  "gold_label": "V4",
+  "situation": "One of my oldest friends is extremely insecure. She's been this way for a long time, but fear and im",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9996330738067627,
+    "all_probabilities": {
+      "normal": 0.9996330738067627,
+      "v1": 4.396391159389168e-05,
+      "v2": 8.786960825091228e-05,
+      "v3": 8.255852299043909e-05,
+      "v4": 7.128252036636695e-05,
+      "v5": 8.131609502015635e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.4,
+    "generation_ms": 1226.7,
+    "detection_ms": 25.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1256.1
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "It's understandable to feel that way, especially when you're putting in so much effort. It might help to take a step back and think about what boundaries you can set for yourself in this friendship. Could you try to find a balance between being supportive and taking care of your own emotional needs? Maybe setting aside specific times to talk about these feelings could help, or even suggesting she explore her feelings with a professional who can provide her with additional support.",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sample_index": 62,
+  "session_id": 87,
+  "gold_label": "Normal",
+  "situation": "I am scared to open myself up to others such as men because I do not want my heart to be broken but ",
+  "initial_detection": {
+    "predicted_label": "normal",
+    "confidence": 0.9997121691703796,
+    "all_probabilities": {
+      "normal": 0.9997121691703796,
+      "v1": 8.048386371228844e-05,
+      "v2": 3.99355631088838e-05,
+      "v3": 6.793780630687252e-05,
+      "v4": 4.089567300979979e-05,
+      "v5": 5.861683894181624e-05
+    },
+    "severity": 0
+  },
+  "timing": {
+    "context_build_ms": 4.0,
+    "generation_ms": 819.4,
+    "detection_ms": 26.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 849.4
+  },
+  "rewrite_iterations": [],
+  "final_result": {
+    "label": "normal",
+    "response": "Video calls can really help create a more intimate atmosphere. You could also try sharing activities together, like watching a movie at the same time or playing an online game. What do you think would make your calls more enjoyable?",
+    "total_retries": 0,
+    "used_failsafe": false
+  }
+}
