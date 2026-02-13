@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I've had trouble sleeping the last few nights, I feel really low self esteem.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.6468371152877808,
+    "predicted_label": "v3",
+    "confidence": 0.9948458671569824,
     "all_probabilities": {
-      "normal": 0.6468371152877808,
-      "v1": 0.0007471258868463337,
-      "v2": 0.000688222236931324,
-      "v3": 0.35093817114830017,
-      "v4": 0.00044424249790608883,
-      "v5": 0.00034519037581048906
+      "normal": 0.004376851953566074,
+      "v1": 0.0001307395868934691,
+      "v2": 0.00015345122665166855,
+      "v3": 0.9948458671569824,
+      "v4": 0.0001871513668447733,
+      "v5": 0.00030594057170674205
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1091.7,
-    "detection_ms": 24.0,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1120.7
+    "context_build_ms": 2.6,
+    "generation_ms": 1562.1,
+    "detection_ms": 22.0,
+    "rewrite_total_ms": 7453.4,
+    "total_ms": 9040.3
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel hesitant about sharing your feelings. You might consider starting by writing a small piece privately, and then, when you're ready, share it with a trusted friend for feedback. How does that sound?",
+      "reasoning": "The original response primarily offered empathy and validation without providing practical help, which is a violation of the counseling guidelines. I added a concrete help element by providing a short two-step guide to encourage the seeker to take actionable steps toward their goal.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999388575553894,
+      "recheck_probabilities": {
+        "normal": 0.00029493350302800536,
+        "v1": 5.7042685511987656e-05,
+        "v2": 6.798430695198476e-05,
+        "v3": 0.999388575553894,
+        "v4": 8.154344686772674e-05,
+        "v5": 0.00010986240522470325
+      },
+      "rewrite_ms": 2531.4
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel hesitant about sharing your feelings. You might try this: 1) Write a small piece privately to express your thoughts, 2) Once you feel comfortable, share it with a trusted friend for feedback. How does that sound?",
+      "reasoning": "The original response was primarily empathetic and lacked practical assistance. I maintained a brief empathetic sentence while adding a short 2-3 step guide to provide the seeker with actionable steps to overcome their hesitation to share their feelings.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9986579418182373,
+      "recheck_probabilities": {
+        "normal": 0.0008838126668706536,
+        "v1": 7.638137321919203e-05,
+        "v2": 7.725837349426001e-05,
+        "v3": 0.9986579418182373,
+        "v4": 0.00012025062460452318,
+        "v5": 0.0001843214122345671
+      },
+      "rewrite_ms": 2507.2
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel hesitant about sharing your feelings. You might consider this: 1) Start by writing a small piece privately to express your thoughts, 2) When you feel ready, share it with a trusted friend for feedback. How does that sound?",
+      "reasoning": "The last supporter response was overly empathetic and did not provide practical help as requested. I added a concrete step-by-step guide to help the seeker take action while retaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9981828331947327,
+      "recheck_probabilities": {
+        "normal": 0.0012866397155448794,
+        "v1": 8.999177953228354e-05,
+        "v2": 8.851441816659644e-05,
+        "v3": 0.9981828331947327,
+        "v4": 0.00013514146849047393,
+        "v5": 0.00021693676535505801
+      },
+      "rewrite_ms": 2414.8
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's great that you're considering reaching out for support! You might find it helpful to think about what would make you feel more comfortable. Would you prefer to get some encouragement from your friends first, or do you think starting to write on your own might help build your confidence? Both options have their merits, so it really depends on how you feel right now.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

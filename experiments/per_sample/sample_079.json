@@ -5,28 +5,28 @@
   "situation": "finals are this week and i'm freaking out",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996927976608276,
+    "confidence": 0.9996845722198486,
     "all_probabilities": {
-      "normal": 0.9996927976608276,
-      "v1": 6.767936429241672e-05,
-      "v2": 4.518270361586474e-05,
-      "v3": 9.730848978506401e-05,
-      "v4": 5.2648858400061727e-05,
-      "v5": 4.438927862793207e-05
+      "normal": 0.9996845722198486,
+      "v1": 7.027576793916523e-05,
+      "v2": 7.469980482710525e-05,
+      "v3": 6.012352605466731e-05,
+      "v4": 5.306327511789277e-05,
+      "v5": 5.7272416597697884e-05
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 4.7,
-    "generation_ms": 772.4,
-    "detection_ms": 26.0,
+    "generation_ms": 1491.8,
+    "detection_ms": 32.2,
     "rewrite_total_ms": 0.0,
-    "total_ms": 803.2
+    "total_ms": 1528.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Using a planner is a fantastic idea! It can really help you visualize your time. Are you finding that the breaks are helping you feel more refreshed when you study?",
+    "response": "I'm glad to hear that! Taking breaks can be so rejuvenating. Are there particular activities you enjoy during your breaks that help you recharge?",
     "total_retries": 0,
     "used_failsafe": false
   }

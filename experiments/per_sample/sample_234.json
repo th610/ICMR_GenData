@@ -5,28 +5,28 @@
   "situation": "lost job went to prison",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9659528732299805,
+    "confidence": 0.9073511362075806,
     "all_probabilities": {
-      "normal": 0.9659528732299805,
-      "v1": 0.00039057302637957036,
-      "v2": 0.030678093433380127,
-      "v3": 0.0016871790867298841,
-      "v4": 0.0005169172072783113,
-      "v5": 0.0007744147442281246
+      "normal": 0.9073511362075806,
+      "v1": 0.00020406657131388783,
+      "v2": 0.0004735852126032114,
+      "v3": 0.000391141016734764,
+      "v4": 0.0002707666717469692,
+      "v5": 0.09130941331386566
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.7,
-    "generation_ms": 1200.3,
-    "detection_ms": 28.1,
+    "context_build_ms": 5.9,
+    "generation_ms": 1839.6,
+    "detection_ms": 32.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1234.3
+    "total_ms": 1878.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Finding direction can be really challenging, especially in tough times like this. It might help to break things down into smaller steps. For instance, have you thought about updating your resume or exploring new job opportunities in areas that interest you? Alternatively, you could also consider reaching out to someone in your network for advice or support. What feels more manageable for you right now?",
+    "response": "It's really tough when you feel like others might be judging you. It can create a lot of anxiety and hold you back. Have you considered talking to someone about these feelings? Sometimes sharing those worries can lighten the load. Or maybe you could try small steps, like engaging in a low-stakes social situation to see how it feels?",
     "total_retries": 0,
     "used_failsafe": false
   }

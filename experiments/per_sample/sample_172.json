@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I can't figure out why my friends don't understand why I want to keep a bit distant during COVID",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9991934895515442,
+    "predicted_label": "v3",
+    "confidence": 0.7363510131835938,
     "all_probabilities": {
-      "normal": 0.9991934895515442,
-      "v1": 7.423915667459369e-05,
-      "v2": 0.00014307160745374858,
-      "v3": 0.000486804055981338,
-      "v4": 5.193569086259231e-05,
-      "v5": 5.047100057709031e-05
+      "normal": 0.2591930627822876,
+      "v1": 0.0010047921678051353,
+      "v2": 0.0009014680399559438,
+      "v3": 0.7363510131835938,
+      "v4": 0.0012552185216918588,
+      "v5": 0.001294405316002667
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 2.9,
-    "generation_ms": 1156.9,
-    "detection_ms": 26.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1186.6
+    "context_build_ms": 4.1,
+    "generation_ms": 1202.2,
+    "detection_ms": 31.7,
+    "rewrite_total_ms": 4479.6,
+    "total_ms": 5717.9
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between options! You could start by suggesting the group video hangout to gauge everyone's interest, and if that goes well, plan some one-on-one calls afterward to discuss things more personally.",
+      "reasoning": "The original response exhibited an empathy-only approach without providing practical help, which is a violation. I added a brief empathy sentence and provided a concrete short guide to help the seeker navigate their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999043881893158,
+      "recheck_probabilities": {
+        "normal": 0.0005674601416103542,
+        "v1": 9.171929559670389e-05,
+        "v2": 7.248317706398666e-05,
+        "v3": 0.999043881893158,
+        "v4": 0.0001003141442197375,
+        "v5": 0.00012405596498865634
+      },
+      "rewrite_ms": 1406.3
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between options! You might start by suggesting the group video hangout to see if your friends are interested, and then follow up with one-on-one calls if that goes well. Have you thought about what time works best for everyone?",
+      "reasoning": "The original response primarily focused on empathy without providing practical help, which is a violation of the counseling guidelines. I added a concrete suggestion to help the seeker take action while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9932770133018494,
+      "recheck_probabilities": {
+        "normal": 0.005828381050378084,
+        "v1": 0.00018356287910137326,
+        "v2": 0.00010255264351144433,
+        "v3": 0.9932770133018494,
+        "v4": 0.00022676568187307566,
+        "v5": 0.0003817103279288858
+      },
+      "rewrite_ms": 1531.7
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between options! You might start by suggesting the group video hangout to see if your friends are interested, and then follow up with one-on-one calls if that goes well. What time works best for you to suggest this?",
+      "reasoning": "The original response displayed empathy but did not provide practical help as requested by the seeker, leading to a violation of the counseling guidelines. I added a concrete suggestion for the seeker to follow while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9968571662902832,
+      "recheck_probabilities": {
+        "normal": 0.002517204498872161,
+        "v1": 0.00014225670020096004,
+        "v2": 0.00010094448953168467,
+        "v3": 0.9968571662902832,
+        "v4": 0.00015257274208124727,
+        "v5": 0.00022981334768701345
+      },
+      "rewrite_ms": 1541.6
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "Both options sound great and could serve different purposes. You might consider asking your friends what they would prefer. Would they enjoy a fun game night together, or do they need some one-on-one time to catch up? Finding out their feelings could help you create a balance that works for everyone.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

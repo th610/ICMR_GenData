@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I married a divorcee. She was not honest with me. I felt sympathy about her previous marriage. She w",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.5006352066993713,
+    "predicted_label": "v3",
+    "confidence": 0.9921999573707581,
     "all_probabilities": {
-      "normal": 0.5006352066993713,
-      "v1": 0.0005611145752482116,
-      "v2": 0.0005331828724592924,
-      "v3": 0.4969099760055542,
-      "v4": 0.0004939944483339787,
-      "v5": 0.0008665742934681475
+      "normal": 0.005506520625203848,
+      "v1": 0.00012141196202719584,
+      "v2": 0.000210818529012613,
+      "v3": 0.9921999573707581,
+      "v4": 0.000362522026989609,
+      "v5": 0.0015987117076292634
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 6.0,
-    "generation_ms": 1607.7,
-    "detection_ms": 27.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1641.4
+    "context_build_ms": 2.5,
+    "generation_ms": 1864.1,
+    "detection_ms": 18.6,
+    "rewrite_total_ms": 8949.4,
+    "total_ms": 10834.8
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really torn between supporting your child and taking care of your own emotional well-being. You might consider bringing a friend along for support, or if that feels too overwhelming, you could set a time limit for how long you'll stay at the gathering.",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I added a concrete suggestion by providing two options for how the seeker could approach the gathering, while still including a brief empathetic statement to acknowledge their feelings.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9974835515022278,
+      "recheck_probabilities": {
+        "normal": 0.0009747587610036135,
+        "v1": 8.773946319706738e-05,
+        "v2": 0.0002960300480481237,
+        "v3": 0.9974835515022278,
+        "v4": 0.00024995647254399955,
+        "v5": 0.0009080080781131983
+      },
+      "rewrite_ms": 3122.8
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really torn between supporting your child and taking care of your own emotional well-being. You might consider bringing a friend for support. If you decide to go, try setting a time limit for how long you'll stay and have a plan for stepping outside if you start to feel overwhelmed.",
+      "reasoning": "The original response was primarily empathetic and lacked a concrete element of practical help, which is a violation of the counseling guidelines. I retained one sentence of empathy and added a short guide for the seeker to consider their options regarding the gathering.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9956621527671814,
+      "recheck_probabilities": {
+        "normal": 0.0017292783595621586,
+        "v1": 9.037930431077257e-05,
+        "v2": 0.0006389408954419196,
+        "v3": 0.9956621527671814,
+        "v4": 0.00032597564859315753,
+        "v5": 0.0015533040277659893
+      },
+      "rewrite_ms": 2959.5
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really torn between supporting your child and taking care of your own emotional well-being. You could either attend the gathering and bring a friend for support, or you could choose to skip it and focus on your emotional needs. Either way, make sure you prioritize what feels right for you.",
+      "reasoning": "The original last supporter response was primarily empathetic and did not provide practical help as requested by the seeker. I added a concrete suggestion in the form of two options for the seeker to consider regarding attending the event.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994150400161743,
+      "recheck_probabilities": {
+        "normal": 0.00014294838183559477,
+        "v1": 4.9970480176853016e-05,
+        "v2": 0.00014451524475589395,
+        "v3": 0.9994150400161743,
+        "v4": 0.000105467282992322,
+        "v5": 0.00014206203923095018
+      },
+      "rewrite_ms": 2867.1
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like a really challenging decision, and it's important to honor both your need to support your child and your emotional well-being. One option could be to consider how you might feel during and after the gathering. Do you think you would find comfort in being there for your child, or do you feel that the emotional toll would outweigh that support? Another idea might be to set a time limit for yourself—perhaps attending for a short while and seeing how you feel before deciding to stay longer. What resonates with you more right now?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

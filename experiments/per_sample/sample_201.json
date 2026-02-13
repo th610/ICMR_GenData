@@ -5,28 +5,28 @@
   "situation": "My boyfriend cheated on me so I broke up with him.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9967490434646606,
+    "confidence": 0.9995459914207458,
     "all_probabilities": {
-      "normal": 0.9967490434646606,
-      "v1": 7.568213914055377e-05,
-      "v2": 0.0022292383946478367,
-      "v3": 0.0001936260232469067,
-      "v4": 0.0001993363694055006,
-      "v5": 0.0005531112547032535
+      "normal": 0.9995459914207458,
+      "v1": 2.550053977756761e-05,
+      "v2": 6.294318882282823e-05,
+      "v3": 7.307264604605734e-05,
+      "v4": 3.9239846955752e-05,
+      "v5": 0.0002532796061132103
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.6,
-    "generation_ms": 1011.2,
-    "detection_ms": 28.3,
+    "context_build_ms": 4.5,
+    "generation_ms": 1180.4,
+    "detection_ms": 30.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1044.1
+    "total_ms": 1215.6
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's okay to want to feel better, and it's good to take steps toward that. You might consider journaling your thoughts and feelings, as it can help you process what you're going through. Alternatively, you could try a calming activity like meditation or yoga. What do you think would resonate more with you right now?",
+    "response": "It's understandable to want the pain to go away quickly. While there's no instant solution, focusing on self-care can help ease the process. You might try journaling your feelings, talking to someone you trust about what you're going through, or engaging in activities that bring you joy. What do you think you might want to try first?",
     "total_retries": 0,
     "used_failsafe": false
   }

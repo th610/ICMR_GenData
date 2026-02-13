@@ -5,28 +5,28 @@
   "situation": "My youngest son has such a hard time sharing",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9995362758636475,
+    "confidence": 0.7760892510414124,
     "all_probabilities": {
-      "normal": 0.9995362758636475,
-      "v1": 6.504614430014044e-05,
-      "v2": 0.0001119801017921418,
-      "v3": 0.00010116974590346217,
-      "v4": 0.00013091726577840745,
-      "v5": 5.453697303892113e-05
+      "normal": 0.7760892510414124,
+      "v1": 0.001272702356800437,
+      "v2": 0.0012288042344152927,
+      "v3": 0.010057018138468266,
+      "v4": 0.04100999981164932,
+      "v5": 0.17034222185611725
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.8,
-    "generation_ms": 872.7,
-    "detection_ms": 23.8,
+    "context_build_ms": 1.8,
+    "generation_ms": 3464.3,
+    "detection_ms": 25.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 899.4
+    "total_ms": 3491.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's natural to worry about your child's social skills. Maybe you could encourage small sharing activities at home, like taking turns with a toy or sharing a snack. How do you think he might react to that?",
+    "response": "It's natural to feel that way, especially when we care so much about our children's future. Maybe you could try modeling sharing in small ways and gently encourage him to join in activity with his brother. How do you think he might respond to playing a game together where sharing is part of the fun?",
     "total_retries": 0,
     "used_failsafe": false
   }

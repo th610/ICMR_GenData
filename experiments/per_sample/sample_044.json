@@ -5,28 +5,28 @@
   "situation": "My ex-boyfriend broke up with me because I was too jealous and I didn't trust him",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996925592422485,
+    "confidence": 0.9990405440330505,
     "all_probabilities": {
-      "normal": 0.9996925592422485,
-      "v1": 6.5882399212569e-05,
-      "v2": 3.8585745642194524e-05,
-      "v3": 8.549370977561921e-05,
-      "v4": 3.917398498742841e-05,
-      "v5": 7.826960063539445e-05
+      "normal": 0.9990405440330505,
+      "v1": 5.366380719351582e-05,
+      "v2": 6.335902435239404e-05,
+      "v3": 0.0001294415123993531,
+      "v4": 7.844714855309576e-05,
+      "v5": 0.0006344440625980496
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 831.5,
-    "detection_ms": 24.8,
+    "context_build_ms": 3.5,
+    "generation_ms": 1140.8,
+    "detection_ms": 38.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 860.2
+    "total_ms": 1183.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds really challenging. It's great that you're trying to distract yourself. Would you like to talk about some specific activities you enjoy, or maybe explore new hobbies that could help keep your mind occupied?",
+    "response": "Those quiet moments can be really tough. Maybe you could try journaling during those times to express what you're feeling? Or have you thought about picking up a new hobby to help fill those quiet moments?",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "7 weeks ago, my lover and I decided to stop having an affair.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9872620701789856,
+    "confidence": 0.9776504039764404,
     "all_probabilities": {
-      "normal": 0.9872620701789856,
-      "v1": 0.0002330551651539281,
-      "v2": 0.01171556580811739,
-      "v3": 0.0005152607336640358,
-      "v4": 0.00011432054452598095,
-      "v5": 0.00015981041360646486
+      "normal": 0.9776504039764404,
+      "v1": 0.0002701923658605665,
+      "v2": 0.007653702050447464,
+      "v3": 0.004225490149110556,
+      "v4": 0.00033735515899024904,
+      "v5": 0.009862817823886871
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1196.2,
-    "detection_ms": 27.2,
+    "context_build_ms": 6.8,
+    "generation_ms": 1160.1,
+    "detection_ms": 33.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1228.4
+    "total_ms": 1200.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I can appreciate that you're seeking clarity. One approach could be to take some time to reflect on what you truly want moving forward. Perhaps you could make a list of what you loved about your relationship and what you feel you need to let go of. Would that be something you’d like to try, or would you prefer to talk about your feelings in a different way?",
+    "response": "It's completely normal to feel torn during this time. Maybe it would help to reflect on what you truly want for yourself moving forward. Could you try writing down what you're missing about him versus what you envision for your future? This might help clarify your feelings and guide your next steps.",
     "total_retries": 0,
     "used_failsafe": false
   }

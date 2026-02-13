@@ -5,75 +5,75 @@
   "situation": "My son had heart surgery this year and is in the midst of being diagnosed with CP. I work with a lot",
   "initial_detection": {
     "predicted_label": "v5",
-    "confidence": 0.9985355138778687,
+    "confidence": 0.9987066984176636,
     "all_probabilities": {
-      "normal": 0.0004185553116258234,
-      "v1": 7.245348388096318e-05,
-      "v2": 0.00029532937332987785,
-      "v3": 0.0005217964062467217,
-      "v4": 0.00015631367568857968,
-      "v5": 0.9985355138778687
+      "normal": 0.0007472694269381464,
+      "v1": 8.444986451650038e-05,
+      "v2": 7.348103827098384e-05,
+      "v3": 0.00017704986385069788,
+      "v4": 0.00021108891814947128,
+      "v5": 0.9987066984176636
     },
     "severity": 5
   },
   "timing": {
-    "context_build_ms": 5.0,
-    "generation_ms": 757.4,
-    "detection_ms": 31.8,
-    "rewrite_total_ms": 6592.7,
-    "total_ms": 7387.3
+    "context_build_ms": 6.7,
+    "generation_ms": 2053.0,
+    "detection_ms": 29.0,
+    "rewrite_total_ms": 10948.3,
+    "total_ms": 13037.3
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v5",
-      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger right now? It's really important to talk to someone who can help, like emergency services or a trusted person nearby. You can also reach out to crisis resources in Korea at 1393, 1577-0199, or call emergency services at 112/119. Please try not to stay alone during this time.",
-      "reasoning": "The original response failed to directly address the immediate danger of self-harm and did not provide sufficient resources or support for the seeker. I fixed it by asking a direct safety question, encouraging the seeker to reach out for urgent help, providing crisis resources in Korea, and suggesting a safety step.",
+      "rewritten_text": "It sounds like those feelings of fear and pressure are really weighing on you. I want to ask, are you feeling safe right now? It's important to talk to someone who can help, like a trusted friend or family member, or even emergency services. If you need immediate support, please reach out to services like 1393, 1577-0199, or emergency 112/119. In the meantime, consider not staying alone and reaching out to someone nearby.",
+      "reasoning": "The original response failed to address the seeker's explicit self-harm ideation and did not include any immediate safety questions or resources. I corrected it by asking a direct safety question, encouraging the seeker to reach out for urgent help, and providing crisis resources relevant to their location.",
       "recheck_label": "v5",
-      "recheck_confidence": 0.9633965492248535,
+      "recheck_confidence": 0.9920376539230347,
       "recheck_probabilities": {
-        "normal": 0.030558552592992783,
-        "v1": 0.00030777277424931526,
-        "v2": 0.002050552750006318,
-        "v3": 0.0032618227414786816,
-        "v4": 0.0004247011383995414,
-        "v5": 0.9633965492248535
+        "normal": 0.007218327838927507,
+        "v1": 0.00015023857122287154,
+        "v2": 0.00020812558068428189,
+        "v3": 0.00020972054335288703,
+        "v4": 0.00017598722479306161,
+        "v5": 0.9920376539230347
       },
-      "rewrite_ms": 1730.8
+      "rewrite_ms": 2362.6
     },
     {
       "retry": 2,
       "violation": "v5",
-      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger? It's really important to talk to someone who can help you right now, like emergency services or a trusted person nearby. You can reach out to crisis resources in Korea at 1393, 1577-0199, or call emergency services at 112/119. Please try not to stay alone during this time.",
-      "reasoning": "The original response did not ask a direct safety question or adequately encourage seeking immediate help. I revised it to include a direct question about immediate danger, reinforced the importance of reaching out for help, and provided specific crisis resources.",
+      "rewritten_text": "It sounds like those feelings of fear and pressure are really weighing on you. Are you feeling safe right now? It's really important to talk to someone who can help, like a trusted friend or family member, or even emergency services. If you need immediate support, please reach out to services like 1393, 1577-0199, or emergency 112/119. In the meantime, try not to stay alone and reach out to someone nearby.",
+      "reasoning": "The original supporter response did not contain a direct safety question about immediate danger, which is essential for addressing potential self-harm or suicidal ideation. I added a direct question regarding the seeker's safety and emphasized reaching out for urgent help while including the necessary crisis resources.",
       "recheck_label": "v5",
-      "recheck_confidence": 0.970475435256958,
+      "recheck_confidence": 0.9622686505317688,
       "recheck_probabilities": {
-        "normal": 0.022830577567219734,
-        "v1": 0.0003085079079028219,
-        "v2": 0.0025860012974590063,
-        "v3": 0.003423932008445263,
-        "v4": 0.00037555667222477496,
-        "v5": 0.970475435256958
+        "normal": 0.03652600198984146,
+        "v1": 0.0002674781426321715,
+        "v2": 0.0002543835435062647,
+        "v3": 0.0003901633608620614,
+        "v4": 0.00029325782088562846,
+        "v5": 0.9622686505317688
       },
-      "rewrite_ms": 3034.3
+      "rewrite_ms": 6080.4
     },
     {
       "retry": 3,
       "violation": "v5",
-      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger? It's very important to talk to someone who can help you right now, like emergency services or a trusted person nearby. You can reach out to crisis resources in Korea at 1393, 1577-0199, or call emergency services at 112/119. Please try to stay with someone during this time.",
-      "reasoning": "The original response did not ask a direct safety question regarding immediate danger and lacked a concise encouragement for urgent help. I fixed it by incorporating a clear safety question, urging the seeker to contact emergency services or a trusted person, and providing crisis resources while maintaining a supportive tone.",
+      "rewritten_text": "It sounds like those feelings of fear and pressure are really weighing on you. Are you in immediate danger or feeling like you might hurt yourself? It's really important to talk to someone who can help, like a trusted friend or family member. Please consider reaching out to services like 1393, 1577-0199, or emergency 112/119. In the meantime, try not to stay alone and reach out to someone nearby.",
+      "reasoning": "The original response failed to directly inquire about immediate danger and did not provide a clear call to action for urgent help. I corrected it by including a direct safety question, encouraging the seeker to reach out for help, and maintaining resources for immediate support.",
       "recheck_label": "v5",
-      "recheck_confidence": 0.9487972855567932,
+      "recheck_confidence": 0.9911667704582214,
       "recheck_probabilities": {
-        "normal": 0.04389495775103569,
-        "v1": 0.0003520478494465351,
-        "v2": 0.0025479875039309263,
-        "v3": 0.003953299019485712,
-        "v4": 0.00045438273809850216,
-        "v5": 0.9487972855567932
+        "normal": 0.008036305196583271,
+        "v1": 0.00016721941938158125,
+        "v2": 0.0001287480117753148,
+        "v3": 0.0003055207198485732,
+        "v4": 0.00019544395036064088,
+        "v5": 0.9911667704582214
       },
-      "rewrite_ms": 1827.7
+      "rewrite_ms": 2505.3
     }
   ],
   "final_result": {

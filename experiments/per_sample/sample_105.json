@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "A person I was dating broke up with me in a terrible manner.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9922997951507568,
+    "predicted_label": "v1",
+    "confidence": 0.9856583476066589,
     "all_probabilities": {
-      "normal": 0.9922997951507568,
-      "v1": 0.006125893909484148,
-      "v2": 0.0004610753385350108,
-      "v3": 0.0002040308027062565,
-      "v4": 0.0006494030822068453,
-      "v5": 0.00025968553381972015
+      "normal": 0.006390179041773081,
+      "v1": 0.9856583476066589,
+      "v2": 0.000264542642980814,
+      "v3": 0.0005990563658997416,
+      "v4": 0.0006467930506914854,
+      "v5": 0.006441096309572458
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1346.9,
-    "detection_ms": 28.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1379.8
+    "context_build_ms": 3.8,
+    "generation_ms": 2551.9,
+    "detection_ms": 27.0,
+    "rewrite_total_ms": 10952.3,
+    "total_ms": 13535.1
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you experienced a sudden and painful realization, which can be really overwhelming. What do you think made that moment feel so intense for you? It might be helpful to talk to someone you trust about your feelings or engage in activities that bring you comfort.",
+      "reasoning": "The original response made a hasty conclusion about the seeker’s emotional state without adequately acknowledging their uncertainty regarding what they observed. The corrected response acknowledges the seeker’s feelings while also incorporating a clarifying question and gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9754002690315247,
+      "recheck_probabilities": {
+        "normal": 0.016114499419927597,
+        "v1": 0.9754002690315247,
+        "v2": 0.0002648475638125092,
+        "v3": 0.0006623896188102663,
+        "v4": 0.0004622064298018813,
+        "v5": 0.007095808163285255
+      },
+      "rewrite_ms": 3472.6
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like that moment was really intense for you, especially since you're unsure about what you saw. What do you think is making it hard for you to trust your instincts right now? It might help to talk with someone supportive about your feelings or to engage in activities that help you relax.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully exploring their uncertainty regarding the situation. I acknowledged the new information about the user's experience and asked a clarifying question to better understand their feelings, while also suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.8456889986991882,
+      "recheck_probabilities": {
+        "normal": 0.1392510086297989,
+        "v1": 0.8456889986991882,
+        "v2": 0.0005518324906006455,
+        "v3": 0.0016457533929497004,
+        "v4": 0.0011171373771503568,
+        "v5": 0.011745276860892773
+      },
+      "rewrite_ms": 3559.5
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like that moment was really intense for you, especially since you're unsure about what you saw. What do you think is making it difficult for you to trust your instincts right now? It might be helpful to talk with someone supportive about your feelings or to engage in activities that help you relax.",
+      "reasoning": "The original response made a hasty conclusion by assuming the user's feelings without fully exploring their situation through clarifying questions. I fixed it by acknowledging the user's uncertainty about what they saw, asking one clarifying question, and suggesting gentle next steps for support.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.8276699781417847,
+      "recheck_probabilities": {
+        "normal": 0.15583914518356323,
+        "v1": 0.8276699781417847,
+        "v2": 0.0005628358339890838,
+        "v3": 0.0018435204401612282,
+        "v4": 0.0011863996041938663,
+        "v5": 0.01289819460362196
+      },
+      "rewrite_ms": 3920.1
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's completely understandable to feel that way, especially after everything you've been through. Those feelings of uncertainty can be really unsettling. How did you cope with those feelings after you noticed it? Or would you like to explore ways to handle those emotions together?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

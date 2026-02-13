@@ -5,28 +5,28 @@
   "situation": "I got a bad grade on a paper",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9495446681976318,
+    "confidence": 0.9997414946556091,
     "all_probabilities": {
-      "normal": 0.9495446681976318,
-      "v1": 0.0005371909937821329,
-      "v2": 0.0488315187394619,
-      "v3": 0.0003792260540649295,
-      "v4": 0.000500786816701293,
-      "v5": 0.00020655673870351166
+      "normal": 0.9997414946556091,
+      "v1": 5.500085899257101e-05,
+      "v2": 5.010627137380652e-05,
+      "v3": 4.4806987716583535e-05,
+      "v4": 3.9199636375997216e-05,
+      "v5": 6.945847417227924e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 1442.4,
-    "detection_ms": 25.9,
+    "context_build_ms": 3.5,
+    "generation_ms": 1604.5,
+    "detection_ms": 28.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1472.1
+    "total_ms": 1636.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "You could start by expressing that you want to understand the feedback on your paper better. Maybe you could say something like, 'I noticed I didn't do as well as I hoped on my paper, and I would really appreciate your guidance on how I can improve in the future.' How does that sound to you?",
+    "response": "It's completely normal to feel anxious about this. You could start by saying something like, 'I was surprised by my grade on the paper and would like to understand what I could improve.' How does that sound to you? Or, if it feels easier, you could ask if they have specific feedback on areas you can work on.",
     "total_retries": 0,
     "used_failsafe": false
   }

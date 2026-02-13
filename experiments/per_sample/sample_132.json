@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I have to pass my test to pass the course.  I'm am crazy nervous and can't sleep.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8609862327575684,
+    "predicted_label": "v3",
+    "confidence": 0.9973388314247131,
     "all_probabilities": {
-      "normal": 0.8609862327575684,
-      "v1": 0.0006375528173521161,
-      "v2": 0.0007400091853924096,
-      "v3": 0.1368916779756546,
-      "v4": 0.00043421241571195424,
-      "v5": 0.00031019881134852767
+      "normal": 0.002020171843469143,
+      "v1": 0.00012615589366760105,
+      "v2": 7.373844709945843e-05,
+      "v3": 0.9973388314247131,
+      "v4": 0.00021745522099081427,
+      "v5": 0.00022358390560839325
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 1006.2,
-    "detection_ms": 26.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1037.0
+    "context_build_ms": 3.7,
+    "generation_ms": 1624.9,
+    "detection_ms": 26.1,
+    "rewrite_total_ms": 8076.6,
+    "total_ms": 9731.5
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot trying to balance work and studying. Would you prefer to cut back on work hours for a few days to focus on studying, or do you think smaller study blocks around your shifts would work better for you?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help despite the seeker's explicit request. I added a brief empathy statement and provided two options for how the seeker could manage their study time around work.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995133876800537,
+      "recheck_probabilities": {
+        "normal": 0.0001695489918347448,
+        "v1": 6.017574924044311e-05,
+        "v2": 6.044400288374163e-05,
+        "v3": 0.9995133876800537,
+        "v4": 0.00010439793550176546,
+        "v5": 9.205981041304767e-05
+      },
+      "rewrite_ms": 2610.8
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot trying to balance work and studying. Would you prefer to cut back on work hours for a few days to focus on studying, or do you think you could manage smaller study blocks around your shifts?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I added two concrete options for the seeker to consider regarding managing their work and study schedule, while also including a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994664788246155,
+      "recheck_probabilities": {
+        "normal": 0.00019195856293663383,
+        "v1": 6.484730693046004e-05,
+        "v2": 5.826822962262668e-05,
+        "v3": 0.9994664788246155,
+        "v4": 0.00011380839714547619,
+        "v5": 0.00010468445543665439
+      },
+      "rewrite_ms": 2633.2
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot trying to balance work and studying. Would you prefer to cut back on work hours for a few days to focus on studying, or do you think you could manage smaller study blocks around your shifts?",
+      "reasoning": "The original response contained only empathy and did not provide any practical help, which violates the guideline for offering concrete assistance. I added two options for the seeker to choose from regarding their work and study balance, while retaining a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994664788246155,
+      "recheck_probabilities": {
+        "normal": 0.00019195856293663383,
+        "v1": 6.484730693046004e-05,
+        "v2": 5.826822962262668e-05,
+        "v3": 0.9994664788246155,
+        "v4": 0.00011380839714547619,
+        "v5": 0.00010468445543665439
+      },
+      "rewrite_ms": 2832.6
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It seems like you have a tough decision to make. One option could be to assess how many hours you need for work versus study time. Would it help to create a simple schedule for both this week? You might consider setting specific time blocks for studying and working, so you can see if you can fit in both.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

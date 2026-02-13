@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "My biological sister has major issues is trying to turn my family against because of an argument we ",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.881199061870575,
+    "predicted_label": "v3",
+    "confidence": 0.9984990358352661,
     "all_probabilities": {
-      "normal": 0.881199061870575,
-      "v1": 0.0004015652521047741,
-      "v2": 0.0003423087182454765,
-      "v3": 0.11702877283096313,
-      "v4": 0.0003672264574561268,
-      "v5": 0.0006610130658373237
+      "normal": 0.0010642161360010505,
+      "v1": 8.358411287190393e-05,
+      "v2": 6.259093061089516e-05,
+      "v3": 0.9984990358352661,
+      "v4": 0.0001350191014353186,
+      "v5": 0.00015554139099549502
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1222.5,
-    "detection_ms": 27.3,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1254.8
+    "context_build_ms": 2.4,
+    "generation_ms": 1774.5,
+    "detection_ms": 12.6,
+    "rewrite_total_ms": 7820.3,
+    "total_ms": 9610.2
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. You could either attend the event and set personal boundaries for yourself, or skip it to protect your peace of mind. Which option feels more appealing to you right now?",
+      "reasoning": "The original response provided empathy but did not offer practical help despite the seeker's explicit request for guidance on attending the family event. I included a brief empathy statement and presented two clear options for the seeker to consider regarding attending the event.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.99960857629776,
+      "recheck_probabilities": {
+        "normal": 9.66117950156331e-05,
+        "v1": 5.753180448664352e-05,
+        "v2": 7.586539868498221e-05,
+        "v3": 0.99960857629776,
+        "v4": 8.247694495366886e-05,
+        "v5": 7.889671542216092e-05
+      },
+      "rewrite_ms": 2306.0
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. You could either attend the event and set personal boundaries for yourself or skip it to protect your peace of mind. Which option feels more appealing to you right now?",
+      "reasoning": "The original response lacked practical help and was solely empathetic, which violates the counseling guideline to provide actionable support. I added a brief empathy sentence along with two concrete options to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996137022972107,
+      "recheck_probabilities": {
+        "normal": 9.557938028592616e-05,
+        "v1": 5.61297893000301e-05,
+        "v2": 7.629211904713884e-05,
+        "v3": 0.9996137022972107,
+        "v4": 8.105901360977441e-05,
+        "v5": 7.721439760643989e-05
+      },
+      "rewrite_ms": 2759.2
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. You could either attend the event and set personal boundaries for yourself or skip it to protect your peace of mind. Which option feels more appealing to you right now?",
+      "reasoning": "The original response focused solely on empathy without providing any practical help, which violated the requirement for actionable support. I added a concrete element by providing two options for the seeker to consider, while still including a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996137022972107,
+      "recheck_probabilities": {
+        "normal": 9.557938028592616e-05,
+        "v1": 5.61297893000301e-05,
+        "v2": 7.629211904713884e-05,
+        "v3": 0.9996137022972107,
+        "v4": 8.105901360977441e-05,
+        "v5": 7.721439760643989e-05
+      },
+      "rewrite_ms": 2755.2
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's definitely a difficult choice to make. One option could be to weigh the pros and cons of each choice. For instance, how comfortable do you think you would feel if you attended the event? And on the other hand, how would you feel about missing it? It might help to think about what feels more important to you right now: your peace of mind or maintaining family connections. What are your thoughts on this?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

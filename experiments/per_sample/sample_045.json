@@ -5,28 +5,28 @@
   "situation": "I just got layed off.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9995567202568054,
+    "confidence": 0.9994396567344666,
     "all_probabilities": {
-      "normal": 0.9995567202568054,
-      "v1": 9.754981874721125e-05,
-      "v2": 3.052478496101685e-05,
-      "v3": 0.00010331868543289602,
-      "v4": 7.946021651150659e-05,
-      "v5": 0.0001324585173279047
+      "normal": 0.9994396567344666,
+      "v1": 0.0002227490913355723,
+      "v2": 5.292299101711251e-05,
+      "v3": 7.871197158237919e-05,
+      "v4": 7.989060395630077e-05,
+      "v5": 0.00012601670459844172
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.2,
-    "generation_ms": 728.3,
-    "detection_ms": 27.0,
+    "context_build_ms": 7.1,
+    "generation_ms": 1353.6,
+    "detection_ms": 32.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 760.6
+    "total_ms": 1393.6
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That’s so heartwarming to hear! Reuniting after such a long time can create some really special memories. Do you have any plans for activities or traditions you’re looking forward to sharing with them?",
+    "response": "It sounds like it might be a big moment for them, especially after such a long time. How do you think they'll react? It could also be a good opportunity to share your excitement about being home for the holidays.",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "my kids wont listen to me",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997106194496155,
+    "confidence": 0.9996579885482788,
     "all_probabilities": {
-      "normal": 0.9997106194496155,
-      "v1": 5.3496820328291506e-05,
-      "v2": 5.52062047063373e-05,
-      "v3": 6.0257352743064985e-05,
-      "v4": 6.013868187437765e-05,
-      "v5": 6.0272464907029644e-05
+      "normal": 0.9996579885482788,
+      "v1": 5.874925773241557e-05,
+      "v2": 5.3544019465334713e-05,
+      "v3": 5.376091939979233e-05,
+      "v4": 4.2984298488590866e-05,
+      "v5": 0.00013297835539560765
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 5.3,
-    "generation_ms": 686.8,
-    "detection_ms": 26.9,
+    "generation_ms": 1760.8,
+    "detection_ms": 18.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 719.1
+    "total_ms": 1784.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That's a great strategy! Offering choices can definitely empower them and make them feel more in control. Do you have specific situations where you've found this approach works particularly well?",
+    "response": "That makes sense, transitions can be really tough for kids. Have you thought about creating a routine or a calming ritual to help ease those times? Maybe something simple like a short story or a specific song could signal that it's time to wind down.",
     "total_retries": 0,
     "used_failsafe": false
   }

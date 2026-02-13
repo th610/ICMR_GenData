@@ -5,47 +5,81 @@
   "situation": "Just lost my job. Don't know how to continue with my lifestyle.",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.7932983636856079,
+    "confidence": 0.9889664053916931,
     "all_probabilities": {
-      "normal": 0.20440910756587982,
-      "v1": 0.0007098605274222791,
-      "v2": 0.0006895295809954405,
-      "v3": 0.7932983636856079,
-      "v4": 0.0005999811110086739,
-      "v5": 0.00029322548652999103
+      "normal": 0.010045800358057022,
+      "v1": 0.00022962575894780457,
+      "v2": 0.00014562949945684522,
+      "v3": 0.9889664053916931,
+      "v4": 0.0002611724194139242,
+      "v5": 0.0003513964475132525
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.5,
-    "generation_ms": 1188.9,
-    "detection_ms": 25.8,
-    "rewrite_total_ms": 1692.3,
-    "total_ms": 2911.5
+    "context_build_ms": 4.7,
+    "generation_ms": 1539.1,
+    "detection_ms": 35.5,
+    "rewrite_total_ms": 6748.8,
+    "total_ms": 8328.4
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you have a lot on your plate and a big decision to make. One approach could be to list out the pros and cons of each option. Then, you could try reaching out to friends or online communities for support or advice on starting your catering service while also applying for jobs in other fields. What do you think would be the most appealing aspect of each option for you?",
-      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I included one brief empathy sentence and added a short guide with two steps to assist the seeker in making their decision.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.6492794752120972,
+      "rewritten_text": "It sounds like you're weighing two important paths. One option could be to start small with the catering idea while also applying for jobs in other fields. To get started, you might consider these steps: 1) List the types of dishes you could cater; 2) Research local regulations for catering services; 3) Create a simple plan to test your idea with friends or family.",
+      "reasoning": "The original response violated the counseling guideline by being empathy-only and lacking practical help after the seeker explicitly requested guidance on decision-making. I added a brief empathic statement and provided a short 2–3 step guide to help the seeker take actionable steps in their situation.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9629744291305542,
       "recheck_probabilities": {
-        "normal": 0.6492794752120972,
-        "v1": 0.0010345004266127944,
-        "v2": 0.0006337784579955041,
-        "v3": 0.3479425013065338,
-        "v4": 0.0006823153235018253,
-        "v5": 0.0004274644306860864
+        "normal": 0.0356217585504055,
+        "v1": 0.00028394823311828077,
+        "v2": 0.00023215349938254803,
+        "v3": 0.9629744291305542,
+        "v4": 0.0004178671515546739,
+        "v5": 0.0004697857366409153
       },
-      "rewrite_ms": 1692.3
+      "rewrite_ms": 2170.9
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're weighing two important paths. To help you get started with the catering idea, consider these steps: 1) List the types of dishes you could cater; 2) Research local regulations for catering services; 3) Create a simple plan to test your idea with friends or family.",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help despite the seeker's explicit request for guidance on making a decision. I included a brief validation statement and a step-by-step guide to help the seeker explore their catering idea while also considering job applications.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9992308616638184,
+      "recheck_probabilities": {
+        "normal": 0.0002578868006821722,
+        "v1": 7.017551979515702e-05,
+        "v2": 0.00022540205100085586,
+        "v3": 0.9992308616638184,
+        "v4": 8.502079435857013e-05,
+        "v5": 0.0001306348422076553
+      },
+      "rewrite_ms": 1929.1
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between job security and following your passion. To help you get started with the catering idea, consider these steps: 1) List the types of dishes you could cater; 2) Research local regulations for catering services; 3) Create a simple plan to test your idea with friends or family.",
+      "reasoning": "The original response was overly empathetic and did not provide the practical help requested by the seeker. I added a brief empathy statement and included a concise 2-3 step guide to support the seeker in developing their catering idea.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999387264251709,
+      "recheck_probabilities": {
+        "normal": 0.00015609113324899226,
+        "v1": 6.031696102581918e-05,
+        "v2": 0.0001976972125703469,
+        "v3": 0.999387264251709,
+        "v4": 9.144717478193343e-05,
+        "v5": 0.00010715316602727398
+      },
+      "rewrite_ms": 2648.8
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you have a lot on your plate and a big decision to make. One approach could be to list out the pros and cons of each option. Then, you could try reaching out to friends or online communities for support or advice on starting your catering service while also applying for jobs in other fields. What do you think would be the most appealing aspect of each option for you?",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -31,7 +31,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 RESULTS_DIR = Path(__file__).parent
 MODEL_DIR = Path(__file__).parent.parent / "models" / "outputs"
-DATA_PATH = RESULTS_DIR / "test_gold_300_prefix.json"
+DATA_PATH = Path(__file__).parent.parent / "data" / "final" / "test_gold_300.json"
 METRICS_PATH = MODEL_DIR / "test_metrics.json"
 OUTPUT_DIR = RESULTS_DIR / "table1"
 
@@ -56,56 +56,71 @@ def load_test_data():
 def run_direct_verification(samples):
     """
     모델로 직접 Gold 텍스트를 분류하여 재검증.
-    
-    전처리: prefix_dialog + generated_dialog → history
-    타겟: history[-1]['text'] (마지막 supporter 턴 = Gold 응답)
+    학습 시와 동일한 방식(ViolationDataset)으로 평가.
     """
-    from src.agent.step3_violation_detector import ViolationDetector
-
-    detector = ViolationDetector(
-        mode="model",
-        model_path=str(MODEL_DIR),
-        temperature=1.0
-    )
-
-    results = []
+    import sys
+    import torch
+    from torch.utils.data import DataLoader
+    sys.path.insert(0, str(Path(__file__).parent.parent / "models"))
+    from data_utils import ViolationDataset, DataConfig
+    from transformers import RobertaTokenizer
+    from model import ViolationClassifier
+    
+    # 데이터 준비
+    test_data = {'samples': samples}
+    
+    # 토크나이저 로드
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
+    tokenizer.add_tokens([DataConfig.SEEKER_TOKEN, DataConfig.SUPPORTER_TOKEN, DataConfig.SUPPORTER_TARGET_TOKEN])
+    
+    # 데이터셋 생성
+    dataset = ViolationDataset(test_data, tokenizer, max_length=512, is_test=True)
+    loader = DataLoader(dataset, batch_size=32, shuffle=False)
+    
+    # 모델 로드
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    model = ViolationClassifier('roberta-base', num_labels=6)
+    model.roberta.resize_token_embeddings(len(tokenizer))
+    
+    model_file = MODEL_DIR / "best_model_v3.pt"
+    checkpoint = torch.load(model_file, map_location=device, weights_only=False)
+    model.load_state_dict(checkpoint['model_state_dict'])
+    model.to(device)
+    model.eval()
+    
+    print(f"[OK] Model loaded from {model_file} (device: {device})")
+    
+    # 추론
+    all_preds = []
+    all_labels = []
     latencies = []
-
-    for i, sample in enumerate(samples):
-        gold_label = sample.get('primary_label', 'unknown').lower()
-
-        # prefix_dialog + generated_dialog 합쳐서 전체 history 구성
-        history = []
-        for turn in sample['prefix_dialog'] + sample['generated_dialog']:
-            history.append({
-                'speaker': turn['speaker'],
-                'text': turn['content']
-            })
-
-        # 마지막 턴 = 분류 대상 (Gold 응답)
-        last_text = history[-1]['text'] if history else ""
-        context = {
-            'situation': sample.get('situation', ''),
-            'history': history,
-            'recent_turns': history,
-            'summary': '',
-            'formatted': '\n'.join(f"{t['speaker']}: {t['text']}" for t in history)
-        }
-        candidate = {'id': 0, 'text': last_text}
-
-        t0 = time.time()
-        result = detector.detect(context, candidate)
-        latency_ms = (time.time() - t0) * 1000
-        latencies.append(latency_ms)
-
-        pred_label = result['top_violation'].lower()
+    
+    with torch.no_grad():
+        for batch in loader:
+            t0 = time.time()
+            ids = batch['input_ids'].to(device)
+            mask = batch['attention_mask'].to(device)
+            logits = model(ids, mask)
+            latency_ms = (time.time() - t0) * 1000 / len(ids)  # per sample
+            
+            preds = logits.argmax(dim=-1).cpu().tolist()
+            labels = batch['label'].tolist()
+            
+            all_preds.extend(preds)
+            all_labels.extend(labels)
+            latencies.extend([latency_ms] * len(ids))
+    
+    # 결과 포맷팅
+    results = []
+    LABEL_NAMES = DataConfig.LABELS
+    for i, (pred, gold) in enumerate(zip(all_preds, all_labels)):
         results.append({
             'index': i,
-            'gold': gold_label,
-            'pred': pred_label,
-            'confidence': float(result['confidence'])
+            'gold': LABEL_NAMES[gold].lower(),
+            'pred': LABEL_NAMES[pred].lower(),
+            'confidence': 1.0  # argmax 사용이므로 confidence는 고정
         })
-
+        
         if (i + 1) % 50 == 0 or (i + 1) == len(samples):
             correct = sum(1 for r in results if r['gold'] == r['pred'])
             print(f"  [{i+1:3d}/{len(samples)}] acc={correct/(i+1):.4f}")

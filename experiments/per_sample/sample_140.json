@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "My industry shut down due to Covid-19 and I am currently seeking work but very financially behind an",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8789862394332886,
+    "predicted_label": "v3",
+    "confidence": 0.9991613626480103,
     "all_probabilities": {
-      "normal": 0.8789862394332886,
-      "v1": 0.0006467924686148763,
-      "v2": 0.0006375685334205627,
-      "v3": 0.11870243400335312,
-      "v4": 0.0004648608446586877,
-      "v5": 0.0005620672018267214
+      "normal": 0.00046307031880132854,
+      "v1": 7.915806054370478e-05,
+      "v2": 8.992755465442315e-05,
+      "v3": 0.9991613626480103,
+      "v4": 0.00011858568177558482,
+      "v5": 8.799992792773992e-05
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 5.3,
-    "generation_ms": 1444.8,
-    "detection_ms": 27.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1477.8
+    "context_build_ms": 5.2,
+    "generation_ms": 1141.5,
+    "detection_ms": 33.4,
+    "rewrite_total_ms": 8498.8,
+    "total_ms": 9679.2
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "That does sound like a tough decision. To help you move forward, you might try this: 1) List your priorities for the weekend, 2) Allocate specific times for both art sales and the job application, and 3) Decide which option feels more urgent to you. How does that approach sound?",
+      "reasoning": "The original response primarily focused on empathy without providing practical help in response to the seeker's explicit request for guidance on making a decision. I added a brief validation and included a short 2–3 step guide to help the seeker make their choice.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9988296627998352,
+      "recheck_probabilities": {
+        "normal": 0.0006815873784944415,
+        "v1": 8.963642176240683e-05,
+        "v2": 0.00017699603631626815,
+        "v3": 0.9988296627998352,
+        "v4": 8.922338747652248e-05,
+        "v5": 0.0001329527294728905
+      },
+      "rewrite_ms": 3061.2
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "That does sound like a tough decision. You might try this: 1) Write down the pros and cons of focusing on art sales versus applying for the part-time job, 2) Consider which option aligns more with your immediate financial needs, and 3) Trust your instincts to make the choice that feels right for you.",
+      "reasoning": "The original supporter response provided empathy but failed to offer practical help, which is a violation. I added a brief empathy sentence and included a short 2-3 step guide to assist the seeker in making their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9990308284759521,
+      "recheck_probabilities": {
+        "normal": 0.0005461362306959927,
+        "v1": 7.319235010072589e-05,
+        "v2": 0.0001456300524296239,
+        "v3": 0.9990308284759521,
+        "v4": 9.087252692552283e-05,
+        "v5": 0.0001132842808146961
+      },
+      "rewrite_ms": 2728.0
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "That does sound like a tough decision. To help you decide, try this: 1) List the pros and cons of focusing on art sales versus applying for the part-time job, 2) Think about which option will meet your financial needs best right now.",
+      "reasoning": "The original supporter response contained only empathy and validation without providing practical help, which is a violation of the counseling guidelines. I added a concrete element by providing a short 2-3 step guide to help the seeker make their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9991828799247742,
+      "recheck_probabilities": {
+        "normal": 0.000357132958015427,
+        "v1": 6.523395131807774e-05,
+        "v2": 0.00016436970327049494,
+        "v3": 0.9991828799247742,
+        "v4": 8.10679848655127e-05,
+        "v5": 0.00014931560144759715
+      },
+      "rewrite_ms": 2709.6
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s a tough decision, and it's great that you're considering both options. How about this: what if you take a little time to reflect on what feels more aligned with your long-term goals? You could also think about how much time you might realistically have to dedicate to selling your art this weekend versus the part-time job. Would you like to explore what selling your art might look like for you right now?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -5,28 +5,28 @@
   "situation": "I am in a crisis over my employer not having enough money to pay me.  It is really causing me to be ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997074007987976,
+    "confidence": 0.9994342923164368,
     "all_probabilities": {
-      "normal": 0.9997074007987976,
-      "v1": 5.3689946071244776e-05,
-      "v2": 4.3904412450501695e-05,
-      "v3": 0.0001010556225082837,
-      "v4": 4.046878530061804e-05,
-      "v5": 5.346110265236348e-05
+      "normal": 0.9994342923164368,
+      "v1": 7.864423969294876e-05,
+      "v2": 4.316028207540512e-05,
+      "v3": 9.843599400483072e-05,
+      "v4": 5.3683728765463457e-05,
+      "v5": 0.0002916984958574176
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 1138.9,
-    "detection_ms": 26.2,
+    "context_build_ms": 2.3,
+    "generation_ms": 1384.7,
+    "detection_ms": 29.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1169.3
+    "total_ms": 1416.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds really tough, and it's natural to feel overwhelmed when financial uncertainty looms. It might help to create a budget that outlines your essential expenses and income sources. Would you like to brainstorm some strategies to manage your bills, or would it be helpful to talk about ways to find more stable income options?",
+    "response": "It's completely understandable to feel stressed about rent and utilities, especially with everything going on. Have you thought about reaching out to your landlord or utility providers to see if they offer any flexibility or assistance programs? It could help ease some of that stress while you explore other job options.",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "My mom got in a serious accident and ever since, I have developed anxiety whenever I cannot be aroun",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.8164969682693481,
+    "confidence": 0.9996668100357056,
     "all_probabilities": {
-      "normal": 0.8164969682693481,
-      "v1": 0.000518784683663398,
-      "v2": 0.18026447296142578,
-      "v3": 0.000980591168627143,
-      "v4": 0.0005762705113738775,
-      "v5": 0.0011629428481683135
+      "normal": 0.9996668100357056,
+      "v1": 4.884822556050494e-05,
+      "v2": 3.672678940347396e-05,
+      "v3": 5.447225703392178e-05,
+      "v4": 3.745912545127794e-05,
+      "v5": 0.00015570833056699485
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 903.9,
-    "detection_ms": 25.8,
+    "context_build_ms": 3.6,
+    "generation_ms": 1184.0,
+    "detection_ms": 26.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 933.6
+    "total_ms": 1214.6
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It’s okay to feel overwhelmed. Maybe you could start by choosing a calm moment to talk to them. You could say something like, 'I’ve been feeling anxious about your driving, especially in the snow. Can we talk about it?' How does that sound to you?",
+    "response": "It's completely understandable to feel that way. Maybe you could approach the conversation gently, expressing your feelings without placing blame. Would it help to prepare what you want to say? You could start with something like, 'I've been feeling anxious about driving in the snow and wanted to share my concerns with you.' How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

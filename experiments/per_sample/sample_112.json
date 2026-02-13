@@ -5,75 +5,75 @@
   "situation": "Fear of losing my job",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9887190461158752,
+    "confidence": 0.9996379613876343,
     "all_probabilities": {
-      "normal": 0.010646302253007889,
-      "v1": 0.9887190461158752,
-      "v2": 0.00017567556642461568,
-      "v3": 0.00016246837913058698,
-      "v4": 0.00022402359172701836,
-      "v5": 7.244412699947134e-05
+      "normal": 6.533540727104992e-05,
+      "v1": 0.9996379613876343,
+      "v2": 0.0001036016910802573,
+      "v3": 7.465402450179681e-05,
+      "v4": 6.199402560014278e-05,
+      "v5": 5.647350553772412e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.6,
-    "generation_ms": 872.3,
-    "detection_ms": 28.2,
-    "rewrite_total_ms": 3904.8,
-    "total_ms": 4811.1
+    "context_build_ms": 5.2,
+    "generation_ms": 1242.8,
+    "detection_ms": 31.7,
+    "rewrite_total_ms": 9184.0,
+    "total_ms": 10464.1
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the situation at work. What kind of updates would you like to hear from your company? In the meantime, it might be helpful to stay connected with your colleagues for support and consider updating your resume just in case.",
-      "reasoning": "The original response jumped to conclusions about the seeker's situation without fully exploring their feelings or clarifying the specifics of their concerns. I acknowledged the seeker's uncertainty, asked a clarifying question to gather more information, and then provided gentle next steps without making assumptions.",
+      "rewritten_text": "I can understand why that would be scary to hear, especially with the uncertainty it brings. What specific thoughts or feelings are coming up for you regarding this situation? It might be helpful to share what’s on your mind, and we can explore ways to ease those worries together.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without directly acknowledging their specific concerns and included multiple questions and commands. The revised response addresses the seeker's uncertainty, asks one precise clarifying question, and offers gentle next steps without assumptions or directives.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9979627132415771,
+      "recheck_confidence": 0.9996501207351685,
       "recheck_probabilities": {
-        "normal": 0.0016882976051419973,
-        "v1": 0.9979627132415771,
-        "v2": 9.98699470073916e-05,
-        "v3": 9.364438301417977e-05,
-        "v4": 0.00010893469880102202,
-        "v5": 4.649263064493425e-05
+        "normal": 6.186532118590549e-05,
+        "v1": 0.9996501207351685,
+        "v2": 9.30955502553843e-05,
+        "v3": 7.0420210249722e-05,
+        "v4": 6.793332431698218e-05,
+        "v5": 5.659296584781259e-05
       },
-      "rewrite_ms": 1312.5
+      "rewrite_ms": 3780.3
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the potential layoffs at work. What specific concerns do you have about the situation? In the meantime, it might be nice to talk with trusted colleagues for support and perhaps take some time to reflect on your career goals.",
-      "reasoning": "The original response jumped to conclusions about the seeker's feelings and offered assumptions about their needs without first clarifying their situation. The revised response acknowledges the seeker's uncertainty, asks a specific clarifying question, and suggests gentle next steps without making assumptions.",
+      "rewritten_text": "I can see why hearing about possible layoffs would be unsettling for you. What specific concerns do you have about the situation? It might be helpful to talk through your thoughts, and perhaps consider reaching out to a trusted colleague for support.",
+      "reasoning": "The original response made a hasty conclusion by assuming the user's feelings without first clarifying their thoughts. The corrected response acknowledges the user's uncertainty, asks a single clarifying question, and suggests gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.994662880897522,
+      "recheck_confidence": 0.9996453523635864,
       "recheck_probabilities": {
-        "normal": 0.004833757411688566,
-        "v1": 0.994662880897522,
-        "v2": 0.00012346684525255114,
-        "v3": 0.00016920203051995486,
-        "v4": 0.00014633960381615907,
-        "v5": 6.421523721655831e-05
+        "normal": 6.605531234527007e-05,
+        "v1": 0.9996453523635864,
+        "v2": 8.965327288024127e-05,
+        "v3": 7.229382026707754e-05,
+        "v4": 7.122923852875829e-05,
+        "v5": 5.5466665799031034e-05
       },
-      "rewrite_ms": 1215.9
+      "rewrite_ms": 2634.8
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the potential layoffs at work. What specific feelings are coming up for you regarding this situation? It could be helpful to talk with trusted colleagues for support, or perhaps take some time to reflect on your career goals.",
-      "reasoning": "The original response made a hasty conclusion by assuming the seeker's feelings without directly addressing their uncertainty about the layoffs. I addressed this by acknowledging their new information, asking a single clarifying question, and offering gentle next steps without making assumptions.",
+      "rewritten_text": "I can understand why you might feel unsettled hearing about potential layoffs. What specific aspects of the situation concern you the most? It might be helpful to talk through your thoughts, and you could consider reaching out to a trusted colleague for support.",
+      "reasoning": "The original response hastily concluded the seeker's feelings without fully acknowledging their uncertainty about the layoffs. I fixed it by recognizing their unease, asking a clarifying question, and offering gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9941979646682739,
+      "recheck_confidence": 0.9996457099914551,
       "recheck_probabilities": {
-        "normal": 0.005315255839377642,
-        "v1": 0.9941979646682739,
-        "v2": 0.00012463994789868593,
-        "v3": 0.00015736983914393932,
-        "v4": 0.00014017362263984978,
-        "v5": 6.453618698287755e-05
+        "normal": 7.540929800597951e-05,
+        "v1": 0.9996457099914551,
+        "v2": 7.763368193991482e-05,
+        "v3": 7.423600618494675e-05,
+        "v4": 6.906107591930777e-05,
+        "v5": 5.7888657465809956e-05
       },
-      "rewrite_ms": 1376.4
+      "rewrite_ms": 2768.9
     }
   ],
   "final_result": {

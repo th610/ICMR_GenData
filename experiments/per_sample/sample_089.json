@@ -5,75 +5,75 @@
   "situation": "I have a job that does not fulfill my goals for myself. I used to love my job but coronavirus has ma",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9739062190055847,
+    "confidence": 0.999290943145752,
     "all_probabilities": {
-      "normal": 0.02517123520374298,
-      "v1": 0.9739062190055847,
-      "v2": 0.00021696688781958073,
-      "v3": 0.0002994319947902113,
-      "v4": 0.00032094353809952736,
-      "v5": 8.519499533576891e-05
+      "normal": 0.0002779977803584188,
+      "v1": 0.999290943145752,
+      "v2": 4.469872510526329e-05,
+      "v3": 9.723301627673209e-05,
+      "v4": 0.00012309693556744605,
+      "v5": 0.00016605814744252712
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 1128.1,
-    "detection_ms": 27.6,
-    "rewrite_total_ms": 4889.9,
-    "total_ms": 6049.9
+    "context_build_ms": 5.7,
+    "generation_ms": 1750.5,
+    "detection_ms": 28.8,
+    "rewrite_total_ms": 9876.7,
+    "total_ms": 11661.9
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "```json\n{\n  \"reasoning\": \"The original response jumped to conclusions about the seeker's anxiety without fully acknowledging their uncertainty regarding the layoffs. I fixed it by first recognizing their key concern and then asking a clarifying question while providing gentle next steps.\",\n  \"corrected_response\": \"I can see how hearing about potential layoffs would create uncertainty for you. Have you had a chance to discuss your concerns with anyone at work? It might also be helpful to focus on your current responsibilities and what you enjoy about your job as you navigate this situation.\"\n}\n```",
-      "reasoning": "",
+      "rewritten_text": "It sounds like the uncertainty about potential layoffs is adding to your feelings of distraction. How do you usually cope with stress or anxiety in the workplace? It might be helpful to explore some coping strategies or talk to someone you trust about your concerns.",
+      "reasoning": "The original response made a hasty conclusion by not adequately acknowledging the seeker's mention of uncertainty regarding layoffs and instead shifted focus too quickly to managing anxiety. I fixed this by acknowledging the seeker's new concerns and asking a clarifying question related to those concerns, while also suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.998734176158905,
+      "recheck_confidence": 0.9990555644035339,
       "recheck_probabilities": {
-        "normal": 0.0009491959353908896,
-        "v1": 0.998734176158905,
-        "v2": 0.0001162564949481748,
-        "v3": 8.216482819989324e-05,
-        "v4": 8.698188321432099e-05,
-        "v5": 3.12517186102923e-05
+        "normal": 0.0003562282654456794,
+        "v1": 0.9990555644035339,
+        "v2": 4.833669663639739e-05,
+        "v3": 0.00011339788034092635,
+        "v4": 0.00011953867215197533,
+        "v5": 0.0003069086233153939
       },
-      "rewrite_ms": 1566.3
+      "rewrite_ms": 2170.0
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "I can understand how worrying about potential layoffs can add to your uncertainty. Have you considered talking to your supervisor or HR about what you've heard? It might also be helpful to focus on what you enjoy about your job during this time.",
-      "reasoning": "The original response jumped to conclusions about the seeker's anxiety without fully acknowledging their uncertainty regarding the layoffs. I fixed it by recognizing their concern about the layoffs, asking a clarifying question, and offering gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty about potential layoffs is making it harder for you to focus. How do you feel about discussing your concerns with someone at work or a trusted friend? It might be beneficial to explore some coping strategies together.",
+      "reasoning": "The original response made a hasty conclusion by not fully acknowledging the user's new concern about layoffs and assumed the user was distracted without clarifying the nature of their feelings. I fixed it by acknowledging the uncertainty and asking a clarifying question, followed by gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9930453896522522,
+      "recheck_confidence": 0.9987760186195374,
       "recheck_probabilities": {
-        "normal": 0.006405886262655258,
-        "v1": 0.9930453896522522,
-        "v2": 0.00012143930507590994,
-        "v3": 0.0001876644091680646,
-        "v4": 0.00017725685029290617,
-        "v5": 6.233442400116473e-05
+        "normal": 0.0005663898773491383,
+        "v1": 0.9987760186195374,
+        "v2": 5.003373371437192e-05,
+        "v3": 0.00014067358279135078,
+        "v4": 0.00012676793267019093,
+        "v5": 0.0003400926070753485
       },
-      "rewrite_ms": 1484.6
+      "rewrite_ms": 3222.7
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It's understandable to feel worried about potential layoffs, especially when you're uncertain about the situation. Have you thought about what specific information you would like to know from your supervisor or HR? It might be helpful to gather more information and also consider discussing your feelings with someone you trust at work.",
-      "reasoning": "The original response made a hasty conclusion by assuming the seeker should focus on what they enjoy about their job without fully exploring their concerns about the potential layoffs. I fixed it by acknowledging the seeker's uncertainty, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty about potential layoffs is weighing on you. How do you feel about discussing these concerns with someone at work? It could be helpful to share your feelings with a trusted friend or colleague, as they might offer support or perspective.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without directly acknowledging the new context of potential layoffs. I fixed it by first recognizing the uncertainty caused by the layoffs, followed by a clarifying question, and then suggesting gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9555285573005676,
+      "recheck_confidence": 0.9986987113952637,
       "recheck_probabilities": {
-        "normal": 0.04346492514014244,
-        "v1": 0.9555285573005676,
-        "v2": 0.0002361396764172241,
-        "v3": 0.0003433850361034274,
-        "v4": 0.00032013902091421187,
-        "v5": 0.00010688466863939539
+        "normal": 0.0006434955284930766,
+        "v1": 0.9986987113952637,
+        "v2": 5.079910988570191e-05,
+        "v3": 0.00012950510426890105,
+        "v4": 0.00011637361603789032,
+        "v5": 0.0003610890998970717
       },
-      "rewrite_ms": 1839.0
+      "rewrite_ms": 4484.1
     }
   ],
   "final_result": {

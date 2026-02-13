@@ -5,47 +5,81 @@
   "situation": "I broke up with a guy. I still talk to him. He might want me back-not sure. There is another guy who",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9671593308448792,
+    "confidence": 0.999261200428009,
     "all_probabilities": {
-      "normal": 0.031505364924669266,
-      "v1": 0.9671593308448792,
-      "v2": 0.0002542107831686735,
-      "v3": 0.0006417526747100055,
-      "v4": 0.00032234337413683534,
-      "v5": 0.0001169939132523723
+      "normal": 0.0002702024357859045,
+      "v1": 0.999261200428009,
+      "v2": 5.580539072980173e-05,
+      "v3": 0.00014203987666405737,
+      "v4": 0.00015040779544506222,
+      "v5": 0.00012047206837451085
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.3,
-    "generation_ms": 933.0,
-    "detection_ms": 25.6,
-    "rewrite_total_ms": 1488.8,
-    "total_ms": 2451.9
+    "context_build_ms": 5.5,
+    "generation_ms": 1297.5,
+    "detection_ms": 25.0,
+    "rewrite_total_ms": 6410.6,
+    "total_ms": 7738.8
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about your ex's situation. Would it feel more comfortable for you to reach out to him directly to discuss this, or would you prefer to wait and see if you hear more from your friend? Perhaps taking some time to reflect on what you want to ask him could be helpful.",
-      "reasoning": "The original response made a hasty conclusion without adequately acknowledging the seeker's uncertainty about the situation with their ex. I fixed it by recognizing the seeker's uncertainty and asking a single clarifying question while also offering gentle next steps.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.963565468788147,
+      "rewritten_text": "It seems like you're feeling a lot of confusion with the situation surrounding your ex. How do you feel about the idea of gaining more clarity on your emotions before deciding what to do next? You might consider journaling your thoughts or discussing your feelings with a trusted friend.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings and suggested actions without fully understanding their thoughts about the situation. I acknowledged the seeker's uncertainty and provided a single clarifying question about their feelings towards their ex while offering gentle next steps without assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9992382526397705,
       "recheck_probabilities": {
-        "normal": 0.963565468788147,
-        "v1": 0.03523634746670723,
-        "v2": 0.00018876312242355198,
-        "v3": 0.0006534321582876146,
-        "v4": 0.0002167457714676857,
-        "v5": 0.00013935388415120542
+        "normal": 0.00029416559846140444,
+        "v1": 0.9992382526397705,
+        "v2": 5.207152935327031e-05,
+        "v3": 8.39756103232503e-05,
+        "v4": 0.0001179640312329866,
+        "v5": 0.00021358612866606563
       },
-      "rewrite_ms": 1488.8
+      "rewrite_ms": 2327.3
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling overwhelmed by the uncertainty surrounding your ex and the mixed signals. What do you think would help you process these feelings more clearly? Perhaps talking it out with someone you trust or writing down your thoughts might provide some clarity.",
+      "reasoning": "The original response jumped to a conclusion about the user's feelings without fully clarifying their situation, which could lead to misunderstandings. I acknowledged the seeker's uncertainty regarding their emotions and asked a single clarifying question, while also suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.999210000038147,
+      "recheck_probabilities": {
+        "normal": 0.0003253410686738789,
+        "v1": 0.999210000038147,
+        "v2": 5.4153231758391485e-05,
+        "v3": 7.619500684086233e-05,
+        "v4": 0.00010568132711341605,
+        "v5": 0.00022860191529616714
+      },
+      "rewrite_ms": 2023.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're experiencing some confusion and mixed signals related to your ex. What specifically feels most overwhelming for you right now? Talking it out with someone you trust or journaling your thoughts could be helpful ways to find clarity.",
+      "reasoning": "The original response jumped to a conclusion about the user's feelings without fully clarifying their situation, which could be considered a hasty conclusion. I acknowledged the user's mention of uncertainty regarding their ex and reframed the response to ask one specific clarifying question while suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9993786811828613,
+      "recheck_probabilities": {
+        "normal": 0.00025361086591146886,
+        "v1": 0.9993786811828613,
+        "v2": 5.17676307936199e-05,
+        "v3": 6.96804272592999e-05,
+        "v4": 9.221609798260033e-05,
+        "v5": 0.00015409277693834156
+      },
+      "rewrite_ms": 2059.5
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're feeling uncertain about your ex's situation. Would it feel more comfortable for you to reach out to him directly to discuss this, or would you prefer to wait and see if you hear more from your friend? Perhaps taking some time to reflect on what you want to ask him could be helpful.",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

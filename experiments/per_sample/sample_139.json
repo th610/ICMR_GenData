@@ -5,28 +5,28 @@
   "situation": "I asked my friend if she would go to the store with me because I was feeling down and overwhelmed wi",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9983837604522705,
+    "confidence": 0.9362842440605164,
     "all_probabilities": {
-      "normal": 0.9983837604522705,
-      "v1": 0.00014434120384976268,
-      "v2": 9.088531078305095e-05,
-      "v3": 0.0012273601023480296,
-      "v4": 7.856202137190849e-05,
-      "v5": 7.509463466703892e-05
+      "normal": 0.9362842440605164,
+      "v1": 0.0002889290626626462,
+      "v2": 0.0003569121181499213,
+      "v3": 0.06166621670126915,
+      "v4": 0.000329134170897305,
+      "v5": 0.00107451097574085
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 1273.2,
-    "detection_ms": 26.4,
+    "context_build_ms": 6.6,
+    "generation_ms": 1500.1,
+    "detection_ms": 35.5,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1303.5
+    "total_ms": 1542.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It might be helpful to consider both options. If you feel like there's a good moment when she's more relaxed, that could be a great chance to open up. On the other hand, if you feel a strong urge to express yourself directly, it could be beneficial to share your feelings honestly. How do you think she might react in either situation?",
+    "response": "It might be helpful to choose a calmer moment when you feel both of you can talk openly. You could start by expressing how you feel and then ask her about her feelings too. Would you prefer to write down your thoughts beforehand, or maybe practice what you want to say with someone else first?",
     "total_retries": 0,
     "used_failsafe": false
   }

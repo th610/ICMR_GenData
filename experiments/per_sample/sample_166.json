@@ -5,75 +5,75 @@
   "situation": "I’m feeling anxious about the pandemic and current economic conditions.",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.5241315364837646,
+    "confidence": 0.9983859062194824,
     "all_probabilities": {
-      "normal": 0.47281646728515625,
-      "v1": 0.0007083594100549817,
-      "v2": 0.0010425454238429666,
-      "v3": 0.5241315364837646,
-      "v4": 0.0005501254345290363,
-      "v5": 0.0007510125287808478
+      "normal": 0.0011338857002556324,
+      "v1": 8.776089816819876e-05,
+      "v2": 6.507476791739464e-05,
+      "v3": 0.9983859062194824,
+      "v4": 0.00015954615082591772,
+      "v5": 0.00016788985521998256
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 968.9,
-    "detection_ms": 26.7,
-    "rewrite_total_ms": 3783.1,
-    "total_ms": 4782.9
+    "context_build_ms": 3.9,
+    "generation_ms": 2551.3,
+    "detection_ms": 31.8,
+    "rewrite_total_ms": 11029.5,
+    "total_ms": 13616.8
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're really weighing your options. You could either plan a small virtual gathering with a fun theme or send thoughtful gifts that show you care. Both can be meaningful in their own way.",
-      "reasoning": "The original response was primarily empathetic without providing any practical help, which is a violation of the counseling guidelines. I retained a brief empathy sentence and included two options for the seeker to consider in their decision-making process.",
+      "rewritten_text": "It sounds like you're weighing your options carefully. Have you considered how each option might help you connect with your loved ones in a way that feels meaningful?",
+      "reasoning": "The original response primarily focused on empathy without providing practical help, which violates the guideline of offering actionable support. I added a clarifying question to prompt the seeker to explore their feelings about the options more deeply while still including a brief validation statement.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9912118315696716,
+      "recheck_confidence": 0.9991028308868408,
       "recheck_probabilities": {
-        "normal": 0.008050552569329739,
-        "v1": 0.000176865461980924,
-        "v2": 0.00029374880250543356,
-        "v3": 0.9912118315696716,
-        "v4": 0.0001494578318670392,
-        "v5": 0.00011749508848879486
+        "normal": 0.0004873060970567167,
+        "v1": 7.895002636360005e-05,
+        "v2": 7.059441122692078e-05,
+        "v3": 0.9991028308868408,
+        "v4": 9.369032341055572e-05,
+        "v5": 0.00016666812007315457
       },
-      "rewrite_ms": 1186.6
+      "rewrite_ms": 6740.4
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It's understandable to feel overwhelmed with your options. You could either plan a small virtual gathering with a fun theme or send thoughtful gifts that show you care. Which option feels more manageable for you?",
-      "reasoning": "The original response only provided empathy and validation without offering practical help, which violated the guideline for providing actionable support. I added a concrete suggestion by presenting two options for the seeker to consider regarding their holiday plans while maintaining a brief empathetic statement.",
+      "rewritten_text": "It sounds like you're weighing your options carefully. Have you thought about what would make you feel most connected to your loved ones this holiday season?",
+      "reasoning": "The original response only provided empathy without offering practical help, which led to a violation of the counseling guidelines. I added a clarifying question to prompt the seeker to think about their options while still acknowledging their feelings.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9928117394447327,
+      "recheck_confidence": 0.9990515112876892,
       "recheck_probabilities": {
-        "normal": 0.006189768668264151,
-        "v1": 0.00018314387125428766,
-        "v2": 0.0005844378028996289,
-        "v3": 0.9928117394447327,
-        "v4": 0.00012708429130725563,
-        "v5": 0.00010384116467321292
+        "normal": 0.0005187522619962692,
+        "v1": 7.229209586512297e-05,
+        "v2": 7.514471508329734e-05,
+        "v3": 0.9990515112876892,
+        "v4": 9.8267468274571e-05,
+        "v5": 0.00018400164844933897
       },
-      "rewrite_ms": 1461.3
+      "rewrite_ms": 1915.4
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It's understandable to feel overwhelmed with your options. You could either plan a small virtual gathering to connect or send thoughtful gifts that show you care. Which option feels more manageable for you?",
-      "reasoning": "The original response lacked practical help and focused solely on empathy, which is a violation. I added two options for the seeker to choose from, thus providing practical help while maintaining a brief empathic statement.",
+      "rewritten_text": "It sounds like you're weighing your options carefully. You might consider either organizing a virtual get-together to connect with everyone or keeping it simple with thoughtful gifts and messages. What do you think would bring you the most comfort?",
+      "reasoning": "The original response was purely empathetic and did not provide the practical help that the seeker explicitly requested. I added a concrete help element in the form of two options for planning their holiday gathering while retaining a brief sentence of empathy.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9916457533836365,
+      "recheck_confidence": 0.997908353805542,
       "recheck_probabilities": {
-        "normal": 0.007344938348978758,
-        "v1": 0.00019819647422991693,
-        "v2": 0.0005651579122059047,
-        "v3": 0.9916457533836365,
-        "v4": 0.00013813510304316878,
-        "v5": 0.00010781707533169538
+        "normal": 0.001472675008699298,
+        "v1": 0.00010099447536049411,
+        "v2": 8.816290210234001e-05,
+        "v3": 0.997908353805542,
+        "v4": 0.00019172056636307389,
+        "v5": 0.00023810590209905058
       },
-      "rewrite_ms": 1135.2
+      "rewrite_ms": 2373.7
     }
   ],
   "final_result": {

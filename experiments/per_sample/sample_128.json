@@ -5,75 +5,75 @@
   "situation": "I hate looking at myself in the mirror, every time I do I feel like the ugliest person in the whole ",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9638992547988892,
+    "confidence": 0.9994745850563049,
     "all_probabilities": {
-      "normal": 0.035204965621232986,
-      "v1": 0.9638992547988892,
-      "v2": 0.0002726273669395596,
-      "v3": 0.00029686957714147866,
-      "v4": 0.0002153024688595906,
-      "v5": 0.00011085780715802684
+      "normal": 0.00015256117330864072,
+      "v1": 0.9994745850563049,
+      "v2": 6.622017826884985e-05,
+      "v3": 5.961661008768715e-05,
+      "v4": 7.930886204121634e-05,
+      "v5": 0.00016772242088336498
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.5,
-    "generation_ms": 721.5,
-    "detection_ms": 25.6,
-    "rewrite_total_ms": 3870.8,
-    "total_ms": 4623.6
+    "context_build_ms": 2.7,
+    "generation_ms": 1470.3,
+    "detection_ms": 28.1,
+    "rewrite_total_ms": 10858.0,
+    "total_ms": 12359.2
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard. How do you feel about discussing this with him? It might help to gather more information, and taking some time to reflect on your feelings could be beneficial.",
-      "reasoning": "The original response jumped to conclusions by assuming the user's feelings and missing the opportunity for clarification. I fixed it by acknowledging the user's uncertainty, asking a clarifying question, and offering gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like you’re feeling quite uncertain about the situation. Could you share what specifically made you feel like you're comparing yourself to someone else? Perhaps it might help to take a moment to reflect on the things you appreciate about yourself or talk about what you enjoy doing.",
+      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without first clarifying their experience or understanding of the situation. I revised it to acknowledge the seeker's uncertainty and included a clarifying question to better understand their perspective, along with gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.8534695506095886,
+      "recheck_confidence": 0.9991708993911743,
       "recheck_probabilities": {
-        "normal": 0.14485208690166473,
-        "v1": 0.8534695506095886,
-        "v2": 0.0003544441715348512,
-        "v3": 0.000700433854945004,
-        "v4": 0.0003763791755773127,
-        "v5": 0.0002471612533554435
+        "normal": 0.00029203653684817255,
+        "v1": 0.9991708993911743,
+        "v2": 5.2329418394947425e-05,
+        "v3": 8.725883526494727e-05,
+        "v4": 8.953861106419936e-05,
+        "v5": 0.0003079312446061522
       },
-      "rewrite_ms": 1398.4
+      "rewrite_ms": 3283.9
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It seems you're feeling uncertain about what you overheard. How do you feel about the possibility of discussing this with him? Taking some time to reflect on your feelings or gathering more information might help you navigate this situation.",
-      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without first clarifying their thoughts on the situation. I fixed it by acknowledging the seeker's uncertainty, asking a clarifying question, and providing gentle next steps.",
+      "rewritten_text": "It sounds like you're feeling uncertain about the situation. What do you think triggered the comparison to this other person? It might be helpful to reflect on what you appreciate about yourself or share some of your favorite activities.",
+      "reasoning": "The original response concluded too quickly without fully exploring the seeker's feelings about comparing themselves to someone else. I revised it to acknowledge the seeker's uncertainty, ask a single clarifying question, and suggest gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9654608964920044,
+      "recheck_confidence": 0.9994593262672424,
       "recheck_probabilities": {
-        "normal": 0.03342527523636818,
-        "v1": 0.9654608964920044,
-        "v2": 0.00027497176779434085,
-        "v3": 0.0004768703365698457,
-        "v4": 0.0002151445223717019,
-        "v5": 0.0001468396803829819
+        "normal": 0.0002155698457499966,
+        "v1": 0.9994593262672424,
+        "v2": 5.046459773438983e-05,
+        "v3": 6.786713493056595e-05,
+        "v4": 6.54965770081617e-05,
+        "v5": 0.00014120897685643286
       },
-      "rewrite_ms": 1343.6
+      "rewrite_ms": 3402.8
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard. How do you feel about talking to him about what you heard? Taking some time to process your feelings might help you figure out how you want to approach this.",
-      "reasoning": "The original response made a hasty conclusion about the user's feelings without seeking clarification. I corrected it by acknowledging the user's uncertainty and asking a clarifying question, followed by gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like you're feeling uncertain about the situation. What do you think it is about that comment that makes you feel inadequate? Reflecting on your strengths or engaging in activities that bring you joy might help you navigate these feelings.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying their situation. I acknowledged the seeker's uncertainty and asked a specific clarifying question while providing gentle next steps to encourage reflection.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.7025353908538818,
+      "recheck_confidence": 0.9994392991065979,
       "recheck_probabilities": {
-        "normal": 0.2947024703025818,
-        "v1": 0.7025353908538818,
-        "v2": 0.0005031048785895109,
-        "v3": 0.0013199115637689829,
-        "v4": 0.0005705058574676514,
-        "v5": 0.00036869506584480405
+        "normal": 0.0002461932017467916,
+        "v1": 0.9994392991065979,
+        "v2": 5.357066766009666e-05,
+        "v3": 6.290640885708854e-05,
+        "v4": 6.420796125894412e-05,
+        "v5": 0.0001337448338745162
       },
-      "rewrite_ms": 1128.8
+      "rewrite_ms": 4171.3
     }
   ],
   "final_result": {

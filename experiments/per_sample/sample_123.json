@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "having to stay in my apartment all the time due to  covid.  i have a pre-existing condition that put",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8574308753013611,
+    "predicted_label": "v1",
+    "confidence": 0.999471127986908,
     "all_probabilities": {
-      "normal": 0.8574308753013611,
-      "v1": 0.14082954823970795,
-      "v2": 0.0007549810688942671,
-      "v3": 0.00043236929923295975,
-      "v4": 0.0003606037062127143,
-      "v5": 0.00019170119776390493
+      "normal": 0.00019522651564329863,
+      "v1": 0.999471127986908,
+      "v2": 4.29846222687047e-05,
+      "v3": 7.965529221110046e-05,
+      "v4": 0.00010086999827763066,
+      "v5": 0.0001100414665415883
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 768.3,
-    "detection_ms": 28.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 801.0
+    "context_build_ms": 4.4,
+    "generation_ms": 1317.4,
+    "detection_ms": 33.3,
+    "rewrite_total_ms": 11844.4,
+    "total_ms": 13199.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling quite unsettled by what you overheard. What specific aspects of your home bring you comfort? Perhaps you could spend some time with your houseplants or engage in a favorite hobby to help create a sense of safety.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings and suggestions without fully clarifying their concerns. The corrected response acknowledges the seeker's feelings about the unsettling news, asks a clarifying question to gain more understanding, and gently suggests focusing on comforting elements in their environment.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995368719100952,
+      "recheck_probabilities": {
+        "normal": 0.0001115766863222234,
+        "v1": 0.9995368719100952,
+        "v2": 7.055042806314304e-05,
+        "v3": 7.530406583100557e-05,
+        "v4": 0.0001095074403565377,
+        "v5": 9.613862494006753e-05
+      },
+      "rewrite_ms": 3704.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling unsettled by what you overheard. What specific feelings did that trigger for you? Perhaps spending time with your houseplants or engaging in a hobby might help you find some comfort.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully acknowledging their concerns or asking for clarification. I fixed it by directly acknowledging the seeker's discomfort and including a clarifying question to better understand their feelings.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995487332344055,
+      "recheck_probabilities": {
+        "normal": 0.00011413962783990428,
+        "v1": 0.9995487332344055,
+        "v2": 6.424464663723484e-05,
+        "v3": 7.831949187675491e-05,
+        "v4": 0.00010014664439950138,
+        "v5": 9.434582898393273e-05
+      },
+      "rewrite_ms": 3683.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like what you overheard has left you feeling unsettled. What specific emotions did that bring up for you? Perhaps spending time with your houseplants or engaging in a hobby could provide some comfort.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully exploring their emotional state. I revised it to acknowledge the seeker's concerns, ask a clarifying question about their feelings, and suggest gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995805621147156,
+      "recheck_probabilities": {
+        "normal": 0.00010856812150450423,
+        "v1": 0.9995805621147156,
+        "v2": 6.44922984065488e-05,
+        "v3": 7.648073369637132e-05,
+        "v4": 8.706522203283384e-05,
+        "v5": 8.280200563604012e-05
+      },
+      "rewrite_ms": 4455.7
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s understandable to feel uneasy about that. It might help to focus on what you can control. Would it be comforting to check in with your neighbors directly, or perhaps look for reliable news sources about the situation? How do you feel about that?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

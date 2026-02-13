@@ -5,28 +5,28 @@
   "situation": "For the last few weeks everything is an effort. I just can't get motivated. Why clean the house it w",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9852323532104492,
+    "confidence": 0.9339879155158997,
     "all_probabilities": {
-      "normal": 0.9852323532104492,
-      "v1": 0.00030741639784537256,
-      "v2": 0.013493474572896957,
-      "v3": 0.0006493782857432961,
-      "v4": 0.00021157434093765914,
-      "v5": 0.000105851206171792
+      "normal": 0.9339879155158997,
+      "v1": 0.0005429593729786575,
+      "v2": 0.003211401170119643,
+      "v3": 0.0031427673529833555,
+      "v4": 0.0027106471825391054,
+      "v5": 0.05640425905585289
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.8,
-    "generation_ms": 935.6,
-    "detection_ms": 26.9,
+    "context_build_ms": 4.3,
+    "generation_ms": 1219.3,
+    "detection_ms": 31.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 967.3
+    "total_ms": 1255.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I can see how it would be helpful to have a clear direction. How about we break it down together? You could decide between two options: either start by making a list of one or two small tasks you can handle in the house, or begin your search for an online therapist. Which feels more manageable for you right now?",
+    "response": "That sounds really tough. It’s completely understandable to feel overwhelmed when even the smallest tasks seem so big. Maybe breaking it down even further could help? For example, could you set a timer for just 5 minutes to get started with the trash? Sometimes just starting is all it takes to build a little momentum.",
     "total_retries": 0,
     "used_failsafe": false
   }

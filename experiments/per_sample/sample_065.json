@@ -5,28 +5,28 @@
   "situation": "I knew Doug was married when we first started talking. It wasn't supposed to be anything serious. Ju",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9994643330574036,
+    "confidence": 0.9983404874801636,
     "all_probabilities": {
-      "normal": 0.9994643330574036,
-      "v1": 4.6660072257509455e-05,
-      "v2": 0.00019551005971152335,
-      "v3": 7.483114313799888e-05,
-      "v4": 0.00010134158947039396,
-      "v5": 0.00011725407966878265
+      "normal": 0.9983404874801636,
+      "v1": 8.733453432796523e-05,
+      "v2": 0.001148369163274765,
+      "v3": 6.824028969276696e-05,
+      "v4": 5.069403414381668e-05,
+      "v5": 0.0003048899525310844
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.6,
-    "generation_ms": 986.7,
-    "detection_ms": 25.1,
+    "context_build_ms": 2.1,
+    "generation_ms": 4041.1,
+    "detection_ms": 23.5,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1016.5
+    "total_ms": 4066.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That pull can be really strong, especially when you've shared meaningful moments with someone. Have you thought about what qualities you truly want in a partner? Or maybe consider how you can create some distance from Doug to help clarify your feelings?",
+    "response": "That sounds like a wonderful intention! What are some activities or hobbies you've enjoyed in the past that could help you focus on yourself? Maybe you could try something creative, like painting or writing, or even get outside for a walk or some exercise. What do you think would resonate with you?",
     "total_retries": 0,
     "used_failsafe": false
   }

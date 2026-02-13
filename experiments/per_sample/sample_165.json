@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I am worried I do not play the politics game well enough for the growth I want.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9759597182273865,
+    "predicted_label": "v3",
+    "confidence": 0.7728613018989563,
     "all_probabilities": {
-      "normal": 0.9759597182273865,
-      "v1": 0.0003386580792721361,
-      "v2": 0.0003006907063536346,
-      "v3": 0.023039832711219788,
-      "v4": 0.0002095137460855767,
-      "v5": 0.0001515306648798287
+      "normal": 0.22345931828022003,
+      "v1": 0.0004963050596415997,
+      "v2": 0.0005250211106613278,
+      "v3": 0.7728613018989563,
+      "v4": 0.0010109763825312257,
+      "v5": 0.0016470663249492645
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 5.1,
-    "generation_ms": 1467.8,
-    "detection_ms": 26.9,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1499.8
+    "context_build_ms": 5.0,
+    "generation_ms": 1825.4,
+    "detection_ms": 30.6,
+    "rewrite_total_ms": 9443.8,
+    "total_ms": 11306.2
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "Finding that balance can be tricky. It might help to think about what feels most important to you right now. Would you prefer to have shorter, more frequent workouts that allow you to spend time with your family, or would you rather focus on keeping your current routine and see if it can fit around family time? You could also involve your family in your workouts to create that connection.",
+      "reasoning": "The original response primarily focused on empathy without providing any practical help to the seeker, which is a violation of the counseling guidelines. I added a concrete help element by providing two options for the seeker to consider regarding their workout routine.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9759495854377747,
+      "recheck_probabilities": {
+        "normal": 0.02256150357425213,
+        "v1": 0.00021143628691788763,
+        "v2": 0.00021898593695368618,
+        "v3": 0.9759495854377747,
+        "v4": 0.0004296855186112225,
+        "v5": 0.0006287380238063633
+      },
+      "rewrite_ms": 1910.4
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "Finding that balance can be tricky. It sounds like you’re trying to prioritize both your workouts and family time. Would you prefer to have shorter, more frequent workouts that allow you to spend time with your family, or would you rather focus on keeping your current routine and see if it can fit around family time?",
+      "reasoning": "The original response contained only empathetic validation without offering practical help, which violates the guideline. I added a brief empathy statement and provided two options to guide the seeker in making a decision about their workout routine.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9991891980171204,
+      "recheck_probabilities": {
+        "normal": 0.0004220035334583372,
+        "v1": 7.982664101291448e-05,
+        "v2": 5.8347915910417214e-05,
+        "v3": 0.9991891980171204,
+        "v4": 0.00013167854922357947,
+        "v5": 0.0001189356844406575
+      },
+      "rewrite_ms": 2487.2
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "Finding that balance can be tricky. It sounds like you’re trying to prioritize both your workouts and family time. Would you prefer to have shorter, more frequent workouts that allow you to spend time with your family, or would you rather keep your current routine and adjust family time around it?",
+      "reasoning": "The original response displayed empathy but did not provide practical help, violating the counseling guideline. I added a concrete help element by providing two options for the seeker to consider regarding their workout routine.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9992515444755554,
+      "recheck_probabilities": {
+        "normal": 0.0003630995051935315,
+        "v1": 7.57982415962033e-05,
+        "v2": 6.128052336862311e-05,
+        "v3": 0.9992515444755554,
+        "v4": 0.00013468459655996412,
+        "v5": 0.00011358282063156366
+      },
+      "rewrite_ms": 5046.3
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s great that you’re thinking about how to balance your time. One option could be to involve your kids in your workouts, making it a fun family activity. Another idea is to set aside specific times for yourself, even if it’s just a short workout. How do you feel about trying to combine both your needs and your kids’ needs in this way?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

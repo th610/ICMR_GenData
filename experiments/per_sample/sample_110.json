@@ -5,47 +5,81 @@
   "situation": "My friends and family do not really pay attention to me unless they need me to solve a problem. I am",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.8787412643432617,
+    "confidence": 0.9141594767570496,
     "all_probabilities": {
-      "normal": 0.11936784535646439,
-      "v1": 0.8787412643432617,
-      "v2": 0.0010530287399888039,
-      "v3": 0.00030750641599297523,
-      "v4": 0.0003610925341490656,
-      "v5": 0.00016931879508774728
+      "normal": 0.08323968946933746,
+      "v1": 0.9141594767570496,
+      "v2": 0.0003261580131947994,
+      "v3": 0.0010154740884900093,
+      "v4": 0.00041463790694251657,
+      "v5": 0.0008445296552963555
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.3,
-    "generation_ms": 2640.9,
-    "detection_ms": 26.1,
-    "rewrite_total_ms": 1207.3,
-    "total_ms": 3878.6
+    "context_build_ms": 4.8,
+    "generation_ms": 1582.7,
+    "detection_ms": 32.2,
+    "rewrite_total_ms": 10102.9,
+    "total_ms": 11722.8
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about how your grandchild is doing. What specific concerns do you have about their feelings at school? Gently letting them know you're there to listen could help, and perhaps you might consider sharing a bit about your own experiences to encourage them to open up.",
-      "reasoning": "The original response jumped to conclusions without fully understanding the seeker's situation regarding their grandchild's feelings. I acknowledged the uncertainty and asked a clarifying question to gather more information before suggesting next steps.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.6249524354934692,
+      "rewritten_text": "It's understandable to feel uncertain about your grandchild's situation. What do you think is holding them back from sharing more with you? You might consider letting them know you're available to talk whenever they're ready, and perhaps sharing your own experiences could help them feel more comfortable opening up.",
+      "reasoning": "The original response jumped to a conclusion about how to support the grandchild without fully clarifying the seeker's feelings or understanding the situation. I fixed it by acknowledging the seeker's uncertainty about the seriousness of the grandchild's feelings and asking a clarifying question to better understand their perspective before offering next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9966593980789185,
       "recheck_probabilities": {
-        "normal": 0.6249524354934692,
-        "v1": 0.37297600507736206,
-        "v2": 0.0006147384410724044,
-        "v3": 0.0006611517164856195,
-        "v4": 0.0005007458967156708,
-        "v5": 0.00029487701249308884
+        "normal": 0.0025371473748236895,
+        "v1": 0.9966593980789185,
+        "v2": 0.00010058901534648612,
+        "v3": 0.00024905827012844384,
+        "v4": 0.00014133566583041102,
+        "v5": 0.00031246087746694684
       },
-      "rewrite_ms": 1207.3
+      "rewrite_ms": 4136.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about your grandchild's situation. What do you think might help them feel more comfortable sharing their feelings with you? You could let them know that you’re there to listen whenever they're ready, and perhaps consider sharing a time when you felt similar to encourage openness.",
+      "reasoning": "The original response jumped to conclusions about the grandchild's situation without seeking clarification, which could lead to misunderstandings. I revised it to acknowledge the seeker's uncertainty and provide a clarifying question, along with gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9927400946617126,
+      "recheck_probabilities": {
+        "normal": 0.005955283995717764,
+        "v1": 0.9927400946617126,
+        "v2": 0.00012344919377937913,
+        "v3": 0.0004710087669081986,
+        "v4": 0.00018788781017065048,
+        "v5": 0.0005222238251008093
+      },
+      "rewrite_ms": 2746.8
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about your grandchild's situation. What do you think would make them feel more comfortable opening up to you? It might be helpful to reassure them that you’re there to listen when they're ready, and sharing a personal experience could encourage them to talk.",
+      "reasoning": "The original response hastily concluded that the grandchild's situation required a specific approach without clarifying further about the grandchild's feelings. I fixed it by acknowledging the uncertainty and asking a clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9947466254234314,
+      "recheck_probabilities": {
+        "normal": 0.004250745289027691,
+        "v1": 0.9947466254234314,
+        "v2": 0.00010358889994677156,
+        "v3": 0.0003736917278729379,
+        "v4": 0.00017053484043572098,
+        "v5": 0.000354859686922282
+      },
+      "rewrite_ms": 3220.2
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're feeling uncertain about how your grandchild is doing. What specific concerns do you have about their feelings at school? Gently letting them know you're there to listen could help, and perhaps you might consider sharing a bit about your own experiences to encourage them to open up.",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

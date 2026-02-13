@@ -5,28 +5,28 @@
   "situation": "My ex who i loved so much and almost gave her everything cheated on me with another guy from my scho",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996960163116455,
+    "confidence": 0.9995933175086975,
     "all_probabilities": {
-      "normal": 0.9996960163116455,
-      "v1": 7.260904385475442e-05,
-      "v2": 3.357291279826313e-05,
-      "v3": 8.22070287540555e-05,
-      "v4": 4.231529601383954e-05,
-      "v5": 7.323660975089297e-05
+      "normal": 0.9995933175086975,
+      "v1": 7.487271068384871e-05,
+      "v2": 9.007563494378701e-05,
+      "v3": 5.245763895800337e-05,
+      "v4": 5.8099434681935236e-05,
+      "v5": 0.00013116092304699123
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.8,
-    "generation_ms": 776.5,
-    "detection_ms": 25.4,
+    "context_build_ms": 3.7,
+    "generation_ms": 3277.8,
+    "detection_ms": 28.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 805.8
+    "total_ms": 3310.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That’s wonderful to hear! Hobbies can be a great way to express yourself and find joy. What hobbies are you reconnecting with, and how do they make you feel?",
+    "response": "It's wonderful that you're rediscovering those activities! Painting and reading can be such great outlets for expression and relaxation. Have you found any particular themes or styles in painting that resonate with you right now?",
     "total_retries": 0,
     "used_failsafe": false
   }

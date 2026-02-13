@@ -5,28 +5,28 @@
   "situation": "I breakup with my girlfriend because she cheated me",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.8702448606491089,
+    "confidence": 0.9671250581741333,
     "all_probabilities": {
-      "normal": 0.8702448606491089,
-      "v1": 0.00056001654593274,
-      "v2": 0.12706640362739563,
-      "v3": 0.001215464319102466,
-      "v4": 0.0005501603591255844,
-      "v5": 0.00036318792263045907
+      "normal": 0.9671250581741333,
+      "v1": 0.00012398544640745968,
+      "v2": 0.0005224365741014481,
+      "v3": 0.0006289053708314896,
+      "v4": 0.00020760171173606068,
+      "v5": 0.03139195963740349
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 973.5,
-    "detection_ms": 25.0,
+    "context_build_ms": 4.1,
+    "generation_ms": 1184.1,
+    "detection_ms": 29.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1002.3
+    "total_ms": 1217.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Let's break it down into smaller steps to make it feel more manageable. First, how about starting with updating your resume? You could also consider reaching out to your network or any contacts you have for potential job leads. Would you prefer to focus on updating your resume first, or would you like help brainstorming where to look for job listings?",
+    "response": "It's completely understandable to feel that pull to check your phone, especially when you're hoping for some closure or connection. Maybe it could help to set specific times during the day when you allow yourself to check it, rather than doing it constantly. How does that sound to you? Or perhaps finding a distraction, like a hobby or a walk, could help break the habit for a bit?",
     "total_retries": 0,
     "used_failsafe": false
   }

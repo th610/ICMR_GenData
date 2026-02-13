@@ -5,28 +5,28 @@
   "situation": "I broke up with my partner.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9994150400161743,
+    "confidence": 0.9994593262672424,
     "all_probabilities": {
-      "normal": 0.9994150400161743,
-      "v1": 6.41172518953681e-05,
-      "v2": 5.860813325853087e-05,
-      "v3": 9.022402082337067e-05,
-      "v4": 6.95766502758488e-05,
-      "v5": 0.0003024800680577755
+      "normal": 0.9994593262672424,
+      "v1": 6.097720324760303e-05,
+      "v2": 3.44193795172032e-05,
+      "v3": 6.286952702794224e-05,
+      "v4": 5.8336980146123096e-05,
+      "v5": 0.0003239647194277495
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.9,
-    "generation_ms": 958.7,
-    "detection_ms": 24.9,
+    "context_build_ms": 3.3,
+    "generation_ms": 1509.4,
+    "detection_ms": 29.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 986.6
+    "total_ms": 1542.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It can be really tough to move forward when you're caught up in those memories. Have you thought about writing down your feelings or those memories? Sometimes, putting things on paper can help you process them and start to find some closure.",
+    "response": "Longing can be such a powerful feeling, especially when those memories are tied to good times. It might help to think about what you really miss about the relationship. Is it the person, the moments you shared, or something else? Reflecting on that could guide you in processing your feelings.",
     "total_retries": 0,
     "used_failsafe": false
   }

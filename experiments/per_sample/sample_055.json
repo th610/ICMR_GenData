@@ -5,28 +5,28 @@
   "situation": "I am an anxiety person, when I have test, I'm going to travel, I'm going out and so on I will always",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.999710738658905,
+    "confidence": 0.9996922016143799,
     "all_probabilities": {
-      "normal": 0.999710738658905,
-      "v1": 8.118139521684498e-05,
-      "v2": 4.503093441599049e-05,
-      "v3": 6.879913416923955e-05,
-      "v4": 4.184107456239872e-05,
-      "v5": 5.2424198656808585e-05
+      "normal": 0.9996922016143799,
+      "v1": 5.532371505978517e-05,
+      "v2": 7.349913357757032e-05,
+      "v3": 5.1126127800671384e-05,
+      "v4": 4.1912302549462765e-05,
+      "v5": 8.58711136970669e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 702.2,
-    "detection_ms": 25.3,
+    "context_build_ms": 3.4,
+    "generation_ms": 3464.4,
+    "detection_ms": 26.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 732.4
+    "total_ms": 3494.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Deep breathing exercises can be really helpful! They can calm your mind and reduce anxiety. Would you like to try a simple technique together, or do you have a specific exercise in mind that you want to practice?",
+    "response": "Deep breathing is a wonderful technique! It can really help to calm those nerves. Would you like to try a short breathing exercise together, or do you have a favorite spot where you like to practice it?",
     "total_retries": 0,
     "used_failsafe": false
   }

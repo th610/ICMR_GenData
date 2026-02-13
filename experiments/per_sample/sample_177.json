@@ -5,75 +5,75 @@
   "situation": "I became a single mother last year and am battling with postpartum depression. I thought I would enj",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.977976381778717,
+    "confidence": 0.9980680346488953,
     "all_probabilities": {
-      "normal": 0.02116607129573822,
-      "v1": 0.00021778492373414338,
-      "v2": 0.00022458247258327901,
-      "v3": 0.977976381778717,
-      "v4": 0.00014434348850045353,
-      "v5": 0.00027086405316367745
+      "normal": 0.001139076892286539,
+      "v1": 7.968339923536405e-05,
+      "v2": 6.977498560445383e-05,
+      "v3": 0.9980680346488953,
+      "v4": 0.00016144824621733278,
+      "v5": 0.00048200052697211504
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 2.8,
-    "generation_ms": 1221.5,
-    "detection_ms": 23.8,
-    "rewrite_total_ms": 4936.1,
-    "total_ms": 6184.4
+    "context_build_ms": 4.7,
+    "generation_ms": 1407.9,
+    "detection_ms": 28.7,
+    "rewrite_total_ms": 5197.8,
+    "total_ms": 6639.3
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel overwhelmed with such an important decision. Have you thought about which option would provide you with the most immediate support for you and your child?",
-      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker, which led to a violation of the counseling guidelines. I added a brief empathic statement and included a specific question to guide the seeker in making their decision.",
+      "rewritten_text": "It’s understandable to feel overwhelmed when trying to choose your first step. One approach could be to apply for the job first to alleviate immediate financial pressure, or focus on the course to build skills for long-term opportunities. Which one feels more pressing for you right now?",
+      "reasoning": "The original response violated the counseling guidelines by providing empathy only without addressing the seeker's explicit request for practical help. I fixed it by maintaining a brief empathetic statement and adding a concrete element that helps the seeker make a decision.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9994531273841858,
+      "recheck_confidence": 0.9996225833892822,
       "recheck_probabilities": {
-        "normal": 0.000266818591626361,
-        "v1": 6.34347161394544e-05,
-        "v2": 7.493342855013907e-05,
-        "v3": 0.9994531273841858,
-        "v4": 5.016342765884474e-05,
-        "v5": 9.160342597169802e-05
+        "normal": 9.115825378103182e-05,
+        "v1": 5.290804983815178e-05,
+        "v2": 7.221576379379258e-05,
+        "v3": 0.9996225833892822,
+        "v4": 8.164129394572228e-05,
+        "v5": 7.951343286549672e-05
       },
-      "rewrite_ms": 1346.3
+      "rewrite_ms": 1586.7
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel overwhelmed with such an important decision. Would you prefer to apply for the job now and gain immediate financial support, or focus on the course to improve your skills for better opportunities in the future?",
-      "reasoning": "The original response was purely empathetic and did not provide the practical help requested by the seeker. I included a brief empathy statement followed by a concrete help element in the form of two options to help the seeker make a decision.",
+      "rewritten_text": "It's completely understandable to feel overwhelmed when trying to choose your first step. You could apply for the job first to relieve immediate financial pressure, or focus on the course to build skills for the future. Which option resonates more with you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I added a brief empathy sentence followed by two concrete options to guide the seeker in making a decision.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.999653697013855,
+      "recheck_confidence": 0.9996198415756226,
       "recheck_probabilities": {
-        "normal": 6.622807268286124e-05,
-        "v1": 5.810083894175477e-05,
-        "v2": 8.081478881649673e-05,
-        "v3": 0.999653697013855,
-        "v4": 4.810696918866597e-05,
-        "v5": 9.297078941017389e-05
+        "normal": 7.815255230525509e-05,
+        "v1": 5.5054617405403405e-05,
+        "v2": 0.00010126296547241509,
+        "v3": 0.9996198415756226,
+        "v4": 7.337315037148073e-05,
+        "v5": 7.230163464555517e-05
       },
-      "rewrite_ms": 2388.7
+      "rewrite_ms": 1903.7
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "I understand this is a tough decision for you. Would you prefer to apply for the job now for immediate financial support, or focus on the course for better long-term opportunities?",
-      "reasoning": "The original response was overly empathetic and did not provide practical help as explicitly requested by the seeker. I added a brief empathy sentence followed by two options for the seeker to consider regarding their decision.",
+      "rewritten_text": "It's completely understandable to feel overwhelmed when trying to choose your first step. You could either apply for the job first to relieve immediate financial pressure, or focus on the course to build skills for the future. Which option resonates more with you right now?",
+      "reasoning": "The previous response was primarily empathetic and did not provide concrete help as requested by the seeker. I retained a brief empathetic statement and added two options for the seeker to choose from, thus addressing their request for practical guidance.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9996393918991089,
+      "recheck_confidence": 0.9996216297149658,
       "recheck_probabilities": {
-        "normal": 8.127142064040527e-05,
-        "v1": 6.170591950649396e-05,
-        "v2": 6.495763955172151e-05,
-        "v3": 0.9996393918991089,
-        "v4": 5.248983870842494e-05,
-        "v5": 0.00010008746176026762
+        "normal": 7.499117782572284e-05,
+        "v1": 5.399644942372106e-05,
+        "v2": 0.00010358201689086854,
+        "v3": 0.9996216297149658,
+        "v4": 7.403385825455189e-05,
+        "v5": 7.169751188484952e-05
       },
-      "rewrite_ms": 1201.1
+      "rewrite_ms": 1707.4
     }
   ],
   "final_result": {

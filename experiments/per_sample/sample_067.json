@@ -5,28 +5,28 @@
   "situation": "I lost my job 8 months ago and I haven't been able to find anything. So as a result I have felt very",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997139573097229,
+    "confidence": 0.9996776580810547,
     "all_probabilities": {
-      "normal": 0.9997139573097229,
-      "v1": 5.853320544702001e-05,
-      "v2": 4.7768033255124465e-05,
-      "v3": 6.637788465013728e-05,
-      "v4": 3.780785118578933e-05,
-      "v5": 7.554847979918122e-05
+      "normal": 0.9996776580810547,
+      "v1": 6.136555748526007e-05,
+      "v2": 8.072668424574658e-05,
+      "v3": 4.3335789086995646e-05,
+      "v4": 4.521055598161183e-05,
+      "v5": 9.185689850710332e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.8,
-    "generation_ms": 897.6,
-    "detection_ms": 25.6,
+    "context_build_ms": 2.3,
+    "generation_ms": 2381.0,
+    "detection_ms": 24.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 927.1
+    "total_ms": 2407.5
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Reading and walking are great ways to spend time! When you feel stuck, it might help to mix in something new, like trying a hobby or learning something online. Have you thought about exploring any new interests or perhaps joining a virtual group related to something you enjoy?",
+    "response": "Those sound like great ways to create some structure in your day! How about choosing one of those activities to focus on today? Maybe you could set a specific time for your walk or reading, which could help you feel a bit more grounded.",
     "total_retries": 0,
     "used_failsafe": false
   }

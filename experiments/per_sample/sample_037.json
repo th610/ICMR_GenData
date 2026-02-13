@@ -5,28 +5,28 @@
   "situation": "when i was in school we both joined school on same day .we were sit beside each other and became goo",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996224641799927,
+    "confidence": 0.9696965217590332,
     "all_probabilities": {
-      "normal": 0.9996224641799927,
-      "v1": 5.055140354670584e-05,
-      "v2": 8.821619121590629e-05,
-      "v3": 7.900848868303001e-05,
-      "v4": 5.0812599511118606e-05,
-      "v5": 0.00010900708002736792
+      "normal": 0.9696965217590332,
+      "v1": 0.00018874202214647084,
+      "v2": 0.0002619983861222863,
+      "v3": 0.0002493334177415818,
+      "v4": 0.00018243154045194387,
+      "v5": 0.02942102588713169
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 6.1,
-    "generation_ms": 670.8,
-    "detection_ms": 25.8,
+    "context_build_ms": 4.7,
+    "generation_ms": 2064.3,
+    "detection_ms": 30.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 702.8
+    "total_ms": 2100.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Rediscovering yourself is such a valuable journey! What are some things you’ve always enjoyed or wanted to try? Maybe you could start with one small activity that brings you joy.",
+    "response": "It's understandable to grieve the dreams and future you envisioned together. Sometimes, allowing ourselves to feel that loss can lead to healing. Have you thought about what new dreams or goals you might want to pursue for yourself moving forward?",
     "total_retries": 0,
     "used_failsafe": false
   }

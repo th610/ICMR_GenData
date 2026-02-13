@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "My son has bipolar disorder and he is only 9. He has delusions and has lost his mind for a month now",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9779860377311707,
+    "predicted_label": "v3",
+    "confidence": 0.9990259408950806,
     "all_probabilities": {
-      "normal": 0.9779860377311707,
-      "v1": 0.0002594331162981689,
-      "v2": 0.00032707248465158045,
-      "v3": 0.021034276112914085,
-      "v4": 0.00014251557877287269,
-      "v5": 0.00025072635617107153
+      "normal": 0.0005877914954908192,
+      "v1": 9.649519779486582e-05,
+      "v2": 6.157655298011377e-05,
+      "v3": 0.9990259408950806,
+      "v4": 9.487559145782143e-05,
+      "v5": 0.00013334407412912697
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
     "context_build_ms": 4.3,
-    "generation_ms": 939.2,
-    "detection_ms": 27.0,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 970.5
+    "generation_ms": 1314.9,
+    "detection_ms": 45.1,
+    "rewrite_total_ms": 7721.7,
+    "total_ms": 9086.3
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you’re weighing some tough options and it’s understandable to feel uncertain. A good approach might be to list your concerns, write down the potential benefits and risks of each choice, and then discuss them with the doctors. How do you feel about that?",
+      "reasoning": "The original response primarily focused on empathy and validation without providing the practical help requested by the seeker. I added a concrete suggestion for a short 2-3 step guide to help the seeker navigate their decision-making process regarding medication changes while retaining a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9992905855178833,
+      "recheck_probabilities": {
+        "normal": 0.000393096444895491,
+        "v1": 8.377435733564198e-05,
+        "v2": 6.124155333964154e-05,
+        "v3": 0.9992905855178833,
+        "v4": 8.423155668424442e-05,
+        "v5": 8.707616507308558e-05
+      },
+      "rewrite_ms": 2393.1
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you’re weighing some tough options, and it’s understandable to feel uncertain. A good approach might be to first list your concerns, then write down the potential benefits and risks of each choice, and finally, discuss them with the doctors. How does that sound?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I maintained one brief empathy sentence and added a concrete step-by-step guide to help the seeker navigate their decision-making process.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9993603825569153,
+      "recheck_probabilities": {
+        "normal": 0.0003206108813174069,
+        "v1": 8.968285692390054e-05,
+        "v2": 7.391497638309374e-05,
+        "v3": 0.9993603825569153,
+        "v4": 7.899742195149884e-05,
+        "v5": 7.643341086804867e-05
+      },
+      "rewrite_ms": 2420.1
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "I can see how difficult it is to weigh these options. A helpful way to approach this might be to first write down your main concerns, then list the potential benefits and risks of making a medication change versus sticking with the current plan, and finally, discuss these points with your doctors. How does that sound?",
+      "reasoning": "The original response focused solely on empathy and validation without providing the practical help requested by the seeker. I incorporated a brief empathy statement and added a short 2-3 step guide to assist the seeker in making their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9910507202148438,
+      "recheck_probabilities": {
+        "normal": 0.008016467094421387,
+        "v1": 0.00030992153915576637,
+        "v2": 0.00015559805615339428,
+        "v3": 0.9910507202148438,
+        "v4": 0.00021387265587691218,
+        "v5": 0.0002533426450099796
+      },
+      "rewrite_ms": 2908.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's understandable to feel such pressure when it comes to your son's health. One approach could be to weigh the potential benefits and risks of both options. Have you had a chance to discuss your concerns with his doctor to get more insight? This might help you feel more confident in your decision.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

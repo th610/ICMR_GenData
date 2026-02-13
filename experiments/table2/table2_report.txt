@@ -8,53 +8,64 @@
 ────────────────────────────────────────────────────────────────────────
   Metric                                Model         Judge
   ────────────────────────────── ────────────  ────────────
-  Accuracy                             1.0000        0.6033
-  Macro F1                             1.0000        0.4941
-  Mean Latency (ms)                      27.7         459.8
+  Accuracy                             0.7667        0.5300
+  Macro F1                             0.7931        0.4689
+  Mean Latency (ms)                      30.5         878.8
 
 ────────────────────────────────────────────────────────────────────────
-  B. Per-Class F1 (vs Gold)
+  B. Error Rates (Binary: Violation vs Normal)
+────────────────────────────────────────────────────────────────────────
+  Metric                                Model         Judge
+  ────────────────────────────── ────────────  ────────────
+  FPR (Normal→Violation)               0.4250        0.3000
+  FNR (Violation→Normal)               0.0727        0.2500
+  False Positives                          34            24
+  False Negatives                          16            55
+  (Normal samples: 80, Violation samples: 220)
+
+────────────────────────────────────────────────────────────────────────
+  C. Per-Class F1 (vs Gold)
 ────────────────────────────────────────────────────────────────────────
   Class            Model F1      Judge F1         Δ
   ──────────── ────────────  ────────────  ────────
-  NORMAL             1.0000        0.6491   -0.3509
-  V1                 1.0000        0.0392   -0.9608
-  V2                 1.0000        0.8276   -0.1724
-  V3                 1.0000        0.0000   -1.0000
-  V4                 1.0000        0.6038   -0.3962
-  V5                 1.0000        0.8451   -0.1549
+  NORMAL             0.6479        0.5864   -0.0615
+  V1                 0.8764        0.0000   -0.8764
+  V2                 0.6982        0.5771   -0.1211
+  V3                 0.9130        0.0000   -0.9130
+  V4                 0.8475        0.7500   -0.0975
+  V5                 0.7755        0.9000   +0.1245
 
 ────────────────────────────────────────────────────────────────────────
-  C. Model-Judge Agreement
+  D. Model-Judge Agreement
 ────────────────────────────────────────────────────────────────────────
-  Agreement Rate:   0.6033
-  Cohen's Kappa:    0.4971
-  Disagreements:    119/300
+  Agreement Rate:   0.5433
+  Cohen's Kappa:    0.3834
+  Disagreements:    137/300
 
 ────────────────────────────────────────────────────────────────────────
-  D. Sample Disagreements (first 20)
+  E. Sample Disagreements (first 20)
 ────────────────────────────────────────────────────────────────────────
     Idx  Gold      Model     Judge   
   ─────  ────────  ────────  ────────
-      3  normal    normal    v2      
-      5  normal    normal    v2      
-     19  normal    normal    v5      
-     39  normal    normal    v2      
-     61  normal    normal    v2      
-     65  normal    normal    v3      
-     80  v1        v1        v4      
-     81  v1        v1        normal  
-     82  v1        v1        normal  
-     83  v1        v1        v2      
-     84  v1        v1        normal  
-     85  v1        v1        v2      
-     86  v1        v1        normal  
-     87  v1        v1        normal  
-     88  v1        v1        normal  
-     89  v1        v1        v2      
-     90  v1        v1        normal  
-     91  v1        v1        normal  
-     92  v1        v1        normal  
-     93  v1        v1        normal  
+      0  normal    v2        normal  
+      6  normal    v2        normal  
+      8  normal    normal    v2      
+      9  normal    v2        normal  
+     12  normal    normal    v2      
+     14  normal    v2        normal  
+     19  normal    normal    v2      
+     20  normal    v2        normal  
+     22  normal    normal    v2      
+     24  normal    normal    v2      
+     27  normal    normal    v2      
+     28  normal    v2        normal  
+     29  normal    normal    v2      
+     31  normal    v2        normal  
+     36  normal    normal    v2      
+     44  normal    v2        normal  
+     49  normal    normal    v2      
+     50  normal    v2        normal  
+     58  normal    v2        normal  
+     63  normal    v2        normal  
 
 ========================================================================

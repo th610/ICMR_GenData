@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I don't know what to do with my life, I am not working and not going to college. I am just sitting i",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9805229306221008,
+    "predicted_label": "v3",
+    "confidence": 0.9851133823394775,
     "all_probabilities": {
-      "normal": 0.9805229306221008,
-      "v1": 0.0002851276658475399,
-      "v2": 0.00031208773725666106,
-      "v3": 0.01847568154335022,
-      "v4": 0.00015402371354866773,
-      "v5": 0.00025016473955474794
+      "normal": 0.013488938100636005,
+      "v1": 0.0002064642758341506,
+      "v2": 0.00014691322576254606,
+      "v3": 0.9851133823394775,
+      "v4": 0.0003939966263715178,
+      "v5": 0.0006503208423964679
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1059.2,
-    "detection_ms": 26.3,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1089.5
+    "context_build_ms": 4.7,
+    "generation_ms": 6961.1,
+    "detection_ms": 33.5,
+    "rewrite_total_ms": 14845.2,
+    "total_ms": 21844.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot with that deadline approaching. You could either try to have a small, calm conversation with your family to clear the air, or focus on getting stable first and revisit the conversation later. What do you think would feel more manageable for you right now?",
+      "reasoning": "The original response primarily offered empathy and validation without providing practical help, which is a violation of the counseling guidelines. I adjusted the response to include a brief empathetic statement followed by a concrete help element by providing two options for the seeker to consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994511008262634,
+      "recheck_probabilities": {
+        "normal": 0.00024032467626966536,
+        "v1": 6.426913023460656e-05,
+        "v2": 6.761289114365354e-05,
+        "v3": 0.9994511008262634,
+        "v4": 8.110110502457246e-05,
+        "v5": 9.562929335515946e-05
+      },
+      "rewrite_ms": 9500.6
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot with that deadline approaching. You could either try to have a small, calm conversation with your family to clear the air, or focus on getting stable first. Which option feels more manageable for you right now?",
+      "reasoning": "The original response was overly empathetic and did not provide practical help despite the seeker's explicit request for assistance in deciding what to do about their family situation. I added a brief validation sentence and provided two options for the seeker to consider, which directly addresses their dilemma.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995505213737488,
+      "recheck_probabilities": {
+        "normal": 0.00015109567902982235,
+        "v1": 5.779125422122888e-05,
+        "v2": 7.31149993953295e-05,
+        "v3": 0.9995505213737488,
+        "v4": 7.663438736926764e-05,
+        "v5": 9.078757284441963e-05
+      },
+      "rewrite_ms": 3468.1
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot with that deadline approaching. You might consider either talking to your family to clear the air or focusing on your own stability first. Which feels more manageable for you right now?",
+      "reasoning": "The original response was primarily empathetic without providing practical help, which led to a violation. I added a concrete option for the seeker to consider while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995001554489136,
+      "recheck_probabilities": {
+        "normal": 0.00017142854630947113,
+        "v1": 5.293028152664192e-05,
+        "v2": 7.646546146133915e-05,
+        "v3": 0.9995001554489136,
+        "v4": 8.729907858651131e-05,
+        "v5": 0.00011172603262821212
+      },
+      "rewrite_ms": 1876.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s great that you’re thinking about how to approach this. One idea might be to jot down what you want to say to them. Would you feel more comfortable having a calm conversation, or do you think taking a little more time to reflect would help you? Both options could lead to a clearer path forward.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

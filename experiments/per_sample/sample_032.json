@@ -5,28 +5,28 @@
   "situation": "I am suffering from health anxiety and staying home and aftiad of going out",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.999723494052887,
+    "confidence": 0.9996312856674194,
     "all_probabilities": {
-      "normal": 0.999723494052887,
-      "v1": 5.439156302600168e-05,
-      "v2": 4.1666800825623795e-05,
-      "v3": 6.764660793123767e-05,
-      "v4": 4.537725180853158e-05,
-      "v5": 6.732943438692018e-05
+      "normal": 0.9996312856674194,
+      "v1": 5.610493462882005e-05,
+      "v2": 4.3327123421477154e-05,
+      "v3": 6.745689461240545e-05,
+      "v4": 4.166423241258599e-05,
+      "v5": 0.0001601012918399647
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.8,
-    "generation_ms": 751.3,
-    "detection_ms": 30.5,
+    "context_build_ms": 5.2,
+    "generation_ms": 1513.9,
+    "detection_ms": 29.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 787.6
+    "total_ms": 1549.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That makes a lot of sense. It's tough when external factors trigger those feelings. Have you thought about setting some boundaries with how much news you consume, or maybe finding a calming activity to do when you start feeling anxious?",
+    "response": "It's understandable that both the news and how your body feels can trigger that anxiety. Maybe it could help to set some limits on how much news you consume or focus on grounding techniques when you notice those sensations. Have you thought about trying any grounding exercises, like deep breathing or focusing on your surroundings?",
     "total_retries": 0,
     "used_failsafe": false
   }

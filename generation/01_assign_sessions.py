@@ -3,7 +3,7 @@ Step 1: Assign ESConv Sessions to Labels
 =========================================
 1300개의 고유한 ESConv 세션을 6개의 레이블에 할당합니다:
 - Normal: 525 sessions
-- V1: 200 sessions  
+- V1: 200 sessions
 - V2: 200 sessions
 - V3: 200 sessions
 - V4: 100 sessions

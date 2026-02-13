@@ -5,28 +5,28 @@
   "situation": "I have a friend who knew me since I was little, she is closer to my mother's age so she is kinda lik",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.984835147857666,
+    "confidence": 0.9974950551986694,
     "all_probabilities": {
-      "normal": 0.984835147857666,
-      "v1": 0.00024903437588363886,
-      "v2": 0.013618573546409607,
-      "v3": 0.0008595772087574005,
-      "v4": 0.00014934732462279499,
-      "v5": 0.0002883872657548636
+      "normal": 0.9974950551986694,
+      "v1": 6.280068191699684e-05,
+      "v2": 4.899464693153277e-05,
+      "v3": 0.00040024210466071963,
+      "v4": 8.720674668438733e-05,
+      "v5": 0.0019057996105402708
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.6,
-    "generation_ms": 876.6,
-    "detection_ms": 26.9,
+    "context_build_ms": 4.2,
+    "generation_ms": 1318.5,
+    "detection_ms": 35.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 908.2
+    "total_ms": 1358.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you're in a tough spot. One approach could be to set aside some time to reflect on what you truly want from this friendship. Would you prefer to write down your feelings about the friendship, or maybe practice what you want to say to her first? Both can help clarify your thoughts.",
+    "response": "It's understandable to feel sad about it. Reflecting on whether it's worth saving can be tough. What do you think would change if you had an open conversation with her about how you feel? Or, do you think it might be helpful to take some time to think about what you truly want from this friendship?",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "I lost my job due to the fact my employer could not make a medical exemption for me. My wife works p",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9920042157173157,
+    "predicted_label": "v1",
+    "confidence": 0.9991790652275085,
     "all_probabilities": {
-      "normal": 0.9920042157173157,
-      "v1": 0.007486729882657528,
-      "v2": 0.00010815600398927927,
-      "v3": 0.00013816816499456763,
-      "v4": 0.00016972994490060955,
-      "v5": 9.29929010453634e-05
+      "normal": 0.00039176858263090253,
+      "v1": 0.9991790652275085,
+      "v2": 8.83072498254478e-05,
+      "v3": 0.00011074256326537579,
+      "v4": 0.00010744567407527938,
+      "v5": 0.00012255502224434167
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 3.3,
-    "generation_ms": 854.6,
-    "detection_ms": 27.2,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 885.2
+    "context_build_ms": 3.6,
+    "generation_ms": 1141.3,
+    "detection_ms": 30.6,
+    "rewrite_total_ms": 10421.2,
+    "total_ms": 11596.9
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "I can see how hearing that might make you feel disposable and anxious. What specific thoughts are you having about this situation? It might be helpful to share more about your feelings, and we could also explore some activities that could help you feel more grounded.",
+      "reasoning": "The original response included a hasty conclusion about the seeker's feelings without fully clarifying the situation, which could lead to misunderstandings. I corrected it by acknowledging the seeker's feelings and then asking a clarifying question to better understand their experience before offering gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9895560145378113,
+      "recheck_probabilities": {
+        "normal": 0.009301419369876385,
+        "v1": 0.9895560145378113,
+        "v2": 0.0001582628901815042,
+        "v3": 0.00030565058114007115,
+        "v4": 0.00026811816496774554,
+        "v5": 0.0004104939289391041
+      },
+      "rewrite_ms": 3573.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I can understand how hearing that might lead to feelings of disposability and anxiety. What specific thoughts or feelings are you experiencing right now? It could be helpful to talk about those feelings, and we can also explore some activities to help you feel more grounded.",
+      "reasoning": "The original response contained a hasty conclusion by not fully addressing the seeker's feelings of disposability and anxiety, and it also included multiple questions and a command. I corrected it by acknowledging the seeker's feelings, asking a single clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9943137168884277,
+      "recheck_probabilities": {
+        "normal": 0.0047026448883116245,
+        "v1": 0.9943137168884277,
+        "v2": 0.00014154353993944824,
+        "v3": 0.00027291220612823963,
+        "v4": 0.0002765553945209831,
+        "v5": 0.00029264437034726143
+      },
+      "rewrite_ms": 3941.3
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "I can see how hearing that might make you feel disposable and anxious. What specific thoughts are coming to mind for you right now? It could be helpful to talk about these feelings together, and we can also think about some calming activities you might enjoy.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully clarifying the specifics of their experience. I fixed this by acknowledging the seeker's feelings of disposability and anxiety, asking a clarifying question, and providing gentle next steps without assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9885401129722595,
+      "recheck_probabilities": {
+        "normal": 0.010177713818848133,
+        "v1": 0.9885401129722595,
+        "v2": 0.00016337640408892184,
+        "v3": 0.0002546352334320545,
+        "v4": 0.0003017740382347256,
+        "v5": 0.0005623050383292139
+      },
+      "rewrite_ms": 2907.0
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's completely understandable to feel anxious in this situation. Rumors can be unsettling, especially when you're already going through so much. Would it help to talk about some strategies to ease that anxiety, or perhaps brainstorm ways to strengthen your job search?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -5,28 +5,28 @@
   "situation": "I lost my job, my car was just repossessed and my bills are all behind.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996846914291382,
+    "confidence": 0.9967175126075745,
     "all_probabilities": {
-      "normal": 0.9996846914291382,
-      "v1": 6.598468462470919e-05,
-      "v2": 5.309249536367133e-05,
-      "v3": 9.183495421893895e-05,
-      "v4": 4.479858762351796e-05,
-      "v5": 5.9589798183878884e-05
+      "normal": 0.9967175126075745,
+      "v1": 0.0023790537379682064,
+      "v2": 0.0005355894099920988,
+      "v3": 9.42329570534639e-05,
+      "v4": 9.581710037309676e-05,
+      "v5": 0.00017781851056497544
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 5.0,
-    "generation_ms": 824.1,
-    "detection_ms": 27.3,
+    "generation_ms": 1655.9,
+    "detection_ms": 30.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 856.4
+    "total_ms": 1691.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's wonderful that you found a flyer and are taking that initiative. Food banks can be a great support. Have you thought about when you might go, or do you need any help figuring out what to bring with you?",
+    "response": "That's wonderful to hear! Getting that information is a significant step forward. Do you feel comfortable reaching out to them for assistance, or would you like to talk about how to approach it?",
     "total_retries": 0,
     "used_failsafe": false
   }

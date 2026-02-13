@@ -5,28 +5,28 @@
   "situation": "My friend totally screwed me over. We were doing a business deal and he lied about how much money we",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9995001554489136,
+    "confidence": 0.9994787573814392,
     "all_probabilities": {
-      "normal": 0.9995001554489136,
-      "v1": 4.986809290130623e-05,
-      "v2": 8.981772407423705e-05,
-      "v3": 9.74081049207598e-05,
-      "v4": 0.0001082628732547164,
-      "v5": 0.0001544354745419696
+      "normal": 0.9994787573814392,
+      "v1": 8.332818106282502e-05,
+      "v2": 4.1648974729469046e-05,
+      "v3": 6.918229337316006e-05,
+      "v4": 4.0107279346557334e-05,
+      "v5": 0.0002868997980840504
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 2.2,
-    "generation_ms": 877.0,
-    "detection_ms": 12.0,
+    "generation_ms": 3327.7,
+    "detection_ms": 20.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 891.2
+    "total_ms": 3350.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It’s natural to feel hurt and vulnerable after something like this. Recognizing how you feel is a big step. What do you think you could do moving forward to help rebuild your trust in future partnerships? Would it be helpful to set clearer boundaries or maybe have a more formal agreement next time?",
+    "response": "It's completely understandable to feel that way after such a betrayal. It might help to talk through what specifically makes you feel used or stupid. What do you think has hit you the hardest about this experience?",
     "total_retries": 0,
     "used_failsafe": false
   }

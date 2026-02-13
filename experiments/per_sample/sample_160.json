@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I have had trouble all my life with depression, but this pandemic seems to be making it worse",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9984632730484009,
+    "predicted_label": "v3",
+    "confidence": 0.9977853298187256,
     "all_probabilities": {
-      "normal": 0.9984632730484009,
-      "v1": 0.00011277358134975657,
-      "v2": 8.485750004183501e-05,
-      "v3": 0.001198149984702468,
-      "v4": 7.072422886267304e-05,
-      "v5": 7.028469553915784e-05
+      "normal": 0.0017200391739606857,
+      "v1": 0.0001089286306523718,
+      "v2": 8.072316268226132e-05,
+      "v3": 0.9977853298187256,
+      "v4": 0.00012569801765494049,
+      "v5": 0.00017927518638316542
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 5.7,
-    "generation_ms": 1560.4,
-    "detection_ms": 26.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1592.8
+    "context_build_ms": 4.9,
+    "generation_ms": 1453.5,
+    "detection_ms": 25.9,
+    "rewrite_total_ms": 6660.0,
+    "total_ms": 8144.5
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're weighing some important factors. You could consider attending the gathering for connection and see how you feel, or you might choose to stay home and connect with friends virtually for a safer option. What do you think about these choices?",
+      "reasoning": "The original response was primarily empathetic and did not provide any practical help as requested by the seeker, which constitutes a violation. I added a concrete help element in the form of two options to help the seeker make a decision about attending the gathering.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995576739311218,
+      "recheck_probabilities": {
+        "normal": 0.00016397393483202904,
+        "v1": 6.272442260524258e-05,
+        "v2": 6.854381354060024e-05,
+        "v3": 0.9995576739311218,
+        "v4": 7.55706787458621e-05,
+        "v5": 7.14681955287233e-05
+      },
+      "rewrite_ms": 2496.4
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're weighing some important factors. You could consider attending the gathering for connection, or you might choose to stay home and connect with friends virtually. Which option feels more comfortable for you?",
+      "reasoning": "The original response primarily provided empathy without offering practical help despite the seeker's explicit request for guidance on whether to attend the gathering or stay home. I added a brief empathetic statement and included two options to provide concrete help.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996067881584167,
+      "recheck_probabilities": {
+        "normal": 0.00011263096530456096,
+        "v1": 5.827435234095901e-05,
+        "v2": 8.626669296063483e-05,
+        "v3": 0.9996067881584167,
+        "v4": 6.82887330185622e-05,
+        "v5": 6.780274270568043e-05
+      },
+      "rewrite_ms": 2199.1
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're weighing some important factors. How do you feel about the potential risks and benefits of attending the gathering compared to staying home?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker regarding their dilemma about attending a gathering. I added a clarifying question to help the seeker reflect on their feelings and make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996380805969238,
+      "recheck_probabilities": {
+        "normal": 8.186257764464244e-05,
+        "v1": 6.189609121065587e-05,
+        "v2": 9.31473623495549e-05,
+        "v3": 0.9996380805969238,
+        "v4": 7.241170533234254e-05,
+        "v5": 5.264743958832696e-05
+      },
+      "rewrite_ms": 1964.6
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're really weighing your options carefully. One approach could be to consider how you feel about the gathering itself. Are you comfortable with the safety measures in place? If you decide to go, perhaps you could set a time limit for yourself, like staying for just an hour, so you can enjoy the connection without feeling overwhelmed. On the other hand, if you choose to stay home, maybe you could plan a video call with friends to stay connected. What do you think would feel right for you?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

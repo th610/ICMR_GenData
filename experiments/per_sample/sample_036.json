@@ -5,28 +5,28 @@
   "situation": "just can not get out of a bad mood",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996598958969116,
+    "confidence": 0.9996950626373291,
     "all_probabilities": {
-      "normal": 0.9996598958969116,
-      "v1": 6.356793892337009e-05,
-      "v2": 4.685766907641664e-05,
-      "v3": 6.251912418520078e-05,
-      "v4": 6.622930231969804e-05,
-      "v5": 0.00010092648881254718
+      "normal": 0.9996950626373291,
+      "v1": 7.850228575989604e-05,
+      "v2": 5.842820246471092e-05,
+      "v3": 4.2688072426244617e-05,
+      "v4": 5.06051437696442e-05,
+      "v5": 7.474191806977615e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.2,
-    "generation_ms": 794.4,
-    "detection_ms": 27.5,
+    "context_build_ms": 5.8,
+    "generation_ms": 4560.8,
+    "detection_ms": 36.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 827.2
+    "total_ms": 4603.5
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I'm so glad to hear that! It’s amazing how a little time outside can make a difference. Do you have a favorite spot in the park where you like to walk, or do you enjoy exploring different areas each time?",
+    "response": "It's great to hear that your body relaxes first; it sounds like a natural way to ease tension. Have you noticed any specific thoughts that come to mind after your walk, or do you find it easier to just be in the moment?",
     "total_retries": 0,
     "used_failsafe": false
   }

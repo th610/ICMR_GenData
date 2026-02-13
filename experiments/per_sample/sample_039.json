@@ -5,28 +5,28 @@
   "situation": "I am currently studying for an exam that I need to do for work.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997096657752991,
+    "confidence": 0.9924097061157227,
     "all_probabilities": {
-      "normal": 0.9997096657752991,
-      "v1": 4.883126894128509e-05,
-      "v2": 4.7854780859779567e-05,
-      "v3": 7.885797822382301e-05,
-      "v4": 4.223721771268174e-05,
-      "v5": 7.254117372212932e-05
+      "normal": 0.9924097061157227,
+      "v1": 0.00011697145237121731,
+      "v2": 0.0002127860498148948,
+      "v3": 0.0001465310633648187,
+      "v4": 8.445570711046457e-05,
+      "v5": 0.007029497530311346
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.3,
-    "generation_ms": 990.4,
-    "detection_ms": 27.1,
+    "context_build_ms": 4.1,
+    "generation_ms": 2165.6,
+    "detection_ms": 29.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1021.8
+    "total_ms": 2199.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like it’s challenging to fully disconnect. Sometimes, engaging in activities that require more focus can help. Have you considered things like puzzles or a hobby that demands your attention? It might help keep your mind occupied and away from study thoughts.",
+    "response": "It sounds like the pressure is really weighing on you. Sometimes, shifting the focus to something completely different can help. Have you thought about trying a new hobby or activity that feels refreshing? Maybe something creative or hands-on could take your mind off the coursework for a bit.",
     "total_retries": 0,
     "used_failsafe": false
   }

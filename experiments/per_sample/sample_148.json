@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "Feeling depressed and doesn't feel doing like anything.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.536660373210907,
+    "predicted_label": "v3",
+    "confidence": 0.9913980960845947,
     "all_probabilities": {
-      "normal": 0.536660373210907,
-      "v1": 0.0007721717120148242,
-      "v2": 0.0015994947170838714,
-      "v3": 0.4601322412490845,
-      "v4": 0.0004286648181732744,
-      "v5": 0.00040699943201616406
+      "normal": 0.0077109490521252155,
+      "v1": 0.00013315817341208458,
+      "v2": 0.00015056325355544686,
+      "v3": 0.9913980960845947,
+      "v4": 0.0002394978073425591,
+      "v5": 0.0003677275963127613
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 1254.2,
-    "detection_ms": 26.7,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1285.0
+    "context_build_ms": 4.5,
+    "generation_ms": 1283.7,
+    "detection_ms": 14.6,
+    "rewrite_total_ms": 6257.1,
+    "total_ms": 7560.0
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure to make the right choice, which is completely understandable. You might start by journaling for just five minutes to get your thoughts out, and then see how you feel about making that call afterward. This way, you can decide what feels best for you.",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I added a concrete help element in the form of a short guide to assist the seeker in deciding between journaling and calling a friend, while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9977633953094482,
+      "recheck_probabilities": {
+        "normal": 0.001712712342850864,
+        "v1": 9.265862172469497e-05,
+        "v2": 0.00011156753316754475,
+        "v3": 0.9977633953094482,
+        "v4": 0.0001269339700229466,
+        "v5": 0.00019268061441835016
+      },
+      "rewrite_ms": 2393.8
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure to make the right choice, which is completely understandable. You might start by journaling for five minutes to get your thoughts out, and then if you feel up to it, consider calling your friend afterward.",
+      "reasoning": "The original response primarily focused on empathy without providing practical help, which violates the guidelines. I added a brief empathy statement followed by a clear two-step guide to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9989964365959167,
+      "recheck_probabilities": {
+        "normal": 0.0006235697073861957,
+        "v1": 7.566725253127515e-05,
+        "v2": 8.3602310041897e-05,
+        "v3": 0.9989964365959167,
+        "v4": 9.993184357881546e-05,
+        "v5": 0.00012087348295608535
+      },
+      "rewrite_ms": 1922.7
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure to make the right choice, which is completely understandable. You could start by journaling for a few minutes to gather your thoughts, or if you're feeling up to it, consider calling your friend for support.",
+      "reasoning": "The original response focused solely on empathy and validation without providing practical help as requested by the seeker. I added a concrete option for the seeker to consider, offering a choice between journaling and calling a friend, while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9993922710418701,
+      "recheck_probabilities": {
+        "normal": 0.00028260736144147813,
+        "v1": 5.571246947511099e-05,
+        "v2": 7.389795791823417e-05,
+        "v3": 0.9993922710418701,
+        "v4": 7.648522296221927e-05,
+        "v5": 0.00011908867600141093
+      },
+      "rewrite_ms": 1940.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's understandable to feel pressured to make a decision quickly. One option could be to think about how you're feeling right now. Do you feel like talking to someone might help you process your emotions more immediately, or do you think you’d benefit from reflecting on your thoughts through journaling first? You might also consider starting with a quick text to a friend just to see how you feel after that interaction.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

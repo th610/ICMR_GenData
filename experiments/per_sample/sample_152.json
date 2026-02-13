@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I was dating this guy for about a month or so, and everything had been going well. It was my first r",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9379940032958984,
+    "predicted_label": "v3",
+    "confidence": 0.9983874559402466,
     "all_probabilities": {
-      "normal": 0.9379940032958984,
-      "v1": 0.0004652047355193645,
-      "v2": 0.00032332856790162623,
-      "v3": 0.06039945036172867,
-      "v4": 0.000259840686339885,
-      "v5": 0.0005580674041993916
+      "normal": 0.0009393052896484733,
+      "v1": 0.00010830139217432588,
+      "v2": 0.00019820152374450117,
+      "v3": 0.9983874559402466,
+      "v4": 0.00010729535279097036,
+      "v5": 0.0002594024408608675
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
     "context_build_ms": 4.7,
-    "generation_ms": 1014.9,
-    "detection_ms": 28.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1048.5
+    "generation_ms": 1199.4,
+    "detection_ms": 43.3,
+    "rewrite_total_ms": 7632.6,
+    "total_ms": 8880.3
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel that way. When he messages, take a moment to breathe, jot down your feelings, and think about what you want to say. You might consider responding with either a neutral reply or asking for clarification about his intentions.",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help the seeker explicitly requested. I included a brief empathetic statement and provided a short guide with actionable steps for the seeker to consider when responding to their ex.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9986962676048279,
+      "recheck_probabilities": {
+        "normal": 0.0006567704258486629,
+        "v1": 8.484306454192847e-05,
+        "v2": 0.0002062631829176098,
+        "v3": 0.9986962676048279,
+        "v4": 9.781801054487005e-05,
+        "v5": 0.00025801887386478484
+      },
+      "rewrite_ms": 2220.0
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel that way. When he messages, take a moment to breathe, jot down your feelings, and then decide: A) Respond right away if you feel calm, or B) Wait a day to gather your thoughts.",
+      "reasoning": "The original response violated the counseling guidelines by being empathy-only and not providing the practical help the seeker requested. I added a brief empathy sentence and included a short 2–3 step guide to help the seeker respond to the message in a constructive manner.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9992777705192566,
+      "recheck_probabilities": {
+        "normal": 0.0001331706444034353,
+        "v1": 7.399829337373376e-05,
+        "v2": 0.00033069084747694433,
+        "v3": 0.9992777705192566,
+        "v4": 9.079041046788916e-05,
+        "v5": 9.363695426145568e-05
+      },
+      "rewrite_ms": 2591.2
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel that way. When he messages, you can either A) respond right away if you feel calm, or B) wait a day to gather your thoughts.",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, which resulted in a violation. I added a brief empathetic statement and included two concrete options (A/B) to give the seeker practical guidance while still acknowledging their feelings.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9992650151252747,
+      "recheck_probabilities": {
+        "normal": 8.354626334039494e-05,
+        "v1": 8.045062713790685e-05,
+        "v2": 0.000398075528210029,
+        "v3": 0.9992650151252747,
+        "v4": 0.00010465337982168421,
+        "v5": 6.824819865869358e-05
+      },
+      "rewrite_ms": 2821.4
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "Taking a day to think it over can be really helpful. It gives you time to reflect on your feelings and how you want to respond. You might even consider jotting down your thoughts about the conversation you’d like to have, or how you feel about him now. How does that sound to you?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

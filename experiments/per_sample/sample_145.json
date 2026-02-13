@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "Every day it's very difficult for me to get started doing anything at all. A lot of times I struggle",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8715757727622986,
+    "predicted_label": "v3",
+    "confidence": 0.9993112087249756,
     "all_probabilities": {
-      "normal": 0.8715757727622986,
-      "v1": 0.0007795616984367371,
-      "v2": 0.0005351032014004886,
-      "v3": 0.12634629011154175,
-      "v4": 0.0003422723966650665,
-      "v5": 0.0004210946208331734
+      "normal": 0.0003269922162871808,
+      "v1": 6.001515794196166e-05,
+      "v2": 6.157458119560033e-05,
+      "v3": 0.9993112087249756,
+      "v4": 9.945165948010981e-05,
+      "v5": 0.0001406879018759355
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 1148.3,
-    "detection_ms": 26.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1179.1
+    "context_build_ms": 2.7,
+    "generation_ms": 1752.9,
+    "detection_ms": 24.0,
+    "rewrite_total_ms": 7697.5,
+    "total_ms": 9477.2
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a bit overwhelmed with those choices. You could start with online sessions for quicker access, or if you prefer to look locally, I can help you think of a few options to explore. Which approach feels more manageable for you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker regarding their choices between local and online therapy. I added a concrete help element by providing two options to clarify their decision-making process while maintaining a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9991369843482971,
+      "recheck_probabilities": {
+        "normal": 0.00037027164944447577,
+        "v1": 7.108974386937916e-05,
+        "v2": 7.598575029987842e-05,
+        "v3": 0.9991369843482971,
+        "v4": 8.730731497053057e-05,
+        "v5": 0.00025831323000602424
+      },
+      "rewrite_ms": 2679.0
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a bit overwhelmed with those choices. You could try starting with online sessions for quicker access (Option A) or take some time to find a local therapist (Option B). Which option resonates with you more?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker regarding choosing between local and online therapy options. I added a concrete help element by presenting two clear options (A/B) for the seeker to consider, while maintaining a brief empathetic statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999574601650238,
+      "recheck_probabilities": {
+        "normal": 0.00011148081830469891,
+        "v1": 5.3394949645735323e-05,
+        "v2": 6.857459811726585e-05,
+        "v3": 0.999574601650238,
+        "v4": 7.740801083855331e-05,
+        "v5": 0.00011449265002738684
+      },
+      "rewrite_ms": 2592.9
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're feeling a bit overwhelmed with those choices. You could start with online sessions for quicker access or take some time to find a local therapist. Which option resonates with you more?",
+      "reasoning": "The original response was overly empathetic and did not provide the practical help that the seeker explicitly requested. I added a brief empathy sentence and provided two concrete options to help the seeker make a decision about their therapy choice.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999591052532196,
+      "recheck_probabilities": {
+        "normal": 9.164682705886662e-05,
+        "v1": 5.6278488045791164e-05,
+        "v2": 7.159549568314105e-05,
+        "v3": 0.999591052532196,
+        "v4": 8.247196092270315e-05,
+        "v5": 0.00010691276111174375
+      },
+      "rewrite_ms": 2425.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's great that you're thinking about your options! If you're feeling pressed for time, you might want to start with local therapists to see if you can find someone who fits well for you in person. But if that doesn't work out, online options can also be effective and offer more flexibility. Would you like to brainstorm some specific criteria or qualities you want in a therapist to help narrow down your search?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

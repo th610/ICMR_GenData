@@ -5,28 +5,28 @@
   "situation": "I was heart broken for 6 months and hoping to heal my broken heart. I feel sad, depressed and sleepl",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996922016143799,
+    "confidence": 0.9995383024215698,
     "all_probabilities": {
-      "normal": 0.9996922016143799,
-      "v1": 4.8226185754174367e-05,
-      "v2": 4.722247103927657e-05,
-      "v3": 8.396250632358715e-05,
-      "v4": 3.774567085201852e-05,
-      "v5": 9.061799210030586e-05
+      "normal": 0.9995383024215698,
+      "v1": 7.825042848708108e-05,
+      "v2": 0.00014281623589340597,
+      "v3": 5.3361396567197517e-05,
+      "v4": 4.9260233936365694e-05,
+      "v5": 0.00013808143557980657
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.9,
-    "generation_ms": 1077.1,
-    "detection_ms": 23.3,
+    "context_build_ms": 2.8,
+    "generation_ms": 2911.9,
+    "detection_ms": 31.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1103.4
+    "total_ms": 2946.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Painting can be such a wonderful outlet for emotions. How has it felt to get back into it? Maybe you could try setting aside a specific time each week to paint, or even explore new techniques or styles to keep it exciting.",
+    "response": "That sounds like a wonderful outlet for your feelings. What kind of subjects do you enjoy painting the most? It might be interesting to explore if there are specific themes that resonate with you during this time.",
     "total_retries": 0,
     "used_failsafe": false
   }

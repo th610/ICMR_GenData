@@ -5,75 +5,75 @@
   "situation": "I will be losing my job in January.  I am very worried about looking for another one at this time.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9230712056159973,
+    "confidence": 0.9965769648551941,
     "all_probabilities": {
-      "normal": 0.07552983611822128,
-      "v1": 0.9230712056159973,
-      "v2": 0.0006447686464525759,
-      "v3": 0.0002813016762956977,
-      "v4": 0.00034613601746968925,
-      "v5": 0.00012675474863499403
+      "normal": 0.0023064587730914354,
+      "v1": 0.9965769648551941,
+      "v2": 9.727348515298218e-05,
+      "v3": 0.00010873499559238553,
+      "v4": 0.0002552526711951941,
+      "v5": 0.0006552595878019929
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 6.1,
-    "generation_ms": 812.9,
-    "detection_ms": 28.1,
-    "rewrite_total_ms": 3717.4,
-    "total_ms": 4564.7
+    "context_build_ms": 4.6,
+    "generation_ms": 3921.5,
+    "detection_ms": 31.0,
+    "rewrite_total_ms": 9528.8,
+    "total_ms": 13486.2
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It's understandable to feel anxious with uncertainty about potential layoffs. How are you currently feeling about the rumors you've heard? It might be helpful to talk through your thoughts or consider reaching out to someone you trust at work for more information.",
-      "reasoning": "The original response was too broad and did not directly acknowledge the seeker's new information regarding the layoffs rumor. I fixed it by specifically recognizing their uncertainty and asking a single clarifying question, while also offering gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like your anxiety is making it difficult to even open your resume. Would you be open to sharing what specific aspects of your resume feel the most overwhelming? Perhaps we could also explore some small steps together to help you gradually ease into updating it.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings and did not include a clarifying question to better understand their situation. I acknowledged the seeker's anxiety about their resume and added a clarifying question to invite further discussion, followed by gentle next steps to ease their anxiety without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9534708857536316,
+      "recheck_confidence": 0.9989008903503418,
       "recheck_probabilities": {
-        "normal": 0.04532846808433533,
-        "v1": 0.9534708857536316,
-        "v2": 0.0004700247081927955,
-        "v3": 0.00024856042000465095,
-        "v4": 0.0003278786316514015,
-        "v5": 0.0001542565441923216
+        "normal": 0.0004762417811434716,
+        "v1": 0.9989008903503418,
+        "v2": 6.862039299448952e-05,
+        "v3": 7.34723435016349e-05,
+        "v4": 0.00014922207628842443,
+        "v5": 0.0003314686182420701
       },
-      "rewrite_ms": 1291.4
+      "rewrite_ms": 3089.4
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It's concerning to hear about the rumors of potential layoffs. How are you feeling about the uncertainty? It might be helpful to talk through your thoughts, and perhaps consider discussing this with someone you trust at work if you feel comfortable.",
-      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully acknowledging the uncertainty they expressed regarding the layoffs. I fixed it by acknowledging their concern and asking a clarifying question to invite further exploration of their thoughts, followed by gentle next steps without making assumptions.",
+      "rewritten_text": "It seems that your anxiety is making it challenging to even open your resume. What specific parts of the resume are you finding the most overwhelming? Perhaps we could take a look together at some resources that might make it easier for you to approach it step by step.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's anxiety without fully exploring their feelings or specific concerns. I fixed it by acknowledging the seeker's anxiety while asking one clarifying question about their feelings and offering gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9734385013580322,
+      "recheck_confidence": 0.9991607666015625,
       "recheck_probabilities": {
-        "normal": 0.025738755241036415,
-        "v1": 0.9734385013580322,
-        "v2": 0.00026841426733881235,
-        "v3": 0.00019963869999628514,
-        "v4": 0.00024868574109859765,
-        "v5": 0.00010609831952024251
+        "normal": 0.0002987381012644619,
+        "v1": 0.9991607666015625,
+        "v2": 6.858988490421325e-05,
+        "v3": 5.584044993156567e-05,
+        "v4": 0.00012178241740912199,
+        "v5": 0.00029433608870022
       },
-      "rewrite_ms": 1243.3
+      "rewrite_ms": 2920.2
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It's concerning to hear about the rumors of potential layoffs. How does this uncertainty make you feel? It might help to talk through your thoughts with someone you trust, or you could consider keeping an eye on any official communications from your workplace.",
-      "reasoning": "The original response jumped to conclusions about the user's feelings without fully exploring their uncertainty regarding the layoffs. I corrected it by acknowledging the user's new information, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "rewritten_text": "I can see that your anxiety is making it tough to even consider your resume. What specific aspects of it feel most overwhelming for you? Maybe we could explore some resources together that can help ease this process, or you could start by jotting down any thoughts you have about your skills or experiences.",
+      "reasoning": "The original response made a hasty conclusion by assuming the user's anxiety was solely about their resume without seeking clarification on their feelings. I corrected it by acknowledging the user's anxiety and uncertainty while asking a specific clarifying question and suggesting gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9899049401283264,
+      "recheck_confidence": 0.9968608617782593,
       "recheck_probabilities": {
-        "normal": 0.009542286396026611,
-        "v1": 0.9899049401283264,
-        "v2": 0.00021934954565949738,
-        "v3": 0.00012837226677220315,
-        "v4": 0.000145262703881599,
-        "v5": 5.9753550885943696e-05
+        "normal": 0.0016370568191632628,
+        "v1": 0.9968608617782593,
+        "v2": 7.819414895493537e-05,
+        "v3": 0.00013683743600267917,
+        "v4": 0.00018680750508792698,
+        "v5": 0.001100330613553524
       },
-      "rewrite_ms": 1182.7
+      "rewrite_ms": 3519.2
     }
   ],
   "final_result": {

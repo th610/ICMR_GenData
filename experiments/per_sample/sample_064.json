@@ -4,30 +4,82 @@
   "gold_label": "Normal",
   "situation": "I recently found out my partner had been unfaithful to me and I don't think the relationship will su",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9993792772293091,
+    "predicted_label": "v2",
+    "confidence": 0.8663598299026489,
     "all_probabilities": {
-      "normal": 0.9993792772293091,
-      "v1": 6.428988854167983e-05,
-      "v2": 0.00010125346307177097,
-      "v3": 8.161162259057164e-05,
-      "v4": 0.00014167460903991014,
-      "v5": 0.00023187496117316186
+      "normal": 0.05701989307999611,
+      "v1": 0.0012322436086833477,
+      "v2": 0.8663598299026489,
+      "v3": 0.0027716122567653656,
+      "v4": 0.003145204158499837,
+      "v5": 0.06947124004364014
     },
-    "severity": 0
+    "severity": 2
   },
   "timing": {
-    "context_build_ms": 4.2,
-    "generation_ms": 1047.4,
-    "detection_ms": 26.3,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1077.9
+    "context_build_ms": 4.3,
+    "generation_ms": 2762.5,
+    "detection_ms": 27.3,
+    "rewrite_total_ms": 14538.5,
+    "total_ms": 17332.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v2",
+      "rewritten_text": "It's completely understandable to feel that way. Forgiveness can take time, and it's okay to prioritize your feelings right now. Would you prefer to focus on self-care activities that nurture you, or would you like to explore talking to someone who can support you further? What feels right for you?",
+      "reasoning": "The original response contained language that could be interpreted as commanding, particularly in the phrase 'you must think about what steps you might take.' I revised the response to offer two options for healing while supporting the seeker's autonomy and included a preference question to encourage their input.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.5631105899810791,
+      "recheck_probabilities": {
+        "normal": 0.1192140206694603,
+        "v1": 0.0015092998510226607,
+        "v2": 0.2784409523010254,
+        "v3": 0.5631105899810791,
+        "v4": 0.002274781698361039,
+        "v5": 0.03545030951499939
+      },
+      "rewrite_ms": 5420.2
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel that way. Forgiveness can take time, and it's okay to prioritize your feelings right now. Would you prefer to focus on self-care activities that nurture you, or would you like to explore finding a counselor to talk to?",
+      "reasoning": "The original last supporter response was primarily empathetic and did not provide the practical help requested by the seeker. I added a concrete help element by providing two options for moving forward, which encourages the seeker to take actionable steps.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.4923074543476105,
+      "recheck_probabilities": {
+        "normal": 0.045120276510715485,
+        "v1": 0.0011774826562032104,
+        "v2": 0.4923074543476105,
+        "v3": 0.42698127031326294,
+        "v4": 0.0020892517641186714,
+        "v5": 0.03232425078749657
+      },
+      "rewrite_ms": 2775.0
+    },
+    {
+      "retry": 3,
+      "violation": "v2",
+      "rewritten_text": "It's completely understandable to feel that way. Forgiveness can take time, and it's okay to prioritize your feelings right now. Would you like to focus on self-care activities that nurture you, or would you be open to exploring the idea of talking to a counselor for additional support?",
+      "reasoning": "The original response contained language that could be interpreted as commanding or prescriptive, which undermines the seeker's autonomy. I revised it to offer two supportive options without imposing any commands, allowing the seeker to choose based on their comfort level.",
+      "recheck_label": "v2",
+      "recheck_confidence": 0.48269689083099365,
+      "recheck_probabilities": {
+        "normal": 0.2808762192726135,
+        "v1": 0.0020029335282742977,
+        "v2": 0.48269689083099365,
+        "v3": 0.16622069478034973,
+        "v4": 0.004246541764587164,
+        "v5": 0.06395672261714935
+      },
+      "rewrite_ms": 6343.3
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's completely okay to feel uncertain about forgiveness right now. Take your time to process your feelings. Have you thought about what it would take for you to consider forgiveness, or what it might look like for you moving forward, whether that's together or apart?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 상황이시군요. 어떻게 하고 싶으신가요? 제가 도움이 될 수 있는 부분이 있을까요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

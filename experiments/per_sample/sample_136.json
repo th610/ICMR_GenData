@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "Pretty down with the lack of securing a job and improving my finaces.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.5020719170570374,
+    "predicted_label": "v3",
+    "confidence": 0.9787247776985168,
     "all_probabilities": {
-      "normal": 0.5020719170570374,
-      "v1": 0.0010128729045391083,
-      "v2": 0.0007129816222004592,
-      "v3": 0.4946209490299225,
-      "v4": 0.0007989562582224607,
-      "v5": 0.0007823614287190139
+      "normal": 0.019374342635273933,
+      "v1": 0.0004205704608466476,
+      "v2": 0.00025470092077739537,
+      "v3": 0.9787247776985168,
+      "v4": 0.0003772859345190227,
+      "v5": 0.0008484109421260655
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.8,
-    "generation_ms": 1332.1,
-    "detection_ms": 27.2,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1364.2
+    "context_build_ms": 5.0,
+    "generation_ms": 1723.4,
+    "detection_ms": 31.0,
+    "rewrite_total_ms": 6296.0,
+    "total_ms": 8055.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're at a crossroads, and that's never easy. You could start by writing down the pros and cons of taking the temporary job versus holding out for a stable role. Next, consider what immediate needs you have and how each option aligns with your long-term goals. Finally, trust your instincts and make a choice that feels right for you.",
+      "reasoning": "The original response primarily offered empathy without providing practical help, which violates the guideline for offering actionable support. I added a concrete help element by providing a short 2–3 step guide while keeping a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9978201389312744,
+      "recheck_probabilities": {
+        "normal": 0.001384579110890627,
+        "v1": 9.443693124921992e-05,
+        "v2": 0.0002707280218601227,
+        "v3": 0.9978201389312744,
+        "v4": 0.00012843238073401153,
+        "v5": 0.00030170343234203756
+      },
+      "rewrite_ms": 1908.4
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're at a crossroads, and that's never easy. You might want to consider making a list of pros and cons for each option. Then, think about your immediate financial needs and how each choice could impact your long-term goals.",
+      "reasoning": "The original response was overly empathetic and did not provide practical help despite the seeker's explicit request for assistance in making a decision about their job situation. I incorporated a brief empathy statement and provided a short guide to help the seeker weigh their options.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999352753162384,
+      "recheck_probabilities": {
+        "normal": 0.00020869096624664962,
+        "v1": 5.431604222394526e-05,
+        "v2": 0.0001215912343468517,
+        "v3": 0.999352753162384,
+        "v4": 9.599285112926736e-05,
+        "v5": 0.0001666703901719302
+      },
+      "rewrite_ms": 1893.9
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're at a crossroads, and that's never easy. You might want to consider whether taking the temporary job (Option A) would give you the immediate relief you need, or if holding out for a stable role that fits your goals (Option B) is more beneficial in the long run.",
+      "reasoning": "The original response was primarily empathetic and failed to provide practical assistance despite the seeker's explicit request for help in making a decision about their job options. I added a brief empathy statement and provided a concrete choice between two options to guide the seeker in their decision-making process.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995504021644592,
+      "recheck_probabilities": {
+        "normal": 7.073962478898466e-05,
+        "v1": 5.1731512940023094e-05,
+        "v2": 0.0001492447918280959,
+        "v3": 0.9995504021644592,
+        "v4": 8.572312071919441e-05,
+        "v5": 9.211617725668475e-05
+      },
+      "rewrite_ms": 2493.8
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're in a bit of a tough spot. One way to approach this is to weigh the pros and cons of each option. For the temporary job, consider how much it would help with your immediate financial needs and if it could lead to other opportunities. On the other hand, think about how long you can realistically wait for a more suitable position that aligns with your career goals. Would it help to make a list of these factors to clarify your thoughts?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

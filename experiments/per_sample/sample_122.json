@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "How can I cope with losing my boyfriend to another woman?",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.7286931276321411,
+    "predicted_label": "v1",
+    "confidence": 0.9995447993278503,
     "all_probabilities": {
-      "normal": 0.7286931276321411,
-      "v1": 0.26766881346702576,
-      "v2": 0.0007485207752324641,
-      "v3": 0.0006592869176529348,
-      "v4": 0.0017110526096075773,
-      "v5": 0.0005192635580897331
+      "normal": 0.00013248409959487617,
+      "v1": 0.9995447993278503,
+      "v2": 5.5664670071564615e-05,
+      "v3": 8.8055785454344e-05,
+      "v4": 8.592062658863142e-05,
+      "v5": 9.301192767452449e-05
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 760.8,
-    "detection_ms": 24.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 789.5
+    "context_build_ms": 1.9,
+    "generation_ms": 1391.2,
+    "detection_ms": 25.4,
+    "rewrite_total_ms": 9011.9,
+    "total_ms": 10430.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like that uncertainty is adding to your emotional burden. How do you feel when those thoughts come up? It might be helpful to express your feelings through journaling or share them with someone you trust.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully acknowledging the new information about uncertainty and emotions following the breakup. I corrected it by explicitly acknowledging the seeker's uncertainty and asking a clarifying question, while suggesting gentle next steps without any assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995586276054382,
+      "recheck_probabilities": {
+        "normal": 0.00010916782048298046,
+        "v1": 0.9995586276054382,
+        "v2": 5.8350127801531926e-05,
+        "v3": 0.00010568200377747416,
+        "v4": 9.006237087305635e-05,
+        "v5": 7.800324237905443e-05
+      },
+      "rewrite_ms": 2775.6
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I understand that the uncertainty is weighing on you. How do you usually cope with those feelings when they arise? It might be helpful to talk to someone who can listen or explore ways to express your feelings through creative outlets.",
+      "reasoning": "The original response made a hasty conclusion by not acknowledging the seeker's new information about uncertainty and instead assumed a general emotional burden. I fixed it by recognizing the uncertainty and asking a clarifying question while providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.999546468257904,
+      "recheck_probabilities": {
+        "normal": 0.00012451746442820877,
+        "v1": 0.999546468257904,
+        "v2": 5.1740782510023564e-05,
+        "v3": 0.00010598998051136732,
+        "v4": 7.69003527238965e-05,
+        "v5": 9.423815936315805e-05
+      },
+      "rewrite_ms": 2908.9
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "I recognize that the uncertainty about your ex-boyfriend may be adding to your emotional burden. How do you feel about discussing these emotions with someone you trust? It could also be helpful to explore activities that bring you comfort or joy.",
+      "reasoning": "The original response made a hasty conclusion without adequately addressing the seeker's new information about the uncertainty surrounding their ex-boyfriend's potential new relationship. I acknowledged the seeker's feelings, posed a single clarifying question, and offered gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995355606079102,
+      "recheck_probabilities": {
+        "normal": 0.0001430010743206367,
+        "v1": 0.9995355606079102,
+        "v2": 4.680718120653182e-05,
+        "v3": 0.00010721608850872144,
+        "v4": 8.57464547152631e-05,
+        "v5": 8.165247709257528e-05
+      },
+      "rewrite_ms": 3327.4
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s understandable to feel unsettled after hearing something like that. How are you feeling about it all? Do you want to talk more about what you heard?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "the event that put in this mood was a big gathering of people of all sorts and kinds",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9963394403457642,
+    "predicted_label": "v3",
+    "confidence": 0.9985461235046387,
     "all_probabilities": {
-      "normal": 0.9963394403457642,
-      "v1": 0.00014189252397045493,
-      "v2": 0.00013674904766958207,
-      "v3": 0.0031580047216266394,
-      "v4": 7.246062159538269e-05,
-      "v5": 0.00015147222438827157
+      "normal": 0.0007549974252469838,
+      "v1": 0.00011467956937849522,
+      "v2": 0.00010046669194707647,
+      "v3": 0.9985461235046387,
+      "v4": 0.00011040474782930687,
+      "v5": 0.00037331643397919834
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 904.1,
-    "detection_ms": 30.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 938.8
+    "context_build_ms": 1.9,
+    "generation_ms": 1586.1,
+    "detection_ms": 25.2,
+    "rewrite_total_ms": 5207.2,
+    "total_ms": 6820.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. Would you prefer to go to the gathering and face the noise, or stay home and take care of your mental space? Either choice is valid.",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, violating the guideline. I added a concrete option (A/B) to assist the seeker in making their decision while maintaining a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999575674533844,
+      "recheck_probabilities": {
+        "normal": 6.938618025742471e-05,
+        "v1": 6.557658343808725e-05,
+        "v2": 0.00013018173922318965,
+        "v3": 0.999575674533844,
+        "v4": 7.416294101858512e-05,
+        "v5": 8.5004314314574e-05
+      },
+      "rewrite_ms": 1538.6
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. You could consider going but setting a time limit for how long you stay, or you could stay home and plan a low-key activity to enjoy instead. Either choice is valid.",
+      "reasoning": "The original response was empathetic but did not provide practical help, which is a violation of the guidelines. I added a concrete help element by offering two options for the seeker to consider regarding their decision about the gathering.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995633959770203,
+      "recheck_probabilities": {
+        "normal": 0.00012454295938368887,
+        "v1": 6.0141930589452386e-05,
+        "v2": 9.912201494444162e-05,
+        "v3": 0.9995633959770203,
+        "v4": 5.893168054171838e-05,
+        "v5": 9.382089046994224e-05
+      },
+      "rewrite_ms": 1944.9
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options. Would you prefer to go and set a time limit for how long you stay, or stay home and plan a low-key activity that you enjoy?",
+      "reasoning": "The original response provided empathy but lacked practical help, which violated the requirement for offering concrete assistance. I maintained a brief empathetic statement and added a concrete option for the seeker to consider regarding their decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9996160268783569,
+      "recheck_probabilities": {
+        "normal": 9.027238411363214e-05,
+        "v1": 6.182977085700259e-05,
+        "v2": 8.58043204061687e-05,
+        "v3": 0.9996160268783569,
+        "v4": 6.861682777525857e-05,
+        "v5": 7.74910586187616e-05
+      },
+      "rewrite_ms": 1723.6
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s understandable to feel torn in this situation. One option could be to think about what would bring you more peace in the moment. Would it help to list out the pros and cons of each choice? Or perhaps consider how you might feel during and after each option? This could give you some clarity on what feels right for you.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

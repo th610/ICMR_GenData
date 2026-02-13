@@ -5,28 +5,28 @@
   "situation": "It the COVID that i lost my hope on building up my carrier in time.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9794031977653503,
+    "confidence": 0.9853183031082153,
     "all_probabilities": {
-      "normal": 0.9794031977653503,
-      "v1": 0.0002567719202488661,
-      "v2": 0.0192567165941,
-      "v3": 0.0007046230020932853,
-      "v4": 0.00022652801999356598,
-      "v5": 0.0001522079255664721
+      "normal": 0.9853183031082153,
+      "v1": 0.00019812917162198573,
+      "v2": 0.001794780371710658,
+      "v3": 0.008804402314126492,
+      "v4": 0.0009031813242472708,
+      "v5": 0.0029812688007950783
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.5,
-    "generation_ms": 1122.2,
-    "detection_ms": 28.3,
+    "context_build_ms": 1.6,
+    "generation_ms": 1144.8,
+    "detection_ms": 24.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1154.1
+    "total_ms": 1170.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I can see how wanting clarity is important right now. Maybe it could help to weigh the pros and cons of each option? For instance, what benefits do you see in taking a temporary job versus starting your own business? Or, you could consider trying a combination of both, if that feels manageable for you.",
+    "response": "It's understandable to have that fear. Maybe you could set a timeline for yourself? How about giving yourself a few months to explore the temp job while also working on your business plan? That way, you can keep your options open without feeling trapped.",
     "total_retries": 0,
     "used_failsafe": false
   }

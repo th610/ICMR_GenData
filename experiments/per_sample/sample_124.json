@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "years of drug abuse, cheating,     fighting , and outside children, family meddling and all the lies",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.6437788009643555,
+    "predicted_label": "v1",
+    "confidence": 0.9994373917579651,
     "all_probabilities": {
-      "normal": 0.6437788009643555,
-      "v1": 0.3537534773349762,
-      "v2": 0.0010599637171253562,
-      "v3": 0.0005196515121497214,
-      "v4": 0.0006108252564445138,
-      "v5": 0.0002773332817014307
+      "normal": 5.20762951055076e-05,
+      "v1": 0.9994373917579651,
+      "v2": 7.542939420090988e-05,
+      "v3": 4.071552393725142e-05,
+      "v4": 0.0002571668883319944,
+      "v5": 0.00013710478378925472
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.2,
-    "generation_ms": 1411.4,
-    "detection_ms": 26.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1442.3
+    "context_build_ms": 4.1,
+    "generation_ms": 1147.9,
+    "detection_ms": 32.8,
+    "rewrite_total_ms": 8645.2,
+    "total_ms": 9830.3
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling really hurt and uncertain about the situation with your partner. How are you coping with these feelings right now? It might be helpful to take some time to reflect on what you need for support during this tough time.",
+      "reasoning": "The original response jumped to a conclusion by suggesting the seeker talk to their partner without fully clarifying their feelings about the rumor and its impact. I acknowledged the seeker's uncertainty regarding the rumor and asked a clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995507597923279,
+      "recheck_probabilities": {
+        "normal": 4.6039811422815546e-05,
+        "v1": 0.9995507597923279,
+        "v2": 8.390611765207723e-05,
+        "v3": 4.4123509724158794e-05,
+        "v4": 0.00017836275219451636,
+        "v5": 9.683681855676696e-05
+      },
+      "rewrite_ms": 3224.9
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling hurt and uncertain about the rumor regarding your partner. How are you processing these feelings? It might be helpful to talk about what support you feel you need right now.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without directly acknowledging their uncertainty regarding the rumor about their partner. I corrected it by acknowledging their feelings and uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9996055960655212,
+      "recheck_probabilities": {
+        "normal": 5.129594137542881e-05,
+        "v1": 0.9996055960655212,
+        "v2": 7.934558379929513e-05,
+        "v3": 4.658018224290572e-05,
+        "v4": 0.00014408423157874495,
+        "v5": 7.315474067581818e-05
+      },
+      "rewrite_ms": 2641.7
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling hurt and uncertain about the rumor regarding your partner. What specific thoughts or feelings are coming up for you as you deal with this situation? It might be helpful to talk about how you can find support during this challenging time.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying the situation surrounding the rumor. I revised it to acknowledge the seeker's uncertainty and provide a single clarifying question, followed by gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.999612033367157,
+      "recheck_probabilities": {
+        "normal": 5.870891618542373e-05,
+        "v1": 0.999612033367157,
+        "v2": 6.409381603589281e-05,
+        "v3": 4.331100717536174e-05,
+        "v4": 0.00012698094360530376,
+        "v5": 9.500506712356582e-05
+      },
+      "rewrite_ms": 2778.6
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's understandable to feel uneasy when you hear something like that, especially about someone you care about. Would it help to talk about how you're feeling regarding this rumor? Or perhaps consider discussing it with your partner directly when you feel ready?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

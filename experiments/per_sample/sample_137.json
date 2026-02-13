@@ -4,30 +4,65 @@
   "gold_label": "V3",
   "situation": "I want to get a proper qualification know work but I can't seem to find a course that meets my needs",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9146188497543335,
+    "predicted_label": "v3",
+    "confidence": 0.9899252653121948,
     "all_probabilities": {
-      "normal": 0.9146188497543335,
-      "v1": 0.0006612788420170546,
-      "v2": 0.0007306222105398774,
-      "v3": 0.08340165764093399,
-      "v4": 0.0003767278394661844,
-      "v5": 0.00021085329353809357
+      "normal": 0.0089761046692729,
+      "v1": 0.00019386470376048237,
+      "v2": 0.0001509182038716972,
+      "v3": 0.9899252653121948,
+      "v4": 0.00022719767002854496,
+      "v5": 0.0005267455126158893
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 3.4,
-    "generation_ms": 1220.3,
-    "detection_ms": 25.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1249.6
+    "context_build_ms": 1.8,
+    "generation_ms": 1204.7,
+    "detection_ms": 27.4,
+    "rewrite_total_ms": 5994.9,
+    "total_ms": 7229.0
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're weighing some important options. To help you decide, try listing the pros and cons for each option. Consider how each aligns with your current financial situation and long-term goals.",
+      "reasoning": "The original response was overly empathetic and did not provide practical guidance despite the seeker's explicit request for help with their decision. I added a concrete element in the form of a short guide while retaining a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9985336065292358,
+      "recheck_probabilities": {
+        "normal": 0.0008948961622081697,
+        "v1": 6.569791730726138e-05,
+        "v2": 0.00013437440793495625,
+        "v3": 0.9985336065292358,
+        "v4": 0.00013225745351519436,
+        "v5": 0.0002391148591414094
+      },
+      "rewrite_ms": 2469.9
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're weighing some important options. To help you decide, you might try this: 1) List the pros and cons for each option, 2) Consider how each aligns with your current financial situation, and 3) Reflect on your long-term goals before making a choice.",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help explicitly requested by the seeker. I retained a brief empathetic statement and added a concrete suggestion in the form of a short guide to assist the seeker in making their decision.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.9953811168670654,
+      "recheck_probabilities": {
+        "normal": 0.9953811168670654,
+        "v1": 0.0001336483983322978,
+        "v2": 0.00011736846499843523,
+        "v3": 0.003896706271916628,
+        "v4": 0.0001714038080535829,
+        "v5": 0.00029969256138429046
+      },
+      "rewrite_ms": 3525.0
+    }
+  ],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you're weighing the immediate benefits against longer-term goals, which can be tough. Maybe you could consider a couple of questions: What are the specific qualifications you need by the deadline? And how much time can you realistically dedicate each week to studying? This could help clarify whether the online course can meet your urgent needs or if investing in the part-time program is worth the wait.",
-    "total_retries": 0,
+    "response": "It sounds like you're weighing some important options. To help you decide, you might try this: 1) List the pros and cons for each option, 2) Consider how each aligns with your current financial situation, and 3) Reflect on your long-term goals before making a choice.",
+    "total_retries": 2,
     "used_failsafe": false
   }
 }

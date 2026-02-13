@@ -5,75 +5,75 @@
   "situation": "my fiance and I broke up last week",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.951328694820404,
+    "confidence": 0.955654501914978,
     "all_probabilities": {
-      "normal": 0.04710567370057106,
-      "v1": 0.0003830097266472876,
-      "v2": 0.0004807877412531525,
-      "v3": 0.951328694820404,
-      "v4": 0.00036341045051813126,
-      "v5": 0.0003384679730515927
+      "normal": 0.04246468096971512,
+      "v1": 0.00022547313710674644,
+      "v2": 0.00034046045038849115,
+      "v3": 0.955654501914978,
+      "v4": 0.0005511055933311582,
+      "v5": 0.0007637867238372564
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.5,
-    "generation_ms": 1236.5,
-    "detection_ms": 25.9,
-    "rewrite_total_ms": 4202.1,
-    "total_ms": 5469.3
+    "context_build_ms": 3.1,
+    "generation_ms": 1871.7,
+    "detection_ms": 32.1,
+    "rewrite_total_ms": 4550.4,
+    "total_ms": 6457.6
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel lost during this time. To help you decide, consider making a list of pros and cons for each option. This way, you can evaluate how each choice aligns with your current needs and feelings.",
-      "reasoning": "The original response lacked practical help and was primarily empathetic, violating the counseling guideline. I added a 2–3 step guide to help the seeker navigate their decision-making process while retaining a brief empathy sentence.",
+      "rewritten_text": "It sounds like a tough decision. You might consider this: A) Take a short trip to recharge and gain clarity, or B) Focus on job applications for stability. Which feels more appealing to you right now?",
+      "reasoning": "The original response focused solely on empathy and validation without offering any practical help, resulting in a violation of the counseling guidelines. I added a concrete option for the seeker to consider, maintaining a brief empathetic statement.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.6301668882369995,
+      "recheck_confidence": 0.9994304776191711,
       "recheck_probabilities": {
-        "normal": 0.36562874913215637,
-        "v1": 0.000763895339332521,
-        "v2": 0.0015227642143145204,
-        "v3": 0.6301668882369995,
-        "v4": 0.0007436415180563927,
-        "v5": 0.0011741261696442962
+        "normal": 0.00023255409905686975,
+        "v1": 5.230414535617456e-05,
+        "v2": 6.467199273174629e-05,
+        "v3": 0.9994304776191711,
+        "v4": 0.00010559955262579024,
+        "v5": 0.00011435764463385567
       },
-      "rewrite_ms": 1439.1
+      "rewrite_ms": 1551.5
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel lost during this time. Have you thought about which option excites you more, applying for new jobs (A) or taking a short trip to clear your head (B)?",
-      "reasoning": "The original response exhibited a violation by providing empathy only without addressing the seeker's explicit request for practical help in making a decision. The corrected response maintains a brief empathetic statement while also providing a clear option for the seeker to consider.",
+      "rewritten_text": "It sounds like a tough decision. You might consider this: A) Take a short trip to recharge and gain clarity, or B) Focus on job applications for stability. Which feels more appealing to you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker. I included one empathy sentence and added two options (A/B) to guide the seeker in their decision-making process.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9855700135231018,
+      "recheck_confidence": 0.9994304776191711,
       "recheck_probabilities": {
-        "normal": 0.013374662958085537,
-        "v1": 0.000268657342530787,
-        "v2": 0.0003349434118717909,
-        "v3": 0.9855700135231018,
-        "v4": 0.0002111939829774201,
-        "v5": 0.0002404882834525779
+        "normal": 0.00023255409905686975,
+        "v1": 5.230414535617456e-05,
+        "v2": 6.467199273174629e-05,
+        "v3": 0.9994304776191711,
+        "v4": 0.00010559955262579024,
+        "v5": 0.00011435764463385567
       },
-      "rewrite_ms": 1312.7
+      "rewrite_ms": 1501.6
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel lost during this time. Which option do you feel would help you the most right now: applying for new jobs (A) or taking a short trip to clear your head (B)?",
-      "reasoning": "The original response provided empathy but failed to offer practical help as requested by the seeker, who needed assistance in making a decision. I maintained a brief empathetic validation and added a clarifying question to help guide the seeker in their decision-making process.",
+      "rewritten_text": "It's understandable to feel torn right now. You might consider: A) Taking a short trip to recharge, or B) Focusing on job applications for stability. Which option feels more appealing to you?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker. I added a concrete help element by offering two options for the seeker to consider, while still maintaining a brief empathetic statement.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9994366765022278,
+      "recheck_confidence": 0.9994994401931763,
       "recheck_probabilities": {
-        "normal": 0.0002583513269200921,
-        "v1": 5.931678970227949e-05,
-        "v2": 0.0001149900199379772,
-        "v3": 0.9994366765022278,
-        "v4": 6.0130059864604846e-05,
-        "v5": 7.054174784570932e-05
+        "normal": 0.0001766068598954007,
+        "v1": 4.970813824911602e-05,
+        "v2": 6.441913865273818e-05,
+        "v3": 0.9994994401931763,
+        "v4": 9.784627764020115e-05,
+        "v5": 0.00011202436144230887
       },
-      "rewrite_ms": 1450.2
+      "rewrite_ms": 1497.4
     }
   ],
   "final_result": {

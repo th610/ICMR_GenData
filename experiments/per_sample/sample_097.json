@@ -5,47 +5,81 @@
   "situation": "Going to the store gives me Panic Attacks, driving does as well.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9543547034263611,
+    "confidence": 0.9991503953933716,
     "all_probabilities": {
-      "normal": 0.04017985984683037,
-      "v1": 0.9543547034263611,
-      "v2": 0.0008057810482569039,
-      "v3": 0.0007997185457497835,
-      "v4": 0.0032850007992237806,
-      "v5": 0.0005749695701524615
+      "normal": 0.00042704693623818457,
+      "v1": 0.9991503953933716,
+      "v2": 6.016169936629012e-05,
+      "v3": 7.517558697145432e-05,
+      "v4": 9.076178685063496e-05,
+      "v5": 0.0001965424744412303
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 885.7,
-    "detection_ms": 25.3,
-    "rewrite_total_ms": 1493.6,
-    "total_ms": 2408.7
+    "context_build_ms": 3.7,
+    "generation_ms": 3813.1,
+    "detection_ms": 30.5,
+    "rewrite_total_ms": 3423.5,
+    "total_ms": 7271.1
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like that situation was quite distressing for you, especially with your existing anxiety. How did it affect your time at the store with your fiancé? It might be helpful to talk about your feelings with someone you trust, or perhaps write down your thoughts to process them further.",
-      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully exploring their uncertainty regarding the overheard conversation. I fixed it by acknowledging their discomfort and asking a clarifying question to better understand their experience before suggesting gentle next steps.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.9717620015144348,
+      "rewritten_text": "It sounds like overhearing that conversation really heightened your anxiety, which is completely understandable. What do you usually do in those moments to help manage your feelings? We could explore together some grounding techniques that might help during those times.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without acknowledging their uncertainty regarding the conversation they overheard. I revised it to first acknowledge the seeker's experience and then included a clarifying question before suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9994823932647705,
       "recheck_probabilities": {
-        "normal": 0.9717620015144348,
-        "v1": 0.027152249589562416,
-        "v2": 0.00021570379612967372,
-        "v3": 0.0002710011904127896,
-        "v4": 0.0003520142927300185,
-        "v5": 0.00024701145594008267
+        "normal": 0.00016100771608762443,
+        "v1": 0.9994823932647705,
+        "v2": 5.9640507970470935e-05,
+        "v3": 6.28130801487714e-05,
+        "v4": 8.238659211201593e-05,
+        "v5": 0.00015179144975263625
       },
-      "rewrite_ms": 1493.6
+      "rewrite_ms": 1099.9
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like overhearing that conversation really heightened your anxiety, which is completely understandable. When you felt that spike in anxiety, was there a specific thought or feeling that came up for you? If you're open to it, we could explore some grounding techniques together that might be helpful in those moments.",
+      "reasoning": "The original response jumped to a conclusion about the user's feelings without fully clarifying their experience of anxiety in response to the conversation they overheard. I fixed it by acknowledging the new information and asking one specific clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9988240599632263,
+      "recheck_probabilities": {
+        "normal": 0.0006813157815486193,
+        "v1": 0.9988240599632263,
+        "v2": 5.5585136578883976e-05,
+        "v3": 7.94015868450515e-05,
+        "v4": 0.00010483159712748602,
+        "v5": 0.00025476471637375653
+      },
+      "rewrite_ms": 1201.6
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like overhearing that conversation really heightened your anxiety, which is completely understandable. What thoughts or feelings were you experiencing when that spike in anxiety occurred? If you're open to it, we could explore some grounding techniques together that might be helpful in those moments.",
+      "reasoning": "The original response made a hasty conclusion without fully clarifying the seeker's emotional response to overhearing the conversation. I acknowledged the seeker's uncertainty and asked a clarifying question while offering gentle next steps without assuming any missing information.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.999203622341156,
+      "recheck_probabilities": {
+        "normal": 0.00036716723116114736,
+        "v1": 0.999203622341156,
+        "v2": 5.03952287544962e-05,
+        "v3": 6.994816794758663e-05,
+        "v4": 9.534384298603982e-05,
+        "v5": 0.00021359074162319303
+      },
+      "rewrite_ms": 1122.0
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like that situation was quite distressing for you, especially with your existing anxiety. How did it affect your time at the store with your fiancé? It might be helpful to talk about your feelings with someone you trust, or perhaps write down your thoughts to process them further.",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

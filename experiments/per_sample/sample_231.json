@@ -5,28 +5,28 @@
   "situation": "When one partner feels that the other isn't fulfilling a requirement, Wadley says, it's important to",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.7882003784179688,
+    "confidence": 0.9973737001419067,
     "all_probabilities": {
-      "normal": 0.7882003784179688,
-      "v1": 0.0004971107700839639,
-      "v2": 0.20830723643302917,
-      "v3": 0.0016881620977073908,
-      "v4": 0.0004365782951936126,
-      "v5": 0.0008704793872311711
+      "normal": 0.9973737001419067,
+      "v1": 7.515765173593536e-05,
+      "v2": 0.00015275781333912164,
+      "v3": 9.55130162765272e-05,
+      "v4": 9.166233212454244e-05,
+      "v5": 0.0022111255675554276
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.6,
-    "generation_ms": 1033.3,
-    "detection_ms": 22.4,
+    "context_build_ms": 2.7,
+    "generation_ms": 1334.3,
+    "detection_ms": 20.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1058.3
+    "total_ms": 1357.6
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I can sense how overwhelming this can be for you. It might help to take small steps towards moving on. One option could be to write down your feelings about the past, or perhaps talk to someone you trust about it. Which one feels more comfortable for you to try?",
+    "response": "It sounds like you're feeling overwhelmed by all the information. Sometimes, taking a step back can be helpful. What if you chose just one piece of advice to try out this week, or even just focused on one small thing that brings you joy? How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

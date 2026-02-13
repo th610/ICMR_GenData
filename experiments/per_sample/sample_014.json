@@ -5,28 +5,28 @@
   "situation": "My mind is consumed by depression",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997009038925171,
+    "confidence": 0.9993583559989929,
     "all_probabilities": {
-      "normal": 0.9997009038925171,
-      "v1": 8.34417442092672e-05,
-      "v2": 6.380317063303664e-05,
-      "v3": 7.484399975510314e-05,
-      "v4": 3.193456359440461e-05,
-      "v5": 4.511697625275701e-05
+      "normal": 0.9993583559989929,
+      "v1": 0.00011027792061213404,
+      "v2": 8.643084584036842e-05,
+      "v3": 3.449261930654757e-05,
+      "v4": 2.9506594728445634e-05,
+      "v5": 0.0003808501351159066
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1085.2,
-    "detection_ms": 26.1,
+    "context_build_ms": 5.0,
+    "generation_ms": 2400.6,
+    "detection_ms": 39.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1116.3
+    "total_ms": 2444.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's wonderful that you're exploring those options! When presenting your idea, it can be helpful to start with a clear and engaging description of what your business is about. You might want to outline the problem you’re solving and how your idea provides a solution. Would you like to brainstorm some key points to include, or perhaps think about what makes your idea unique?",
+    "response": "It's completely okay to feel that way. Sometimes just getting it down on paper can help clarify your thoughts. Maybe try writing down the key points of your idea, even if it feels messy at first. What are the main benefits or solutions your idea offers? If you want, we can break it down together!",
     "total_retries": 0,
     "used_failsafe": false
   }

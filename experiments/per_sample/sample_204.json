@@ -5,28 +5,28 @@
   "situation": "just everyday life",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9926097989082336,
+    "confidence": 0.9995662569999695,
     "all_probabilities": {
-      "normal": 0.9926097989082336,
-      "v1": 0.00018776625802274793,
-      "v2": 0.0067525943741202354,
-      "v3": 0.00021615620062220842,
-      "v4": 0.00011822521628346294,
-      "v5": 0.00011539944534888491
+      "normal": 0.9995662569999695,
+      "v1": 3.351164923515171e-05,
+      "v2": 5.21678666700609e-05,
+      "v3": 8.195308328140527e-05,
+      "v4": 3.251383168390021e-05,
+      "v5": 0.00023350735136773437
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 6.8,
-    "generation_ms": 988.4,
-    "detection_ms": 27.9,
+    "context_build_ms": 4.9,
+    "generation_ms": 1815.7,
+    "detection_ms": 31.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1023.3
+    "total_ms": 1852.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It can be really challenging to find a balance. Perhaps you could try discussing with him how his late hours affect you while also expressing your admiration for his work ethic. Would it be helpful to approach the conversation by sharing specific feelings rather than focusing on the late hours themselves? This might help him understand your perspective better.",
+    "response": "Your feelings are completely valid, and it's understandable to want more connection. It might help to express your feelings to him in a calm moment, focusing on how his late hours impact you rather than blaming the situation. Have you thought about suggesting a specific time to talk about this, or even writing him a letter if talking feels too overwhelming?",
     "total_retries": 0,
     "used_failsafe": false
   }

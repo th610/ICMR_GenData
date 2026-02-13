@@ -5,28 +5,28 @@
   "situation": "no money and cant find work",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996856451034546,
+    "confidence": 0.9992535710334778,
     "all_probabilities": {
-      "normal": 0.9996856451034546,
-      "v1": 5.523015352082439e-05,
-      "v2": 3.638134876382537e-05,
-      "v3": 0.00010112505697179586,
-      "v4": 3.6926438042428344e-05,
-      "v5": 8.469571912428364e-05
+      "normal": 0.9992535710334778,
+      "v1": 8.924576104618609e-05,
+      "v2": 5.0465037929825485e-05,
+      "v3": 0.000156444133608602,
+      "v4": 7.34661880414933e-05,
+      "v5": 0.00037671581958420575
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.4,
-    "generation_ms": 1037.3,
-    "detection_ms": 27.1,
+    "context_build_ms": 4.0,
+    "generation_ms": 2187.8,
+    "detection_ms": 30.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1067.9
+    "total_ms": 2222.5
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It’s admirable that you’re trying to support your son during such a challenging time. Have you thought about setting aside specific times each day to focus on your job search, so it feels more manageable? Or perhaps finding a support group for parents in similar situations could help you feel less alone in this?",
+    "response": "It's completely understandable to feel that way with so much uncertainty. Have you thought about breaking down your bills into smaller, more manageable pieces? Or perhaps looking into local assistance programs that might help lighten that burden a bit?",
     "total_retries": 0,
     "used_failsafe": false
   }

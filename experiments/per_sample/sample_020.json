@@ -5,28 +5,28 @@
   "situation": "I decided to go back to school to complete my Master's degree, but I feel really overwhelmed between",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997180104255676,
+    "confidence": 0.9996291399002075,
     "all_probabilities": {
-      "normal": 0.9997180104255676,
-      "v1": 5.973609222564846e-05,
-      "v2": 4.1504998080199584e-05,
-      "v3": 7.151273894123733e-05,
-      "v4": 4.6737703087273985e-05,
-      "v5": 6.254517938941717e-05
+      "normal": 0.9996291399002075,
+      "v1": 6.40233774902299e-05,
+      "v2": 6.221736839506775e-05,
+      "v3": 0.0001012452703434974,
+      "v4": 7.711528451181948e-05,
+      "v5": 6.621077773161232e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 838.6,
-    "detection_ms": 26.0,
+    "context_build_ms": 4.3,
+    "generation_ms": 1488.6,
+    "detection_ms": 39.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 868.7
+    "total_ms": 1532.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's heartwarming to see how much you care about your son's future. Have you thought about ways you might be able to support him in making those friendships, like attending practices or games together? That could create some wonderful bonding moments for both of you.",
+    "response": "That sounds like a wonderful step! Perhaps you could start by attending a team meeting or a practice session. It might help ease you into conversations with other parents. How do you feel about that idea?",
     "total_retries": 0,
     "used_failsafe": false
   }

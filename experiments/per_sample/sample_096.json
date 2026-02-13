@@ -5,75 +5,75 @@
   "situation": "I have a presentation to give to my class and I have a phobia of speaking in public.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9992656111717224,
+    "confidence": 0.9993001222610474,
     "all_probabilities": {
-      "normal": 0.0004416654701344669,
-      "v1": 0.9992656111717224,
-      "v2": 8.312335558002815e-05,
-      "v3": 8.11879726825282e-05,
-      "v4": 0.00010087706323247403,
-      "v5": 2.7502559532877058e-05
+      "normal": 0.00031725180451758206,
+      "v1": 0.9993001222610474,
+      "v2": 4.6198591007851064e-05,
+      "v3": 8.60962609294802e-05,
+      "v4": 8.85569752426818e-05,
+      "v5": 0.0001617251109564677
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 6.0,
-    "generation_ms": 873.7,
-    "detection_ms": 27.0,
-    "rewrite_total_ms": 4051.2,
-    "total_ms": 4958.2
+    "context_build_ms": 7.2,
+    "generation_ms": 2484.9,
+    "detection_ms": 28.8,
+    "rewrite_total_ms": 13499.3,
+    "total_ms": 16020.4
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "I can see how that uncertainty would add to your anxiety about the presentation. Have you considered reaching out to your professor or classmates to clarify the grading expectations? It might also be helpful to practice your presentation with someone to build your confidence.",
-      "reasoning": "The original response jumped to suggesting actions without fully acknowledging the seeker's new key information regarding the uncertainty about the professor's grading. I corrected this by acknowledging the user's concern, asking a clarifying question related to their uncertainty, and offering gentle next steps without assuming any missing facts.",
+      "rewritten_text": "It sounds like you're feeling uncertain about your professor's expectations and how that might affect your presentation. What specific parts of the presentation do you find yourself worrying about the most? Perhaps you could also try visualizing a positive outcome or discussing your concerns with someone you trust.",
+      "reasoning": "The original response made a hasty conclusion without fully clarifying the seeker's feelings about their situation. I acknowledged the seeker's uncertainty, asked a clarifying question, and provided gentle next steps for them to consider.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.99882572889328,
+      "recheck_confidence": 0.9993380904197693,
       "recheck_probabilities": {
-        "normal": 0.0008046236471273005,
-        "v1": 0.99882572889328,
-        "v2": 7.504080713260919e-05,
-        "v3": 0.00011285959772067145,
-        "v4": 0.00014503819693345577,
-        "v5": 3.665213444037363e-05
+        "normal": 0.0001838565367506817,
+        "v1": 0.9993380904197693,
+        "v2": 4.110986628802493e-05,
+        "v3": 8.32252117106691e-05,
+        "v4": 8.262733172159642e-05,
+        "v5": 0.0002710773260332644
       },
-      "rewrite_ms": 1389.2
+      "rewrite_ms": 5262.3
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "I can understand how that uncertainty about the grading could increase your anxiety. Have you thought about discussing your concerns with your professor or classmates to gain more clarity? It might also be beneficial to find a supportive friend or community member to practice your presentation with.",
-      "reasoning": "The original response made hasty conclusions about the user's situation without fully exploring the new information regarding the professor's strict grading and the user's uncertainty. I corrected it by acknowledging the user's concerns and asking a clarifying question, while also suggesting gentle next steps without making assumptions.",
+      "rewritten_text": "I can see that you're feeling uncertain about your professor's expectations and how they might impact your performance. What specific worries do you have regarding the presentation? It might be helpful to talk through your concerns with someone you trust or even practice your presentation a few times to help build your confidence.",
+      "reasoning": "The original last supporter response made a hasty conclusion by not adequately addressing the user's expressed uncertainty and concerns about the professor's strictness. I fixed it by acknowledging the user's feelings of uncertainty and asking a clarifying question that invites them to share more about their worries, while also providing gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9993578791618347,
+      "recheck_confidence": 0.9996034502983093,
       "recheck_probabilities": {
-        "normal": 0.0003481431631371379,
-        "v1": 0.9993578791618347,
-        "v2": 7.948101119836792e-05,
-        "v3": 7.714436651440337e-05,
-        "v4": 0.00010552150342846289,
-        "v5": 3.186514732078649e-05
+        "normal": 7.674763764953241e-05,
+        "v1": 0.9996034502983093,
+        "v2": 5.093923391541466e-05,
+        "v3": 6.431724614230916e-05,
+        "v4": 8.580136636737734e-05,
+        "v5": 0.00011865750275319442
       },
-      "rewrite_ms": 1213.7
+      "rewrite_ms": 4510.1
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "I can see how that uncertainty about the grading could be adding to your stress. Have you considered reaching out to your professor to share your worries and ask for clarification? It might also help to talk to classmates who have already presented to see how they experienced it.",
-      "reasoning": "The original response jumped to a suggestion without fully acknowledging the seeker's new concerns about the professor's grading and lacked a clarifying question to gather more context. I revised it to acknowledge the seeker's uncertainty and include a single question to encourage further discussion.",
+      "rewritten_text": "It sounds like you're feeling unsure about your professor's strict grading and how that might affect you. What specific aspects of the presentation are causing you the most concern? Talking it over with someone you trust or practicing your presentation in a low-pressure setting might help ease your anxiety.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying their concerns regarding the presentation. I acknowledged their uncertainty, asked a single clarifying question, and provided a couple of gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9987070560455322,
+      "recheck_confidence": 0.9995800852775574,
       "recheck_probabilities": {
-        "normal": 0.0009404943557456136,
-        "v1": 0.9987070560455322,
-        "v2": 6.862389273010194e-05,
-        "v3": 0.00010670968185877427,
-        "v4": 0.00013807993673253804,
-        "v5": 3.908005965058692e-05
+        "normal": 0.00010306610784027725,
+        "v1": 0.9995800852775574,
+        "v2": 4.8308233090210706e-05,
+        "v3": 6.910714000696316e-05,
+        "v4": 6.984198262216523e-05,
+        "v5": 0.00012969780073035508
       },
-      "rewrite_ms": 1448.4
+      "rewrite_ms": 3726.9
     }
   ],
   "final_result": {

@@ -5,28 +5,28 @@
   "situation": "I think I will be losing my job soon. I just read an email taking about the need for us to cut cost ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996421337127686,
+    "confidence": 0.9990720748901367,
     "all_probabilities": {
-      "normal": 0.9996421337127686,
-      "v1": 0.0001241657737409696,
-      "v2": 3.9447892049793154e-05,
-      "v3": 9.019668505061418e-05,
-      "v4": 5.561989382840693e-05,
-      "v5": 4.8406654968857765e-05
+      "normal": 0.9990720748901367,
+      "v1": 0.0004907175898551941,
+      "v2": 5.9930855059064925e-05,
+      "v3": 6.505165947601199e-05,
+      "v4": 7.103369716787711e-05,
+      "v5": 0.00024118278815876693
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 9.3,
-    "generation_ms": 890.3,
-    "detection_ms": 401.9,
+    "context_build_ms": 7.8,
+    "generation_ms": 6075.9,
+    "detection_ms": 409.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1301.7
+    "total_ms": 6493.5
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Those remote support jobs sound promising! What specific skills or experiences do you think will help you stand out in your applications?",
+    "response": "Remote support does seem like a great option, especially with your IT background. Have you thought about what specific skills or experiences you could highlight in your applications to make you stand out to potential employers?",
     "total_retries": 0,
     "used_failsafe": false
   }

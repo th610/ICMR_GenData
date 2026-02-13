@@ -5,75 +5,75 @@
   "situation": "I got an email from my job that they will not extend my job and will have to leave.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.6519139409065247,
+    "confidence": 0.9994539618492126,
     "all_probabilities": {
-      "normal": 0.3454635441303253,
-      "v1": 0.6519139409065247,
-      "v2": 0.0009430882637389004,
-      "v3": 0.0005870997556485236,
-      "v4": 0.0007603556732647121,
-      "v5": 0.0003319603856652975
+      "normal": 0.00025046715745702386,
+      "v1": 0.9994539618492126,
+      "v2": 5.262303238851018e-05,
+      "v3": 9.988134843297303e-05,
+      "v4": 6.441405275836587e-05,
+      "v5": 7.858498429413885e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 1023.4,
-    "detection_ms": 29.0,
-    "rewrite_total_ms": 3855.9,
-    "total_ms": 4912.4
+    "context_build_ms": 1.7,
+    "generation_ms": 2744.8,
+    "detection_ms": 22.6,
+    "rewrite_total_ms": 10224.0,
+    "total_ms": 12993.3
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "I can see how overhearing that might heighten your anxiety; what are your thoughts on how you might approach this situation with your coworkers or management? It could be helpful to explore some coping strategies together or discuss ways to focus on what you can control during this uncertain time.",
-      "reasoning": "The original last supporter response made a hasty conclusion by not acknowledging the new key information about the coworker's potential layoffs and jumped straight into offering coping strategies. I corrected it by acknowledging the uncertainty and asking a clarifying question before suggesting next steps.",
+      "rewritten_text": "It's understandable to feel anxious with the uncertainty about potential job cuts adding to your worries. How do you feel about exploring some options for gathering more information about your job status? Perhaps we could also discuss some strategies to help manage your anxiety during this time.",
+      "reasoning": "The original response made a hasty conclusion by not fully acknowledging the seeker's uncertainty about potential job cuts and instead jumping to suggestions. The revised response acknowledges the seeker's anxiety regarding their job situation, asks a clarifying question, and offers gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.8345938324928284,
+      "recheck_confidence": 0.9994029998779297,
       "recheck_probabilities": {
-        "normal": 0.1635456383228302,
-        "v1": 0.8345938324928284,
-        "v2": 0.0007323058671317995,
-        "v3": 0.0004768218786921352,
-        "v4": 0.0004650091577786952,
-        "v5": 0.00018631780403666198
+        "normal": 0.0002922465209849179,
+        "v1": 0.9994029998779297,
+        "v2": 5.064524521003477e-05,
+        "v3": 0.00010846491932170466,
+        "v4": 6.68171705910936e-05,
+        "v5": 7.89281984907575e-05
       },
-      "rewrite_ms": 1327.1
+      "rewrite_ms": 4302.1
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "I can understand how that uncertainty might add to your anxiety; what do you think would be helpful for you to discuss with your coworkers or management regarding this rumor? It might be beneficial to focus on what you can control and perhaps explore some coping strategies together.",
-      "reasoning": "The original response made a hasty conclusion by not fully acknowledging the user's uncertainty about the reliability of the coworker's information. I fixed it by acknowledging the user's concern, asking a clarifying question, and then gently suggesting next steps without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty of potential job cuts is weighing on your mind. How would you feel about discussing ways to gather more information about your job status? We could also explore some strategies that might help ease your anxiety during this time.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully clarifying their situation. I acknowledged the user's mention of anxiety related to job market uncertainty and asked a single clarifying question while offering gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.935913622379303,
+      "recheck_confidence": 0.9992783665657043,
       "recheck_probabilities": {
-        "normal": 0.06259413808584213,
-        "v1": 0.935913622379303,
-        "v2": 0.0006430065841414034,
-        "v3": 0.0004082370433025062,
-        "v4": 0.00031496273004449904,
-        "v5": 0.0001261028228327632
+        "normal": 0.00041504399268887937,
+        "v1": 0.9992783665657043,
+        "v2": 4.7630608605686575e-05,
+        "v3": 9.264597611036152e-05,
+        "v4": 6.775798101443797e-05,
+        "v5": 9.855042299022898e-05
       },
-      "rewrite_ms": 1277.8
+      "rewrite_ms": 2915.0
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like that uncertainty is really weighing on you; how do you feel about discussing this rumor with your coworkers or management? It might be helpful to explore how you're feeling and consider what support you might need during this time.",
-      "reasoning": "The original response made a hasty conclusion by assuming the seeker wanted to discuss coping strategies without first clarifying their feelings or thoughts about the rumor. I revised the response to acknowledge the seeker's uncertainty and included a single clarifying question, while suggesting gentle next steps that leave room for the seeker to express themselves further.",
+      "rewritten_text": "I can see that the uncertainty about potential job cuts is adding to your anxiety. What specific information are you hoping to find out about your job status? It might be helpful to talk through your options and consider ways to manage your anxiety during this time.",
+      "reasoning": "The original response jumped to a conclusion about the user's feelings without fully clarifying their situation regarding the potential job cuts. I fixed it by acknowledging the user's uncertainty and asking a single clarifying question, while also suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9268233776092529,
+      "recheck_confidence": 0.9994889497756958,
       "recheck_probabilities": {
-        "normal": 0.07150594145059586,
-        "v1": 0.9268233776092529,
-        "v2": 0.0004877570900134742,
-        "v3": 0.0005719407345168293,
-        "v4": 0.00042020034743472934,
-        "v5": 0.00019070938287768513
+        "normal": 0.00024259810743387789,
+        "v1": 0.9994889497756958,
+        "v2": 5.271167174214497e-05,
+        "v3": 8.568564953748137e-05,
+        "v4": 5.965745367575437e-05,
+        "v5": 7.0396505179815e-05
       },
-      "rewrite_ms": 1251.0
+      "rewrite_ms": 3006.9
     }
   ],
   "final_result": {

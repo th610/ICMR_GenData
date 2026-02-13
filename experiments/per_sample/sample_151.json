@@ -5,75 +5,75 @@
   "situation": "my boss cut my pay to save his bonus this year",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.9627290964126587,
+    "confidence": 0.999432384967804,
     "all_probabilities": {
-      "normal": 0.03609868511557579,
-      "v1": 0.0003002198354806751,
-      "v2": 0.00032220775028690696,
-      "v3": 0.9627290964126587,
-      "v4": 0.00020795936870854348,
-      "v5": 0.00034186564153060317
+      "normal": 0.00024799699895083904,
+      "v1": 7.283224840648472e-05,
+      "v2": 7.44257922633551e-05,
+      "v3": 0.999432384967804,
+      "v4": 8.714227442396805e-05,
+      "v5": 8.512013300787657e-05
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.2,
-    "generation_ms": 1030.5,
-    "detection_ms": 26.6,
-    "rewrite_total_ms": 3744.3,
-    "total_ms": 4805.9
+    "context_build_ms": 3.5,
+    "generation_ms": 5469.7,
+    "detection_ms": 31.4,
+    "rewrite_total_ms": 17303.2,
+    "total_ms": 22808.0
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It’s understandable to feel pressure to make a decision quickly. You might consider either confronting your boss about the pay cut to express your concerns or continuing to search for a new job while keeping the current situation in mind. Which option feels more appealing to you?",
-      "reasoning": "The original response only expressed empathy without providing any practical help, which violated the counseling guideline. I added a concrete help element by offering two options for the seeker to consider regarding their next steps.",
+      "rewritten_text": "It sounds like you’re at a crossroads, and it's understandable to feel this way. You could either confront him about the pay cut to seek clarity, or you could prioritize job hunting to take control of your situation. Which option resonates with you more?",
+      "reasoning": "The original response violated the counseling guidelines by offering empathy only, without providing practical help as requested by the seeker. I maintained a brief empathy statement and added a concrete help element by providing two options for the seeker to consider.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.998917818069458,
+      "recheck_confidence": 0.9996021389961243,
       "recheck_probabilities": {
-        "normal": 0.0007431099656969309,
-        "v1": 0.00010968704737024382,
-        "v2": 8.478537347400561e-05,
-        "v3": 0.998917818069458,
-        "v4": 6.804637814639136e-05,
-        "v5": 7.654353248653933e-05
+        "normal": 9.198136103805155e-05,
+        "v1": 6.212307198438793e-05,
+        "v2": 8.904959395295009e-05,
+        "v3": 0.9996021389961243,
+        "v4": 7.95746163930744e-05,
+        "v5": 7.509569695685059e-05
       },
-      "rewrite_ms": 1166.3
+      "rewrite_ms": 8038.8
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It’s understandable to feel pressure to make a decision quickly. You could either confront your boss about the pay cut to voice your concerns or continue searching for a new job while weighing your options. Which option feels more appealing to you?",
-      "reasoning": "The original response was primarily empathetic and did not provide the practical help the seeker requested. I included one empathy sentence and added two options to help the seeker consider their next steps more clearly.",
+      "rewritten_text": "It's completely understandable to feel stuck in this situation. You could confront him about the pay cut to seek clarity, or you could focus on job hunting immediately to take control of your future. Which option feels more viable for you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, violating the counseling guideline. I added a brief empathy sentence and provided two actionable options to guide the seeker in making a decision about their situation.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9995835423469543,
+      "recheck_confidence": 0.999555766582489,
       "recheck_probabilities": {
-        "normal": 0.00013127164856996387,
-        "v1": 7.91721759014763e-05,
-        "v2": 8.758882904658094e-05,
-        "v3": 0.9995835423469543,
-        "v4": 5.390029036789201e-05,
-        "v5": 6.449248758144677e-05
+        "normal": 0.0001002635617624037,
+        "v1": 6.713951006531715e-05,
+        "v2": 0.00012136021541664377,
+        "v3": 0.999555766582489,
+        "v4": 8.131461800076067e-05,
+        "v5": 7.419259054586291e-05
       },
-      "rewrite_ms": 1367.5
+      "rewrite_ms": 6573.7
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It’s understandable to feel pressure to make a decision quickly. You could either confront your boss about the pay cut to voice your concerns or continue searching for a new job while weighing your options. Which feels more appealing to you?",
-      "reasoning": "The original response only provided empathy and did not offer practical help, which is a violation of the guidelines. I added a concrete help element in the form of two options while keeping a brief empathetic statement.",
+      "rewritten_text": "It's completely understandable to feel stuck in this situation. You could confront him about the pay cut for clarity, or you could focus on job hunting immediately to take control of your future. Which option feels more viable for you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, which violated the counseling guideline of offering actionable support. I added a brief empathy statement and introduced two concrete options for the seeker to consider.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9995694756507874,
+      "recheck_confidence": 0.9995513558387756,
       "recheck_probabilities": {
-        "normal": 0.00015202922804746777,
-        "v1": 7.883217767812312e-05,
-        "v2": 8.731021080166101e-05,
-        "v3": 0.9995694756507874,
-        "v4": 5.592267189058475e-05,
-        "v5": 5.644212433253415e-05
+        "normal": 9.91580673144199e-05,
+        "v1": 6.772686901967973e-05,
+        "v2": 0.0001262748846784234,
+        "v3": 0.9995513558387756,
+        "v4": 8.105814049486071e-05,
+        "v5": 7.440568879246712e-05
       },
-      "rewrite_ms": 1210.6
+      "rewrite_ms": 2690.7
     }
   ],
   "final_result": {

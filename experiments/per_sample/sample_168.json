@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I battle depression and recently my regular meds just aren't helping. I am exhausted morning to nigh",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9981065988540649,
+    "predicted_label": "v3",
+    "confidence": 0.9958915710449219,
     "all_probabilities": {
-      "normal": 0.9981065988540649,
-      "v1": 9.421697905054316e-05,
-      "v2": 9.25204876693897e-05,
-      "v3": 0.0015229957643896341,
-      "v4": 6.179006595630199e-05,
-      "v5": 0.00012186120875412598
+      "normal": 0.003194738645106554,
+      "v1": 0.00012126385990995914,
+      "v2": 0.00012649637938011438,
+      "v3": 0.9958915710449219,
+      "v4": 0.0001701157889328897,
+      "v5": 0.0004957953933626413
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1256.9,
-    "detection_ms": 27.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1289.4
+    "context_build_ms": 5.1,
+    "generation_ms": 2351.5,
+    "detection_ms": 55.3,
+    "rewrite_total_ms": 7400.4,
+    "total_ms": 9812.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're really weighing your options, and it's completely understandable to feel that way. Would you prefer to call her soon for immediate support, or wait until April for a more in-depth conversation? Either choice is valid.",
+      "reasoning": "The original response primarily focused on empathy and validation without providing any practical help, which is a violation. I included a brief empathy statement and added a clear option for the seeker to consider, helping them make a decision about reaching out to their aunt.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995999932289124,
+      "recheck_probabilities": {
+        "normal": 7.380814349744469e-05,
+        "v1": 5.673299892805517e-05,
+        "v2": 0.00010761628072941676,
+        "v3": 0.9995999932289124,
+        "v4": 6.844565359642729e-05,
+        "v5": 9.33583069127053e-05
+      },
+      "rewrite_ms": 2590.5
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel torn about this decision. Would you prefer to call her soon for immediate support, or wait until April for a more in-depth conversation? Either choice is valid.",
+      "reasoning": "The original response primarily focused on empathy without providing practical help, which violates the guideline. I added a concrete help element by presenting two options for the seeker to consider regarding their decision to call their aunt.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995644688606262,
+      "recheck_probabilities": {
+        "normal": 9.014522220240906e-05,
+        "v1": 5.871156099601649e-05,
+        "v2": 0.00012391044583637267,
+        "v3": 0.9995644688606262,
+        "v4": 6.97437790222466e-05,
+        "v5": 9.294901246903464e-05
+      },
+      "rewrite_ms": 2354.0
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel torn about this decision. You could choose to call her soon for immediate support (Option A) or wait until April for a more in-depth conversation (Option B). Either choice is valid.",
+      "reasoning": "The original response provided empathy but did not offer any practical help, which is a violation of the counseling guidelines. I added a concrete help element by providing two options (A/B) for the seeker to consider regarding when to call their aunt.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999580442905426,
+      "recheck_probabilities": {
+        "normal": 9.638977644499391e-05,
+        "v1": 5.623534889309667e-05,
+        "v2": 0.0001118464206228964,
+        "v3": 0.999580442905426,
+        "v4": 7.146457937778905e-05,
+        "v5": 8.36161634651944e-05
+      },
+      "rewrite_ms": 2455.9
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're weighing the pros and cons really thoughtfully. One option could be to consider how much you feel you need to share right now versus how you might feel once you see her in person. Would it be helpful to jot down your feelings and see if there's anything specific you want to express? Or perhaps you could start with a lighter conversation and gauge her response before deciding to delve deeper? Whatever you choose, it's important to prioritize what feels right for you.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

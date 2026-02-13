@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "Broke up with my partner prior to this pandemic. Now I feel lonely.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9756129384040833,
+    "predicted_label": "v1",
+    "confidence": 0.9949353337287903,
     "all_probabilities": {
-      "normal": 0.9756129384040833,
-      "v1": 0.023539097979664803,
-      "v2": 0.00019760166469495744,
-      "v3": 0.00022175841149874032,
-      "v4": 0.00024534837575629354,
-      "v5": 0.00018318997172173113
+      "normal": 0.0008518792456015944,
+      "v1": 0.9949353337287903,
+      "v2": 8.528956823283806e-05,
+      "v3": 0.00011905816063517705,
+      "v4": 0.0008230701205320656,
+      "v5": 0.00318544777110219
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.4,
-    "generation_ms": 913.3,
-    "detection_ms": 26.2,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 944.0
+    "context_build_ms": 4.6,
+    "generation_ms": 4474.6,
+    "detection_ms": 33.8,
+    "rewrite_total_ms": 13754.4,
+    "total_ms": 18267.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "I understand that the comment about your ex has intensified your feelings of loneliness in the evenings. What do you think would help you feel more at ease during that time? Perhaps exploring a new hobby or planning some activities with your future dog could bring you some comfort.",
+      "reasoning": "The original response jumped to conclusions without fully exploring the seeker's feelings regarding their loneliness and the impact of the comment about their ex. I fixed it by acknowledging their feelings about the evenings, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9982176423072815,
+      "recheck_probabilities": {
+        "normal": 0.00029898883076384664,
+        "v1": 0.9982176423072815,
+        "v2": 6.927162758074701e-05,
+        "v3": 6.141904304968193e-05,
+        "v4": 0.00048561239964328706,
+        "v5": 0.0008669985691085458
+      },
+      "rewrite_ms": 4868.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "I hear that the comment about your ex has made your feelings of loneliness in the evenings feel even stronger. What do you think might help you cope with those feelings during that time? Perhaps you could consider journaling your thoughts or reaching out to a friend for a chat.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings and suggested actions without fully understanding their situation. I revised it to acknowledge the user's mention of feeling more lonely in the evenings, asked a clarifying question, and offered gentle suggestions without assuming facts.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9962521195411682,
+      "recheck_probabilities": {
+        "normal": 0.0005198252620175481,
+        "v1": 0.9962521195411682,
+        "v2": 8.779257768765092e-05,
+        "v3": 8.514798537362367e-05,
+        "v4": 0.000564497837331146,
+        "v5": 0.002490707440301776
+      },
+      "rewrite_ms": 5661.4
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like the comment about your ex has intensified your feelings of loneliness in the evenings. How do you usually cope with those feelings when they arise? It might be helpful to talk to someone you trust or to try some calming activities like reading or listening to music.",
+      "reasoning": "The original response jumped to a conclusion without fully addressing the seeker's feelings of uncertainty regarding the comment about their ex. I fixed it by acknowledging the seeker's feelings and including a single clarifying question while offering gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9971478581428528,
+      "recheck_probabilities": {
+        "normal": 0.0005627704667858779,
+        "v1": 0.9971478581428528,
+        "v2": 8.11623758636415e-05,
+        "v3": 8.422080281889066e-05,
+        "v4": 0.00048646877985447645,
+        "v5": 0.0016373828984797
+      },
+      "rewrite_ms": 3225.1
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's completely understandable to feel uneasy about that. Even hearing rumors can stir up a lot of emotions. How are you feeling about it right now? Would it help to talk about what you're experiencing, or maybe focus on something that brings you comfort?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

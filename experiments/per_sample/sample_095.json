@@ -5,75 +5,75 @@
   "situation": "It's been long time I am unable to find a job.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9741727113723755,
+    "confidence": 0.9996126294136047,
     "all_probabilities": {
-      "normal": 0.02501451037824154,
-      "v1": 0.9741727113723755,
-      "v2": 0.00018399168038740754,
-      "v3": 0.00024770121672190726,
-      "v4": 0.00029265970806591213,
-      "v5": 8.837055793264881e-05
+      "normal": 0.0001331239618593827,
+      "v1": 0.9996126294136047,
+      "v2": 4.893957884632982e-05,
+      "v3": 7.236367673613131e-05,
+      "v4": 6.225527613423765e-05,
+      "v5": 7.074834138620645e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 6.2,
-    "generation_ms": 1207.0,
-    "detection_ms": 28.0,
-    "rewrite_total_ms": 5024.6,
-    "total_ms": 6266.0
+    "context_build_ms": 1.9,
+    "generation_ms": 3439.9,
+    "detection_ms": 22.1,
+    "rewrite_total_ms": 10883.6,
+    "total_ms": 14347.5
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you have some uncertainty about the layoffs your friend mentioned. What aspects of this situation are causing you the most concern? You might consider discussing this with others to gather more perspectives or keeping an eye on reliable news sources for updates.",
-      "reasoning": "The original response provided a hasty conclusion without adequately acknowledging the seeker's uncertainty about the information they received regarding layoffs. The corrected response acknowledges this uncertainty, asks a clarifying question, and offers gentle next steps without making assumptions.",
+      "rewritten_text": "I can see how unsettling it is to hear vague news about layoffs when you're actively job searching. What specific aspects of your job search are causing you the most concern right now? It might be helpful to take some time to reflect on your resume or consider reaching out to your network for support.",
+      "reasoning": "The original response jumped to assumptions about the seeker's feelings and suggested next steps without fully clarifying the seeker's situation regarding the job market anxiety. The fixed response acknowledges the seeker's uncertainty and includes a clarifying question to better understand their feelings, followed by gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9880334138870239,
+      "recheck_confidence": 0.9996115565299988,
       "recheck_probabilities": {
-        "normal": 0.011390244588255882,
-        "v1": 0.9880334138870239,
-        "v2": 0.00014716092846356332,
-        "v3": 0.00021659908816218376,
-        "v4": 0.00013903173385187984,
-        "v5": 7.360906602116302e-05
+        "normal": 0.00012149333633715287,
+        "v1": 0.9996115565299988,
+        "v2": 4.927427289658226e-05,
+        "v3": 7.8533761552535e-05,
+        "v4": 7.163254485931247e-05,
+        "v5": 6.753898924216628e-05
       },
-      "rewrite_ms": 1328.0
+      "rewrite_ms": 3638.9
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the layoffs your friend mentioned. What specific worries do you have regarding this situation? It might be helpful to talk to others who may have insights or to look for updates from trusted news sources.",
-      "reasoning": "The original response made a hasty conclusion about the user's concern without fully clarifying their feelings. I revised it to acknowledge the user's uncertainty and included a single clarifying question while offering gentle next steps without assumptions.",
+      "rewritten_text": "It sounds like the vague news about layoffs is weighing on you as you search for a job. What specific worries do you have about your job search right now? It might be helpful to talk through your thoughts with someone or take a moment to evaluate your job search strategy.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings and concerns without adequately clarifying their current situation. I revised it to acknowledge the seeker's uncertainty and included a single clarifying question, while also offering gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.991786539554596,
+      "recheck_confidence": 0.9995689988136292,
       "recheck_probabilities": {
-        "normal": 0.007694602478295565,
-        "v1": 0.991786539554596,
-        "v2": 0.00010685739835025743,
-        "v3": 0.00019608366710599512,
-        "v4": 0.00014480353274848312,
-        "v5": 7.114728214219213e-05
+        "normal": 0.00016695880913175642,
+        "v1": 0.9995689988136292,
+        "v2": 5.374285319703631e-05,
+        "v3": 7.229457696666941e-05,
+        "v4": 5.744488225900568e-05,
+        "v5": 8.053721103351563e-05
       },
-      "rewrite_ms": 1223.0
+      "rewrite_ms": 3135.1
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the layoffs your friend mentioned. What are your main concerns regarding the potential layoffs? It might be helpful to talk to someone in your network about it or keep an eye on reliable news sources for updates.",
-      "reasoning": "The original response jumped to conclusions without fully exploring the seeker's feelings or concerns about the layoffs. I revised it to acknowledge the uncertainty the seeker is experiencing, ask a clarifying question, and provide gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the vague news about layoffs is affecting your mood as you search for a job. What specific concerns do you have regarding your job search at the moment? It might be helpful to take some time to reflect on your strategies or consider discussing your thoughts with a trusted friend.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully clarifying their concerns. I acknowledged the user's uncertainty about layoffs and asked a single clarifying question while providing gentle next steps for further reflection.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9925306439399719,
+      "recheck_confidence": 0.9995843768119812,
       "recheck_probabilities": {
-        "normal": 0.006959091871976852,
-        "v1": 0.9925306439399719,
-        "v2": 8.979705307865515e-05,
-        "v3": 0.00018922165327239782,
-        "v4": 0.0001584423444001004,
-        "v5": 7.28861487004906e-05
+        "normal": 0.00014706674846820533,
+        "v1": 0.9995843768119812,
+        "v2": 5.244301428319886e-05,
+        "v3": 7.797877333359793e-05,
+        "v4": 5.596160190179944e-05,
+        "v5": 8.219526353059337e-05
       },
-      "rewrite_ms": 2473.5
+      "rewrite_ms": 4109.5
     }
   ],
   "final_result": {

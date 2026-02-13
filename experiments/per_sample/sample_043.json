@@ -5,28 +5,28 @@
   "situation": "friends trying to let me down",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996848106384277,
+    "confidence": 0.9933973550796509,
     "all_probabilities": {
-      "normal": 0.9996848106384277,
-      "v1": 7.351126987487078e-05,
-      "v2": 4.568834992824122e-05,
-      "v3": 7.652300701010972e-05,
-      "v4": 3.425693648750894e-05,
-      "v5": 8.528074977220967e-05
+      "normal": 0.9933973550796509,
+      "v1": 0.0001551165187265724,
+      "v2": 9.320727258455008e-05,
+      "v3": 0.0002189242368331179,
+      "v4": 6.503491749754176e-05,
+      "v5": 0.00607035867869854
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.5,
-    "generation_ms": 879.9,
-    "detection_ms": 26.2,
+    "context_build_ms": 5.8,
+    "generation_ms": 1488.8,
+    "detection_ms": 22.2,
     "rewrite_total_ms": 0.0,
-    "total_ms": 910.7
+    "total_ms": 1517.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That makes sense. Sometimes it can be tough to find the right words. You could start by sharing how their actions affected you or how you felt during the argument. Would you like to brainstorm some specific things you might want to say to them?",
+    "response": "It can be really tough when you're feeling isolated like this. Sometimes just sharing your feelings can lighten the load a bit. Would you like to talk about how you're feeling with someone, or maybe write it down to get it out? Either option could help you process what’s happening.",
     "total_retries": 0,
     "used_failsafe": false
   }

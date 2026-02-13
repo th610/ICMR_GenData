@@ -5,75 +5,75 @@
   "situation": "the uncertainty surrounding the corona virus pandemic. the unavailability of jobs. lack of success g",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9882712960243225,
+    "confidence": 0.9990010857582092,
     "all_probabilities": {
-      "normal": 0.011007501743733883,
-      "v1": 0.9882712960243225,
-      "v2": 0.00013815323472954333,
-      "v3": 0.00023537037486676127,
-      "v4": 0.00026627423358149827,
-      "v5": 8.141998841892928e-05
+      "normal": 0.0005316092865541577,
+      "v1": 0.9990010857582092,
+      "v2": 4.470374551601708e-05,
+      "v3": 0.00015893155068624765,
+      "v4": 8.064520079642534e-05,
+      "v5": 0.00018304793047718704
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.5,
-    "generation_ms": 1148.1,
-    "detection_ms": 24.3,
-    "rewrite_total_ms": 4089.5,
-    "total_ms": 5267.7
+    "context_build_ms": 6.1,
+    "generation_ms": 1611.7,
+    "detection_ms": 23.2,
+    "rewrite_total_ms": 5789.6,
+    "total_ms": 7430.8
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the potential impact of declining property values. Have you had a chance to discuss this with any professionals in real estate? It might be helpful to gather more information to see what options might be available to you.",
-      "reasoning": "The original response jumped to assumptions about the seeker's situation without fully acknowledging their uncertainty regarding the impact of declining property values. I fixed it by recognizing the seeker's concern, asking one clarifying question, and suggesting gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like you're feeling uncertain about making decisions without complete information. What specific decisions are you considering right now? Perhaps we can explore ways to gather more information together or discuss your options moving forward.",
+      "reasoning": "The original response made a hasty conclusion without adequately addressing the seeker's uncertainty regarding decision-making with incomplete information. I corrected it by acknowledging the seeker's new key information, asking a clarifying question, and offering gentle next steps without assuming any missing facts.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.980792224407196,
+      "recheck_confidence": 0.9995083808898926,
       "recheck_probabilities": {
-        "normal": 0.01837901771068573,
-        "v1": 0.980792224407196,
-        "v2": 0.0001447256945539266,
-        "v3": 0.0003019249124918133,
-        "v4": 0.00025755524984560907,
-        "v5": 0.00012462958693504333
+        "normal": 0.00016404765483457595,
+        "v1": 0.9995083808898926,
+        "v2": 5.190120282350108e-05,
+        "v3": 0.00010943678353214636,
+        "v4": 7.56985173211433e-05,
+        "v5": 9.05545093701221e-05
       },
-      "rewrite_ms": 1323.9
+      "rewrite_ms": 2812.0
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the potential impact of declining property values. Have you considered reaching out to a real estate agent to get more insights? Gathering more information could help you feel more prepared to make decisions.",
-      "reasoning": "The original response jumped to a conclusion without fully acknowledging the seeker’s uncertainty about declining property values and did not include a clear clarifying question. I revised it to recognize their concern, ask a single clarifying question, and suggest gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like you're feeling a lot of uncertainty about making decisions with incomplete information. What specific decisions are causing you the most concern right now? We can talk through your thoughts or brainstorm ways to gather more information together.",
+      "reasoning": "The original response made a hasty conclusion without properly acknowledging the seeker's uncertainty about decision-making. I rephrased it to directly acknowledge their feelings and asked a single clarifying question while offering gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9525997042655945,
+      "recheck_confidence": 0.9991588592529297,
       "recheck_probabilities": {
-        "normal": 0.04622552543878555,
-        "v1": 0.9525997042655945,
-        "v2": 0.000210809608688578,
-        "v3": 0.0004161371325608343,
-        "v4": 0.000369335466530174,
-        "v5": 0.00017854361794888973
+        "normal": 0.0004620730469468981,
+        "v1": 0.9991588592529297,
+        "v2": 4.396317308419384e-05,
+        "v3": 9.090705134440213e-05,
+        "v4": 9.484388283453882e-05,
+        "v5": 0.00014936912339180708
       },
-      "rewrite_ms": 1296.7
+      "rewrite_ms": 1451.4
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about how declining property values might affect your situation. Have you thought about what steps you might take if you do need to sell your property? It could be helpful to gather more information, perhaps by discussing your situation with a financial advisor or a real estate agent.",
-      "reasoning": "The original response made a hasty conclusion by not adequately acknowledging the seeker's uncertainty about the impact of declining property values and included multiple suggestions. I modified it to acknowledge the seeker's feelings, ask a single clarifying question, and suggest gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like you're feeling a lot of uncertainty about making decisions with incomplete information. What specific decisions are weighing on you the most right now? We can explore your thoughts together or consider what information might help clarify your situation.",
+      "reasoning": "The original response concluded hastily without fully understanding the seeker's situation, missing the opportunity to clarify their feelings about the uncertainty. I revised it to acknowledge the seeker's feelings and included a single clarifying question while suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.8803551197052002,
+      "recheck_confidence": 0.9993422627449036,
       "recheck_probabilities": {
-        "normal": 0.11803627759218216,
-        "v1": 0.8803551197052002,
-        "v2": 0.00035194106749258935,
-        "v3": 0.0005888119922019541,
-        "v4": 0.0004748459323309362,
-        "v5": 0.00019297280232422054
+        "normal": 0.00032070817542262375,
+        "v1": 0.9993422627449036,
+        "v2": 4.2461222619749606e-05,
+        "v3": 8.21151043055579e-05,
+        "v4": 8.829683065414429e-05,
+        "v5": 0.0001240861602127552
       },
-      "rewrite_ms": 1468.9
+      "rewrite_ms": 1526.2
     }
   ],
   "final_result": {

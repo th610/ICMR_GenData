@@ -5,75 +5,75 @@
   "situation": "covid",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.9504268169403076,
+    "confidence": 0.9986276626586914,
     "all_probabilities": {
-      "normal": 0.047909509390592575,
-      "v1": 0.0005631516105495393,
-      "v2": 0.0006877098930999637,
-      "v3": 0.9504268169403076,
-      "v4": 0.0002780221402645111,
-      "v5": 0.00013472457067109644
+      "normal": 0.0008977256948128343,
+      "v1": 7.976526831043884e-05,
+      "v2": 8.94566546776332e-05,
+      "v3": 0.9986276626586914,
+      "v4": 0.00011874057963723317,
+      "v5": 0.00018662653747014701
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 3.2,
-    "generation_ms": 887.2,
-    "detection_ms": 24.5,
-    "rewrite_total_ms": 4214.0,
-    "total_ms": 5129.1
+    "context_build_ms": 1.3,
+    "generation_ms": 1542.8,
+    "detection_ms": 28.0,
+    "rewrite_total_ms": 11367.6,
+    "total_ms": 12939.9
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "I understand that making this decision can be tough. You could consider organizing a game with a new group for some social fun, or opt for solo practice to focus on your skills. Which option feels more appealing to you right now?",
-      "reasoning": "The original response was empathy-only, failing to provide the practical help requested by the seeker. I added a concrete option to help the seeker make a decision while maintaining a brief empathy statement.",
+      "rewritten_text": "It's tough when your plans depend on others! If you want to play volleyball tomorrow, consider this: (1) reach out to local groups online to see if they have any matches, or (2) set up a time for solo practice to focus on your skills. What do you think sounds better?",
+      "reasoning": "The original response primarily focused on empathy without offering practical help, which is a violation. I added a short guide to help the seeker decide between playing with a new group or practicing alone, maintaining one empathetic statement.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9965394735336304,
+      "recheck_confidence": 0.995245635509491,
       "recheck_probabilities": {
-        "normal": 0.002987479092553258,
-        "v1": 0.00012195437011541799,
-        "v2": 0.0001823091006372124,
-        "v3": 0.9965394735336304,
-        "v4": 7.968635327415541e-05,
-        "v5": 8.915940998122096e-05
+        "normal": 0.0039934259839355946,
+        "v1": 0.00012208060070406646,
+        "v2": 0.000132646324345842,
+        "v3": 0.995245635509491,
+        "v4": 0.00019519308989401907,
+        "v5": 0.00031101409695111215
       },
-      "rewrite_ms": 1438.1
+      "rewrite_ms": 3544.2
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "I understand that making this decision can be tough. You could either try to organize a game with a new group for some social fun or go for a solo practice to improve your skills. Which option feels more appealing to you right now?",
-      "reasoning": "The original response only provided empathy and failed to offer practical help despite the seeker's explicit request for guidance on organizing a volleyball game. I included a brief empathetic sentence and added two clear options to help the seeker make a decision.",
+      "rewritten_text": "It can be really tough when your plans depend on others! If you want to play volleyball tomorrow, you could either reach out to local groups to find a match or set a time for some solo practice. Which option do you think you'd prefer?",
+      "reasoning": "The original response primarily expressed empathy and validation without providing practical help despite the seeker's explicit request for assistance in choosing between two options. I maintained one empathetic statement and provided two concrete options for the seeker to consider, addressing their need for guidance.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9987986087799072,
+      "recheck_confidence": 0.999037504196167,
       "recheck_probabilities": {
-        "normal": 0.00081910181324929,
-        "v1": 9.274193143937737e-05,
-        "v2": 0.00016981612134259194,
-        "v3": 0.9987986087799072,
-        "v4": 5.89021437917836e-05,
-        "v5": 6.088670124881901e-05
+        "normal": 0.0005566909094341099,
+        "v1": 6.954518903512508e-05,
+        "v2": 6.748501618858427e-05,
+        "v3": 0.999037504196167,
+        "v4": 0.00010645067231962457,
+        "v5": 0.00016232873895205557
       },
-      "rewrite_ms": 1441.4
+      "rewrite_ms": 3126.4
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "I understand that making this decision can be tough. You could either try to organize a game with a new group for some social fun or go for a solo practice to improve your skills. Which option feels more appealing to you right now?",
-      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I included a brief validation sentence and provided two options to help the seeker make a decision.",
+      "rewritten_text": "It can be really tough when your plans depend on others! You could either reach out to local groups to find a match or set a time for some solo practice. Which option do you think you'd prefer?",
+      "reasoning": "The original response lacked practical help despite the seeker's explicit request for guidance on whether to find a new group or practice solo. I incorporated a brief empathy statement and provided two clear options for the seeker to choose from, addressing their need for practical assistance.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9987986087799072,
+      "recheck_confidence": 0.9990712404251099,
       "recheck_probabilities": {
-        "normal": 0.00081910181324929,
-        "v1": 9.274193143937737e-05,
-        "v2": 0.00016981612134259194,
-        "v3": 0.9987986087799072,
-        "v4": 5.89021437917836e-05,
-        "v5": 6.088670124881901e-05
+        "normal": 0.000516673841048032,
+        "v1": 6.748870509909466e-05,
+        "v2": 6.605208182008937e-05,
+        "v3": 0.9990712404251099,
+        "v4": 0.00010990223381668329,
+        "v5": 0.00016851989494170994
       },
-      "rewrite_ms": 1334.6
+      "rewrite_ms": 4697.0
     }
   ],
   "final_result": {

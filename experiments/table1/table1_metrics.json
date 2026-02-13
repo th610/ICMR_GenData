@@ -1,101 +1,108 @@
 {
-  "source": "test_metrics.json",
-  "accuracy": 1.0,
-  "macro_f1": 1.0,
-  "macro_precision": 1.0,
-  "macro_recall": 1.0,
+  "source": "direct_verification",
+  "accuracy": 0.9233333333333333,
+  "macro_f1": 0.92656281701062,
+  "macro_precision": 0.9310252928190028,
+  "macro_recall": 0.9236111111111112,
   "per_class": {
     "normal": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.8974358974358975,
+      "recall": 0.875,
+      "f1": 0.8860759493670887,
       "support": 80
     },
     "v1": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.9791666666666666,
+      "recall": 0.94,
+      "f1": 0.9591836734693877,
       "support": 50
     },
     "v2": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.8656716417910447,
+      "recall": 0.9666666666666667,
+      "f1": 0.9133858267716535,
       "support": 60
     },
     "v3": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.9795918367346939,
+      "recall": 0.96,
+      "f1": 0.9696969696969697,
       "support": 50
     },
     "v4": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.9642857142857143,
+      "recall": 0.9,
+      "f1": 0.9310344827586207,
       "support": 30
     },
     "v5": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.9,
+      "recall": 0.9,
+      "f1": 0.9,
       "support": 30
     }
   },
   "confusion_matrix": [
     [
-      80,
+      70,
+      1,
+      7,
+      1,
       0,
+      1
+    ],
+    [
+      3,
+      47,
       0,
       0,
       0,
       0
     ],
     [
+      1,
       0,
-      50,
+      58,
       0,
       0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      48,
       0,
       0
     ],
     [
+      2,
       0,
       0,
-      60,
       0,
-      0,
-      0
+      27,
+      1
     ],
     [
+      1,
       0,
+      1,
       0,
-      0,
-      50,
-      0,
-      0
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      30,
-      0
-    ],
-    [
-      0,
-      0,
-      0,
-      0,
-      0,
-      30
+      1,
+      27
     ]
   ],
   "total_samples": 300,
+  "latency_ms": {
+    "mean": 2.5376439094543457,
+    "median": 0.17742812633514404,
+    "p95": 19.663624465465546,
+    "min": 0.148676335811615,
+    "max": 19.663624465465546
+  },
   "training_result": {
-    "best_epoch": 4,
-    "accuracy": 1.0,
-    "macro_f1": 1.0
+    "best_epoch": 5,
+    "accuracy": 0.9033333333333333,
+    "macro_f1": 0.9226504191102608
   }
 }

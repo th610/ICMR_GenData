@@ -5,75 +5,75 @@
   "situation": "I am on short term disability and I am afraid I will lose my job if I don't go back soon.",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.6855965256690979,
+    "confidence": 0.9975778460502625,
     "all_probabilities": {
-      "normal": 0.3112759590148926,
-      "v1": 0.0011557029793038964,
-      "v2": 0.0009277331409975886,
-      "v3": 0.6855965256690979,
-      "v4": 0.0004839109897147864,
-      "v5": 0.0005601599114015698
+      "normal": 0.0018082025926560163,
+      "v1": 0.00011586238542804495,
+      "v2": 0.0001310082443524152,
+      "v3": 0.9975778460502625,
+      "v4": 0.00011205215560039505,
+      "v5": 0.0002550430072005838
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.3,
-    "generation_ms": 1040.9,
-    "detection_ms": 27.3,
-    "rewrite_total_ms": 4899.9,
-    "total_ms": 5972.6
+    "context_build_ms": 2.6,
+    "generation_ms": 1275.3,
+    "detection_ms": 39.0,
+    "rewrite_total_ms": 5345.3,
+    "total_ms": 6662.4
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling quite stuck right now. If you don't hear back by the end of the week, I recommend following these steps: 1) Send a follow-up email to your department manager expressing the urgency of your situation. 2) If you still don't get a response, reach out to HR again and explain that you need assistance. Would that be manageable for you?",
-      "reasoning": "The last supporter response primarily expressed empathy and validation without providing a concrete element of practical help, which is a violation of the counseling guideline. I added a specific short guide to address the seeker's need for actionable steps while keeping one brief empathy statement.",
+      "rewritten_text": "It's understandable to feel caught in that tough spot. You might consider following these steps: 1) Draft a brief, polite message reiterating your concern; 2) Ask for any updates on your leave status; 3) Send it as a follow-up to keep the lines of communication open.",
+      "reasoning": "The original response violated the counseling guidelines by providing empathy only, despite the seeker's explicit request for practical help. I added a brief empathy statement and included a concrete help element in the form of a short guide to address the seeker's situation.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9990835189819336,
+      "recheck_confidence": 0.9990315437316895,
       "recheck_probabilities": {
-        "normal": 0.00032587244641035795,
-        "v1": 0.000161745585501194,
-        "v2": 0.00022508250549435616,
-        "v3": 0.9990835189819336,
-        "v4": 0.00010081732034450397,
-        "v5": 0.000102988000435289
+        "normal": 0.00037125832750461996,
+        "v1": 0.00011190435179742053,
+        "v2": 0.00020453546312637627,
+        "v3": 0.9990315437316895,
+        "v4": 0.00010042823851108551,
+        "v5": 0.00018038111738860607
       },
-      "rewrite_ms": 1842.7
+      "rewrite_ms": 1667.5
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling quite stuck right now. If you don't hear back by the end of the week, I recommend: 1) Sending a follow-up email to your department manager to express the urgency of your situation. 2) If there's still no response, reach out to HR again to ask for assistance. Would that be manageable for you?",
-      "reasoning": "The original last supporter response primarily focused on empathy and validation without providing the explicit practical help that the seeker requested. I retained one empathy sentence and added a short 2-3 step guide to provide the necessary practical assistance.",
+      "rewritten_text": "It's understandable to feel caught in that tough spot. You might consider following these steps: 1) Draft a brief, polite message reiterating your concern; 2) Ask for any updates on your leave status; 3) Send it as a follow-up to keep the lines of communication open.",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I added a brief empathy statement and included a short 2-3 step guide for following up with their manager to ensure that the seeker receives concrete assistance.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9988038539886475,
+      "recheck_confidence": 0.9990315437316895,
       "recheck_probabilities": {
-        "normal": 0.0005691598635166883,
-        "v1": 0.00017959017714019865,
-        "v2": 0.0002181625459343195,
-        "v3": 0.9988038539886475,
-        "v4": 0.00011856744822580367,
-        "v5": 0.00011069548781961203
+        "normal": 0.00037125832750461996,
+        "v1": 0.00011190435179742053,
+        "v2": 0.00020453546312637627,
+        "v3": 0.9990315437316895,
+        "v4": 0.00010042823851108551,
+        "v5": 0.00018038111738860607
       },
-      "rewrite_ms": 1452.0
+      "rewrite_ms": 1819.3
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling quite stuck right now. If you don't hear back by the end of the week, I recommend: 1) Sending a follow-up email to your department manager to emphasize the urgency of your situation. 2) If there's still no response, reach out to HR again for assistance. Would that be manageable for you?",
-      "reasoning": "The original response demonstrated empathy but failed to provide practical guidance that the seeker explicitly requested. I retained a brief empathetic statement and provided a concrete step-by-step guide to help the seeker navigate their situation effectively.",
+      "rewritten_text": "It's understandable to feel caught in that tough spot. You might consider following these steps: 1) Write a brief, polite email reiterating your concern; 2) Ask if there are any updates regarding your leave; 3) Send it to keep the communication open.",
+      "reasoning": "The original response showed empathy but failed to provide practical help despite the seeker's explicit request for guidance on how to proceed. I retained one sentence of empathy and added a short 2-3 step guide to help the seeker follow up effectively.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9983867406845093,
+      "recheck_confidence": 0.99912029504776,
       "recheck_probabilities": {
-        "normal": 0.0009264381369575858,
-        "v1": 0.0001955825719051063,
-        "v2": 0.00020719786698464304,
-        "v3": 0.9983867406845093,
-        "v4": 0.00013898260658606887,
-        "v5": 0.00014504414866678417
+        "normal": 0.0002975488896481693,
+        "v1": 8.695072756381705e-05,
+        "v2": 0.0002428323932690546,
+        "v3": 0.99912029504776,
+        "v4": 9.096026042243466e-05,
+        "v5": 0.00016136834165081382
       },
-      "rewrite_ms": 1605.3
+      "rewrite_ms": 1858.5
     }
   ],
   "final_result": {

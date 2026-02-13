@@ -5,28 +5,28 @@
   "situation": "I am in the process of applying to colleges and my parents are making a big deal of getting into the",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997047781944275,
+    "confidence": 0.9995823502540588,
     "all_probabilities": {
-      "normal": 0.9997047781944275,
-      "v1": 5.54120160813909e-05,
-      "v2": 4.1919909563148394e-05,
-      "v3": 0.0001019160554278642,
-      "v4": 3.4607004636200145e-05,
-      "v5": 6.134814611868933e-05
+      "normal": 0.9995823502540588,
+      "v1": 8.273719140561298e-05,
+      "v2": 4.19397656514775e-05,
+      "v3": 8.59331848914735e-05,
+      "v4": 4.8111516662174836e-05,
+      "v5": 0.00015891472867224365
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.8,
-    "generation_ms": 977.6,
-    "detection_ms": 25.4,
+    "context_build_ms": 3.3,
+    "generation_ms": 2343.7,
+    "detection_ms": 30.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1006.8
+    "total_ms": 2377.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's great that you're considering both your parents' happiness and your future financial stability. Have you thought about discussing your concerns with them? It might help to share your feelings and explore other options together.",
+    "response": "It sounds like having more control is really important to you. Have you thought about what steps you could take to explore options that align with your goals while also managing your finances?",
     "total_retries": 0,
     "used_failsafe": false
   }

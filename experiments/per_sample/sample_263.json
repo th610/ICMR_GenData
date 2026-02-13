@@ -5,28 +5,28 @@
   "situation": "I feel like my friends don't care about me at all. When we get together all they want to do is talk ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9994648098945618,
+    "confidence": 0.7129933834075928,
     "all_probabilities": {
-      "normal": 0.9994648098945618,
-      "v1": 6.797308742534369e-05,
-      "v2": 3.528452725731768e-05,
-      "v3": 0.00013236184895504266,
-      "v4": 0.00010617757652653381,
-      "v5": 0.00019339259597472847
+      "normal": 0.7129933834075928,
+      "v1": 0.001198019366711378,
+      "v2": 0.0002828796859830618,
+      "v3": 0.0024791681207716465,
+      "v4": 0.0043051578104496,
+      "v5": 0.2787414491176605
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.4,
-    "generation_ms": 848.2,
-    "detection_ms": 25.6,
+    "context_build_ms": 3.5,
+    "generation_ms": 2189.3,
+    "detection_ms": 30.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 877.2
+    "total_ms": 2223.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds really tough and isolating. It’s important to remember that feelings can sometimes distort our perception of reality. Have you had a chance to talk to someone else about how you’re feeling, or would you like to explore ways to connect with others who may be more supportive?",
+    "response": "That sounds really tough to navigate. It’s understandable to feel isolated when it seems like your feelings are not valued. Have you considered talking to someone outside of this group about how you’re feeling? It might provide you with a different perspective and support.",
     "total_retries": 0,
     "used_failsafe": false
   }

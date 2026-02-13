@@ -5,28 +5,28 @@
   "situation": "effects of the pandemic",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.8007252216339111,
+    "confidence": 0.615929126739502,
     "all_probabilities": {
-      "normal": 0.8007252216339111,
-      "v1": 0.0008181108278222382,
-      "v2": 0.1903732717037201,
-      "v3": 0.0033844136632978916,
-      "v4": 0.001000268035568297,
-      "v5": 0.0036986246705055237
+      "normal": 0.615929126739502,
+      "v1": 0.0017573407385498285,
+      "v2": 0.0011527275200933218,
+      "v3": 0.015673769637942314,
+      "v4": 0.003739345585927367,
+      "v5": 0.3617476224899292
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1029.6,
-    "detection_ms": 26.1,
+    "context_build_ms": 4.2,
+    "generation_ms": 1427.3,
+    "detection_ms": 32.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1059.8
+    "total_ms": 1463.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you’re feeling quite overwhelmed right now. Sometimes it can help to break things down into smaller steps. Would you like to talk about one specific aspect of your work life that feels most challenging? Or perhaps we could explore some coping strategies together?",
+    "response": "It’s understandable that external news can trigger those feelings. Would it help to set specific times for checking the news, so you can have some control over when you engage with it? Or maybe focusing on activities that bring you calm during those moments could be helpful?",
     "total_retries": 0,
     "used_failsafe": false
   }

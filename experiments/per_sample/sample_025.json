@@ -5,28 +5,28 @@
   "situation": "My current position will be eliminated within 6 months. I am very anxious and concerned that I will ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996585845947266,
+    "confidence": 0.9996962547302246,
     "all_probabilities": {
-      "normal": 0.9996585845947266,
-      "v1": 0.00011294530122540891,
-      "v2": 3.6464040022110566e-05,
-      "v3": 0.00010684008157113567,
-      "v4": 3.997129533672705e-05,
-      "v5": 4.525869735516608e-05
+      "normal": 0.9996962547302246,
+      "v1": 9.097814472625032e-05,
+      "v2": 4.1102208342636004e-05,
+      "v3": 6.723057595081627e-05,
+      "v4": 4.3021213059546426e-05,
+      "v5": 6.144353392301127e-05
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 3.9,
-    "generation_ms": 839.2,
-    "detection_ms": 27.6,
+    "generation_ms": 1404.8,
+    "detection_ms": 30.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 870.7
+    "total_ms": 1439.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's great to hear you're exploring project management and freelance opportunities! Those can be exciting paths. What do you think might be the first step you could take towards applying for one of these roles? Maybe updating your resume or reaching out to someone in the field for advice?",
+    "response": "It's great that you have a clear priority! One approach could be to research the typical salary range for the roles you're interested in. You could also consider reaching out to professionals in the field for insights. Would you like help brainstorming ways to gather this information?",
     "total_retries": 0,
     "used_failsafe": false
   }

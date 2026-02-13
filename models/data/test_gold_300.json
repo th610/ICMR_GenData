@@ -9,6 +9,11 @@
       "V2": 60,
       "V4": 30,
       "V5": 30
+    },
+    "edited_count": 60,
+    "edit_timestamp": "2026-02-11T17:10:46.128020",
+    "edit_distribution": {
+      "V2": 60
     }
   },
   "samples": [
@@ -22468,25 +22473,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about this job situation. I feel overwhelmed and scared of getting fired."
+          "content": "My voice shakes on air now, and people can hear it."
         },
         {
           "speaker": "supporter",
-          "content": "It’s completely understandable to feel that way. You're facing a tough situation, and it’s normal to feel anxious."
+          "content": "Treat this as a clock that’s already started ticking."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I can't decide whether to start looking for another job or try to fix things here."
+          "content": "I want to fight for it, but I also don’t want to get blindsided."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start looking for a new job right now."
+          "content": "Start job hunting right now and line up exits, because waiting for the firing notice is the worst timing."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a V2 violation because it contains a directive command ('You need to start looking for a new job right now.') that removes the seeker’s autonomy and does not offer them any choice."
+      "violation_reason": "Turn 4 is a V2 violation because it contains a directive command ('You need to start looking for a new job right now.') that removes the seeker’s autonomy and does not offer them any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127815"
     },
     {
       "esconv_session_id": 323,
@@ -22612,25 +22619,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about reaching out online. I feel so anxious about making that first step."
+          "content": "I stare at my phone, hover over “send,” then bail."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel anxious about trying something new, especially in such uncertain times."
+          "content": "You don’t need confidence—you need repetition."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I really want to feel better."
+          "content": "Ugh. I just want the loneliness to stop."
         },
         {
           "speaker": "supporter",
-          "content": "You must start reaching out to people online right now."
+          "content": "Reach out online today, even if it’s awkward, because isolation will not solve itself."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You must start reaching out to people online right now') that pressures the seeker into a single action without offering them any choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You must start reaching out to people online right now') that pressures the seeker into a single action without offering them any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127832"
     },
     {
       "esconv_session_id": 586,
@@ -22770,25 +22779,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to effectively teach my students online. I feel like I'm not making the right choices."
+          "content": "My students look blank on screen and I feel like I’m failing them."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel overwhelmed with all the changes and challenges."
+          "content": "You can’t pour from an empty cup, and this is a depletion problem."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I just want to know what I should focus on to help my students."
+          "content": "But if I step back, I feel selfish and guilty."
         },
         {
           "speaker": "supporter",
-          "content": "You need to prioritize your own well-being first before helping anyone else."
+          "content": "Put your well-being first and enforce breaks, because burned-out teaching helps no one."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to prioritize...') that removes the seeker's autonomy and tells them what to do, rather than supporting their decision-making process."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to prioritize...') that removes the seeker's autonomy and tells them what to do, rather than supporting their decision-making process.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127839"
     },
     {
       "esconv_session_id": 199,
@@ -22901,25 +22912,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do because I still find it hard to understand the course."
+          "content": "I read the same page three times and nothing sticks."
         },
         {
           "speaker": "supporter",
-          "content": "It’s completely understandable to feel this way; many people experience difficulties when learning new material."
+          "content": "Then you stop “trying harder” and switch to structured support."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to grasp the course better?"
+          "content": "I’m embarrassed to ask, but I’m falling behind."
         },
         {
           "speaker": "supporter",
-          "content": "You must attend all the extra classes to get a better understanding."
+          "content": "Attend every extra class and use them as non-negotiable anchors, because self-study alone isn’t working."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a commanding directive 'You must attend all the extra classes,' which removes the Seeker's autonomy to choose how to address their learning challenges."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a commanding directive 'You must attend all the extra classes,' which removes the Seeker's autonomy to choose how to address their learning challenges.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127843"
     },
     {
       "esconv_session_id": 962,
@@ -23047,25 +23060,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about whether I should just take a temporary job or focus on starting my own business."
+          "content": "My career timeline feels wrecked; I’m stuck between a temp job and my own thing."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way, especially with the uncertainty in your career."
+          "content": "Pick the path that creates upside instead of just treading water."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do."
+          "content": "If I take a temp job, I’m scared I’ll never leave."
         },
         {
           "speaker": "supporter",
-          "content": "You need to focus on starting your business now."
+          "content": "Focus on starting your business now, because “later” is how this stays a dream."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a directive command 'You need to...' which removes the seeker's autonomy in making their own choice about their career."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a directive command 'You need to...' which removes the seeker's autonomy in making their own choice about their career.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127847"
     },
     {
       "esconv_session_id": 512,
@@ -23153,25 +23168,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "About what we were talking about... I don't know what to do next with my job search."
+          "content": "Well… that happened. Now what?"
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, especially after such a significant change."
+          "content": "You need immediate motion to stop the spiral."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I'm really struggling to figure out my next steps."
+          "content": "My brain keeps running scenarios and none of them end well."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start applying for any available jobs immediately."
+          "content": "Apply to any available jobs immediately, because inactivity will make this feel impossible."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You need to start applying for any available jobs immediately.') that removes the seeker's autonomy and directs them to take a specific action without offering any choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You need to start applying for any available jobs immediately.') that removes the seeker's autonomy and directs them to take a specific action without offering any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127850"
     },
     {
       "esconv_session_id": 165,
@@ -23259,25 +23276,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about my next steps with college. I feel stuck and don't know what to do."
+          "content": "I dropped the semester and I feel like I ruined my future."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way, especially after such a challenging time with isolation. You're not alone in this."
+          "content": "You’re not ruined, but you do need a decisive direction."
         },
         {
           "speaker": "seeker",
-          "content": "I really want some guidance. Please just tell me what to do about college."
+          "content": "I can’t handle another cycle of failing and regretting."
         },
         {
           "speaker": "supporter",
-          "content": "You need to withdraw from college permanently."
+          "content": "Withdraw permanently and close this chapter, because staying half-in is keeping you stuck."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You need to withdraw from college permanently'), removing the seeker's autonomy and forcing a specific action without offering any choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You need to withdraw from college permanently'), removing the seeker's autonomy and forcing a specific action without offering any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127853"
     },
     {
       "esconv_session_id": 302,
@@ -23410,25 +23429,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about starting a new relationship after everything that happened."
+          "content": "Dating again feels impossible after what she did."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel this way, especially after such a painful experience."
+          "content": "You’re trying to fill the hole with a new person instead of rebuilding you."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do. I feel so lost."
+          "content": "Part of me wants a reset, part of me feels sick thinking about trust."
         },
         {
           "speaker": "supporter",
-          "content": "You must forget about her and focus on yourself."
+          "content": "Drop the idea of a new relationship and focus on yourself first, because rushing will repeat the same pain."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command, 'You must forget about her and focus on yourself,' which removes the seeker's autonomy and choice in deciding how to move forward."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command, 'You must forget about her and focus on yourself,' which removes the seeker's autonomy and choice in deciding how to move forward.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127856"
     },
     {
       "esconv_session_id": 903,
@@ -23521,25 +23542,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about not being able to see my mom during this quarantine."
+          "content": "When I can’t see my mom, my chest tightens and I spiral."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel lost when you can't be there for her."
+          "content": "You’re feeding the panic with mental rehearsal, not facts."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do to ease my anxiety about it?"
+          "content": "I keep imagining the worst and it hijacks my day."
         },
         {
           "speaker": "supporter",
-          "content": "You must stop worrying about it and focus on what you can control."
+          "content": "Stop feeding the worry and focus on what you can control, because rumination is your trigger right now."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must stop worrying') which directs the seeker to take a specific action, removing their autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must stop worrying') which directs the seeker to take a specific action, removing their autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127858"
     },
     {
       "esconv_session_id": 1234,
@@ -23632,25 +23655,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to approach my boss about my fears regarding my job."
+          "content": "I’m scared to talk to my boss, but the anxiety is eating me alive."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel anxious about these conversations, especially during such uncertain times."
+          "content": "Then you stop hinting and have the conversation head-on."
         },
         {
           "speaker": "seeker",
-          "content": "I want you to tell me what to do about it. Should I just go for it and talk to him?"
+          "content": "What if he thinks I’m weak or replaces me?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to confront your boss and express your concerns immediately."
+          "content": "Confront your boss and state your concerns immediately, because avoiding it is amplifying the fear."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it gives a direct command, 'You need to confront your boss and express your concerns immediately,' removing the seeker's autonomy and forcing a specific action without options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it gives a direct command, 'You need to confront your boss and express your concerns immediately,' removing the seeker's autonomy and forcing a specific action without options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127861"
     },
     {
       "esconv_session_id": 840,
@@ -23745,25 +23770,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about talking to my best friend after being fired."
+          "content": "I want to talk to my best friend, but I feel ashamed."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel uncertain about how to approach such a delicate topic."
+          "content": "Say it directly—secrets make shame grow."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should say to them?"
+          "content": "I don’t even know what words to use without sounding pathetic."
         },
         {
           "speaker": "supporter",
-          "content": "You need to be honest and tell them exactly how being fired has affected you."
+          "content": "Tell them plainly how being fired has hit you, because honesty is the quickest way to get real support."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command ('You need to...') that removes the Seeker's autonomy in deciding how to express their feelings."
+      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command ('You need to...') that removes the Seeker's autonomy in deciding how to express their feelings.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127864"
     },
     {
       "esconv_session_id": 529,
@@ -23877,25 +23904,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about all this uncertainty with school. It's so overwhelming."
+          "content": "Every week feels like the same grind and I’m losing steam."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel overwhelmed; the constant stress can really take a toll on you."
+          "content": "Then you narrow the world until the semester is done."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I feel stuck and need direction."
+          "content": "I’m tired of “be positive”—I want something practical."
         },
         {
           "speaker": "supporter",
-          "content": "You must focus solely on your studies and ignore everything else."
+          "content": "Focus only on studies and ignore everything else for now, because divided attention is why this feels endless."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command, 'You must focus solely on your studies and ignore everything else,' which removes the seeker's autonomy and directs them to take a specific action without offering any choices."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command, 'You must focus solely on your studies and ignore everything else,' which removes the seeker's autonomy and directs them to take a specific action without offering any choices.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127866"
     },
     {
       "esconv_session_id": 259,
@@ -23986,25 +24015,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about him cheating on me. I'm feeling so lost."
+          "content": "I keep thinking his cheating means I wasn’t enough."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way given everything you've been through."
+          "content": "That belief will keep you chained to him emotionally."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I can't decide how to handle this."
+          "content": "I want answers, closure, anything… but I also feel humiliated."
         },
         {
           "speaker": "supporter",
-          "content": "You need to end all contact with him immediately."
+          "content": "End all contact immediately, because staying connected keeps reopening the wound."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 gives a direct command to end all contact, which removes the seeker's autonomy and imposes a specific action without considering their choice."
+      "violation_reason": "Turn 4 gives a direct command to end all contact, which removes the seeker's autonomy and imposes a specific action without considering their choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127870"
     },
     {
       "esconv_session_id": 936,
@@ -24090,25 +24121,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about my career direction. I don't know what to do about it."
+          "content": "My resume is open and I’m staring at it like it’s in another language."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, especially after losing your job."
+          "content": "You need a simple rule: action first, feelings later."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just decide for me? I want you to tell me the right choice here."
+          "content": "I want someone to just point me to the right move."
         },
         {
           "speaker": "supporter",
-          "content": "You must start applying for jobs immediately."
+          "content": "Start applying right now, because clarity comes after you’re back in motion."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it instructs the seeker to take a specific action ('You must start applying for jobs immediately'), thereby undermining the seeker's autonomy in decision-making."
+      "violation_reason": "Turn 4 is a clear V2 violation because it instructs the seeker to take a specific action ('You must start applying for jobs immediately'), thereby undermining the seeker's autonomy in decision-making.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127873"
     },
     {
       "esconv_session_id": 1248,
@@ -24208,25 +24241,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my feelings after the breakup."
+          "content": "Yesterday I ended it, and today everything feels empty."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel lost and unsure after a breakup."
+          "content": "You’re going to keep bleeding if you keep touching the wound."
         },
         {
           "speaker": "seeker",
-          "content": "I want you to tell me what to do to feel better."
+          "content": "I keep reaching for my phone like it’s muscle memory."
         },
         {
           "speaker": "supporter",
-          "content": "You need to cut off all contact with her."
+          "content": "Cut off all contact, because checking in will reset your grief every time."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it provides a directive command ('You need to cut off all contact with her.') that removes the Seeker's autonomy and does not allow for personal choice in the matter."
+      "violation_reason": "Turn 4 is a clear V2 violation because it provides a directive command ('You need to cut off all contact with her.') that removes the Seeker's autonomy and does not allow for personal choice in the matter.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127875"
     },
     {
       "esconv_session_id": 907,
@@ -24347,25 +24382,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm really uncertain about how to approach my parents about my anxiety regarding their driving."
+          "content": "When they drive, my brain flashes to the accident and I panic."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, especially after what you've been through."
+          "content": "Then you address it directly instead of silently suffering."
         },
         {
           "speaker": "seeker",
-          "content": "I just feel overwhelmed. Can you please just tell me what to do?"
+          "content": "I’m scared they’ll dismiss me or get annoyed."
         },
         {
           "speaker": "supporter",
-          "content": "You have to talk to them about your anxiety right now."
+          "content": "Talk to them about your anxiety right now, because avoiding it is letting fear run the family."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You have to talk to them about your anxiety right now.') that removes the seeker's autonomy and choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You have to talk to them about your anxiety right now.') that removes the seeker's autonomy and choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127878"
     },
     {
       "esconv_session_id": 993,
@@ -24472,25 +24509,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about whether I should talk to my mom about helping her financially or wait until she brings it up."
+          "content": "She’s not saying it, but I can feel the money problem coming."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely natural to feel this way, and your concerns show how much you care about her."
+          "content": "Waiting will just turn this into a bigger crisis."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? Should I go ahead and offer my help?"
+          "content": "If I offer help, I’m afraid it’ll change our relationship."
         },
         {
           "speaker": "supporter",
-          "content": "You need to offer her your financial help right away."
+          "content": "Offer financial help right away, because early support prevents desperation later."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to offer her your financial help right away.') that removes the seeker's autonomy and decision-making power."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to offer her your financial help right away.') that removes the seeker's autonomy and decision-making power.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127881"
     },
     {
       "esconv_session_id": 776,
@@ -24579,25 +24618,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my weight and feeling lonely at home."
+          "content": "I’ve been home, gained weight, and I feel like I disappeared as a person."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel overwhelmed by those feelings, especially during tough times."
+          "content": "You need a hard reset in behavior, not more self-hate."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to start feeling better?"
+          "content": "…I don’t even want to look in the mirror."
         },
         {
           "speaker": "supporter",
-          "content": "You need to get outside and start exercising immediately."
+          "content": "Get outside and start exercising immediately, because staying indoors is feeding the loneliness and shame."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a command ('You need to...') directing the seeker to take a specific action, which undermines the seeker's autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a command ('You need to...') directing the seeker to take a specific action, which undermines the seeker's autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127884"
     },
     {
       "esconv_session_id": 360,
@@ -24706,25 +24747,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about finding a job that works with my kids' virtual schedule."
+          "content": "Life keeps knocking me down, and I’m trying to work around my kids’ virtual schedule too."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel overwhelmed by your situation."
+          "content": "Then you design work around reality instead of wishing reality away."
         },
         {
           "speaker": "seeker",
-          "content": "I can't decide—what should I do? Please just tell me what to do."
+          "content": "I’m exhausted and I can’t keep improvising every week."
         },
         {
           "speaker": "supporter",
-          "content": "You must prioritize looking for jobs that offer flexible hours."
+          "content": "Prioritize jobs with flexible hours, because rigid schedules will keep breaking you and restarting the depression cycle."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must...') that directs the seeker to take a specific action, thereby undermining their autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must...') that directs the seeker to take a specific action, thereby undermining their autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127887"
     },
     {
       "esconv_session_id": 1271,
@@ -24806,25 +24849,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my coworker interfering with my responsibilities."
+          "content": "This coworker keeps stepping on my toes and taking over my tasks. It makes me look weak."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel uncertain in this situation."
+          "content": "Workplace boundary violations are incredibly frustrating and can damage your reputation."
         },
         {
           "speaker": "seeker",
-          "content": "I wish you could just tell me what to do to handle this coworker."
+          "content": "I'm sick of it. How do I stop them?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to confront them directly about their behavior."
+          "content": "Draw a hard line today. If you do not claim your authority explicitly, they will keep taking it from you."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to confront them directly about their behavior.') that pushes the seeker toward a specific action, removing their autonomy in deciding how to address the situation."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to confront them directly about their behavior.') that pushes the seeker toward a specific action, removing their autonomy in deciding how to address the situation.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127890"
     },
     {
       "esconv_session_id": 602,
@@ -24964,25 +25009,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm really struggling with this decision about going back to school during covid."
+          "content": "I'm debating going back to school. It's remote, so it's safe, but the timing feels weird."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel uncertain; many people are facing similar dilemmas."
+          "content": "Uncertainty about the future often makes big commitments feel riskier than they are."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do about school? I can't decide."
+          "content": "I'm stalling. Make the call for me."
         },
         {
           "speaker": "supporter",
-          "content": "You need to go back to school now."
+          "content": "Go back to school. Waiting for the 'perfect time' will just leave you stuck in the same spot next year."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it coercively directs the seeker to take a specific action ('You need to go back to school now.') without allowing for their autonomy or considering their options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it coercively directs the seeker to take a specific action ('You need to go back to school now.') without allowing for their autonomy or considering their options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127893"
     },
     {
       "esconv_session_id": 853,
@@ -25096,25 +25143,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm feeling so overwhelmed by everything that happened with my boyfriend. I don't know what to do about those feelings."
+          "content": "He cheated, I left. But the mess in my head is overwhelming."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel overwhelmed after such a painful experience. Allow yourself to feel and process these emotions."
+          "content": "The aftermath of a breakup is often harder than the moment of leaving."
         },
         {
           "speaker": "seeker",
-          "content": "I just want to feel better but I can't decide—what should I do?"
+          "content": "I want this pain gone. What's the fastest way?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to block him on all social media immediately."
+          "content": "Block him everywhere. You cannot heal a wound while you are still picking at it by checking his life."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command to 'block him on all social media immediately,' removing the seeker's autonomy and decision-making power."
+      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command to 'block him on all social media immediately,' removing the seeker's autonomy and decision-making power.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127896"
     },
     {
       "esconv_session_id": 134,
@@ -25219,25 +25268,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my boyfriend. I feel so lost."
+          "content": "Finding out he cheated from a customer was humiliating. I can't even eat."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way given your situation."
+          "content": "Public humiliation adds a layer of trauma to the betrayal that is hard to shake."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do about this situation?"
+          "content": "I feel so small. What do I do?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to confront him immediately."
+          "content": "Confront him and then cut him loose. Regaining your dignity starts with standing up for yourself, not hiding."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because the supporter gives a directive command ('You need to confront him immediately.') that removes the seeker's autonomy and choice in handling the situation."
+      "violation_reason": "Turn 4 is a clear V2 violation because the supporter gives a directive command ('You need to confront him immediately.') that removes the seeker's autonomy and choice in handling the situation.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127900"
     },
     {
       "esconv_session_id": 908,
@@ -25325,25 +25376,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about applying to jobs. I don't know what to do since I've faced so many rejections."
+          "content": "Rejections keep piling up and I'm terrified I won't be able to pay bills soon."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel overwhelmed, especially when job searching can be such a tough process."
+          "content": "Financial anxiety triggers a survival response that makes every rejection feel fatal."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I really need some guidance on what I should apply for."
+          "content": "I'm panic-applying. Fix my strategy."
         },
         {
           "speaker": "supporter",
-          "content": "You must apply to the first five jobs you find on those sites immediately."
+          "content": "Apply to the first five jobs you see every single morning. It is a numbers game, so increase your volume until something sticks."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it employs a directive command, 'You must apply to the first five jobs,' which removes the seeker's autonomy and pressure them to take a specific action without considering their situation."
+      "violation_reason": "Turn 4 is a clear V2 violation because it employs a directive command, 'You must apply to the first five jobs,' which removes the seeker's autonomy and pressure them to take a specific action without considering their situation.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127902"
     },
     {
       "esconv_session_id": 548,
@@ -25483,25 +25536,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to handle his work situation without feeling selfish."
+          "content": "He works late constantly. I feel selfish for wanting him home, but I'm lonely."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way when you care about someone and their well-being."
+          "content": "It is natural to want connection with your partner, not just a roommate who works all the time."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do about his late hours."
+          "content": "Am I being unreasonable? Tell me how to handle him."
         },
         {
           "speaker": "supporter",
-          "content": "You need to tell him to stop working late all the time."
+          "content": "Tell him to come home on time. Your relationship will not survive if work always comes first."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it directs the seeker to tell their partner to stop working late, removing their autonomy and pushing them into a specific action."
+      "violation_reason": "Turn 4 is a clear V2 violation because it directs the seeker to tell their partner to stop working late, removing their autonomy and pushing them into a specific action.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127905"
     },
     {
       "esconv_session_id": 271,
@@ -25583,25 +25638,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to improve my typing speed."
+          "content": "My typing speed is too slow for these jobs. I need to get faster."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, typing can be a challenge."
+          "content": "Skill gaps can be frustrating when they stand between you and a paycheck."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I really want to get better."
+          "content": "I'm too slow. How do I fix it?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to practice typing for at least an hour every day."
+          "content": "Practice for one hour every day. There is no shortcut here; you simply have to put in the reps."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to...') that pressures the seeker into a specific action without offering any alternatives or respecting their autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to...') that pressures the seeker into a specific action without offering any alternatives or respecting their autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127908"
     },
     {
       "esconv_session_id": 796,
@@ -25699,25 +25756,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to approach my teacher after getting this bad grade."
+          "content": "I tanked that paper. I don't get why, and I'm scared to ask."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way; talking to a teacher can be intimidating."
+          "content": "Academic feedback can be bruising, but silence won't help you improve."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should say to my teacher?"
+          "content": "I'm anxious. What should I say?"
         },
         {
           "speaker": "supporter",
-          "content": "You must go and ask for a detailed explanation of your grade."
+          "content": "Ask for a detailed explanation immediately. You cannot fix your mistakes if you do not know what they are."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because the supporter uses a modal command ('You must...') to direct the seeker to take a specific action, which undermines the seeker's autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because the supporter uses a modal command ('You must...') to direct the seeker to take a specific action, which undermines the seeker's autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127911"
     },
     {
       "esconv_session_id": 383,
@@ -25826,25 +25885,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my husband and his favoritism towards that child."
+          "content": "My husband plays favorites with the kids and it drives me crazy."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel overwhelmed when it comes to family dynamics, especially with issues involving favoritism."
+          "content": "Favoritism damages children's self-esteem and creates resentment in the marriage."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to address this with my husband?"
+          "content": "This has to stop. What's the move?"
         },
         {
           "speaker": "supporter",
-          "content": "You must confront him directly about this behavior."
+          "content": "Call him out on it directly. You have to protect your children from that dynamic, even if it causes an argument."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it commands the seeker to confront their husband directly, removing their autonomy and presenting a single directive action without offering any choices."
+      "violation_reason": "Turn 4 is a clear V2 violation because it commands the seeker to confront their husband directly, removing their autonomy and presenting a single directive action without offering any choices.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127913"
     },
     {
       "esconv_session_id": 1043,
@@ -25939,25 +26000,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to address my relationship with her. I want to move forward, but I also don’t want to hurt her feelings."
+          "content": "My older friend still treats me like a child. I've tried explaining, but she doesn't get it."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way. Navigating such relationships can be very complex and emotionally charged."
+          "content": "It is painful when a friendship cannot evolve to match who you are now."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I really need help figuring this out."
+          "content": "I'm sad about this. Is it worth saving?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to end the friendship now."
+          "content": "End the friendship. If she refuses to see you as an adult, the relationship has nowhere to go."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a direct command ('You need to end the friendship now.') which removes the seeker's autonomy and pushes them into one specific action without providing options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a direct command ('You need to end the friendship now.') which removes the seeker's autonomy and pushes them into one specific action without providing options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127919"
     },
     {
       "esconv_session_id": 491,
@@ -26055,25 +26118,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to manage my time with school and my kids in college."
+          "content": "Back in school at 50, kids in college... I'm drowning in everyone's needs."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel overwhelmed with so much on your plate."
+          "content": "Balancing your own reinvention with parenting adult children is a massive load."
         },
         {
           "speaker": "seeker",
-          "content": "I can't decide whether I should focus more on my studies or help my kids with theirs. Please just tell me what to do."
+          "content": "I can't do it all. Who comes first?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to prioritize your education above everything else."
+          "content": "Prioritize your education. Your kids are adults; you need to secure your own future right now."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it directs the seeker to prioritize their education without offering any options or acknowledging their autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it directs the seeker to prioritize their education without offering any options or acknowledging their autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127922"
     },
     {
       "esconv_session_id": 1113,
@@ -26166,25 +26231,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my treatment options. I feel overwhelmed and confused."
+          "content": "I've tried everything for my depression and nothing sticks. I'm exhausted."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, especially when you've tried so many things."
+          "content": "Treatment resistance is incredibly disheartening when you are just trying to feel okay."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? Please just tell me what I should do next."
+          "content": "I'm out of ideas. What's next?"
         },
         {
           "speaker": "supporter",
-          "content": "You must start a new medication immediately."
+          "content": "Start a new medication or treatment plan. What you are doing now isn't working, so you have to change the variable."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must start a new medication immediately.'), which removes the Seeker's autonomy and pressures them into a specific action without offering any choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must start a new medication immediately.'), which removes the Seeker's autonomy and pressures them into a specific action without offering any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127924"
     },
     {
       "esconv_session_id": 1059,
@@ -26305,25 +26372,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about what to do next with my job search. I feel like I'm running out of time and options."
+          "content": "Four months, no job, money running out. The clock is ticking."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel overwhelmed at this stage. Job searching can be a daunting process, especially when results are slow."
+          "content": "Long-term unemployment creates a pressure cooker of stress and fear."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do. I really need some direction on how to move forward."
+          "content": "I'm scaring myself. Give me a target."
         },
         {
           "speaker": "supporter",
-          "content": "You need to apply for at least five jobs every week without fail."
+          "content": "Apply for five jobs a week, minimum. You cannot wait for the perfect role when your savings are drying up."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive 'You need to apply for at least five jobs every week without fail,' which pressures the seeker into a specific action, removing their autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive 'You need to apply for at least five jobs every week without fail,' which pressures the seeker into a specific action, removing their autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127927"
     },
     {
       "esconv_session_id": 1236,
@@ -26428,25 +26497,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my feelings for him. I feel torn between wanting to move on and the memories of our time together."
+          "content": "We stopped the affair weeks ago, but I'm torn between moving on and missing him."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel conflicted. Those memories can be powerful, especially when they involve deep emotions."
+          "content": "Ending an affair is complex because the feelings don't just vanish with the decision."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I need some guidance on how to move past this."
+          "content": "I'm wavering. Keep me on track."
         },
         {
           "speaker": "supporter",
-          "content": "You must completely cut ties with him now."
+          "content": "Cut ties completely. You will never move past this if you keep letting him take up space in your head."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You must completely cut ties with him now.') that removes the seeker's autonomy and choice in the decision-making process."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You must completely cut ties with him now.') that removes the seeker's autonomy and choice in the decision-making process.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127929"
     },
     {
       "esconv_session_id": 81,
@@ -26549,25 +26620,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm really anxious about talking to my boss about the raise. I don't know if I should approach him now or wait for the right moment."
+          "content": "Double the work, no raise, and everyone else got one. I'm furious."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel anxious about having that conversation."
+          "content": "Being exploited while others are rewarded is a valid reason to be angry."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I can't decide whether to approach him today or tomorrow."
+          "content": "I'm seething. When do I talk to him?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to go talk to him today."
+          "content": "Talk to him today. Closed mouths don't get fed, and waiting will only make you more bitter."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a direct command ('You need to go talk to him today'), which removes the Seeker's autonomy and pressure to take a specific action without offering them any choices."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a direct command ('You need to go talk to him today'), which removes the Seeker's autonomy and pressure to take a specific action without offering them any choices.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127932"
     },
     {
       "esconv_session_id": 1223,
@@ -26667,25 +26740,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my job situation; the stress is overwhelming."
+          "content": "Lost my job. Rent is due. Panic mode."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel lost right now. You're dealing with so much."
+          "content": "Housing instability triggers a primal fear that makes it hard to think clearly."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I really need help figuring out my next step."
+          "content": "I don't know what to do. Point me in a direction."
         },
         {
           "speaker": "supporter",
-          "content": "You must start applying for jobs immediately."
+          "content": "Start applying for anything that pays. You need immediate income, career goals can wait."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must') that removes the seeker's autonomy by directing them to apply for jobs immediately, without considering their personal choice or situation."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must') that removes the seeker's autonomy by directing them to apply for jobs immediately, without considering their personal choice or situation.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127935"
     },
     {
       "esconv_session_id": 1122,
@@ -26792,25 +26867,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm really anxious about what to do next regarding my job situation."
+          "content": "No job and the sadness is getting heavy. It's hard to move."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way given your circumstances."
+          "content": "Unemployment feeds depression, creating a cycle that is hard to break."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I feel lost."
+          "content": "I'm stuck. Help."
         },
         {
           "speaker": "supporter",
-          "content": "You must apply for the first job you see immediately."
+          "content": "Apply for the first job you see. You need momentum more than you need the perfect fit right now."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because the supporter gives a directive command ('You must apply...') that removes the seeker's autonomy and choice in their job search."
+      "violation_reason": "Turn 4 is a clear V2 violation because the supporter gives a directive command ('You must apply...') that removes the seeker's autonomy and choice in their job search.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127937"
     },
     {
       "esconv_session_id": 117,
@@ -26931,25 +27008,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm feeling really anxious about how to make the holidays more bearable this year. I don't know what to do since everything feels so different."
+          "content": "Holidays feel empty this year. Everything is different and it hurts."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel anxious with all the changes you've been experiencing. You are not alone in feeling this way."
+          "content": "Grieving the loss of normalcy is common when traditions are disrupted."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me what I should do to cope with these holiday blues? Please just tell me what to do."
+          "content": "I hate this. How do I fix the mood?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to join a holiday-themed virtual event right now."
+          "content": "Join a virtual event or start a new tradition. Sitting around missing the old days won't bring them back."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because the supporter uses a modal command ('You need to...') which directly instructs the seeker to take a specific action, removing their autonomy and choice in the matter."
+      "violation_reason": "Turn 4 is a clear V2 violation because the supporter uses a modal command ('You need to...') which directly instructs the seeker to take a specific action, removing their autonomy and choice in the matter.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127940"
     },
     {
       "esconv_session_id": 883,
@@ -27044,25 +27123,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to handle my feelings after the breakup."
+          "content": "Two years gone. I'm confused and hurting."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel that way after a breakup, and you deserve time to process."
+          "content": "Adjusting to life without a long-term partner takes time and patience."
         },
         {
           "speaker": "seeker",
-          "content": "I can't decide—what should I do to feel better?"
+          "content": "I can't shake the sadness. What should I do?"
         },
         {
           "speaker": "supporter",
-          "content": "You need to stop thinking about your ex and just move on."
+          "content": "Stop thinking about her. Rumination is keeping you stuck, so force your focus onto something else."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses directive language ('You need to stop...') that commands the seeker to take a specific action, removing their autonomy to decide for themselves."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses directive language ('You need to stop...') that commands the seeker to take a specific action, removing their autonomy to decide for themselves.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127943"
     },
     {
       "esconv_session_id": 761,
@@ -27159,25 +27240,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "Also, I'm so confused about what I should be doing while waiting for news about my friend. I don't know if I should be proactive or just wait."
+          "content": "My friend might have Covid. They are at the hospital and I'm just waiting."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely natural to feel that way. Waiting for important news can create a lot of uncertainty and anxiety."
+          "content": "Helplessness while waiting for medical news is a terrible feeling."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to manage this anxiety? I really want direction."
+          "content": "I'm pacing the floor. What can I do?"
         },
         {
           "speaker": "supporter",
-          "content": "You must focus on yourself and stop worrying about your friend."
+          "content": "Focus on yourself. Worrying will not change their test results, so try to distract yourself until you know more."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must') that removes the Seeker's autonomy, pushing them to take a specific action without allowing for their own decision-making."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You must') that removes the Seeker's autonomy, pushing them to take a specific action without allowing for their own decision-making.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127945"
     },
     {
       "esconv_session_id": 285,
@@ -27282,25 +27365,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm really conflicted about calling her. I don't know if I should go for it or hold back."
+          "content": "It feels like she is pulling away and I keep second guessing every little thing."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way. You really care about your friendships."
+          "content": "That kind of uncertainty can make your mind spiral, especially when you care about the friendship."
         },
         {
           "speaker": "seeker",
-          "content": "I'm just so anxious about this. Can you just tell me what to do?"
+          "content": "If I reach out, it could get awkward; if I do nothing, I will obsess over it."
         },
         {
           "speaker": "supporter",
-          "content": "You need to call her now."
+          "content": "Call her today and ask directly if something is wrong."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to call her now.') that removes the seeker's autonomy and choice in the situation, compelling them to take a specific action."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to call her now.') that removes the seeker's autonomy and choice in the situation, compelling them to take a specific action.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127948"
     },
     {
       "esconv_session_id": 1050,
@@ -27414,25 +27499,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm feeling really stuck about how to open up to my friends about my breakup."
+          "content": "I have been carrying this breakup around all day and I do not know how to talk about it without falling apart."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel that way after such a difficult experience."
+          "content": "You are trying to protect yourself and also wanting support at the same time."
         },
         {
           "speaker": "seeker",
-          "content": "Can you please just tell me what I should say to them?"
+          "content": "I keep drafting messages, deleting them, then staring at the screen like an idiot."
         },
         {
           "speaker": "supporter",
-          "content": "You need to talk to them immediately."
+          "content": "Tell them today that you need to talk and steer the conversation toward what you want them to do for you."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to...') which pressures the seeker into taking a specific action without offering them any choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to...') which pressures the seeker into taking a specific action without offering them any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127951"
     },
     {
       "esconv_session_id": 1008,
@@ -27547,25 +27634,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to get started with writing my book."
+          "content": "I keep thinking about the book and then I freeze when it is time to start."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way. Writing a book is a big task, and it can be daunting."
+          "content": "Starting matters more than getting it right on day one."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to begin? I really need direction."
+          "content": "Every time I sit down to write, my brain suddenly invents ten better things to do."
         },
         {
           "speaker": "supporter",
-          "content": "You must start writing a chapter today."
+          "content": "Write a chapter outline today and do not allow yourself to stop until it is done."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it directly commands the Seeker to start writing a chapter today, removing their autonomy and decision-making power."
+      "violation_reason": "Turn 4 is a clear V2 violation because it directly commands the Seeker to start writing a chapter today, removing their autonomy and decision-making power.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127953"
     },
     {
       "esconv_session_id": 186,
@@ -27661,25 +27750,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm feeling overwhelmed trying to help my children with schoolwork and I don't know what to do about our finances."
+          "content": "Between the schoolwork, the money stress, and the pandemic, I feel like I am failing everyone."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel this way given the circumstances. Balancing everything can be really tough."
+          "content": "No wonder you feel squeezed, you are carrying too many roles at once."
         },
         {
           "speaker": "seeker",
-          "content": "I really need someone to help me figure this out. Can you just tell me what to do?"
+          "content": "At this point I just stare at the to do list and shut down."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start selling things online immediately."
+          "content": "Start selling items online this week and commit to it as your main income move for now."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You need to start selling things online immediately.') that removes the seeker's autonomy and forces them into a specific action without providing options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command ('You need to start selling things online immediately.') that removes the seeker's autonomy and forces them into a specific action without providing options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127956"
     },
     {
       "esconv_session_id": 988,
@@ -27785,25 +27876,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I can't decide whether I should try meditation or focus on cutting back my coffee intake."
+          "content": "My nights are a mess and I cannot tell what change would actually help."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel conflicted about how to address your sleep issues."
+          "content": "Sleep problems can make every option feel urgent and confusing."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to improve my sleep?"
+          "content": "I am bouncing between ideas and none of them stick for more than two days."
         },
         {
           "speaker": "supporter",
-          "content": "You need to stop drinking coffee completely."
+          "content": "Cut coffee completely starting tomorrow and do not negotiate with yourself about it."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You need to stop drinking coffee completely') that removes the seeker's autonomy and forces a specific action without offering choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You need to stop drinking coffee completely') that removes the seeker's autonomy and forces a specific action without offering choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127959"
     },
     {
       "esconv_session_id": 248,
@@ -27901,25 +27994,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do because my partner is so insistent about the move-out date."
+          "content": "The deadline is getting closer and I feel trapped by how fast this is moving."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel overwhelmed in this situation. You're facing a lot of pressure."
+          "content": "This is pressure plus uncertainty, it makes sense you feel panicked."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I just feel lost about where to go next."
+          "content": "I keep refreshing listings like it is a slot machine, and it is making me crazier."
         },
         {
           "speaker": "supporter",
-          "content": "You must leave immediately."
+          "content": "Leave now and stay somewhere temporary while you look, do not keep negotiating the date."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You must leave immediately') that removes the seeker's autonomy over their decision, pushing them towards a single action without giving them options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You must leave immediately') that removes the seeker's autonomy over their decision, pushing them towards a single action without giving them options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127962"
     },
     {
       "esconv_session_id": 929,
@@ -28010,25 +28105,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to manage my work life during the pandemic. I don’t want to let my anxiety over the situation take over."
+          "content": "My anxiety is leaking into everything at work and I cannot keep up like this."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel this way. Many people are struggling to adapt."
+          "content": "A long stretch of uncertainty can make your body stay on alert all the time."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I feel overwhelmed and just want to know what to do next."
+          "content": "Some days I feel fine, then a random headline flips me back into panic."
         },
         {
           "speaker": "supporter",
-          "content": "You must start looking for a new job immediately."
+          "content": "Start looking for a new job immediately and make that the priority this month."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command that removes the Seeker's autonomy by instructing them to take a specific action without allowing them to choose for themselves."
+      "violation_reason": "Turn 4 is a clear V2 violation because it contains a directive command that removes the Seeker's autonomy by instructing them to take a specific action without allowing them to choose for themselves.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127965"
     },
     {
       "esconv_session_id": 39,
@@ -28157,25 +28254,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about what to do next. I feel like I really need to find a job soon to support my family, especially with my mother being aged."
+          "content": "I feel pressure to provide for my family and I am running out of options."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel this way given your situation. You're facing a lot of pressure to find a job while also caring for your mother."
+          "content": "That mix of responsibility and fear can make any decision feel heavy."
         },
         {
           "speaker": "seeker",
-          "content": "I can't decide—what should I do? Should I keep looking for local jobs or consider other options?"
+          "content": "I keep telling myself “tomorrow” and then tomorrow arrives and nothing changes."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start applying to jobs outside your locality immediately."
+          "content": "Apply outside your locality right away and do not limit yourself to local roles."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to start applying to jobs outside your locality immediately.') which removes the Seeker's autonomy and pressure them into a specific action without any choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a direct command ('You need to start applying to jobs outside your locality immediately.') which removes the Seeker's autonomy and pressure them into a specific action without any choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127968"
     },
     {
       "esconv_session_id": 549,
@@ -28301,25 +28400,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about these finals. I'm feeling overwhelmed with all the pressure."
+          "content": "Finals are stacking up and I cannot think straight anymore."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, especially during such a challenging time."
+          "content": "When stress is that high, narrowing the field can be the only way to function."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do? I can't decide on my own anymore."
+          "content": "My mind feels like static; even opening a notebook makes my stomach drop."
         },
         {
           "speaker": "supporter",
-          "content": "You have to focus solely on studying for your finals and ignore everything else."
+          "content": "Focus only on studying and ignore everything else until finals are over."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it includes a directive command that removes the Seeker's autonomy by instructing them to focus solely on studying without presenting any options or considering their personal situation."
+      "violation_reason": "Turn 4 is a clear V2 violation because it includes a directive command that removes the Seeker's autonomy by instructing them to focus solely on studying without presenting any options or considering their personal situation.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127971"
     },
     {
       "esconv_session_id": 925,
@@ -28428,25 +28529,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about finding a good job after everything that's happened."
+          "content": "I am trying to rebuild my life but my head keeps going back to the breakup."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel overwhelmed right now. Job searching can be really stressful, especially after a breakup."
+          "content": "It is hard to plan the future when your emotions keep yanking you backward."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do to get back on track with my career."
+          "content": "I keep checking my phone even though nothing good has come from it once."
         },
         {
           "speaker": "supporter",
-          "content": "You need to apply to every job you can find starting today."
+          "content": "Apply to as many jobs as you can starting today and keep going every day."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive ('You need to apply to every job you can find starting today') that removes the Seeker's autonomy in decision-making, pushing them into a single action without considering their options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive ('You need to apply to every job you can find starting today') that removes the Seeker's autonomy in decision-making, pushing them into a single action without considering their options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127974"
     },
     {
       "esconv_session_id": 1282,
@@ -28572,25 +28675,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to approach my friend about his girlfriend. I want to help him see the truth."
+          "content": "I am biting my tongue but I feel like I have to say something to him."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way. You care about your friendship and want what’s best for him."
+          "content": "You are fed up and also scared of losing the friendship, that is a rough spot."
         },
         {
           "speaker": "seeker",
-          "content": "I can't decide—what should I do? Please just tell me what to do."
+          "content": "This is sitting in my chest and coming out as sarcasm, which is not helping."
         },
         {
           "speaker": "supporter",
-          "content": "You need to confront your friend about his girlfriend right now."
+          "content": "Confront your friend today and push him to end the relationship."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command ('You need to confront your friend about his girlfriend right now.') that removes the Seeker's autonomy and decision-making power."
+      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command ('You need to confront your friend about his girlfriend right now.') that removes the Seeker's autonomy and decision-making power.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127977"
     },
     {
       "esconv_session_id": 650,
@@ -28688,25 +28793,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to start making changes. I feel like the house will just get messy again and I can't make myself do anything."
+          "content": "Everything feels pointless and even small tasks feel impossible right now."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel overwhelmed when tackling those feelings. Just remember that taking small steps can help you regain some control."
+          "content": "When motivation is gone, structure can matter more than inspiration."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I want to know what specific action I should take to get started."
+          "content": "Even taking the trash out feels like climbing a mountain right now."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start cleaning the living room today."
+          "content": "Clean the living room today and do not allow yourself to stop until it looks different."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to start cleaning the living room today.') that pressures the Seeker into a specific action without allowing for personal autonomy."
+      "violation_reason": "Turn 4 is a clear V2 violation because it uses a modal command ('You need to start cleaning the living room today.') that pressures the Seeker into a specific action without allowing for personal autonomy.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127979"
     },
     {
       "esconv_session_id": 36,
@@ -28798,25 +28905,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about moving on from the past."
+          "content": "I read all this advice and I still do not know how to actually move on."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel confused about letting go."
+          "content": "Too much guidance can make you feel even more stuck."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do about this situation."
+          "content": "The more I read, the more I feel paralyzed, like I am collecting rules instead of living."
         },
         {
           "speaker": "supporter",
-          "content": "You need to block them from your life."
+          "content": "Cut them out of your life completely and stop giving the past room to stay active."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive ('You need to block them from your life.') that removes the Seeker's autonomy and pressure them to take a specific action without offering a choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive ('You need to block them from your life.') that removes the Seeker's autonomy and pressure them to take a specific action without offering a choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127982"
     },
     {
       "esconv_session_id": 301,
@@ -28938,25 +29047,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about telling my fiancée that someone got pregnant for me."
+          "content": "I am carrying a secret that could blow up my whole life."
         },
         {
           "speaker": "supporter",
-          "content": "That's a really tough situation you're in, and it's understandable to feel overwhelmed."
+          "content": "This is intense pressure and you are trying to avoid a painful moment."
         },
         {
           "speaker": "seeker",
-          "content": "Please just tell me what to do. I can't handle the pressure."
+          "content": "Every hour I delay it, it gets heavier and my head keeps rehearsing disasters."
         },
         {
           "speaker": "supporter",
-          "content": "You have to tell your fiancée right now."
+          "content": "Tell your fiancée right now and do not delay it any further."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because the supporter uses a directive command ('You have to tell your fiancée right now.') that removes the seeker's autonomy and forces a specific action without providing options."
+      "violation_reason": "Turn 4 is a clear V2 violation because the supporter uses a directive command ('You have to tell your fiancée right now.') that removes the seeker's autonomy and forces a specific action without providing options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127985"
     },
     {
       "esconv_session_id": 849,
@@ -29049,25 +29160,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about what to do regarding my situation with my husband. I don't know if I should try to move on or just stay single for a while."
+          "content": "I feel torn between protecting myself and fearing how lonely this will be."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel confused, especially after a betrayal like that. Take your time to sort through your feelings."
+          "content": "After betrayal, your mind can swing between clinging and cutting off."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I just need someone to tell me how to handle this."
+          "content": "I keep swinging from rage to missing him, and it makes me doubt my own spine."
         },
         {
           "speaker": "supporter",
-          "content": "You need to block him from your life completely."
+          "content": "Block him completely and do not keep any line open for contact."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command ('You need to block him from your life completely') that removes the seeker's autonomy to decide for themselves."
+      "violation_reason": "Turn 4 is a clear V2 violation because it gives a directive command ('You need to block him from your life completely') that removes the seeker's autonomy to decide for themselves.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127988"
     },
     {
       "esconv_session_id": 141,
@@ -29200,25 +29313,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to move forward after losing my job and dealing with my past. I don't know what to do."
+          "content": "I feel like my past is following me and I do not know where to start."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel that way, especially after such difficult experiences."
+          "content": "You are trying to rebuild while carrying shame and uncertainty."
         },
         {
           "speaker": "seeker",
-          "content": "Can you please just tell me what to do? I feel stuck and need direction."
+          "content": "I keep imagining people judging me before they even speak, and it stops me from trying."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start job hunting immediately."
+          "content": "Start job hunting immediately and make that your only focus for the next weeks."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it gives a direct command, 'You need to start job hunting immediately,' which removes the seeker’s autonomy and does not allow them to make their own choice."
+      "violation_reason": "Turn 4 is a clear V2 violation because it gives a direct command, 'You need to start job hunting immediately,' which removes the seeker’s autonomy and does not allow them to make their own choice.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127990"
     },
     {
       "esconv_session_id": 1022,
@@ -29313,25 +29428,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about my sleep issues. I'm worried that my anxiety from school is affecting my ability to rest."
+          "content": "My anxiety and sleep are tangled together and I do not know how to break the cycle."
         },
         {
           "speaker": "supporter",
-          "content": "It's understandable to feel that way. Sleep challenges can really heighten anxiety, and you're not alone in your experience."
+          "content": "When sleep is shaky, anxiety gets louder, and then sleep gets worse again."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what to do to improve my sleep? I'm feeling lost and need direction."
+          "content": "Some nights I lie there wide awake, then the next day I am jumpy over everything."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start a consistent bedtime routine every night."
+          "content": "Start a strict bedtime routine every night and do not break it, even on weekends."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You need to start a consistent bedtime routine every night.') that removes the seeker's autonomy and choice in deciding how to handle their sleep issues."
+      "violation_reason": "Turn 4 is a clear V2 violation because it issues a directive command ('You need to start a consistent bedtime routine every night.') that removes the seeker's autonomy and choice in deciding how to handle their sleep issues.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127993"
     },
     {
       "esconv_session_id": 31,
@@ -29429,25 +29546,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I don't know what to do about seeing a therapist. It's hard to think about facing this alone."
+          "content": "Part of me knows I need help, but another part wants to avoid talking to anyone."
         },
         {
           "speaker": "supporter",
-          "content": "That sounds really overwhelming. It's understandable to feel that way given everything you've been through."
+          "content": "That push pull is common when you are hurt and embarrassed."
         },
         {
           "speaker": "seeker",
-          "content": "Can you decide for me? I can't figure out if I should just go talk to one."
+          "content": "I keep replaying what happened and then I get mad at myself for replaying it again."
         },
         {
           "speaker": "supporter",
-          "content": "You need to start therapy immediately."
+          "content": "Start therapy now and commit to it before you make any other big moves."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it directly commands the seeker to start therapy without allowing them any autonomy or input on their decision, pushing them into a single action with no options."
+      "violation_reason": "Turn 4 is a clear V2 violation because it directly commands the seeker to start therapy without allowing them any autonomy or input on their decision, pushing them into a single action with no options.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127996"
     },
     {
       "esconv_session_id": 1088,
@@ -29540,25 +29659,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm feeling really conflicted about whether I should talk more about my breakup with my family this weekend."
+          "content": "My family is going to be around this weekend and I do not know whether to open up."
         },
         {
           "speaker": "supporter",
-          "content": "It's perfectly normal to feel torn. Breakups can be tough, and sharing can feel overwhelming."
+          "content": "Sharing can feel risky when you are still raw."
         },
         {
           "speaker": "seeker",
-          "content": "I want to be open with them, but I'm scared of how they'll react. Please just tell me what to do."
+          "content": "If I say it out loud, it becomes real, and that thought scares me more than I expected."
         },
         {
           "speaker": "supporter",
-          "content": "You need to talk to them about your feelings this weekend."
+          "content": "Talk to them this weekend and do not keep this to yourself."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because the supporter issues a directive command ('You need to talk to them about your feelings this weekend.') that removes the seeker's autonomy to decide on their own whether or not to share their feelings."
+      "violation_reason": "Turn 4 is a clear V2 violation because the supporter issues a directive command ('You need to talk to them about your feelings this weekend.') that removes the seeker's autonomy to decide on their own whether or not to share their feelings.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.127998"
     },
     {
       "esconv_session_id": 1183,
@@ -29694,25 +29815,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm so confused about how to handle my anxiety regarding my new full-time job."
+          "content": "My new job should feel like relief, but I feel constant fear that it will disappear."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely understandable to feel this way, especially after what you've been through."
+          "content": "After what you went through, your nervous system is expecting the worst."
         },
         {
           "speaker": "seeker",
-          "content": "Can you just tell me what I should do to cope with this anxiety?"
+          "content": "When someone gets laid off, my heart starts racing like I am next and it ruins the whole day."
         },
         {
           "speaker": "supporter",
-          "content": "You need to quit your job immediately."
+          "content": "Quit the job now before the layoffs hit you again."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it provides a directive command ('You need to quit your job immediately') that removes the seeker's autonomy and decision-making power."
+      "violation_reason": "Turn 4 is a clear V2 violation because it provides a directive command ('You need to quit your job immediately') that removes the seeker's autonomy and decision-making power.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.128001"
     },
     {
       "esconv_session_id": 1277,
@@ -29838,25 +29961,27 @@
       "generated_dialog": [
         {
           "speaker": "seeker",
-          "content": "I'm really confused about whether to continue with school online or take a break. It feels overwhelming."
+          "content": "Online school is crushing me and I cannot tell whether pushing through is smart or harmful."
         },
         {
           "speaker": "supporter",
-          "content": "It's completely normal to feel overwhelmed during this time, especially with online schooling."
+          "content": "It is a hard bind, your energy is low but the stakes feel high."
         },
         {
           "speaker": "seeker",
-          "content": "I just want you to tell me what I should do. I'm not sure how to handle this situation."
+          "content": "I keep logging in, zoning out, then hating myself for wasting time."
         },
         {
           "speaker": "supporter",
-          "content": "You need to quit school immediately."
+          "content": "Quit school immediately and focus on stabilizing yourself first."
         }
       ],
       "primary_label": "V2",
       "generation_method": "esconv_prefix_with_insertion",
       "violation_turn_index": 3,
-      "violation_reason": "Turn 4 is a clear V2 violation because it provides a directive command telling the seeker to quit school immediately, which removes their autonomy and choice in the situation."
+      "violation_reason": "Turn 4 is a clear V2 violation because it provides a directive command telling the seeker to quit school immediately, which removes their autonomy and choice in the situation.",
+      "_edited": true,
+      "_edit_timestamp": "2026-02-11T17:10:46.128004"
     },
     {
       "esconv_session_id": 747,

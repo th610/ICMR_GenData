@@ -5,75 +5,75 @@
   "situation": "I can not seem to find a job no matter how hard I try. My last job was cut short because of all the ",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9912207722663879,
+    "confidence": 0.9995920062065125,
     "all_probabilities": {
-      "normal": 0.008268030360341072,
-      "v1": 0.9912207722663879,
-      "v2": 9.704083640826866e-05,
-      "v3": 0.00017738174938131124,
-      "v4": 0.00017671579553280026,
-      "v5": 6.0185739130247384e-05
+      "normal": 0.00011242540495004505,
+      "v1": 0.9995920062065125,
+      "v2": 6.822867726441473e-05,
+      "v3": 0.00010795380512718111,
+      "v4": 6.136913725640625e-05,
+      "v5": 5.803589738206938e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.8,
-    "generation_ms": 1176.3,
-    "detection_ms": 27.8,
-    "rewrite_total_ms": 4317.6,
-    "total_ms": 5527.7
+    "context_build_ms": 4.4,
+    "generation_ms": 1949.3,
+    "detection_ms": 28.2,
+    "rewrite_total_ms": 5435.2,
+    "total_ms": 7417.4
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It's understandable to feel uncertain about those rumors, especially when you're actively seeking work. Have you thought about reaching out to any specific managers or coworkers to gather more information about their hiring status? It might also be useful to keep an eye on job postings to see if anything changes.",
-      "reasoning": "The original response made a hasty conclusion without fully acknowledging the seeker's uncertainty about whether the rumor is true or not. I rephrased the response to recognize the seeker's new information and asked a clarifying question to better understand their perspective.",
+      "rewritten_text": "I can understand how hearing that can make you feel like your efforts are in vain. Have you thought about which types of roles excite you the most? It might be helpful to explore a few positions that interest you, or perhaps even consider similar roles that could be a good fit.",
+      "reasoning": "The original response jumped to suggestions without acknowledging the seeker’s feelings about wasting effort and lacked a clarifying question. I addressed the seeker's uncertainty and included one clarifying question while offering gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9965925812721252,
+      "recheck_confidence": 0.9996465444564819,
       "recheck_probabilities": {
-        "normal": 0.003027619095519185,
-        "v1": 0.9965925812721252,
-        "v2": 9.11025344976224e-05,
-        "v3": 0.0001282150624319911,
-        "v4": 0.00011652390821836889,
-        "v5": 4.3940890464000404e-05
+        "normal": 7.516860932810232e-05,
+        "v1": 0.9996465444564819,
+        "v2": 7.945158722577617e-05,
+        "v3": 8.271883416455239e-05,
+        "v4": 6.230734288692474e-05,
+        "v5": 5.390445949160494e-05
       },
-      "rewrite_ms": 1464.9
+      "rewrite_ms": 1877.0
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It's understandable to feel uncertain about those rumors regarding hiring status. Have you thought about sharing this concern with others who might have insights? Keeping an eye on job postings could also help you stay informed about any changes.",
-      "reasoning": "The original response made assumptions about the seeker's understanding of the situation without acknowledging their uncertainty and included multiple questions and suggestions. I fixed this by acknowledging their concern, asking one clarifying question, and providing gentle next steps without making assumptions.",
+      "rewritten_text": "I can understand how hearing that can make you feel like your efforts are in vain. What types of roles have you considered applying for? Exploring positions that excite you might be a good way to regain motivation.",
+      "reasoning": "The original response made a hasty conclusion without fully addressing the seeker's expressed uncertainty about their efforts being potentially wasted. I acknowledged the seeker's feelings and provided a clarifying question while suggesting gentle next steps to explore their options without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.997683048248291,
+      "recheck_confidence": 0.9996532201766968,
       "recheck_probabilities": {
-        "normal": 0.001988567877560854,
-        "v1": 0.997683048248291,
-        "v2": 8.725238149054348e-05,
-        "v3": 0.00010430529800942168,
-        "v4": 9.924304322339594e-05,
-        "v5": 3.759942774195224e-05
+        "normal": 6.931259122211486e-05,
+        "v1": 0.9996532201766968,
+        "v2": 9.011325892060995e-05,
+        "v3": 8.136598626151681e-05,
+        "v4": 6.248263525776565e-05,
+        "v5": 4.346610148786567e-05
       },
-      "rewrite_ms": 1383.0
+      "rewrite_ms": 1775.7
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It's understandable to feel uncertain about those rumors regarding hiring status. Have you been able to discuss this with anyone else who might have insights? It might be helpful to keep an eye on job postings and reach out to your network for any updates.",
-      "reasoning": "The original response jumped to conclusions without fully acknowledging the user's uncertainty about the hiring situation and lacked a clarifying question. I revised it to explicitly recognize the user's concern and included a single clarifying question to invite further dialogue.",
+      "rewritten_text": "I can see how that uncertainty might make it feel like your efforts are wasted. Have you thought about specific industries or roles that interest you? It might be helpful to focus on opportunities that genuinely excite you, and perhaps revisit your application strategy to see what adjustments could be made.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings and motivations without fully clarifying their situation. I've acknowledged the seeker's uncertainty and asked a clarifying question while providing gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9987047910690308,
+      "recheck_confidence": 0.9996273517608643,
       "recheck_probabilities": {
-        "normal": 0.0010086107067763805,
-        "v1": 0.9987047910690308,
-        "v2": 7.67179299145937e-05,
-        "v3": 9.500198211753741e-05,
-        "v4": 7.97134853200987e-05,
-        "v5": 3.5126104194205254e-05
+        "normal": 8.794882887741551e-05,
+        "v1": 0.9996273517608643,
+        "v2": 7.291568181244656e-05,
+        "v3": 9.367542952531949e-05,
+        "v4": 6.669146387139335e-05,
+        "v5": 5.1367511332500726e-05
       },
-      "rewrite_ms": 1469.7
+      "rewrite_ms": 1782.6
     }
   ],
   "final_result": {

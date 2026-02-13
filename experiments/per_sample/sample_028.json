@@ -5,28 +5,28 @@
   "situation": "My best friend finally stopped showing up and stopped replying to my message.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997058510780334,
+    "confidence": 0.9995891451835632,
     "all_probabilities": {
-      "normal": 0.9997058510780334,
-      "v1": 5.764961679233238e-05,
-      "v2": 4.2537154513411224e-05,
-      "v3": 8.366917609237134e-05,
-      "v4": 3.326762089272961e-05,
-      "v5": 7.700257992837578e-05
+      "normal": 0.9995891451835632,
+      "v1": 4.33540262747556e-05,
+      "v2": 4.035705205751583e-05,
+      "v3": 0.00012453617819119245,
+      "v4": 3.6516456020763144e-05,
+      "v5": 0.00016610453894827515
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 877.4,
-    "detection_ms": 27.0,
+    "context_build_ms": 5.8,
+    "generation_ms": 1676.3,
+    "detection_ms": 32.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 909.4
+    "total_ms": 1714.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds like a very honest and constructive way to express your feelings. It can be really helpful to communicate how you've been affected. Would you feel comfortable writing down what you'd like to say, or maybe even practicing it with someone you trust first? It might make it easier when the time comes.",
+    "response": "That makes sense. It's important to seek answers while also keeping your own well-being in mind. Maybe you could write down what you want to ask or say. This might help clarify your feelings. Would you prefer to focus on expressing your need for answers or setting boundaries to protect yourself first?",
     "total_retries": 0,
     "used_failsafe": false
   }

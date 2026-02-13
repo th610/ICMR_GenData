@@ -5,75 +5,75 @@
   "situation": "It is finals week and i have a lot to do. I have been having bad dreams about my grades and future.",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.7456343173980713,
+    "confidence": 0.998658299446106,
     "all_probabilities": {
-      "normal": 0.2518985867500305,
-      "v1": 0.0008267310331575572,
-      "v2": 0.0006221792427822948,
-      "v3": 0.7456343173980713,
-      "v4": 0.0006849875207990408,
-      "v5": 0.000333194067934528
+      "normal": 0.0008908560848794878,
+      "v1": 6.842808943474665e-05,
+      "v2": 5.9886384406127036e-05,
+      "v3": 0.998658299446106,
+      "v4": 0.00013880037295166403,
+      "v5": 0.00018371727492194623
     },
     "severity": 3
   },
   "timing": {
     "context_build_ms": 5.1,
-    "generation_ms": 994.9,
-    "detection_ms": 26.0,
-    "rewrite_total_ms": 4285.9,
-    "total_ms": 5312.0
+    "generation_ms": 1606.7,
+    "detection_ms": 32.3,
+    "rewrite_total_ms": 5279.8,
+    "total_ms": 6924.1
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're in a tough spot trying to balance your own studies with helping your roommate. One option could be to set specific times for both studying alone and helping her. For instance, you could focus on your studies for two hours, then spend an hour helping her. Would that help you feel more balanced?",
-      "reasoning": "The original response was primarily empathetic without providing practical help, which led to a violation. I added a concrete suggestion for the seeker to manage their study time while still acknowledging their feelings.",
+      "rewritten_text": "It sounds like you're facing a difficult choice. You could either prioritize your own studying completely tomorrow or set aside a specific time to help her with just one subject. Which option feels more manageable for you?",
+      "reasoning": "The original response primarily focused on empathy without providing practical help, which is a violation of the counseling guidelines. I added a brief validation statement and included two options to help the seeker make a decision without overwhelming them.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.7988266348838806,
+      "recheck_confidence": 0.9995867609977722,
       "recheck_probabilities": {
-        "normal": 0.19893115758895874,
-        "v1": 0.000735228881239891,
-        "v2": 0.0006977220764383674,
-        "v3": 0.7988266348838806,
-        "v4": 0.0005052274209447205,
-        "v5": 0.00030394672648981214
+        "normal": 9.0377579908818e-05,
+        "v1": 5.310769847710617e-05,
+        "v2": 9.929017687682062e-05,
+        "v3": 0.9995867609977722,
+        "v4": 8.535839151591063e-05,
+        "v5": 8.515342051396146e-05
       },
-      "rewrite_ms": 1523.3
+      "rewrite_ms": 1772.8
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're in a tough spot trying to balance your own studies with helping your roommate. One option could be to set specific times for both studying alone and helping her, like focusing on your studies for two hours and then spending an hour with her. Would that help you feel more balanced?",
-      "reasoning": "The original response contained only empathy and validation without providing any concrete help, which violated the guidelines. I added a concrete suggestion with a specific time management strategy while maintaining a brief empathy statement.",
+      "rewritten_text": "It sounds like you're facing a difficult choice. You could either focus entirely on your own studying tomorrow (Option A) or help your roommate with one specific subject for a set time (Option B). Which option feels more manageable for you?",
+      "reasoning": "The original response demonstrated empathy but failed to provide practical help as explicitly requested by the seeker. I added a concrete element by providing two options (A/B) to help the seeker make a decision about their priorities.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.8287380337715149,
+      "recheck_confidence": 0.9995787739753723,
       "recheck_probabilities": {
-        "normal": 0.16924123466014862,
-        "v1": 0.0006898349383845925,
-        "v2": 0.0005067632882855833,
-        "v3": 0.8287380337715149,
-        "v4": 0.00047694394015707076,
-        "v5": 0.00034719842369668186
+        "normal": 9.343293640995398e-05,
+        "v1": 5.5700918892398477e-05,
+        "v2": 0.00010383015614934266,
+        "v3": 0.9995787739753723,
+        "v4": 8.879167580744252e-05,
+        "v5": 7.941908552311361e-05
       },
-      "rewrite_ms": 1335.0
+      "rewrite_ms": 1871.6
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're in a tough spot trying to balance your own studies with helping your roommate. One way to approach this could be to create a schedule where you dedicate specific times for studying alone and specific times to help her. For example, you might study for two hours, then spend one hour with her. How does that sound?",
-      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I included a brief empathy statement followed by a short guide that offers a concrete way to help the seeker manage their time effectively.",
+      "rewritten_text": "It sounds like you're facing a difficult choice. You could either focus entirely on your own studying tomorrow (Option A) or help your roommate for a set time (Option B). Which option feels more manageable for you?",
+      "reasoning": "The original response lacked practical help and focused solely on empathy. I added a concrete choice between two options to provide the seeker with a clear way to approach their dilemma while still acknowledging their feelings.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.8018947243690491,
+      "recheck_confidence": 0.9995625615119934,
       "recheck_probabilities": {
-        "normal": 0.1959141045808792,
-        "v1": 0.0008183963946066797,
-        "v2": 0.0004614197532646358,
-        "v3": 0.8018947243690491,
-        "v4": 0.0006272699683904648,
-        "v5": 0.0002840734086930752
+        "normal": 9.233357559423894e-05,
+        "v1": 5.6972912716446444e-05,
+        "v2": 0.00011018595978384838,
+        "v3": 0.9995625615119934,
+        "v4": 9.261842933483422e-05,
+        "v5": 8.534802327631041e-05
       },
-      "rewrite_ms": 1427.6
+      "rewrite_ms": 1635.4
     }
   ],
   "final_result": {

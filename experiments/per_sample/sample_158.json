@@ -5,81 +5,47 @@
   "situation": "Feelings of sadness, disappointment, or hopelessness can be a healthy reaction to life’s challenges.",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.5820598602294922,
+    "confidence": 0.9894456267356873,
     "all_probabilities": {
-      "normal": 0.41516679525375366,
-      "v1": 0.000851768534630537,
-      "v2": 0.0007267630426213145,
-      "v3": 0.5820598602294922,
-      "v4": 0.000655778159853071,
-      "v5": 0.000539055559784174
+      "normal": 0.009487948380410671,
+      "v1": 0.00021458350238390267,
+      "v2": 0.00014103470311965793,
+      "v3": 0.9894456267356873,
+      "v4": 0.0002564579190220684,
+      "v5": 0.0004543603863567114
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 1078.3,
-    "detection_ms": 26.3,
-    "rewrite_total_ms": 4034.9,
-    "total_ms": 5143.6
+    "context_build_ms": 4.0,
+    "generation_ms": 1940.3,
+    "detection_ms": 32.9,
+    "rewrite_total_ms": 3535.3,
+    "total_ms": 5512.7
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're facing a challenging decision. You might consider taking a moment to write down your current tasks and their deadlines, then prioritize them based on urgency. After that, evaluate if asking for an extension would genuinely alleviate your stress or if breaking down your workload into smaller steps could make it more manageable.",
-      "reasoning": "The original response primarily expressed empathy without providing practical assistance, which violates the counseling guideline for offering actionable help. I retained a brief empathy statement and included a short 2–3 step guide to help the seeker make a decision.",
-      "recheck_label": "v3",
-      "recheck_confidence": 0.9845737814903259,
+      "rewritten_text": "It sounds like you're in a tough spot. It might help to prepare for the conversation by writing down your main points: 1) Explain the extra tasks you're facing, 2) Share how this has affected your ability to meet deadlines, and 3) Ask if an extension is possible. This way, you'll have a clear structure for your discussion.",
+      "reasoning": "The original response primarily provided empathy without offering practical help despite the seeker's explicit request for a deadline extension. I retained one empathetic statement and added a short 2-3 step guide to help the seeker approach their manager about the deadline extension.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.9717285633087158,
       "recheck_probabilities": {
-        "normal": 0.014510626904666424,
-        "v1": 0.000231721845921129,
-        "v2": 0.0003281580575276166,
-        "v3": 0.9845737814903259,
-        "v4": 0.00016948267875704914,
-        "v5": 0.00018622765492182225
+        "normal": 0.9717285633087158,
+        "v1": 0.0004208208411000669,
+        "v2": 0.00019902705389540642,
+        "v3": 0.02683141641318798,
+        "v4": 0.00026483176043257117,
+        "v5": 0.0005554408999159932
       },
-      "rewrite_ms": 1391.6
-    },
-    {
-      "retry": 2,
-      "violation": "v3",
-      "rewritten_text": "It sounds like you're facing a challenging decision. To help you decide, try writing down your current tasks and their deadlines, then prioritize them based on urgency. Consider if asking for an extension would genuinely alleviate your stress or if you could break down your workload into smaller, manageable steps.",
-      "reasoning": "The original response was primarily empathetic without providing any concrete help despite the seeker's explicit request for guidance on making a decision. I added a brief empathy sentence followed by a short 2–3 step guide to help the seeker evaluate their options.",
-      "recheck_label": "v3",
-      "recheck_confidence": 0.9761760830879211,
-      "recheck_probabilities": {
-        "normal": 0.022348802536725998,
-        "v1": 0.0002646349312271923,
-        "v2": 0.000681971840094775,
-        "v3": 0.9761760830879211,
-        "v4": 0.0002429528976790607,
-        "v5": 0.00028558241319842637
-      },
-      "rewrite_ms": 1451.6
-    },
-    {
-      "retry": 3,
-      "violation": "v3",
-      "rewritten_text": "It sounds like you're facing a challenging decision. To help you decide, consider these steps: 1) List your current tasks and their deadlines, 2) Prioritize them based on urgency, and 3) Decide if asking for an extension would genuinely help reduce your stress.",
-      "reasoning": "The original response provided empathy but did not offer any practical help as explicitly requested by the seeker. I added a short guide to help the seeker make a decision regarding their workload while retaining a brief empathetic statement.",
-      "recheck_label": "v3",
-      "recheck_confidence": 0.9969106316566467,
-      "recheck_probabilities": {
-        "normal": 0.0024784025736153126,
-        "v1": 0.00010932872100966051,
-        "v2": 0.0002608178183436394,
-        "v3": 0.9969106316566467,
-        "v4": 9.968971426133066e-05,
-        "v5": 0.00014113850193098187
-      },
-      "rewrite_ms": 1191.7
+      "rewrite_ms": 3535.3
     }
   ],
   "final_result": {
-    "label": "failsafe",
-    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
-    "total_retries": 3,
-    "used_failsafe": true
+    "label": "normal",
+    "response": "It sounds like you're in a tough spot. It might help to prepare for the conversation by writing down your main points: 1) Explain the extra tasks you're facing, 2) Share how this has affected your ability to meet deadlines, and 3) Ask if an extension is possible. This way, you'll have a clear structure for your discussion.",
+    "total_retries": 1,
+    "used_failsafe": false
   }
 }

@@ -5,28 +5,28 @@
   "situation": "A co-worker continues to usurp my authority and interfere with my duties / responsibilities.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.8800603151321411,
+    "confidence": 0.9994925260543823,
     "all_probabilities": {
-      "normal": 0.8800603151321411,
-      "v1": 0.0005777200567536056,
-      "v2": 0.11750258505344391,
-      "v3": 0.0009544876520521939,
-      "v4": 0.0004986299318261445,
-      "v5": 0.0004062191874254495
+      "normal": 0.9994925260543823,
+      "v1": 4.6694422053406015e-05,
+      "v2": 0.00012591344420798123,
+      "v3": 0.0001664744777372107,
+      "v4": 5.3815576393390074e-05,
+      "v5": 0.00011449602607171983
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.3,
-    "generation_ms": 1752.5,
-    "detection_ms": 22.5,
+    "context_build_ms": 2.6,
+    "generation_ms": 2003.5,
+    "detection_ms": 39.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1777.4
+    "total_ms": 2045.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I can see how that would be really helpful. Would you feel comfortable trying to have a direct conversation with your coworker about how their actions affect your work? Or perhaps discussing it further with your supervisor for more support could be an option?",
+    "response": "It sounds really overwhelming to deal with that. One approach could be to have a direct conversation with your coworker about how their actions affect your work. Would you feel comfortable discussing this with them, or would you prefer to involve your supervisor again for support?",
     "total_retries": 0,
     "used_failsafe": false
   }

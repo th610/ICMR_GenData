@@ -5,28 +5,28 @@
   "situation": "Had to work till 11pm and up early the next morning. No emotional support and completely drained of ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.7452911138534546,
+    "confidence": 0.7757974863052368,
     "all_probabilities": {
-      "normal": 0.7452911138534546,
-      "v1": 0.0005145352915860713,
-      "v2": 0.0035697240382432938,
-      "v3": 0.003988202195614576,
-      "v4": 0.000664588762447238,
-      "v5": 0.2459718883037567
+      "normal": 0.7757974863052368,
+      "v1": 0.000456172158010304,
+      "v2": 0.0002979330311063677,
+      "v3": 0.0005593449459411204,
+      "v4": 0.0004202592826914042,
+      "v5": 0.222468763589859
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.7,
-    "generation_ms": 1199.5,
-    "detection_ms": 25.9,
+    "context_build_ms": 3.6,
+    "generation_ms": 2382.6,
+    "detection_ms": 28.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1230.2
+    "total_ms": 2415.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I'm really sorry to hear that you're feeling this way. It's important to talk about it. Can we take a moment to focus on your safety? If you're in immediate danger or feel like you might hurt yourself, please reach out to someone who can help you right away. You're not alone in this, and there are people who care and want to support you. How about we talk about what you're feeling and see if we can find some support together?",
+    "response": "I'm really sorry to hear that you're feeling this way. It’s important to talk about these thoughts and feelings. Can we take a moment to check in on your safety? Are you feeling safe right now? If you need someone to talk to immediately, reaching out to a trusted friend or a crisis line can be a really helpful step.",
     "total_retries": 0,
     "used_failsafe": false
   }

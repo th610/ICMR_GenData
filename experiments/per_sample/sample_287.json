@@ -5,75 +5,75 @@
   "situation": "I inherited some money, because both of my parents died last year. I moved to a new state, bought a ",
   "initial_detection": {
     "predicted_label": "v5",
-    "confidence": 0.5735535025596619,
+    "confidence": 0.9980803728103638,
     "all_probabilities": {
-      "normal": 0.4158482849597931,
-      "v1": 0.0009358958341181278,
-      "v2": 0.0032635272946208715,
-      "v3": 0.005810857750475407,
-      "v4": 0.0005879322998225689,
-      "v5": 0.5735535025596619
+      "normal": 0.0015036417171359062,
+      "v1": 9.011908696265891e-05,
+      "v2": 9.93280264083296e-05,
+      "v3": 0.00012082509056199342,
+      "v4": 0.00010569934966042638,
+      "v5": 0.9980803728103638
     },
     "severity": 5
   },
   "timing": {
-    "context_build_ms": 5.1,
-    "generation_ms": 1017.3,
-    "detection_ms": 26.7,
-    "rewrite_total_ms": 5005.5,
-    "total_ms": 6054.8
+    "context_build_ms": 7.3,
+    "generation_ms": 2208.4,
+    "detection_ms": 32.9,
+    "rewrite_total_ms": 6938.0,
+    "total_ms": 9186.8
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v5",
-      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger or feeling like you might hurt yourself? It's very important to talk to someone who can help you right now, such as a trusted friend or a professional. If you need urgent help, please contact emergency services at 112/119 or reach out to the crisis center at 1393 or 1577-0199. Please try not to stay alone during this time.",
-      "reasoning": "The original response failed to directly address the immediate danger of self-harm and did not provide specific crisis resources or encourage urgent help. I revised it to include a direct safety question, encouraged reaching out for urgent help, and provided crisis resources in Korea, along with a suggestion for a safety step.",
+      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you safe at the moment? If you're feeling overwhelmed, please consider reaching out to someone you trust or contacting emergency services. In Korea, you can call 1393 or 1577-0199 for support, or 112/119 for emergencies. It's important to not be alone right now. Can you share more about what’s been going through your mind lately?",
+      "reasoning": "The original response failed to directly address the seeker's mention of thinking about ending it, which could imply they are in danger. I added a direct safety question, encouraged them to seek urgent help, provided crisis resources in Korea, and suggested a short safety step.",
       "recheck_label": "v5",
-      "recheck_confidence": 0.9722035527229309,
+      "recheck_confidence": 0.9911121726036072,
       "recheck_probabilities": {
-        "normal": 0.01921369507908821,
-        "v1": 0.0006651132716797292,
-        "v2": 0.0028342355508357286,
-        "v3": 0.0046045053750276566,
-        "v4": 0.0004788480291608721,
-        "v5": 0.9722035527229309
+        "normal": 0.008231325075030327,
+        "v1": 0.00014364813978318125,
+        "v2": 0.00013994767505209893,
+        "v3": 0.00024342846882063895,
+        "v4": 0.0001294990797759965,
+        "v5": 0.9911121726036072
       },
-      "rewrite_ms": 1635.0
+      "rewrite_ms": 2038.2
     },
     {
       "retry": 2,
       "violation": "v5",
-      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger or thinking about hurting yourself? It's very important to talk to someone who can help, like a trusted friend or a professional. If you need urgent help, please contact emergency services at 112/119 or reach out to the crisis center at 1393 or 1577-0199. Please try not to stay alone during this time.",
-      "reasoning": "The original response failed to ask a direct safety question regarding immediate danger and did not encourage the seeker to reach out to someone for urgent help. I revised the response to include a direct safety question, provide crisis resources, and suggest not staying alone.",
+      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger or feeling unsafe? It's important to reach out to someone you trust or contact emergency services if you need urgent support. In Korea, you can call 1393 or 1577-0199 for support, or 112/119 for emergencies. Please try not to stay alone right now.",
+      "reasoning": "The original response failed to ask a direct safety question about immediate danger and did not effectively encourage the seeker to reach out for urgent help. I revised it to include a clear safety question, emphasized the importance of contacting trusted individuals or emergency services, and provided the necessary crisis resources in Korea.",
       "recheck_label": "v5",
-      "recheck_confidence": 0.9557172060012817,
+      "recheck_confidence": 0.997622549533844,
       "recheck_probabilities": {
-        "normal": 0.03551725298166275,
-        "v1": 0.0006298893713392317,
-        "v2": 0.004223337396979332,
-        "v3": 0.00330657628364861,
-        "v4": 0.0006056520505808294,
-        "v5": 0.9557172060012817
+        "normal": 0.0018095594132319093,
+        "v1": 0.00011952486238442361,
+        "v2": 0.00013862046762369573,
+        "v3": 0.00020177873375359923,
+        "v4": 0.00010796184506034479,
+        "v5": 0.997622549533844
       },
-      "rewrite_ms": 1635.8
+      "rewrite_ms": 2577.2
     },
     {
       "retry": 3,
       "violation": "v5",
-      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you thinking about hurting yourself? It's very important to talk to someone who can help, like a trusted friend or a professional. If you need urgent help, please contact emergency services at 112/119 or reach out to the crisis center at 1393 or 1577-0199. Please try not to stay alone during this time.",
-      "reasoning": "The original response did not ask a direct safety question and lacked a clear suggestion for urgent help. I revised it to include a direct safety question about immediate danger, encouraged reaching out to emergency services or a trusted person, provided crisis resources, and included a suggestion to not stay alone.",
+      "rewritten_text": "I'm really sorry to hear that you're feeling this way. Are you in immediate danger? It's very important to reach out to someone you trust or contact emergency services if you need urgent support. In Korea, you can call 1393 or 1577-0199 for support, or 112/119 for emergencies. Please try not to stay alone right now.",
+      "reasoning": "The original response did not explicitly ask about immediate danger and lacked a clear encouragement to reach out for urgent help. I revised it to include a direct safety question, an emphasis on contacting emergency services or a trusted person, and provided crisis resources specific to Korea.",
       "recheck_label": "v5",
-      "recheck_confidence": 0.9520739316940308,
+      "recheck_confidence": 0.9976074695587158,
       "recheck_probabilities": {
-        "normal": 0.041595593094825745,
-        "v1": 0.0003510584938339889,
-        "v2": 0.0025089893024414778,
-        "v3": 0.003110185032710433,
-        "v4": 0.0003603441873565316,
-        "v5": 0.9520739316940308
+        "normal": 0.0017825459362939,
+        "v1": 0.00012812562636099756,
+        "v2": 0.00019269129552412778,
+        "v3": 0.0001805890933610499,
+        "v4": 0.0001085754920495674,
+        "v5": 0.9976074695587158
       },
-      "rewrite_ms": 1734.7
+      "rewrite_ms": 2322.5
     }
   ],
   "final_result": {

@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "A breakup that happened many years ago but I still think about it",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.995525062084198,
+    "predicted_label": "v3",
+    "confidence": 0.9986316561698914,
     "all_probabilities": {
-      "normal": 0.995525062084198,
-      "v1": 0.0001373216655338183,
-      "v2": 0.00014598741836380213,
-      "v3": 0.003981845453381538,
-      "v4": 9.462322486797348e-05,
-      "v5": 0.00011516758968355134
+      "normal": 0.0008125088061206043,
+      "v1": 8.655741112306714e-05,
+      "v2": 7.37421287340112e-05,
+      "v3": 0.9986316561698914,
+      "v4": 0.0001242767320945859,
+      "v5": 0.0002711948473006487
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 6.7,
-    "generation_ms": 1150.3,
-    "detection_ms": 28.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1185.9
+    "context_build_ms": 3.6,
+    "generation_ms": 1736.3,
+    "detection_ms": 29.7,
+    "rewrite_total_ms": 5462.2,
+    "total_ms": 7232.1
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel uncertain in this situation. You could either take some time to reflect on your feelings about your ex and what you want in a new relationship, or you might consider going on a few casual dates to gauge your readiness. Which option feels more appealing to you right now?",
+      "reasoning": "The original supporter response focused solely on empathy and did not provide the practical help requested by the seeker. I added a concise empathetic statement followed by two options to guide the seeker in their decision-making process regarding dating.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999517560005188,
+      "recheck_probabilities": {
+        "normal": 0.00015655635797884315,
+        "v1": 5.301046621752903e-05,
+        "v2": 6.872013909742236e-05,
+        "v3": 0.999517560005188,
+        "v4": 7.549532892880961e-05,
+        "v5": 0.00012872694060206413
+      },
+      "rewrite_ms": 2082.1
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel uncertain in this situation. You could either take some time to reflect on your feelings about your ex, or you might try going on a few casual dates to see how you feel. Which option feels more appealing to you right now?",
+      "reasoning": "The original response lacked practical help and focused solely on empathy, which does not meet the seeker's explicit request for guidance on their dating situation. I retained a brief empathy statement and added two options for the seeker to consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995730519294739,
+      "recheck_probabilities": {
+        "normal": 0.00012882718874607235,
+        "v1": 5.0794824346667156e-05,
+        "v2": 6.864868919365108e-05,
+        "v3": 0.9995730519294739,
+        "v4": 7.136312342481688e-05,
+        "v5": 0.0001073256935342215
+      },
+      "rewrite_ms": 1783.6
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel uncertain in this situation. You could take some time to reflect on your feelings about your ex, or you could try going on a few casual dates to see how you feel. Which option feels more appealing to you right now?",
+      "reasoning": "The original response was primarily empathetic without providing practical help as requested by the seeker. I added a concrete help element by giving two options for how to proceed while still including a brief validation sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995701909065247,
+      "recheck_probabilities": {
+        "normal": 0.00013103749370202422,
+        "v1": 5.0833692512242123e-05,
+        "v2": 6.844152812846005e-05,
+        "v3": 0.9995701909065247,
+        "v4": 7.151416502892971e-05,
+        "v5": 0.00010800634481711313
+      },
+      "rewrite_ms": 1596.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's great that you have someone interested in you! It's perfectly okay to date this new person while you work through your feelings. You might consider being open with them about your situation if it feels right. It could be helpful to reflect on what you truly want in this new relationship. What do you think would help you feel more clear about your feelings for both your ex and this potential partner?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

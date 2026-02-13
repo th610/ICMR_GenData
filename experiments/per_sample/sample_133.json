@@ -5,81 +5,47 @@
   "situation": "in this covid time , my job in trouble .I tested covid positive and unble to attended my office hour",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.7031755447387695,
+    "confidence": 0.9987497329711914,
     "all_probabilities": {
-      "normal": 0.29192501306533813,
-      "v1": 0.0012898142449557781,
-      "v2": 0.002541214693337679,
-      "v3": 0.7031755447387695,
-      "v4": 0.0006983800558373332,
-      "v5": 0.00037001349846832454
+      "normal": 0.0007779772276990116,
+      "v1": 8.848768629832193e-05,
+      "v2": 8.28470365377143e-05,
+      "v3": 0.9987497329711914,
+      "v4": 0.00013275064702611417,
+      "v5": 0.00016825289640109986
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.5,
-    "generation_ms": 1267.3,
-    "detection_ms": 26.2,
-    "rewrite_total_ms": 4582.8,
-    "total_ms": 5881.0
+    "context_build_ms": 6.6,
+    "generation_ms": 1627.5,
+    "detection_ms": 29.5,
+    "rewrite_total_ms": 3793.2,
+    "total_ms": 5456.9
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're really feeling the pressure with the baby arriving soon. I suggest starting by reaching out to your old company for the experience letter. At the same time, if you have specific friends in mind, consider contacting them to discuss potential job leads. This way, you can tackle both tasks efficiently. How does that sound?",
-      "reasoning": "The original response was primarily empathetic without providing concrete practical help, which led to a counseling violation. I corrected it by including a brief empathy statement followed by a short 2-3 step guide to help the seeker navigate their decision.",
-      "recheck_label": "v3",
-      "recheck_confidence": 0.9166598320007324,
+      "rewritten_text": "It sounds like you're feeling quite the pressure. You might consider reaching out to your friends for networking while also pursuing the experience letter. To manage, you could: 1) List down which friends might be able to help with job leads, 2) Set a specific time to contact them, and 3) Decide on a timeline for following up with your old company for the experience letter.",
+      "reasoning": "The original response lacked practical help despite the seeker explicitly asking for guidance on prioritizing tasks. I maintained a brief empathy statement and provided a short 2-3 step guide to help the seeker make a decision.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.9383973479270935,
       "recheck_probabilities": {
-        "normal": 0.07965713739395142,
-        "v1": 0.0008309221011586487,
-        "v2": 0.0020262394100427628,
-        "v3": 0.9166598320007324,
-        "v4": 0.0005654924316331744,
-        "v5": 0.0002604476176202297
+        "normal": 0.9383973479270935,
+        "v1": 0.0004605702415574342,
+        "v2": 0.00028913712594658136,
+        "v3": 0.059833597391843796,
+        "v4": 0.0005290037952363491,
+        "v5": 0.0004902429063804448
       },
-      "rewrite_ms": 1469.7
-    },
-    {
-      "retry": 2,
-      "violation": "v3",
-      "rewritten_text": "It sounds like you're really feeling the pressure with the baby arriving soon. I suggest you first reach out to your old company for the experience letter. After that, make a list of your friends who might help with job leads and prioritize contacting them. This way, you can efficiently manage both tasks. How does that sound?",
-      "reasoning": "The original last response provided empathy but did not offer practical help beyond validation. I added a concrete help element by providing a short 2-3 step guide to assist the seeker in prioritizing their tasks.",
-      "recheck_label": "v3",
-      "recheck_confidence": 0.9895840287208557,
-      "recheck_probabilities": {
-        "normal": 0.008679250255227089,
-        "v1": 0.00027020470588468015,
-        "v2": 0.0012022241717204452,
-        "v3": 0.9895840287208557,
-        "v4": 0.00018198994803242385,
-        "v5": 8.223576878663152e-05
-      },
-      "rewrite_ms": 1416.1
-    },
-    {
-      "retry": 3,
-      "violation": "v3",
-      "rewritten_text": "It sounds like you're really feeling the pressure with the baby arriving soon. I suggest you first reach out to your old company for the experience letter, and then make a list of your friends who might help with job leads. Prioritize contacting them based on who you think will respond quickly. How does that sound?",
-      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker. I added a concrete short step guide to address the seeker's need for direction regarding their job situation while maintaining a brief empathetic statement.",
-      "recheck_label": "v3",
-      "recheck_confidence": 0.9948121309280396,
-      "recheck_probabilities": {
-        "normal": 0.003973579034209251,
-        "v1": 0.00020754532306455076,
-        "v2": 0.0007950538420118392,
-        "v3": 0.9948121309280396,
-        "v4": 0.0001345916389254853,
-        "v5": 7.705756434006616e-05
-      },
-      "rewrite_ms": 1697.0
+      "rewrite_ms": 3793.2
     }
   ],
   "final_result": {
-    "label": "failsafe",
-    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
-    "total_retries": 3,
-    "used_failsafe": true
+    "label": "normal",
+    "response": "It sounds like you're feeling quite the pressure. You might consider reaching out to your friends for networking while also pursuing the experience letter. To manage, you could: 1) List down which friends might be able to help with job leads, 2) Set a specific time to contact them, and 3) Decide on a timeline for following up with your old company for the experience letter.",
+    "total_retries": 1,
+    "used_failsafe": false
   }
 }

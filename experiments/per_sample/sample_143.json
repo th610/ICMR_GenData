@@ -5,28 +5,28 @@
   "situation": "I have this overwhelming fear and pressure that my mother will not be accepting of my grades in scho",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9588657021522522,
+    "confidence": 0.5522732138633728,
     "all_probabilities": {
-      "normal": 0.9588657021522522,
-      "v1": 0.0005599057767540216,
-      "v2": 0.00028303402359597385,
-      "v3": 0.039794985204935074,
-      "v4": 0.00029295822605490685,
-      "v5": 0.0002034397330135107
+      "normal": 0.5522732138633728,
+      "v1": 0.0006869877106510103,
+      "v2": 0.0007112083258107305,
+      "v3": 0.4423699975013733,
+      "v4": 0.0014996192185208201,
+      "v5": 0.0024589274544268847
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1241.3,
-    "detection_ms": 14.5,
+    "context_build_ms": 2.8,
+    "generation_ms": 1405.0,
+    "detection_ms": 26.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1260.9
+    "total_ms": 1434.3
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's a tough decision to make, especially with the time constraint. One approach could be to list out what you hope to gain from both focusing on your grades and getting involved in extracurricular activities. What are the key benefits you see for each option? Alternatively, you might consider if there’s a way to balance both, even in small ways, like dedicating a little time each week to an activity that interests you while keeping up with your studies. How does that sound to you?",
+    "response": "It sounds like you're at a crossroads. Balancing grades and extracurriculars can be really tough. How about considering a small step? You could try dedicating just a little time each week to one extracurricular activity that interests you. This way, you can test the waters without overwhelming yourself. What are your thoughts on that?",
     "total_retries": 0,
     "used_failsafe": false
   }

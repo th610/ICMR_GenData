@@ -5,28 +5,28 @@
   "situation": "I am scared that all of my academic accomplishments will amount to nothing",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996953010559082,
+    "confidence": 0.9995835423469543,
     "all_probabilities": {
-      "normal": 0.9996953010559082,
-      "v1": 8.078217069851235e-05,
-      "v2": 4.644697764888406e-05,
-      "v3": 7.844997890060768e-05,
-      "v4": 5.058609531261027e-05,
-      "v5": 4.845481089432724e-05
+      "normal": 0.9995835423469543,
+      "v1": 0.00012603256618604064,
+      "v2": 4.734530739369802e-05,
+      "v3": 7.99805493443273e-05,
+      "v4": 6.522968760691583e-05,
+      "v5": 9.793713979888707e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.8,
-    "generation_ms": 1136.8,
-    "detection_ms": 27.5,
+    "context_build_ms": 3.7,
+    "generation_ms": 4924.9,
+    "detection_ms": 34.5,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1168.2
+    "total_ms": 4963.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Exploring internships sounds like a great idea! Gaining experience can really help you feel more confident and stand out. Have you thought about specific companies or projects you might want to apply to, or would you like to brainstorm some options together?",
+    "response": "It's understandable to feel nervous about internships, as they can be a big step. What aspects of internships make you feel apprehensive? Would you like to talk about ways to ease those nerves, or perhaps explore what kind of internships you're interested in?",
     "total_retries": 0,
     "used_failsafe": false
   }

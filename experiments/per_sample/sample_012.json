@@ -5,28 +5,28 @@
   "situation": "I am just starting school & i feel like i not smart enough to graduate",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997171759605408,
+    "confidence": 0.9996981620788574,
     "all_probabilities": {
-      "normal": 0.9997171759605408,
-      "v1": 6.341892731143162e-05,
-      "v2": 3.8477741327369586e-05,
-      "v3": 8.342433284269646e-05,
-      "v4": 4.216066736262292e-05,
-      "v5": 5.5267671996261925e-05
+      "normal": 0.9996981620788574,
+      "v1": 4.864877337240614e-05,
+      "v2": 4.785518831340596e-05,
+      "v3": 6.611962453462183e-05,
+      "v4": 4.9248850700678304e-05,
+      "v5": 8.996154792839661e-05
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 4.1,
-    "generation_ms": 850.0,
-    "detection_ms": 25.8,
+    "generation_ms": 1530.4,
+    "detection_ms": 30.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 880.0
+    "total_ms": 1565.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds like a very effective approach! Taking a moment to breathe can really help clear your mind and set a positive tone for your study sessions. Are there specific times you think would be best to practice this, like before a particular subject or task?",
+    "response": "It makes sense that the anticipation can be overwhelming. Perhaps you could try a quick breathing exercise right before you begin studying to help ease that anxiety. Would you like to set a specific time each day to practice this, or maybe find a calming space that helps you feel more relaxed before starting?",
     "total_retries": 0,
     "used_failsafe": false
   }

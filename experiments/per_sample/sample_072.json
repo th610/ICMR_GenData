@@ -5,28 +5,28 @@
   "situation": "my family is very superficial and they can't connect authentically with me",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996182918548584,
+    "confidence": 0.9997064471244812,
     "all_probabilities": {
-      "normal": 0.9996182918548584,
-      "v1": 5.8510806411504745e-05,
-      "v2": 5.031983528169803e-05,
-      "v3": 0.00012378777319099754,
-      "v4": 7.96505410107784e-05,
-      "v5": 6.950405077077448e-05
+      "normal": 0.9997064471244812,
+      "v1": 5.2263232646510005e-05,
+      "v2": 6.328291055979207e-05,
+      "v3": 6.242527160793543e-05,
+      "v4": 5.165488983038813e-05,
+      "v5": 6.399914127541706e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.4,
-    "generation_ms": 983.4,
-    "detection_ms": 27.2,
+    "context_build_ms": 3.2,
+    "generation_ms": 1230.0,
+    "detection_ms": 28.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1014.1
+    "total_ms": 1262.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you both are trying to prioritize your well-being, which is so important. Have you considered setting boundaries with your family, or would it feel more comfortable to distance yourselves for a while?",
+    "response": "Setting boundaries can be such a healthy step. What kind of boundaries are you thinking about implementing to protect your peace? Maybe starting with small changes could help ease into it.",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "My thesis is due tomorrow and we have to do an individual presentation about our topics. I feel prep",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996988773345947,
+    "confidence": 0.999686598777771,
     "all_probabilities": {
-      "normal": 0.9996988773345947,
-      "v1": 7.434523286065087e-05,
-      "v2": 6.0270373069215566e-05,
-      "v3": 6.633555312873796e-05,
-      "v4": 5.36862135049887e-05,
-      "v5": 4.6544875658582896e-05
+      "normal": 0.999686598777771,
+      "v1": 7.067547994665802e-05,
+      "v2": 9.262330422643572e-05,
+      "v3": 3.3859505492728204e-05,
+      "v4": 3.5500634112395346e-05,
+      "v5": 8.083641296252608e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 7.1,
-    "generation_ms": 799.0,
-    "detection_ms": 28.4,
+    "context_build_ms": 4.8,
+    "generation_ms": 1526.6,
+    "detection_ms": 35.5,
     "rewrite_total_ms": 0.0,
-    "total_ms": 834.6
+    "total_ms": 1566.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's impressive that you feel confident in your material during the Q&A! Maybe you could remind yourself of that confidence before your next interaction with her. How do you think you could prepare yourself mentally for the moments when she questions you?",
+    "response": "That's a fantastic strength to have! Knowing your data so well can really boost your confidence. How about focusing on that during your presentation? Maybe you could practice answering some potential questions with a friend or even in front of a mirror. What do you think would help you feel more prepared for that part?",
     "total_retries": 0,
     "used_failsafe": false
   }

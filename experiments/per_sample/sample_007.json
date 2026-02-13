@@ -5,28 +5,28 @@
   "situation": "In the last year I have been dealing with chronic health issues as well as have Covid-19 shut everyt",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996756315231323,
+    "confidence": 0.9995928406715393,
     "all_probabilities": {
-      "normal": 0.9996756315231323,
-      "v1": 0.0001178764141513966,
-      "v2": 4.023502697236836e-05,
-      "v3": 7.44603676139377e-05,
-      "v4": 4.206529774819501e-05,
-      "v5": 4.970779991708696e-05
+      "normal": 0.9995928406715393,
+      "v1": 7.7267803135328e-05,
+      "v2": 6.0162172303535044e-05,
+      "v3": 8.481297118123621e-05,
+      "v4": 9.405773744219914e-05,
+      "v5": 9.087085345527157e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 888.8,
-    "detection_ms": 33.5,
+    "context_build_ms": 4.1,
+    "generation_ms": 1638.6,
+    "detection_ms": 29.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 926.1
+    "total_ms": 1672.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That could be a wonderful way to connect with others! You might find someone who is also looking for a walking buddy. If you decide to post, maybe you could suggest a specific day or time to make it easier for people to respond. How does that sound?",
+    "response": "That sounds like a lovely idea! You could even start by posting in the group to see if anyone else is interested in joining you for a walk. How do you feel about reaching out like that?",
     "total_retries": 0,
     "used_failsafe": false
   }

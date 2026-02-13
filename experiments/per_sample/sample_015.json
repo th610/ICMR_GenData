@@ -5,28 +5,28 @@
   "situation": "I do not know  what Kingsley, my very close friend will be thinking right now. He asked me 1000 doll",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997122883796692,
+    "confidence": 0.9995737671852112,
     "all_probabilities": {
-      "normal": 0.9997122883796692,
-      "v1": 6.356291123665869e-05,
-      "v2": 6.713395123369992e-05,
-      "v3": 6.084919368731789e-05,
-      "v4": 4.6654604375362396e-05,
-      "v5": 4.961674858350307e-05
+      "normal": 0.9995737671852112,
+      "v1": 5.420147135737352e-05,
+      "v2": 5.54897851543501e-05,
+      "v3": 0.000131672466523014,
+      "v4": 3.99373093387112e-05,
+      "v5": 0.00014486485451925546
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.4,
-    "generation_ms": 830.1,
-    "detection_ms": 24.2,
+    "context_build_ms": 3.5,
+    "generation_ms": 1600.8,
+    "detection_ms": 27.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 857.8
+    "total_ms": 1631.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like open communication could really help relieve some of that guilt. Maybe you could initiate a conversation about how you're feeling? You could start by expressing your excitement about the car and then gently ask for his thoughts on it. How does that sound to you?",
+    "response": "It's understandable to feel anxious when there's silence in a situation like this. Would it help to reach out to him and share your feelings? You could express your excitement about the car while also acknowledging his request for money. How do you think he might respond to that approach?",
     "total_retries": 0,
     "used_failsafe": false
   }

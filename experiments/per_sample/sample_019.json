@@ -5,28 +5,28 @@
   "situation": "fight with the partner",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997270703315735,
+    "confidence": 0.9996596574783325,
     "all_probabilities": {
-      "normal": 0.9997270703315735,
-      "v1": 5.722489731851965e-05,
-      "v2": 4.337489735917188e-05,
-      "v3": 7.656982052139938e-05,
-      "v4": 3.475472840364091e-05,
-      "v5": 6.090635361033492e-05
+      "normal": 0.9996596574783325,
+      "v1": 8.181283192243427e-05,
+      "v2": 9.508681978331879e-05,
+      "v3": 4.683854058384895e-05,
+      "v4": 6.312046753009781e-05,
+      "v5": 5.3392159315990284e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.4,
-    "generation_ms": 850.0,
-    "detection_ms": 26.9,
+    "context_build_ms": 4.1,
+    "generation_ms": 1327.9,
+    "detection_ms": 31.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 881.4
+    "total_ms": 1363.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Those sound like very meaningful changes. Maybe you could start by choosing a calm moment to express your feelings about communication and involvement with the kids. Would you feel comfortable sharing specific examples of what better communication looks like for you?",
+    "response": "That sounds like a positive outcome. How do you think you could approach that conversation to encourage better communication and support from him?",
     "total_retries": 0,
     "used_failsafe": false
   }

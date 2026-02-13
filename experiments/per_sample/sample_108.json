@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "Have been mostly unemployed since release from prison. This has effected my self impression.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9982740879058838,
+    "predicted_label": "v1",
+    "confidence": 0.9963054656982422,
     "all_probabilities": {
-      "normal": 0.9982740879058838,
-      "v1": 0.001416630344465375,
-      "v2": 5.8003453887067735e-05,
-      "v3": 0.0001085866242647171,
-      "v4": 9.222386870533228e-05,
-      "v5": 5.049635728937574e-05
+      "normal": 0.0027763880789279938,
+      "v1": 0.9963054656982422,
+      "v2": 0.00012438480916898698,
+      "v3": 0.00041758030420169234,
+      "v4": 0.00019982177764177322,
+      "v5": 0.00017641947488300502
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1014.1,
-    "detection_ms": 25.5,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1043.7
+    "context_build_ms": 5.4,
+    "generation_ms": 2090.3,
+    "detection_ms": 19.8,
+    "rewrite_total_ms": 9070.0,
+    "total_ms": 11185.8
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel nervous about being pulled into the wrong environment again. What steps do you think you could take to create a safer space for yourself? Perhaps exploring supportive groups or talking with someone you trust could be beneficial.",
+      "reasoning": "The original response jumped to conclusions without fully addressing the seeker's uncertainty about being pulled into the wrong environment. I revised it to acknowledge the seeker's feelings, ask a clarifying question, and suggest gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9983657002449036,
+      "recheck_probabilities": {
+        "normal": 0.0011050852481275797,
+        "v1": 0.9983657002449036,
+        "v2": 0.00011725315562216565,
+        "v3": 0.00017280540487263352,
+        "v4": 0.00015165381773840636,
+        "v5": 8.745116792852059e-05
+      },
+      "rewrite_ms": 3293.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you’re feeling uneasy about your past connections. What specific concerns do you have about those people? It might be helpful to talk to someone you trust about your feelings or consider connecting with a support group.",
+      "reasoning": "The original response made a hasty conclusion by assuming the seeker's feelings and suggesting next steps without first clarifying their situation. I fixed it by acknowledging the seeker's uncertainty and asking a clarifying question before offering gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9979599714279175,
+      "recheck_probabilities": {
+        "normal": 0.0014315900625661016,
+        "v1": 0.9979599714279175,
+        "v2": 8.981086284620687e-05,
+        "v3": 0.00021537068823818117,
+        "v4": 0.00017530933837406337,
+        "v5": 0.00012796730152331293
+      },
+      "rewrite_ms": 2979.8
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about your past connections. What specifically makes you nervous about being pulled back into that environment? It might be comforting to talk through your feelings with someone you trust or explore local support groups.",
+      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without directly acknowledging their uncertainty regarding past connections. I fixed it by first acknowledging this uncertainty, then asking a clarifying question and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9945470094680786,
+      "recheck_probabilities": {
+        "normal": 0.0045495000667870045,
+        "v1": 0.9945470094680786,
+        "v2": 0.00012374998186714947,
+        "v3": 0.0003688422730192542,
+        "v4": 0.00022384666954167187,
+        "v5": 0.00018706568516790867
+      },
+      "rewrite_ms": 2797.2
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's understandable to feel unsettled when you're unsure about the choices of people from your past. How do you feel about the possibility of them being involved in those activities? Would it help to talk about how you want to navigate these feelings?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

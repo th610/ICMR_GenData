@@ -5,28 +5,28 @@
   "situation": "Well we are at different places in our lives. My partner wants to leave to go to another state to be",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9995744824409485,
+    "confidence": 0.9996778964996338,
     "all_probabilities": {
-      "normal": 0.9995744824409485,
-      "v1": 6.365702574839815e-05,
-      "v2": 3.6714573070639744e-05,
-      "v3": 0.00012676999904215336,
-      "v4": 0.00011552714568097144,
-      "v5": 8.277047891169786e-05
+      "normal": 0.9996778964996338,
+      "v1": 4.0410010115010664e-05,
+      "v2": 3.842632213491015e-05,
+      "v3": 8.671818795846775e-05,
+      "v4": 4.1395342122996226e-05,
+      "v5": 0.00011525439913384616
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 784.8,
-    "detection_ms": 26.0,
+    "context_build_ms": 5.2,
+    "generation_ms": 5254.9,
+    "detection_ms": 30.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 815.8
+    "total_ms": 5290.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's understandable that they might feel that way. Kids often have a hard time with changes in their routine or family dynamics. Have you thought about how you might help them process these feelings if a move does happen?",
+    "response": "It sounds like you’re really considering their feelings in this situation, which is so important. Would it help to think about some ways to frame the conversation so they feel reassured? Perhaps you could emphasize that both parents love them and that this change doesn’t change that, or maybe you could plan a special family activity to help them feel secure during the transition. What do you think might work best for them?",
     "total_retries": 0,
     "used_failsafe": false
   }

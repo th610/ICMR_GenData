@@ -5,75 +5,75 @@
   "situation": "The COVID-19 pandemic has caused me to be depressed.  I am sad because there is nowhere we can go.  ",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.99946528673172,
+    "confidence": 0.9996541738510132,
     "all_probabilities": {
-      "normal": 0.00021850841585546732,
-      "v1": 0.99946528673172,
-      "v2": 0.00017816135368775576,
-      "v3": 4.6604745875811204e-05,
-      "v4": 6.162149657029659e-05,
-      "v5": 2.990151369886007e-05
+      "normal": 6.94484988343902e-05,
+      "v1": 0.9996541738510132,
+      "v2": 6.863527960376814e-05,
+      "v3": 5.3738720453111455e-05,
+      "v4": 6.53411989333108e-05,
+      "v5": 8.865410200087354e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.8,
-    "generation_ms": 1137.6,
-    "detection_ms": 29.5,
-    "rewrite_total_ms": 4409.8,
-    "total_ms": 5583.0
+    "context_build_ms": 5.2,
+    "generation_ms": 1197.0,
+    "detection_ms": 30.0,
+    "rewrite_total_ms": 10186.2,
+    "total_ms": 11418.6
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uneasy about what you overheard. How do you think your husband would respond if you brought this up with him? It might be helpful to find a good time to talk about your feelings and concerns when you both can focus on the conversation.",
-      "reasoning": "The original response made a hasty conclusion about the situation without fully understanding the user's feelings and circumstances. I added an acknowledgment of the user's uncertainty, included a single clarifying question, and offered gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the late-night phone call has left you feeling unsettled and anxious. Have you thought about how you might want to approach discussing this with your husband? It could be helpful to share what you're feeling, and perhaps finding a quiet moment to talk might ease your mind.",
+      "reasoning": "The original response made a hasty conclusion by not fully acknowledging the seeker's uncertainty regarding the late-night phone call and implying a solution without first clarifying their feelings. The corrected response now acknowledges the seeker's feelings and asks a clarifying question while suggesting gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9985479712486267,
+      "recheck_confidence": 0.9994511008262634,
       "recheck_probabilities": {
-        "normal": 0.001143626170232892,
-        "v1": 0.9985479712486267,
-        "v2": 0.00011161075963173062,
-        "v3": 7.731471851002425e-05,
-        "v4": 8.157413685694337e-05,
-        "v5": 3.783350621233694e-05
+        "normal": 0.0001758516300469637,
+        "v1": 0.9994511008262634,
+        "v2": 5.146018520463258e-05,
+        "v3": 6.525924254674464e-05,
+        "v4": 7.00494201737456e-05,
+        "v5": 0.00018619744514580816
       },
-      "rewrite_ms": 1630.8
+      "rewrite_ms": 3892.1
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uneasy about what you overheard. What specifically made you feel like he was hiding something? It might be helpful to take some time to sort through your feelings, and when you're ready, consider discussing your concerns with him in a calm manner.",
-      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without fully acknowledging the new information they provided about overhearing their husband. I corrected it by acknowledging the seeker's feelings of unease and replacing the hasty assumption with a single clarifying question about their feelings.",
+      "rewritten_text": "It sounds like the late-night phone call has left you feeling unsettled and anxious. What do you think might help you feel more at ease about this situation? If you're comfortable, you might consider sharing your feelings with your husband when you feel ready, as it could be a good way to find some clarity.",
+      "reasoning": "The original response made assumptions about the seeker's feelings and next steps without fully clarifying their situation regarding the phone call. I revised it to acknowledge their uncertainty, ask a clarifying question, and suggest gentle next steps without assuming any specific actions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9954633116722107,
+      "recheck_confidence": 0.9995943903923035,
       "recheck_probabilities": {
-        "normal": 0.004081172868609428,
-        "v1": 0.9954633116722107,
-        "v2": 0.00017531090998090804,
-        "v3": 0.00011387730774004012,
-        "v4": 0.00011365445971023291,
-        "v5": 5.2735209465026855e-05
+        "normal": 0.00010636120714480057,
+        "v1": 0.9995943903923035,
+        "v2": 5.633387991110794e-05,
+        "v3": 4.936199547955766e-05,
+        "v4": 6.996557931415737e-05,
+        "v5": 0.00012374007201287895
       },
-      "rewrite_ms": 1386.2
+      "rewrite_ms": 3083.9
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It seems you're feeling uneasy about what you overheard regarding your husband. What specifically made you feel like he might be hiding something? It could be helpful to reflect on your feelings, and when you feel ready, perhaps you can consider discussing your concerns with him.",
-      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without fully clarifying their concerns, which could lead to misunderstandings. The corrected response acknowledges the seeker's unease, asks a single clarifying question, and gently suggests next steps without assuming details.",
+      "rewritten_text": "It sounds like the late-night phone call has added to your feelings of unease. How do you usually cope with unsettling situations? When you're ready, it might be helpful to reflect on your feelings or consider discussing them with your husband for clarity.",
+      "reasoning": "The original supporter response made a hasty conclusion about the seeker's feelings without fully clarifying their experience regarding the phone call. I corrected it by acknowledging the seeker's uncertainty and asking a single clarifying question while also suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9961321353912354,
+      "recheck_confidence": 0.9996476173400879,
       "recheck_probabilities": {
-        "normal": 0.0034766735043376684,
-        "v1": 0.9961321353912354,
-        "v2": 0.00015281928062904626,
-        "v3": 9.284395491704345e-05,
-        "v4": 0.0001005451922537759,
-        "v5": 4.5062883145874366e-05
+        "normal": 5.346437683328986e-05,
+        "v1": 0.9996476173400879,
+        "v2": 0.00010191586625296623,
+        "v3": 5.1488812459865585e-05,
+        "v4": 7.423431088682264e-05,
+        "v5": 7.122185343177989e-05
       },
-      "rewrite_ms": 1392.8
+      "rewrite_ms": 3210.1
     }
   ],
   "final_result": {

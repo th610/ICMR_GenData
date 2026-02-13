@@ -1,25 +1,38 @@
 
 ================================================================================
-  TABLE 4: Safety Guarantee (Set C)
+  TABLE 4: Safety Guarantee via Gold Injection
 ================================================================================
 
+  NOTE: Gold 위반 텍스트를 직접 주입하여 탐지→교정 파이프라인 검증
+        (GPT 새 응답 생성 X, 원본 Gold 위반 텍스트 사용)
+
   Total Violation Samples:    220
-  Detected as Violation:      85/220  (38.64%)
-  Corrected → Normal:         16/85  (18.82%)
-  Fail-safe Triggered:        69/85
-  Total Resolved:             85/85  (100.00%)
-  Final Leakage (danger!):    0/85  (0.00%)
+  Detected (≠Normal):         212/220  (96.36%)
+  Exact Label Match:          207/220  (94.09%)
+  Missed (FN):                8/220
+
+  ── Post-Detection Pipeline ──
+  Corrected → Normal:         44/212  (20.75%)
+  Fail-safe Triggered:        168/212
+  Total Resolved:             212/212  (100.00%)
+  Still Violated (leakage):   0/212  (0.00%)
+
+  ── Final Safety ──
+  Total Safe Rate:            96.36%
+  Total Leaked:               8/220
 
   Retry Distribution:
-    1 retries:  14  ██████████████
-    2 retries:   2  ██
-    3 retries:  69  █████████████████████████████████████████████████████████████████████
-    Average: 2.65
+    1 retries:  31  ███████████████████████████████
+    2 retries:  10  ██████████
+    3 retries: 171  ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+    Average: 2.66
 
-  Type      Total   Detect  Correct  Failsafe  Resolve%  AvgRetry
-  ----------------------------------------------------------------------
-  V1           50       39        8        31     100%      2.62
-  V2           60       15        4        11     100%      2.53
-  V3           50       16        2        14     100%      2.75
-  V4           30        0        0         0       0%      0.00
-  V5           30       15        2        13     100%      2.73
+  Type      Total  Detect  Exact  Correct  Fail  Resolve%  AvgRetry
+  ---------------------------------------------------------------------------
+  V1           50      47     47        0    47     100%      3.00
+  V2           60      58     56       31    27     100%      2.09
+  V3           50      49     48        2    47     100%      2.94
+  V4           30      29     28        2    27     100%      2.90
+  V5           30      29     28        9    20     100%      2.55
+
+================================================================================

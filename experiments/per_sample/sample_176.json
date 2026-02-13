@@ -5,75 +5,75 @@
   "situation": "I had my heart set on a Veterinary Technology program at a particular school and I just found out th",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.905861496925354,
+    "confidence": 0.9994221925735474,
     "all_probabilities": {
-      "normal": 0.0924757719039917,
-      "v1": 0.00043969962280243635,
-      "v2": 0.0003183521330356598,
-      "v3": 0.905861496925354,
-      "v4": 0.00023400077770929784,
-      "v5": 0.0006707768188789487
+      "normal": 0.00024311991001013666,
+      "v1": 6.72896858304739e-05,
+      "v2": 0.00010402299812994897,
+      "v3": 0.9994221925735474,
+      "v4": 7.832921983208507e-05,
+      "v5": 8.513525972375646e-05
     },
     "severity": 3
   },
   "timing": {
     "context_build_ms": 3.8,
-    "generation_ms": 1187.7,
-    "detection_ms": 26.2,
-    "rewrite_total_ms": 4238.2,
-    "total_ms": 5456.0
+    "generation_ms": 1937.5,
+    "detection_ms": 31.5,
+    "rewrite_total_ms": 7241.8,
+    "total_ms": 9214.9
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling a lot of pressure, and that's completely understandable. To help you decide, you might try the following steps: 1) Write down the pros and cons of applying to a different school and looking for a job with animals. 2) Reflect on which option aligns better with your long-term goals. 3) Consider talking to someone who has experience in either path for more insight.",
-      "reasoning": "The original response violated the counseling guidelines by focusing solely on empathy and validation without providing any practical help. I retained a brief empathic statement and added a concrete help element in the form of a short 2–3 step guide to assist the seeker in making their decision.",
+      "rewritten_text": "It's understandable to feel torn between your options. What do you think would give you more peace of mind right now—searching for another program or gaining some work experience?",
+      "reasoning": "The original response was primarily empathetic without providing practical guidance, which violated the requirement for a concrete help element. I maintained a brief empathy statement and added a clarifying question to prompt the seeker to consider their priorities.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9925534129142761,
+      "recheck_confidence": 0.9996106028556824,
       "recheck_probabilities": {
-        "normal": 0.006628223229199648,
-        "v1": 0.0001433853030903265,
-        "v2": 0.00023922666150610894,
-        "v3": 0.9925534129142761,
-        "v4": 9.028134809341282e-05,
-        "v5": 0.00034538874751888216
+        "normal": 0.00011901102698175237,
+        "v1": 5.734299338655546e-05,
+        "v2": 6.106976798037067e-05,
+        "v3": 0.9996106028556824,
+        "v4": 7.419779285555705e-05,
+        "v5": 7.782435568515211e-05
       },
-      "rewrite_ms": 1614.8
+      "rewrite_ms": 2682.4
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling a lot of pressure, and that's completely understandable. To help you decide, you might write down the pros and cons of each option and see which one resonates more with your long-term goals.",
-      "reasoning": "The original response included excessive empathy without providing practical help, which led to a violation. I retained one empathic sentence and added a concrete step to guide the seeker in their decision-making process.",
+      "rewritten_text": "It's understandable to feel torn between your options. Which option do you think would help you feel more secure right now—applying to another program or gaining some work experience?",
+      "reasoning": "The original response only provided empathy and did not offer any practical help or guidance, which is a violation of the counseling standards. I added a brief empathetic statement followed by a clarifying question to help the seeker reflect on their choices.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9964510202407837,
+      "recheck_confidence": 0.9996291399002075,
       "recheck_probabilities": {
-        "normal": 0.003031395375728607,
-        "v1": 0.0001002754142973572,
-        "v2": 0.00012368762691039592,
-        "v3": 0.9964510202407837,
-        "v4": 7.04347767168656e-05,
-        "v5": 0.00022317749971989542
+        "normal": 9.433460945729166e-05,
+        "v1": 5.662222974933684e-05,
+        "v2": 6.724325066898018e-05,
+        "v3": 0.9996291399002075,
+        "v4": 7.604573329444975e-05,
+        "v5": 7.660738629056141e-05
       },
-      "rewrite_ms": 1208.5
+      "rewrite_ms": 2195.3
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling a lot of pressure, and that's completely understandable. To help you decide, you could write down the pros and cons of each option, talk to someone who has experience in both areas, and then choose the path that feels right for you.",
-      "reasoning": "The original response was mainly empathetic without providing practical help as requested by the seeker. I maintained one brief empathy sentence and added a concrete help element by offering a short guide to help the seeker make a decision.",
+      "rewritten_text": "It's understandable to feel torn between your options. You could either search for another program to apply to (Option A) or take an animal-related job now and revisit school later (Option B). Which of these options resonates with you more?",
+      "reasoning": "The original response provided empathy but did not offer any practical help, resulting in a violation for not addressing the seeker's explicit request for guidance. I added a concrete help element by providing two clear options to choose from regarding their next steps.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9915950894355774,
+      "recheck_confidence": 0.999575674533844,
       "recheck_probabilities": {
-        "normal": 0.007593844551593065,
-        "v1": 0.00015036386321298778,
-        "v2": 0.0002646362117957324,
-        "v3": 0.9915950894355774,
-        "v4": 0.00010549194848863408,
-        "v5": 0.000290524068986997
+        "normal": 0.0001470353308832273,
+        "v1": 6.567547097802162e-05,
+        "v2": 6.583368667634204e-05,
+        "v3": 0.999575674533844,
+        "v4": 8.176641131285578e-05,
+        "v5": 6.392849172698334e-05
       },
-      "rewrite_ms": 1414.9
+      "rewrite_ms": 2364.1
     }
   ],
   "final_result": {

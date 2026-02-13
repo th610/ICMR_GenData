@@ -5,28 +5,28 @@
   "situation": "Me and my friend got into an argument and are not in speaking terms",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997054934501648,
+    "confidence": 0.9996726512908936,
     "all_probabilities": {
-      "normal": 0.9997054934501648,
-      "v1": 5.683674680767581e-05,
-      "v2": 5.8220448408974335e-05,
-      "v3": 6.300218228716403e-05,
-      "v4": 3.873671084875241e-05,
-      "v5": 7.766321505187079e-05
+      "normal": 0.9996726512908936,
+      "v1": 4.095931217307225e-05,
+      "v2": 6.162035424495116e-05,
+      "v3": 6.601209315704182e-05,
+      "v4": 4.3138225009897724e-05,
+      "v5": 0.00011560649727471173
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.6,
-    "generation_ms": 932.6,
-    "detection_ms": 25.2,
+    "context_build_ms": 3.4,
+    "generation_ms": 1178.8,
+    "detection_ms": 25.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 961.5
+    "total_ms": 1207.3
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Clearing the air can really help both you and your friend feel better. Maybe you could start by sharing how you feel about the situation and why it's been bothering you. Would you like to practice what you might say, or do you have a specific approach in mind?",
+    "response": "That sounds like a positive goal. Maybe you could start by expressing that you value your friendship and just want to clear the air. How do you think your friend might respond to that?",
     "total_retries": 0,
     "used_failsafe": false
   }

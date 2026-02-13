@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I just found out that my husband has small cell cancer. We are very scared because there is a 25% ch",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8361706733703613,
+    "predicted_label": "v3",
+    "confidence": 0.9956859350204468,
     "all_probabilities": {
-      "normal": 0.8361706733703613,
-      "v1": 0.00044469774002209306,
-      "v2": 0.0016422230983152986,
-      "v3": 0.16026771068572998,
-      "v4": 0.0002834276237990707,
-      "v5": 0.0011913679772987962
+      "normal": 0.0036104710306972265,
+      "v1": 0.00011459781671874225,
+      "v2": 0.00012394441000651568,
+      "v3": 0.9956859350204468,
+      "v4": 0.0002036614459939301,
+      "v5": 0.000261385808698833
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 3.3,
-    "generation_ms": 1152.9,
-    "detection_ms": 25.1,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1181.4
+    "context_build_ms": 3.5,
+    "generation_ms": 1831.1,
+    "detection_ms": 27.7,
+    "rewrite_total_ms": 6043.0,
+    "total_ms": 7905.5
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot. You might consider either A) approaching him calmly to express how his words affect you, or B) giving him some space for now and focusing on being supportive without bringing it up immediately. Which option do you feel more inclined to try?",
+      "reasoning": "The original response lacked practical help and only provided empathetic validation, which did not address the seeker's explicit request for guidance on how to communicate with her husband. I added a brief empathy sentence followed by two concrete options (A/B) to offer the seeker a clear choice on how to proceed.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994562268257141,
+      "recheck_probabilities": {
+        "normal": 0.00018902728334069252,
+        "v1": 6.133605347713456e-05,
+        "v2": 8.273235289379954e-05,
+        "v3": 0.9994562268257141,
+        "v4": 9.59338722168468e-05,
+        "v5": 0.00011470278695924208
+      },
+      "rewrite_ms": 2192.2
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot. You might consider A) approaching him calmly to express how his words affect you, or B) giving him some space for now and focusing on being supportive without bringing it up immediately. Which option do you feel more inclined to try?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I maintained a brief empathy statement while introducing two options to guide the seeker in their decision-making process.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994646906852722,
+      "recheck_probabilities": {
+        "normal": 0.00019536698528099805,
+        "v1": 6.048361319699325e-05,
+        "v2": 7.961035589687526e-05,
+        "v3": 0.9994646906852722,
+        "v4": 9.13673429749906e-05,
+        "v5": 0.00010846147779375315
+      },
+      "rewrite_ms": 1966.7
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot. You might consider A) approaching him calmly to express how his words affect you, or B) giving him some space for now and focusing on being supportive without bringing it up immediately. Which option resonates with you?",
+      "reasoning": "The original response provided empathy but lacked practical help despite the seeker's explicit request for guidance on how to approach her husband. I added a brief empathy statement and provided two options (A/B) for her to consider regarding her approach to communicate with her husband.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994770884513855,
+      "recheck_probabilities": {
+        "normal": 0.0002018783416133374,
+        "v1": 6.050663432688452e-05,
+        "v2": 7.680075214011595e-05,
+        "v3": 0.9994770884513855,
+        "v4": 8.729482215130702e-05,
+        "v5": 9.644656529417261e-05
+      },
+      "rewrite_ms": 1884.0
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you’re facing a tough decision. Perhaps you could consider how you feel about his current behavior and what you hope to achieve by talking to him. Would you feel more comfortable approaching him directly, or do you think giving him some space might be better for now? You could also try writing down your feelings first to help clarify what you want to say.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

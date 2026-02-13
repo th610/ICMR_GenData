@@ -5,28 +5,28 @@
   "situation": "I am scared to open myself up to others such as men because I do not want my heart to be broken but ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997121691703796,
+    "confidence": 0.999675989151001,
     "all_probabilities": {
-      "normal": 0.9997121691703796,
-      "v1": 8.048386371228844e-05,
-      "v2": 3.99355631088838e-05,
-      "v3": 6.793780630687252e-05,
-      "v4": 4.089567300979979e-05,
-      "v5": 5.861683894181624e-05
+      "normal": 0.999675989151001,
+      "v1": 5.506148954737e-05,
+      "v2": 4.8105564928846434e-05,
+      "v3": 7.533294410677627e-05,
+      "v4": 5.8412875659996644e-05,
+      "v5": 8.713866554899141e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 819.4,
-    "detection_ms": 26.0,
+    "context_build_ms": 5.8,
+    "generation_ms": 2639.2,
+    "detection_ms": 39.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 849.4
+    "total_ms": 2684.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Video calls can really help create a more intimate atmosphere. You could also try sharing activities together, like watching a movie at the same time or playing an online game. What do you think would make your calls more enjoyable?",
+    "response": "Absolutely, video chatting can really help you feel more connected. Maybe you could set a specific time to chat, so you both have something to look forward to? How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

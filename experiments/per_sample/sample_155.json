@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "Its not even a break up, my girlfriend wants space after 5 years, she wants to rent a room on her ow",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8643816709518433,
+    "predicted_label": "v3",
+    "confidence": 0.9970669150352478,
     "all_probabilities": {
-      "normal": 0.8643816709518433,
-      "v1": 0.00048732644063420594,
-      "v2": 0.0006257941713556647,
-      "v3": 0.13353689014911652,
-      "v4": 0.00033910301863215864,
-      "v5": 0.0006292250473052263
+      "normal": 0.0020597500260919333,
+      "v1": 0.00012624038208741695,
+      "v2": 0.00018426115275360644,
+      "v3": 0.9970669150352478,
+      "v4": 0.0001280897849937901,
+      "v5": 0.00043472571996971965
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.7,
-    "generation_ms": 1436.8,
-    "detection_ms": 26.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1468.5
+    "context_build_ms": 5.8,
+    "generation_ms": 1401.9,
+    "detection_ms": 34.5,
+    "rewrite_total_ms": 5261.7,
+    "total_ms": 6704.2
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot, trying to find the right balance. You could consider: A) Reducing contact for a few days to see how you feel, or B) Checking in with her while setting clear boundaries about what you can offer emotionally right now. What resonates more with you?",
+      "reasoning": "The original response was overly empathetic without providing practical help, which led to a violation. I maintained a brief validation sentence while incorporating two options (A/B) for the seeker to consider, addressing their request for practical assistance.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995030164718628,
+      "recheck_probabilities": {
+        "normal": 0.00013404042692855,
+        "v1": 6.203805969562382e-05,
+        "v2": 0.00012586949742399156,
+        "v3": 0.9995030164718628,
+        "v4": 7.15165224391967e-05,
+        "v5": 0.00010349605872761458
+      },
+      "rewrite_ms": 1952.0
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot, trying to find the right balance. You could consider: A) Reducing contact for a few days to see how you feel, or B) Checking in with her while setting clear boundaries about what you can offer emotionally right now. What do you think would be best for you?",
+      "reasoning": "The original response provided empathy but failed to offer practical help, which is a counseling violation. I added a brief validation sentence and two options (A/B) to give the seeker clear choices to consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995030164718628,
+      "recheck_probabilities": {
+        "normal": 0.00013404042692855,
+        "v1": 6.203805969562382e-05,
+        "v2": 0.00012586949742399156,
+        "v3": 0.9995030164718628,
+        "v4": 7.15165224391967e-05,
+        "v5": 0.00010349605872761458
+      },
+      "rewrite_ms": 1493.3
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're in a tough spot, trying to find the right balance. You could consider A) Reducing contact for a few days to see how you feel, or B) Checking in with her while setting clear boundaries about what you can offer emotionally right now. Which option resonates more with you?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical assistance despite the seeker's explicit request for help with their dilemma. I added a brief empathy sentence and included two options for the seeker to consider, which offers practical help.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995902180671692,
+      "recheck_probabilities": {
+        "normal": 0.00010747113265097141,
+        "v1": 5.55792503291741e-05,
+        "v2": 0.0001052401858032681,
+        "v3": 0.9995902180671692,
+        "v4": 6.15469689364545e-05,
+        "v5": 7.99297631601803e-05
+      },
+      "rewrite_ms": 1816.4
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It’s a tough decision to make, and it’s great that you’re considering both options. One way to approach this might be to think about what feels most aligned with your needs right now. Would you prefer to give her some space and see how that affects you, or do you feel a need to connect with her more actively? You could also consider having a conversation where you express how you’re feeling about her wanting space while still being there for her. How does that sound to you?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

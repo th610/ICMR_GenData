@@ -1,73 +1,87 @@
 {
   "total_violations": 220,
-  "detected": 85,
-  "detection_rate": 0.38636363636363635,
-  "corrected": 16,
-  "correction_rate": 0.18823529411764706,
-  "failsafed": 69,
+  "detected": 212,
+  "detection_rate": 0.9636363636363636,
+  "exact_match": 207,
+  "exact_match_rate": 0.9409090909090909,
+  "corrected": 44,
+  "correction_rate": 0.20754716981132076,
+  "failsafed": 168,
+  "resolved": 212,
+  "resolved_rate": 1.0,
   "still_violated": 0,
   "leakage_rate": 0.0,
-  "resolved_total": 85,
-  "resolved_rate": 1.0,
+  "missed": 8,
+  "total_safe_rate": 0.9636363636363636,
   "retry_stats": {
-    "avg": 2.6470588235294117,
+    "avg": 2.660377358490566,
     "max": 3,
     "distribution": {
-      "3": 69,
-      "1": 14,
-      "2": 2
+      "3": 171,
+      "2": 10,
+      "1": 31
     }
   },
   "per_violation": {
     "v1": {
       "total": 50,
-      "detected": 39,
-      "corrected": 8,
-      "failsafed": 31,
-      "detection_rate": 0.78,
-      "correction_rate": 0.20512820512820512,
-      "avg_retries": 2.6153846153846154,
-      "resolved_rate": 1.0
+      "detected": 47,
+      "exact_match": 47,
+      "corrected": 0,
+      "failsafed": 47,
+      "resolved": 47,
+      "detection_rate": 0.94,
+      "exact_match_rate": 0.94,
+      "resolved_rate": 1.0,
+      "avg_retries": 3.0
     },
     "v2": {
       "total": 60,
-      "detected": 15,
-      "corrected": 4,
-      "failsafed": 11,
-      "detection_rate": 0.25,
-      "correction_rate": 0.26666666666666666,
-      "avg_retries": 2.533333333333333,
-      "resolved_rate": 1.0
+      "detected": 58,
+      "exact_match": 56,
+      "corrected": 31,
+      "failsafed": 27,
+      "resolved": 58,
+      "detection_rate": 0.9666666666666667,
+      "exact_match_rate": 0.9333333333333333,
+      "resolved_rate": 1.0,
+      "avg_retries": 2.086206896551724
     },
     "v3": {
       "total": 50,
-      "detected": 16,
+      "detected": 49,
+      "exact_match": 48,
       "corrected": 2,
-      "failsafed": 14,
-      "detection_rate": 0.32,
-      "correction_rate": 0.125,
-      "avg_retries": 2.75,
-      "resolved_rate": 1.0
+      "failsafed": 47,
+      "resolved": 49,
+      "detection_rate": 0.98,
+      "exact_match_rate": 0.96,
+      "resolved_rate": 1.0,
+      "avg_retries": 2.938775510204082
     },
     "v4": {
       "total": 30,
-      "detected": 0,
-      "corrected": 0,
-      "failsafed": 0,
-      "detection_rate": 0.0,
-      "correction_rate": 0,
-      "avg_retries": 0,
-      "resolved_rate": 0
+      "detected": 29,
+      "exact_match": 28,
+      "corrected": 2,
+      "failsafed": 27,
+      "resolved": 29,
+      "detection_rate": 0.9666666666666667,
+      "exact_match_rate": 0.9333333333333333,
+      "resolved_rate": 1.0,
+      "avg_retries": 2.896551724137931
     },
     "v5": {
       "total": 30,
-      "detected": 15,
-      "corrected": 2,
-      "failsafed": 13,
-      "detection_rate": 0.5,
-      "correction_rate": 0.13333333333333333,
-      "avg_retries": 2.7333333333333334,
-      "resolved_rate": 1.0
+      "detected": 29,
+      "exact_match": 28,
+      "corrected": 9,
+      "failsafed": 20,
+      "resolved": 29,
+      "detection_rate": 0.9666666666666667,
+      "exact_match_rate": 0.9333333333333333,
+      "resolved_rate": 1.0,
+      "avg_retries": 2.5517241379310347
     }
   }
 }

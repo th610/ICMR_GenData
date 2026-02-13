@@ -5,28 +5,28 @@
   "situation": "I broke up with my girlfriend yesterday. I had been with her for years and now living life without h",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9970268607139587,
+    "confidence": 0.9879153966903687,
     "all_probabilities": {
-      "normal": 0.9970268607139587,
-      "v1": 0.00011098902177764103,
-      "v2": 0.0023907008580863476,
-      "v3": 0.00025348429335281253,
-      "v4": 7.57623856770806e-05,
-      "v5": 0.0001423077774234116
+      "normal": 0.9879153966903687,
+      "v1": 0.00015060546866152436,
+      "v2": 0.0012928430223837495,
+      "v3": 0.0007475721649825573,
+      "v4": 0.00033663789508864284,
+      "v5": 0.009556957520544529
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.3,
-    "generation_ms": 1008.4,
-    "detection_ms": 25.2,
+    "context_build_ms": 3.6,
+    "generation_ms": 1323.9,
+    "detection_ms": 27.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1039.0
+    "total_ms": 1354.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I understand you're looking for guidance. One approach could be to allow yourself to feel your emotions without judgment. You might also consider writing down your thoughts or talking to a friend about how you’re feeling. Would you be open to trying either of those options?",
+    "response": "That’s completely understandable; our habits can be hard to break, especially when they’re tied to someone we cared about. Would it feel helpful to put your phone away for a little while or perhaps engage in a different activity to redirect your thoughts? Maybe you could go for a walk or practice some soccer drills to clear your mind.",
     "total_retries": 0,
     "used_failsafe": false
   }

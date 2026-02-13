@@ -6,35 +6,35 @@
 ────────────────────────────────────────────────────────────────────────────────
   [A] Observed Violation Statistics
 ────────────────────────────────────────────────────────────────────────────────
-  Total sessions:       300
-  Normal:               80
-  Violation:            220
+  Total sessions:       600
+  Normal:               160
+  Violation:            440
   pv (violation rate):  0.7333
-  pd (detection rate):  0.3864  (1 - FNR)
-  pfp (FPR):            0.0000  (0/80)
-  FNR:                  0.6136  (135/220)
+  pd (detection rate):  0.5591  (1 - FNR)
+  pfp (FPR):            0.0125  (2/160)
+  FNR:                  0.4409  (194/440)
 
   Per-Violation Detection:
   Type      Total Detected     Rate
   ──────── ────── ──────── ────────
-  V1           50       39   78.00%
-  V2           60       15   25.00%
-  V3           50       16   32.00%
-  V4           30        0    0.00%
-  V5           30       15   50.00%
+  V1          100       85   85.00%
+  V2          120       38   31.67%
+  V3          100       59   59.00%
+  V4           60       24   40.00%
+  V5           60       40   66.67%
 
 ────────────────────────────────────────────────────────────────────────────────
   [B] Component Latencies (ms)
 ────────────────────────────────────────────────────────────────────────────────
   Component                          Mean   Median      P95      N
   ────────────────────────────── ──────── ──────── ──────── ──────
-  Cg: Generation (GPT)             1081.3   1014.4   1462.6    300
-  Cd: Detection (RoBERTa)            27.1     26.3     30.1    300
-  Cr: Rewrite (when triggered)     3985.2   4250.9   5586.3     85
-  Cj: Judge (GPT-4o-mini)           459.8    418.9    655.5    300
+  Cg: Generation (GPT)             1493.2   1234.0   3177.7    600
+  Cd: Detection (RoBERTa)            29.1     27.1     35.5    600
+  Cr: Rewrite (when triggered)     6496.3   5603.0  11623.0    248
+  Cj: Judge (GPT-4o-mini)           878.8    781.5   1694.9    300
 
-  Rewrite triggered:   85 sessions
-  Avg retries/trigger: 2.65
+  Rewrite triggered:   248 sessions
+  Avg retries/trigger: 2.64
 
 ────────────────────────────────────────────────────────────────────────────────
   [C] Expected Cost per Session (latency, ms)
@@ -45,33 +45,33 @@
     E[C_judge] = Cg + Cj
 
   Parameters:
-    Cg  =   1081.3 ms   (response generation)
-    Cd  =     27.1 ms   (RoBERTa detection)
-    Cr  =   3985.2 ms   (rewrite when flagged)
-    Cj  =    459.8 ms   (LLM judge evaluation)
+    Cg  =   1493.2 ms   (response generation)
+    Cd  =     29.1 ms   (RoBERTa detection)
+    Cr  =   6496.3 ms   (rewrite when flagged)
+    Cj  =    878.8 ms   (LLM judge evaluation)
     pv  =   0.7333       (violation probability)
-    pd  =   0.3864       (detection rate)
-    pfp =   0.0000       (false positive rate)
-    P(rewrite) = pv·pd + pfp = 0.2833
+    pd  =   0.5591       (detection rate)
+    pfp =   0.0125       (false positive rate)
+    P(rewrite) = pv·pd + pfp = 0.4225
 
   ┌─────────────────────────────────────────────────────────┐
-  │  E[C_ours]  = 1081.3 + 27.1 + 0.2833 × 3985.2
-  │             = 2237.5 ms
+  │  E[C_ours]  = 1493.2 + 29.1 + 0.4225 × 6496.3
+  │             = 4266.9 ms
   │
-  │  E[C_judge] = 1081.3 + 459.8
-  │             = 1541.0 ms
+  │  E[C_judge] = 1493.2 + 878.8
+  │             = 2371.9 ms
   └─────────────────────────────────────────────────────────┘
 
 ────────────────────────────────────────────────────────────────────────────────
   [D] Savings Summary
 ────────────────────────────────────────────────────────────────────────────────
-  Our System (expected):       2237.5 ms
-  LLM-Judge (expected):        1541.0 ms
-  Savings:                     -696.5 ms  (-45.2%)
+  Our System (expected):       4266.9 ms
+  LLM-Judge (expected):        2371.9 ms
+  Savings:                    -1895.0 ms  (-79.9%)
 
-  Fast path (no violation): 1108.4 ms  (Cg + Cd only)
-  Slow path (rewrite):      5093.6 ms  (Cg + Cd + Cr)
-  Judge always:             1541.0 ms  (Cg + Cj always)
+  Fast path (no violation): 1522.2 ms  (Cg + Cd only)
+  Slow path (rewrite):      8018.5 ms  (Cg + Cd + Cr)
+  Judge always:             2371.9 ms  (Cg + Cj always)
 
 ────────────────────────────────────────────────────────────────────────────────
   [E] Gold-Corrected Analysis (pd=1.0, pfp=0.0)
@@ -87,13 +87,13 @@
     P(rewrite) = pv × pd + pfp = 0.7333
 
   ┌─────────────────────────────────────────────────────────┐
-  │  E[C_ours]  = 1081.3 + 27.1 + 0.7333 × 3985.2
-  │             = 4030.9 ms
-  │  E[C_judge] = 1541.0 ms
-  │  Savings    = -2489.9 ms  (-161.6%)
+  │  E[C_ours]  = 1493.2 + 29.1 + 0.7333 × 6496.3
+  │             = 6286.2 ms
+  │  E[C_judge] = 2371.9 ms
+  │  Savings    = -3914.3 ms  (-165.0%)
   └─────────────────────────────────────────────────────────┘
 
-  Breakeven: Our system = Judge when pv = 0.1086  (10.9%)
-  → 위반율이 10.9% 미만이면 Our System이 더 저렴
+  Breakeven: Our system = Judge when pv = 0.1308  (13.1%)
+  → 위반율이 13.1% 미만이면 Our System이 더 저렴
 
 ================================================================================

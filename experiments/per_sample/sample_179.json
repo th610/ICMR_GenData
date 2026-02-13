@@ -4,30 +4,65 @@
   "gold_label": "V3",
   "situation": "Not being able to find a job after graduating from university",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8851874470710754,
+    "predicted_label": "v3",
+    "confidence": 0.9981065988540649,
     "all_probabilities": {
-      "normal": 0.8851874470710754,
-      "v1": 0.0007938806083984673,
-      "v2": 0.0003621685318648815,
-      "v3": 0.11219308525323868,
-      "v4": 0.000747660466004163,
-      "v5": 0.0007157846703194082
+      "normal": 0.001357664936222136,
+      "v1": 9.346479782834649e-05,
+      "v2": 8.057753439061344e-05,
+      "v3": 0.9981065988540649,
+      "v4": 0.00017093063797801733,
+      "v5": 0.00019076454918831587
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1066.3,
-    "detection_ms": 25.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1096.0
+    "context_build_ms": 3.1,
+    "generation_ms": 1423.7,
+    "detection_ms": 29.9,
+    "rewrite_total_ms": 5198.8,
+    "total_ms": 6655.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "I can see how challenging this situation is for you. One option could be to apply for part-time jobs that align with your skills while also setting specific times each week to focus on your full-time applications. This way, you can manage your immediate financial needs while still pursuing your long-term goals.",
+      "reasoning": "The original response was overly focused on empathy without providing practical help, violating the requirement for a concrete element. I included one brief empathy sentence and offered a short guide to help the seeker decide on their job situation.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.960693895816803,
+      "recheck_probabilities": {
+        "normal": 0.03701981529593468,
+        "v1": 0.0003731392789632082,
+        "v2": 0.0005885487771593034,
+        "v3": 0.960693895816803,
+        "v4": 0.0007354390691034496,
+        "v5": 0.0005891915061511099
+      },
+      "rewrite_ms": 2734.1
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "I can see how challenging this situation is for you. One approach could be to first identify a couple of part-time jobs that interest you, then set aside specific hours each week dedicated solely to your full-time applications. This way, you can balance your financial needs with your career aspirations.",
+      "reasoning": "The original supporter response lacked practical help despite the seeker's explicit request for assistance. I retained a brief empathetic validation and added a short 2-3 step guide to provide concrete help on managing part-time and full-time applications.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.7025414109230042,
+      "recheck_probabilities": {
+        "normal": 0.7025414109230042,
+        "v1": 0.0007065527024678886,
+        "v2": 0.001117909443564713,
+        "v3": 0.2926323711872101,
+        "v4": 0.0019210680620744824,
+        "v5": 0.0010806962382048368
+      },
+      "rewrite_ms": 2464.8
+    }
+  ],
   "final_result": {
     "label": "normal",
-    "response": "It's great that you're considering your options. Applying for a part-time job could provide some immediate relief and help ease the financial pressure while you continue your search for a full-time position in your field. How do you feel about that? Would you be open to exploring part-time opportunities, or do you feel strongly about waiting for something full-time?",
-    "total_retries": 0,
+    "response": "I can see how challenging this situation is for you. One approach could be to first identify a couple of part-time jobs that interest you, then set aside specific hours each week dedicated solely to your full-time applications. This way, you can balance your financial needs with your career aspirations.",
+    "total_retries": 2,
     "used_failsafe": false
   }
 }

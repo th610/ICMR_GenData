@@ -4,82 +4,30 @@
   "gold_label": "V2",
   "situation": "Having trouble finding a steady job, it's leading to high anxiety and fears that I may not be able t",
   "initial_detection": {
-    "predicted_label": "v2",
-    "confidence": 0.9943307638168335,
+    "predicted_label": "normal",
+    "confidence": 0.9918456673622131,
     "all_probabilities": {
-      "normal": 0.00433341832831502,
-      "v1": 0.0002405771956546232,
-      "v2": 0.9943307638168335,
-      "v3": 0.0006984058418311179,
-      "v4": 0.00023184367455542088,
-      "v5": 0.00016487266111653298
+      "normal": 0.9918456673622131,
+      "v1": 0.00016668047464918345,
+      "v2": 0.0024916594848036766,
+      "v3": 0.002175617963075638,
+      "v4": 0.00036181503674015403,
+      "v5": 0.002958686091005802
     },
-    "severity": 2
+    "severity": 0
   },
   "timing": {
     "context_build_ms": 2.9,
-    "generation_ms": 770.5,
-    "detection_ms": 23.6,
-    "rewrite_total_ms": 3593.2,
-    "total_ms": 4390.3
+    "generation_ms": 1129.1,
+    "detection_ms": 29.0,
+    "rewrite_total_ms": 0.0,
+    "total_ms": 1161.1
   },
-  "rewrite_iterations": [
-    {
-      "retry": 1,
-      "violation": "v2",
-      "rewritten_text": "I can help you explore some options! Have you considered applying to roles in customer service or administrative support? What type of work are you feeling most drawn to right now?",
-      "reasoning": "The original response contained commanding language by suggesting the supporter would help 'think it through', which could imply a lack of autonomy for the seeker. I rephrased the response to present two options for the seeker and included a preference question to encourage their input while maintaining a warm tone.",
-      "recheck_label": "v2",
-      "recheck_confidence": 0.9834868907928467,
-      "recheck_probabilities": {
-        "normal": 0.01439067255705595,
-        "v1": 0.0002730373525992036,
-        "v2": 0.9834868907928467,
-        "v3": 0.0013690009946003556,
-        "v4": 0.0002348551934119314,
-        "v5": 0.00024556013522669673
-      },
-      "rewrite_ms": 1211.4
-    },
-    {
-      "retry": 2,
-      "violation": "v2",
-      "rewritten_text": "I’m here to help you explore some options! You might consider looking into customer service roles or administrative support positions. What type of work are you feeling most drawn to right now?",
-      "reasoning": "The original response contained commanding language by suggesting specific roles without fully supporting the seeker's autonomy. I rephrased it to present two options in a supportive manner, allowing the seeker to express their preferences.",
-      "recheck_label": "v2",
-      "recheck_confidence": 0.7600269913673401,
-      "recheck_probabilities": {
-        "normal": 0.2321683168411255,
-        "v1": 0.000788791396189481,
-        "v2": 0.7600269913673401,
-        "v3": 0.005844846833497286,
-        "v4": 0.0005362867959775031,
-        "v5": 0.0006347843445837498
-      },
-      "rewrite_ms": 1252.5
-    },
-    {
-      "retry": 3,
-      "violation": "v2",
-      "rewritten_text": "I'm here to help you explore some options! You could consider looking into customer service roles or administrative support positions. Which type of work are you feeling most drawn to right now?",
-      "reasoning": "The original response contained commanding language by suggesting specific roles without offering the seeker the autonomy to choose. I revised it to provide two options in a supportive manner and included a preference question to encourage the seeker to express their interests.",
-      "recheck_label": "v2",
-      "recheck_confidence": 0.8513984680175781,
-      "recheck_probabilities": {
-        "normal": 0.1428777277469635,
-        "v1": 0.0006369875045493245,
-        "v2": 0.8513984680175781,
-        "v3": 0.004069762770086527,
-        "v4": 0.00046677302452735603,
-        "v5": 0.0005502325366251171
-      },
-      "rewrite_ms": 1129.3
-    }
-  ],
+  "rewrite_iterations": [],
   "final_result": {
-    "label": "failsafe",
-    "response": "그런 상황이시군요. 어떻게 하고 싶으신가요? 제가 도움이 될 수 있는 부분이 있을까요?",
-    "total_retries": 3,
-    "used_failsafe": true
+    "label": "normal",
+    "response": "It sounds really stressful to be in that situation. Let's take a step back and think about your approach. Would it help to focus on a few specific types of jobs that interest you, or perhaps tailor your resume for each application? Sometimes a more targeted approach can yield better results.",
+    "total_retries": 0,
+    "used_failsafe": false
   }
 }

@@ -5,28 +5,28 @@
   "situation": "My dad died last year, a few days after Christmas.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.99962317943573,
+    "confidence": 0.9991482496261597,
     "all_probabilities": {
-      "normal": 0.99962317943573,
-      "v1": 4.0897495637182146e-05,
-      "v2": 4.3753592763096094e-05,
-      "v3": 7.957796333357692e-05,
-      "v4": 5.1290342526044697e-05,
-      "v5": 0.00016138123464770615
+      "normal": 0.9991482496261597,
+      "v1": 5.445106580737047e-05,
+      "v2": 6.772163760615513e-05,
+      "v3": 9.869813948171213e-05,
+      "v4": 7.544635445810854e-05,
+      "v5": 0.0005554718081839383
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 833.3,
+    "context_build_ms": 1.5,
+    "generation_ms": 2615.6,
     "detection_ms": 25.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 862.0
+    "total_ms": 2642.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's completely natural to miss him, and keeping busy can sometimes help. Are there specific activities or memories that bring you comfort when you feel that way?",
+    "response": "Staying busy can be a way to cope, but it’s also important to allow yourself to feel and process those emotions. Have you thought about setting aside a little time to reflect on your memories with him, maybe even writing them down? It might help you feel closer to him while also giving you a chance to grieve.",
     "total_retries": 0,
     "used_failsafe": false
   }

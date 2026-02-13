@@ -5,75 +5,75 @@
   "situation": "My girlfriend of 2 years left me for another person.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9711840152740479,
+    "confidence": 0.9994344115257263,
     "all_probabilities": {
-      "normal": 0.027434419840574265,
-      "v1": 0.9711840152740479,
-      "v2": 0.0001821239129640162,
-      "v3": 0.0002619782171677798,
-      "v4": 0.0007745117181912065,
-      "v5": 0.00016291809151880443
+      "normal": 0.00018157335580326617,
+      "v1": 0.9994344115257263,
+      "v2": 4.168217128608376e-05,
+      "v3": 5.593015885096975e-05,
+      "v4": 0.00011976558016613126,
+      "v5": 0.00016668354510329664
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.8,
-    "generation_ms": 868.9,
-    "detection_ms": 27.6,
-    "rewrite_total_ms": 4544.1,
-    "total_ms": 5445.7
+    "context_build_ms": 6.2,
+    "generation_ms": 1675.8,
+    "detection_ms": 30.4,
+    "rewrite_total_ms": 12691.9,
+    "total_ms": 14404.6
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like hearing that kind of news is really difficult, especially since you're unsure of the details. How are you feeling about the possibility of her seeing someone else? Perhaps it might help to reach out to a friend or someone you trust to talk about how you’re feeling.",
-      "reasoning": "The original response jumped to a conclusion about the seeker's feelings regarding rumors without fully acknowledging the uncertainty expressed by the seeker. The revised response acknowledges the seeker's uncertainty regarding the rumor and asks a clarifying question while suggesting gentle next steps.",
+      "rewritten_text": "It sounds like that uncertainty makes it even harder for you. How are you coping with those feelings right now? Perhaps reaching out to a friend for a brief chat might help, or journaling your thoughts could provide some clarity.",
+      "reasoning": "The original response jumped to conclusions about the user's feelings and suggested a course of action without fully clarifying the user's emotional state or perspective. I acknowledged the user's uncertainty and feelings first, asked a clarifying question, and then offered gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9336817860603333,
+      "recheck_confidence": 0.9996494054794312,
       "recheck_probabilities": {
-        "normal": 0.06468329578638077,
-        "v1": 0.9336817860603333,
-        "v2": 0.00015255814651027322,
-        "v3": 0.0003950553073082119,
-        "v4": 0.0008643275941722095,
-        "v5": 0.00022299816191662103
+        "normal": 9.293581388192251e-05,
+        "v1": 0.9996494054794312,
+        "v2": 5.1387112762313336e-05,
+        "v3": 5.594261529040523e-05,
+        "v4": 6.861629663035274e-05,
+        "v5": 8.172044181264937e-05
       },
-      "rewrite_ms": 1614.4
+      "rewrite_ms": 3433.6
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds really difficult to hear that news, especially since you're unsure of the details. How are you feeling about this uncertainty? It might be helpful to take some time to process your thoughts, and perhaps you could consider talking to someone you trust about what you're experiencing.",
-      "reasoning": "The original response made a hasty conclusion by assuming the seeker's feelings and suggesting actions without fully understanding their emotions regarding the new information. I corrected it by acknowledging the uncertainty of the situation, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty about your ex-girlfriend's situation adds to the difficulty you're experiencing. How do you feel about the possibility of her moving on? Talking to a friend or writing in a journal might help you process these feelings.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully acknowledging the uncertainty they expressed regarding the vague information about their ex-girlfriend. I fixed it by acknowledging the uncertainty and asking a single clarifying question while also providing gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.5005277991294861,
+      "recheck_confidence": 0.9996203184127808,
       "recheck_probabilities": {
-        "normal": 0.4963592290878296,
-        "v1": 0.5005277991294861,
-        "v2": 0.00037784213782288134,
-        "v3": 0.0011627685744315386,
-        "v4": 0.0010876152664422989,
-        "v5": 0.0004847620730288327
+        "normal": 0.0001115606864914298,
+        "v1": 0.9996203184127808,
+        "v2": 4.593262929120101e-05,
+        "v3": 5.4089610785013065e-05,
+        "v4": 8.03980728960596e-05,
+        "v5": 8.766350947553292e-05
       },
-      "rewrite_ms": 1419.3
+      "rewrite_ms": 4124.2
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds really difficult to hear that news, especially with the uncertainty surrounding it. How are you feeling about the possibility of her seeing someone else? Taking some time to process your thoughts can be helpful, and it might be nice to reach out to someone you trust to share what you’re going through.",
-      "reasoning": "The original response made a hasty conclusion by not directly acknowledging the seeker's new information about the potential new relationship and filled in a suggestion without asking a clarifying question. I fixed it by specifically acknowledging the uncertainty about the situation and asking a single clarifying question, followed by gentle next steps.",
+      "rewritten_text": "It seems like the uncertainty about your ex-girlfriend's situation is really weighing on you. How are you feeling about the idea of her being with someone else? Maybe sharing your thoughts with a friend or journaling could help you navigate these emotions.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully understanding their emotional state regarding their ex-girlfriend's potential new relationship. I revised it to acknowledge the seeker's uncertainty and included a single clarifying question while suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.6156389713287354,
+      "recheck_confidence": 0.9996451139450073,
       "recheck_probabilities": {
-        "normal": 0.38105326890945435,
-        "v1": 0.6156389713287354,
-        "v2": 0.00030783898546360433,
-        "v3": 0.0008197340648621321,
-        "v4": 0.0016826739301905036,
-        "v5": 0.0004974663024768233
+        "normal": 8.823308598948643e-05,
+        "v1": 0.9996451139450073,
+        "v2": 5.0796064897440374e-05,
+        "v3": 5.465351205202751e-05,
+        "v4": 7.70246479078196e-05,
+        "v5": 8.415775664616376e-05
       },
-      "rewrite_ms": 1510.3
+      "rewrite_ms": 5134.1
     }
   ],
   "final_result": {

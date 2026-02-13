@@ -5,28 +5,28 @@
   "situation": "Loss of job and the pandemic",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996731281280518,
+    "confidence": 0.9995458722114563,
     "all_probabilities": {
-      "normal": 0.9996731281280518,
-      "v1": 8.440011879429221e-05,
-      "v2": 3.99589553126134e-05,
-      "v3": 8.610819349996746e-05,
-      "v4": 4.800629540113732e-05,
-      "v5": 6.838809349574149e-05
+      "normal": 0.9995458722114563,
+      "v1": 0.00011218491272302344,
+      "v2": 0.00011150228237966076,
+      "v3": 8.429422450717539e-05,
+      "v4": 8.338688348885626e-05,
+      "v5": 6.269271398195997e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 765.1,
-    "detection_ms": 24.6,
+    "context_build_ms": 3.5,
+    "generation_ms": 1145.7,
+    "detection_ms": 28.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 793.5
+    "total_ms": 1178.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Those sound like such fun activities! Board games can really bring everyone together, and movie nights are always a great way to relax. Do you have a favorite board game or movie that everyone enjoys?",
+    "response": "That sounds wonderful! Do you have a favorite movie that you've all enjoyed together, or are you trying out new ones each time?",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I left my husband 2 years ago.  I regret it but it's too late to go back.   I am grieving what I los",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.6318090558052063,
+    "predicted_label": "v3",
+    "confidence": 0.9991545677185059,
     "all_probabilities": {
-      "normal": 0.6318090558052063,
-      "v1": 0.0008495115907862782,
-      "v2": 0.0008352156728506088,
-      "v3": 0.3652913272380829,
-      "v4": 0.00045047805178910494,
-      "v5": 0.000764445576351136
+      "normal": 0.0002951488713733852,
+      "v1": 6.592925637960434e-05,
+      "v2": 6.902741006342694e-05,
+      "v3": 0.9991545677185059,
+      "v4": 0.00013457458408083767,
+      "v5": 0.0002807397977449
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 3.5,
-    "generation_ms": 1236.5,
-    "detection_ms": 25.1,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1265.1
+    "context_build_ms": 1.6,
+    "generation_ms": 1294.1,
+    "detection_ms": 25.4,
+    "rewrite_total_ms": 11175.4,
+    "total_ms": 12496.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're at a crossroads. Considering how you're feeling, what do you think would help you more right now: expressing your feelings to him or focusing on your own healing for a bit longer?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, which led to a counseling violation. I added a clarifying question to guide the seeker in considering their next steps while maintaining a brief empathetic tone.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994557499885559,
+      "recheck_probabilities": {
+        "normal": 0.00014628315693698823,
+        "v1": 5.811848313896917e-05,
+        "v2": 5.906502701691352e-05,
+        "v3": 0.9994557499885559,
+        "v4": 0.00010649879550328478,
+        "v5": 0.00017438946815673262
+      },
+      "rewrite_ms": 3515.3
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you're at a crossroads. You could either take some time to reflect on your feelings before reaching out, or you could write a draft message to express your feelings without sending it right away. What do you think would work best for you?",
+      "reasoning": "The original response was primarily empathetic and failed to provide practical help despite the seeker explicitly asking for guidance. I added a brief validation statement and a clear decision-making option to provide the seeker with practical assistance.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9987819790840149,
+      "recheck_probabilities": {
+        "normal": 0.0006722484831698239,
+        "v1": 9.295510972151533e-05,
+        "v2": 7.525781984440982e-05,
+        "v3": 0.9987819790840149,
+        "v4": 0.0001232666545547545,
+        "v5": 0.00025430976529605687
+      },
+      "rewrite_ms": 2785.8
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel conflicted about this. You could either take some time to reflect before reaching out or consider drafting a message to express your feelings and not send it right away. Which option feels more comfortable for you?",
+      "reasoning": "The original response was primarily empathetic but failed to provide practical help as requested by the seeker. I added a concrete option to help the seeker decide how to proceed regarding their feelings about messaging.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994887113571167,
+      "recheck_probabilities": {
+        "normal": 0.00016440135368611664,
+        "v1": 5.509860420715995e-05,
+        "v2": 6.686983397230506e-05,
+        "v3": 0.9994887113571167,
+        "v4": 9.012162627186626e-05,
+        "v5": 0.0001348682417301461
+      },
+      "rewrite_ms": 4874.3
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're at a crossroads, and it's important to honor both your feelings and your desire for clarity. One option could be to take some time to write down what you'd like to say to him, which can help you process your feelings. Another option is to reflect on what letting go means for you and what you hope to achieve by reaching out. How do you feel about exploring those two paths further?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "I have to give an important presentation for my academic career and I am stressed about public speak",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.8529461622238159,
+    "predicted_label": "v1",
+    "confidence": 0.999332845211029,
     "all_probabilities": {
-      "normal": 0.8529461622238159,
-      "v1": 0.14551402628421783,
-      "v2": 0.00042240144102834165,
-      "v3": 0.0004678189870901406,
-      "v4": 0.0005152291851118207,
-      "v5": 0.000134359608637169
+      "normal": 0.0003021856537088752,
+      "v1": 0.999332845211029,
+      "v2": 6.279422086663544e-05,
+      "v3": 0.00013809440133627504,
+      "v4": 9.799039253266528e-05,
+      "v5": 6.615493475692347e-05
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.2,
-    "generation_ms": 1349.6,
-    "detection_ms": 27.9,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1382.8
+    "context_build_ms": 4.3,
+    "generation_ms": 3177.4,
+    "detection_ms": 29.8,
+    "rewrite_total_ms": 9160.0,
+    "total_ms": 12371.8
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about grading, especially when you overheard mixed opinions. What specific aspects of your presentation are you most worried about? Perhaps you could identify a few key points that excite you and prepare to elaborate on them if time allows.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's situation without acknowledging the new information shared about their uncertainty regarding grading. I fixed it by first acknowledging their uncertainty and then asking a clarifying question to better understand their situation before offering gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9996172189712524,
+      "recheck_probabilities": {
+        "normal": 8.552657527616248e-05,
+        "v1": 0.9996172189712524,
+        "v2": 6.864537863293663e-05,
+        "v3": 7.186087896116078e-05,
+        "v4": 9.866022446658462e-05,
+        "v5": 5.801589213660918e-05
+      },
+      "rewrite_ms": 3151.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about grading, especially with mixed opinions. What specific aspects of your presentation are causing you the most doubt? It might be helpful to focus on the key points that excite you and consider practicing them to build your confidence.",
+      "reasoning": "The original response assumed the user's feelings about grading without fully acknowledging their uncertainty or asking for clarification on their concerns. I fixed it by acknowledging the user's uncertainty and including a clarifying question to better understand their specific worries.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995821118354797,
+      "recheck_probabilities": {
+        "normal": 9.487013448961079e-05,
+        "v1": 0.9995821118354797,
+        "v2": 7.656375964870676e-05,
+        "v3": 8.657899161335081e-05,
+        "v4": 9.563691128278151e-05,
+        "v5": 6.419093551812693e-05
+      },
+      "rewrite_ms": 3355.3
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It's understandable to feel uncertain about grading, especially with mixed opinions. What specific aspects of the grading process are making you feel the most unsure? It might be helpful to identify the key points that excite you and practice discussing them to help build your confidence.",
+      "reasoning": "The original response made hasty conclusions about the seeker's uncertainty without adequately addressing their specific concerns regarding grading. I revised the response to acknowledge their uncertainty and included a clarifying question to better understand their specific worries, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995593428611755,
+      "recheck_probabilities": {
+        "normal": 0.00014307569654192775,
+        "v1": 0.9995593428611755,
+        "v2": 5.930647239438258e-05,
+        "v3": 8.149750647135079e-05,
+        "v4": 8.304857328766957e-05,
+        "v5": 7.375462155323476e-05
+      },
+      "rewrite_ms": 2652.9
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It makes sense to feel uncertain about that. Maybe you could reach out to your instructor or check the course syllabus for more details? Understanding the grading criteria might help ease some of your stress. How do you feel about approaching them for clarification?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

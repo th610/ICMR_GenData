@@ -5,28 +5,28 @@
   "situation": "I am sad all the time, and I always have been sad.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9460354447364807,
+    "confidence": 0.9974464178085327,
     "all_probabilities": {
-      "normal": 0.9460354447364807,
-      "v1": 0.00019190047169104218,
-      "v2": 0.00197780504822731,
-      "v3": 0.0006182445213198662,
-      "v4": 0.00041580208926461637,
-      "v5": 0.05076079070568085
+      "normal": 0.9974464178085327,
+      "v1": 7.231354538816959e-05,
+      "v2": 5.949098340352066e-05,
+      "v3": 0.0001670831989031285,
+      "v4": 0.00010505936370464042,
+      "v5": 0.002149656880646944
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.4,
-    "generation_ms": 977.6,
-    "detection_ms": 27.3,
+    "context_build_ms": 4.7,
+    "generation_ms": 1344.2,
+    "detection_ms": 30.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1009.4
+    "total_ms": 1379.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I'm really sorry you're feeling this way. Your feelings are important, and it's crucial to talk about them. Are you safe right now? If you're feeling like you might hurt yourself, please reach out to someone who can help, like a friend or a crisis hotline. You deserve support and care. Would you feel comfortable talking about what's been making you feel hopeless lately?",
+    "response": "That sounds really tough, and it's understandable to feel that way when things seem heavy for so long. Have you thought about talking to someone who can help? Sometimes sharing those feelings with a professional can open up new perspectives. Or, if you're up for it, maybe we could explore a small step together, like revisiting one of your old hobbies just for a moment? What do you think?",
     "total_retries": 0,
     "used_failsafe": false
   }

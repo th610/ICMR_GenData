@@ -5,28 +5,28 @@
   "situation": "I lost my job.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9886254072189331,
+    "confidence": 0.9987176656723022,
     "all_probabilities": {
-      "normal": 0.9886254072189331,
-      "v1": 0.00023275663261301816,
-      "v2": 0.006428391207009554,
-      "v3": 0.003818375524133444,
-      "v4": 0.0002976568357553333,
-      "v5": 0.000597381207626313
+      "normal": 0.9987176656723022,
+      "v1": 0.00011681514297379181,
+      "v2": 0.00015113962581381202,
+      "v3": 0.00029558443930000067,
+      "v4": 5.024727579439059e-05,
+      "v5": 0.0006686800043098629
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.2,
-    "generation_ms": 981.0,
-    "detection_ms": 26.0,
+    "context_build_ms": 2.2,
+    "generation_ms": 1437.7,
+    "detection_ms": 29.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1010.3
+    "total_ms": 1469.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds really overwhelming right now. How about we break it down together? One option could be to update your resume and LinkedIn profile to reflect your skills. Another could be to make a list of companies you’d like to work for and explore their job openings. Which of these feels like a more manageable step for you?",
+    "response": "That sounds really overwhelming. It can be helpful to ground yourself in the present moment. Would you like to try a simple breathing exercise together, or would you prefer to talk about one of those scenarios and see if we can reframe it?",
     "total_retries": 0,
     "used_failsafe": false
   }

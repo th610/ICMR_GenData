@@ -5,28 +5,28 @@
   "situation": "I don't love my partner any more and I don't know what to do for the best as she really loves me but",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.999728262424469,
+    "confidence": 0.9996069073677063,
     "all_probabilities": {
-      "normal": 0.999728262424469,
-      "v1": 5.6779903388815e-05,
-      "v2": 3.818801633315161e-05,
-      "v3": 8.614160469733179e-05,
-      "v4": 3.6880643165204674e-05,
-      "v5": 5.3841918997932225e-05
+      "normal": 0.9996069073677063,
+      "v1": 4.083470412297174e-05,
+      "v2": 3.4830576623789966e-05,
+      "v3": 6.501774623757228e-05,
+      "v4": 3.843697049887851e-05,
+      "v5": 0.00021392916096374393
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.5,
-    "generation_ms": 995.0,
-    "detection_ms": 27.9,
+    "context_build_ms": 5.0,
+    "generation_ms": 1956.9,
+    "detection_ms": 31.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1028.6
+    "total_ms": 1993.6
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you have a solid foundation for open communication, which is a great start. Maybe you could begin by sharing your feelings and concerns first, then inviting her to share her thoughts. Would you feel comfortable starting with something like, 'I care about you and our relationship, and I want to be honest about where I’m at'?",
+    "response": "That’s definitely a tough thing to express. It sounds like it’s a significant part of the conversation you need to have with her. Would it help to think about how you might frame that in a way that emphasizes your care for her feelings? Perhaps starting with what you appreciate about her before sharing your feelings could soften the blow. How does that feel to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

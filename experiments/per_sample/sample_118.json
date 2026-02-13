@@ -5,75 +5,75 @@
   "situation": "I've made an accident at work in warehouse and didn't report it",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9275021553039551,
+    "confidence": 0.997470498085022,
     "all_probabilities": {
-      "normal": 0.07127787917852402,
-      "v1": 0.9275021553039551,
-      "v2": 0.00020810347632505,
-      "v3": 0.00036637444281950593,
-      "v4": 0.0005370904691517353,
-      "v5": 0.00010839792957995087
+      "normal": 0.0015233311569318175,
+      "v1": 0.997470498085022,
+      "v2": 6.28859706921503e-05,
+      "v3": 0.0003521353646647185,
+      "v4": 0.00020930769096594304,
+      "v5": 0.0003819315752480179
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.6,
-    "generation_ms": 1071.6,
-    "detection_ms": 26.9,
-    "rewrite_total_ms": 5560.1,
-    "total_ms": 6664.4
+    "context_build_ms": 4.0,
+    "generation_ms": 1303.8,
+    "detection_ms": 27.6,
+    "rewrite_total_ms": 8181.1,
+    "total_ms": 9516.8
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the possible consequences of reporting. Could you tell me more about what your coworker implied regarding the reporting process? It might be helpful to gather more information from someone you trust at work or consider discussing this directly with your supervisor.",
-      "reasoning": "The original response made a hasty conclusion by not fully addressing the seeker's uncertainty about their coworker's comments regarding the consequences of reporting the accident. I fixed it by acknowledging their concern, asking a clarifying question, and gently suggesting next steps without making assumptions.",
+      "rewritten_text": "It sounds like you're feeling stuck and uncertain about the potential outcomes of reporting. How do you feel about the possibility of discussing this with someone you trust? Taking some time to reflect on your thoughts might also help clarify your next steps.",
+      "reasoning": "The original response jumped to offering suggestions without fully acknowledging the seeker’s feelings of being stuck or uncertain about the consequences of reporting. The corrected response addresses the seeker’s new concerns and asks a clarifying question to explore their feelings further before suggesting next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9968451261520386,
+      "recheck_confidence": 0.9980641007423401,
       "recheck_probabilities": {
-        "normal": 0.002744913101196289,
-        "v1": 0.9968451261520386,
-        "v2": 0.0001390814722981304,
-        "v3": 0.00010890011617448181,
-        "v4": 0.0001249944616574794,
-        "v5": 3.702631875057705e-05
+        "normal": 0.0010253282962366939,
+        "v1": 0.9980641007423401,
+        "v2": 5.7241504691774026e-05,
+        "v3": 0.0002863257541321218,
+        "v4": 0.00016099881031550467,
+        "v5": 0.00040591388824395835
       },
-      "rewrite_ms": 1833.8
+      "rewrite_ms": 4563.1
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the possible consequences of reporting. What exactly did your coworker say about reporting and its implications? It might be helpful to gather more information from someone you trust at work, or you could consider discussing your concerns with your supervisor for clarification.",
-      "reasoning": "The original response was a hasty conclusion without adequately clarifying the user's situation. I acknowledged the user's uncertainty while asking for specific information related to their coworker's implications about reporting, and then suggested gentle next steps without assuming any missing facts.",
+      "rewritten_text": "It sounds like you're feeling uncertain about the potential consequences of reporting. What do you think might help you feel more confident in making a decision? You could consider talking to someone you trust about your concerns or writing down your thoughts to gain clarity.",
+      "reasoning": "The original response made a hasty conclusion without fully understanding the seeker's feelings or situation. I acknowledged the seeker's uncertainty and provided a single clarifying question while suggesting gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9721376895904541,
+      "recheck_confidence": 0.9964749217033386,
       "recheck_probabilities": {
-        "normal": 0.027069594711065292,
-        "v1": 0.9721376895904541,
-        "v2": 0.00019594635523390025,
-        "v3": 0.00026054756017401814,
-        "v4": 0.00025846646167337894,
-        "v5": 7.778545841574669e-05
+        "normal": 0.0024764500558376312,
+        "v1": 0.9964749217033386,
+        "v2": 6.55406474834308e-05,
+        "v3": 0.0003224984393455088,
+        "v4": 0.0001949156285263598,
+        "v5": 0.00046563969226554036
       },
-      "rewrite_ms": 1807.0
+      "rewrite_ms": 1929.0
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the implications of reporting, especially after what your coworker mentioned. What specific concerns did they express about the potential consequences of reporting? It could be helpful to talk to someone you trust at work for more insight, or perhaps consider discussing your feelings with your supervisor when you're ready.",
-      "reasoning": "The original response made a hasty conclusion without fully clarifying the seeker's thoughts on their coworker's comments. I acknowledged the seeker's uncertainty and asked a specific clarifying question while providing gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like you're feeling uncertain about the potential consequences of reporting. What specific fears do you have about reporting that might be holding you back? It could be helpful to explore these feelings further, and perhaps discussing them with someone you trust might provide additional clarity.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings and options without fully understanding their specific concerns. I corrected it by acknowledging the seeker's uncertainty and asking a clarifying question, followed by suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9562402367591858,
+      "recheck_confidence": 0.9980109333992004,
       "recheck_probabilities": {
-        "normal": 0.04279070347547531,
-        "v1": 0.9562402367591858,
-        "v2": 0.00019225296273361892,
-        "v3": 0.0003148067626170814,
-        "v4": 0.0003548724635038525,
-        "v5": 0.0001070387806976214
+        "normal": 0.001218076329678297,
+        "v1": 0.9980109333992004,
+        "v2": 5.3003852372057736e-05,
+        "v3": 0.00026557891396805644,
+        "v4": 0.0001562746037961915,
+        "v5": 0.0002962503640446812
       },
-      "rewrite_ms": 1919.2
+      "rewrite_ms": 1689.0
     }
   ],
   "final_result": {

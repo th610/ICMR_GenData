@@ -5,28 +5,28 @@
   "situation": "co workers seem to ignore me and don't say hello, i feel unwanted",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.999693751335144,
+    "confidence": 0.9997075200080872,
     "all_probabilities": {
-      "normal": 0.999693751335144,
-      "v1": 6.592678982997313e-05,
-      "v2": 5.1257433369755745e-05,
-      "v3": 8.160521974787116e-05,
-      "v4": 4.1830069676507264e-05,
-      "v5": 6.568279059138149e-05
+      "normal": 0.9997075200080872,
+      "v1": 6.462308374466375e-05,
+      "v2": 5.533638613997027e-05,
+      "v3": 5.935510489507578e-05,
+      "v4": 5.3742871386930346e-05,
+      "v5": 5.944432632531971e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.5,
-    "generation_ms": 1241.0,
-    "detection_ms": 24.8,
+    "context_build_ms": 3.4,
+    "generation_ms": 2794.0,
+    "detection_ms": 28.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1269.5
+    "total_ms": 2825.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Starting with a casual greeting sounds like a great idea! You could also share something light or humorous to break the ice. How do you feel about sharing a little something personal about your day to connect with them?",
+    "response": "That sounds like a great approach! A simple greeting can really help set a positive tone. How do you feel about incorporating a casual conversation topic after your greeting, like asking about their weekend or sharing something light-hearted?",
     "total_retries": 0,
     "used_failsafe": false
   }

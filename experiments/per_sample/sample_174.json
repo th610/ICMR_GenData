@@ -5,75 +5,75 @@
   "situation": "My pet died last week and I also failed my exam",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.8209689259529114,
+    "confidence": 0.9857372045516968,
     "all_probabilities": {
-      "normal": 0.17627644538879395,
-      "v1": 0.00047169573372229934,
-      "v2": 0.001072708168067038,
-      "v3": 0.8209689259529114,
-      "v4": 0.0006445487379096448,
-      "v5": 0.0005656679277308285
+      "normal": 0.012717177160084248,
+      "v1": 0.00019139560754410923,
+      "v2": 0.0001654698426136747,
+      "v3": 0.9857372045516968,
+      "v4": 0.0004552137979771942,
+      "v5": 0.0007335509872063994
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.6,
-    "generation_ms": 989.9,
-    "detection_ms": 23.7,
-    "rewrite_total_ms": 5588.3,
-    "total_ms": 6606.7
+    "context_build_ms": 4.8,
+    "generation_ms": 1583.0,
+    "detection_ms": 35.9,
+    "rewrite_total_ms": 5640.2,
+    "total_ms": 7264.1
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel torn between these important aspects of your life right now. One approach could be to: 1) Set aside 15-30 minutes each day to remember your dog and process your feelings, 2) Dedicate specific blocks of time for focused study, and 3) Check in with yourself at the end of each day to see how you’re feeling about both. How does that sound?",
-      "reasoning": "The original response was primarily empathetic and did not provide practical help, which created a violation. I retained a brief empathetic statement and added a short 2–3 step guide to help the seeker manage their time between grieving and studying.",
+      "rewritten_text": "It's completely understandable to feel conflicted. You might try this: 1) Set aside 30 minutes to study, 2) Follow that with 10 minutes to reflect on your dog's memory, and 3) Repeat this process a couple of times a day. How does that sound?",
+      "reasoning": "The original response contained only empathy and validation without providing practical help, which violated the requirement for actionable guidance. I added a short 2-3 step guide to suggest a balanced approach, while retaining a brief empathetic statement.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9568787813186646,
+      "recheck_confidence": 0.9965689182281494,
       "recheck_probabilities": {
-        "normal": 0.04113217815756798,
-        "v1": 0.00029856085893698037,
-        "v2": 0.0008945992449298501,
-        "v3": 0.9568787813186646,
-        "v4": 0.0004885403322987258,
-        "v5": 0.0003073867119383067
+        "normal": 0.0026687108911573887,
+        "v1": 0.00012973806587979198,
+        "v2": 0.00011724860087269917,
+        "v3": 0.9965689182281494,
+        "v4": 0.0002823206305038184,
+        "v5": 0.00023307217634283006
       },
-      "rewrite_ms": 2224.4
+      "rewrite_ms": 1966.7
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel torn between these important aspects of your life right now. One way to approach this could be to: 1) Set aside a specific time to remember your dog and process your feelings, and 2) Create a study schedule that allows you to focus on your exam preparation. How does that sound?",
-      "reasoning": "The original response primarily focused on empathy without providing practical help, violating the guideline. I retained a brief empathy statement and added a short 2–3 step guide to help the seeker manage their time between grieving and studying.",
+      "rewritten_text": "It's completely understandable to feel conflicted. You might try this: 1) Set aside 30 minutes to study, 2) Follow that with 10 minutes to reflect on your dog's memory. How does that sound?",
+      "reasoning": "The original last supporter response was primarily empathetic and did not provide practical help as requested by the seeker. I maintained a brief empathetic statement and included a concrete 2-3 step guide to address the seeker's situation effectively.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9455313682556152,
+      "recheck_confidence": 0.998615026473999,
       "recheck_probabilities": {
-        "normal": 0.05205877125263214,
-        "v1": 0.0003872607776429504,
-        "v2": 0.0010055797174572945,
-        "v3": 0.9455313682556152,
-        "v4": 0.000666350475512445,
-        "v5": 0.00035068352008238435
+        "normal": 0.000899232632946223,
+        "v1": 8.197486749850214e-05,
+        "v2": 8.006117423065007e-05,
+        "v3": 0.998615026473999,
+        "v4": 0.0001644545263843611,
+        "v5": 0.00015919319412205368
       },
-      "rewrite_ms": 1780.3
+      "rewrite_ms": 1586.2
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It's completely understandable to feel torn between these important aspects of your life right now. One way to approach this could be to: 1) Set aside a specific time to remember your dog and process your feelings, and 2) Create a study schedule that allows you to focus on your exam preparation. Would that help you balance both?",
-      "reasoning": "The original response focused solely on empathy and validation without providing practical help, which is a violation of the counseling guidelines. I added a concrete help element by providing a short 2-3 step guide while keeping a brief empathy statement.",
+      "rewritten_text": "It's completely understandable to feel conflicted. You might try this: 1) Set aside 30 minutes to study, 2) Take a short break to reflect on your dog's memory, and 3) Allow yourself to adjust your study schedule based on how you're feeling that day. How does that sound?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I added a brief empathy sentence while incorporating a short 2-3 step guide to help the seeker manage their time between grieving and studying.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.7623130083084106,
+      "recheck_confidence": 0.9874158501625061,
       "recheck_probabilities": {
-        "normal": 0.23422782123088837,
-        "v1": 0.0005781879299320281,
-        "v2": 0.0014797910116612911,
-        "v3": 0.7623130083084106,
-        "v4": 0.0007238378748297691,
-        "v5": 0.0006774576613679528
+        "normal": 0.011284232139587402,
+        "v1": 0.000182863135705702,
+        "v2": 0.0001958242355613038,
+        "v3": 0.9874158501625061,
+        "v4": 0.0004375173302832991,
+        "v5": 0.0004837710002902895
       },
-      "rewrite_ms": 1583.6
+      "rewrite_ms": 2087.3
     }
   ],
   "final_result": {

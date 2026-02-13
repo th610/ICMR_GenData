@@ -5,28 +5,28 @@
   "situation": "turned in ex gf to cps for giving her kids drugs.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996798038482666,
+    "confidence": 0.8126149773597717,
     "all_probabilities": {
-      "normal": 0.9996798038482666,
-      "v1": 4.923226515529677e-05,
-      "v2": 4.8073688958538696e-05,
-      "v3": 6.611223216168582e-05,
-      "v4": 8.031931793084368e-05,
-      "v5": 7.655488298041746e-05
+      "normal": 0.8126149773597717,
+      "v1": 0.000400628981878981,
+      "v2": 0.0007791923126205802,
+      "v3": 0.0028316506650298834,
+      "v4": 0.006063439417630434,
+      "v5": 0.1773100346326828
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 951.4,
-    "detection_ms": 22.1,
+    "context_build_ms": 4.3,
+    "generation_ms": 1159.1,
+    "detection_ms": 30.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 977.5
+    "total_ms": 1193.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Your concern for them shows how much you care, and that's really important. It might help to think about small ways you can be there for them without feeling overwhelmed. Perhaps you could set aside some time each week to check in with them or be involved in activities they enjoy. How does that sound to you?",
+    "response": "It’s understandable to feel that way; wanting to be there for them is a strong and admirable feeling. It might help to consider what you can do that feels manageable. Have you thought about setting small goals for yourself, or perhaps reaching out to someone who can provide support in this situation? Sometimes sharing the burden can lighten the load.",
     "total_retries": 0,
     "used_failsafe": false
   }

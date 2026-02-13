@@ -5,28 +5,28 @@
   "situation": "I'm feeling very lonely lately and I don't have many friends to turn to.  This makes me sad because ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9987300038337708,
+    "confidence": 0.9953182339668274,
     "all_probabilities": {
-      "normal": 0.9987300038337708,
-      "v1": 0.00014310046390164644,
-      "v2": 0.0002699220785871148,
-      "v3": 0.000728114100638777,
-      "v4": 8.495743531966582e-05,
-      "v5": 4.3806016037706286e-05
+      "normal": 0.9953182339668274,
+      "v1": 0.00012198475451441482,
+      "v2": 0.00011841323430417106,
+      "v3": 0.00406509218737483,
+      "v4": 0.00015890432405285537,
+      "v5": 0.00021740679221693426
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.1,
-    "generation_ms": 968.8,
-    "detection_ms": 27.7,
+    "context_build_ms": 5.4,
+    "generation_ms": 1380.0,
+    "detection_ms": 25.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 998.7
+    "total_ms": 1411.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Both options have their merits. A group message could create a sense of community and excitement about gathering, while reaching out to one friend at a time might feel more personal. How about considering what feels right for you? You could start with a group message to gauge interest, then follow up individually with those who respond. What do you think?",
+    "response": "Starting small with one friend can feel more manageable and might help you gauge the overall interest. You could ask them if they'd be open to a group gathering and see how they respond. How does that sound to you? Alternatively, if you're feeling a bit more adventurous, a group message could spark excitement among everyone. What do you think would feel more comfortable for you right now?",
     "total_retries": 0,
     "used_failsafe": false
   }

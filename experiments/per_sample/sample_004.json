@@ -5,28 +5,28 @@
   "situation": "I feel I am getting looked over for a promotion/raise at work and it is causing anxiety and fear tha",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997029900550842,
+    "confidence": 0.9997102618217468,
     "all_probabilities": {
-      "normal": 0.9997029900550842,
-      "v1": 6.616309838136658e-05,
-      "v2": 6.204420060385019e-05,
-      "v3": 6.972670962568372e-05,
-      "v4": 4.631207775673829e-05,
-      "v5": 5.2655977924587205e-05
+      "normal": 0.9997102618217468,
+      "v1": 7.257823745021597e-05,
+      "v2": 5.130998033564538e-05,
+      "v3": 4.610951873473823e-05,
+      "v4": 3.004406244144775e-05,
+      "v5": 8.963464642874897e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 940.2,
-    "detection_ms": 26.4,
+    "context_build_ms": 3.7,
+    "generation_ms": 1909.4,
+    "detection_ms": 41.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 970.6
+    "total_ms": 1954.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Preparing what you want to say is a great idea! Would you like to outline a few key points you want to cover? It might help to write them down and practice. Remember, advocating for yourself is important.",
+    "response": "That's a solid point to emphasize. Maybe you could prepare a few specific examples of your contributions that highlight your value? It might help to clarify what you want for your career path as well. How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "masters degree",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9934438467025757,
+    "confidence": 0.9950982928276062,
     "all_probabilities": {
-      "normal": 0.9934438467025757,
-      "v1": 0.0002128321211785078,
-      "v2": 0.00016263159341178834,
-      "v3": 0.0017963219434022903,
-      "v4": 0.0020021223463118076,
-      "v5": 0.00238221837207675
+      "normal": 0.9950982928276062,
+      "v1": 6.939190643606707e-05,
+      "v2": 0.00010444444342283532,
+      "v3": 0.00018490361981093884,
+      "v4": 0.00023011515440884978,
+      "v5": 0.004312880802899599
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.1,
-    "generation_ms": 838.9,
-    "detection_ms": 23.7,
+    "context_build_ms": 3.8,
+    "generation_ms": 2393.4,
+    "detection_ms": 30.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 865.8
+    "total_ms": 2428.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds really tough to feel that way, especially when you're juggling so much. What aspects of your master's program feel the most challenging right now? Maybe we can explore some strategies together.",
+    "response": "It's really tough to feel that way, especially when you’re putting in so much effort. Have you thought about breaking down your tasks into smaller, manageable steps? Sometimes focusing on one small goal at a time can help ease that overwhelming feeling. What do you think would be a good first step for you?",
     "total_retries": 0,
     "used_failsafe": false
   }

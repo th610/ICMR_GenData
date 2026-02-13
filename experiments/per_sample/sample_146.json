@@ -5,75 +5,75 @@
   "situation": "They want me to work on a project with them. I agreed to it. Wondering how it will go.",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.5288702845573425,
+    "confidence": 0.9967959523200989,
     "all_probabilities": {
-      "normal": 0.46843695640563965,
-      "v1": 0.0009406186873093247,
-      "v2": 0.0008071936899796128,
-      "v3": 0.5288702845573425,
-      "v4": 0.0003878265561070293,
-      "v5": 0.0005571002257056534
+      "normal": 0.002621241845190525,
+      "v1": 0.0001449065748602152,
+      "v2": 0.00012285752745810896,
+      "v3": 0.9967959523200989,
+      "v4": 0.00016187000437639654,
+      "v5": 0.0001531777234049514
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1058.8,
-    "detection_ms": 26.8,
-    "rewrite_total_ms": 4015.6,
-    "total_ms": 5106.3
+    "context_build_ms": 4.0,
+    "generation_ms": 1658.0,
+    "detection_ms": 24.5,
+    "rewrite_total_ms": 9099.7,
+    "total_ms": 10786.5
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're in a bit of a time crunch. You could either ask your friend for an extension on your part of the project, or you could decide to push through and complete it quickly. Which option do you think would work best for you?",
-      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I added a concrete help element by providing two options for the seeker to consider regarding their decision about the project, while keeping a brief empathy sentence.",
+      "rewritten_text": "It sounds like you're in a tough spot. One option could be to ask your team for more time if you feel overwhelmed, or you could prioritize your tasks to meet the deadline. Which approach do you think would work better for you?",
+      "reasoning": "The original response contained excessive empathy and did not provide the practical help that the seeker explicitly requested regarding their decision-making. I retained a brief empathy statement and added a concrete option to help the seeker make a decision about their workload.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.99952232837677,
+      "recheck_confidence": 0.9995654225349426,
       "recheck_probabilities": {
-        "normal": 0.00018425608868710697,
-        "v1": 8.13619262771681e-05,
-        "v2": 0.00010953885066555813,
-        "v3": 0.99952232837677,
-        "v4": 5.6699980632402e-05,
-        "v5": 4.575133789330721e-05
+        "normal": 0.00016679205873515457,
+        "v1": 6.29478381597437e-05,
+        "v2": 7.104519318090752e-05,
+        "v3": 0.9995654225349426,
+        "v4": 7.167331932578236e-05,
+        "v5": 6.222692900337279e-05
       },
-      "rewrite_ms": 1247.3
+      "rewrite_ms": 2761.3
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling the pressure with your deadline. You could either ask your friend for an extension on your part of the project or push through and complete it quickly. Which option feels more manageable for you?",
-      "reasoning": "The original response was primarily empathetic and did not provide practical help as requested by the seeker. I added two options for the seeker to consider in making their decision, while keeping one empathetic statement.",
+      "rewritten_text": "It sounds like you're in a tough spot. You could either ask your team for more time to alleviate your workload (Option A), or prioritize your tasks and push through to meet the deadline (Option B). Which option do you think you might lean towards?",
+      "reasoning": "The original response primarily focused on empathy without providing the practical help requested by the seeker. I added a brief empathy statement and provided two options (A/B) to help the seeker decide on a course of action.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9996002316474915,
+      "recheck_confidence": 0.9995808005332947,
       "recheck_probabilities": {
-        "normal": 9.339591633761302e-05,
-        "v1": 6.756257062079385e-05,
-        "v2": 0.00014150727656669915,
-        "v3": 0.9996002316474915,
-        "v4": 5.0848550017690286e-05,
-        "v5": 4.651960261981003e-05
+        "normal": 0.00013462288188748062,
+        "v1": 6.666268018307164e-05,
+        "v2": 7.879360782681033e-05,
+        "v3": 0.9995808005332947,
+        "v4": 8.02123176981695e-05,
+        "v5": 5.8928657381329685e-05
       },
-      "rewrite_ms": 1649.5
+      "rewrite_ms": 3777.2
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It sounds like you're feeling the pressure with your deadline. Have you considered what your friend might say if you ask for more time?",
-      "reasoning": "The original response provided empathy but failed to offer practical help, resulting in a V3 violation. I added a clarifying question to guide the seeker toward making a decision while still acknowledging their feelings.",
+      "rewritten_text": "It sounds like you're in a tough spot. You could either ask your team for more time to alleviate your workload (Option A), or push through quickly to meet the deadline (Option B). Which option do you think might work best for you?",
+      "reasoning": "The original response focused solely on empathy without providing practical help, which is a violation. I added a brief empathetic statement and included two clear options for the seeker to consider, addressing their dilemma directly.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.999496579170227,
+      "recheck_confidence": 0.9995965361595154,
       "recheck_probabilities": {
-        "normal": 0.00022787245688959956,
-        "v1": 7.729183562332764e-05,
-        "v2": 8.444358536507934e-05,
-        "v3": 0.999496579170227,
-        "v4": 5.9625082940328866e-05,
-        "v5": 5.418824002845213e-05
+        "normal": 0.0001162791159003973,
+        "v1": 6.413788651116192e-05,
+        "v2": 9.244525426765904e-05,
+        "v3": 0.9995965361595154,
+        "v4": 7.398950401693583e-05,
+        "v5": 5.6620647228555754e-05
       },
-      "rewrite_ms": 1118.8
+      "rewrite_ms": 2561.2
     }
   ],
   "final_result": {

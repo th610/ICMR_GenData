@@ -5,28 +5,28 @@
   "situation": "I have a lot of academic pressure from my program and I'm not receiving any help from my advisors.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997380375862122,
+    "confidence": 0.9996066689491272,
     "all_probabilities": {
-      "normal": 0.9997380375862122,
-      "v1": 6.434376700781286e-05,
-      "v2": 4.069286660524085e-05,
-      "v3": 7.258093683049083e-05,
-      "v4": 4.125929262954742e-05,
-      "v5": 4.313915633247234e-05
+      "normal": 0.9996066689491272,
+      "v1": 4.532523962552659e-05,
+      "v2": 9.353075438411906e-05,
+      "v3": 7.089704740792513e-05,
+      "v4": 4.6550081606255844e-05,
+      "v5": 0.00013696895621251315
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.6,
-    "generation_ms": 936.0,
-    "detection_ms": 30.5,
+    "context_build_ms": 4.7,
+    "generation_ms": 1998.3,
+    "detection_ms": 33.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 971.2
+    "total_ms": 2036.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds like a positive step! Maybe you could try choosing a time when you feel the most alert, like early in the morning or after work. What time of day do you think you would be able to focus best on your studies?",
+    "response": "That sounds like a wonderful idea! Setting that hour could really help you reclaim some personal time. How do you think you’ll use that hour to focus on your coursework or relax?",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "My curly hair is so unruly",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996833801269531,
+    "confidence": 0.9995793700218201,
     "all_probabilities": {
-      "normal": 0.9996833801269531,
-      "v1": 8.467226871289313e-05,
-      "v2": 4.279391941963695e-05,
-      "v3": 8.864747360348701e-05,
-      "v4": 4.8034999053925276e-05,
-      "v5": 5.254824282019399e-05
+      "normal": 0.9995793700218201,
+      "v1": 0.00013546431728173047,
+      "v2": 8.665706991450861e-05,
+      "v3": 6.434839451685548e-05,
+      "v4": 7.352980901487172e-05,
+      "v5": 6.072719406802207e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.2,
-    "generation_ms": 1162.8,
-    "detection_ms": 25.3,
+    "context_build_ms": 3.5,
+    "generation_ms": 1837.8,
+    "detection_ms": 27.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1192.5
+    "total_ms": 1869.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Those sound like fun options! Loose curls can give a nice, relaxed vibe, and a bob is always stylish. Have you thought about how you might want to accessorize or style them differently for various occasions?",
+    "response": "That sounds lovely! Loose curls can be so playful and versatile. Are you thinking of any particular products or techniques to help style your new look?",
     "total_retries": 0,
     "used_failsafe": false
   }

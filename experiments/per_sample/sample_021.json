@@ -5,28 +5,28 @@
   "situation": "My mothers new husband has just died f corona virus last week. He was a deacon in church and she was",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996823072433472,
+    "confidence": 0.9996495246887207,
     "all_probabilities": {
-      "normal": 0.9996823072433472,
-      "v1": 7.12812616256997e-05,
-      "v2": 5.623340985039249e-05,
-      "v3": 8.427349530393258e-05,
-      "v4": 3.2936102797975764e-05,
-      "v5": 7.297610864043236e-05
+      "normal": 0.9996495246887207,
+      "v1": 5.537973629543558e-05,
+      "v2": 4.696934774983674e-05,
+      "v3": 5.910116306040436e-05,
+      "v4": 4.2129358917009085e-05,
+      "v5": 0.00014689592353533953
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 895.1,
-    "detection_ms": 25.8,
+    "context_build_ms": 3.9,
+    "generation_ms": 1981.0,
+    "detection_ms": 29.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 924.7
+    "total_ms": 2014.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds like a thoughtful approach. It might be helpful to encourage him to express what specifically worries him. Would you feel comfortable asking him what his biggest concern is right now? Or perhaps you could suggest some activities you both enjoy that could help distract him a bit more?",
+    "response": "It sounds like he has a lot on his mind. It might be helpful to ask him about specific things that make him feel tense. Would it be okay to gently encourage him to share what he's most worried about? Or perhaps you could suggest a calming activity you could do together to help ease some of that tension?",
     "total_retries": 0,
     "used_failsafe": false
   }

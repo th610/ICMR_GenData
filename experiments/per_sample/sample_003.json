@@ -5,28 +5,28 @@
   "situation": "I'm feeling depressed and overwhelmed",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996838569641113,
+    "confidence": 0.9996379613876343,
     "all_probabilities": {
-      "normal": 0.9996838569641113,
-      "v1": 0.00010031341662397608,
-      "v2": 4.1761933971429244e-05,
-      "v3": 5.710499681299552e-05,
-      "v4": 5.5916752899065614e-05,
-      "v5": 6.116383883636445e-05
+      "normal": 0.9996379613876343,
+      "v1": 5.598408461082727e-05,
+      "v2": 6.369653419824317e-05,
+      "v3": 5.6886750826379284e-05,
+      "v4": 6.473794201156124e-05,
+      "v5": 0.00012071741366526112
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.6,
-    "generation_ms": 937.4,
-    "detection_ms": 17.0,
+    "context_build_ms": 2.5,
+    "generation_ms": 2501.8,
+    "detection_ms": 25.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 957.0
+    "total_ms": 2529.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I'm glad to hear that! Playing with your dog can be such a great way to connect and find joy in the moment. Have you thought about trying some new games or activities with him? It might add a little more fun to your routine.",
+    "response": "Even those short moments can be so valuable. Maybe you could try to build on that by setting aside a few minutes each day to play with your dog, even if it's just a quick game in the yard. How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "Not having enough friends nearby.  My three nearby friends went away for holidays, so I have no one ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996280670166016,
+    "confidence": 0.9993841648101807,
     "all_probabilities": {
-      "normal": 0.9996280670166016,
-      "v1": 0.00011179340799571946,
-      "v2": 4.633273056242615e-05,
-      "v3": 6.943132757442072e-05,
-      "v4": 5.381599112297408e-05,
-      "v5": 9.04705811990425e-05
+      "normal": 0.9993841648101807,
+      "v1": 9.859734564088285e-05,
+      "v2": 0.00023155896633397788,
+      "v3": 4.960775186191313e-05,
+      "v4": 5.032930494053289e-05,
+      "v5": 0.0001857065362855792
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.2,
-    "generation_ms": 816.6,
-    "detection_ms": 26.1,
+    "context_build_ms": 4.2,
+    "generation_ms": 1716.0,
+    "detection_ms": 31.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 848.0
+    "total_ms": 1752.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds like a lovely idea! A simple message or a quick video call might really brighten your day. Is there a particular friend you’d like to reach out to first?",
+    "response": "That sounds like a lovely idea! A simple message can really brighten someone's day and maybe even spark a conversation. Do you have a specific friend in mind you want to reach out to?",
     "total_retries": 0,
     "used_failsafe": false
   }

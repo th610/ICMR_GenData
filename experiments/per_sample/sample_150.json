@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I am having trouble managing all 7 of my college classes and extracurricular activities.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9829896688461304,
+    "predicted_label": "v3",
+    "confidence": 0.9989583492279053,
     "all_probabilities": {
-      "normal": 0.9829896688461304,
-      "v1": 0.0002720337943173945,
-      "v2": 0.0003306364524178207,
-      "v3": 0.01602132059633732,
-      "v4": 0.0002352346491534263,
-      "v5": 0.00015107684885151684
+      "normal": 0.0006493913824670017,
+      "v1": 8.05324743851088e-05,
+      "v2": 7.821226608939469e-05,
+      "v3": 0.9989583492279053,
+      "v4": 0.00012808150495402515,
+      "v5": 0.00010549352009547874
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.2,
-    "generation_ms": 841.7,
-    "detection_ms": 31.3,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 877.3
+    "context_build_ms": 4.7,
+    "generation_ms": 1622.9,
+    "detection_ms": 33.1,
+    "rewrite_total_ms": 8202.3,
+    "total_ms": 9863.2
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "That sounds like a tough choice to make. One approach could be to allocate specific time blocks, like two hours for your project followed by an hour for finals prep. After that, reassess what feels more urgent and adjust your plan accordingly.",
+      "reasoning": "The original response was primarily empathetic and did not provide clear practical help, which violated the counseling guideline. I included one brief empathy sentence and added a concrete help element by providing a short 2–3 step guide.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9984340071678162,
+      "recheck_probabilities": {
+        "normal": 0.0010977952042594552,
+        "v1": 9.030892397277057e-05,
+        "v2": 0.00013566533743869513,
+        "v3": 0.9984340071678162,
+        "v4": 0.00013901558122597635,
+        "v5": 0.00010318915155949071
+      },
+      "rewrite_ms": 2245.0
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "That sounds like a tough choice to make. You might try breaking it down into steps: first, decide how much time you can realistically dedicate to each task, then tackle the one you feel is more urgent first. After that, reassess and adjust your priorities as needed.",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested in their message about managing their time. I added a concise step-by-step guide to help the seeker with their decision-making while retaining a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9973257780075073,
+      "recheck_probabilities": {
+        "normal": 0.0021148088853806257,
+        "v1": 8.14287704997696e-05,
+        "v2": 0.00011695121793309227,
+        "v3": 0.9973257780075073,
+        "v4": 0.00017078680684790015,
+        "v5": 0.0001902239746414125
+      },
+      "rewrite_ms": 3364.1
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "That sounds like a tough choice to make. You might consider breaking it down like this: first, list out what needs to be done for both the finals and the project, then determine which task has a closer deadline or feels more manageable to start with.",
+      "reasoning": "The original response violated the guidelines by offering only empathy and validation without providing any practical help to address the seeker’s dilemma. I added a concrete help element in the form of a short 2–3 step guide while keeping one brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9983184337615967,
+      "recheck_probabilities": {
+        "normal": 0.0011862883111461997,
+        "v1": 9.513844997854903e-05,
+        "v2": 0.00010430017573526129,
+        "v3": 0.9983184337615967,
+        "v4": 0.00015917640121188015,
+        "v5": 0.0001366587821394205
+      },
+      "rewrite_ms": 2593.1
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's definitely a challenging choice to make. One approach could be to assess how much time each task will take and which one has more immediate consequences. Would it help to make a quick list of what’s required for each and how close you are to finishing them? Or perhaps consider which one feels more manageable to tackle first?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

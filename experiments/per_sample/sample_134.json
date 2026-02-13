@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "The partiality in my work place and the favorability to people who hardly work but always say \"yes\" ",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.7463390827178955,
+    "predicted_label": "v3",
+    "confidence": 0.9988389611244202,
     "all_probabilities": {
-      "normal": 0.7463390827178955,
-      "v1": 0.0008858376531861722,
-      "v2": 0.0016205168794840574,
-      "v3": 0.24991968274116516,
-      "v4": 0.0006217365735210478,
-      "v5": 0.0006131204427219927
+      "normal": 0.0007628320599906147,
+      "v1": 8.702719060238451e-05,
+      "v2": 0.00011689609527820721,
+      "v3": 0.9988389611244202,
+      "v4": 9.130961552727968e-05,
+      "v5": 0.00010305110481567681
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 2.3,
-    "generation_ms": 1260.6,
-    "detection_ms": 24.7,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1287.7
+    "context_build_ms": 2.1,
+    "generation_ms": 2076.6,
+    "detection_ms": 25.8,
+    "rewrite_total_ms": 10375.0,
+    "total_ms": 12479.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's frustrating to feel like your hard work is overlooked. You might consider either talking to your coworkers first to see if they feel the same way (Option A) or addressing it directly with your manager for a quicker resolution (Option B). Which option resonates more with you?",
+      "reasoning": "The original response was primarily empathetic without providing practical help, which is a violation of the counseling guidelines. I added a brief empathetic statement and included a concrete element by offering two options for the seeker to consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9993584752082825,
+      "recheck_probabilities": {
+        "normal": 0.00028440303867682815,
+        "v1": 6.142295023892075e-05,
+        "v2": 7.146459392970428e-05,
+        "v3": 0.9993584752082825,
+        "v4": 9.126698569161817e-05,
+        "v5": 0.00013300179853104055
+      },
+      "rewrite_ms": 4236.9
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's frustrating to feel like your hard work is overlooked. You could either talk to your coworkers first to see if they share your concerns (Option A) or address it directly with your manager for a quicker resolution (Option B). Which option feels more comfortable for you?",
+      "reasoning": "The original response violated the guideline by providing only empathy without practical help. I included a brief empathy statement and provided two options (A/B) to give the seeker a clear choice on how to proceed.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995002746582031,
+      "recheck_probabilities": {
+        "normal": 0.0001866893726401031,
+        "v1": 5.9674683143384755e-05,
+        "v2": 7.156490028137341e-05,
+        "v3": 0.9995002746582031,
+        "v4": 7.743310561636463e-05,
+        "v5": 0.00010439109610160813
+      },
+      "rewrite_ms": 3044.0
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's frustrating to feel like your hard work is overlooked. You could either talk to your coworkers first to see if they share your concerns (Option A) or address it directly with your manager for a quicker resolution (Option B). Which option resonates with you?",
+      "reasoning": "The original response was overly empathetic and lacked practical help, violating the requirement for actionable support. I added a brief empathy statement and provided two options for the seeker to consider, ensuring a balance between empathy and practical advice.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994725584983826,
+      "recheck_probabilities": {
+        "normal": 0.00021331739844754338,
+        "v1": 6.531107646878809e-05,
+        "v2": 6.742046389263123e-05,
+        "v3": 0.9994725584983826,
+        "v4": 7.724273746134713e-05,
+        "v5": 0.0001041026771417819
+      },
+      "rewrite_ms": 3094.1
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's understandable to feel stuck in this situation. Both options have their merits. If you address it with your manager, you might be able to express your concerns directly, but it could be intimidating. On the other hand, talking to your colleagues might foster a sense of support and solidarity. What do you think would feel more comfortable for you to start with? Or would you like to weigh the pros and cons of each approach together?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -5,28 +5,28 @@
   "situation": "I've been feeling more depressed since quitting my job so that I could be around to take care of my ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9961146116256714,
+    "confidence": 0.9542720913887024,
     "all_probabilities": {
-      "normal": 0.9961146116256714,
-      "v1": 0.00015929997607599944,
-      "v2": 0.002836991101503372,
-      "v3": 0.0005411338061094284,
-      "v4": 0.00010243205906590447,
-      "v5": 0.0002454390632919967
+      "normal": 0.9542720913887024,
+      "v1": 0.00019123638048768044,
+      "v2": 0.0005421544774435461,
+      "v3": 0.0006920886808075011,
+      "v4": 0.000415597838582471,
+      "v5": 0.04388683661818504
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 1.6,
-    "generation_ms": 830.3,
-    "detection_ms": 27.4,
+    "context_build_ms": 4.3,
+    "generation_ms": 1337.9,
+    "detection_ms": 22.1,
     "rewrite_total_ms": 0.0,
-    "total_ms": 859.4
+    "total_ms": 1364.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you're feeling a lot of pressure right now, and it's okay to seek help. One step you could consider is breaking things down into smaller tasks. Would you like to talk about specific areas where you feel stuck, like schoolwork or finances, or perhaps brainstorm some resources that could assist you?",
+    "response": "That sounds really overwhelming. It can be tough when everything feels like too much. Have you thought about breaking your to-do list into smaller, more manageable tasks, or perhaps prioritizing just a few things each day? It might help to focus on one thing at a time.",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -45,14 +45,14 @@ from model import ViolationClassifier
 class TrainConfig:
     """학습 설정"""
     # Paths
-    SOURCE_DATA_DIR = "models/data"  # 학습 데이터 위치
-    SOURCE_TRAIN_FILE = "train_1000.json"  # 1000개 (split 대상)
+    SOURCE_DATA_DIR = "data/final"  # 학습 데이터 위치 (수정된 CSV 병합본)
+    SOURCE_TRAIN_FILE = "train_1000.json"  # 1000개 (270개 edited: Normal 100 + V1~V5 170)
     SOURCE_TEST_FILE = "test_gold_300.json"  # 300개 (고정, 복사 필요)
     
     SPLIT_DATA_DIR = "models/data"  # Split 결과 저장 위치
     OUTPUT_DIR = "models/outputs"  # 모델 출력 위치
     
-    VALID_RATIO = 0.3  # train에서 valid로 분할할 비율 (30% = 300개)
+    VALID_RATIO = 0.2  # train에서 valid로 분할할 비율 (20% = 200개)
     
     # Model
     MODEL_NAME = "roberta-base"
@@ -238,7 +238,7 @@ def main():
     
     # GPU 설정 (비어있는 GPU 1 사용)
     if torch.cuda.is_available():
-        gpu_id = 1  # GPU 1번 사용 (다른 사람이 안 쓰는 GPU)
+        gpu_id = 0  # GPU 0번 사용
         torch.cuda.set_device(gpu_id)
         device = torch.device(f'cuda:{gpu_id}')
         print(f"Using GPU {gpu_id}: {torch.cuda.get_device_name(gpu_id)}")
@@ -454,7 +454,7 @@ def main():
             patience_counter = 0
             
             # Save best model
-            save_path = os.path.join(TrainConfig.OUTPUT_DIR, "best_model.pt")
+            save_path = os.path.join(TrainConfig.OUTPUT_DIR, "best_model_v3.pt")
             torch.save({
                 'epoch': epoch + 1,
                 'model_state_dict': model.state_dict(),
@@ -489,7 +489,7 @@ def main():
     print(f"Best {TrainConfig.METRIC_FOR_BEST}: {best_metric:.4f}\n")
     
     # Load best model
-    checkpoint = torch.load(os.path.join(TrainConfig.OUTPUT_DIR, "best_model.pt"))
+    checkpoint = torch.load(os.path.join(TrainConfig.OUTPUT_DIR, "best_model_v3.pt"))
     model.load_state_dict(checkpoint['model_state_dict'])
     
     # Final test evaluation
@@ -511,7 +511,7 @@ def main():
         }, f, indent=2)
     
     print(f"\n✅ Training completed!")
-    print(f"📁 Best model saved to: {os.path.join(TrainConfig.OUTPUT_DIR, 'best_model.pt')}")
+    print(f"📁 Best model saved to: {os.path.join(TrainConfig.OUTPUT_DIR, 'best_model_v3.pt')}")
     print(f"📁 Metrics saved to: {metrics_path}\n")
 
 

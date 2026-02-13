@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I just feel generally down.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.5946910977363586,
+    "predicted_label": "v3",
+    "confidence": 0.9986587762832642,
     "all_probabilities": {
-      "normal": 0.5946910977363586,
-      "v1": 0.0006000263383612037,
-      "v2": 0.0009328496525995433,
-      "v3": 0.40234267711639404,
-      "v4": 0.0004846966767217964,
-      "v5": 0.0009486249182373285
+      "normal": 0.000750105595216155,
+      "v1": 8.246941433753818e-05,
+      "v2": 0.00010702177678467706,
+      "v3": 0.9986587762832642,
+      "v4": 0.00013814924750477076,
+      "v5": 0.00026351079577580094
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 6.9,
-    "generation_ms": 1499.4,
-    "detection_ms": 24.9,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1531.2
+    "context_build_ms": 5.2,
+    "generation_ms": 1384.4,
+    "detection_ms": 38.9,
+    "rewrite_total_ms": 7869.7,
+    "total_ms": 9298.4
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "That sounds really challenging. You could either take a short break to recharge and then tackle the project in smaller sections, or push through and try to finish it now. Which option feels more manageable for you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide the explicit practical help requested by the seeker. I added a concrete option to help the seeker make a decision regarding their project and included a brief empathy statement to maintain emotional support.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995812773704529,
+      "recheck_probabilities": {
+        "normal": 0.00010190317698288709,
+        "v1": 5.150135621079244e-05,
+        "v2": 8.04839946795255e-05,
+        "v3": 0.9995812773704529,
+        "v4": 8.687817171448842e-05,
+        "v5": 9.798343671718612e-05
+      },
+      "rewrite_ms": 2654.3
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "That sounds really challenging. You could either take a short break to recharge and then tackle the project in smaller sections, or push through and try to finish it now. Which option feels more manageable for you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide practical help, which violated the requirement for a supportive response. I added a brief empathy sentence and provided two options for the seeker to choose from, enhancing the practical support without overwhelming them with choices.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995812773704529,
+      "recheck_probabilities": {
+        "normal": 0.00010190317698288709,
+        "v1": 5.150135621079244e-05,
+        "v2": 8.04839946795255e-05,
+        "v3": 0.9995812773704529,
+        "v4": 8.687817171448842e-05,
+        "v5": 9.798343671718612e-05
+      },
+      "rewrite_ms": 2462.9
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "That sounds really challenging. You could take a short break to recharge and then tackle the project in smaller sections, or you could push through and try to finish it now. Which option feels more manageable for you right now?",
+      "reasoning": "The original last supporter response primarily expressed empathy without providing the practical guidance that the seeker explicitly requested. I added a brief empathy statement followed by two clear options to help the seeker make a decision.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995352029800415,
+      "recheck_probabilities": {
+        "normal": 0.00012156563752796501,
+        "v1": 5.606257764156908e-05,
+        "v2": 7.913875742815435e-05,
+        "v3": 0.9995352029800415,
+        "v4": 9.126692748395726e-05,
+        "v5": 0.00011682338663376868
+      },
+      "rewrite_ms": 2752.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're in a tough spot, and it's important to be gentle with yourself. One idea could be to take a short break to recharge, even if it's just for a little while. You might find that stepping away helps clear your mind and makes it easier to tackle the project afterward. How about setting a timer for 15-20 minutes to take a break, then see how you feel? You could also jot down your thoughts about the project to help organize your mind before diving back in.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

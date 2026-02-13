@@ -92,7 +92,7 @@ class ViolationDetector:
         self.model.roberta.resize_token_embeddings(len(self.tokenizer))
         
         # 학습된 가중치 로드
-        model_file = Path(model_path) / "best_model.pt"
+        model_file = Path(model_path) / "best_model_v3.pt"
         if model_file.exists():
             device = 'cuda' if torch.cuda.is_available() else 'cpu'
             checkpoint = torch.load(model_file, map_location=device)

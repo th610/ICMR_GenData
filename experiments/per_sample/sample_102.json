@@ -5,75 +5,75 @@
   "situation": "Nowadays, I get anxious thinking about my job stability.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9962626099586487,
+    "confidence": 0.9985933899879456,
     "all_probabilities": {
-      "normal": 0.0032974286004900932,
-      "v1": 0.9962626099586487,
-      "v2": 9.446909098187461e-05,
-      "v3": 0.0001344236807199195,
-      "v4": 0.00016578291251789778,
-      "v5": 4.527651981334202e-05
+      "normal": 0.0008987618493847549,
+      "v1": 0.9985933899879456,
+      "v2": 9.933880937751383e-05,
+      "v3": 0.00023378430341836065,
+      "v4": 8.429617446381599e-05,
+      "v5": 9.035693074110895e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 3.8,
-    "generation_ms": 1309.1,
-    "detection_ms": 29.9,
-    "rewrite_total_ms": 4013.0,
-    "total_ms": 5356.1
+    "context_build_ms": 5.2,
+    "generation_ms": 2797.5,
+    "detection_ms": 34.7,
+    "rewrite_total_ms": 10598.1,
+    "total_ms": 13435.7
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're in a tough spot with the uncertainty around layoffs. Have you had a chance to discuss this with any of your colleagues to gather more information? It might also be helpful to keep an eye on any official updates from your workplace as you navigate this situation.",
-      "reasoning": "The original response jumped to conclusions without fully exploring the seeker's uncertainty regarding the potential layoffs. I added a sentence to acknowledge this new information and asked a clarifying question to better understand their situation before suggesting next steps.",
+      "rewritten_text": "It sounds like that uncertainty is weighing on you. How do you usually cope when you're feeling this anxious? It might be helpful to consider small steps, like updating your resume or finding a way to talk about your feelings with someone you trust.",
+      "reasoning": "The original response jumped to suggestions without fully acknowledging the seeker's uncertainty about potential layoffs. I corrected it by first acknowledging the uncertainty and then asking a clarifying question to better understand the seeker's feelings before offering gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.991366446018219,
+      "recheck_confidence": 0.9993846416473389,
       "recheck_probabilities": {
-        "normal": 0.00799835380166769,
-        "v1": 0.991366446018219,
-        "v2": 8.496775262756273e-05,
-        "v3": 0.0002614516706671566,
-        "v4": 0.00021457116235978901,
-        "v5": 7.426365482388064e-05
+        "normal": 0.00028925982769578695,
+        "v1": 0.9993846416473389,
+        "v2": 8.943333523347974e-05,
+        "v3": 0.00010227486927760765,
+        "v4": 6.556211883435026e-05,
+        "v5": 6.88310174155049e-05
       },
-      "rewrite_ms": 1408.2
+      "rewrite_ms": 3637.9
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the rumors of potential layoffs. Have you had a chance to talk to your coworkers about what they've heard? It might be helpful to stay informed by checking in with your manager or HR for any official updates.",
-      "reasoning": "The original response made a hasty conclusion by not addressing the seeker's uncertainty regarding the rumors about layoffs. I acknowledged the new key information and asked a clarifying question while providing gentle next steps without making assumptions.",
+      "rewritten_text": "I can see that this uncertainty is causing you some anxiety. How do you feel about discussing your worries with someone you trust? It might also be helpful to take small steps, like updating your resume or researching potential job opportunities.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully acknowledging their uncertainty regarding potential layoffs. I fixed it by first recognizing the seeker's uncertainty, asking a clarifying question about their feelings, and then gently suggesting next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9939186573028564,
+      "recheck_confidence": 0.9990770816802979,
       "recheck_probabilities": {
-        "normal": 0.005562156904488802,
-        "v1": 0.9939186573028564,
-        "v2": 8.713672286830842e-05,
-        "v3": 0.00019993136811535805,
-        "v4": 0.0001690622157184407,
-        "v5": 6.306605791905895e-05
+        "normal": 0.0005489275208674371,
+        "v1": 0.9990770816802979,
+        "v2": 8.744890510570258e-05,
+        "v3": 0.0001391381665598601,
+        "v4": 6.836524698883295e-05,
+        "v5": 7.911757711553946e-05
       },
-      "rewrite_ms": 1326.9
+      "rewrite_ms": 2815.2
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you’re feeling uncertain about the rumors of potential layoffs. Have you been able to discuss these concerns with any other coworkers? It might be helpful to stay informed by checking in with your manager or HR for any official updates.",
-      "reasoning": "The original response made assumptions about the user's feelings and situation without sufficiently clarifying their concerns. I acknowledged the user's uncertainty about the rumors of layoffs, asked a single clarifying question, and provided gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty around potential layoffs is weighing on you. Have you had a chance to talk to anyone about your concerns? It might be helpful to consider jotting down your feelings or exploring some job options, just in case.",
+      "reasoning": "The original response made hasty conclusions about the seeker's feelings without fully clarifying their situation regarding the layoffs. I fixed it by acknowledging the seeker's uncertainty and asking a clarifying question before suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.997489333152771,
+      "recheck_confidence": 0.9993495345115662,
       "recheck_probabilities": {
-        "normal": 0.0021042136941105127,
-        "v1": 0.997489333152771,
-        "v2": 7.021098281256855e-05,
-        "v3": 0.0001623880089027807,
-        "v4": 0.00011780339991673827,
-        "v5": 5.5988126405281946e-05
+        "normal": 0.0003188471600878984,
+        "v1": 0.9993495345115662,
+        "v2": 8.483657438773662e-05,
+        "v3": 0.00010502438090043142,
+        "v4": 6.15764147369191e-05,
+        "v5": 8.01326023065485e-05
       },
-      "rewrite_ms": 1277.9
+      "rewrite_ms": 4144.9
     }
   ],
   "final_result": {

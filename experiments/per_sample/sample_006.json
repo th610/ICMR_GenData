@@ -5,28 +5,28 @@
   "situation": "I was pulled off of a project I had been on for 6 months.  Last week I was transferred to a new team",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996885061264038,
+    "confidence": 0.9526799321174622,
     "all_probabilities": {
-      "normal": 0.9996885061264038,
-      "v1": 9.534836135571823e-05,
-      "v2": 4.89080193801783e-05,
-      "v3": 6.941518950043246e-05,
-      "v4": 3.279785960330628e-05,
-      "v5": 6.510601815534756e-05
+      "normal": 0.9526799321174622,
+      "v1": 0.044730644673109055,
+      "v2": 0.0006867797346785665,
+      "v3": 0.0008092304924502969,
+      "v4": 0.00041200578561984,
+      "v5": 0.0006814491935074329
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.8,
-    "generation_ms": 947.3,
-    "detection_ms": 26.3,
+    "context_build_ms": 6.7,
+    "generation_ms": 1285.4,
+    "detection_ms": 27.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 979.5
+    "total_ms": 1319.8
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "That sounds like a great plan! Sometimes just having an informal chat can provide valuable information. What kind of insights are you hoping to gain from them? Maybe you could ask about the current projects or the timeline for when they might start hiring again.",
+    "response": "It's great that you have connections to reach out to. That could provide some clarity. In the meantime, how are you feeling about your current situation? Do you think exploring those connections could help ease some of your concerns?",
     "total_retries": 0,
     "used_failsafe": false
   }

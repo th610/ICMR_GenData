@@ -5,75 +5,75 @@
   "situation": "My manager does not respect COVID guidelines or protect my safety.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.998112678527832,
+    "confidence": 0.9994868040084839,
     "all_probabilities": {
-      "normal": 0.001398804015479982,
-      "v1": 0.998112678527832,
-      "v2": 0.0002524616720620543,
-      "v3": 0.00012571550905704498,
-      "v4": 7.469046977348626e-05,
-      "v5": 3.556667797965929e-05
+      "normal": 0.00015501271991524845,
+      "v1": 0.9994868040084839,
+      "v2": 9.831580973695964e-05,
+      "v3": 0.0001441106724087149,
+      "v4": 5.714685539714992e-05,
+      "v5": 5.8494857512414455e-05
     },
     "severity": 1
   },
   "timing": {
     "context_build_ms": 3.8,
-    "generation_ms": 1028.2,
-    "detection_ms": 27.7,
-    "rewrite_total_ms": 3747.7,
-    "total_ms": 4807.6
+    "generation_ms": 1046.2,
+    "detection_ms": 42.6,
+    "rewrite_total_ms": 9115.3,
+    "total_ms": 10208.1
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It's understandable to feel uncertain about potential layoffs. Have you considered discussing your concerns with your manager or perhaps seeking advice from a trusted colleague who might have more insight into the situation?",
-      "reasoning": "The original response made a hasty conclusion without fully understanding the seeker’s uncertainty about the rumor of layoffs. I acknowledged their uncertainty, asked a clarifying question, and offered gentle next steps without assuming any missing facts.",
+      "rewritten_text": "It sounds like the uncertainty about your job security is adding to your stress. How are you managing that stress so far? Talking through your feelings or exploring options could be helpful.",
+      "reasoning": "The original response made assumptions about the seeker's feelings without fully clarifying their situation, leading to a hasty conclusion. The corrected response acknowledges the seeker's uncertainty and includes a clarifying question, along with gentle next steps without assuming missing facts.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9991699457168579,
+      "recheck_confidence": 0.99953293800354,
       "recheck_probabilities": {
-        "normal": 0.00047517172060906887,
-        "v1": 0.9991699457168579,
-        "v2": 0.00011640186858130619,
-        "v3": 0.00012665186659432948,
-        "v4": 7.273636583704501e-05,
-        "v5": 3.924532575183548e-05
+        "normal": 0.00016217846132349223,
+        "v1": 0.99953293800354,
+        "v2": 9.674647299107164e-05,
+        "v3": 9.054153633769602e-05,
+        "v4": 5.219692684477195e-05,
+        "v5": 6.545500946231186e-05
       },
-      "rewrite_ms": 1187.2
+      "rewrite_ms": 2923.5
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the rumors of layoffs. Have you thought about reaching out to your manager for clarification, or perhaps talking to a colleague who might have more information on the situation? It could be helpful to gather more details before making any decisions.",
-      "reasoning": "The original response made a hasty conclusion by suggesting specific actions without fully exploring the seeker's concerns about the layoffs and their uncertainty. The corrected response acknowledges the seeker's feelings and uncertainty, asks a clarifying question, and offers gentle next steps that respect their situation without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty about your job security is understandably adding to your stress. How do you feel about discussing your concerns with someone you trust at work? It might also be helpful to consider ways to manage your stress, such as talking with a friend or engaging in a calming activity.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully clarifying their situation. I acknowledged their new key information about uncertainty regarding job security and asked a clarifying question while providing gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9946881532669067,
+      "recheck_confidence": 0.999482274055481,
       "recheck_probabilities": {
-        "normal": 0.004726523067802191,
-        "v1": 0.9946881532669067,
-        "v2": 0.00011123395233880728,
-        "v3": 0.00028302022838033736,
-        "v4": 0.00012588780373334885,
-        "v5": 6.522837793454528e-05
+        "normal": 0.0002016209764406085,
+        "v1": 0.999482274055481,
+        "v2": 8.868037548381835e-05,
+        "v3": 0.00010184285929426551,
+        "v4": 5.8218272897647694e-05,
+        "v5": 6.726063293172047e-05
       },
-      "rewrite_ms": 1339.0
+      "rewrite_ms": 2982.6
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the rumors of layoffs. Have you considered how you might approach your manager or a trusted colleague to discuss this further? It could be reassuring to gather more information and see how others perceive the situation.",
-      "reasoning": "The original response made a hasty conclusion by suggesting specific actions without fully understanding the seeker's uncertainty about the rumors of layoffs. I corrected it by acknowledging the seeker's uncertainty, asking a clarifying question, and offering gentle next steps.",
+      "rewritten_text": "It sounds like the uncertainty about your job security is understandably adding to your stress. How do you feel about talking to someone you trust about your concerns? It might also be comforting to explore ways to manage your stress, like engaging in a calming activity or reaching out to friends.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings and offered suggestions without fully clarifying the user's situation regarding job security. I fixed this by acknowledging the new information about the user's stress and job uncertainty, asking a clarifying question, and then suggesting gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.991102933883667,
+      "recheck_confidence": 0.9994704127311707,
       "recheck_probabilities": {
-        "normal": 0.008296966552734375,
-        "v1": 0.991102933883667,
-        "v2": 0.00011622803140198812,
-        "v3": 0.00026668672217056155,
-        "v4": 0.0001494637836003676,
-        "v5": 6.770881736883894e-05
+        "normal": 0.00021616638696286827,
+        "v1": 0.9994704127311707,
+        "v2": 8.278127643279731e-05,
+        "v3": 9.901368321152404e-05,
+        "v4": 6.025096809025854e-05,
+        "v5": 7.139758963603526e-05
       },
-      "rewrite_ms": 1221.5
+      "rewrite_ms": 3209.2
     }
   ],
   "final_result": {

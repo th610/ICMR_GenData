@@ -4,30 +4,48 @@
   "gold_label": "V3",
   "situation": "I fall back on my study by playing too much online games and now I might fail my exams.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9941028952598572,
+    "predicted_label": "v3",
+    "confidence": 0.5954911112785339,
     "all_probabilities": {
-      "normal": 0.9941028952598572,
-      "v1": 0.00019690388580784202,
-      "v2": 0.00019747235637623817,
-      "v3": 0.005165811628103256,
-      "v4": 0.00020610746287275106,
-      "v5": 0.00013092781591694802
+      "normal": 0.398362398147583,
+      "v1": 0.0012153643183410168,
+      "v2": 0.0011779590277001262,
+      "v3": 0.5954911112785339,
+      "v4": 0.002507739933207631,
+      "v5": 0.0012454037787392735
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 3.5,
-    "generation_ms": 892.8,
-    "detection_ms": 24.7,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 921.0
+    "context_build_ms": 1.7,
+    "generation_ms": 1375.2,
+    "detection_ms": 22.4,
+    "rewrite_total_ms": 3400.6,
+    "total_ms": 4800.0
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It sounds like you’re really at a crossroads. I recommend getting some rest tonight to help clear your mind. You could set an alarm for a specific time, aim to sleep for a few hours, and then wake up to study with a fresh perspective. How does that sound to you?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker explicitly requested. I added a concrete suggestion in the form of a short guide to help the seeker make a decision about whether to sleep or cram.",
+      "recheck_label": "normal",
+      "recheck_confidence": 0.7763028740882874,
+      "recheck_probabilities": {
+        "normal": 0.7763028740882874,
+        "v1": 0.0007998804794624448,
+        "v2": 0.0008839067304506898,
+        "v3": 0.21921077370643616,
+        "v4": 0.0016878226306289434,
+        "v5": 0.0011147690238431096
+      },
+      "rewrite_ms": 3400.6
+    }
+  ],
   "final_result": {
     "label": "normal",
-    "response": "It’s a tough situation to be in, but getting some sleep can actually help you retain information better. Maybe you could try a short study session followed by a brief rest? For example, you could study for two hours, then take a 30-minute break to recharge. How does that sound to you?",
-    "total_retries": 0,
+    "response": "It sounds like you’re really at a crossroads. I recommend getting some rest tonight to help clear your mind. You could set an alarm for a specific time, aim to sleep for a few hours, and then wake up to study with a fresh perspective. How does that sound to you?",
+    "total_retries": 1,
     "used_failsafe": false
   }
 }

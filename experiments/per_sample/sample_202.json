@@ -5,28 +5,28 @@
   "situation": "My boyfriend cheated on me and I found out 6 months later at work from a customer. I was so embarras",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.838775634765625,
+    "confidence": 0.9827643036842346,
     "all_probabilities": {
-      "normal": 0.838775634765625,
-      "v1": 0.0005849577719345689,
-      "v2": 0.15502536296844482,
-      "v3": 0.0032820357009768486,
-      "v4": 0.00035570040927268565,
-      "v5": 0.0019762932788580656
+      "normal": 0.9827643036842346,
+      "v1": 0.0007050400599837303,
+      "v2": 0.00041821066406555474,
+      "v3": 0.0008024553535506129,
+      "v4": 0.0002833005855791271,
+      "v5": 0.015026609413325787
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 2.1,
-    "generation_ms": 852.5,
-    "detection_ms": 23.2,
+    "context_build_ms": 4.5,
+    "generation_ms": 1033.9,
+    "detection_ms": 28.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 877.9
+    "total_ms": 1067.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "I can see how overwhelming this must be for you. It might help to take a moment to reflect on what you truly want from this relationship. Would you like to talk about your feelings or perhaps consider having a conversation with your boyfriend about your concerns? Both options could lead to some clarity.",
+    "response": "It's completely understandable to feel small and hurt in this situation. It might help to talk about how you’re feeling right now. Would you like to share more about your emotions, or perhaps discuss what steps you might want to take next in your relationship?",
     "total_retries": 0,
     "used_failsafe": false
   }

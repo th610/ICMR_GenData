@@ -5,28 +5,28 @@
   "situation": "i had to withdraw from a semester of college. covid has led to isolation and i was unmotivated. i am",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.8032098412513733,
+    "confidence": 0.9798488020896912,
     "all_probabilities": {
-      "normal": 0.8032098412513733,
-      "v1": 0.0007737963460385799,
-      "v2": 0.19270208477973938,
-      "v3": 0.002092745853587985,
-      "v4": 0.00039257045136764646,
-      "v5": 0.0008289210381917655
+      "normal": 0.9798488020896912,
+      "v1": 0.00018583163910079747,
+      "v2": 0.0005867821746505797,
+      "v3": 0.0005074107903055847,
+      "v4": 0.0005376560147851706,
+      "v5": 0.018333422020077705
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.0,
-    "generation_ms": 909.2,
-    "detection_ms": 23.9,
+    "context_build_ms": 3.2,
+    "generation_ms": 1235.8,
+    "detection_ms": 34.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 936.2
+    "total_ms": 1273.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's okay to feel overwhelmed. One option is to take a moment to reflect on what you enjoy about your studies or what interests you the most. Alternatively, you could talk to a counselor at your college for support. Would you like to explore one of these options together?",
+    "response": "It sounds really overwhelming right now, and it’s understandable to feel that way. What if you took a small step to think about what you might want to focus on next? Maybe jotting down some interests or goals could help you feel a bit more in control. How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

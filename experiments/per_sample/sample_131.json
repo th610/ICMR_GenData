@@ -5,75 +5,75 @@
   "situation": "My  health is crazy and I may have to face a major surgery. I have a severe auto immune disorder and",
   "initial_detection": {
     "predicted_label": "v3",
-    "confidence": 0.6899974346160889,
+    "confidence": 0.6743649840354919,
     "all_probabilities": {
-      "normal": 0.3059430420398712,
-      "v1": 0.0015169203979894519,
-      "v2": 0.00155984191223979,
-      "v3": 0.6899974346160889,
-      "v4": 0.0007005425286479294,
-      "v5": 0.00028225616551935673
+      "normal": 0.3219122588634491,
+      "v1": 0.0006259714136831462,
+      "v2": 0.0004222904099151492,
+      "v3": 0.6743649840354919,
+      "v4": 0.0007108988356776536,
+      "v5": 0.0019636128563433886
     },
     "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.7,
-    "generation_ms": 1462.6,
-    "detection_ms": 26.6,
-    "rewrite_total_ms": 4281.6,
-    "total_ms": 5775.8
+    "context_build_ms": 1.8,
+    "generation_ms": 12785.4,
+    "detection_ms": 14.2,
+    "rewrite_total_ms": 11631.9,
+    "total_ms": 24433.4
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v3",
-      "rewritten_text": "It's understandable to want to approach this delicately. You could either share with them that you'll be having a procedure without going into too much detail, explaining that it’s something the doctors are helping you with, or wait until after the surgery when you can reassure them more fully. Which option do you think would work best for you?",
-      "reasoning": "The original response lacked practical help and focused solely on empathy, which violates the requirement for providing concrete assistance. I added two options to give the seeker clear choices for how to approach the conversation with her kids, while maintaining a brief empathetic statement.",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure to make the right choice for your kids. One approach could be to first assess their ages and understanding, then decide whether to explain the surgery ahead of time or after. Finally, consider practicing what you want to say to help ease your mind before the conversation.",
+      "reasoning": "The original response was empathetic but did not provide the practical help requested by the seeker regarding how to communicate with their children about the surgery. I retained one empathy sentence and added a short 2-3 step guide for the seeker to follow in addressing the situation.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9515337347984314,
+      "recheck_confidence": 0.985136091709137,
       "recheck_probabilities": {
-        "normal": 0.045855335891246796,
-        "v1": 0.0007858190219849348,
-        "v2": 0.0012534165289252996,
-        "v3": 0.9515337347984314,
-        "v4": 0.00044086965499445796,
-        "v5": 0.00013086257968097925
+        "normal": 0.013702385127544403,
+        "v1": 0.00022658570378553122,
+        "v2": 0.0001623609132366255,
+        "v3": 0.985136091709137,
+        "v4": 0.00019727321341633797,
+        "v5": 0.0005752256256528199
       },
-      "rewrite_ms": 1364.4
+      "rewrite_ms": 3691.4
     },
     {
       "retry": 2,
       "violation": "v3",
-      "rewritten_text": "It's understandable to want to approach this delicately. You could either share with them that you'll be having a procedure without going into too much detail, or wait until after the surgery when you can reassure them more fully. Which option do you think would work best for you?",
-      "reasoning": "The original response was primarily empathetic and did not provide any concrete practical help despite the seeker explicitly requesting guidance. I maintained one validating sentence and added a brief two-option choice to help the seeker decide how to approach the conversation with their children.",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure to make the right choice for your kids. One approach could be to first assess their ages and understanding, then decide how much detail to share about the surgery. You might also want to practice what you want to say, and consider how you can reassure them afterwards.",
+      "reasoning": "The original response was primarily empathetic and did not offer practical help despite the seeker's explicit request for guidance on how to communicate with their children. I added a brief empathy statement and provided a short 2-3 step guide to help the seeker navigate the conversation with their kids.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9669529795646667,
+      "recheck_confidence": 0.9878486394882202,
       "recheck_probabilities": {
-        "normal": 0.031086986884474754,
-        "v1": 0.0006511566461995244,
-        "v2": 0.0008422957616858184,
-        "v3": 0.9669529795646667,
-        "v4": 0.0003485461638774723,
-        "v5": 0.00011809168790932745
+        "normal": 0.011158287525177002,
+        "v1": 0.0002222254261141643,
+        "v2": 0.00012268827413208783,
+        "v3": 0.9878486394882202,
+        "v4": 0.00025172822643071413,
+        "v5": 0.0003964386123698205
       },
-      "rewrite_ms": 1649.9
+      "rewrite_ms": 4096.2
     },
     {
       "retry": 3,
       "violation": "v3",
-      "rewritten_text": "It's understandable to want to approach this delicately. You could either share with them that you'll be having a procedure without going into too much detail, or wait until after the surgery when you can reassure them more fully. Which option do you feel would be easier for you to manage?",
-      "reasoning": "The original response violated the guideline by providing empathy only and failing to offer practical help as explicitly requested by the seeker. I retained a brief empathetic statement and added a concrete help element in the form of two options to choose from regarding how to communicate with the kids.",
+      "rewritten_text": "It sounds like you're feeling a lot of pressure to make the right choice for your kids. One approach you might consider is to assess their ages and understanding, decide how much detail to share about the surgery, and then practice what you want to say to ensure you feel prepared.",
+      "reasoning": "The original response exhibited a violation by primarily focusing on empathy without providing practical help as requested by the seeker. I added a concrete help element in the form of a short 2-3 step guide to offer actionable support while maintaining a brief empathy sentence.",
       "recheck_label": "v3",
-      "recheck_confidence": 0.9757805466651917,
+      "recheck_confidence": 0.9930528998374939,
       "recheck_probabilities": {
-        "normal": 0.02274182438850403,
-        "v1": 0.00047545135021209717,
-        "v2": 0.0006161070195958018,
-        "v3": 0.9757805466651917,
-        "v4": 0.0002765087119769305,
-        "v5": 0.00010955677134916186
+        "normal": 0.006121820770204067,
+        "v1": 0.00020433955069165677,
+        "v2": 0.00011365141835995018,
+        "v3": 0.9930528998374939,
+        "v4": 0.00020968505123164505,
+        "v5": 0.00029760561301372945
       },
-      "rewrite_ms": 1267.3
+      "rewrite_ms": 3844.3
     }
   ],
   "final_result": {

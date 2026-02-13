@@ -5,28 +5,28 @@
   "situation": "I work for a delivery company and this client accuse saying that I did not delivered his order",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997450709342957,
+    "confidence": 0.999722421169281,
     "all_probabilities": {
-      "normal": 0.9997450709342957,
-      "v1": 6.688927533105016e-05,
-      "v2": 4.360777893452905e-05,
-      "v3": 6.184447556734085e-05,
-      "v4": 4.2277439206372947e-05,
-      "v5": 4.0258360968437046e-05
+      "normal": 0.999722421169281,
+      "v1": 5.151255754753947e-05,
+      "v2": 4.639737380784936e-05,
+      "v3": 3.546911830198951e-05,
+      "v4": 2.963428596558515e-05,
+      "v5": 0.00011451896716607735
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.2,
-    "generation_ms": 929.6,
-    "detection_ms": 26.1,
+    "context_build_ms": 4.1,
+    "generation_ms": 4737.7,
+    "detection_ms": 31.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 959.9
+    "total_ms": 4773.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's great that you want to show your commitment. Maybe you could ask your supervisor for regular feedback or set up a check-in to discuss your progress. How does that sound to you?",
+    "response": "That sounds like a good approach. Showing your commitment can really help build trust. When you do talk to your boss, maybe you could explain how you delivered the order and share the steps you usually take to ensure everything goes smoothly. Would you feel comfortable preparing a brief overview of that for your conversation?",
     "total_retries": 0,
     "used_failsafe": false
   }

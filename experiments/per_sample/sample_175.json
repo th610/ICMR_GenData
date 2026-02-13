@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I broke up with my girlfriend.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9854586124420166,
+    "predicted_label": "v3",
+    "confidence": 0.994392991065979,
     "all_probabilities": {
-      "normal": 0.9854586124420166,
-      "v1": 0.00018778079538606107,
-      "v2": 0.0003134639991912991,
-      "v3": 0.013663305900990963,
-      "v4": 0.00013073183072265238,
-      "v5": 0.00024615618167445064
+      "normal": 0.00395343080163002,
+      "v1": 0.00011683716002153233,
+      "v2": 0.00012807344319298863,
+      "v3": 0.994392991065979,
+      "v4": 0.0002492483181413263,
+      "v5": 0.0011593734379857779
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1129.3,
-    "detection_ms": 26.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1160.0
+    "context_build_ms": 4.7,
+    "generation_ms": 1739.3,
+    "detection_ms": 26.7,
+    "rewrite_total_ms": 7750.7,
+    "total_ms": 9521.7
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to want closure, and it's important to think about what you truly need. You might consider: A) reaching out for closure and preparing for any outcome, or B) taking some time to focus on your own healing before deciding to contact her.",
+      "reasoning": "The original response primarily focused on empathy and validation without providing practical help as explicitly requested by the seeker. I added a concrete help element by providing two options (A/B) to guide the seeker in their decision-making process while retaining a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9990704655647278,
+      "recheck_probabilities": {
+        "normal": 0.00041733423131518066,
+        "v1": 6.412246875697747e-05,
+        "v2": 7.862243364797905e-05,
+        "v3": 0.9990704655647278,
+        "v4": 0.00011958628601860255,
+        "v5": 0.0002499705005902797
+      },
+      "rewrite_ms": 2921.6
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to want closure, and it's important to think about what you truly need. You might consider: A) reaching out for closure and preparing for any outcome, or B) taking some time to focus on your own healing before deciding to contact her.",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help requested by the seeker, violating the counseling guidelines. I added a concrete help element by providing two options (A/B) for the seeker to consider regarding their desire for closure.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9990704655647278,
+      "recheck_probabilities": {
+        "normal": 0.00041733423131518066,
+        "v1": 6.412246875697747e-05,
+        "v2": 7.862243364797905e-05,
+        "v3": 0.9990704655647278,
+        "v4": 0.00011958628601860255,
+        "v5": 0.0002499705005902797
+      },
+      "rewrite_ms": 2352.7
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to want closure. You might consider: A) reaching out for closure while preparing for any outcome, or B) taking time to focus on your own healing before deciding to contact her.",
+      "reasoning": "The original last supporter response was primarily empathetic and did not provide the practical help that the seeker requested. I kept one empathetic statement and included two options (A/B) to guide the seeker in making a decision regarding contacting their ex for closure.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9993202686309814,
+      "recheck_probabilities": {
+        "normal": 0.00027163897175341845,
+        "v1": 5.693378989235498e-05,
+        "v2": 6.330077303573489e-05,
+        "v3": 0.9993202686309814,
+        "v4": 0.00010145325359189883,
+        "v5": 0.00018645347154233605
+      },
+      "rewrite_ms": 2476.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're in a tough spot. Taking a moment to reflect on what you truly need could be helpful. You might ask yourself if reaching out would bring you peace or if it might stir up more emotions. Would you feel more comfortable focusing on your own healing for now, or do you think that having closure is important for you? It’s all about what feels right for you in this moment.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

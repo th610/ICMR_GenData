@@ -5,47 +5,81 @@
   "situation": "Since I have to practice social distancing and isolate with the pandemic, I have been feeling more d",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.8580960631370544,
+    "confidence": 0.9995341300964355,
     "all_probabilities": {
-      "normal": 0.13816222548484802,
-      "v1": 0.8580960631370544,
-      "v2": 0.0015190087724477053,
-      "v3": 0.00038770647370256484,
-      "v4": 0.001435847720131278,
-      "v5": 0.0003991323756054044
+      "normal": 0.00014843187818769366,
+      "v1": 0.9995341300964355,
+      "v2": 7.476103928638622e-05,
+      "v3": 9.886392945190892e-05,
+      "v4": 6.669834692729637e-05,
+      "v5": 7.705150346737355e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 910.7,
-    "detection_ms": 28.8,
-    "rewrite_total_ms": 1422.0,
-    "total_ms": 2365.7
+    "context_build_ms": 4.2,
+    "generation_ms": 985.8,
+    "detection_ms": 31.1,
+    "rewrite_total_ms": 7003.0,
+    "total_ms": 8024.2
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about your friends and that can be really difficult. How do you think it would feel to talk to them about what you overheard? If that feels too overwhelming, it might help to discuss your feelings with someone you trust first.",
-      "reasoning": "The original response made a hasty conclusion about the user's feelings and situation without fully exploring the new information they provided regarding feeling excluded. I corrected this by acknowledging the user's feelings of potential exclusion, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.9582300186157227,
+      "rewritten_text": "It sounds really tough to feel that loneliness on top of everything else, especially with the uncertainty about your friends. How do you think reaching out to them might make you feel? It could be helpful to share how you’re feeling or find ways to connect, even if it’s virtual.",
+      "reasoning": "The original last supporter response made a hasty conclusion by not acknowledging the seeker's uncertainty about their friends meeting up without them and transitioned too quickly to suggesting a solution without clarifying further. I fixed this by acknowledging the seeker's feelings and uncertainty, asking a clarifying question, and offering gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9993712306022644,
       "recheck_probabilities": {
-        "normal": 0.9582300186157227,
-        "v1": 0.04053132236003876,
-        "v2": 0.00031331655918620527,
-        "v3": 0.00027304250397719443,
-        "v4": 0.00042086010216735303,
-        "v5": 0.0002315231686225161
+        "normal": 0.00027060508728027344,
+        "v1": 0.9993712306022644,
+        "v2": 6.430850044125691e-05,
+        "v3": 0.00011124129378004,
+        "v4": 8.122412691591308e-05,
+        "v5": 0.00010133301111636683
       },
-      "rewrite_ms": 1422.0
+      "rewrite_ms": 2742.0
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds really difficult to feel that loneliness, especially with the uncertainty about your friends. How do you feel about reaching out to them to discuss your feelings? It might be helpful to explore ways to connect with them, even if it’s through a message or a call.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings and did not adequately acknowledge their uncertainty about their friends possibly meeting without them. I addressed this by explicitly recognizing their feelings of loneliness and uncertainty, then asked a single clarifying question and suggested gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9994879961013794,
+      "recheck_probabilities": {
+        "normal": 0.00019507683464325964,
+        "v1": 0.9994879961013794,
+        "v2": 6.572140409843996e-05,
+        "v3": 0.00010324607865186408,
+        "v4": 7.005446968832985e-05,
+        "v5": 7.784227636875585e-05
+      },
+      "rewrite_ms": 2242.4
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds really difficult to feel that loneliness, especially with the uncertainty about your friends. How do you feel about the possibility of reaching out to them? It might be helpful to think about ways to connect, such as sending a message or making a call.",
+      "reasoning": "The original response made assumptions about the seeker's feelings and suggested a course of action without fully clarifying their situation. I acknowledged the seeker's feelings of loneliness and uncertainty, asked a single clarifying question, and provided gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9994495511054993,
+      "recheck_probabilities": {
+        "normal": 0.0002364723477512598,
+        "v1": 0.9994495511054993,
+        "v2": 6.988242967054248e-05,
+        "v3": 0.00010216442751698196,
+        "v4": 6.360579573083669e-05,
+        "v5": 7.838322926545516e-05
+      },
+      "rewrite_ms": 2018.5
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're feeling uncertain about your friends and that can be really difficult. How do you think it would feel to talk to them about what you overheard? If that feels too overwhelming, it might help to discuss your feelings with someone you trust first.",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

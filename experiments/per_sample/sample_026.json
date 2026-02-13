@@ -5,28 +5,28 @@
   "situation": "My friends are segregating me because of deciding to be a born again Christian",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997034668922424,
+    "confidence": 0.9995537400245667,
     "all_probabilities": {
-      "normal": 0.9997034668922424,
-      "v1": 6.952793773962185e-05,
-      "v2": 5.4586795158684254e-05,
-      "v3": 6.775042129447684e-05,
-      "v4": 3.95962197217159e-05,
-      "v5": 6.512586696771905e-05
+      "normal": 0.9995537400245667,
+      "v1": 4.9339938414050266e-05,
+      "v2": 3.67948850907851e-05,
+      "v3": 0.00018568438827060163,
+      "v4": 5.285735096549615e-05,
+      "v5": 0.00012148562382208183
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 4.3,
-    "generation_ms": 908.1,
-    "detection_ms": 26.5,
+    "generation_ms": 1436.2,
+    "detection_ms": 30.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 938.9
+    "total_ms": 1471.2
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's understandable to feel nervous, especially when you care about the friendships. Maybe you could approach it gently by asking how they feel about the changes and sharing your feelings too. Would you feel comfortable trying that, or would you prefer to wait a bit longer?",
+    "response": "It's completely normal to feel nervous about reaching out. Maybe you could start with a simple message expressing that you'd like to catch up? Would you prefer to reach out individually or as a group?",
     "total_retries": 0,
     "used_failsafe": false
   }

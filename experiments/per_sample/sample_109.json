@@ -5,75 +5,75 @@
   "situation": "This time is too hard for me fine a jobs which require me to search and get pay for unemployment.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9978010058403015,
+    "confidence": 0.9990655779838562,
     "all_probabilities": {
-      "normal": 0.0015891649527475238,
-      "v1": 0.9978010058403015,
-      "v2": 0.00019279761181678623,
-      "v3": 0.00015501830785069615,
-      "v4": 0.00019945505482610315,
-      "v5": 6.26131150056608e-05
+      "normal": 0.00048827624414116144,
+      "v1": 0.9990655779838562,
+      "v2": 0.00011798459308920428,
+      "v3": 0.0001613645872566849,
+      "v4": 7.541902596130967e-05,
+      "v5": 9.138818131759763e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 2.8,
-    "generation_ms": 918.9,
-    "detection_ms": 26.4,
-    "rewrite_total_ms": 4201.9,
-    "total_ms": 5150.3
+    "context_build_ms": 3.3,
+    "generation_ms": 1045.6,
+    "detection_ms": 24.4,
+    "rewrite_total_ms": 9177.0,
+    "total_ms": 10250.6
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the layoffs at your previous job. What do you think might be your next steps if those layoffs do happen? You might consider reaching out to someone at your old job for more clarity or exploring other job opportunities in the meantime.",
-      "reasoning": "The original response jumped to an emotional interpretation without fully acknowledging the seeker's uncertainty regarding the layoffs. The corrected response acknowledges the new information, asks a clarifying question, and gently suggests next steps without making assumptions.",
+      "rewritten_text": "It sounds like the news about potential layoffs has left you feeling uncertain. Would it be helpful to discuss what types of jobs you might be interested in exploring? Perhaps we could also talk about ways to build your confidence as you navigate your job search.",
+      "reasoning": "The original response made assumptions about the seeker's feelings without directly acknowledging their uncertainty or new information regarding the layoffs. I fixed it by acknowledging their uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9245905876159668,
+      "recheck_confidence": 0.998822033405304,
       "recheck_probabilities": {
-        "normal": 0.07370640337467194,
-        "v1": 0.9245905876159668,
-        "v2": 0.000670850567985326,
-        "v3": 0.000519151275511831,
-        "v4": 0.00036797698703594506,
-        "v5": 0.0001450222043786198
+        "normal": 0.0007283638115040958,
+        "v1": 0.998822033405304,
+        "v2": 0.00012631977733690292,
+        "v3": 0.0001425853552063927,
+        "v4": 8.06872922112234e-05,
+        "v5": 9.99053445411846e-05
       },
-      "rewrite_ms": 1391.5
+      "rewrite_ms": 2564.5
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the layoffs at your previous job. What specific concerns do you have about this situation? You might consider reaching out to someone at your old job for more clarity or taking some time to explore other job opportunities.",
-      "reasoning": "The original response contained a hasty conclusion by assuming the user's feelings and next steps without confirming their perspective. I acknowledged the user's uncertainty, asked a clarifying question, and provided gentle next steps without making assumptions.",
+      "rewritten_text": "I understand that the news about potential layoffs has made you feel uncertain. What types of jobs are you considering? It might be helpful to explore your interests and discuss how to approach your job search.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings and potential next steps without fully clarifying the seeker's situation. I fixed it by acknowledging the seeker's uncertainty, asking a clarifying question about their job interests, and suggesting gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.8282700181007385,
+      "recheck_confidence": 0.9992197751998901,
       "recheck_probabilities": {
-        "normal": 0.1693127453327179,
-        "v1": 0.8282700181007385,
-        "v2": 0.0010490408167243004,
-        "v3": 0.0007299986318685114,
-        "v4": 0.00044350523967295885,
-        "v5": 0.0001947062846738845
+        "normal": 0.0004086631233803928,
+        "v1": 0.9992197751998901,
+        "v2": 0.00012540745956357569,
+        "v3": 0.00011435195483500138,
+        "v4": 6.238292553462088e-05,
+        "v5": 6.93930996931158e-05
       },
-      "rewrite_ms": 1481.7
+      "rewrite_ms": 3732.6
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "I understand that you're feeling uncertain about the potential layoffs at your previous job. What specifically worries you about this situation? It might be helpful to talk to someone you trust about your concerns or consider looking into other job opportunities.",
-      "reasoning": "The original response assumed the seeker's feelings and provided multiple suggestions without asking a clarifying question. I acknowledged the seeker's uncertainty, asked one clarifying question, and offered gentle next steps without making assumptions.",
+      "rewritten_text": "I understand that hearing about potential layoffs has left you feeling uncertain. What types of jobs are you thinking about exploring? It might be helpful to take some time to reflect on your interests and perhaps look into local resources that can assist with your job search.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings and job search without adequately acknowledging their uncertainty or asking for clarification. I addressed this by acknowledging the seeker's feelings and asking a clarifying question while providing gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9253911375999451,
+      "recheck_confidence": 0.9994575381278992,
       "recheck_probabilities": {
-        "normal": 0.07190345227718353,
-        "v1": 0.9253911375999451,
-        "v2": 0.0016994003672152758,
-        "v3": 0.0004837368323933333,
-        "v4": 0.0003581536002457142,
-        "v5": 0.00016411030082963407
+        "normal": 0.00020446977578103542,
+        "v1": 0.9994575381278992,
+        "v2": 0.00010835730790859088,
+        "v3": 9.9771554232575e-05,
+        "v4": 6.517619476653636e-05,
+        "v5": 6.474804104072973e-05
       },
-      "rewrite_ms": 1328.8
+      "rewrite_ms": 2879.9
     }
   ],
   "final_result": {

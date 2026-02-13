@@ -5,28 +5,28 @@
   "situation": "Due to this pandemic, I fear for my job.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9995173215866089,
+    "confidence": 0.9996137022972107,
     "all_probabilities": {
-      "normal": 0.9995173215866089,
-      "v1": 6.327896699076518e-05,
-      "v2": 4.527004057308659e-05,
-      "v3": 0.00018052788800559938,
-      "v4": 6.38693745713681e-05,
-      "v5": 0.00012970215175300837
+      "normal": 0.9996137022972107,
+      "v1": 4.3956264562439173e-05,
+      "v2": 5.005792991141789e-05,
+      "v3": 7.490151620004326e-05,
+      "v4": 4.054796590935439e-05,
+      "v5": 0.00017694874259177595
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 3.4,
-    "generation_ms": 868.6,
-    "detection_ms": 27.1,
+    "generation_ms": 1527.0,
+    "detection_ms": 46.5,
     "rewrite_total_ms": 0.0,
-    "total_ms": 899.2
+    "total_ms": 1577.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It’s completely normal to feel that way during such uncertain times. Have you found any strategies that help you regain focus, or would you like to explore some options together?",
+    "response": "Mornings can be tough, especially when anxiety is high. Would it help to create a morning routine that includes something calming, like a short walk or some deep breathing exercises? Or perhaps you could set aside a few minutes to play a game before starting work to ease into the day?",
     "total_retries": 0,
     "used_failsafe": false
   }

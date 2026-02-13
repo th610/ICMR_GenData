@@ -5,75 +5,75 @@
   "situation": "i keep feeling as though i'm not doing well. i have a job but i don't seem to be very good at it and",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9565046429634094,
+    "confidence": 0.9985895752906799,
     "all_probabilities": {
-      "normal": 0.04223862662911415,
-      "v1": 0.9565046429634094,
-      "v2": 0.00022722972789779305,
-      "v3": 0.0005333992303349078,
-      "v4": 0.0003385072050150484,
-      "v5": 0.00015752672334201634
+      "normal": 0.0009629405685700476,
+      "v1": 0.9985895752906799,
+      "v2": 5.3771880629938096e-05,
+      "v3": 0.00016756447439547628,
+      "v4": 0.00011371733125997707,
+      "v5": 0.00011237202124902979
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 3.2,
-    "generation_ms": 1115.2,
-    "detection_ms": 24.1,
-    "rewrite_total_ms": 4010.5,
-    "total_ms": 5153.3
+    "context_build_ms": 2.5,
+    "generation_ms": 1394.2,
+    "detection_ms": 22.6,
+    "rewrite_total_ms": 9804.2,
+    "total_ms": 11223.7
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about those rumors regarding downsizing. Have you considered discussing this with your manager or someone you trust for more information? It might help to share your concerns with them if you feel comfortable.",
-      "reasoning": "The original response assumed the user's situation without fully acknowledging their uncertainty about the rumors and included multiple questions. I fixed it by acknowledging the user's uncertainty, asking one clarifying question, and providing gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like that uncertainty is really affecting you. Have you been able to share your concerns with your manager? It might be helpful to reflect on your past accomplishments and how you can express your commitment to your role.",
+      "reasoning": "The original response jumped to conclusions without fully appreciating the seeker's feelings of uncertainty regarding communication about potential downsizing. I fixed it by acknowledging the seeker's specific concern and asking a clarifying question while providing gentle next steps without assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9574593901634216,
+      "recheck_confidence": 0.9994441866874695,
       "recheck_probabilities": {
-        "normal": 0.041538141667842865,
-        "v1": 0.9574593901634216,
-        "v2": 0.00022817849821876734,
-        "v3": 0.00036076115793548524,
-        "v4": 0.00028759561246261,
-        "v5": 0.00012594689906109124
+        "normal": 0.0002755739842541516,
+        "v1": 0.9994441866874695,
+        "v2": 5.27730917383451e-05,
+        "v3": 8.324539521709085e-05,
+        "v4": 7.395107240881771e-05,
+        "v5": 7.01520184520632e-05
       },
-      "rewrite_ms": 1310.3
+      "rewrite_ms": 3231.0
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the rumors regarding downsizing. What do you think might help you feel more secure in your current position? It could be helpful to keep an open line of communication with your manager or to seek support from trusted colleagues.",
-      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully exploring their concerns. I corrected it by acknowledging their uncertainty about the rumors and asking a clarifying question, while also suggesting gentle next steps without making assumptions.",
+      "rewritten_text": "It seems like the uncertainty from the vague comment is really weighing on you. Have you had a chance to express how this uncertainty affects you to your manager? Reflecting on your past accomplishments might help you feel more confident, and it could also be beneficial to keep an eye out for any official communication from your company regarding changes.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's situation without fully exploring their feelings and concerns. I acknowledged the seeker's uncertainty, asked a clarifying question to further understand their situation, and offered gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9981447458267212,
+      "recheck_confidence": 0.99864262342453,
       "recheck_probabilities": {
-        "normal": 0.001482343883253634,
-        "v1": 0.9981447458267212,
-        "v2": 8.961879211710766e-05,
-        "v3": 0.00011758707842091098,
-        "v4": 0.00012149973917985335,
-        "v5": 4.4243170123081654e-05
+        "normal": 0.0009707898134365678,
+        "v1": 0.99864262342453,
+        "v2": 6.639127241214737e-05,
+        "v3": 0.00011105168960057199,
+        "v4": 8.800810610409826e-05,
+        "v5": 0.00012108607188565657
       },
-      "rewrite_ms": 1335.1
+      "rewrite_ms": 3717.7
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about the rumors regarding downsizing. How are you feeling about the possibility of these changes at work? It might be helpful to have an open conversation with your manager about your job security or to connect with colleagues you trust for support.",
-      "reasoning": "The original response jumped to a conclusion without fully acknowledging the user's uncertainty about the rumors of downsizing. I corrected it by acknowledging this uncertainty, asking a clarifying question about their feelings regarding the situation, and then suggesting gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like the uncertainty from the vague comment is really adding to your anxiety. How do you think you might approach discussing your feelings about this uncertainty with your manager? Reflecting on your past accomplishments could be a positive way to boost your confidence.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully clarifying the situation regarding the vague comment about downsizing. I acknowledged the user's new key information about the uncertainty they feel and asked a clarifying question, followed by gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9882602691650391,
+      "recheck_confidence": 0.9992141723632812,
       "recheck_probabilities": {
-        "normal": 0.011082333512604237,
-        "v1": 0.9882602691650391,
-        "v2": 0.00015458038251381367,
-        "v3": 0.00023465212143491954,
-        "v4": 0.00018530832312535495,
-        "v5": 8.283273928100243e-05
+        "normal": 0.0004748715728055686,
+        "v1": 0.9992141723632812,
+        "v2": 4.969220026396215e-05,
+        "v3": 8.496410009684041e-05,
+        "v4": 9.13880139705725e-05,
+        "v5": 8.49661955726333e-05
       },
-      "rewrite_ms": 1365.1
+      "rewrite_ms": 2855.5
     }
   ],
   "final_result": {

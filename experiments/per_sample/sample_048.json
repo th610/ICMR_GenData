@@ -5,28 +5,28 @@
   "situation": "My husband and I are very close to a divorce and neither one of us wants it to happen but we can not",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997090697288513,
+    "confidence": 0.9994803071022034,
     "all_probabilities": {
-      "normal": 0.9997090697288513,
-      "v1": 8.942968997871503e-05,
-      "v2": 4.407951928442344e-05,
-      "v3": 6.223302625585347e-05,
-      "v4": 3.3094227546826005e-05,
-      "v5": 6.196918548084795e-05
+      "normal": 0.9994803071022034,
+      "v1": 4.174363857600838e-05,
+      "v2": 3.691434903885238e-05,
+      "v3": 6.845006282674149e-05,
+      "v4": 4.4059594074497e-05,
+      "v5": 0.0003284666163381189
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 3.9,
-    "generation_ms": 1131.5,
-    "detection_ms": 25.9,
+    "generation_ms": 3320.2,
+    "detection_ms": 40.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1161.4
+    "total_ms": 3364.9
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It’s completely normal to have those concerns. Maybe you could start by sharing just a little about how their divorce is affecting you, without going into too much detail right away. How do you think he might respond to that?",
+    "response": "It's completely understandable to feel that way. Opening up can feel daunting, but it might help to share your feelings with your husband. You could start by saying something like, 'I've been feeling anxious about our relationship and my parents' situation.' How do you feel about trying that approach? Or maybe writing down your thoughts first could make it easier for you to express them.",
     "total_retries": 0,
     "used_failsafe": false
   }

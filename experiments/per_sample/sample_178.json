@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I found out that my boyfriend had been lying to me about his entire life, and so the future that he ",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.6606557965278625,
+    "predicted_label": "v3",
+    "confidence": 0.9990665316581726,
     "all_probabilities": {
-      "normal": 0.6606557965278625,
-      "v1": 0.000750975392293185,
-      "v2": 0.0007867478998377919,
-      "v3": 0.3358992338180542,
-      "v4": 0.00047341251047328115,
-      "v5": 0.0014338856562972069
+      "normal": 0.0003155935264658183,
+      "v1": 5.750889249611646e-05,
+      "v2": 6.133587885415182e-05,
+      "v3": 0.9990665316581726,
+      "v4": 0.00013258396938908845,
+      "v5": 0.0003664884134195745
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 4.8,
-    "generation_ms": 1423.0,
-    "detection_ms": 25.6,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1453.5
+    "context_build_ms": 4.7,
+    "generation_ms": 1200.2,
+    "detection_ms": 30.1,
+    "rewrite_total_ms": 7077.8,
+    "total_ms": 8313.0
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel that way, especially with so much at stake. What specific changes or actions would you need to see from him to feel more secure in this situation?",
+      "reasoning": "The original response was primarily empathetic and did not provide any practical help, which led to a V3 violation. I added a brief validation sentence along with a clarifying question to ensure the response remains supportive while also encouraging the seeker to reflect on their situation practically.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9994887113571167,
+      "recheck_probabilities": {
+        "normal": 4.5472977944882587e-05,
+        "v1": 6.945568020455539e-05,
+        "v2": 0.00017357090837322176,
+        "v3": 0.9994887113571167,
+        "v4": 0.00011346121755195782,
+        "v5": 0.0001092841339414008
+      },
+      "rewrite_ms": 2383.7
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel that way, especially with so much at stake. What would be a dealbreaker for you if he doesn't show those changes?",
+      "reasoning": "The original response exhibited a violation by providing empathy only without addressing the seeker's explicit request for practical help. I added a clarifying question to guide the seeker toward identifying actionable steps they can consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9993815422058105,
+      "recheck_probabilities": {
+        "normal": 4.599858584697358e-05,
+        "v1": 6.648623093497008e-05,
+        "v2": 0.00028048991225659847,
+        "v3": 0.9993815422058105,
+        "v4": 0.000130819869809784,
+        "v5": 9.457993292016909e-05
+      },
+      "rewrite_ms": 2231.9
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's understandable to feel that way, especially with so much at stake. Have you thought about what specific changes you need to see from him to feel secure in your decision?",
+      "reasoning": "The original response was primarily empathetic, failing to provide practical guidance or assistance in response to the seeker's dilemma. I added a clarifying question to help the seeker think through their situation while maintaining a brief empathy statement.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.999579131603241,
+      "recheck_probabilities": {
+        "normal": 6.285151903284714e-05,
+        "v1": 5.345602403394878e-05,
+        "v2": 7.928516424726695e-05,
+        "v3": 0.999579131603241,
+        "v4": 9.936842980096117e-05,
+        "v5": 0.0001258948032045737
+      },
+      "rewrite_ms": 2462.2
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It seems like you have a lot on your plate with this decision. One approach could be to take some time to reflect on what you truly want and need for your emotional well-being. Perhaps you could consider writing down the pros and cons of giving him a chance versus ending the relationship. How does that sound to you? Or, if it helps, you could think about what specific actions he could take that would show you he is committed to making things better.",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

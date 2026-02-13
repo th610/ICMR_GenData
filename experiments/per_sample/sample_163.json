@@ -5,28 +5,28 @@
   "situation": "My mother recently passed, a month ago due to being an alcoholic for many years.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9938638210296631,
+    "confidence": 0.8242039084434509,
     "all_probabilities": {
-      "normal": 0.9938638210296631,
-      "v1": 0.0001619354879949242,
-      "v2": 0.00010848882084246725,
-      "v3": 0.005598214454948902,
-      "v4": 0.0001071403530659154,
-      "v5": 0.00016039557522162795
+      "normal": 0.8242039084434509,
+      "v1": 0.0005283684586174786,
+      "v2": 0.00040620844811201096,
+      "v3": 0.17284256219863892,
+      "v4": 0.0008189249783754349,
+      "v5": 0.0012000754941254854
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.9,
-    "generation_ms": 1974.8,
-    "detection_ms": 29.0,
+    "context_build_ms": 6.0,
+    "generation_ms": 3102.9,
+    "detection_ms": 33.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 2008.8
+    "total_ms": 3142.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It sounds like you're in a tough spot, and both options have their own challenges. You might consider how each choice aligns with what you need emotionally at the gathering. Would you feel more at ease being open about your feelings, or do you think you would prefer to protect yourself by keeping things light? It could also help to prepare a few responses in advance, just in case the topic comes up. How do you feel about that?",
+    "response": "It sounds like you're really weighing your options, which is understandable. Sharing your feelings can be a way to lighten your emotional load, but it can also be daunting, especially in a family setting. If you're comfortable, you might consider starting with something light and then gauge how the conversation flows. Alternatively, you could prepare a few key points about how you're feeling if you decide to open up. What do you think feels more aligned with your comfort level right now?",
     "total_retries": 0,
     "used_failsafe": false
   }

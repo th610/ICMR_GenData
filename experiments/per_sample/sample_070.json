@@ -5,28 +5,28 @@
   "situation": "Since getting a new job I feel like I'm constantly trying to prove myself. I measure myself against ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997318387031555,
+    "confidence": 0.9996747970581055,
     "all_probabilities": {
-      "normal": 0.9997318387031555,
-      "v1": 6.693841714877635e-05,
-      "v2": 4.859273030888289e-05,
-      "v3": 6.157624011393636e-05,
-      "v4": 3.844899401883595e-05,
-      "v5": 5.249619425740093e-05
+      "normal": 0.9996747970581055,
+      "v1": 5.871176836080849e-05,
+      "v2": 5.6009856052696705e-05,
+      "v3": 5.578734271693975e-05,
+      "v4": 5.5488191719632596e-05,
+      "v5": 9.915594273479655e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 5.2,
-    "generation_ms": 893.3,
-    "detection_ms": 27.4,
+    "context_build_ms": 5.0,
+    "generation_ms": 1438.1,
+    "detection_ms": 32.8,
     "rewrite_total_ms": 0.0,
-    "total_ms": 925.9
+    "total_ms": 1476.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's wonderful that you feel that way! Connecting with your co-workers can really foster a sense of belonging. Perhaps you could start by mentioning a specific challenge you're facing and ask if they have any strategies that worked for them. What do you think would be the first thing you'd like to ask them about?",
+    "response": "That sounds promising! Maybe you could start by sharing a specific challenge you're facing and ask for their insights on how they manage similar tasks. It could open up a great dialogue and help you feel more connected too.",
     "total_retries": 0,
     "used_failsafe": false
   }

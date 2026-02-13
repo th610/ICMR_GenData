@@ -5,28 +5,28 @@
   "situation": "Unable to care for myself while my wife is dealing with medical issues.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9930744171142578,
+    "confidence": 0.9045542478561401,
     "all_probabilities": {
-      "normal": 0.9930744171142578,
-      "v1": 0.00023317616432905197,
-      "v2": 0.00032548487070016563,
-      "v3": 0.006123433355242014,
-      "v4": 0.00011708475358318537,
-      "v5": 0.00012647836410906166
+      "normal": 0.9045542478561401,
+      "v1": 0.00031767814652994275,
+      "v2": 0.0003508039517328143,
+      "v3": 0.09314139187335968,
+      "v4": 0.0006932696560397744,
+      "v5": 0.000942647980991751
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.9,
-    "generation_ms": 1181.4,
-    "detection_ms": 25.8,
+    "context_build_ms": 5.4,
+    "generation_ms": 1751.6,
+    "detection_ms": 28.4,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1211.1
+    "total_ms": 1785.5
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It’s great that you’re thinking about your options. Both local help and family support can be valuable. Maybe you could start by making a list of what kind of help you think you need most. Then, decide which option feels more manageable to pursue first. Would you prefer to reach out to family or look for local resources this weekend?",
+    "response": "It sounds like you're weighing two important options. If you’re feeling overwhelmed, perhaps starting with local help services could provide some immediate relief. You might want to check out a few services online or even make a list of potential contacts. After that, how do you feel about reaching out to family to discuss what you've found? That way, you might feel more prepared to share the load.",
     "total_retries": 0,
     "used_failsafe": false
   }

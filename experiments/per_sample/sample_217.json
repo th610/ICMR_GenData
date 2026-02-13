@@ -5,28 +5,28 @@
   "situation": "I recently broke up with my girlfriend of 2 years.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9916816353797913,
+    "confidence": 0.9983766078948975,
     "all_probabilities": {
-      "normal": 0.9916816353797913,
-      "v1": 0.00011527933384058997,
-      "v2": 0.007222373969852924,
-      "v3": 0.00039188918890431523,
-      "v4": 0.0002163970930268988,
-      "v5": 0.00037251951289363205
+      "normal": 0.9983766078948975,
+      "v1": 4.915838144370355e-05,
+      "v2": 8.802318916423246e-05,
+      "v3": 0.0001537979842396453,
+      "v4": 7.303540041903034e-05,
+      "v5": 0.0012592823477461934
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.7,
-    "generation_ms": 854.6,
-    "detection_ms": 25.0,
+    "context_build_ms": 3.5,
+    "generation_ms": 1227.0,
+    "detection_ms": 29.7,
     "rewrite_total_ms": 0.0,
-    "total_ms": 883.4
+    "total_ms": 1260.3
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "Finding ways to feel better can be a personal journey. You might consider journaling your thoughts or feelings, which can help clear your mind. Alternatively, engaging in a creative hobby like drawing or writing could also be fulfilling. What do you think would resonate with you more right now?",
+    "response": "It's really tough to shake off sadness, especially after a meaningful relationship. Sometimes it can help to express those feelings, whether through journaling, talking to a friend, or even creating art. Have you thought about any of those options?",
     "total_retries": 0,
     "used_failsafe": false
   }

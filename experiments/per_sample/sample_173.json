@@ -4,30 +4,82 @@
   "gold_label": "V3",
   "situation": "I am alone and have no friends.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9914918541908264,
+    "predicted_label": "v3",
+    "confidence": 0.9872835874557495,
     "all_probabilities": {
-      "normal": 0.9914918541908264,
-      "v1": 0.00025540648493915796,
-      "v2": 0.00024331208260264248,
-      "v3": 0.007775179110467434,
-      "v4": 0.00012879748828709126,
-      "v5": 0.0001053794112522155
+      "normal": 0.011365026235580444,
+      "v1": 0.00019542491645552218,
+      "v2": 0.00016832324035931379,
+      "v3": 0.9872835874557495,
+      "v4": 0.0003804152365773916,
+      "v5": 0.0006072571268305182
     },
-    "severity": 0
+    "severity": 3
   },
   "timing": {
-    "context_build_ms": 5.4,
-    "generation_ms": 1256.4,
-    "detection_ms": 31.8,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 1293.6
+    "context_build_ms": 4.9,
+    "generation_ms": 1159.6,
+    "detection_ms": 29.8,
+    "rewrite_total_ms": 5083.0,
+    "total_ms": 6277.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between these options! You could consider messaging your friend for immediate support, or if you want to explore online groups, I can help you find some that fit your needs. Which option feels more appealing to you right now?",
+      "reasoning": "The original response was primarily empathetic and did not provide the practical help that the seeker requested. I added a concrete helping element by providing two options for the seeker to consider while keeping a brief validation sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9993677735328674,
+      "recheck_probabilities": {
+        "normal": 0.0002472682681400329,
+        "v1": 5.934251385042444e-05,
+        "v2": 6.744426354998723e-05,
+        "v3": 0.9993677735328674,
+        "v4": 9.2990645498503e-05,
+        "v5": 0.00016521646466571838
+      },
+      "rewrite_ms": 1909.5
+    },
+    {
+      "retry": 2,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between these options! You could message your friend for immediate support, or I can help you look for online groups that might suit your needs. Which option do you feel more inclined to pursue?",
+      "reasoning": "The original response was primarily empathetic, failing to provide practical help despite the seeker's explicit request for guidance. I added a concrete help element in the form of two options for the seeker to choose from, while maintaining a brief empathy sentence.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995579123497009,
+      "recheck_probabilities": {
+        "normal": 0.00013517749903257936,
+        "v1": 5.714552025892772e-05,
+        "v2": 6.0359026974765584e-05,
+        "v3": 0.9995579123497009,
+        "v4": 8.344946400029585e-05,
+        "v5": 0.00010602525435388088
+      },
+      "rewrite_ms": 1511.1
+    },
+    {
+      "retry": 3,
+      "violation": "v3",
+      "rewritten_text": "It's completely understandable to feel torn between these options! You could message your friend for immediate support, or you could explore joining an online group to find additional support. Which option do you feel more inclined to pursue?",
+      "reasoning": "The original response was overly focused on empathy and did not provide any practical assistance despite the seeker's explicit request for help. I added a concrete help element by providing two options for the seeker to consider.",
+      "recheck_label": "v3",
+      "recheck_confidence": 0.9995784163475037,
+      "recheck_probabilities": {
+        "normal": 0.00012910350051242858,
+        "v1": 5.4302199714584276e-05,
+        "v2": 6.244353426154703e-05,
+        "v3": 0.9995784163475037,
+        "v4": 8.038964006118476e-05,
+        "v5": 9.534195123706013e-05
+      },
+      "rewrite_ms": 1662.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's great that you're considering your options. Reaching out to your friend could provide you with some immediate support, especially since you already have that connection. On the other hand, exploring an online group might help you find a wider community of people who understand what you're going through. Maybe you could start by sending a message to your friend to see if he's available to talk, and if not, look into online groups that interest you. How does that sound?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "그런 일이 있으셨군요. 더 말씀해주시겠어요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

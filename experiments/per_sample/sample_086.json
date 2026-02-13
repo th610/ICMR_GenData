@@ -4,30 +4,82 @@
   "gold_label": "V1",
   "situation": "Not having enough money to pay my bills.",
   "initial_detection": {
-    "predicted_label": "normal",
-    "confidence": 0.9695621132850647,
+    "predicted_label": "v1",
+    "confidence": 0.9991697072982788,
     "all_probabilities": {
-      "normal": 0.9695621132850647,
-      "v1": 0.029405148699879646,
-      "v2": 0.00022624879784416407,
-      "v3": 0.00037854487891308963,
-      "v4": 0.0003096199070569128,
-      "v5": 0.0001183561616926454
+      "normal": 0.00017543081776238978,
+      "v1": 0.9991697072982788,
+      "v2": 5.4594547691522166e-05,
+      "v3": 0.00013430480612441897,
+      "v4": 0.0002930201299022883,
+      "v5": 0.00017290266987401992
     },
-    "severity": 0
+    "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.7,
-    "generation_ms": 879.5,
-    "detection_ms": 26.5,
-    "rewrite_total_ms": 0.0,
-    "total_ms": 910.8
+    "context_build_ms": 4.5,
+    "generation_ms": 4040.7,
+    "detection_ms": 31.1,
+    "rewrite_total_ms": 11090.0,
+    "total_ms": 15166.6
   },
-  "rewrite_iterations": [],
+  "rewrite_iterations": [
+    {
+      "retry": 1,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uneasy about the rumors regarding your dad's hidden debts, which is completely understandable. How do you think tracking your expenses could help you feel more at ease? If you're comfortable, starting with just one area, like your fixed expenses, could be a gentle way to ease into it.",
+      "reasoning": "The original response jumped to suggestions without fully acknowledging the seeker's feelings about their father's hidden debts and their uncertainty about finances. I addressed their concern and included one clarifying question while providing gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9990839958190918,
+      "recheck_probabilities": {
+        "normal": 0.0003626749094109982,
+        "v1": 0.9990839958190918,
+        "v2": 4.3109535909025e-05,
+        "v3": 8.98291400517337e-05,
+        "v4": 0.0002365272375755012,
+        "v5": 0.0001839102478697896
+      },
+      "rewrite_ms": 3881.4
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uneasy about the rumors regarding your dad's hidden debts, which is completely understandable. What specific aspects of tracking your expenses feel most daunting to you? Perhaps starting with just one area, like your fixed expenses, could help you feel a bit more comfortable.",
+      "reasoning": "The original response made a hasty conclusion about the user's feelings without fully clarifying their situation regarding their father's hidden debts. The corrected response acknowledges the user's uncertainty and asks a specific clarifying question while providing gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9993560910224915,
+      "recheck_probabilities": {
+        "normal": 0.00022752578661311418,
+        "v1": 0.9993560910224915,
+        "v2": 3.8523863622685894e-05,
+        "v3": 7.342874596361071e-05,
+        "v4": 0.0001711792137939483,
+        "v5": 0.0001332617539446801
+      },
+      "rewrite_ms": 3796.1
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uneasy about the rumors regarding your dad's hidden debts, which is completely understandable. What is it about tracking your expenses that feels most overwhelming to you? Perhaps starting with just one area, like your fixed expenses, could help ease some of that discomfort.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings and made assumptions about their situation without clarifying their specific concerns. I fixed it by acknowledging the seeker's uncertainty regarding their father's hidden debts, asking a single clarifying question, and then offering gentle next steps without assuming any details.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9994670748710632,
+      "recheck_probabilities": {
+        "normal": 0.00014351410209201276,
+        "v1": 0.9994670748710632,
+        "v2": 4.5216078433441e-05,
+        "v3": 5.267021697363816e-05,
+        "v4": 0.00016456925368402153,
+        "v5": 0.00012695840268861502
+      },
+      "rewrite_ms": 3412.5
+    }
+  ],
   "final_result": {
-    "label": "normal",
-    "response": "It's understandable to feel unsettled with uncertainty like that. It might help to talk to someone who can provide clarity, like a family member who might know more about your dad's situation. Would you feel comfortable reaching out to someone for more information, or would you prefer to take some time to process this first?",
-    "total_retries": 0,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

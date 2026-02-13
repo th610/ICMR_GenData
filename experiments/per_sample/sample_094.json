@@ -5,47 +5,81 @@
   "situation": "AFTER BRAEKING UP WITH THE PARTNER I HAD LOT OF STRESS AND DEPRESSION IN MY LIFE .I WAS FACING REALL",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9200246334075928,
+    "confidence": 0.9958879351615906,
     "all_probabilities": {
-      "normal": 0.07680976390838623,
-      "v1": 0.9200246334075928,
-      "v2": 0.0017743537900969386,
-      "v3": 0.0005814650794491172,
-      "v4": 0.0005593986134044826,
-      "v5": 0.0002503682626411319
+      "normal": 0.0017075085779652,
+      "v1": 0.9958879351615906,
+      "v2": 0.00015635362069588155,
+      "v3": 0.0002318535844096914,
+      "v4": 0.00016288655751850456,
+      "v5": 0.001853451132774353
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 3.2,
-    "generation_ms": 875.6,
-    "detection_ms": 28.5,
-    "rewrite_total_ms": 1526.6,
-    "total_ms": 2434.0
+    "context_build_ms": 1.4,
+    "generation_ms": 2467.1,
+    "detection_ms": 24.1,
+    "rewrite_total_ms": 9484.8,
+    "total_ms": 11977.6
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to do about this situation? It could be helpful to explore your feelings further or consider how you can approach the situation with your partner.",
-      "reasoning": "The original response made a hasty conclusion without addressing the seeker's uncertainty about the overheard conversation. I revised the response to acknowledge the new information, posed a single clarifying question, and offered gentle next steps without making assumptions.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.6759412288665771,
+      "rewritten_text": "It sounds really painful to be stuck in that uncertainty and replay those thoughts. What do you think might help you understand those feelings better? We could talk about what specifically is causing you the most distress, or explore some ways to find comfort during this tough time.",
+      "reasoning": "The original supporter response jumped to conclusions about the seeker's emotional state without fully exploring their feelings surrounding the uncertainty they mentioned. I added a sentence acknowledging the seeker's feelings about the uncertainty, posed a clarifying question, and provided gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9943470358848572,
       "recheck_probabilities": {
-        "normal": 0.6759412288665771,
-        "v1": 0.3203418552875519,
-        "v2": 0.00154073943849653,
-        "v3": 0.000886234047356993,
-        "v4": 0.0008589744102209806,
-        "v5": 0.0004308970528654754
+        "normal": 0.0031110690906643867,
+        "v1": 0.9943470358848572,
+        "v2": 0.00016634527128189802,
+        "v3": 0.0002496712259016931,
+        "v4": 0.00016669431352056563,
+        "v5": 0.0019590994343161583
       },
-      "rewrite_ms": 1526.6
+      "rewrite_ms": 4193.2
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds really painful to be stuck in that uncertainty about what your partner meant. What feelings come up for you when you replay that moment? We could explore those feelings together or discuss ways to find some comfort during this tough time.",
+      "reasoning": "The original response jumped to a conclusion about the seeker's feelings without directly acknowledging their uncertainty about their partner's words. I corrected it by acknowledging their pain and uncertainty, asking a clarifying question, and suggesting gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9953161478042603,
+      "recheck_probabilities": {
+        "normal": 0.0024524873588234186,
+        "v1": 0.9953161478042603,
+        "v2": 0.0001446979440515861,
+        "v3": 0.00023368110123556107,
+        "v4": 0.00015098467702046037,
+        "v5": 0.0017020083032548428
+      },
+      "rewrite_ms": 3098.2
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds really painful to be stuck in that uncertainty about what your partner meant. How do you feel when you think about that moment? We could talk about those feelings together or explore ways to help you find some comfort during this tough time.",
+      "reasoning": "The original response jumped to conclusions about the seeker's feelings without fully acknowledging their uncertainty and did not ask a clear clarifying question. I fixed it by recognizing the seeker's uncertainty, asking a single clarifying question, and offering gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9960770010948181,
+      "recheck_probabilities": {
+        "normal": 0.00143750652205199,
+        "v1": 0.9960770010948181,
+        "v2": 0.00014797801850363612,
+        "v3": 0.0001914393506012857,
+        "v4": 0.00015971243556123227,
+        "v5": 0.001986465184018016
+      },
+      "rewrite_ms": 2193.5
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to do about this situation? It could be helpful to explore your feelings further or consider how you can approach the situation with your partner.",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -5,28 +5,28 @@
   "situation": "Catching up with academic deadlines",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.99970942735672,
+    "confidence": 0.9996781349182129,
     "all_probabilities": {
-      "normal": 0.99970942735672,
-      "v1": 6.980627222219482e-05,
-      "v2": 3.9417493098881096e-05,
-      "v3": 8.195153350243345e-05,
-      "v4": 4.2519666749285534e-05,
-      "v5": 5.6772718380670995e-05
+      "normal": 0.9996781349182129,
+      "v1": 5.296364179230295e-05,
+      "v2": 4.437982352101244e-05,
+      "v3": 8.43260349938646e-05,
+      "v4": 4.6350338379852474e-05,
+      "v5": 9.387156751472503e-05
     },
     "severity": 0
   },
   "timing": {
     "context_build_ms": 4.4,
-    "generation_ms": 1248.9,
-    "detection_ms": 27.4,
+    "generation_ms": 2182.1,
+    "detection_ms": 25.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1280.7
+    "total_ms": 2212.0
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's really good to hear that you've set aside specific times for studying. Focusing can be tough, especially with everything going on. Have you thought about trying short study sessions followed by breaks, like the Pomodoro technique? It might help with maintaining your concentration.",
+    "response": "It's understandable that worry and distractions can make it hard to focus. It might help to set small, manageable goals for each study session. Would you like to try breaking your tasks into shorter time blocks, or perhaps finding a quiet space to work without interruptions?",
     "total_retries": 0,
     "used_failsafe": false
   }

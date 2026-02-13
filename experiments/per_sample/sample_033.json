@@ -5,28 +5,28 @@
   "situation": "covid depression",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996898174285889,
+    "confidence": 0.9995498061180115,
     "all_probabilities": {
-      "normal": 0.9996898174285889,
-      "v1": 8.491087646689266e-05,
-      "v2": 4.7436307795578614e-05,
-      "v3": 8.422438986599445e-05,
-      "v4": 3.755105353775434e-05,
-      "v5": 5.604532634606585e-05
+      "normal": 0.9995498061180115,
+      "v1": 8.236637950176373e-05,
+      "v2": 5.459511521621607e-05,
+      "v3": 5.7137429394060746e-05,
+      "v4": 4.204709330224432e-05,
+      "v5": 0.00021398345415946096
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.5,
-    "generation_ms": 765.9,
-    "detection_ms": 26.8,
+    "context_build_ms": 3.6,
+    "generation_ms": 1557.4,
+    "detection_ms": 29.0,
     "rewrite_total_ms": 0.0,
-    "total_ms": 796.3
+    "total_ms": 1590.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's great that you've found some online games to enjoy together. Perhaps you could also try some indoor activities that mimic being outside, like a scavenger hunt around the house or even some fun cooking projects? What do you think he would enjoy the most?",
+    "response": "It's great that you've found some connection through online games. Maybe you could also try some simple activities like watching a show together or doing a virtual tour of a museum? What do you think would spark some joy for both of you during this time?",
     "total_retries": 0,
     "used_failsafe": false
   }

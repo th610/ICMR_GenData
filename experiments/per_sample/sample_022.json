@@ -5,28 +5,28 @@
   "situation": "My wife of 6 years decided one day last week she wanted to end things.  This comes after finding out",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9996821880340576,
+    "confidence": 0.9996092915534973,
     "all_probabilities": {
-      "normal": 0.9996821880340576,
-      "v1": 5.8894343965221196e-05,
-      "v2": 5.561097714235075e-05,
-      "v3": 7.744794856989756e-05,
-      "v4": 3.431586446822621e-05,
-      "v5": 9.150338883046061e-05
+      "normal": 0.9996092915534973,
+      "v1": 8.156619151122868e-05,
+      "v2": 3.0945691833039746e-05,
+      "v3": 6.142037454992533e-05,
+      "v4": 3.887434650096111e-05,
+      "v5": 0.00017796794418245554
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 4.0,
-    "generation_ms": 1004.9,
-    "detection_ms": 11.4,
+    "context_build_ms": 4.1,
+    "generation_ms": 1988.9,
+    "detection_ms": 27.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1020.4
+    "total_ms": 2020.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's understandable to feel that way, especially in such a tough situation. It might help to reflect on what you think she needs most from you right now. Would you like to share some specific ways you’ve been supporting her? Or perhaps think about one small thing you could do to feel more connected with her during this time?",
+    "response": "That makes sense. It can be hard to know what someone else wants, especially in such a tough situation. Have you thought about asking her directly what her feelings are regarding the future and family? It could help to get her perspective and bring you both a bit closer together during this time.",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,47 +5,81 @@
   "situation": "My husband and I are having a hard time communicating.",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.9238694310188293,
+    "confidence": 0.9992091059684753,
     "all_probabilities": {
-      "normal": 0.07417713850736618,
-      "v1": 0.9238694310188293,
-      "v2": 0.000777381588704884,
-      "v3": 0.0005887266015633941,
-      "v4": 0.0004028998373541981,
-      "v5": 0.0001843276113504544
+      "normal": 0.0004001097404398024,
+      "v1": 0.9992091059684753,
+      "v2": 5.583532038144767e-05,
+      "v3": 9.599864279152825e-05,
+      "v4": 7.621056283824146e-05,
+      "v5": 0.0001627638703212142
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 4.1,
-    "generation_ms": 796.5,
-    "detection_ms": 25.8,
-    "rewrite_total_ms": 1550.9,
-    "total_ms": 2377.4
+    "context_build_ms": 5.2,
+    "generation_ms": 1622.3,
+    "detection_ms": 27.8,
+    "rewrite_total_ms": 6972.6,
+    "total_ms": 8628.1
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about your husband's financial discussions, which can definitely impact trust in a relationship. Could you share what specific expenses you overheard that concerned you? It might be helpful to consider how you could approach the topic together when you feel ready.",
-      "reasoning": "The original response made a hasty conclusion by assuming the seeker was ready to confront their husband without fully exploring their feelings or concerns. I addressed the seeker's new information about financial uncertainty and included a clarifying question to better understand their situation, along with gentle next steps without assuming any facts.",
-      "recheck_label": "normal",
-      "recheck_confidence": 0.6803273558616638,
+      "rewritten_text": "It sounds like you're feeling uncertain about the expenses you heard mentioned. What do you think would be the best way to approach the topic with him? Perhaps writing down your thoughts could help clarify things before you talk.",
+      "reasoning": "The original response made an assumption about the seeker's feelings and provided advice without fully clarifying the seeker's uncertainty regarding the expenses. I acknowledged the new information, asked a clarifying question, and offered gentle next steps without making assumptions.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9994673132896423,
       "recheck_probabilities": {
-        "normal": 0.6803273558616638,
-        "v1": 0.3165719211101532,
-        "v2": 0.0012174313887953758,
-        "v3": 0.0010028413962572813,
-        "v4": 0.0006024414906278253,
-        "v5": 0.00027801288524642587
+        "normal": 0.00022770915529690683,
+        "v1": 0.9994673132896423,
+        "v2": 5.240678001428023e-05,
+        "v3": 6.81827004882507e-05,
+        "v4": 6.32703086012043e-05,
+        "v5": 0.00012116769357817248
       },
-      "rewrite_ms": 1550.9
+      "rewrite_ms": 2261.8
+    },
+    {
+      "retry": 2,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the expenses you heard mentioned. How do you feel about bringing this topic up with him? You might find it helpful to jot down your thoughts or feelings beforehand.",
+      "reasoning": "The original response made a hasty conclusion by assuming the user's feelings and situation without asking for clarification. I fixed it by acknowledging the user's uncertainty about the expenses and asking a clarifying question about how they might want to discuss it with their husband, while also suggesting gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9993670582771301,
+      "recheck_probabilities": {
+        "normal": 0.0003022997407242656,
+        "v1": 0.9993670582771301,
+        "v2": 4.9621568905422464e-05,
+        "v3": 7.412766717607155e-05,
+        "v4": 6.994166324147955e-05,
+        "v5": 0.00013702154683414847
+      },
+      "rewrite_ms": 2410.4
+    },
+    {
+      "retry": 3,
+      "violation": "v1",
+      "rewritten_text": "It sounds like you're feeling uncertain about the expenses you heard mentioned. How comfortable do you feel discussing this with your husband? It might be helpful to express your feelings when you talk, and writing down your thoughts could provide clarity.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying the situation regarding the expenses mentioned. I revised it to acknowledge the seeker's uncertainty and ask a single clarifying question, followed by gentle next steps.",
+      "recheck_label": "v1",
+      "recheck_confidence": 0.9995044469833374,
+      "recheck_probabilities": {
+        "normal": 0.00021187413949519396,
+        "v1": 0.9995044469833374,
+        "v2": 5.035236245021224e-05,
+        "v3": 6.827783363405615e-05,
+        "v4": 6.377724639605731e-05,
+        "v5": 0.00010123920219484717
+      },
+      "rewrite_ms": 2300.4
     }
   ],
   "final_result": {
-    "label": "normal",
-    "response": "It sounds like you're feeling uncertain about your husband's financial discussions, which can definitely impact trust in a relationship. Could you share what specific expenses you overheard that concerned you? It might be helpful to consider how you could approach the topic together when you feel ready.",
-    "total_retries": 1,
-    "used_failsafe": false
+    "label": "failsafe",
+    "response": "제가 상황을 제대로 이해했는지 확인하고 싶습니다. 조금 더 자세히 설명해주실 수 있나요?",
+    "total_retries": 3,
+    "used_failsafe": true
   }
 }

@@ -5,75 +5,75 @@
   "situation": "i caught my boyfriend cheating with a friend",
   "initial_detection": {
     "predicted_label": "v1",
-    "confidence": 0.867511510848999,
+    "confidence": 0.9995940327644348,
     "all_probabilities": {
-      "normal": 0.1304684430360794,
-      "v1": 0.867511510848999,
-      "v2": 0.0004411199188325554,
-      "v3": 0.0009775442304089665,
-      "v4": 0.0003938261652365327,
-      "v5": 0.00020750862313434482
+      "normal": 0.00013448760728351772,
+      "v1": 0.9995940327644348,
+      "v2": 5.8242774684913456e-05,
+      "v3": 7.358862785622478e-05,
+      "v4": 5.6442004279233515e-05,
+      "v5": 8.31288707558997e-05
     },
     "severity": 1
   },
   "timing": {
-    "context_build_ms": 5.3,
-    "generation_ms": 1045.2,
-    "detection_ms": 28.1,
-    "rewrite_total_ms": 4951.2,
-    "total_ms": 6029.9
+    "context_build_ms": 3.6,
+    "generation_ms": 1694.8,
+    "detection_ms": 21.2,
+    "rewrite_total_ms": 10533.6,
+    "total_ms": 12253.3
   },
   "rewrite_iterations": [
     {
       "retry": 1,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. How do you feel about discussing what you heard with him? It might also be helpful to take some time to reflect on your feelings before deciding how to proceed.",
-      "reasoning": "The original response made a hasty conclusion without adequately acknowledging the seeker's new key information about overhearing her boyfriend, and it included multiple questions and directives that could create confusion. I fixed it by acknowledging the seeker's uncertainty, asking a single clarifying question, and suggesting gentle next steps without assuming any missing facts.",
+      "rewritten_text": "It sounds like overhearing that conversation has left you feeling unsettled and unsure. What do you think is making it hardest for you to process those thoughts? It might be helpful to explore your feelings more deeply or consider writing down what you're experiencing.",
+      "reasoning": "The original response made a hasty conclusion without fully acknowledging the seeker's uncertainty about the overheard conversation. I revised it to acknowledge the new information and included a single clarifying question while providing gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9912103414535522,
+      "recheck_confidence": 0.9996538162231445,
       "recheck_probabilities": {
-        "normal": 0.007989809848368168,
-        "v1": 0.9912103414535522,
-        "v2": 0.00012681991211138666,
-        "v3": 0.00035100270179100335,
-        "v4": 0.00022228930902201682,
-        "v5": 9.97154857032001e-05
+        "normal": 9.220350329997018e-05,
+        "v1": 0.9996538162231445,
+        "v2": 5.7970504713011906e-05,
+        "v3": 6.0481386753963307e-05,
+        "v4": 5.797652920591645e-05,
+        "v5": 7.748068310320377e-05
       },
-      "rewrite_ms": 1438.1
+      "rewrite_ms": 3141.5
     },
     {
       "retry": 2,
       "violation": "v1",
-      "rewritten_text": "It sounds like you’re feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to say to him if you decide to bring it up? Taking some time to reflect on your feelings might also help you find clarity.",
-      "reasoning": "The original response included a hasty conclusion about the seeker's feelings without fully acknowledging the new information about overhearing their boyfriend and did not include a single clarifying question. I fixed it by acknowledging their uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like overhearing that conversation has left you feeling unsettled and uncertain. What specific thoughts are you finding the most difficult to process? It might be helpful to talk about your feelings or consider journaling to express what you're experiencing.",
+      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying the context of their thoughts. I revised it to acknowledge the seeker's uncertainty and to ask a single clarifying question while providing gentle next steps.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.9530505537986755,
+      "recheck_confidence": 0.9996732473373413,
       "recheck_probabilities": {
-        "normal": 0.045604169368743896,
-        "v1": 0.9530505537986755,
-        "v2": 0.00021223824296612293,
-        "v3": 0.000593479722738266,
-        "v4": 0.00035707454662770033,
-        "v5": 0.0001824497594498098
+        "normal": 7.541460945503786e-05,
+        "v1": 0.9996732473373413,
+        "v2": 6.659544305875897e-05,
+        "v3": 6.132065027486533e-05,
+        "v4": 6.130199471954256e-05,
+        "v5": 6.207223486853763e-05
       },
-      "rewrite_ms": 2018.9
+      "rewrite_ms": 3471.7
     },
     {
       "retry": 3,
       "violation": "v1",
-      "rewritten_text": "It sounds like you're feeling uncertain about what you overheard, which is completely understandable. What do you think you might want to ask him if you decide to talk about it? It might also be helpful to take some time to process your thoughts and feelings before bringing it up.",
-      "reasoning": "The original response made a hasty conclusion about the seeker's feelings without fully clarifying their situation. I fixed it by first acknowledging the seeker's uncertainty and then asking a single clarifying question while offering gentle next steps without making assumptions.",
+      "rewritten_text": "It sounds like overhearing that conversation has left you feeling unsettled and uncertain. What specific aspects of that conversation are you finding most troubling? It might be helpful to talk about your feelings with someone you trust, or you could consider journaling to express what you're experiencing.",
+      "reasoning": "The original response had a hasty conclusion about the seeker's feelings without fully exploring the context of their situation. I fixed it by acknowledging the seeker's uncertainty, asking a clarifying question, and providing gentle next steps without making assumptions.",
       "recheck_label": "v1",
-      "recheck_confidence": 0.974789559841156,
+      "recheck_confidence": 0.9996713399887085,
       "recheck_probabilities": {
-        "normal": 0.024140851572155952,
-        "v1": 0.974789559841156,
-        "v2": 0.0001525659899925813,
-        "v3": 0.0004914544988423586,
-        "v4": 0.0002946774766314775,
-        "v5": 0.00013094890164211392
+        "normal": 8.20039858808741e-05,
+        "v1": 0.9996713399887085,
+        "v2": 6.537754234159365e-05,
+        "v3": 6.020248110871762e-05,
+        "v4": 5.668102312483825e-05,
+        "v5": 6.443943129852414e-05
       },
-      "rewrite_ms": 1494.2
+      "rewrite_ms": 3920.3
     }
   ],
   "final_result": {

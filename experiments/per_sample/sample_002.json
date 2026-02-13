@@ -5,28 +5,28 @@
   "situation": "I have no job",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.99969482421875,
+    "confidence": 0.9991955161094666,
     "all_probabilities": {
-      "normal": 0.99969482421875,
-      "v1": 8.90827359398827e-05,
-      "v2": 4.156844806857407e-05,
-      "v3": 9.719581430545077e-05,
-      "v4": 3.8114041672088206e-05,
-      "v5": 3.916342757293023e-05
+      "normal": 0.9991955161094666,
+      "v1": 0.00012753739429172128,
+      "v2": 5.888066880288534e-05,
+      "v3": 0.0002067344612441957,
+      "v4": 0.00010506568651180714,
+      "v5": 0.0003063030308112502
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 1.9,
-    "generation_ms": 981.6,
-    "detection_ms": 13.9,
+    "context_build_ms": 1.8,
+    "generation_ms": 2196.0,
+    "detection_ms": 26.2,
     "rewrite_total_ms": 0.0,
-    "total_ms": 997.4
+    "total_ms": 2224.1
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It could be a helpful step! You might start by listing your essential expenses, like food and utilities, and then see if there are any areas where you can cut back. Would you like some tips on how to create a simple budget?",
+    "response": "It sounds really tough to juggle both of those needs. Have you thought about reaching out to local charities or food banks specifically for assistance with food? They might also have resources for rental assistance.",
     "total_retries": 0,
     "used_failsafe": false
   }

@@ -5,28 +5,28 @@
   "situation": "My boyfriend got involved with someone else and it looks like he prefers that person over me.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9993378520011902,
+    "confidence": 0.7889004945755005,
     "all_probabilities": {
-      "normal": 0.9993378520011902,
-      "v1": 7.121105591068044e-05,
-      "v2": 6.351377669489011e-05,
-      "v3": 0.00010934498277492821,
-      "v4": 0.00021646941604558378,
-      "v5": 0.00020162761211395264
+      "normal": 0.7889004945755005,
+      "v1": 0.0008039374370127916,
+      "v2": 0.000527229334693402,
+      "v3": 0.0009956760331988335,
+      "v4": 0.003983642905950546,
+      "v5": 0.20478905737400055
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 1.2,
-    "generation_ms": 1078.2,
-    "detection_ms": 10.5,
+    "context_build_ms": 3.3,
+    "generation_ms": 1423.0,
+    "detection_ms": 27.3,
     "rewrite_total_ms": 0.0,
-    "total_ms": 1089.9
+    "total_ms": 1453.7
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's really tough to feel that way, but it’s important to remember that his choices don’t define your worth. Sometimes people make decisions based on their own issues rather than seeing the value in those around them. How are you taking care of yourself during this time? Maybe we can explore some ways to help you feel a bit better.",
+    "response": "It's really tough to feel that way, especially after investing so much in a relationship. It's important to remember that your worth isn't defined by someone else's choices. What do you think could help you feel better about yourself right now? Maybe talking to someone you trust or engaging in an activity you enjoy could be a good start.",
     "total_retries": 0,
     "used_failsafe": false
   }

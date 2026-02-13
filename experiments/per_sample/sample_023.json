@@ -5,28 +5,28 @@
   "situation": "Ive been trying to get with some of friends to hang out maybe just for a couple hours just to catch ",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997137188911438,
+    "confidence": 0.9986370205879211,
     "all_probabilities": {
-      "normal": 0.9997137188911438,
-      "v1": 6.511889660032466e-05,
-      "v2": 4.041169449919835e-05,
-      "v3": 9.44739585975185e-05,
-      "v4": 3.653041130746715e-05,
-      "v5": 4.966022970620543e-05
+      "normal": 0.9986370205879211,
+      "v1": 9.382470307173207e-05,
+      "v2": 6.417092663468793e-05,
+      "v3": 0.0009739600354805589,
+      "v4": 7.007097156019881e-05,
+      "v5": 0.00016093476733658463
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 1.4,
-    "generation_ms": 833.8,
-    "detection_ms": 22.5,
+    "context_build_ms": 3.7,
+    "generation_ms": 1493.0,
+    "detection_ms": 31.6,
     "rewrite_total_ms": 0.0,
-    "total_ms": 857.8
+    "total_ms": 1528.4
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's completely normal to have those concerns. You could approach it casually, maybe by asking if they’d like to grab lunch sometime soon. How do you feel about that approach? Or would you prefer to send a text just to check in first?",
+    "response": "It's completely normal to feel that way. Maybe you could frame the message in a light-hearted manner, like suggesting a casual catch-up? Or you could ask if they want to share a meal sometime soon. How does that sound to you?",
     "total_retries": 0,
     "used_failsafe": false
   }

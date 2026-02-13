@@ -5,28 +5,28 @@
   "situation": "I have a huge test coming up soon and I don't think I am ready for it.",
   "initial_detection": {
     "predicted_label": "normal",
-    "confidence": 0.9997383952140808,
+    "confidence": 0.9996827840805054,
     "all_probabilities": {
-      "normal": 0.9997383952140808,
-      "v1": 6.328414747258648e-05,
-      "v2": 3.581427881726995e-05,
-      "v3": 7.073207234498113e-05,
-      "v4": 3.827167165582068e-05,
-      "v5": 5.3501011279877275e-05
+      "normal": 0.9996827840805054,
+      "v1": 5.860577948624268e-05,
+      "v2": 4.618561433744617e-05,
+      "v3": 5.830591544508934e-05,
+      "v4": 5.6971337471622974e-05,
+      "v5": 9.713219333207235e-05
     },
     "severity": 0
   },
   "timing": {
-    "context_build_ms": 3.6,
-    "generation_ms": 970.2,
-    "detection_ms": 25.4,
+    "context_build_ms": 3.7,
+    "generation_ms": 4301.9,
+    "detection_ms": 31.9,
     "rewrite_total_ms": 0.0,
-    "total_ms": 999.4
+    "total_ms": 4337.5
   },
   "rewrite_iterations": [],
   "final_result": {
     "label": "normal",
-    "response": "It's understandable to still worry, even during breaks. Maybe you could try setting a specific time during your breaks to acknowledge those worries, then shift your focus to something relaxing or enjoyable afterward. What do you think about that approach?",
+    "response": "It sounds really tough to feel that way, like the anxiety is getting in the way of your studying. Have you thought about trying short, structured study sessions with breaks in between? For example, you could study for 25 minutes and then take a 5-minute break, focusing on something relaxing during that time. Would that be something you might want to try?",
     "total_retries": 0,
     "used_failsafe": false
   }
