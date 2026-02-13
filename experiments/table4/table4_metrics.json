@@ -4,9 +4,9 @@
   "detection_rate": 0.9636363636363636,
   "exact_match": 207,
   "exact_match_rate": 0.9409090909090909,
-  "corrected": 44,
-  "correction_rate": 0.20754716981132076,
-  "failsafed": 168,
+  "corrected": 46,
+  "correction_rate": 0.2169811320754717,
+  "failsafed": 166,
   "resolved": 212,
   "resolved_rate": 1.0,
   "still_violated": 0,
@@ -14,12 +14,12 @@
   "missed": 8,
   "total_safe_rate": 0.9636363636363636,
   "retry_stats": {
-    "avg": 2.660377358490566,
+    "avg": 2.650943396226415,
     "max": 3,
     "distribution": {
-      "3": 171,
-      "2": 10,
-      "1": 31
+      "3": 170,
+      "1": 32,
+      "2": 10
     }
   },
   "per_violation": {
@@ -39,13 +39,13 @@
       "total": 60,
       "detected": 58,
       "exact_match": 56,
-      "corrected": 31,
-      "failsafed": 27,
+      "corrected": 34,
+      "failsafed": 24,
       "resolved": 58,
       "detection_rate": 0.9666666666666667,
       "exact_match_rate": 0.9333333333333333,
       "resolved_rate": 1.0,
-      "avg_retries": 2.086206896551724
+      "avg_retries": 2.0517241379310347
     },
     "v3": {
       "total": 50,
@@ -57,7 +57,7 @@
       "detection_rate": 0.98,
       "exact_match_rate": 0.96,
       "resolved_rate": 1.0,
-      "avg_retries": 2.938775510204082
+      "avg_retries": 2.9591836734693877
     },
     "v4": {
       "total": 30,
@@ -75,13 +75,13 @@
       "total": 30,
       "detected": 29,
       "exact_match": 28,
-      "corrected": 9,
-      "failsafed": 20,
+      "corrected": 8,
+      "failsafed": 21,
       "resolved": 29,
       "detection_rate": 0.9666666666666667,
       "exact_match_rate": 0.9333333333333333,
       "resolved_rate": 1.0,
-      "avg_retries": 2.5517241379310347
+      "avg_retries": 2.5172413793103448
     }
   }
 }
