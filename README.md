@@ -1,4 +1,4 @@
-# VACCINE: Violation-Aware Classifier for Counseling INtervention and Evaluation
+# VACCINE: Violation-Aware Containment and Control for Interactional Norm Enforcement
 
 LLM 기반 상담 시스템에서 발생하는 5가지 안전 위반(V1–V5)을 실시간 탐지 · 교정하는 경량 파이프라인
 
