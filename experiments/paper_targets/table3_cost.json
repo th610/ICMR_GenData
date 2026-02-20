@@ -1,0 +1,39 @@
+{
+  "input": {
+    "n_total": 300,
+    "n_normal": 80,
+    "n_violation": 220,
+    "pv": 0.7333,
+    "vaccine": {
+      "fnr": 0.031818181818181815,
+      "fpr": 0.125,
+      "fn_count": 7,
+      "fp_count": 10,
+      "tp_count": 213,
+      "cg": 1493.2,
+      "cd": 29.1,
+      "cr": 6496.3,
+      "avg_rw_attempts": 1.353
+    },
+    "judge": {
+      "fnr": 0.08181818181818182,
+      "fpr": 0.075,
+      "fn_count": 18,
+      "fp_count": 6,
+      "tp_count": 202,
+      "cg": 1493.2,
+      "cj": 878.8,
+      "cr": 0.0,
+      "avg_rw_attempts": 0.0
+    }
+  },
+  "derived": {
+    "v_flagged": 0.7433333333333333,
+    "j_flagged": 0.6933333333333334,
+    "v_cr_eff": 8789.4939,
+    "j_cr_eff": 0.0,
+    "v_ecost": 8055.823799,
+    "j_ecost": 2372.0,
+    "p_breakeven": 0.09667223274368504
+  }
+}

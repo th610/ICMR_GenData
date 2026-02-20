@@ -1,0 +1,67 @@
+================================================================================
+  ABLATION STUDY: Component Contribution Analysis
+================================================================================
+
+  Source: Table 4 Gold Injection data (N=220 violation samples)
+  Method: Simulation on existing table4_log.jsonl
+
+────────────────────────────────────────────────────────────────────────────────
+  [A] Safety Metrics
+────────────────────────────────────────────────────────────────────────────────
+  Metric                            Full System    w/o Rewrite   w/o Failsafe
+  ────────────────────────────── ────────────── ────────────── ──────────────
+  Detected                                  212            212            212
+  Missed (not detected)                       8              8              8
+  Corrected (→Normal)                        46              0             46
+  Failsafed                                 166            212              0
+  Still Violated (leaked)                     0              0            166
+
+  Detection Rate................         96.4%         96.4%         96.4%
+  Resolved Rate (of detected)...        100.0%        100.0%         21.7%
+  Leakage Rate (of detected)....          0.0%          0.0%         78.3%
+
+────────────────────────────────────────────────────────────────────────────────
+  [B] Response Quality
+────────────────────────────────────────────────────────────────────────────────
+  Metric                            Full System    w/o Rewrite   w/o Failsafe
+  ────────────────────────────── ────────────── ────────────── ──────────────
+  Natural Responses.............             46              0             46
+  Template Responses............            166            212              0
+  Natural Rate (of resolved)....         21.7%          0.0%         21.7%
+
+────────────────────────────────────────────────────────────────────────────────
+  [C] Efficiency
+────────────────────────────────────────────────────────────────────────────────
+  Metric                            Full System    w/o Rewrite   w/o Failsafe
+  ────────────────────────────── ────────────── ────────────── ──────────────
+  Avg Latency (ms)..............        7154.0          30.5        7154.0
+
+────────────────────────────────────────────────────────────────────────────────
+  [D] Analysis
+────────────────────────────────────────────────────────────────────────────────
+
+  (a) w/o Rewrite Loop:
+      - Resolved Rate: 100.0% (same as Full: 100.0%)
+        All detected violations go directly to failsafe
+      - Leakage: 0.0% (same as Full: 0.0%)
+      - Quality: 0% natural responses (all template-based)
+        Δ Natural = -46 responses (46 corrections lost)
+      - Latency: 31ms vs 7154ms
+        Speedup: 234.5x faster
+      → Rewrite loop contributes RESPONSE QUALITY, not safety.
+        46 natural corrections would be lost (all become template).
+
+  (b) w/o Failsafe:
+      - Resolved Rate: 21.7% (vs Full: 100.0%)
+      - Leakage: 78.3% (166 of 212 detected violations leak)
+      - Quality: Only 46 natural responses remain
+      - Latency: Same as Full System (7154ms)
+      → Failsafe is CRITICAL for safety guarantee.
+        Without it, 166 detected violations still leak through.
+
+  KEY FINDINGS:
+    1. Rewrite Loop: Quality component (+46 natural corrections)
+    2. Failsafe: Safety component (prevents 166 leaks among detected)
+    3. Both are necessary: Rewrite for quality, Failsafe for safety guarantee
+
+================================================================================

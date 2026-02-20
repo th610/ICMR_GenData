@@ -27,7 +27,6 @@ Thumbs.db
 .env
 
 # Outputs (generated during training)
-# models/outputs/  # Now tracked with Git LFS
 logs/
 
 # Large checkpoint files
@@ -36,5 +35,12 @@ logs/
 *.safetensors
 *.tar.gz
 
+# Backup files
+*.bak
+*.bak_*
+
 # Archive (old cleanup files)
 .archive/
+
+# Model outputs (download separately)
+models/outputs/

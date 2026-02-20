@@ -1,0 +1,26 @@
+==============================================================
+  Table 5. Natural Violation Rate on ESConv (Session-level)
+  (Random audit: N=1,000 sessions)
+==============================================================
+  Metric                                                Value
+  -------------------------------------------------- --------
+  # evaluated sessions (N)                              1,000
+  # sessions with ≥1 violation (any V1–V5)                113
+  Overall violation rate p_v^S                         11.3%
+
+  --- Type-wise prevalence (session-level) ---
+  Type       # sessions       Rate
+  ---------- ---------- ----------
+  V1                 32      3.2%
+  V2                 18      1.8%
+  V3                 48      4.8%
+  V4                 10      1.0%
+  V5                  5      0.5%
+  ---------- ---------- ----------
+  Sum               113     11.3%
+==============================================================
+
+  Note: Type-wise counts reflect the primary violation type per session.
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table5_natural_rate.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table5_natural_rate.json

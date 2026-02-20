@@ -1,0 +1,53 @@
+{
+  "full_system": {
+    "name": "Full System",
+    "total": 220,
+    "detected": 212,
+    "detection_rate": 0.9636363636363636,
+    "missed": 8,
+    "corrected": 46,
+    "failsafed": 166,
+    "resolved": 212,
+    "resolved_rate": 1.0,
+    "still_violated": 0,
+    "leakage_rate": 0.0,
+    "natural_responses": 46,
+    "template_responses": 166,
+    "natural_rate": 0.2169811320754717,
+    "avg_latency_ms": 7154.0313636363635
+  },
+  "wo_rewrite": {
+    "name": "w/o Rewrite",
+    "total": 220,
+    "detected": 212,
+    "detection_rate": 0.9636363636363636,
+    "missed": 8,
+    "corrected": 0,
+    "failsafed": 212,
+    "resolved": 212,
+    "resolved_rate": 1.0,
+    "still_violated": 0,
+    "leakage_rate": 0.0,
+    "natural_responses": 0,
+    "template_responses": 212,
+    "natural_rate": 0.0,
+    "avg_latency_ms": 30.513181818181817
+  },
+  "wo_failsafe": {
+    "name": "w/o Failsafe",
+    "total": 220,
+    "detected": 212,
+    "detection_rate": 0.9636363636363636,
+    "missed": 8,
+    "corrected": 46,
+    "failsafed": 0,
+    "resolved": 46,
+    "resolved_rate": 0.2169811320754717,
+    "still_violated": 166,
+    "leakage_rate": 0.7830188679245284,
+    "natural_responses": 46,
+    "template_responses": 0,
+    "natural_rate": 0.2169811320754717,
+    "avg_latency_ms": 7154.0313636363635
+  }
+}

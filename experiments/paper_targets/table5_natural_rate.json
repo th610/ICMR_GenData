@@ -1,0 +1,23 @@
+{
+  "input": {
+    "n_sessions": 1000,
+    "type_counts": {
+      "V1": 32,
+      "V2": 18,
+      "V3": 48,
+      "V4": 10,
+      "V5": 5
+    }
+  },
+  "derived": {
+    "n_violation_sessions": 113,
+    "overall_rate": 0.113,
+    "type_rates": {
+      "V1": 0.032,
+      "V2": 0.018,
+      "V3": 0.048,
+      "V4": 0.01,
+      "V5": 0.005
+    }
+  }
+}

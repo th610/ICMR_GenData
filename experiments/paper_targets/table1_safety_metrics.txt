@@ -1,0 +1,23 @@
+=================================================================
+  Table 1. Structural Safety Guarantee (Gold Injection, n=220)
+=================================================================
+  Metric                                                  Value
+  ----------------------------------- -------------------------
+  Detected                            213/220 (96.8%)
+  Missed (FN)                         7/220 (3.2%)
+  Resolved after detection            213/213 (100.0%)
+  Post-detection leakage              0/213 (0.0%)
+  Final safe rate                     96.8%
+
+  --- Breakdown (of detected) ---
+  Corrected (rewrite → Normal)        201/213 (94.4%)
+  Failsafed (template)                12/213 (5.6%)
+
+  Type    Total   Detect  Correct Failsafe     Det%
+  ------ ------ -------- -------- -------- --------
+  V1         50       48       45        3   96.0%
+  V2         60       58       55        3   96.7%
+  V3         30       30       28        2  100.0%
+  V4         40       38       36        2   95.0%
+  V5         40       39       37        2   97.5%
+

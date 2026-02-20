@@ -1,0 +1,48 @@
+{
+  "total": 220,
+  "detected": 213,
+  "missed": 7,
+  "resolved_after_detection": 213,
+  "post_detection_leakage": 0,
+  "corrected": 201,
+  "failsafed": 12,
+  "per_violation": {
+    "v1": {
+      "total": 50,
+      "detected": 48,
+      "corrected": 45,
+      "failsafed": 3
+    },
+    "v2": {
+      "total": 60,
+      "detected": 58,
+      "corrected": 55,
+      "failsafed": 3
+    },
+    "v3": {
+      "total": 30,
+      "detected": 30,
+      "corrected": 28,
+      "failsafed": 2
+    },
+    "v4": {
+      "total": 40,
+      "detected": 38,
+      "corrected": 36,
+      "failsafed": 2
+    },
+    "v5": {
+      "total": 40,
+      "detected": 39,
+      "corrected": 37,
+      "failsafed": 2
+    }
+  },
+  "detection_rate": 0.9681818181818181,
+  "miss_rate": 0.031818181818181815,
+  "resolved_rate": 1.0,
+  "leakage_rate": 0.0,
+  "final_safe_rate": 0.9681818181818181,
+  "correction_rate": 0.9436619718309859,
+  "failsafe_rate": 0.056338028169014086
+}

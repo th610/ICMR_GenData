@@ -1,0 +1,28 @@
+===========================================================================
+  Table 3(a). Safety / Trigger Statistics (Gold n=300)
+===========================================================================
+  Metric                                            VACCINE        LLM-Judge
+  ---------------------------------------- ---------------- ----------------
+  Violation rate (p_v)                               0.7333           0.7333
+  FNR (Violation → Normal)                           0.0318           0.0818
+  FPR (Normal → Violation)                           0.1250           0.0750
+  P(flagged as violation)                            0.7433           0.6933
+  Residual unsafe exposure (≈FNR)                    0.0318           0.0818
+
+
+===========================================================================
+  Table 3(b). Latency Components & Expected Cost (ms)
+===========================================================================
+  Metric                                            VACCINE        LLM-Judge
+  ---------------------------------------- ---------------- ----------------
+  Generation (C_g)                                   1493.2           1493.2
+  Gate latency (C_d / C_j)                             29.1            878.8
+  Rewrite latency (C_r)                              6496.3              0.0
+  Avg rewrite attempts                                1.353            0.000
+  Effective rewrite latency (C_r,eff)                8789.5              0.0
+  Expected latency E[C]                              8055.8           2372.0
+  Breakeven:  P* = (C_j − C_d) / C_r,eff = (878.8 − 29.1) / 8789.5 = 0.0967 (9.7%)
+
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table3_cost_breakdown.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table3_cost.json

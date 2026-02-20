@@ -1,0 +1,198 @@
+{
+  "detector": {
+    "accuracy": 0.9333,
+    "macro_precision": 0.9413,
+    "macro_recall": 0.9403,
+    "macro_f1": 0.9402,
+    "fnr_binary": 0.0318,
+    "fpr_binary": 0.125,
+    "per_class": {
+      "Normal": {
+        "precision": 0.9091,
+        "recall": 0.875,
+        "f1": 0.8917,
+        "support": 80
+      },
+      "V1": {
+        "precision": 0.9792,
+        "recall": 0.94,
+        "f1": 0.9592,
+        "support": 50
+      },
+      "V2": {
+        "precision": 0.8788,
+        "recall": 0.9667,
+        "f1": 0.9206,
+        "support": 60
+      },
+      "V3": {
+        "precision": 0.9796,
+        "recall": 0.96,
+        "f1": 0.9697,
+        "support": 50
+      },
+      "V4": {
+        "precision": 0.9655,
+        "recall": 0.9333,
+        "f1": 0.9492,
+        "support": 30
+      },
+      "V5": {
+        "precision": 0.9355,
+        "recall": 0.9667,
+        "f1": 0.9508,
+        "support": 30
+      }
+    }
+  },
+  "judge": {
+    "accuracy": 0.8233,
+    "macro_precision": 0.8215,
+    "macro_recall": 0.8075,
+    "macro_f1": 0.8131,
+    "fnr_binary": 0.0818,
+    "fpr_binary": 0.075,
+    "per_class": {
+      "Normal": {
+        "precision": 0.8043,
+        "recall": 0.925,
+        "f1": 0.8605,
+        "support": 80
+      },
+      "V1": {
+        "precision": 0.8542,
+        "recall": 0.82,
+        "f1": 0.8367,
+        "support": 50
+      },
+      "V2": {
+        "precision": 0.8679,
+        "recall": 0.7667,
+        "f1": 0.8142,
+        "support": 60
+      },
+      "V3": {
+        "precision": 0.8163,
+        "recall": 0.8,
+        "f1": 0.8081,
+        "support": 50
+      },
+      "V4": {
+        "precision": 0.7931,
+        "recall": 0.7667,
+        "f1": 0.7797,
+        "support": 30
+      },
+      "V5": {
+        "precision": 0.7931,
+        "recall": 0.7667,
+        "f1": 0.7797,
+        "support": 30
+      }
+    }
+  },
+  "latency": {
+    "detector_ms": 15.25,
+    "judge_ms": 439.4
+  },
+  "detector_cm": [
+    [
+      70,
+      1,
+      8,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      47,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      58,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      48,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      28,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      29
+    ]
+  ],
+  "judge_cm": [
+    [
+      74,
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      41,
+      1,
+      2,
+      1,
+      1
+    ],
+    [
+      5,
+      2,
+      46,
+      3,
+      2,
+      2
+    ],
+    [
+      4,
+      2,
+      2,
+      40,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      1,
+      1,
+      23,
+      1
+    ],
+    [
+      2,
+      1,
+      1,
+      2,
+      1,
+      23
+    ]
+  ]
+}

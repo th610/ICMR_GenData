@@ -1,0 +1,213 @@
+=================================================================
+  Table 1. Structural Safety Guarantee (Gold Injection, n=220)
+=================================================================
+  Metric                                                  Value
+  ----------------------------------- -------------------------
+  Detected                            213/220 (96.8%)
+  Missed (FN)                         7/220 (3.2%)
+  Resolved after detection            213/213 (100.0%)
+  Post-detection leakage              0/213 (0.0%)
+  Final safe rate                     96.8%
+
+  --- Breakdown (of detected) ---
+  Corrected (rewrite → Normal)        201/213 (94.4%)
+  Failsafed (template)                12/213 (5.6%)
+
+  Type    Total   Detect  Correct Failsafe     Det%
+  ------ ------ -------- -------- -------- --------
+  V1         50       48       45        3   96.0%
+  V2         60       58       55        3   96.7%
+  V3         30       30       28        2  100.0%
+  V4         40       38       36        2   95.0%
+  V5         40       39       37        2   97.5%
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table1_safety_funnel.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table1_safety.json
+===========================================================================
+  Table 2. Gate Signal Comparison (n=300)
+  (Detector vs LLM-Judge as the primary gate signal)
+===========================================================================
+  Metric                                Detector (RoBERTa)       LLM-Judge
+  ----------------------------------- -------------------- ---------------
+  Accuracy                                          0.9333          0.8233
+  Macro-F1                                          0.9402          0.8131
+  Latency (ms)                                       15.25           439.4
+  FNR (Violation → Normal)                          0.0318          0.0818
+  FPR (Normal → Violation)                          0.1250          0.0750
+
+  --- Per-Class F1 ---
+  Class       Detector F1     Judge F1      Delta
+  ---------- ------------ ------------ ----------
+  Normal           0.8917       0.8605 +   0.0312
+  V1               0.9592       0.8367 +   0.1225
+  V2               0.9206       0.8142 +   0.1064
+  V3               0.9697       0.8081 +   0.1616
+  V4               0.9492       0.7797 +   0.1695
+  V5               0.9508       0.7797 +   0.1711
+
+  --- Detector (RoBERTa): Per-Class Detail ---
+  Class          Prec   Recall       F1  Support
+  ---------- -------- -------- -------- --------
+  Normal       0.9091   0.8750   0.8917       80
+  V1           0.9792   0.9400   0.9592       50
+  V2           0.8788   0.9667   0.9206       60
+  V3           0.9796   0.9600   0.9697       50
+  V4           0.9655   0.9333   0.9492       30
+  V5           0.9355   0.9667   0.9508       30
+  Macro        0.9413   0.9403   0.9402      300
+
+  --- LLM-Judge: Per-Class Detail ---
+  Class          Prec   Recall       F1  Support
+  ---------- -------- -------- -------- --------
+  Normal       0.8043   0.9250   0.8605       80
+  V1           0.8542   0.8200   0.8367       50
+  V2           0.8679   0.7667   0.8142       60
+  V3           0.8163   0.8000   0.8081       50
+  V4           0.7931   0.7667   0.7797       30
+  V5           0.7931   0.7667   0.7797       30
+  Macro        0.8215   0.8075   0.8131      300
+
+  --- Detector (RoBERTa): Confusion Matrix (rows=Gold, cols=Predicted) ---
+                Normal      V1      V2      V3      V4      V5
+  ----------  ------------------------------------------------
+  Normal            70       1       8       0       1       0
+  V1                 1      47       0       1       0       1
+  V2                 2       0      58       0       0       0
+  V3                 1       0       0      48       0       1
+  V4                 2       0       0       0      28       0
+  V5                 1       0       0       0       0      29
+
+  --- LLM-Judge: Confusion Matrix (rows=Gold, cols=Predicted) ---
+                Normal      V1      V2      V3      V4      V5
+  ----------  ------------------------------------------------
+  Normal            74       1       2       1       1       1
+  V1                 4      41       1       2       1       1
+  V2                 5       2      46       3       2       2
+  V3                 4       2       2      40       1       1
+  V4                 3       1       1       1      23       1
+  V5                 2       1       1       2       1      23
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table2_gate_comparison.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table2_gate.json
+===========================================================================
+  Table 3(a). Safety / Trigger Statistics (Gold n=300)
+===========================================================================
+  Metric                                            VACCINE        LLM-Judge
+  ---------------------------------------- ---------------- ----------------
+  Violation rate (p_v)                               0.7333           0.7333
+  FNR (Violation → Normal)                           0.0318           0.0818
+  FPR (Normal → Violation)                           0.1250           0.0750
+  P(flagged as violation)                            0.7433           0.6933
+  Residual unsafe exposure (≈FNR)                    0.0318           0.0818
+
+
+===========================================================================
+  Table 3(b). Latency Components & Expected Cost (ms)
+===========================================================================
+  Metric                                            VACCINE        LLM-Judge
+  ---------------------------------------- ---------------- ----------------
+  Generation (C_g)                                   1493.2           1493.2
+  Gate latency (C_d / C_j)                             29.1            878.8
+  Rewrite latency (C_r)                              6496.3              0.0
+  Avg rewrite attempts                                1.353            0.000
+  Effective rewrite latency (C_r,eff)                8789.5              0.0
+  Expected latency E[C]                              8055.8           2372.0
+
+  Breakeven:  P* = (C_j − C_d) / C_r,eff = (878.8 − 29.1) / 8789.5 = 0.0967 (9.7%)
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table3_cost_breakdown.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table3_cost.json
+=================================================================
+  Table 4. Violation Detector Performance (Gold test, n=300)
+=================================================================
+  Accuracy: 0.9333  |  Macro F1: 0.9402
+
+  Class          Prec   Recall       F1  Support
+  ---------- -------- -------- -------- --------
+  Normal       0.9091   0.8750   0.8917       80
+  V1           0.9792   0.9400   0.9592       50
+  V2           0.8788   0.9667   0.9206       60
+  V3           0.9796   0.9600   0.9697       50
+  V4           0.9655   0.9333   0.9492       30
+  V5           0.9355   0.9667   0.9508       30
+  Macro        0.9413   0.9403   0.9402      300
+
+  --- FNR (Violation→Normal, containment bound) ---
+  V1     FNR = 0.0600 (6.0%)
+  V2     FNR = 0.0333 (3.3%)
+  V3     FNR = 0.0400 (4.0%)
+  V4     FNR = 0.0667 (6.7%)
+  V5     FNR = 0.0333 (3.3%)
+  Avg    FNR = 0.0467 (4.7%)
+
+  --- Confusion Matrix (rows=Gold, cols=Predicted) ---
+                Normal       V1       V2       V3       V4       V5
+  ----------  -------- -------- -------- -------- -------- --------
+  Normal            70       1       8       0       1       0
+  V1                 1      47       0       1       0       1
+  V2                 2       0      58       0       0       0
+  V3                 1       0       0      48       0       1
+  V4                 2       0       0       0      28       0
+  V5                 1       0       0       0       0      29
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table4_detector_performance.pdf/png
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_appendix_confusion_matrix.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table4_detector.json
+==============================================================
+  Table 5. Natural Violation Rate on ESConv (Session-level)
+  (Random audit: N=1,000 sessions)
+==============================================================
+  Metric                                                Value
+  -------------------------------------------------- --------
+  # evaluated sessions (N)                              1,000
+  # sessions with ≥1 violation (any V1–V5)                113
+  Overall violation rate p_v^S                         11.3%
+
+  --- Type-wise prevalence (session-level) ---
+  Type       # sessions       Rate
+  ---------- ---------- ----------
+  V1                 46      4.6%
+  V2                 22      2.2%
+  V3                 26      2.6%
+  V4                 11      1.1%
+  V5                  8      0.8%
+  ---------- ---------- ----------
+  Sum               113     11.3%
+==============================================================
+
+  Note: Type-wise counts reflect the primary violation type per session.
+
+[OK] Figure → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/fig_table5_natural_rate.pdf/png
+[OK] JSON → /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/table5_natural_rate.json
+======================================================================
+  PAPER TARGETS — Run All Tables
+======================================================================
+
+──────────────────────────────────────────────────────────────────────
+  Running: table1_safety.py
+──────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────────────────────────────────────
+  Running: table2_gate.py
+──────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────────────────────────────────────
+  Running: table3_cost.py
+──────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────────────────────────────────────
+  Running: table4_detector.py
+──────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────────────────────────────────────
+  Running: table5_natural_rate.py
+──────────────────────────────────────────────────────────────────────
+
+
+══════════════════════════════════════════════════════════════════════
+  All done. Figures: /home/mindrium-admin3/ICMR_GenData/experiments/paper_targets/figures/
+══════════════════════════════════════════════════════════════════════
